@@ -1,0 +1,39 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .: {}
+
+  contracts:
+    dependencies:
+      '@openzeppelin/contracts':
+        specifier: ^5.0.2
+        version: 5.1.0
+      '@openzeppelin/contracts-upgradeable':
+        specifier: ^5.1.0
+        version: 5.1.0(@openzeppelin/contracts@5.1.0)
+      solady:
+        specifier: 0.0.259
+        version: 0.0.259
+
+packages:
+
+  /@openzeppelin/contracts-upgradeable@5.1.0(@openzeppelin/contracts@5.1.0):
+    resolution: {integrity: sha512-AIElwP5Ck+cslNE+Hkemf5SxjJoF4wBvvjxc27Rp+9jaPs/CLIaUBMYe1FNzhdiN0cYuwGRmYaRHmmntuiju4Q==}
+    peerDependencies:
+      '@openzeppelin/contracts': 5.1.0
+    dependencies:
+      '@openzeppelin/contracts': 5.1.0
+    dev: false
+
+  /@openzeppelin/contracts@5.1.0:
+    resolution: {integrity: sha512-p1ULhl7BXzjjbha5aqst+QMLY+4/LCWADXOCsmLHRM77AqiPjnd9vvUN9sosUfhL9JGKpZ0TjEGxgvnizmWGSA==}
+    dev: false
+
+  /solady@0.0.259:
+    resolution: {integrity: sha512-GA23TidJxs11hdsjnh6CMi7pIRStvNerJK+t80F4VwXY3JGjxn+i3W5/mpQZAyC883gwgxLe+6Pauiemd46ezA==}
+    dev: false

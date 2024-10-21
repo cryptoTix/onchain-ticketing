@@ -1,0 +1,8 @@
+{
+  "name": "on-chain-ticketing",
+  "version": "1.0.0",
+  "description": "",
+  "author": "devinder",
+  "license": "ISC",
+  "packageManager": "pnpm@9.0.6"
+}

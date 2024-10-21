@@ -64,3 +64,18 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+# onchain-ticketing-system
+
+
+{
+  "name": "on-chain-ticketing",
+  "version": "1.0.0",
+  "description": "",
+  "author": "devinder",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts" : "^5.0.2",
+    "@openzeppelin/contracts-upgradeable": "^5.1.0",
+    "solady": "0.0.259"
+  }
+}
