@@ -7,15 +7,39 @@ import {PurchaseLib} from "./PurchaseLib.sol";
 library TicketLib {
     struct State {
         address asset;
+        uint96 showTime;
         uint256 amount;
         uint256 showId;
-        uint256 seatId;
+        SeatData[] seats; // expect sorted seatIds
     }
 
-    function purchase(State storage self, State memory ticketData) internal {
+    struct SeatData {
+        uint128 seatId;
+        uint128 price;
+    }
+
+    function init(State storage self, State memory ticketData) internal {
         self.asset = ticketData.asset;
         self.amount = ticketData.amount;
         self.showId = ticketData.showId;
-        self.seatId = ticketData.seatId;
+        self.seats = ticketData.seats;
+        self.showTime = ticketData.showTime;
+        // emit valid purchase successful
+    }
+
+    function remove(State storage self) internal {
+        delete self.asset;
+        delete self.showTime;
+        delete self.amount;
+        delete self.showId;
+        delete self.seats;
+    }
+
+    function validateTicketCancel(State storage self) internal view {
+        if (self.showTime < block.timestamp) revert ShowtimePassed();
+    }
+
+    function validateTicketRedeem(State storage self) internal view {
+        if (self.showTime > block.timestamp) revert ShowtimeNotPassed();
     }
 }

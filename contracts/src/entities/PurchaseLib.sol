@@ -5,7 +5,7 @@ import {TicketLib} from "./TicketLib.sol";
 
 library PurchaseLib {
     struct PurchaseData {
-        TicketLib.State[] ticketData;
+        TicketLib.State ticketData;
         uint256 timestamp;
         uint256 nonce;
     }
