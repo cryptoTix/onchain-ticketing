@@ -7,6 +7,7 @@ import "solady/src/utils/SafeTransferLib.sol";
 import "./PurchaseLib.sol";
 
 import "../interface/Errors.sol";
+
 library MasterLib {
     using EnumerableMap for EnumerableMap.AddressToUintMap;
 
@@ -87,15 +88,16 @@ library MasterLib {
         }
     }
 
-
     function validatePurchaseData(State storage self, PurchaseLib.PurchaseData memory purchaseData) internal view {
         if (purchaseData.ticketData.seats.length == 0) revert ZeroLength();
         if (block.timestamp > purchaseData.timestamp + self.ttl) revert StalePurchaseData();
         if (purchaseData.nonce <= self.nonce) revert AlreadyUsedData();
         if (!self.allowlistedAssets[purchaseData.ticketData.asset]) revert NotAllowlistedAsset(); // check for first as all are same
         uint256 localSum = purchaseData.ticketData.seats[0].price;
-        for (uint i = 1; i < purchaseData.ticketData.seats.length; i++) {
-            if (purchaseData.ticketData.seats[i].seatId <= purchaseData.ticketData.seats[i-1].seatId) revert UnsortedSeatsInput();
+        for (uint256 i = 1; i < purchaseData.ticketData.seats.length; i++) {
+            if (purchaseData.ticketData.seats[i].seatId <= purchaseData.ticketData.seats[i - 1].seatId) {
+                revert UnsortedSeatsInput();
+            }
             localSum += purchaseData.ticketData.seats[i].price;
         }
         if (localSum != purchaseData.ticketData.amount) revert InvalidAmount();

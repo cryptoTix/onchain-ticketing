@@ -22,8 +22,10 @@ library TicketLib {
         self.asset = ticketData.asset;
         self.amount = ticketData.amount;
         self.showId = ticketData.showId;
-        self.seats = ticketData.seats;
         self.showTime = ticketData.showTime;
+        for (uint256 i = 0; i < ticketData.seats.length; i++) {
+            self.seats.push(SeatData(ticketData.seats[i].seatId, ticketData.seats[i].price));
+        }
         // emit valid purchase successful
     }
 
