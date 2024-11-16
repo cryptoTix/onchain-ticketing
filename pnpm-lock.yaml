@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  contracts:
+  packages/contracts:
     dependencies:
       '@openzeppelin/contracts':
         specifier: ^5.0.2
