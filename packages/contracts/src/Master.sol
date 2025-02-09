@@ -61,15 +61,12 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         );
     }
 
-    function redeem(uint256[] memory ticketIds, bytes[] memory signatures) external nonReentrant {
+    function redeem(uint256[] memory ticketIds) external {
         if (ticketIds.length == 0) revert ZeroLength();
-        if (ticketIds.length != signatures.length) revert InvalidInput();
-        for (uint256 i = 0; i < signatures.length; i++) {
-            if (!isValidRedeemSignature(ticketIds[i], signatures[i])) revert SignerNotOwner();
-        }
-        for (uint256 i = 0; i < signatures.length; i++) {
+        for (uint256 i = 0; i < ticketIds.length; i++) {
             _burn(ticketIds[i]);
             TicketLib.State storage ticketState = _ticketLibStatePtr(ticketIds[i]);
+            ticketState.validateTicketRedeem();
             _self().addAssetsForWithdrawal(ticketState.asset, ticketState.amount);
         }
     }
