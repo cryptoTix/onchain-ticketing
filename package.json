@@ -1,8 +1,22 @@
 {
-  "name": "on-chain-ticketing",
-  "version": "1.0.0",
-  "description": "",
-  "author": "devinder",
-  "license": "ISC",
-  "packageManager": "pnpm@9.0.6"
+  "name": "karak-restaking",
+  "private": true,
+  "scripts": {
+      "build": "turbo build",
+      "dev": "turbo dev",
+      "lint": "turbo lint",
+      "start:node": "anvil --fork-url https://eth-mainnet.g.alchemy.com/v2/XmbvNQ-gikUriXn95zW6d0M95QsBDB0j",
+      "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+      "heroku-postbuild": "turbo build --filter=api --filter=db"
+  },
+  "devDependencies": {
+      "@repo/eslint-config": "workspace:*",
+      "@repo/typescript-config": "workspace:*",
+      "prettier": "^3.2.5",
+      "turbo": "latest"
+  },
+  "packageManager": "pnpm@9.0.6",
+  "engines": {
+      "node": ">=18"
+  }
 }
