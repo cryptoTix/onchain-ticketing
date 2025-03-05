@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "FOUNDRY_PROFILE=dev forge build --ast && tsx buildTsArtifacts.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +12,8 @@
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",
     "@openzeppelin/contracts-upgradeable": "^5.1.0",
-    "solady": "0.0.259"
+    "solady": "0.0.259",
+    "tsx": "^4.7.1"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-foundry": "^1.1.3",
