@@ -15,7 +15,7 @@ export const Orderbox: React.FC = () => {
     >
       <Tab.Group>
         <Tab.List className="w-full border border-primary-orange border-b-0.2 border-l-0 border-r-0 border-t-0">
-          <Tab as={Fragment}>
+          {/* <Tab as={Fragment}>
             {({ selected }) => (
               <button
                 onClick={() => setTab("Deposit")}
@@ -24,7 +24,7 @@ export const Orderbox: React.FC = () => {
                 DEPOSIT
               </button>
             )}
-          </Tab>
+          </Tab> */}
           <Tab as={Fragment}>
             {({ selected }) => (
               <button

@@ -3,9 +3,9 @@
 import { getPublicClient, getWalletClient } from "@wagmi/core";
 import { config } from "../contexts/Web3Provider";
 import { Address, Chain, getContract } from "viem";
-import {
-  ERC20,
-} from "@repo/contracts";
+// import {
+//   ERC20,
+// } from "@repo/contracts";
 import { Logger } from "../utils/logger";
 import { toast } from "react-hot-toast";
 import { makeTxExplorerLink } from "../utils/txExplorerLink";
@@ -18,68 +18,68 @@ export async function returnReceiptTokens(
   chain: Chain,
   tokenSymbol: string,
 ) {
-  const walletClient = await getWalletClient(config);
-  const publicClient = getPublicClient(config);
+  // const walletClient = await getWalletClient(config);
+  // const publicClient = getPublicClient(config);
   
-  if (!walletClient || !publicClient) {
-    throw new Error("wallet client or public client is still missing");
-  }
+  // if (!walletClient || !publicClient) {
+  //   throw new Error("wallet client or public client is still missing");
+  // }
   
-  const tokenERC20 = getContract({
-    abi: ERC20.abi,
-    address: vaultAddress,
-    client: walletClient,
-  });
+  // const tokenERC20 = getContract({
+  //   abi: ERC20.abi,
+  //   address: vaultAddress,
+  //   client: walletClient,
+  // });
   
-  const allowance = await tokenERC20.read.allowance([
-    walletClient.account.address,
-    vaultSupervisorAddr,
-  ]);
+  // const allowance = await tokenERC20.read.allowance([
+  //   walletClient.account.address,
+  //   vaultSupervisorAddr,
+  // ]);
   
-  if (allowance < amount) {
-    const approveTxHash = await tokenERC20.write.approve([
-      vaultSupervisorAddr,
-      amount,
-    ]);
-    Logger.info("Approve tx hash for returning receipt tokens:", approveTxHash);
+  // if (allowance < amount) {
+  //   const approveTxHash = await tokenERC20.write.approve([
+  //     vaultSupervisorAddr,
+  //     amount,
+  //   ]);
+  //   Logger.info("Approve tx hash for returning receipt tokens:", approveTxHash);
   
-    const txReceipt = await publicClient.waitForTransactionReceipt({
-      hash: approveTxHash,
-    });
-    Logger.info(
-      "Approve tx confirmed for returning receipt tokens - tx receipt hash:",
-      txReceipt.transactionHash
-    );
-  }
+  //   const txReceipt = await publicClient.waitForTransactionReceipt({
+  //     hash: approveTxHash,
+  //   });
+  //   Logger.info(
+  //     "Approve tx confirmed for returning receipt tokens - tx receipt hash:",
+  //     txReceipt.transactionHash
+  //   );
+  // }
   
-  const vaultSupervisor = getContract({
-    abi: VaultSupervisor.abi,
-    address: vaultSupervisorAddr,
-    client: {
-      wallet: walletClient,
-      public: publicClient,
-    },
-  });
+  // const vaultSupervisor = getContract({
+  //   abi: VaultSupervisor.abi,
+  //   address: vaultSupervisorAddr,
+  //   client: {
+  //     wallet: walletClient,
+  //     public: publicClient,
+  //   },
+  // });
   
-  const txHash = await vaultSupervisor.write.returnShares([
-    vaultAddress,
-    amount,
-  ]);
+  // const txHash = await vaultSupervisor.write.returnShares([
+  //   vaultAddress,
+  //   amount,
+  // ]);
   
-  const returnSharesTxReceipt = await publicClient.waitForTransactionReceipt({
-    confirmations: 1,
-    hash: txHash,
-  });
+  // const returnSharesTxReceipt = await publicClient.waitForTransactionReceipt({
+  //   confirmations: 1,
+  //   hash: txHash,
+  // });
   
-  Logger.info(
-    `Successfully returned receipt tokens to vault:`,
-    returnSharesTxReceipt.transactionHash
-  );
+  // Logger.info(
+  //   `Successfully returned receipt tokens to vault:`,
+  //   returnSharesTxReceipt.transactionHash
+  // );
   
-  const txLinkInfo = makeTxExplorerLink(chain, txHash);
-  toast.success(
-    `Successfully returned ${tokenSymbol} receipt tokens!$${txLinkInfo.string()}`
-  );
+  // const txLinkInfo = makeTxExplorerLink(chain, txHash);
+  // toast.success(
+  //   `Successfully returned ${tokenSymbol} receipt tokens!$${txLinkInfo.string()}`
+  // );
 }
 
 export async function migrateV1Position(

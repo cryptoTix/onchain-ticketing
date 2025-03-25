@@ -2,7 +2,7 @@ import numeral from "numeral";
 import Decimal from "decimal.js";
 import { FixedPointNumber } from "./fixedPoint";
 import { Address, createPublicClient, fallback, getAddress, http, zeroAddress } from "viem";
-import { ERC20 } from "@repo/contracts";
+// import { ERC20 } from "@repo/contracts";
 import { Maybe } from "./maybe";
 import { MigrateV1Position, Asset, OperatorVault } from "../types/types";
 import { mainnet } from "viem/chains";
@@ -52,26 +52,26 @@ export const checkZeroAmount = (amount: Maybe<string>): boolean => {
 };
 
 export async function fetchTokenBalance(asset: Asset, user: Address) {
-  const publicClient = createPublicClient({
-    chain: asset.chain,
-    transport:
-      asset.chain.id === 5000
-        ? fallback([
-            http(asset.chain.rpcUrls.default.http[0]),
-            http(asset.chain.rpcUrls.default.http[1]),
-            http(asset.chain.rpcUrls.default.http[2]),
-          ])
-        : http(asset.chain.rpcUrls.default.http[0]),
-  });
+  // const publicClient = createPublicClient({
+  //   chain: asset.chain,
+  //   transport:
+  //     asset.chain.id === 5000
+  //       ? fallback([
+  //           http(asset.chain.rpcUrls.default.http[0]),
+  //           http(asset.chain.rpcUrls.default.http[1]),
+  //           http(asset.chain.rpcUrls.default.http[2]),
+  //         ])
+  //       : http(asset.chain.rpcUrls.default.http[0]),
+  // });
 
-  const tokenBalance = await publicClient.readContract({
-    abi: ERC20.abi,
-    address: asset.address,
-    functionName: "balanceOf",
-    args: [user],
-  });
+  // const tokenBalance = await publicClient.readContract({
+  //   abi: ERC20.abi,
+  //   address: asset.address,
+  //   functionName: "balanceOf",
+  //   args: [user],
+  // });
 
-  return tokenBalance;
+  return 0;
 }
 
 export async function fetchKarakEthBalance(asset: Asset, user: Address) {

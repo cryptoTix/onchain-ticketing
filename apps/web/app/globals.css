@@ -16,7 +16,8 @@ html {
 body {
   overflow-x: hidden;
   margin: auto;
-  background: #fff;
+  background: #181524;
+  color: white;
 }
 
 a {

@@ -1,4 +1,4 @@
-import { getAddress } from "viem";
+import { Address, getAddress } from "viem";
 import sepolia from "../assets/sepolia.svg";
 import anvil from "../assets/anvil.svg";
 import arb from  "../assets/arbitrum.svg";
@@ -150,3 +150,13 @@ export const BLOCKED_ADDRESSES = [
   "0x901bb9583b24D97e995513C6778dc6888AB6870e",
   "0xA7e5d5A720f06526557c513402f2e6B5fA20b008",
 ];
+
+export const MasterContractMap: { [key: number]: Address } = {
+  1: getAddress("0x54e44DbB92dBA848ACe27F44c0CB4268981eF1CC"), // ethereum
+  42161: getAddress("0x399f22ae52a18382a67542b3De9BeD52b7B9A4ad"), // arbitrum
+  5000: getAddress("0x4a2b015CcB8658998692Db9eD4522B8e846962eD"), // mantle
+  56: getAddress("0x4a2b015CcB8658998692Db9eD4522B8e846962eD"), // bsc
+  81457: getAddress("0x58b5dc145ca2BE84fe087614CFe36055be609BB3"), // blast
+  252: getAddress("0xdF922c74CC0dc394022ea002Af5aFaa32348670e"), // fraxtal
+  2410: getAddress("0xB308474350D75447cA8731B7Ce87c9ee9DA03B1C") // karak
+};
