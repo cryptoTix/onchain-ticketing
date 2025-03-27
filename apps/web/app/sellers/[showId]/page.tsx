@@ -71,6 +71,12 @@ export default function Page({
   }
   const handleTimeSelect = (sellerId: string, formatType: string, time: string) => {
     setSelectedData({ id: sellerId, type: formatType, time });
+    setTimeout(() => {
+      const seatsSection = document.getElementById("seats-section");
+      if (seatsSection) {
+        seatsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 100);
   }
   // if (!movieData) {
   //   return <div className="min-h-screen flex justify-center items-center bg-black text-white text-2xl">
@@ -121,7 +127,7 @@ export default function Page({
         <p className="text-gray-400">Rating: {movieData?.rating}</p>
 
         {selectedData && (
-          <div className="mt-6 w-full p-4 bg-gray-800 text-white rounded-lg text-center">
+          <div id="seats-section" className="mt-6 w-full p-4 bg-gray-800 text-white rounded-lg text-center">
             <p className="text-lg">
               {selectedData.id} - {selectedData.type} at {selectedData.time}
             </p>

@@ -16,8 +16,6 @@
     "tsx": "^4.7.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
     "tsx": "^4.7.1",
     "@nomicfoundation/hardhat-foundry": "^1.1.3",
