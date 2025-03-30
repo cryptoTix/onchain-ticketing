@@ -21,12 +21,14 @@ export default function SeatSelectionPage() {
   const ticketPrice = 5.44;
 
   useEffect(() => {
+    if (!showId) return; 
     async function loadShowData(id:string) {
         const data = await fetchShow(id);
         setShow(data!);
     }
     loadShowData(showId);
-  })
+  }, [showId]) 
+
   const handleSeatClick = (seat: string) => {
     if (filledSeats.has(seat)) return;
     setSelectedSeats((prev) =>
@@ -94,7 +96,22 @@ export default function SeatSelectionPage() {
 
         <div className="mt-6 flex justify-between">
           <button className="bg-gray-800 text-white px-6 py-3 rounded-md" onClick={() => { router.back()}}>Cancel</button>
-          <button className="bg-gray-800 text-white px-6 py-3 rounded-md" onClick={() => { router.back()}}>Purchase</button>
+          <button className="bg-gray-800 text-white px-6 py-3 rounded-md"
+          //  onClick={() => { router.back()}
+          onClick={() => {
+            if (selectedSeats.length === 0) {
+              alert("Please select at least one seat!");
+              return;
+            }
+            router.back();
+            router.push(`/payment?showId=${showId}&sellerId=${sellerId}&time=${selectedTime}&seats=${selectedSeats.join(",")}`);
+          }}
+           >
+           {/* <button
+              className="bg-green-500 text-white px-6 py-3 rounded-md font-bold"
+              onClick={handlePurchase}
+           ></button>  */}
+            Purchase</button>
         </div>
       </div>
     </div>

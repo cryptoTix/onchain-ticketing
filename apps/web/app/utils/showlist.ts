@@ -40,9 +40,18 @@ const showMap: Record<string, ShowInterface> = {
     image: "/Movie_3.png",
     genre: "WDYT",
     duration:"2:40 Hrs",
-    actor: "duhh",
+    actor: "MC Potu",
     rating: "3.78",
 }, 
+  '4' : {
+    id: "4",
+    name: "CID",
+    image: "/CID.png",
+    genre: "Bakchodi",
+    duration:"2:40 Hrs",
+    actor: "ACP Behen ke lund",
+    rating: "5",
+},
 };
 // Fetch properties from the API
 export async function fetchShows({

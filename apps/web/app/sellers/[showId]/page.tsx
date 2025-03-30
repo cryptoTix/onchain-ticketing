@@ -43,6 +43,18 @@ export default function Page({
   const router = useRouter();
   const [showId, setShowId] = useState<string>();
   const [movieData, setMovieData] = useState<ShowInterface>();
+  // const [selectedData, setSelectedData] = useState<{ id: string; type: string; time: string } | null>(null);
+  
+  // Date selection
+  const [selectedDate, setSelectedDate] = useState("16 Dec MON"); // Default date
+
+  const dates = [
+    { day: "15 Dec", label: "SUN" },
+    { day: "16 Dec", label: "MON" },
+    { day: "17 Dec", label: "TUE" },
+    { day: "18 Dec", label: "WED" },
+    { day: "19 Dec", label: "THU" },
+  ];
   useEffect(() => {
     async function loadShows() {
       const data = await params;
@@ -83,7 +95,20 @@ export default function Page({
   //   Loading...
   // </div>
   // }
+
+  const handleNavigateToSeats = () => {
+    router.push(`/seats?showId=${showId}&&sellerId=${selectedData.id}&&time=${selectedData.time}`);
+  };
+
+  <button
+    className="mt-3 bg-yellow-500 px-6 py-3 rounded-md text-black font-bold"
+    onClick={handleNavigateToSeats}
+  >
+    Select Seats
+  </button>
+
   return (
+    
     <div className="min-h-screen text-white p-10 flex gap-10 w-full">
       {/* LEFT: Sellers List */}
       <div className="w-2/3">
