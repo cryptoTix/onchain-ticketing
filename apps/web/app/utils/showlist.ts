@@ -1,7 +1,11 @@
 import { ShowInterface } from "../models/show";
-
-const apiDomain = process.env.NEXT_PUBLIC_API_DOMAIN || null;
 import "../../public/Frame_36.png";
+import { PaymentMetadata } from "../models/paymentRequest";
+import { Hex } from "viem";
+import {  } from "../../../../packages/contracts/ts-artifacts/PurchaseLib.sol/PurchaseLib";
+import { Asset } from "../models/seller";
+import { Asset } from "next/font/google";
+
 type FetchShowsParams = {
   showFeatured?: boolean;
 };
@@ -44,6 +48,7 @@ const showMap: Record<string, ShowInterface> = {
     rating: "3.78",
 }, 
 };
+
 // Fetch properties from the API
 export async function fetchShows({
   showFeatured = false,
@@ -83,4 +88,14 @@ export async function fetchShow(
   //   console.log(error);
   //   return null;
   // }
+}
+const acceptedAssets : Asset[] = [{
+  name : "USD Coin",
+  symbol: "USDC",
+  chainId: 1,
+  address: "0x"
+}]
+
+export async function fetchSellerAcceptedAssets(sellerId : string) : Promise<Asset[]> {
+  return acceptedAssets;
 }

@@ -124,7 +124,7 @@ export const emptyAsset = () => {
 };
 
 export const getTokenImg = (assetSymbol: string) => {
-  return assetImageMap[assetSymbol] ?? "N/A";
+  return assetImageMap[assetSymbol] ?? "";
 }
 
 export const extractOperatorName = (operator: string): string => {

@@ -120,7 +120,7 @@ export default function Page({
       <div className="w-1/3 flex flex-col items-center p-5 rounded-lg">
         {/* <ShowCard/> */}
         <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
-        <h2 className="text-xl font-bold mt-3">{movieData?.name}</h2>
+        <h1 className="text-5xl font-bold mt-5 leading-loose text-left">{movieData?.name}</h1>
         <p className="text-gray-400">Genre: {movieData?.genre}</p>
         <p className="text-gray-400">Duration: {movieData?.duration}</p>
         <p className="text-gray-400">Actor: {movieData?.actor}</p>
@@ -131,6 +131,7 @@ export default function Page({
             <p className="text-lg">
               {selectedData.id} - {selectedData.type} at {selectedData.time}
             </p>
+             {/* TODO: Handle screens here for multiple shows with same name and time*/}
             <button
               className="mt-3 bg-yellow-500 px-6 py-3 rounded-md text-black font-bold"
               onClick={() => router.push(`/seats?showId=${showId}&&sellerId=${selectedData.id}&&time=${selectedData.time}`)}

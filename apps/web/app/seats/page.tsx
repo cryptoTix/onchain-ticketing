@@ -2,12 +2,16 @@
 
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { fetchShow } from "../utils/showlist";
+import { fetchShow, fetchSingature } from "../utils/showlist";
 import { ShowInterface } from "../models/show";
+import Decimal from "decimal.js";
+import { useAccount } from "wagmi";
+import { submitPaymentRequest } from "../actions/migration";
 
 const seatRows = ["A", "B", "C", "D", "E", "F", "G", "H"];
 const seatNumbers = Array.from({ length: 10 }, (_, i) => i + 1);
 const filledSeats = new Set(["A9", "A10", "B3", "B4", "B5", "B7", "B9", "B10"]);
+const ticketPrice = 5.44;
 
 export default function SeatSelectionPage() {
   const router = useRouter();
@@ -18,7 +22,7 @@ export default function SeatSelectionPage() {
 
   const [show, setShow] = useState<ShowInterface>();
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
-  const ticketPrice = 5.44;
+  const {address} = useAccount()
 
   useEffect(() => {
     async function loadShowData(id:string) {
@@ -34,8 +38,23 @@ export default function SeatSelectionPage() {
     );
   };
 
+  async function handlePurchaseClick() {
+    const seatPrice : Decimal[]= [];
+    selectedSeats.forEach(() => {
+      seatPrice.push(new Decimal(ticketPrice))
+    })
+    // Send request
+    const requestId = await submitPaymentRequest({
+      user : address,
+      sellerId : sellerId,
+      showId : showId,
+      seatIds : selectedSeats,
+      showTime : selectedTime
+    })
+    router.push(`/payment?requestId=${requestId}`)
+  }
   return (
-    <div className="min-h-screen text-white p-10 flex flex-col items-center">
+    <div className="min-h-screen w-full text-white p-10 flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-6">Seat Selection</h1>
       <p className="text-lg text-gray-400">Seller: {sellerId}</p>
       <p className="text-lg text-gray-400">Show: {show?.name}</p>
@@ -81,7 +100,7 @@ export default function SeatSelectionPage() {
         </div>
       </div>
 
-      <div className="mt-10 w-full max-w-4xl p-6 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 text-black">
+      <div className="mt-10 w-full max-w-none p-6 rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 text-black">
         <h2 className="text-xl font-bold">Summary</h2>
         <div className="flex justify-between mt-3">
           <p className="text-lg">Total</p>
@@ -94,7 +113,7 @@ export default function SeatSelectionPage() {
 
         <div className="mt-6 flex justify-between">
           <button className="bg-gray-800 text-white px-6 py-3 rounded-md" onClick={() => { router.back()}}>Cancel</button>
-          <button className="bg-gray-800 text-white px-6 py-3 rounded-md" onClick={() => { router.back()}}>Purchase</button>
+          <button className={`bg-gray-800 text-white px-6 py-3 rounded-md ${selectedSeats.length == 0 ? `opacity-50` : `` }`} disabled = {selectedSeats.length === 0}  onClick={() => { handlePurchaseClick()}}>Purchase</button>
         </div>
       </div>
     </div>
