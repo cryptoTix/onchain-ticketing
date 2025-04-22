@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Image from "next/Image";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchShow } from "../../utils/showlist";
 import { ShowInterface } from "../../models/show";
 
-// TODO: Fetch these from api.
+// TODO: Fetch these from API.
 const sellers = [
   {
     id: "grand-indonesia-cgv",
@@ -30,24 +30,19 @@ const sellers = [
     formats: [{ type: "2D", price: "Rp. 50.000", times: ["12:10", "16:45", "19:45"] }],
   },
 ];
+
 interface SellerInput {
-  showId: string
+  showId: string;
 }
 
-export default function Page({
-  params
-}: {
-  params: Promise<SellerInput>
-}) {
-  // TODO: Example Movie Metadata (Replace with API call)
+export default function Page({ params }: { params: Promise<SellerInput> }) {
   const router = useRouter();
   const [showId, setShowId] = useState<string>();
   const [movieData, setMovieData] = useState<ShowInterface>();
-  // const [selectedData, setSelectedData] = useState<{ id: string; type: string; time: string } | null>(null);
+  const [selectedData, setSelectedData] = useState<{ id: string; type: string; time: string } | null>(null);
   
   // Date selection
   const [selectedDate, setSelectedDate] = useState("16 Dec MON"); // Default date
-
   const dates = [
     { day: "15 Dec", label: "SUN" },
     { day: "16 Dec", label: "MON" },
@@ -55,6 +50,7 @@ export default function Page({
     { day: "18 Dec", label: "WED" },
     { day: "19 Dec", label: "THU" },
   ];
+
   useEffect(() => {
     async function loadShows() {
       const data = await params;
@@ -62,25 +58,17 @@ export default function Page({
     }
     loadShows();
   }, []);
-  const [selectedData, setSelectedData] = useState<{ id: string; type: string; time: string } | null>(null);
-  
-  // Get seller details based on showId
-  const selectedSeller = sellers[0];
-  // const movieData = fetchShow()
 
   useEffect(() => {
     if (!showId) return;
     async function loadEventData() {
-      const data = await fetchShow(showId!);
+      const data = await fetchShow(showId);
       setMovieData(data!);
       console.log(showId, data);
     }
     loadEventData();
   }, [showId]);
 
-  if (!selectedSeller) {
-    return <p className="text-white text-center">Loading sellers...</p>;
-  }
   const handleTimeSelect = (sellerId: string, formatType: string, time: string) => {
     setSelectedData({ id: sellerId, type: formatType, time });
     setTimeout(() => {
@@ -89,28 +77,33 @@ export default function Page({
         seatsSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
     }, 100);
-  }
-  // if (!movieData) {
-  //   return <div className="min-h-screen flex justify-center items-center bg-black text-white text-2xl">
-  //   Loading...
-  // </div>
-  // }
-
-  const handleNavigateToSeats = () => {
-    router.push(`/seats?showId=${showId}&&sellerId=${selectedData.id}&&time=${selectedData.time}`);
   };
 
-  <button
-    className="mt-3 bg-yellow-500 px-6 py-3 rounded-md text-black font-bold"
-    onClick={handleNavigateToSeats}
-  >
-    Select Seats
-  </button>
+  const handleNavigateToSeats = () => {
+    if (selectedData) {
+      router.push(`/seats?showId=${showId}&&sellerId=${selectedData.id}&&time=${selectedData.time}`);
+    }
+  };
 
   return (
-    
     <div className="min-h-screen text-white p-10 flex gap-10 w-full">
-      {/* LEFT: Sellers List */}
+      {/* LEFT: Date Selection (Vertical Layout) */}
+      <div className="w-1/6 flex flex-col gap-2">
+        {dates.map((date, index) => (
+          <button
+            key={index}
+            className={`p-3 rounded-md ${
+              selectedDate === date.day + " " + date.label ? "bg-blue-500 text-white" : "bg-gray-700 text-gray-300"
+            }`}
+            onClick={() => setSelectedDate(date.day + " " + date.label)}
+          >
+            <p className="text-sm">{date.day}</p>
+            <p className="text-lg font-bold">{date.label}</p>
+          </button>
+        ))}
+      </div>
+
+      {/* MIDDLE: Sellers List */}
       <div className="w-2/3">
         <h1 className="text-3xl font-bold mb-4">{movieData?.name}</h1>
 
@@ -127,9 +120,9 @@ export default function Page({
                     <button
                       key={time}
                       className={`px-4 py-2 rounded-md ${
-                        (selectedData?.time === time && selectedData?.type === format.type) ? "bg-blue-500" : "bg-gray-800 hover:bg-blue-500"
+                        selectedData?.time === time && selectedData?.type === format.type ? "bg-blue-500" : "bg-gray-800 hover:bg-blue-500"
                       } transition`}
-                      onClick={() => handleTimeSelect(seller.id, format.type, time )}
+                      onClick={() => handleTimeSelect(seller.id, format.type, time)}
                     >
                       {time}
                     </button>
@@ -143,7 +136,6 @@ export default function Page({
 
       {/* RIGHT: Movie Metadata */}
       <div className="w-1/3 flex flex-col items-center p-5 rounded-lg">
-        {/* <ShowCard/> */}
         <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
         <h2 className="text-xl font-bold mt-3">{movieData?.name}</h2>
         <p className="text-gray-400">Genre: {movieData?.genre}</p>
@@ -158,7 +150,7 @@ export default function Page({
             </p>
             <button
               className="mt-3 bg-yellow-500 px-6 py-3 rounded-md text-black font-bold"
-              onClick={() => router.push(`/seats?showId=${showId}&&sellerId=${selectedData.id}&&time=${selectedData.time}`)}
+              onClick={handleNavigateToSeats}
             >
               Select Seats
             </button>
@@ -167,4 +159,4 @@ export default function Page({
       </div>
     </div>
   );
-};
+}

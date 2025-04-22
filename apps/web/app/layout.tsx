@@ -15,8 +15,8 @@ const gilroy = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Karak | Restaking",
-  description: "Restaking for everyone",
+  title: "Kryptix | All-Time High",
+  description: "Crypto Tickets",
 };
 
 export default function RootLayout({

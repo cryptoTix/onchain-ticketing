@@ -34,8 +34,8 @@ const showMap: Record<string, ShowInterface> = {
     actor: "amgay",
     rating: "3.98",
 }, 
-  '3' : {
-    id: "3",
+  '4' : {
+    id: "4",
     name: "DUHH",
     image: "/Movie_3.png",
     genre: "WDYT",
@@ -43,8 +43,8 @@ const showMap: Record<string, ShowInterface> = {
     actor: "MC Potu",
     rating: "3.78",
 }, 
-  '4' : {
-    id: "4",
+  '3' : {
+    id: "3",
     name: "CID",
     image: "/CID.png",
     genre: "Bakchodi",
