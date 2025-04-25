@@ -5,8 +5,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchShow } from "../../utils/showlist";
 import { ShowInterface } from "../../models/show";
+import dayjs from "dayjs";
 
-// TODO: Fetch these from API.
 const sellers = [
   {
     id: "grand-indonesia-cgv",
@@ -40,16 +40,24 @@ export default function Page({ params }: { params: Promise<SellerInput> }) {
   const [showId, setShowId] = useState<string>();
   const [movieData, setMovieData] = useState<ShowInterface>();
   const [selectedData, setSelectedData] = useState<{ id: string; type: string; time: string } | null>(null);
-  
-  // Date selection
-  const [selectedDate, setSelectedDate] = useState("16 Dec MON"); // Default date
-  const dates = [
-    { day: "15 Dec", label: "SUN" },
-    { day: "16 Dec", label: "MON" },
-    { day: "17 Dec", label: "TUE" },
-    { day: "18 Dec", label: "WED" },
-    { day: "19 Dec", label: "THU" },
-  ];
+
+  const [dates, setDates] = useState<{ day: string; label: string; fullDate: string }[]>([]);
+  const [selectedDate, setSelectedDate] = useState("");
+  const currentTime = dayjs();
+
+  useEffect(() => {
+    const today = dayjs();
+    const generated = Array.from({ length: 7 }).map((_, index) => {
+      const date = today.add(index, "day");
+      return {
+        day: date.format("DD MMM"),
+        label: date.format("ddd").toUpperCase(),
+        fullDate: date.format("YYYY-MM-DD"),
+      };
+    });
+    setDates(generated);
+    setSelectedDate(generated[0].fullDate); // default = today
+  }, []);
 
   useEffect(() => {
     async function loadShows() {
@@ -64,7 +72,6 @@ export default function Page({ params }: { params: Promise<SellerInput> }) {
     async function loadEventData() {
       const data = await fetchShow(showId);
       setMovieData(data!);
-      console.log(showId, data);
     }
     loadEventData();
   }, [showId]);
@@ -87,15 +94,15 @@ export default function Page({ params }: { params: Promise<SellerInput> }) {
 
   return (
     <div className="min-h-screen text-white p-10 flex gap-10 w-full">
-      {/* LEFT: Date Selection (Vertical Layout) */}
-      <div className="w-1/6 flex flex-col gap-2">
+      {/* 📅 Date Selection */}
+      <div className="w-1/6 max-h-[280px] overflow-y-auto flex flex-col gap-2 pr-2 border-r border-gray-700 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-800">
         {dates.map((date, index) => (
           <button
             key={index}
-            className={`p-3 rounded-md ${
-              selectedDate === date.day + " " + date.label ? "bg-blue-500 text-white" : "bg-gray-700 text-gray-300"
+            className={`p-3 rounded-md text-center transition ${
+              selectedDate === date.fullDate ? "bg-blue-500 text-white" : "bg-gray-700 text-gray-300"
             }`}
-            onClick={() => setSelectedDate(date.day + " " + date.label)}
+            onClick={() => setSelectedDate(date.fullDate)}
           >
             <p className="text-sm">{date.day}</p>
             <p className="text-lg font-bold">{date.label}</p>
@@ -103,12 +110,12 @@ export default function Page({ params }: { params: Promise<SellerInput> }) {
         ))}
       </div>
 
-      {/* MIDDLE: Sellers List */}
+      {/* 🏢 Seller List */}
       <div className="w-2/3">
         <h1 className="text-3xl font-bold mb-4">{movieData?.name}</h1>
 
         {sellers.map((seller, index) => (
-          <div key={index} className="p-5 rounded-lg mb-5">
+          <div key={index} className="p-5 rounded-lg mb-5 bg-gray-900">
             <h2 className="text-lg font-semibold flex items-center gap-2">⭐ {seller.name}</h2>
             <p className="text-sm text-gray-400">{seller.location}</p>
 
@@ -116,17 +123,33 @@ export default function Page({ params }: { params: Promise<SellerInput> }) {
               <div key={idx} className="mt-3">
                 <h3 className="text-md font-semibold">{format.type} - {format.price}</h3>
                 <div className="mt-2 grid grid-cols-4 gap-2">
-                  {format.times.map((time) => (
-                    <button
-                      key={time}
-                      className={`px-4 py-2 rounded-md ${
-                        selectedData?.time === time && selectedData?.type === format.type ? "bg-blue-500" : "bg-gray-800 hover:bg-blue-500"
-                      } transition`}
-                      onClick={() => handleTimeSelect(seller.id, format.type, time)}
-                    >
-                      {time}
-                    </button>
-                  ))}
+                  {format.times.map((time) => {
+                    const selectedDateObj = dayjs(selectedDate);
+                    const isToday = selectedDateObj.isSame(currentTime, "day");
+                    const showTime = dayjs(`${selectedDateObj.format("YYYY-MM-DD")} ${time}`, "YYYY-MM-DD HH:mm");
+                    const isPast = isToday && showTime.isBefore(currentTime);
+
+                    return (
+                      <button
+                        key={time}
+                        disabled={isPast}
+                        className={`px-4 py-2 rounded-md transition ${
+                          isPast
+                            ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                            : selectedData?.time === time && selectedData?.type === format.type
+                            ? "bg-blue-500"
+                            : "bg-gray-800 hover:bg-blue-500"
+                        }`}
+                        onClick={() => {
+                          if (!isPast) {
+                            handleTimeSelect(seller.id, format.type, time);
+                          }
+                        }}
+                      >
+                        {time}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -134,8 +157,8 @@ export default function Page({ params }: { params: Promise<SellerInput> }) {
         ))}
       </div>
 
-      {/* RIGHT: Movie Metadata */}
-      <div className="w-1/3 flex flex-col items-center p-5 rounded-lg">
+      {/* 🎬 Movie Metadata */}
+      <div className="w-1/3 flex flex-col items-center p-5 rounded-lg bg-gray-900">
         <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
         <h2 className="text-xl font-bold mt-3">{movieData?.name}</h2>
         <p className="text-gray-400">Genre: {movieData?.genre}</p>
