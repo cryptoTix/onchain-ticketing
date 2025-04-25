@@ -18,6 +18,7 @@ export async function depositKarakWETH(
   selectedOperatorVaultAddr: Address,
   user: Address
 ): Promise<void> {
+  // TODO: remove this once we have a working deposit function
   // const walletClient = await getWalletClient(config);
   // const publicClient = getPublicClient(config);
 
