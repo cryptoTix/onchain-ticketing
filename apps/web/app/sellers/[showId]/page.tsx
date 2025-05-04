@@ -1,10 +1,12 @@
 "use client"
 
-import Image from "next/Image";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchShow } from "../../utils/showlist";
 import { ShowInterface } from "../../models/show";
+import { Seller } from "@src/models/Show";
+import { Show } from "@src/models/Show";
 
 // TODO: Fetch these from api.
 const sellers = [
@@ -34,41 +36,65 @@ interface SellerInput {
   showId: string
 }
 
-export default function Page({
-  params
-}: {
-  params: Promise<SellerInput>
-}) {
-  // TODO: Example Movie Metadata (Replace with API call)
+interface PageProps {
+  params: {
+    showId: string;
+  };
+}
+
+export default function Page({ params }: PageProps) {
   const router = useRouter();
   const [showId, setShowId] = useState<string>();
-  const [movieData, setMovieData] = useState<ShowInterface>();
+  const [movieData, setMovieData] = useState<Show | null>(null);
+  const [sellers, setSellers] = useState<Seller[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [showDate, setShowDate] = useState<string>("");
+
   useEffect(() => {
-    async function loadShows() {
-      const data = await params;
-      setShowId(data.showId);
+    setShowId(params.showId);
+  }, [params.showId]);
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        const response = await fetch(`/api/sellers/${params.showId}`);
+        if (!response.ok) {
+          const error = await response.json();
+          throw new Error(error.error || 'Failed to load data');
+        }
+        const data = await response.json();
+        setMovieData(data.movie);
+        setSellers(data.sellers);
+        setShowDate(data.showDate);
+      } catch (error: any) {
+        console.error('Error loading data:', error);
+        setError(error.message || 'An error occurred');
+      } finally {
+        setLoading(false);
+      }
     }
-    loadShows();
-  }, []);
+    loadData();
+  }, [params.showId]);
+
   const [selectedData, setSelectedData] = useState<{ id: string; type: string; time: string } | null>(null);
   
   // Get seller details based on showId
   const selectedSeller = sellers[0];
   // const movieData = fetchShow()
 
-  useEffect(() => {
-    if (!showId) return;
-    async function loadEventData() {
-      const data = await fetchShow(showId!);
-      setMovieData(data!);
-      console.log(showId, data);
-    }
-    loadEventData();
-  }, [showId]);
+  if (error) {
+    return (
+      <div className="min-h-screen flex justify-center items-center bg-black text-white text-2xl">
+        {error}
+      </div>
+    );
+  }
 
-  if (!selectedSeller) {
+  if (loading) {
     return <p className="text-white text-center">Loading sellers...</p>;
   }
+
   const handleTimeSelect = (sellerId: string, formatType: string, time: string) => {
     setSelectedData({ id: sellerId, type: formatType, time });
     setTimeout(() => {
@@ -87,7 +113,8 @@ export default function Page({
     <div className="min-h-screen text-white p-10 flex gap-10 w-full">
       {/* LEFT: Sellers List */}
       <div className="w-2/3">
-        <h1 className="text-3xl font-bold mb-4">{movieData?.name}</h1>
+        <h1 className="text-3xl font-bold mb-2">{movieData?.name}</h1>
+        <p className="text-lg text-gray-400 mb-6">Show Date: {showDate}</p>
 
         {sellers.map((seller, index) => (
           <div key={index} className="p-5 rounded-lg mb-5">
@@ -102,9 +129,11 @@ export default function Page({
                     <button
                       key={time}
                       className={`px-4 py-2 rounded-md ${
-                        (selectedData?.time === time && selectedData?.type === format.type) ? "bg-blue-500" : "bg-gray-800 hover:bg-blue-500"
+                        (selectedData?.time === time && selectedData?.type === format.type) 
+                          ? "bg-blue-500" 
+                          : "bg-gray-800 hover:bg-blue-500"
                       } transition`}
-                      onClick={() => handleTimeSelect(seller.id, format.type, time )}
+                      onClick={() => handleTimeSelect(seller.id, format.type, time)}
                     >
                       {time}
                     </button>
@@ -118,11 +147,22 @@ export default function Page({
 
       {/* RIGHT: Movie Metadata */}
       <div className="w-1/3 flex flex-col items-center p-5 rounded-lg">
-        {/* <ShowCard/> */}
-        <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
+        {movieData?.image ? (
+          <Image
+            src={movieData.image}
+            alt={movieData.name}
+            width={300}
+            height={400}
+            className="rounded-lg"
+          />
+        ) : (
+          <div className="w-[300px] h-[400px] bg-gray-800 rounded-lg flex items-center justify-center">
+            <p className="text-gray-400">No image available</p>
+          </div>
+        )}
         <h1 className="text-5xl font-bold mt-5 leading-loose text-left">{movieData?.name}</h1>
         <p className="text-gray-400">Genre: {movieData?.genre}</p>
-        <p className="text-gray-400">Duration: {movieData?.duration}</p>
+        <p className="text-gray-400">Duration: {movieData?.duration} mins</p>
         <p className="text-gray-400">Actor: {movieData?.actor}</p>
         <p className="text-gray-400">Rating: {movieData?.rating}</p>
 

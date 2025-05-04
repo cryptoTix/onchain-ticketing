@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: false,
   webpack: (config) => {
     config.resolve.fallback = {
@@ -31,4 +31,19 @@ module.exports = {
       },
     ];
   },
-};
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+        pathname: '/t/p/**',
+      },
+    ],
+    domains: ['image.tmdb.org'],
+  },
+  experimental: {
+    serverActions: true,
+  },
+}
+
+module.exports = nextConfig
