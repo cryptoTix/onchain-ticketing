@@ -170,19 +170,19 @@ export const IERC5267 = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/IERC5267.sol",
-    "id": 39292,
+    "id": 43269,
     "exportedSymbols": {
       "IERC5267": [
-        39291
+        43268
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "107:632:28",
+    "src": "107:632:33",
     "nodes": [
       {
-        "id": 39268,
+        "id": 43245,
         "nodeType": "PragmaDirective",
-        "src": "107:24:28",
+        "src": "107:24:33",
         "nodes": [],
         "literals": [
           "solidity",
@@ -192,41 +192,41 @@ export const IERC5267 = {
         ]
       },
       {
-        "id": 39291,
+        "id": 43268,
         "nodeType": "ContractDefinition",
-        "src": "133:605:28",
+        "src": "133:605:33",
         "nodes": [
           {
-            "id": 39271,
+            "id": 43248,
             "nodeType": "EventDefinition",
-            "src": "247:28:28",
+            "src": "247:28:33",
             "nodes": [],
             "anonymous": false,
             "documentation": {
-              "id": 39269,
+              "id": 43246,
               "nodeType": "StructuredDocumentation",
-              "src": "158:84:28",
+              "src": "158:84:33",
               "text": " @dev MAY be emitted to signal that the domain could have changed."
             },
             "eventSelector": "0a6387c9ea3628b88a633bb4f3b151770f70085117a15f9bf3787cda53f13d31",
             "name": "EIP712DomainChanged",
-            "nameLocation": "253:19:28",
+            "nameLocation": "253:19:33",
             "parameters": {
-              "id": 39270,
+              "id": 43247,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "272:2:28"
+              "src": "272:2:33"
             }
           },
           {
-            "id": 39290,
+            "id": 43267,
             "nodeType": "FunctionDefinition",
-            "src": "426:310:28",
+            "src": "426:310:33",
             "nodes": [],
             "documentation": {
-              "id": 39272,
+              "id": 43249,
               "nodeType": "StructuredDocumentation",
-              "src": "281:140:28",
+              "src": "281:140:33",
               "text": " @dev returns the fields and values that describe the domain separator used by this contract for EIP-712\n signature."
             },
             "functionSelector": "84b0196e",
@@ -234,26 +234,26 @@ export const IERC5267 = {
             "kind": "function",
             "modifiers": [],
             "name": "eip712Domain",
-            "nameLocation": "435:12:28",
+            "nameLocation": "435:12:33",
             "parameters": {
-              "id": 39273,
+              "id": 43250,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "447:2:28"
+              "src": "447:2:33"
             },
             "returnParameters": {
-              "id": 39289,
+              "id": 43266,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39275,
+                  "id": 43252,
                   "mutability": "mutable",
                   "name": "fields",
-                  "nameLocation": "517:6:28",
+                  "nameLocation": "517:6:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "510:13:28",
+                  "scope": 43267,
+                  "src": "510:13:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -261,10 +261,10 @@ export const IERC5267 = {
                     "typeString": "bytes1"
                   },
                   "typeName": {
-                    "id": 39274,
+                    "id": 43251,
                     "name": "bytes1",
                     "nodeType": "ElementaryTypeName",
-                    "src": "510:6:28",
+                    "src": "510:6:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes1",
                       "typeString": "bytes1"
@@ -274,13 +274,13 @@ export const IERC5267 = {
                 },
                 {
                   "constant": false,
-                  "id": 39277,
+                  "id": 43254,
                   "mutability": "mutable",
                   "name": "name",
-                  "nameLocation": "551:4:28",
+                  "nameLocation": "551:4:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "537:18:28",
+                  "scope": 43267,
+                  "src": "537:18:33",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -288,10 +288,10 @@ export const IERC5267 = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 39276,
+                    "id": 43253,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "537:6:28",
+                    "src": "537:6:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -301,13 +301,13 @@ export const IERC5267 = {
                 },
                 {
                   "constant": false,
-                  "id": 39279,
+                  "id": 43256,
                   "mutability": "mutable",
                   "name": "version",
-                  "nameLocation": "583:7:28",
+                  "nameLocation": "583:7:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "569:21:28",
+                  "scope": 43267,
+                  "src": "569:21:33",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -315,10 +315,10 @@ export const IERC5267 = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 39278,
+                    "id": 43255,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "569:6:28",
+                    "src": "569:6:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -328,13 +328,13 @@ export const IERC5267 = {
                 },
                 {
                   "constant": false,
-                  "id": 39281,
+                  "id": 43258,
                   "mutability": "mutable",
                   "name": "chainId",
-                  "nameLocation": "612:7:28",
+                  "nameLocation": "612:7:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "604:15:28",
+                  "scope": 43267,
+                  "src": "604:15:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -342,10 +342,10 @@ export const IERC5267 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39280,
+                    "id": 43257,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "604:7:28",
+                    "src": "604:7:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -355,13 +355,13 @@ export const IERC5267 = {
                 },
                 {
                   "constant": false,
-                  "id": 39283,
+                  "id": 43260,
                   "mutability": "mutable",
                   "name": "verifyingContract",
-                  "nameLocation": "641:17:28",
+                  "nameLocation": "641:17:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "633:25:28",
+                  "scope": 43267,
+                  "src": "633:25:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -369,10 +369,10 @@ export const IERC5267 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39282,
+                    "id": 43259,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "633:7:28",
+                    "src": "633:7:33",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -383,13 +383,13 @@ export const IERC5267 = {
                 },
                 {
                   "constant": false,
-                  "id": 39285,
+                  "id": 43262,
                   "mutability": "mutable",
                   "name": "salt",
-                  "nameLocation": "680:4:28",
+                  "nameLocation": "680:4:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "672:12:28",
+                  "scope": 43267,
+                  "src": "672:12:33",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -397,10 +397,10 @@ export const IERC5267 = {
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 39284,
+                    "id": 43261,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "672:7:28",
+                    "src": "672:7:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -410,13 +410,13 @@ export const IERC5267 = {
                 },
                 {
                   "constant": false,
-                  "id": 39288,
+                  "id": 43265,
                   "mutability": "mutable",
                   "name": "extensions",
-                  "nameLocation": "715:10:28",
+                  "nameLocation": "715:10:33",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39290,
-                  "src": "698:27:28",
+                  "scope": 43267,
+                  "src": "698:27:33",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -425,18 +425,18 @@ export const IERC5267 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39286,
+                      "id": 43263,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "698:7:28",
+                      "src": "698:7:33",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39287,
+                    "id": 43264,
                     "nodeType": "ArrayTypeName",
-                    "src": "698:9:28",
+                    "src": "698:9:33",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -445,9 +445,9 @@ export const IERC5267 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "496:239:28"
+              "src": "496:239:33"
             },
-            "scope": 39291,
+            "scope": 43268,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -460,18 +460,18 @@ export const IERC5267 = {
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          39291
+          43268
         ],
         "name": "IERC5267",
-        "nameLocation": "143:8:28",
-        "scope": 39292,
+        "nameLocation": "143:8:33",
+        "scope": 43269,
         "usedErrors": [],
         "usedEvents": [
-          39271
+          43248
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 28
+  "id": 33
 } as const;

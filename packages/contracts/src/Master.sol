@@ -14,7 +14,6 @@ import "solady/src/utils/ReentrancyGuard.sol";
 
 import "./entities/MasterLib.sol";
 import "./entities/PurchaseLib.sol";
-import "./entities/TicketLib.sol";
 
 import "./interface/Constants.sol";
 
@@ -22,6 +21,7 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
     using MasterLib for MasterLib.State;
     using MasterLib for MasterLib.CancelPolicyMetadata;
     using TicketLib for TicketLib.State;
+    using PurchaseLib for PurchaseLib.PurchaseData;
 
     // keccak256(abi.encode(uint256(keccak256("master.state")) - 1)) & ~bytes32(uint256(0xff));
     bytes32 internal constant MASTER_LIB_STORAGE_SLOT =
@@ -30,6 +30,9 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
     // keccak256(abi.encode("iam.the.owner"));
     bytes32 internal constant USER_VERIFICATION_MESSAGE_HASH =
         0xa850f9cb190d34eca968aeee8c951b4765e62744d7c13847a3ad392ad8649100;
+
+    bytes32 constant MAIL_TYPEHASH =
+        keccak256("Mail(Person from,Person to,string contents)Person(string name,address wallet)");
 
     constructor() {
         _disableInitializers();
@@ -42,7 +45,6 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         MasterLib.CancelPolicyMetadata memory defaultCancelPolicy
     ) external initializer {
         __Ownable_init(_owner);
-        __ERC721_init("", "");
         __EIP712_init("PurchaseData", "1.0.0");
         _self().init(verifier, ttl, defaultCancelPolicy);
     }
@@ -52,8 +54,9 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         nonReentrant
         returns (uint256 ticketId)
     {
-        _verifyPurchaseData(purchaseData, signature);
-        ticketId = uint256(keccak256(abi.encode(purchaseData.ticketData)));
+        bytes32 purchaseDataHash = getPurchaseDataSignatureHash(purchaseData.ticketData);
+        ticketId = uint256(purchaseDataHash);
+        _verifyPurchaseData(purchaseData, purchaseDataHash, signature);
         _ticketLibStatePtr(ticketId).init(purchaseData.ticketData);
         _safeMint(ticketOwner, ticketId, "");
         SafeTransferLib.safeTransferFrom(
@@ -109,6 +112,20 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         _cancel(ticketId);
     }
 
+    /**
+     * Fetched amount of tokens returned post cancellation.
+     * @param ticketId ticket Id to get cancellation 
+     * @return asset address of asset to return. 
+     * @return amount amount of assets returned.
+     */
+    function getCancellationAmount(uint256 ticketId) external view returns (address asset, uint256 amount) {
+        TicketLib.State storage ticketData = _ticketLibStatePtr(ticketId);
+        if (ticketData.showTime < block.timestamp) {
+            return (ticketData.asset, 0);
+        }
+        return (ticketData.asset, _computePostCancellationAmt(ticketData, ticketData.amount));
+    }
+
     function withdrawAssets(address[] memory assets, address benefactor) external onlyOwner {
         _self().withdrawAssets(assets, benefactor);
     }
@@ -132,10 +149,13 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
 
     /**
      * Fetches hash of the purchase data to be signed message.
-     * @param purchaseData purchase data to be signed.
+     * @param ticketData ticket data to be signed.
      */
-    function getPurchaseDataSignatureHash(PurchaseLib.PurchaseData memory purchaseData) public view returns (bytes32) {
-        return _hashTypedDataV4(keccak256(abi.encode(purchaseData)));
+    function getPurchaseDataSignatureHash(TicketLib.State memory ticketData) public view returns (bytes32) {
+        PurchaseLib.PurchaseData memory purchaseData;
+        purchaseData.ticketData = ticketData;
+        purchaseData.nonce = getNonce(ticketData.owner);
+        return _hashTypedDataV4(purchaseData.hash());
     }
 
     /**
@@ -151,6 +171,14 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         );
     }
 
+    /**
+     * Fetches nonce of the purchaseData
+     * @param user address of the user
+     */
+    function getNonce(address user) public view returns (uint256) {
+        return _self().getUserNonce(user);
+    }
+
     function _computePostCancellationAmt(TicketLib.State storage ticketData, uint256 amount)
         internal
         view
@@ -159,7 +187,7 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         MasterLib.CancelPolicyMetadata storage policy = _self().fetchPolicyForShowId(ticketData.showId);
         uint256 leftTime = ticketData.showTime - block.timestamp;
         uint256 index = 0;
-        while (index < policy.policyMetadata.length && policy.policyMetadata[index].durationLeft >= leftTime) {
+        while (index < policy.policyMetadata.length && leftTime > policy.policyMetadata[index].durationLeft) {
             index++;
             continue;
         }
@@ -169,11 +197,10 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         return Math.mulDiv(amount, policy.policyMetadata[index].percentageWad, Constants.HUNDRED_WAD);
     }
 
-    function _verifyPurchaseData(PurchaseLib.PurchaseData memory purchaseData, bytes memory signature) internal view {
+    function _verifyPurchaseData(PurchaseLib.PurchaseData memory purchaseData, bytes32 purchaseDataHash, bytes memory signature) internal {
         MasterLib.State storage self = _self();
         self.validatePurchaseData(purchaseData);
-        bytes32 purchaseDatahash = _hashTypedDataV4(keccak256(abi.encode(purchaseData)));
-        if (!SignatureChecker.isValidSignatureNow(self.verifier, purchaseDatahash, signature)) {
+        if (!SignatureChecker.isValidSignatureNow(self.verifier, purchaseDataHash, signature)) {
             revert InvalidPurchaseData();
         }
     }
@@ -184,8 +211,8 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         uint256 assetsToReturn = _computePostCancellationAmt(ticketData, ticketData.amount);
         _self().addAssetsForWithdrawal(ticketData.asset, ticketData.amount - assetsToReturn);
         _burn(ticketId);
-        ticketData.remove();
         SafeTransferLib.safeTransfer(ticketData.asset, ticketOwner, assetsToReturn);
+        ticketData.remove();
     }
 
     function _self() internal pure returns (MasterLib.State storage $) {

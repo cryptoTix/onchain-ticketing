@@ -2,12 +2,12 @@ export const ERC1155Utils = {
   "abi": [],
   "bytecode": {
     "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220a7d9d43e68b724ff65e5876668ca45cd6584b6a26cf7dd9f95ac6725a7fbc05864736f6c634300081a0033",
-    "sourceMap": "439:3094:33:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;439:3094:33;;;;;;;;;;;;;;;;;",
+    "sourceMap": "439:3094:38:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;439:3094:38;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220a7d9d43e68b724ff65e5876668ca45cd6584b6a26cf7dd9f95ac6725a7fbc05864736f6c634300081a0033",
-    "sourceMap": "439:3094:33:-:0;;;;;;;;",
+    "sourceMap": "439:3094:38:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -88,25 +88,25 @@ export const ERC1155Utils = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol",
-    "id": 39764,
+    "id": 43741,
     "exportedSymbols": {
       "ERC1155Utils": [
-        39763
+        43740
       ],
       "IERC1155Errors": [
-        39428
+        43405
       ],
       "IERC1155Receiver": [
-        39593
+        43570
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "120:3414:33",
+    "src": "120:3414:38",
     "nodes": [
       {
-        "id": 39611,
+        "id": 43588,
         "nodeType": "PragmaDirective",
-        "src": "120:24:33",
+        "src": "120:24:38",
         "nodes": [],
         "literals": [
           "solidity",
@@ -116,24 +116,24 @@ export const ERC1155Utils = {
         ]
       },
       {
-        "id": 39613,
+        "id": 43590,
         "nodeType": "ImportDirective",
-        "src": "146:57:33",
+        "src": "146:57:38",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol",
         "file": "../IERC1155Receiver.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 39764,
-        "sourceUnit": 39594,
+        "scope": 43741,
+        "sourceUnit": 43571,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39612,
+              "id": 43589,
               "name": "IERC1155Receiver",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39593,
-              "src": "154:16:33",
+              "referencedDeclaration": 43570,
+              "src": "154:16:38",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -142,24 +142,24 @@ export const ERC1155Utils = {
         "unitAlias": ""
       },
       {
-        "id": 39615,
+        "id": 43592,
         "nodeType": "ImportDirective",
-        "src": "204:70:33",
+        "src": "204:70:38",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
         "file": "../../../interfaces/draft-IERC6093.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 39764,
-        "sourceUnit": 39429,
+        "scope": 43741,
+        "sourceUnit": 43406,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39614,
+              "id": 43591,
               "name": "IERC1155Errors",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39428,
-              "src": "212:14:33",
+              "referencedDeclaration": 43405,
+              "src": "212:14:38",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -168,19 +168,19 @@ export const ERC1155Utils = {
         "unitAlias": ""
       },
       {
-        "id": 39763,
+        "id": 43740,
         "nodeType": "ContractDefinition",
-        "src": "439:3094:33",
+        "src": "439:3094:38",
         "nodes": [
           {
-            "id": 39688,
+            "id": 43665,
             "nodeType": "FunctionDefinition",
-            "src": "998:959:33",
+            "src": "998:959:38",
             "nodes": [],
             "body": {
-              "id": 39687,
+              "id": 43664,
               "nodeType": "Block",
-              "src": "1183:774:33",
+              "src": "1183:774:38",
               "nodes": [],
               "statements": [
                 {
@@ -189,7 +189,7 @@ export const ERC1155Utils = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 39636,
+                    "id": 43613,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -197,40 +197,40 @@ export const ERC1155Utils = {
                     "leftExpression": {
                       "expression": {
                         "expression": {
-                          "id": 39632,
+                          "id": 43609,
                           "name": "to",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 39623,
-                          "src": "1197:2:33",
+                          "referencedDeclaration": 43600,
+                          "src": "1197:2:38",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "id": 39633,
+                        "id": 43610,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "1200:4:33",
+                        "memberLocation": "1200:4:38",
                         "memberName": "code",
                         "nodeType": "MemberAccess",
-                        "src": "1197:7:33",
+                        "src": "1197:7:38",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
                         }
                       },
-                      "id": 39634,
+                      "id": 43611,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1205:6:33",
+                      "memberLocation": "1205:6:38",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "1197:14:33",
+                      "src": "1197:14:38",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -240,41 +240,41 @@ export const ERC1155Utils = {
                     "operator": ">",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 39635,
+                      "id": 43612,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1214:1:33",
+                      "src": "1214:1:38",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
                       },
                       "value": "0"
                     },
-                    "src": "1197:18:33",
+                    "src": "1197:18:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 39686,
+                  "id": 43663,
                   "nodeType": "IfStatement",
-                  "src": "1193:758:33",
+                  "src": "1193:758:38",
                   "trueBody": {
-                    "id": 39685,
+                    "id": 43662,
                     "nodeType": "Block",
-                    "src": "1217:734:33",
+                    "src": "1217:734:38",
                     "statements": [
                       {
                         "clauses": [
                           {
                             "block": {
-                              "id": 39663,
+                              "id": 43640,
                               "nodeType": "Block",
-                              "src": "1333:221:33",
+                              "src": "1333:221:38",
                               "statements": [
                                 {
                                   "condition": {
@@ -282,18 +282,18 @@ export const ERC1155Utils = {
                                       "typeIdentifier": "t_bytes4",
                                       "typeString": "bytes4"
                                     },
-                                    "id": 39654,
+                                    "id": 43631,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "leftExpression": {
-                                      "id": 39650,
+                                      "id": 43627,
                                       "name": "response",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 39648,
-                                      "src": "1355:8:33",
+                                      "referencedDeclaration": 43625,
+                                      "src": "1355:8:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_bytes4",
                                         "typeString": "bytes4"
@@ -304,70 +304,70 @@ export const ERC1155Utils = {
                                     "rightExpression": {
                                       "expression": {
                                         "expression": {
-                                          "id": 39651,
+                                          "id": 43628,
                                           "name": "IERC1155Receiver",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 39593,
-                                          "src": "1367:16:33",
+                                          "referencedDeclaration": 43570,
+                                          "src": "1367:16:38",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$39593_$",
+                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$43570_$",
                                             "typeString": "type(contract IERC1155Receiver)"
                                           }
                                         },
-                                        "id": 39652,
+                                        "id": 43629,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
                                         "lValueRequested": false,
-                                        "memberLocation": "1384:17:33",
+                                        "memberLocation": "1384:17:38",
                                         "memberName": "onERC1155Received",
                                         "nodeType": "MemberAccess",
-                                        "referencedDeclaration": 39574,
-                                        "src": "1367:34:33",
+                                        "referencedDeclaration": 43551,
+                                        "src": "1367:34:38",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_declaration_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_calldata_ptr_$returns$_t_bytes4_$",
                                           "typeString": "function IERC1155Receiver.onERC1155Received(address,address,uint256,uint256,bytes calldata) returns (bytes4)"
                                         }
                                       },
-                                      "id": 39653,
+                                      "id": 43630,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": true,
                                       "lValueRequested": false,
-                                      "memberLocation": "1402:8:33",
+                                      "memberLocation": "1402:8:38",
                                       "memberName": "selector",
                                       "nodeType": "MemberAccess",
-                                      "src": "1367:43:33",
+                                      "src": "1367:43:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_bytes4",
                                         "typeString": "bytes4"
                                       }
                                     },
-                                    "src": "1355:55:33",
+                                    "src": "1355:55:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bool",
                                       "typeString": "bool"
                                     }
                                   },
-                                  "id": 39662,
+                                  "id": 43639,
                                   "nodeType": "IfStatement",
-                                  "src": "1351:189:33",
+                                  "src": "1351:189:38",
                                   "trueBody": {
-                                    "id": 39661,
+                                    "id": 43638,
                                     "nodeType": "Block",
-                                    "src": "1412:128:33",
+                                    "src": "1412:128:38",
                                     "statements": [
                                       {
                                         "errorCall": {
                                           "arguments": [
                                             {
-                                              "id": 39658,
+                                              "id": 43635,
                                               "name": "to",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39623,
-                                              "src": "1518:2:33",
+                                              "referencedDeclaration": 43600,
+                                              "src": "1518:2:38",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_address",
                                                 "typeString": "address"
@@ -382,33 +382,33 @@ export const ERC1155Utils = {
                                               }
                                             ],
                                             "expression": {
-                                              "id": 39655,
+                                              "id": 43632,
                                               "name": "IERC1155Errors",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39428,
-                                              "src": "1480:14:33",
+                                              "referencedDeclaration": 43405,
+                                              "src": "1480:14:38",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$39428_$",
+                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$43405_$",
                                                 "typeString": "type(contract IERC1155Errors)"
                                               }
                                             },
-                                            "id": 39657,
+                                            "id": 43634,
                                             "isConstant": false,
                                             "isLValue": false,
                                             "isPure": false,
                                             "lValueRequested": false,
-                                            "memberLocation": "1495:22:33",
+                                            "memberLocation": "1495:22:38",
                                             "memberName": "ERC1155InvalidReceiver",
                                             "nodeType": "MemberAccess",
-                                            "referencedDeclaration": 39403,
-                                            "src": "1480:37:33",
+                                            "referencedDeclaration": 43380,
+                                            "src": "1480:37:38",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                                               "typeString": "function (address) pure returns (error)"
                                             }
                                           },
-                                          "id": 39659,
+                                          "id": 43636,
                                           "isConstant": false,
                                           "isLValue": false,
                                           "isPure": false,
@@ -417,16 +417,16 @@ export const ERC1155Utils = {
                                           "nameLocations": [],
                                           "names": [],
                                           "nodeType": "FunctionCall",
-                                          "src": "1480:41:33",
+                                          "src": "1480:41:38",
                                           "tryCall": false,
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_error",
                                             "typeString": "error"
                                           }
                                         },
-                                        "id": 39660,
+                                        "id": 43637,
                                         "nodeType": "RevertStatement",
-                                        "src": "1473:48:33"
+                                        "src": "1473:48:38"
                                       }
                                     ]
                                   }
@@ -434,21 +434,21 @@ export const ERC1155Utils = {
                               ]
                             },
                             "errorName": "",
-                            "id": 39664,
+                            "id": 43641,
                             "nodeType": "TryCatchClause",
                             "parameters": {
-                              "id": 39649,
+                              "id": 43626,
                               "nodeType": "ParameterList",
                               "parameters": [
                                 {
                                   "constant": false,
-                                  "id": 39648,
+                                  "id": 43625,
                                   "mutability": "mutable",
                                   "name": "response",
-                                  "nameLocation": "1323:8:33",
+                                  "nameLocation": "1323:8:38",
                                   "nodeType": "VariableDeclaration",
-                                  "scope": 39664,
-                                  "src": "1316:15:33",
+                                  "scope": 43641,
+                                  "src": "1316:15:38",
                                   "stateVariable": false,
                                   "storageLocation": "default",
                                   "typeDescriptions": {
@@ -456,10 +456,10 @@ export const ERC1155Utils = {
                                     "typeString": "bytes4"
                                   },
                                   "typeName": {
-                                    "id": 39647,
+                                    "id": 43624,
                                     "name": "bytes4",
                                     "nodeType": "ElementaryTypeName",
-                                    "src": "1316:6:33",
+                                    "src": "1316:6:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bytes4",
                                       "typeString": "bytes4"
@@ -468,15 +468,15 @@ export const ERC1155Utils = {
                                   "visibility": "internal"
                                 }
                               ],
-                              "src": "1315:17:33"
+                              "src": "1315:17:38"
                             },
-                            "src": "1307:247:33"
+                            "src": "1307:247:38"
                           },
                           {
                             "block": {
-                              "id": 39682,
+                              "id": 43659,
                               "nodeType": "Block",
-                              "src": "1583:358:33",
+                              "src": "1583:358:38",
                               "statements": [
                                 {
                                   "condition": {
@@ -484,33 +484,33 @@ export const ERC1155Utils = {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
                                     },
-                                    "id": 39671,
+                                    "id": 43648,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "leftExpression": {
                                       "expression": {
-                                        "id": 39668,
+                                        "id": 43645,
                                         "name": "reason",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 39666,
-                                        "src": "1605:6:33",
+                                        "referencedDeclaration": 43643,
+                                        "src": "1605:6:38",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_bytes_memory_ptr",
                                           "typeString": "bytes memory"
                                         }
                                       },
-                                      "id": 39669,
+                                      "id": 43646,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "1612:6:33",
+                                      "memberLocation": "1612:6:38",
                                       "memberName": "length",
                                       "nodeType": "MemberAccess",
-                                      "src": "1605:13:33",
+                                      "src": "1605:13:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -520,36 +520,36 @@ export const ERC1155Utils = {
                                     "operator": "==",
                                     "rightExpression": {
                                       "hexValue": "30",
-                                      "id": 39670,
+                                      "id": 43647,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": true,
                                       "kind": "number",
                                       "lValueRequested": false,
                                       "nodeType": "Literal",
-                                      "src": "1622:1:33",
+                                      "src": "1622:1:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_rational_0_by_1",
                                         "typeString": "int_const 0"
                                       },
                                       "value": "0"
                                     },
-                                    "src": "1605:18:33",
+                                    "src": "1605:18:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bool",
                                       "typeString": "bool"
                                     }
                                   },
                                   "falseBody": {
-                                    "id": 39680,
+                                    "id": 43657,
                                     "nodeType": "Block",
-                                    "src": "1776:151:33",
+                                    "src": "1776:151:38",
                                     "statements": [
                                       {
                                         "AST": {
-                                          "nativeSrc": "1823:86:33",
+                                          "nativeSrc": "1823:86:38",
                                           "nodeType": "YulBlock",
-                                          "src": "1823:86:33",
+                                          "src": "1823:86:38",
                                           "statements": [
                                             {
                                               "expression": {
@@ -558,109 +558,109 @@ export const ERC1155Utils = {
                                                     "arguments": [
                                                       {
                                                         "kind": "number",
-                                                        "nativeSrc": "1860:2:33",
+                                                        "nativeSrc": "1860:2:38",
                                                         "nodeType": "YulLiteral",
-                                                        "src": "1860:2:33",
+                                                        "src": "1860:2:38",
                                                         "type": "",
                                                         "value": "32"
                                                       },
                                                       {
                                                         "name": "reason",
-                                                        "nativeSrc": "1864:6:33",
+                                                        "nativeSrc": "1864:6:38",
                                                         "nodeType": "YulIdentifier",
-                                                        "src": "1864:6:33"
+                                                        "src": "1864:6:38"
                                                       }
                                                     ],
                                                     "functionName": {
                                                       "name": "add",
-                                                      "nativeSrc": "1856:3:33",
+                                                      "nativeSrc": "1856:3:38",
                                                       "nodeType": "YulIdentifier",
-                                                      "src": "1856:3:33"
+                                                      "src": "1856:3:38"
                                                     },
-                                                    "nativeSrc": "1856:15:33",
+                                                    "nativeSrc": "1856:15:38",
                                                     "nodeType": "YulFunctionCall",
-                                                    "src": "1856:15:33"
+                                                    "src": "1856:15:38"
                                                   },
                                                   {
                                                     "arguments": [
                                                       {
                                                         "name": "reason",
-                                                        "nativeSrc": "1879:6:33",
+                                                        "nativeSrc": "1879:6:38",
                                                         "nodeType": "YulIdentifier",
-                                                        "src": "1879:6:33"
+                                                        "src": "1879:6:38"
                                                       }
                                                     ],
                                                     "functionName": {
                                                       "name": "mload",
-                                                      "nativeSrc": "1873:5:33",
+                                                      "nativeSrc": "1873:5:38",
                                                       "nodeType": "YulIdentifier",
-                                                      "src": "1873:5:33"
+                                                      "src": "1873:5:38"
                                                     },
-                                                    "nativeSrc": "1873:13:33",
+                                                    "nativeSrc": "1873:13:38",
                                                     "nodeType": "YulFunctionCall",
-                                                    "src": "1873:13:33"
+                                                    "src": "1873:13:38"
                                                   }
                                                 ],
                                                 "functionName": {
                                                   "name": "revert",
-                                                  "nativeSrc": "1849:6:33",
+                                                  "nativeSrc": "1849:6:38",
                                                   "nodeType": "YulIdentifier",
-                                                  "src": "1849:6:33"
+                                                  "src": "1849:6:38"
                                                 },
-                                                "nativeSrc": "1849:38:33",
+                                                "nativeSrc": "1849:38:38",
                                                 "nodeType": "YulFunctionCall",
-                                                "src": "1849:38:33"
+                                                "src": "1849:38:38"
                                               },
-                                              "nativeSrc": "1849:38:33",
+                                              "nativeSrc": "1849:38:38",
                                               "nodeType": "YulExpressionStatement",
-                                              "src": "1849:38:33"
+                                              "src": "1849:38:38"
                                             }
                                           ]
                                         },
                                         "evmVersion": "paris",
                                         "externalReferences": [
                                           {
-                                            "declaration": 39666,
+                                            "declaration": 43643,
                                             "isOffset": false,
                                             "isSlot": false,
-                                            "src": "1864:6:33",
+                                            "src": "1864:6:38",
                                             "valueSize": 1
                                           },
                                           {
-                                            "declaration": 39666,
+                                            "declaration": 43643,
                                             "isOffset": false,
                                             "isSlot": false,
-                                            "src": "1879:6:33",
+                                            "src": "1879:6:38",
                                             "valueSize": 1
                                           }
                                         ],
                                         "flags": [
                                           "memory-safe"
                                         ],
-                                        "id": 39679,
+                                        "id": 43656,
                                         "nodeType": "InlineAssembly",
-                                        "src": "1798:111:33"
+                                        "src": "1798:111:38"
                                       }
                                     ]
                                   },
-                                  "id": 39681,
+                                  "id": 43658,
                                   "nodeType": "IfStatement",
-                                  "src": "1601:326:33",
+                                  "src": "1601:326:38",
                                   "trueBody": {
-                                    "id": 39678,
+                                    "id": 43655,
                                     "nodeType": "Block",
-                                    "src": "1625:145:33",
+                                    "src": "1625:145:38",
                                     "statements": [
                                       {
                                         "errorCall": {
                                           "arguments": [
                                             {
-                                              "id": 39675,
+                                              "id": 43652,
                                               "name": "to",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39623,
-                                              "src": "1748:2:33",
+                                              "referencedDeclaration": 43600,
+                                              "src": "1748:2:38",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_address",
                                                 "typeString": "address"
@@ -675,33 +675,33 @@ export const ERC1155Utils = {
                                               }
                                             ],
                                             "expression": {
-                                              "id": 39672,
+                                              "id": 43649,
                                               "name": "IERC1155Errors",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39428,
-                                              "src": "1710:14:33",
+                                              "referencedDeclaration": 43405,
+                                              "src": "1710:14:38",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$39428_$",
+                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$43405_$",
                                                 "typeString": "type(contract IERC1155Errors)"
                                               }
                                             },
-                                            "id": 39674,
+                                            "id": 43651,
                                             "isConstant": false,
                                             "isLValue": false,
                                             "isPure": false,
                                             "lValueRequested": false,
-                                            "memberLocation": "1725:22:33",
+                                            "memberLocation": "1725:22:38",
                                             "memberName": "ERC1155InvalidReceiver",
                                             "nodeType": "MemberAccess",
-                                            "referencedDeclaration": 39403,
-                                            "src": "1710:37:33",
+                                            "referencedDeclaration": 43380,
+                                            "src": "1710:37:38",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                                               "typeString": "function (address) pure returns (error)"
                                             }
                                           },
-                                          "id": 39676,
+                                          "id": 43653,
                                           "isConstant": false,
                                           "isLValue": false,
                                           "isPure": false,
@@ -710,16 +710,16 @@ export const ERC1155Utils = {
                                           "nameLocations": [],
                                           "names": [],
                                           "nodeType": "FunctionCall",
-                                          "src": "1710:41:33",
+                                          "src": "1710:41:38",
                                           "tryCall": false,
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_error",
                                             "typeString": "error"
                                           }
                                         },
-                                        "id": 39677,
+                                        "id": 43654,
                                         "nodeType": "RevertStatement",
-                                        "src": "1703:48:33"
+                                        "src": "1703:48:38"
                                       }
                                     ]
                                   }
@@ -727,21 +727,21 @@ export const ERC1155Utils = {
                               ]
                             },
                             "errorName": "",
-                            "id": 39683,
+                            "id": 43660,
                             "nodeType": "TryCatchClause",
                             "parameters": {
-                              "id": 39667,
+                              "id": 43644,
                               "nodeType": "ParameterList",
                               "parameters": [
                                 {
                                   "constant": false,
-                                  "id": 39666,
+                                  "id": 43643,
                                   "mutability": "mutable",
                                   "name": "reason",
-                                  "nameLocation": "1575:6:33",
+                                  "nameLocation": "1575:6:38",
                                   "nodeType": "VariableDeclaration",
-                                  "scope": 39683,
-                                  "src": "1562:19:33",
+                                  "scope": 43660,
+                                  "src": "1562:19:38",
                                   "stateVariable": false,
                                   "storageLocation": "memory",
                                   "typeDescriptions": {
@@ -749,10 +749,10 @@ export const ERC1155Utils = {
                                     "typeString": "bytes"
                                   },
                                   "typeName": {
-                                    "id": 39665,
+                                    "id": 43642,
                                     "name": "bytes",
                                     "nodeType": "ElementaryTypeName",
-                                    "src": "1562:5:33",
+                                    "src": "1562:5:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bytes_storage_ptr",
                                       "typeString": "bytes"
@@ -761,68 +761,68 @@ export const ERC1155Utils = {
                                   "visibility": "internal"
                                 }
                               ],
-                              "src": "1561:21:33"
+                              "src": "1561:21:38"
                             },
-                            "src": "1555:386:33"
+                            "src": "1555:386:38"
                           }
                         ],
                         "externalCall": {
                           "arguments": [
                             {
-                              "id": 39641,
+                              "id": 43618,
                               "name": "operator",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39619,
-                              "src": "1274:8:33",
+                              "referencedDeclaration": 43596,
+                              "src": "1274:8:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 39642,
+                              "id": 43619,
                               "name": "from",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39621,
-                              "src": "1284:4:33",
+                              "referencedDeclaration": 43598,
+                              "src": "1284:4:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 39643,
+                              "id": 43620,
                               "name": "id",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39625,
-                              "src": "1290:2:33",
+                              "referencedDeclaration": 43602,
+                              "src": "1290:2:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             },
                             {
-                              "id": 39644,
+                              "id": 43621,
                               "name": "value",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39627,
-                              "src": "1294:5:33",
+                              "referencedDeclaration": 43604,
+                              "src": "1294:5:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             },
                             {
-                              "id": 39645,
+                              "id": 43622,
                               "name": "data",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39629,
-                              "src": "1301:4:33",
+                              "referencedDeclaration": 43606,
+                              "src": "1301:4:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes_memory_ptr",
                                 "typeString": "bytes memory"
@@ -855,12 +855,12 @@ export const ERC1155Utils = {
                             "expression": {
                               "arguments": [
                                 {
-                                  "id": 39638,
+                                  "id": 43615,
                                   "name": "to",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 39623,
-                                  "src": "1252:2:33",
+                                  "referencedDeclaration": 43600,
+                                  "src": "1252:2:38",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
@@ -874,18 +874,18 @@ export const ERC1155Utils = {
                                     "typeString": "address"
                                   }
                                 ],
-                                "id": 39637,
+                                "id": 43614,
                                 "name": "IERC1155Receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 39593,
-                                "src": "1235:16:33",
+                                "referencedDeclaration": 43570,
+                                "src": "1235:16:38",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$39593_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$43570_$",
                                   "typeString": "type(contract IERC1155Receiver)"
                                 }
                               },
-                              "id": 39639,
+                              "id": 43616,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -894,29 +894,29 @@ export const ERC1155Utils = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "1235:20:33",
+                              "src": "1235:20:38",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC1155Receiver_$39593",
+                                "typeIdentifier": "t_contract$_IERC1155Receiver_$43570",
                                 "typeString": "contract IERC1155Receiver"
                               }
                             },
-                            "id": 39640,
+                            "id": 43617,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "1256:17:33",
+                            "memberLocation": "1256:17:38",
                             "memberName": "onERC1155Received",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 39574,
-                            "src": "1235:38:33",
+                            "referencedDeclaration": 43551,
+                            "src": "1235:38:38",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
                               "typeString": "function (address,address,uint256,uint256,bytes memory) external returns (bytes4)"
                             }
                           },
-                          "id": 39646,
+                          "id": 43623,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -925,16 +925,16 @@ export const ERC1155Utils = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1235:71:33",
+                          "src": "1235:71:38",
                           "tryCall": true,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
                           }
                         },
-                        "id": 39684,
+                        "id": 43661,
                         "nodeType": "TryStatement",
-                        "src": "1231:710:33"
+                        "src": "1231:710:38"
                       }
                     ]
                   }
@@ -942,29 +942,29 @@ export const ERC1155Utils = {
               ]
             },
             "documentation": {
-              "id": 39617,
+              "id": 43594,
               "nodeType": "StructuredDocumentation",
-              "src": "466:527:33",
+              "src": "466:527:38",
               "text": " @dev Performs an acceptance check for the provided `operator` by calling {IERC1155-onERC1155Received}\n on the `to` address. The `operator` is generally the address that initiated the token transfer (i.e. `msg.sender`).\n The acceptance call is not executed and treated as a no-op if the target address doesn't contain code (i.e. an EOA).\n Otherwise, the recipient must implement {IERC1155Receiver-onERC1155Received} and return the acceptance magic value to accept\n the transfer."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkOnERC1155Received",
-            "nameLocation": "1007:22:33",
+            "nameLocation": "1007:22:38",
             "parameters": {
-              "id": 39630,
+              "id": 43607,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39619,
+                  "id": 43596,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "1047:8:33",
+                  "nameLocation": "1047:8:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39688,
-                  "src": "1039:16:33",
+                  "scope": 43665,
+                  "src": "1039:16:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -972,10 +972,10 @@ export const ERC1155Utils = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39618,
+                    "id": 43595,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1039:7:33",
+                    "src": "1039:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -986,13 +986,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39621,
+                  "id": 43598,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "1073:4:33",
+                  "nameLocation": "1073:4:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39688,
-                  "src": "1065:12:33",
+                  "scope": 43665,
+                  "src": "1065:12:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1000,10 +1000,10 @@ export const ERC1155Utils = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39620,
+                    "id": 43597,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1065:7:33",
+                    "src": "1065:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1014,13 +1014,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39623,
+                  "id": 43600,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "1095:2:33",
+                  "nameLocation": "1095:2:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39688,
-                  "src": "1087:10:33",
+                  "scope": 43665,
+                  "src": "1087:10:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1028,10 +1028,10 @@ export const ERC1155Utils = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39622,
+                    "id": 43599,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1087:7:33",
+                    "src": "1087:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1042,13 +1042,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39625,
+                  "id": 43602,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "1115:2:33",
+                  "nameLocation": "1115:2:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39688,
-                  "src": "1107:10:33",
+                  "scope": 43665,
+                  "src": "1107:10:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1056,10 +1056,10 @@ export const ERC1155Utils = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39624,
+                    "id": 43601,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1107:7:33",
+                    "src": "1107:7:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1069,13 +1069,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39627,
+                  "id": 43604,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "1135:5:33",
+                  "nameLocation": "1135:5:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39688,
-                  "src": "1127:13:33",
+                  "scope": 43665,
+                  "src": "1127:13:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1083,10 +1083,10 @@ export const ERC1155Utils = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39626,
+                    "id": 43603,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1127:7:33",
+                    "src": "1127:7:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1096,13 +1096,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39629,
+                  "id": 43606,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "1163:4:33",
+                  "nameLocation": "1163:4:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39688,
-                  "src": "1150:17:33",
+                  "scope": 43665,
+                  "src": "1150:17:38",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1110,10 +1110,10 @@ export const ERC1155Utils = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39628,
+                    "id": 43605,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1150:5:33",
+                    "src": "1150:5:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -1122,28 +1122,28 @@ export const ERC1155Utils = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1029:144:33"
+              "src": "1029:144:38"
             },
             "returnParameters": {
-              "id": 39631,
+              "id": 43608,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1183:0:33"
+              "src": "1183:0:38"
             },
-            "scope": 39763,
+            "scope": 43740,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 39762,
+            "id": 43739,
             "nodeType": "FunctionDefinition",
-            "src": "2505:1026:33",
+            "src": "2505:1026:38",
             "nodes": [],
             "body": {
-              "id": 39761,
+              "id": 43738,
               "nodeType": "Block",
-              "src": "2715:816:33",
+              "src": "2715:816:38",
               "nodes": [],
               "statements": [
                 {
@@ -1152,7 +1152,7 @@ export const ERC1155Utils = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 39710,
+                    "id": 43687,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1160,40 +1160,40 @@ export const ERC1155Utils = {
                     "leftExpression": {
                       "expression": {
                         "expression": {
-                          "id": 39706,
+                          "id": 43683,
                           "name": "to",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 39695,
-                          "src": "2729:2:33",
+                          "referencedDeclaration": 43672,
+                          "src": "2729:2:38",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "id": 39707,
+                        "id": 43684,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "2732:4:33",
+                        "memberLocation": "2732:4:38",
                         "memberName": "code",
                         "nodeType": "MemberAccess",
-                        "src": "2729:7:33",
+                        "src": "2729:7:38",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
                         }
                       },
-                      "id": 39708,
+                      "id": 43685,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2737:6:33",
+                      "memberLocation": "2737:6:38",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "2729:14:33",
+                      "src": "2729:14:38",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1203,41 +1203,41 @@ export const ERC1155Utils = {
                     "operator": ">",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 39709,
+                      "id": 43686,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "2746:1:33",
+                      "src": "2746:1:38",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
                       },
                       "value": "0"
                     },
-                    "src": "2729:18:33",
+                    "src": "2729:18:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 39760,
+                  "id": 43737,
                   "nodeType": "IfStatement",
-                  "src": "2725:800:33",
+                  "src": "2725:800:38",
                   "trueBody": {
-                    "id": 39759,
+                    "id": 43736,
                     "nodeType": "Block",
-                    "src": "2749:776:33",
+                    "src": "2749:776:38",
                     "statements": [
                       {
                         "clauses": [
                           {
                             "block": {
-                              "id": 39737,
+                              "id": 43714,
                               "nodeType": "Block",
-                              "src": "2902:226:33",
+                              "src": "2902:226:38",
                               "statements": [
                                 {
                                   "condition": {
@@ -1245,18 +1245,18 @@ export const ERC1155Utils = {
                                       "typeIdentifier": "t_bytes4",
                                       "typeString": "bytes4"
                                     },
-                                    "id": 39728,
+                                    "id": 43705,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "leftExpression": {
-                                      "id": 39724,
+                                      "id": 43701,
                                       "name": "response",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 39722,
-                                      "src": "2924:8:33",
+                                      "referencedDeclaration": 43699,
+                                      "src": "2924:8:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_bytes4",
                                         "typeString": "bytes4"
@@ -1267,70 +1267,70 @@ export const ERC1155Utils = {
                                     "rightExpression": {
                                       "expression": {
                                         "expression": {
-                                          "id": 39725,
+                                          "id": 43702,
                                           "name": "IERC1155Receiver",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 39593,
-                                          "src": "2936:16:33",
+                                          "referencedDeclaration": 43570,
+                                          "src": "2936:16:38",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$39593_$",
+                                            "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$43570_$",
                                             "typeString": "type(contract IERC1155Receiver)"
                                           }
                                         },
-                                        "id": 39726,
+                                        "id": 43703,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
                                         "lValueRequested": false,
-                                        "memberLocation": "2953:22:33",
+                                        "memberLocation": "2953:22:38",
                                         "memberName": "onERC1155BatchReceived",
                                         "nodeType": "MemberAccess",
-                                        "referencedDeclaration": 39592,
-                                        "src": "2936:39:33",
+                                        "referencedDeclaration": 43569,
+                                        "src": "2936:39:38",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_function_declaration_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_array$_t_uint256_$dyn_calldata_ptr_$_t_bytes_calldata_ptr_$returns$_t_bytes4_$",
                                           "typeString": "function IERC1155Receiver.onERC1155BatchReceived(address,address,uint256[] calldata,uint256[] calldata,bytes calldata) returns (bytes4)"
                                         }
                                       },
-                                      "id": 39727,
+                                      "id": 43704,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": true,
                                       "lValueRequested": false,
-                                      "memberLocation": "2976:8:33",
+                                      "memberLocation": "2976:8:38",
                                       "memberName": "selector",
                                       "nodeType": "MemberAccess",
-                                      "src": "2936:48:33",
+                                      "src": "2936:48:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_bytes4",
                                         "typeString": "bytes4"
                                       }
                                     },
-                                    "src": "2924:60:33",
+                                    "src": "2924:60:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bool",
                                       "typeString": "bool"
                                     }
                                   },
-                                  "id": 39736,
+                                  "id": 43713,
                                   "nodeType": "IfStatement",
-                                  "src": "2920:194:33",
+                                  "src": "2920:194:38",
                                   "trueBody": {
-                                    "id": 39735,
+                                    "id": 43712,
                                     "nodeType": "Block",
-                                    "src": "2986:128:33",
+                                    "src": "2986:128:38",
                                     "statements": [
                                       {
                                         "errorCall": {
                                           "arguments": [
                                             {
-                                              "id": 39732,
+                                              "id": 43709,
                                               "name": "to",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39695,
-                                              "src": "3092:2:33",
+                                              "referencedDeclaration": 43672,
+                                              "src": "3092:2:38",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_address",
                                                 "typeString": "address"
@@ -1345,33 +1345,33 @@ export const ERC1155Utils = {
                                               }
                                             ],
                                             "expression": {
-                                              "id": 39729,
+                                              "id": 43706,
                                               "name": "IERC1155Errors",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39428,
-                                              "src": "3054:14:33",
+                                              "referencedDeclaration": 43405,
+                                              "src": "3054:14:38",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$39428_$",
+                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$43405_$",
                                                 "typeString": "type(contract IERC1155Errors)"
                                               }
                                             },
-                                            "id": 39731,
+                                            "id": 43708,
                                             "isConstant": false,
                                             "isLValue": false,
                                             "isPure": false,
                                             "lValueRequested": false,
-                                            "memberLocation": "3069:22:33",
+                                            "memberLocation": "3069:22:38",
                                             "memberName": "ERC1155InvalidReceiver",
                                             "nodeType": "MemberAccess",
-                                            "referencedDeclaration": 39403,
-                                            "src": "3054:37:33",
+                                            "referencedDeclaration": 43380,
+                                            "src": "3054:37:38",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                                               "typeString": "function (address) pure returns (error)"
                                             }
                                           },
-                                          "id": 39733,
+                                          "id": 43710,
                                           "isConstant": false,
                                           "isLValue": false,
                                           "isPure": false,
@@ -1380,16 +1380,16 @@ export const ERC1155Utils = {
                                           "nameLocations": [],
                                           "names": [],
                                           "nodeType": "FunctionCall",
-                                          "src": "3054:41:33",
+                                          "src": "3054:41:38",
                                           "tryCall": false,
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_error",
                                             "typeString": "error"
                                           }
                                         },
-                                        "id": 39734,
+                                        "id": 43711,
                                         "nodeType": "RevertStatement",
-                                        "src": "3047:48:33"
+                                        "src": "3047:48:38"
                                       }
                                     ]
                                   }
@@ -1397,21 +1397,21 @@ export const ERC1155Utils = {
                               ]
                             },
                             "errorName": "",
-                            "id": 39738,
+                            "id": 43715,
                             "nodeType": "TryCatchClause",
                             "parameters": {
-                              "id": 39723,
+                              "id": 43700,
                               "nodeType": "ParameterList",
                               "parameters": [
                                 {
                                   "constant": false,
-                                  "id": 39722,
+                                  "id": 43699,
                                   "mutability": "mutable",
                                   "name": "response",
-                                  "nameLocation": "2879:8:33",
+                                  "nameLocation": "2879:8:38",
                                   "nodeType": "VariableDeclaration",
-                                  "scope": 39738,
-                                  "src": "2872:15:33",
+                                  "scope": 43715,
+                                  "src": "2872:15:38",
                                   "stateVariable": false,
                                   "storageLocation": "default",
                                   "typeDescriptions": {
@@ -1419,10 +1419,10 @@ export const ERC1155Utils = {
                                     "typeString": "bytes4"
                                   },
                                   "typeName": {
-                                    "id": 39721,
+                                    "id": 43698,
                                     "name": "bytes4",
                                     "nodeType": "ElementaryTypeName",
-                                    "src": "2872:6:33",
+                                    "src": "2872:6:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bytes4",
                                       "typeString": "bytes4"
@@ -1431,15 +1431,15 @@ export const ERC1155Utils = {
                                   "visibility": "internal"
                                 }
                               ],
-                              "src": "2854:47:33"
+                              "src": "2854:47:38"
                             },
-                            "src": "2846:282:33"
+                            "src": "2846:282:38"
                           },
                           {
                             "block": {
-                              "id": 39756,
+                              "id": 43733,
                               "nodeType": "Block",
-                              "src": "3157:358:33",
+                              "src": "3157:358:38",
                               "statements": [
                                 {
                                   "condition": {
@@ -1447,33 +1447,33 @@ export const ERC1155Utils = {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
                                     },
-                                    "id": 39745,
+                                    "id": 43722,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "leftExpression": {
                                       "expression": {
-                                        "id": 39742,
+                                        "id": 43719,
                                         "name": "reason",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 39740,
-                                        "src": "3179:6:33",
+                                        "referencedDeclaration": 43717,
+                                        "src": "3179:6:38",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_bytes_memory_ptr",
                                           "typeString": "bytes memory"
                                         }
                                       },
-                                      "id": 39743,
+                                      "id": 43720,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "3186:6:33",
+                                      "memberLocation": "3186:6:38",
                                       "memberName": "length",
                                       "nodeType": "MemberAccess",
-                                      "src": "3179:13:33",
+                                      "src": "3179:13:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -1483,36 +1483,36 @@ export const ERC1155Utils = {
                                     "operator": "==",
                                     "rightExpression": {
                                       "hexValue": "30",
-                                      "id": 39744,
+                                      "id": 43721,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": true,
                                       "kind": "number",
                                       "lValueRequested": false,
                                       "nodeType": "Literal",
-                                      "src": "3196:1:33",
+                                      "src": "3196:1:38",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_rational_0_by_1",
                                         "typeString": "int_const 0"
                                       },
                                       "value": "0"
                                     },
-                                    "src": "3179:18:33",
+                                    "src": "3179:18:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bool",
                                       "typeString": "bool"
                                     }
                                   },
                                   "falseBody": {
-                                    "id": 39754,
+                                    "id": 43731,
                                     "nodeType": "Block",
-                                    "src": "3350:151:33",
+                                    "src": "3350:151:38",
                                     "statements": [
                                       {
                                         "AST": {
-                                          "nativeSrc": "3397:86:33",
+                                          "nativeSrc": "3397:86:38",
                                           "nodeType": "YulBlock",
-                                          "src": "3397:86:33",
+                                          "src": "3397:86:38",
                                           "statements": [
                                             {
                                               "expression": {
@@ -1521,109 +1521,109 @@ export const ERC1155Utils = {
                                                     "arguments": [
                                                       {
                                                         "kind": "number",
-                                                        "nativeSrc": "3434:2:33",
+                                                        "nativeSrc": "3434:2:38",
                                                         "nodeType": "YulLiteral",
-                                                        "src": "3434:2:33",
+                                                        "src": "3434:2:38",
                                                         "type": "",
                                                         "value": "32"
                                                       },
                                                       {
                                                         "name": "reason",
-                                                        "nativeSrc": "3438:6:33",
+                                                        "nativeSrc": "3438:6:38",
                                                         "nodeType": "YulIdentifier",
-                                                        "src": "3438:6:33"
+                                                        "src": "3438:6:38"
                                                       }
                                                     ],
                                                     "functionName": {
                                                       "name": "add",
-                                                      "nativeSrc": "3430:3:33",
+                                                      "nativeSrc": "3430:3:38",
                                                       "nodeType": "YulIdentifier",
-                                                      "src": "3430:3:33"
+                                                      "src": "3430:3:38"
                                                     },
-                                                    "nativeSrc": "3430:15:33",
+                                                    "nativeSrc": "3430:15:38",
                                                     "nodeType": "YulFunctionCall",
-                                                    "src": "3430:15:33"
+                                                    "src": "3430:15:38"
                                                   },
                                                   {
                                                     "arguments": [
                                                       {
                                                         "name": "reason",
-                                                        "nativeSrc": "3453:6:33",
+                                                        "nativeSrc": "3453:6:38",
                                                         "nodeType": "YulIdentifier",
-                                                        "src": "3453:6:33"
+                                                        "src": "3453:6:38"
                                                       }
                                                     ],
                                                     "functionName": {
                                                       "name": "mload",
-                                                      "nativeSrc": "3447:5:33",
+                                                      "nativeSrc": "3447:5:38",
                                                       "nodeType": "YulIdentifier",
-                                                      "src": "3447:5:33"
+                                                      "src": "3447:5:38"
                                                     },
-                                                    "nativeSrc": "3447:13:33",
+                                                    "nativeSrc": "3447:13:38",
                                                     "nodeType": "YulFunctionCall",
-                                                    "src": "3447:13:33"
+                                                    "src": "3447:13:38"
                                                   }
                                                 ],
                                                 "functionName": {
                                                   "name": "revert",
-                                                  "nativeSrc": "3423:6:33",
+                                                  "nativeSrc": "3423:6:38",
                                                   "nodeType": "YulIdentifier",
-                                                  "src": "3423:6:33"
+                                                  "src": "3423:6:38"
                                                 },
-                                                "nativeSrc": "3423:38:33",
+                                                "nativeSrc": "3423:38:38",
                                                 "nodeType": "YulFunctionCall",
-                                                "src": "3423:38:33"
+                                                "src": "3423:38:38"
                                               },
-                                              "nativeSrc": "3423:38:33",
+                                              "nativeSrc": "3423:38:38",
                                               "nodeType": "YulExpressionStatement",
-                                              "src": "3423:38:33"
+                                              "src": "3423:38:38"
                                             }
                                           ]
                                         },
                                         "evmVersion": "paris",
                                         "externalReferences": [
                                           {
-                                            "declaration": 39740,
+                                            "declaration": 43717,
                                             "isOffset": false,
                                             "isSlot": false,
-                                            "src": "3438:6:33",
+                                            "src": "3438:6:38",
                                             "valueSize": 1
                                           },
                                           {
-                                            "declaration": 39740,
+                                            "declaration": 43717,
                                             "isOffset": false,
                                             "isSlot": false,
-                                            "src": "3453:6:33",
+                                            "src": "3453:6:38",
                                             "valueSize": 1
                                           }
                                         ],
                                         "flags": [
                                           "memory-safe"
                                         ],
-                                        "id": 39753,
+                                        "id": 43730,
                                         "nodeType": "InlineAssembly",
-                                        "src": "3372:111:33"
+                                        "src": "3372:111:38"
                                       }
                                     ]
                                   },
-                                  "id": 39755,
+                                  "id": 43732,
                                   "nodeType": "IfStatement",
-                                  "src": "3175:326:33",
+                                  "src": "3175:326:38",
                                   "trueBody": {
-                                    "id": 39752,
+                                    "id": 43729,
                                     "nodeType": "Block",
-                                    "src": "3199:145:33",
+                                    "src": "3199:145:38",
                                     "statements": [
                                       {
                                         "errorCall": {
                                           "arguments": [
                                             {
-                                              "id": 39749,
+                                              "id": 43726,
                                               "name": "to",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39695,
-                                              "src": "3322:2:33",
+                                              "referencedDeclaration": 43672,
+                                              "src": "3322:2:38",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_address",
                                                 "typeString": "address"
@@ -1638,33 +1638,33 @@ export const ERC1155Utils = {
                                               }
                                             ],
                                             "expression": {
-                                              "id": 39746,
+                                              "id": 43723,
                                               "name": "IERC1155Errors",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 39428,
-                                              "src": "3284:14:33",
+                                              "referencedDeclaration": 43405,
+                                              "src": "3284:14:38",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$39428_$",
+                                                "typeIdentifier": "t_type$_t_contract$_IERC1155Errors_$43405_$",
                                                 "typeString": "type(contract IERC1155Errors)"
                                               }
                                             },
-                                            "id": 39748,
+                                            "id": 43725,
                                             "isConstant": false,
                                             "isLValue": false,
                                             "isPure": false,
                                             "lValueRequested": false,
-                                            "memberLocation": "3299:22:33",
+                                            "memberLocation": "3299:22:38",
                                             "memberName": "ERC1155InvalidReceiver",
                                             "nodeType": "MemberAccess",
-                                            "referencedDeclaration": 39403,
-                                            "src": "3284:37:33",
+                                            "referencedDeclaration": 43380,
+                                            "src": "3284:37:38",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                                               "typeString": "function (address) pure returns (error)"
                                             }
                                           },
-                                          "id": 39750,
+                                          "id": 43727,
                                           "isConstant": false,
                                           "isLValue": false,
                                           "isPure": false,
@@ -1673,16 +1673,16 @@ export const ERC1155Utils = {
                                           "nameLocations": [],
                                           "names": [],
                                           "nodeType": "FunctionCall",
-                                          "src": "3284:41:33",
+                                          "src": "3284:41:38",
                                           "tryCall": false,
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_error",
                                             "typeString": "error"
                                           }
                                         },
-                                        "id": 39751,
+                                        "id": 43728,
                                         "nodeType": "RevertStatement",
-                                        "src": "3277:48:33"
+                                        "src": "3277:48:38"
                                       }
                                     ]
                                   }
@@ -1690,21 +1690,21 @@ export const ERC1155Utils = {
                               ]
                             },
                             "errorName": "",
-                            "id": 39757,
+                            "id": 43734,
                             "nodeType": "TryCatchClause",
                             "parameters": {
-                              "id": 39741,
+                              "id": 43718,
                               "nodeType": "ParameterList",
                               "parameters": [
                                 {
                                   "constant": false,
-                                  "id": 39740,
+                                  "id": 43717,
                                   "mutability": "mutable",
                                   "name": "reason",
-                                  "nameLocation": "3149:6:33",
+                                  "nameLocation": "3149:6:38",
                                   "nodeType": "VariableDeclaration",
-                                  "scope": 39757,
-                                  "src": "3136:19:33",
+                                  "scope": 43734,
+                                  "src": "3136:19:38",
                                   "stateVariable": false,
                                   "storageLocation": "memory",
                                   "typeDescriptions": {
@@ -1712,10 +1712,10 @@ export const ERC1155Utils = {
                                     "typeString": "bytes"
                                   },
                                   "typeName": {
-                                    "id": 39739,
+                                    "id": 43716,
                                     "name": "bytes",
                                     "nodeType": "ElementaryTypeName",
-                                    "src": "3136:5:33",
+                                    "src": "3136:5:38",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_bytes_storage_ptr",
                                       "typeString": "bytes"
@@ -1724,68 +1724,68 @@ export const ERC1155Utils = {
                                   "visibility": "internal"
                                 }
                               ],
-                              "src": "3135:21:33"
+                              "src": "3135:21:38"
                             },
-                            "src": "3129:386:33"
+                            "src": "3129:386:38"
                           }
                         ],
                         "externalCall": {
                           "arguments": [
                             {
-                              "id": 39715,
+                              "id": 43692,
                               "name": "operator",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39691,
-                              "src": "2811:8:33",
+                              "referencedDeclaration": 43668,
+                              "src": "2811:8:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 39716,
+                              "id": 43693,
                               "name": "from",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39693,
-                              "src": "2821:4:33",
+                              "referencedDeclaration": 43670,
+                              "src": "2821:4:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 39717,
+                              "id": 43694,
                               "name": "ids",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39698,
-                              "src": "2827:3:33",
+                              "referencedDeclaration": 43675,
+                              "src": "2827:3:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
                                 "typeString": "uint256[] memory"
                               }
                             },
                             {
-                              "id": 39718,
+                              "id": 43695,
                               "name": "values",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39701,
-                              "src": "2832:6:33",
+                              "referencedDeclaration": 43678,
+                              "src": "2832:6:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
                                 "typeString": "uint256[] memory"
                               }
                             },
                             {
-                              "id": 39719,
+                              "id": 43696,
                               "name": "data",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39703,
-                              "src": "2840:4:33",
+                              "referencedDeclaration": 43680,
+                              "src": "2840:4:38",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes_memory_ptr",
                                 "typeString": "bytes memory"
@@ -1818,12 +1818,12 @@ export const ERC1155Utils = {
                             "expression": {
                               "arguments": [
                                 {
-                                  "id": 39712,
+                                  "id": 43689,
                                   "name": "to",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 39695,
-                                  "src": "2784:2:33",
+                                  "referencedDeclaration": 43672,
+                                  "src": "2784:2:38",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
@@ -1837,18 +1837,18 @@ export const ERC1155Utils = {
                                     "typeString": "address"
                                   }
                                 ],
-                                "id": 39711,
+                                "id": 43688,
                                 "name": "IERC1155Receiver",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 39593,
-                                "src": "2767:16:33",
+                                "referencedDeclaration": 43570,
+                                "src": "2767:16:38",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$39593_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC1155Receiver_$43570_$",
                                   "typeString": "type(contract IERC1155Receiver)"
                                 }
                               },
-                              "id": 39713,
+                              "id": 43690,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1857,29 +1857,29 @@ export const ERC1155Utils = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "2767:20:33",
+                              "src": "2767:20:38",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_IERC1155Receiver_$39593",
+                                "typeIdentifier": "t_contract$_IERC1155Receiver_$43570",
                                 "typeString": "contract IERC1155Receiver"
                               }
                             },
-                            "id": 39714,
+                            "id": 43691,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "2788:22:33",
+                            "memberLocation": "2788:22:38",
                             "memberName": "onERC1155BatchReceived",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 39592,
-                            "src": "2767:43:33",
+                            "referencedDeclaration": 43569,
+                            "src": "2767:43:38",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_array$_t_uint256_$dyn_memory_ptr_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
                               "typeString": "function (address,address,uint256[] memory,uint256[] memory,bytes memory) external returns (bytes4)"
                             }
                           },
-                          "id": 39720,
+                          "id": 43697,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1888,16 +1888,16 @@ export const ERC1155Utils = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "2767:78:33",
+                          "src": "2767:78:38",
                           "tryCall": true,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
                           }
                         },
-                        "id": 39758,
+                        "id": 43735,
                         "nodeType": "TryStatement",
-                        "src": "2763:752:33"
+                        "src": "2763:752:38"
                       }
                     ]
                   }
@@ -1905,29 +1905,29 @@ export const ERC1155Utils = {
               ]
             },
             "documentation": {
-              "id": 39689,
+              "id": 43666,
               "nodeType": "StructuredDocumentation",
-              "src": "1963:537:33",
+              "src": "1963:537:38",
               "text": " @dev Performs a batch acceptance check for the provided `operator` by calling {IERC1155-onERC1155BatchReceived}\n on the `to` address. The `operator` is generally the address that initiated the token transfer (i.e. `msg.sender`).\n The acceptance call is not executed and treated as a no-op if the target address doesn't contain code (i.e. an EOA).\n Otherwise, the recipient must implement {IERC1155Receiver-onERC1155Received} and return the acceptance magic value to accept\n the transfer."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkOnERC1155BatchReceived",
-            "nameLocation": "2514:27:33",
+            "nameLocation": "2514:27:38",
             "parameters": {
-              "id": 39704,
+              "id": 43681,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39691,
+                  "id": 43668,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "2559:8:33",
+                  "nameLocation": "2559:8:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39762,
-                  "src": "2551:16:33",
+                  "scope": 43739,
+                  "src": "2551:16:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1935,10 +1935,10 @@ export const ERC1155Utils = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39690,
+                    "id": 43667,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2551:7:33",
+                    "src": "2551:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1949,13 +1949,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39693,
+                  "id": 43670,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "2585:4:33",
+                  "nameLocation": "2585:4:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39762,
-                  "src": "2577:12:33",
+                  "scope": 43739,
+                  "src": "2577:12:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1963,10 +1963,10 @@ export const ERC1155Utils = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39692,
+                    "id": 43669,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2577:7:33",
+                    "src": "2577:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1977,13 +1977,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39695,
+                  "id": 43672,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "2607:2:33",
+                  "nameLocation": "2607:2:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39762,
-                  "src": "2599:10:33",
+                  "scope": 43739,
+                  "src": "2599:10:38",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1991,10 +1991,10 @@ export const ERC1155Utils = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39694,
+                    "id": 43671,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2599:7:33",
+                    "src": "2599:7:38",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2005,13 +2005,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39698,
+                  "id": 43675,
                   "mutability": "mutable",
                   "name": "ids",
-                  "nameLocation": "2636:3:33",
+                  "nameLocation": "2636:3:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39762,
-                  "src": "2619:20:33",
+                  "scope": 43739,
+                  "src": "2619:20:38",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2020,18 +2020,18 @@ export const ERC1155Utils = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39696,
+                      "id": 43673,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2619:7:33",
+                      "src": "2619:7:38",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39697,
+                    "id": 43674,
                     "nodeType": "ArrayTypeName",
-                    "src": "2619:9:33",
+                    "src": "2619:9:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -2041,13 +2041,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39701,
+                  "id": 43678,
                   "mutability": "mutable",
                   "name": "values",
-                  "nameLocation": "2666:6:33",
+                  "nameLocation": "2666:6:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39762,
-                  "src": "2649:23:33",
+                  "scope": 43739,
+                  "src": "2649:23:38",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2056,18 +2056,18 @@ export const ERC1155Utils = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39699,
+                      "id": 43676,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2649:7:33",
+                      "src": "2649:7:38",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39700,
+                    "id": 43677,
                     "nodeType": "ArrayTypeName",
-                    "src": "2649:9:33",
+                    "src": "2649:9:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -2077,13 +2077,13 @@ export const ERC1155Utils = {
                 },
                 {
                   "constant": false,
-                  "id": 39703,
+                  "id": 43680,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "2695:4:33",
+                  "nameLocation": "2695:4:38",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39762,
-                  "src": "2682:17:33",
+                  "scope": 43739,
+                  "src": "2682:17:38",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2091,10 +2091,10 @@ export const ERC1155Utils = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39702,
+                    "id": 43679,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2682:5:33",
+                    "src": "2682:5:38",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -2103,15 +2103,15 @@ export const ERC1155Utils = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2541:164:33"
+              "src": "2541:164:38"
             },
             "returnParameters": {
-              "id": 39705,
+              "id": 43682,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2715:0:33"
+              "src": "2715:0:38"
             },
-            "scope": 39763,
+            "scope": 43740,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
@@ -2123,23 +2123,23 @@ export const ERC1155Utils = {
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 39616,
+          "id": 43593,
           "nodeType": "StructuredDocumentation",
-          "src": "276:162:33",
+          "src": "276:162:38",
           "text": " @dev Library that provide common ERC-1155 utility functions.\n See https://eips.ethereum.org/EIPS/eip-1155[ERC-1155].\n _Available since v5.1._"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          39763
+          43740
         ],
         "name": "ERC1155Utils",
-        "nameLocation": "447:12:33",
-        "scope": 39764,
+        "nameLocation": "447:12:38",
+        "scope": 43741,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 33
+  "id": 38
 } as const;

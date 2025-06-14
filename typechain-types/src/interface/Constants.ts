@@ -24,6 +24,9 @@ export interface ConstantsInterface extends utils.Interface {
     "DEFAULT_POLICY_ID()": FunctionFragment;
     "HUNDRED_WAD()": FunctionFragment;
     "ONE_WAD()": FunctionFragment;
+    "PURCHASE_DATA_TYPEHASH()": FunctionFragment;
+    "SEATDATA_TYPEHASH()": FunctionFragment;
+    "TICKETDATA_TYPEHASH()": FunctionFragment;
     "TICKET_STORAGE_PREFIX()": FunctionFragment;
   };
 
@@ -32,6 +35,9 @@ export interface ConstantsInterface extends utils.Interface {
       | "DEFAULT_POLICY_ID"
       | "HUNDRED_WAD"
       | "ONE_WAD"
+      | "PURCHASE_DATA_TYPEHASH"
+      | "SEATDATA_TYPEHASH"
+      | "TICKETDATA_TYPEHASH"
       | "TICKET_STORAGE_PREFIX"
   ): FunctionFragment;
 
@@ -44,6 +50,18 @@ export interface ConstantsInterface extends utils.Interface {
     values?: undefined
   ): string;
   encodeFunctionData(functionFragment: "ONE_WAD", values?: undefined): string;
+  encodeFunctionData(
+    functionFragment: "PURCHASE_DATA_TYPEHASH",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "SEATDATA_TYPEHASH",
+    values?: undefined
+  ): string;
+  encodeFunctionData(
+    functionFragment: "TICKETDATA_TYPEHASH",
+    values?: undefined
+  ): string;
   encodeFunctionData(
     functionFragment: "TICKET_STORAGE_PREFIX",
     values?: undefined
@@ -58,6 +76,18 @@ export interface ConstantsInterface extends utils.Interface {
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "ONE_WAD", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "PURCHASE_DATA_TYPEHASH",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "SEATDATA_TYPEHASH",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
+    functionFragment: "TICKETDATA_TYPEHASH",
+    data: BytesLike
+  ): Result;
   decodeFunctionResult(
     functionFragment: "TICKET_STORAGE_PREFIX",
     data: BytesLike
@@ -99,6 +129,12 @@ export interface Constants extends BaseContract {
 
     ONE_WAD(overrides?: CallOverrides): Promise<[BigNumber]>;
 
+    PURCHASE_DATA_TYPEHASH(overrides?: CallOverrides): Promise<[string]>;
+
+    SEATDATA_TYPEHASH(overrides?: CallOverrides): Promise<[string]>;
+
+    TICKETDATA_TYPEHASH(overrides?: CallOverrides): Promise<[string]>;
+
     TICKET_STORAGE_PREFIX(overrides?: CallOverrides): Promise<[string]>;
   };
 
@@ -108,6 +144,12 @@ export interface Constants extends BaseContract {
 
   ONE_WAD(overrides?: CallOverrides): Promise<BigNumber>;
 
+  PURCHASE_DATA_TYPEHASH(overrides?: CallOverrides): Promise<string>;
+
+  SEATDATA_TYPEHASH(overrides?: CallOverrides): Promise<string>;
+
+  TICKETDATA_TYPEHASH(overrides?: CallOverrides): Promise<string>;
+
   TICKET_STORAGE_PREFIX(overrides?: CallOverrides): Promise<string>;
 
   callStatic: {
@@ -116,6 +158,12 @@ export interface Constants extends BaseContract {
     HUNDRED_WAD(overrides?: CallOverrides): Promise<BigNumber>;
 
     ONE_WAD(overrides?: CallOverrides): Promise<BigNumber>;
+
+    PURCHASE_DATA_TYPEHASH(overrides?: CallOverrides): Promise<string>;
+
+    SEATDATA_TYPEHASH(overrides?: CallOverrides): Promise<string>;
+
+    TICKETDATA_TYPEHASH(overrides?: CallOverrides): Promise<string>;
 
     TICKET_STORAGE_PREFIX(overrides?: CallOverrides): Promise<string>;
   };
@@ -129,6 +177,12 @@ export interface Constants extends BaseContract {
 
     ONE_WAD(overrides?: CallOverrides): Promise<BigNumber>;
 
+    PURCHASE_DATA_TYPEHASH(overrides?: CallOverrides): Promise<BigNumber>;
+
+    SEATDATA_TYPEHASH(overrides?: CallOverrides): Promise<BigNumber>;
+
+    TICKETDATA_TYPEHASH(overrides?: CallOverrides): Promise<BigNumber>;
+
     TICKET_STORAGE_PREFIX(overrides?: CallOverrides): Promise<BigNumber>;
   };
 
@@ -138,6 +192,16 @@ export interface Constants extends BaseContract {
     HUNDRED_WAD(overrides?: CallOverrides): Promise<PopulatedTransaction>;
 
     ONE_WAD(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    PURCHASE_DATA_TYPEHASH(
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    SEATDATA_TYPEHASH(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+
+    TICKETDATA_TYPEHASH(
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
 
     TICKET_STORAGE_PREFIX(
       overrides?: CallOverrides

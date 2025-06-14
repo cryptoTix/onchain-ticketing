@@ -95,19 +95,19 @@ export const ITicket = {
   },
   "ast": {
     "absolutePath": "src/interface/ITicket.sol",
-    "id": 52163,
+    "id": 56745,
     "exportedSymbols": {
       "ITicket": [
-        52162
+        56744
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "51:112:65",
+    "src": "51:112:73",
     "nodes": [
       {
-        "id": 52155,
+        "id": 56737,
         "nodeType": "PragmaDirective",
-        "src": "51:24:65",
+        "src": "51:24:73",
         "nodes": [],
         "literals": [
           "solidity",
@@ -117,62 +117,62 @@ export const ITicket = {
         ]
       },
       {
-        "id": 52162,
+        "id": 56744,
         "nodeType": "ContractDefinition",
-        "src": "77:85:65",
+        "src": "77:85:73",
         "nodes": [
           {
-            "id": 52158,
+            "id": 56740,
             "nodeType": "FunctionDefinition",
-            "src": "101:27:65",
+            "src": "101:27:73",
             "nodes": [],
             "functionSelector": "ea8a1af0",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "cancel",
-            "nameLocation": "110:6:65",
+            "nameLocation": "110:6:73",
             "parameters": {
-              "id": 52156,
+              "id": 56738,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "116:2:65"
+              "src": "116:2:73"
             },
             "returnParameters": {
-              "id": 52157,
+              "id": 56739,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "127:0:65"
+              "src": "127:0:73"
             },
-            "scope": 52162,
+            "scope": 56744,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 52161,
+            "id": 56743,
             "nodeType": "FunctionDefinition",
-            "src": "133:27:65",
+            "src": "133:27:73",
             "nodes": [],
             "functionSelector": "be040fb0",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "redeem",
-            "nameLocation": "142:6:65",
+            "nameLocation": "142:6:73",
             "parameters": {
-              "id": 52159,
+              "id": 56741,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "148:2:65"
+              "src": "148:2:73"
             },
             "returnParameters": {
-              "id": 52160,
+              "id": 56742,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "159:0:65"
+              "src": "159:0:73"
             },
-            "scope": 52162,
+            "scope": 56744,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -185,16 +185,16 @@ export const ITicket = {
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          52162
+          56744
         ],
         "name": "ITicket",
-        "nameLocation": "87:7:65",
-        "scope": 52163,
+        "nameLocation": "87:7:73",
+        "scope": 56745,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "SEE LICENSE IN LICENSE"
   },
-  "id": 65
+  "id": 73
 } as const;

@@ -110,19 +110,19 @@ export const IERC165 = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
-    "id": 42160,
+    "id": 46708,
     "exportedSymbols": {
       "IERC165": [
-        42159
+        46707
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "115:755:48",
+    "src": "115:755:56",
     "nodes": [
       {
-        "id": 42149,
+        "id": 46697,
         "nodeType": "PragmaDirective",
-        "src": "115:24:48",
+        "src": "115:24:56",
         "nodes": [],
         "literals": [
           "solidity",
@@ -132,19 +132,19 @@ export const IERC165 = {
         ]
       },
       {
-        "id": 42159,
+        "id": 46707,
         "nodeType": "ContractDefinition",
-        "src": "422:447:48",
+        "src": "422:447:56",
         "nodes": [
           {
-            "id": 42158,
+            "id": 46706,
             "nodeType": "FunctionDefinition",
-            "src": "791:76:48",
+            "src": "791:76:56",
             "nodes": [],
             "documentation": {
-              "id": 42151,
+              "id": 46699,
               "nodeType": "StructuredDocumentation",
-              "src": "446:340:48",
+              "src": "446:340:56",
               "text": " @dev Returns true if this contract implements the interface defined by\n `interfaceId`. See the corresponding\n https://eips.ethereum.org/EIPS/eip-165#how-interfaces-are-identified[ERC section]\n to learn more about how these ids are created.\n This function call must use less than 30 000 gas."
             },
             "functionSelector": "01ffc9a7",
@@ -152,20 +152,20 @@ export const IERC165 = {
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
-            "nameLocation": "800:17:48",
+            "nameLocation": "800:17:56",
             "parameters": {
-              "id": 42154,
+              "id": 46702,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 42153,
+                  "id": 46701,
                   "mutability": "mutable",
                   "name": "interfaceId",
-                  "nameLocation": "825:11:48",
+                  "nameLocation": "825:11:56",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42158,
-                  "src": "818:18:48",
+                  "scope": 46706,
+                  "src": "818:18:56",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -173,10 +173,10 @@ export const IERC165 = {
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 42152,
+                    "id": 46700,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "818:6:48",
+                    "src": "818:6:56",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -185,21 +185,21 @@ export const IERC165 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "817:20:48"
+              "src": "817:20:56"
             },
             "returnParameters": {
-              "id": 42157,
+              "id": 46705,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 42156,
+                  "id": 46704,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42158,
-                  "src": "861:4:48",
+                  "scope": 46706,
+                  "src": "861:4:56",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -207,10 +207,10 @@ export const IERC165 = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 42155,
+                    "id": 46703,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "861:4:48",
+                    "src": "861:4:56",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -219,9 +219,9 @@ export const IERC165 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "860:6:48"
+              "src": "860:6:56"
             },
-            "scope": 42159,
+            "scope": 46707,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -233,23 +233,23 @@ export const IERC165 = {
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 42150,
+          "id": 46698,
           "nodeType": "StructuredDocumentation",
-          "src": "141:280:48",
+          "src": "141:280:56",
           "text": " @dev Interface of the ERC-165 standard, as defined in the\n https://eips.ethereum.org/EIPS/eip-165[ERC].\n Implementers can declare support of contract interfaces, which can then be\n queried by others ({ERC165Checker}).\n For an implementation, see {ERC165}."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          42159
+          46707
         ],
         "name": "IERC165",
-        "nameLocation": "432:7:48",
-        "scope": 42160,
+        "nameLocation": "432:7:56",
+        "scope": 46708,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 48
+  "id": 56
 } as const;

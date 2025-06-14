@@ -57,12 +57,16 @@ export declare namespace TicketLib {
   export type StateStruct = {
     asset: string;
     showTime: BigNumberish;
-    amount: BigNumberish;
+    owner: string;
     showId: BigNumberish;
+    originTimestamp: BigNumberish;
+    amount: BigNumberish;
     seats: TicketLib.SeatDataStruct[];
   };
 
   export type StateStructOutput = [
+    string,
+    BigNumber,
     string,
     BigNumber,
     BigNumber,
@@ -71,8 +75,10 @@ export declare namespace TicketLib {
   ] & {
     asset: string;
     showTime: BigNumber;
-    amount: BigNumber;
+    owner: string;
     showId: BigNumber;
+    originTimestamp: BigNumber;
+    amount: BigNumber;
     seats: TicketLib.SeatDataStructOutput[];
   };
 }
@@ -80,19 +86,13 @@ export declare namespace TicketLib {
 export declare namespace PurchaseLib {
   export type PurchaseDataStruct = {
     ticketData: TicketLib.StateStruct;
-    timestamp: BigNumberish;
     nonce: BigNumberish;
   };
 
   export type PurchaseDataStructOutput = [
     TicketLib.StateStructOutput,
-    BigNumber,
     BigNumber
-  ] & {
-    ticketData: TicketLib.StateStructOutput;
-    timestamp: BigNumber;
-    nonce: BigNumber;
-  };
+  ] & { ticketData: TicketLib.StateStructOutput; nonce: BigNumber };
 }
 
 export interface MasterInterface extends utils.Interface {
@@ -105,7 +105,9 @@ export interface MasterInterface extends utils.Interface {
     "changeDefaultCancelPolicy(((uint128,uint128)[]))": FunctionFragment;
     "eip712Domain()": FunctionFragment;
     "getApproved(uint256)": FunctionFragment;
-    "getPurchaseDataSignatureHash(((address,uint96,uint256,uint256,(uint128,uint128)[]),uint256,uint256))": FunctionFragment;
+    "getCancellationAmount(uint256)": FunctionFragment;
+    "getNonce(address)": FunctionFragment;
+    "getPurchaseDataSignatureHash((address,uint96,address,uint96,uint256,uint256,(uint128,uint128)[]))": FunctionFragment;
     "getUserVerificationSignatureHash(uint256)": FunctionFragment;
     "initialize(address,address,uint96,((uint128,uint128)[]))": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
@@ -113,7 +115,7 @@ export interface MasterInterface extends utils.Interface {
     "name()": FunctionFragment;
     "owner()": FunctionFragment;
     "ownerOf(uint256)": FunctionFragment;
-    "purchase(address,((address,uint96,uint256,uint256,(uint128,uint128)[]),uint256,uint256),bytes)": FunctionFragment;
+    "purchase(address,((address,uint96,address,uint96,uint256,uint256,(uint128,uint128)[]),uint256),bytes)": FunctionFragment;
     "redeem(uint256[])": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
     "safeTransferFrom(address,address,uint256)": FunctionFragment;
@@ -138,6 +140,8 @@ export interface MasterInterface extends utils.Interface {
       | "changeDefaultCancelPolicy"
       | "eip712Domain"
       | "getApproved"
+      | "getCancellationAmount"
+      | "getNonce"
       | "getPurchaseDataSignatureHash"
       | "getUserVerificationSignatureHash"
       | "initialize"
@@ -191,8 +195,13 @@ export interface MasterInterface extends utils.Interface {
     values: [BigNumberish]
   ): string;
   encodeFunctionData(
+    functionFragment: "getCancellationAmount",
+    values: [BigNumberish]
+  ): string;
+  encodeFunctionData(functionFragment: "getNonce", values: [string]): string;
+  encodeFunctionData(
     functionFragment: "getPurchaseDataSignatureHash",
-    values: [PurchaseLib.PurchaseDataStruct]
+    values: [TicketLib.StateStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "getUserVerificationSignatureHash",
@@ -289,6 +298,11 @@ export interface MasterInterface extends utils.Interface {
     functionFragment: "getApproved",
     data: BytesLike
   ): Result;
+  decodeFunctionResult(
+    functionFragment: "getCancellationAmount",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(functionFragment: "getNonce", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "getPurchaseDataSignatureHash",
     data: BytesLike
@@ -507,8 +521,15 @@ export interface Master extends BaseContract {
       overrides?: CallOverrides
     ): Promise<[string]>;
 
+    getCancellationAmount(
+      ticketId: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[string, BigNumber] & { asset: string; amount: BigNumber }>;
+
+    getNonce(user: string, overrides?: CallOverrides): Promise<[BigNumber]>;
+
     getPurchaseDataSignatureHash(
-      purchaseData: PurchaseLib.PurchaseDataStruct,
+      ticketData: TicketLib.StateStruct,
       overrides?: CallOverrides
     ): Promise<[string]>;
 
@@ -669,8 +690,15 @@ export interface Master extends BaseContract {
     overrides?: CallOverrides
   ): Promise<string>;
 
+  getCancellationAmount(
+    ticketId: BigNumberish,
+    overrides?: CallOverrides
+  ): Promise<[string, BigNumber] & { asset: string; amount: BigNumber }>;
+
+  getNonce(user: string, overrides?: CallOverrides): Promise<BigNumber>;
+
   getPurchaseDataSignatureHash(
-    purchaseData: PurchaseLib.PurchaseDataStruct,
+    ticketData: TicketLib.StateStruct,
     overrides?: CallOverrides
   ): Promise<string>;
 
@@ -822,8 +850,15 @@ export interface Master extends BaseContract {
       overrides?: CallOverrides
     ): Promise<string>;
 
+    getCancellationAmount(
+      ticketId: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<[string, BigNumber] & { asset: string; amount: BigNumber }>;
+
+    getNonce(user: string, overrides?: CallOverrides): Promise<BigNumber>;
+
     getPurchaseDataSignatureHash(
-      purchaseData: PurchaseLib.PurchaseDataStruct,
+      ticketData: TicketLib.StateStruct,
       overrides?: CallOverrides
     ): Promise<string>;
 
@@ -1012,8 +1047,15 @@ export interface Master extends BaseContract {
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
+    getCancellationAmount(
+      ticketId: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    getNonce(user: string, overrides?: CallOverrides): Promise<BigNumber>;
+
     getPurchaseDataSignatureHash(
-      purchaseData: PurchaseLib.PurchaseDataStruct,
+      ticketData: TicketLib.StateStruct,
       overrides?: CallOverrides
     ): Promise<BigNumber>;
 
@@ -1166,8 +1208,18 @@ export interface Master extends BaseContract {
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 
+    getCancellationAmount(
+      ticketId: BigNumberish,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    getNonce(
+      user: string,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
     getPurchaseDataSignatureHash(
-      purchaseData: PurchaseLib.PurchaseDataStruct,
+      ticketData: TicketLib.StateStruct,
       overrides?: CallOverrides
     ): Promise<PopulatedTransaction>;
 

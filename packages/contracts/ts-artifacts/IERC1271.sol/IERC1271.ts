@@ -124,19 +124,19 @@ export const IERC1271 = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/IERC1271.sol",
-    "id": 39263,
+    "id": 43240,
     "exportedSymbols": {
       "IERC1271": [
-        39262
+        43239
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "107:546:26",
+    "src": "107:546:31",
     "nodes": [
       {
-        "id": 39250,
+        "id": 43227,
         "nodeType": "PragmaDirective",
-        "src": "107:24:26",
+        "src": "107:24:31",
         "nodes": [],
         "literals": [
           "solidity",
@@ -146,19 +146,19 @@ export const IERC1271 = {
         ]
       },
       {
-        "id": 39262,
+        "id": 43239,
         "nodeType": "ContractDefinition",
-        "src": "294:358:26",
+        "src": "294:358:31",
         "nodes": [
           {
-            "id": 39261,
+            "id": 43238,
             "nodeType": "FunctionDefinition",
-            "src": "544:106:26",
+            "src": "544:106:31",
             "nodes": [],
             "documentation": {
-              "id": 39252,
+              "id": 43229,
               "nodeType": "StructuredDocumentation",
-              "src": "319:220:26",
+              "src": "319:220:31",
               "text": " @dev Should return whether the signature provided is valid for the provided data\n @param hash      Hash of the data to be signed\n @param signature Signature byte array associated with _data"
             },
             "functionSelector": "1626ba7e",
@@ -166,20 +166,20 @@ export const IERC1271 = {
             "kind": "function",
             "modifiers": [],
             "name": "isValidSignature",
-            "nameLocation": "553:16:26",
+            "nameLocation": "553:16:31",
             "parameters": {
-              "id": 39257,
+              "id": 43234,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39254,
+                  "id": 43231,
                   "mutability": "mutable",
                   "name": "hash",
-                  "nameLocation": "578:4:26",
+                  "nameLocation": "578:4:31",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39261,
-                  "src": "570:12:26",
+                  "scope": 43238,
+                  "src": "570:12:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -187,10 +187,10 @@ export const IERC1271 = {
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 39253,
+                    "id": 43230,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "570:7:26",
+                    "src": "570:7:31",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -200,13 +200,13 @@ export const IERC1271 = {
                 },
                 {
                   "constant": false,
-                  "id": 39256,
+                  "id": 43233,
                   "mutability": "mutable",
                   "name": "signature",
-                  "nameLocation": "597:9:26",
+                  "nameLocation": "597:9:31",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39261,
-                  "src": "584:22:26",
+                  "scope": 43238,
+                  "src": "584:22:31",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -214,10 +214,10 @@ export const IERC1271 = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39255,
+                    "id": 43232,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "584:5:26",
+                    "src": "584:5:31",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -226,21 +226,21 @@ export const IERC1271 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "569:38:26"
+              "src": "569:38:31"
             },
             "returnParameters": {
-              "id": 39260,
+              "id": 43237,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39259,
+                  "id": 43236,
                   "mutability": "mutable",
                   "name": "magicValue",
-                  "nameLocation": "638:10:26",
+                  "nameLocation": "638:10:31",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39261,
-                  "src": "631:17:26",
+                  "scope": 43238,
+                  "src": "631:17:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -248,10 +248,10 @@ export const IERC1271 = {
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 39258,
+                    "id": 43235,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "631:6:26",
+                    "src": "631:6:31",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -260,9 +260,9 @@ export const IERC1271 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "630:19:26"
+              "src": "630:19:31"
             },
-            "scope": 39262,
+            "scope": 43239,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -274,23 +274,23 @@ export const IERC1271 = {
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 39251,
+          "id": 43228,
           "nodeType": "StructuredDocumentation",
-          "src": "133:160:26",
+          "src": "133:160:31",
           "text": " @dev Interface of the ERC-1271 standard signature validation method for\n contracts as defined in https://eips.ethereum.org/EIPS/eip-1271[ERC-1271]."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          39262
+          43239
         ],
         "name": "IERC1271",
-        "nameLocation": "304:8:26",
-        "scope": 39263,
+        "nameLocation": "304:8:31",
+        "scope": 43240,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 26
+  "id": 31
 } as const;

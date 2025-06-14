@@ -1139,46 +1139,46 @@ export const ERC721Upgradeable = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol",
-    "id": 38819,
+    "id": 42796,
     "exportedSymbols": {
       "ContextUpgradeable": [
-        38864
+        42841
       ],
       "ERC165Upgradeable": [
-        39248
+        43225
       ],
       "ERC721Upgradeable": [
-        38818
+        42795
       ],
       "ERC721Utils": [
-        40081
+        44599
       ],
       "IERC165": [
-        42159
+        46707
       ],
       "IERC721": [
-        39958
+        44476
       ],
       "IERC721Errors": [
-        39381
+        43358
       ],
       "IERC721Metadata": [
-        40004
+        44522
       ],
       "Initializable": [
-        36741
+        40718
       ],
       "Strings": [
-        41617
+        46165
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "107:18047:22",
+    "src": "107:18047:27",
     "nodes": [
       {
-        "id": 37740,
+        "id": 41717,
         "nodeType": "PragmaDirective",
-        "src": "107:24:22",
+        "src": "107:24:27",
         "nodes": [],
         "literals": [
           "solidity",
@@ -1188,24 +1188,24 @@ export const ERC721Upgradeable = {
         ]
       },
       {
-        "id": 37742,
+        "id": 41719,
         "nodeType": "ImportDirective",
-        "src": "133:73:22",
+        "src": "133:73:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol",
         "file": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 39959,
+        "scope": 42796,
+        "sourceUnit": 44477,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37741,
+              "id": 41718,
               "name": "IERC721",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39958,
-              "src": "141:7:22",
+              "referencedDeclaration": 44476,
+              "src": "141:7:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1214,24 +1214,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37744,
+        "id": 41721,
         "nodeType": "ImportDirective",
-        "src": "207:100:22",
+        "src": "207:100:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
         "file": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 40005,
+        "scope": 42796,
+        "sourceUnit": 44523,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37743,
+              "id": 41720,
               "name": "IERC721Metadata",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 40004,
-              "src": "215:15:22",
+              "referencedDeclaration": 44522,
+              "src": "215:15:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1240,24 +1240,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37746,
+        "id": 41723,
         "nodeType": "ImportDirective",
-        "src": "308:87:22",
+        "src": "308:87:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol",
         "file": "@openzeppelin/contracts/token/ERC721/utils/ERC721Utils.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 40082,
+        "scope": 42796,
+        "sourceUnit": 44600,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37745,
+              "id": 41722,
               "name": "ERC721Utils",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 40081,
-              "src": "316:11:22",
+              "referencedDeclaration": 44599,
+              "src": "316:11:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1266,24 +1266,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37748,
+        "id": 41725,
         "nodeType": "ImportDirective",
-        "src": "396:70:22",
+        "src": "396:70:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
         "file": "../../utils/ContextUpgradeable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 38865,
+        "scope": 42796,
+        "sourceUnit": 42842,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37747,
+              "id": 41724,
               "name": "ContextUpgradeable",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 38864,
-              "src": "404:18:22",
+              "referencedDeclaration": 42841,
+              "src": "404:18:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1292,24 +1292,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37750,
+        "id": 41727,
         "nodeType": "ImportDirective",
-        "src": "467:66:22",
+        "src": "467:66:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/Strings.sol",
         "file": "@openzeppelin/contracts/utils/Strings.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 41618,
+        "scope": 42796,
+        "sourceUnit": 46166,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37749,
+              "id": 41726,
               "name": "Strings",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 41617,
-              "src": "475:7:22",
+              "referencedDeclaration": 46165,
+              "src": "475:7:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1318,24 +1318,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37752,
+        "id": 41729,
         "nodeType": "ImportDirective",
-        "src": "534:80:22",
+        "src": "534:80:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
         "file": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 42160,
+        "scope": 42796,
+        "sourceUnit": 46708,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37751,
+              "id": 41728,
               "name": "IERC165",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 42159,
-              "src": "542:7:22",
+              "referencedDeclaration": 46707,
+              "src": "542:7:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1344,24 +1344,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37754,
+        "id": 41731,
         "nodeType": "ImportDirective",
-        "src": "615:82:22",
+        "src": "615:82:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
         "file": "../../utils/introspection/ERC165Upgradeable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 39249,
+        "scope": 42796,
+        "sourceUnit": 43226,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37753,
+              "id": 41730,
               "name": "ERC165Upgradeable",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39248,
-              "src": "623:17:22",
+              "referencedDeclaration": 43225,
+              "src": "623:17:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1370,24 +1370,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37756,
+        "id": 41733,
         "nodeType": "ImportDirective",
-        "src": "698:84:22",
+        "src": "698:84:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
         "file": "@openzeppelin/contracts/interfaces/draft-IERC6093.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 39429,
+        "scope": 42796,
+        "sourceUnit": 43406,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37755,
+              "id": 41732,
               "name": "IERC721Errors",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39381,
-              "src": "706:13:22",
+              "referencedDeclaration": 43358,
+              "src": "706:13:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1396,24 +1396,24 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 37758,
+        "id": 41735,
         "nodeType": "ImportDirective",
-        "src": "783:66:22",
+        "src": "783:66:27",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "file": "../../proxy/utils/Initializable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 38819,
-        "sourceUnit": 36742,
+        "scope": 42796,
+        "sourceUnit": 40719,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 37757,
+              "id": 41734,
               "name": "Initializable",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 36741,
-              "src": "791:13:22",
+              "referencedDeclaration": 40718,
+              "src": "791:13:27",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -1422,31 +1422,31 @@ export const ERC721Upgradeable = {
         "unitAlias": ""
       },
       {
-        "id": 38818,
+        "id": 42795,
         "nodeType": "ContractDefinition",
-        "src": "1099:17054:22",
+        "src": "1099:17054:27",
         "nodes": [
           {
-            "id": 37774,
+            "id": 41751,
             "nodeType": "UsingForDirective",
-            "src": "1238:26:22",
+            "src": "1238:26:27",
             "nodes": [],
             "global": false,
             "libraryName": {
-              "id": 37772,
+              "id": 41749,
               "name": "Strings",
               "nameLocations": [
-                "1244:7:22"
+                "1244:7:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 41617,
-              "src": "1244:7:22"
+              "referencedDeclaration": 46165,
+              "src": "1244:7:27"
             },
             "typeName": {
-              "id": 37773,
+              "id": 41750,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1256:7:22",
+              "src": "1256:7:27",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -1454,27 +1454,27 @@ export const ERC721Upgradeable = {
             }
           },
           {
-            "id": 37798,
+            "id": 41775,
             "nodeType": "StructDefinition",
-            "src": "1339:380:22",
+            "src": "1339:380:27",
             "nodes": [],
             "canonicalName": "ERC721Upgradeable.ERC721Storage",
             "documentation": {
-              "id": 37775,
+              "id": 41752,
               "nodeType": "StructuredDocumentation",
-              "src": "1270:64:22",
+              "src": "1270:64:27",
               "text": "@custom:storage-location erc7201:openzeppelin.storage.ERC721"
             },
             "members": [
               {
                 "constant": false,
-                "id": 37777,
+                "id": 41754,
                 "mutability": "mutable",
                 "name": "_name",
-                "nameLocation": "1399:5:22",
+                "nameLocation": "1399:5:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 37798,
-                "src": "1392:12:22",
+                "scope": 41775,
+                "src": "1392:12:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1482,10 +1482,10 @@ export const ERC721Upgradeable = {
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 37776,
+                  "id": 41753,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1392:6:22",
+                  "src": "1392:6:27",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1495,13 +1495,13 @@ export const ERC721Upgradeable = {
               },
               {
                 "constant": false,
-                "id": 37779,
+                "id": 41756,
                 "mutability": "mutable",
                 "name": "_symbol",
-                "nameLocation": "1446:7:22",
+                "nameLocation": "1446:7:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 37798,
-                "src": "1439:14:22",
+                "scope": 41775,
+                "src": "1439:14:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1509,10 +1509,10 @@ export const ERC721Upgradeable = {
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 37778,
+                  "id": 41755,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "1439:6:22",
+                  "src": "1439:6:27",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -1522,13 +1522,13 @@ export const ERC721Upgradeable = {
               },
               {
                 "constant": false,
-                "id": 37783,
+                "id": 41760,
                 "mutability": "mutable",
                 "name": "_owners",
-                "nameLocation": "1500:7:22",
+                "nameLocation": "1500:7:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 37798,
-                "src": "1464:43:22",
+                "scope": 41775,
+                "src": "1464:43:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1536,21 +1536,21 @@ export const ERC721Upgradeable = {
                   "typeString": "mapping(uint256 => address)"
                 },
                 "typeName": {
-                  "id": 37782,
+                  "id": 41759,
                   "keyName": "tokenId",
-                  "keyNameLocation": "1480:7:22",
+                  "keyNameLocation": "1480:7:27",
                   "keyType": {
-                    "id": 37780,
+                    "id": 41757,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1472:7:22",
+                    "src": "1472:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "1464:35:22",
+                  "src": "1464:35:27",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                     "typeString": "mapping(uint256 => address)"
@@ -1558,10 +1558,10 @@ export const ERC721Upgradeable = {
                   "valueName": "",
                   "valueNameLocation": "-1:-1:-1",
                   "valueType": {
-                    "id": 37781,
+                    "id": 41758,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1491:7:22",
+                    "src": "1491:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1573,13 +1573,13 @@ export const ERC721Upgradeable = {
               },
               {
                 "constant": false,
-                "id": 37787,
+                "id": 41764,
                 "mutability": "mutable",
                 "name": "_balances",
-                "nameLocation": "1552:9:22",
+                "nameLocation": "1552:9:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 37798,
-                "src": "1518:43:22",
+                "scope": 41775,
+                "src": "1518:43:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1587,21 +1587,21 @@ export const ERC721Upgradeable = {
                   "typeString": "mapping(address => uint256)"
                 },
                 "typeName": {
-                  "id": 37786,
+                  "id": 41763,
                   "keyName": "owner",
-                  "keyNameLocation": "1534:5:22",
+                  "keyNameLocation": "1534:5:27",
                   "keyType": {
-                    "id": 37784,
+                    "id": 41761,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1526:7:22",
+                    "src": "1526:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "1518:33:22",
+                  "src": "1518:33:27",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                     "typeString": "mapping(address => uint256)"
@@ -1609,10 +1609,10 @@ export const ERC721Upgradeable = {
                   "valueName": "",
                   "valueNameLocation": "-1:-1:-1",
                   "valueType": {
-                    "id": 37785,
+                    "id": 41762,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1543:7:22",
+                    "src": "1543:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1623,13 +1623,13 @@ export const ERC721Upgradeable = {
               },
               {
                 "constant": false,
-                "id": 37791,
+                "id": 41768,
                 "mutability": "mutable",
                 "name": "_tokenApprovals",
-                "nameLocation": "1608:15:22",
+                "nameLocation": "1608:15:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 37798,
-                "src": "1572:51:22",
+                "scope": 41775,
+                "src": "1572:51:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1637,21 +1637,21 @@ export const ERC721Upgradeable = {
                   "typeString": "mapping(uint256 => address)"
                 },
                 "typeName": {
-                  "id": 37790,
+                  "id": 41767,
                   "keyName": "tokenId",
-                  "keyNameLocation": "1588:7:22",
+                  "keyNameLocation": "1588:7:27",
                   "keyType": {
-                    "id": 37788,
+                    "id": 41765,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1580:7:22",
+                    "src": "1580:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "1572:35:22",
+                  "src": "1572:35:27",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                     "typeString": "mapping(uint256 => address)"
@@ -1659,10 +1659,10 @@ export const ERC721Upgradeable = {
                   "valueName": "",
                   "valueNameLocation": "-1:-1:-1",
                   "valueType": {
-                    "id": 37789,
+                    "id": 41766,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1599:7:22",
+                    "src": "1599:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1674,13 +1674,13 @@ export const ERC721Upgradeable = {
               },
               {
                 "constant": false,
-                "id": 37797,
+                "id": 41774,
                 "mutability": "mutable",
                 "name": "_operatorApprovals",
-                "nameLocation": "1694:18:22",
+                "nameLocation": "1694:18:27",
                 "nodeType": "VariableDeclaration",
-                "scope": 37798,
-                "src": "1634:78:22",
+                "scope": 41775,
+                "src": "1634:78:27",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -1688,21 +1688,21 @@ export const ERC721Upgradeable = {
                   "typeString": "mapping(address => mapping(address => bool))"
                 },
                 "typeName": {
-                  "id": 37796,
+                  "id": 41773,
                   "keyName": "owner",
-                  "keyNameLocation": "1650:5:22",
+                  "keyNameLocation": "1650:5:27",
                   "keyType": {
-                    "id": 37792,
+                    "id": 41769,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1642:7:22",
+                    "src": "1642:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "1634:59:22",
+                  "src": "1634:59:27",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
                     "typeString": "mapping(address => mapping(address => bool))"
@@ -1710,21 +1710,21 @@ export const ERC721Upgradeable = {
                   "valueName": "",
                   "valueNameLocation": "-1:-1:-1",
                   "valueType": {
-                    "id": 37795,
+                    "id": 41772,
                     "keyName": "operator",
-                    "keyNameLocation": "1675:8:22",
+                    "keyNameLocation": "1675:8:27",
                     "keyType": {
-                      "id": 37793,
+                      "id": 41770,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
-                      "src": "1667:7:22",
+                      "src": "1667:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
                     "nodeType": "Mapping",
-                    "src": "1659:33:22",
+                    "src": "1659:33:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                       "typeString": "mapping(address => bool)"
@@ -1732,10 +1732,10 @@ export const ERC721Upgradeable = {
                     "valueName": "",
                     "valueNameLocation": "-1:-1:-1",
                     "valueType": {
-                      "id": 37794,
+                      "id": 41771,
                       "name": "bool",
                       "nodeType": "ElementaryTypeName",
-                      "src": "1687:4:22",
+                      "src": "1687:4:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1747,20 +1747,20 @@ export const ERC721Upgradeable = {
               }
             ],
             "name": "ERC721Storage",
-            "nameLocation": "1346:13:22",
-            "scope": 38818,
+            "nameLocation": "1346:13:27",
+            "scope": 42795,
             "visibility": "public"
           },
           {
-            "id": 37801,
+            "id": 41778,
             "nodeType": "VariableDeclaration",
-            "src": "1835:115:22",
+            "src": "1835:115:27",
             "nodes": [],
             "constant": true,
             "mutability": "constant",
             "name": "ERC721StorageLocation",
-            "nameLocation": "1860:21:22",
-            "scope": 38818,
+            "nameLocation": "1860:21:27",
+            "scope": 42795,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1768,10 +1768,10 @@ export const ERC721Upgradeable = {
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 37799,
+              "id": 41776,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
-              "src": "1835:7:22",
+              "src": "1835:7:27",
               "typeDescriptions": {
                 "typeIdentifier": "t_bytes32",
                 "typeString": "bytes32"
@@ -1779,14 +1779,14 @@ export const ERC721Upgradeable = {
             },
             "value": {
               "hexValue": "307838306262326236333863633230626334643061363064363639343066336162346130306331643762333133343937636138326662306234616230303739333030",
-              "id": 37800,
+              "id": 41777,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1884:66:22",
+              "src": "1884:66:27",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_58226744478722834339948329933988999792353370511964151963072532422914231210752_by_1",
                 "typeString": "int_const 5822...(69 digits omitted)...0752"
@@ -1796,38 +1796,38 @@ export const ERC721Upgradeable = {
             "visibility": "private"
           },
           {
-            "id": 37809,
+            "id": 41786,
             "nodeType": "FunctionDefinition",
-            "src": "1957:156:22",
+            "src": "1957:156:27",
             "nodes": [],
             "body": {
-              "id": 37808,
+              "id": 41785,
               "nodeType": "Block",
-              "src": "2033:80:22",
+              "src": "2033:80:27",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "2052:55:22",
+                    "nativeSrc": "2052:55:27",
                     "nodeType": "YulBlock",
-                    "src": "2052:55:22",
+                    "src": "2052:55:27",
                     "statements": [
                       {
-                        "nativeSrc": "2066:31:22",
+                        "nativeSrc": "2066:31:27",
                         "nodeType": "YulAssignment",
-                        "src": "2066:31:22",
+                        "src": "2066:31:27",
                         "value": {
                           "name": "ERC721StorageLocation",
-                          "nativeSrc": "2076:21:22",
+                          "nativeSrc": "2076:21:27",
                           "nodeType": "YulIdentifier",
-                          "src": "2076:21:22"
+                          "src": "2076:21:27"
                         },
                         "variableNames": [
                           {
                             "name": "$.slot",
-                            "nativeSrc": "2066:6:22",
+                            "nativeSrc": "2066:6:27",
                             "nodeType": "YulIdentifier",
-                            "src": "2066:6:22"
+                            "src": "2066:6:27"
                           }
                         ]
                       }
@@ -1836,24 +1836,24 @@ export const ERC721Upgradeable = {
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 37805,
+                      "declaration": 41782,
                       "isOffset": false,
                       "isSlot": true,
-                      "src": "2066:6:22",
+                      "src": "2066:6:27",
                       "suffix": "slot",
                       "valueSize": 1
                     },
                     {
-                      "declaration": 37801,
+                      "declaration": 41778,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "2076:21:22",
+                      "src": "2076:21:27",
                       "valueSize": 1
                     }
                   ],
-                  "id": 37807,
+                  "id": 41784,
                   "nodeType": "InlineAssembly",
-                  "src": "2043:64:22"
+                  "src": "2043:64:27"
                 }
               ]
             },
@@ -1861,95 +1861,95 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "_getERC721Storage",
-            "nameLocation": "1966:17:22",
+            "nameLocation": "1966:17:27",
             "parameters": {
-              "id": 37802,
+              "id": 41779,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1983:2:22"
+              "src": "1983:2:27"
             },
             "returnParameters": {
-              "id": 37806,
+              "id": 41783,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37805,
+                  "id": 41782,
                   "mutability": "mutable",
                   "name": "$",
-                  "nameLocation": "2030:1:22",
+                  "nameLocation": "2030:1:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37809,
-                  "src": "2008:23:22",
+                  "scope": 41786,
+                  "src": "2008:23:27",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                    "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                     "typeString": "struct ERC721Upgradeable.ERC721Storage"
                   },
                   "typeName": {
-                    "id": 37804,
+                    "id": 41781,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 37803,
+                      "id": 41780,
                       "name": "ERC721Storage",
                       "nameLocations": [
-                        "2008:13:22"
+                        "2008:13:27"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 37798,
-                      "src": "2008:13:22"
+                      "referencedDeclaration": 41775,
+                      "src": "2008:13:27"
                     },
-                    "referencedDeclaration": 37798,
-                    "src": "2008:13:22",
+                    "referencedDeclaration": 41775,
+                    "src": "2008:13:27",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2007:25:22"
+              "src": "2007:25:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "private"
           },
           {
-            "id": 37825,
+            "id": 41802,
             "nodeType": "FunctionDefinition",
-            "src": "2232:149:22",
+            "src": "2232:149:27",
             "nodes": [],
             "body": {
-              "id": 37824,
+              "id": 41801,
               "nodeType": "Block",
-              "src": "2325:56:22",
+              "src": "2325:56:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 37820,
+                        "id": 41797,
                         "name": "name_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37812,
-                        "src": "2359:5:22",
+                        "referencedDeclaration": 41789,
+                        "src": "2359:5:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
                         }
                       },
                       {
-                        "id": 37821,
+                        "id": 41798,
                         "name": "symbol_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37814,
-                        "src": "2366:7:22",
+                        "referencedDeclaration": 41791,
+                        "src": "2366:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -1967,18 +1967,18 @@ export const ERC721Upgradeable = {
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 37819,
+                      "id": 41796,
                       "name": "__ERC721_init_unchained",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37853,
-                      "src": "2335:23:22",
+                      "referencedDeclaration": 41830,
+                      "src": "2335:23:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,string memory)"
                       }
                     },
-                    "id": 37822,
+                    "id": 41799,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1987,60 +1987,60 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2335:39:22",
+                    "src": "2335:39:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 37823,
+                  "id": 41800,
                   "nodeType": "ExpressionStatement",
-                  "src": "2335:39:22"
+                  "src": "2335:39:27"
                 }
               ]
             },
             "documentation": {
-              "id": 37810,
+              "id": 41787,
               "nodeType": "StructuredDocumentation",
-              "src": "2119:108:22",
+              "src": "2119:108:27",
               "text": " @dev Initializes the contract by setting a `name` and a `symbol` to the token collection."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [
               {
-                "id": 37817,
+                "id": 41794,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 37816,
+                  "id": 41793,
                   "name": "onlyInitializing",
                   "nameLocations": [
-                    "2308:16:22"
+                    "2308:16:27"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 36650,
-                  "src": "2308:16:22"
+                  "referencedDeclaration": 40627,
+                  "src": "2308:16:27"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2308:16:22"
+                "src": "2308:16:27"
               }
             ],
             "name": "__ERC721_init",
-            "nameLocation": "2241:13:22",
+            "nameLocation": "2241:13:27",
             "parameters": {
-              "id": 37815,
+              "id": 41792,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37812,
+                  "id": 41789,
                   "mutability": "mutable",
                   "name": "name_",
-                  "nameLocation": "2269:5:22",
+                  "nameLocation": "2269:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37825,
-                  "src": "2255:19:22",
+                  "scope": 41802,
+                  "src": "2255:19:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2048,10 +2048,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37811,
+                    "id": 41788,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2255:6:22",
+                    "src": "2255:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2061,13 +2061,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 37814,
+                  "id": 41791,
                   "mutability": "mutable",
                   "name": "symbol_",
-                  "nameLocation": "2290:7:22",
+                  "nameLocation": "2290:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37825,
-                  "src": "2276:21:22",
+                  "scope": 41802,
+                  "src": "2276:21:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2075,10 +2075,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37813,
+                    "id": 41790,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2276:6:22",
+                    "src": "2276:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2087,90 +2087,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2254:44:22"
+              "src": "2254:44:27"
             },
             "returnParameters": {
-              "id": 37818,
+              "id": 41795,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2325:0:22"
+              "src": "2325:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 37853,
+            "id": 41830,
             "nodeType": "FunctionDefinition",
-            "src": "2387:219:22",
+            "src": "2387:219:27",
             "nodes": [],
             "body": {
-              "id": 37852,
+              "id": 41829,
               "nodeType": "Block",
-              "src": "2490:116:22",
+              "src": "2490:116:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    37836
+                    41813
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 37836,
+                      "id": 41813,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "2522:1:22",
+                      "nameLocation": "2522:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 37852,
-                      "src": "2500:23:22",
+                      "scope": 41829,
+                      "src": "2500:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 37835,
+                        "id": 41812,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 37834,
+                          "id": 41811,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "2500:13:22"
+                            "2500:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "2500:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "2500:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "2500:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "2500:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 37839,
+                  "id": 41816,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 37837,
+                      "id": 41814,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "2526:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "2526:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 37838,
+                    "id": 41815,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2179,46 +2179,46 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2526:19:22",
+                    "src": "2526:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2500:45:22"
+                  "src": "2500:45:27"
                 },
                 {
                   "expression": {
-                    "id": 37844,
+                    "id": 41821,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 37840,
+                        "id": 41817,
                         "name": "$",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37836,
-                        "src": "2555:1:22",
+                        "referencedDeclaration": 41813,
+                        "src": "2555:1:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                         }
                       },
-                      "id": 37842,
+                      "id": 41819,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberLocation": "2557:5:22",
+                      "memberLocation": "2557:5:27",
                       "memberName": "_name",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 37777,
-                      "src": "2555:7:22",
+                      "referencedDeclaration": 41754,
+                      "src": "2555:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -2227,57 +2227,57 @@ export const ERC721Upgradeable = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 37843,
+                      "id": 41820,
                       "name": "name_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37827,
-                      "src": "2565:5:22",
+                      "referencedDeclaration": 41804,
+                      "src": "2565:5:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
                       }
                     },
-                    "src": "2555:15:22",
+                    "src": "2555:15:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 37845,
+                  "id": 41822,
                   "nodeType": "ExpressionStatement",
-                  "src": "2555:15:22"
+                  "src": "2555:15:27"
                 },
                 {
                   "expression": {
-                    "id": 37850,
+                    "id": 41827,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 37846,
+                        "id": 41823,
                         "name": "$",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37836,
-                        "src": "2580:1:22",
+                        "referencedDeclaration": 41813,
+                        "src": "2580:1:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                         }
                       },
-                      "id": 37848,
+                      "id": 41825,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberLocation": "2582:7:22",
+                      "memberLocation": "2582:7:27",
                       "memberName": "_symbol",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 37779,
-                      "src": "2580:9:22",
+                      "referencedDeclaration": 41756,
+                      "src": "2580:9:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -2286,26 +2286,26 @@ export const ERC721Upgradeable = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 37849,
+                      "id": 41826,
                       "name": "symbol_",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37829,
-                      "src": "2592:7:22",
+                      "referencedDeclaration": 41806,
+                      "src": "2592:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
                         "typeString": "string memory"
                       }
                     },
-                    "src": "2580:19:22",
+                    "src": "2580:19:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 37851,
+                  "id": 41828,
                   "nodeType": "ExpressionStatement",
-                  "src": "2580:19:22"
+                  "src": "2580:19:27"
                 }
               ]
             },
@@ -2313,37 +2313,37 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [
               {
-                "id": 37832,
+                "id": 41809,
                 "kind": "modifierInvocation",
                 "modifierName": {
-                  "id": 37831,
+                  "id": 41808,
                   "name": "onlyInitializing",
                   "nameLocations": [
-                    "2473:16:22"
+                    "2473:16:27"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 36650,
-                  "src": "2473:16:22"
+                  "referencedDeclaration": 40627,
+                  "src": "2473:16:27"
                 },
                 "nodeType": "ModifierInvocation",
-                "src": "2473:16:22"
+                "src": "2473:16:27"
               }
             ],
             "name": "__ERC721_init_unchained",
-            "nameLocation": "2396:23:22",
+            "nameLocation": "2396:23:27",
             "parameters": {
-              "id": 37830,
+              "id": 41807,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37827,
+                  "id": 41804,
                   "mutability": "mutable",
                   "name": "name_",
-                  "nameLocation": "2434:5:22",
+                  "nameLocation": "2434:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37853,
-                  "src": "2420:19:22",
+                  "scope": 41830,
+                  "src": "2420:19:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2351,10 +2351,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37826,
+                    "id": 41803,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2420:6:22",
+                    "src": "2420:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2364,13 +2364,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 37829,
+                  "id": 41806,
                   "mutability": "mutable",
                   "name": "symbol_",
-                  "nameLocation": "2455:7:22",
+                  "nameLocation": "2455:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37853,
-                  "src": "2441:21:22",
+                  "scope": 41830,
+                  "src": "2441:21:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2378,10 +2378,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37828,
+                    "id": 41805,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2441:6:22",
+                    "src": "2441:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -2390,28 +2390,28 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2419:44:22"
+              "src": "2419:44:27"
             },
             "returnParameters": {
-              "id": 37833,
+              "id": 41810,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2490:0:22"
+              "src": "2490:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 37884,
+            "id": 41861,
             "nodeType": "FunctionDefinition",
-            "src": "2673:311:22",
+            "src": "2673:311:27",
             "nodes": [],
             "body": {
-              "id": 37883,
+              "id": 41860,
               "nodeType": "Block",
-              "src": "2792:192:22",
+              "src": "2792:192:27",
               "nodes": [],
               "statements": [
                 {
@@ -2420,7 +2420,7 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 37881,
+                    "id": 41858,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2430,7 +2430,7 @@ export const ERC721Upgradeable = {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       },
-                      "id": 37876,
+                      "id": 41853,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2440,18 +2440,18 @@ export const ERC721Upgradeable = {
                           "typeIdentifier": "t_bytes4",
                           "typeString": "bytes4"
                         },
-                        "id": 37869,
+                        "id": 41846,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 37864,
+                          "id": 41841,
                           "name": "interfaceId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 37856,
-                          "src": "2821:11:22",
+                          "referencedDeclaration": 41833,
+                          "src": "2821:11:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
@@ -2463,14 +2463,14 @@ export const ERC721Upgradeable = {
                           "expression": {
                             "arguments": [
                               {
-                                "id": 37866,
+                                "id": 41843,
                                 "name": "IERC721",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 39958,
-                                "src": "2841:7:22",
+                                "referencedDeclaration": 44476,
+                                "src": "2841:7:27",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC721_$39958_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC721_$44476_$",
                                   "typeString": "type(contract IERC721)"
                                 }
                               }
@@ -2478,22 +2478,22 @@ export const ERC721Upgradeable = {
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC721_$39958_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC721_$44476_$",
                                   "typeString": "type(contract IERC721)"
                                 }
                               ],
-                              "id": 37865,
+                              "id": 41842,
                               "name": "type",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -27,
-                              "src": "2836:4:22",
+                              "src": "2836:4:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
                                 "typeString": "function () pure"
                               }
                             },
-                            "id": 37867,
+                            "id": 41844,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2502,28 +2502,28 @@ export const ERC721Upgradeable = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "2836:13:22",
+                            "src": "2836:13:27",
                             "tryCall": false,
                             "typeDescriptions": {
-                              "typeIdentifier": "t_magic_meta_type_t_contract$_IERC721_$39958",
+                              "typeIdentifier": "t_magic_meta_type_t_contract$_IERC721_$44476",
                               "typeString": "type(contract IERC721)"
                             }
                           },
-                          "id": 37868,
+                          "id": 41845,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
-                          "memberLocation": "2850:11:22",
+                          "memberLocation": "2850:11:27",
                           "memberName": "interfaceId",
                           "nodeType": "MemberAccess",
-                          "src": "2836:25:22",
+                          "src": "2836:25:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
                           }
                         },
-                        "src": "2821:40:22",
+                        "src": "2821:40:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -2536,18 +2536,18 @@ export const ERC721Upgradeable = {
                           "typeIdentifier": "t_bytes4",
                           "typeString": "bytes4"
                         },
-                        "id": 37875,
+                        "id": 41852,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 37870,
+                          "id": 41847,
                           "name": "interfaceId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 37856,
-                          "src": "2877:11:22",
+                          "referencedDeclaration": 41833,
+                          "src": "2877:11:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
@@ -2559,14 +2559,14 @@ export const ERC721Upgradeable = {
                           "expression": {
                             "arguments": [
                               {
-                                "id": 37872,
+                                "id": 41849,
                                 "name": "IERC721Metadata",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 40004,
-                                "src": "2897:15:22",
+                                "referencedDeclaration": 44522,
+                                "src": "2897:15:27",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC721Metadata_$40004_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC721Metadata_$44522_$",
                                   "typeString": "type(contract IERC721Metadata)"
                                 }
                               }
@@ -2574,22 +2574,22 @@ export const ERC721Upgradeable = {
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_type$_t_contract$_IERC721Metadata_$40004_$",
+                                  "typeIdentifier": "t_type$_t_contract$_IERC721Metadata_$44522_$",
                                   "typeString": "type(contract IERC721Metadata)"
                                 }
                               ],
-                              "id": 37871,
+                              "id": 41848,
                               "name": "type",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": -27,
-                              "src": "2892:4:22",
+                              "src": "2892:4:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
                                 "typeString": "function () pure"
                               }
                             },
-                            "id": 37873,
+                            "id": 41850,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -2598,34 +2598,34 @@ export const ERC721Upgradeable = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "2892:21:22",
+                            "src": "2892:21:27",
                             "tryCall": false,
                             "typeDescriptions": {
-                              "typeIdentifier": "t_magic_meta_type_t_contract$_IERC721Metadata_$40004",
+                              "typeIdentifier": "t_magic_meta_type_t_contract$_IERC721Metadata_$44522",
                               "typeString": "type(contract IERC721Metadata)"
                             }
                           },
-                          "id": 37874,
+                          "id": 41851,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
-                          "memberLocation": "2914:11:22",
+                          "memberLocation": "2914:11:27",
                           "memberName": "interfaceId",
                           "nodeType": "MemberAccess",
-                          "src": "2892:33:22",
+                          "src": "2892:33:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
                           }
                         },
-                        "src": "2877:48:22",
+                        "src": "2877:48:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         }
                       },
-                      "src": "2821:104:22",
+                      "src": "2821:104:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -2636,12 +2636,12 @@ export const ERC721Upgradeable = {
                     "rightExpression": {
                       "arguments": [
                         {
-                          "id": 37879,
+                          "id": 41856,
                           "name": "interfaceId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 37856,
-                          "src": "2965:11:22",
+                          "referencedDeclaration": 41833,
+                          "src": "2965:11:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes4",
                             "typeString": "bytes4"
@@ -2656,33 +2656,33 @@ export const ERC721Upgradeable = {
                           }
                         ],
                         "expression": {
-                          "id": 37877,
+                          "id": 41854,
                           "name": "super",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": -25,
-                          "src": "2941:5:22",
+                          "src": "2941:5:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_super$_ERC721Upgradeable_$38818_$",
+                            "typeIdentifier": "t_type$_t_super$_ERC721Upgradeable_$42795_$",
                             "typeString": "type(contract super ERC721Upgradeable)"
                           }
                         },
-                        "id": 37878,
+                        "id": 41855,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "2947:17:22",
+                        "memberLocation": "2947:17:27",
                         "memberName": "supportsInterface",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 39247,
-                        "src": "2941:23:22",
+                        "referencedDeclaration": 43224,
+                        "src": "2941:23:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_bytes4_$returns$_t_bool_$",
                           "typeString": "function (bytes4) view returns (bool)"
                         }
                       },
-                      "id": 37880,
+                      "id": 41857,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2691,34 +2691,34 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "2941:36:22",
+                      "src": "2941:36:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "2821:156:22",
+                    "src": "2821:156:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 37863,
-                  "id": 37882,
+                  "functionReturnParameters": 41840,
+                  "id": 41859,
                   "nodeType": "Return",
-                  "src": "2802:175:22"
+                  "src": "2802:175:27"
                 }
               ]
             },
             "baseFunctions": [
-              39247,
-              42158
+              43224,
+              46706
             ],
             "documentation": {
-              "id": 37854,
+              "id": 41831,
               "nodeType": "StructuredDocumentation",
-              "src": "2612:56:22",
+              "src": "2612:56:27",
               "text": " @dev See {IERC165-supportsInterface}."
             },
             "functionSelector": "01ffc9a7",
@@ -2726,47 +2726,47 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "supportsInterface",
-            "nameLocation": "2682:17:22",
+            "nameLocation": "2682:17:27",
             "overrides": {
-              "id": 37860,
+              "id": 41837,
               "nodeType": "OverrideSpecifier",
               "overrides": [
                 {
-                  "id": 37858,
+                  "id": 41835,
                   "name": "ERC165Upgradeable",
                   "nameLocations": [
-                    "2749:17:22"
+                    "2749:17:27"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 39248,
-                  "src": "2749:17:22"
+                  "referencedDeclaration": 43225,
+                  "src": "2749:17:27"
                 },
                 {
-                  "id": 37859,
+                  "id": 41836,
                   "name": "IERC165",
                   "nameLocations": [
-                    "2768:7:22"
+                    "2768:7:27"
                   ],
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 42159,
-                  "src": "2768:7:22"
+                  "referencedDeclaration": 46707,
+                  "src": "2768:7:27"
                 }
               ],
-              "src": "2740:36:22"
+              "src": "2740:36:27"
             },
             "parameters": {
-              "id": 37857,
+              "id": 41834,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37856,
+                  "id": 41833,
                   "mutability": "mutable",
                   "name": "interfaceId",
-                  "nameLocation": "2707:11:22",
+                  "nameLocation": "2707:11:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37884,
-                  "src": "2700:18:22",
+                  "scope": 41861,
+                  "src": "2700:18:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2774,10 +2774,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 37855,
+                    "id": 41832,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2700:6:22",
+                    "src": "2700:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -2786,21 +2786,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2699:20:22"
+              "src": "2699:20:27"
             },
             "returnParameters": {
-              "id": 37863,
+              "id": 41840,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37862,
+                  "id": 41839,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37884,
-                  "src": "2786:4:22",
+                  "scope": 41861,
+                  "src": "2786:4:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2808,10 +2808,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 37861,
+                    "id": 41838,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2786:4:22",
+                    "src": "2786:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -2820,84 +2820,84 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2785:6:22"
+              "src": "2785:6:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 37919,
+            "id": 41896,
             "nodeType": "FunctionDefinition",
-            "src": "3043:265:22",
+            "src": "3043:265:27",
             "nodes": [],
             "body": {
-              "id": 37918,
+              "id": 41895,
               "nodeType": "Block",
-              "src": "3115:193:22",
+              "src": "3115:193:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    37894
+                    41871
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 37894,
+                      "id": 41871,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "3147:1:22",
+                      "nameLocation": "3147:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 37918,
-                      "src": "3125:23:22",
+                      "scope": 41895,
+                      "src": "3125:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 37893,
+                        "id": 41870,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 37892,
+                          "id": 41869,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "3125:13:22"
+                            "3125:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "3125:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "3125:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "3125:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "3125:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 37897,
+                  "id": 41874,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 37895,
+                      "id": 41872,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "3151:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "3151:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 37896,
+                    "id": 41873,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2906,15 +2906,15 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3151:19:22",
+                    "src": "3151:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "3125:45:22"
+                  "src": "3125:45:27"
                 },
                 {
                   "condition": {
@@ -2922,18 +2922,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 37903,
+                    "id": 41880,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 37898,
+                      "id": 41875,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37887,
-                      "src": "3184:5:22",
+                      "referencedDeclaration": 41864,
+                      "src": "3184:5:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -2945,14 +2945,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 37901,
+                          "id": 41878,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "3201:1:22",
+                          "src": "3201:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -2967,26 +2967,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 37900,
+                        "id": 41877,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "3193:7:22",
+                        "src": "3193:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 37899,
+                          "id": 41876,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "3193:7:22",
+                          "src": "3193:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 37902,
+                      "id": 41879,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2995,26 +2995,26 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "3193:10:22",
+                      "src": "3193:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "3184:19:22",
+                    "src": "3184:19:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 37912,
+                  "id": 41889,
                   "nodeType": "IfStatement",
-                  "src": "3180:87:22",
+                  "src": "3180:87:27",
                   "trueBody": {
-                    "id": 37911,
+                    "id": 41888,
                     "nodeType": "Block",
-                    "src": "3205:62:22",
+                    "src": "3205:62:27",
                     "statements": [
                       {
                         "errorCall": {
@@ -3023,14 +3023,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 37907,
+                                  "id": 41884,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "3253:1:22",
+                                  "src": "3253:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -3045,26 +3045,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 37906,
+                                "id": 41883,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "3245:7:22",
+                                "src": "3245:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 37905,
+                                  "id": 41882,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "3245:7:22",
+                                  "src": "3245:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 37908,
+                              "id": 41885,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3073,7 +3073,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "3245:10:22",
+                              "src": "3245:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -3088,18 +3088,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 37904,
+                            "id": 41881,
                             "name": "ERC721InvalidOwner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39339,
-                            "src": "3226:18:22",
+                            "referencedDeclaration": 43316,
+                            "src": "3226:18:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                               "typeString": "function (address) pure returns (error)"
                             }
                           },
-                          "id": 37909,
+                          "id": 41886,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3108,16 +3108,16 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "3226:30:22",
+                          "src": "3226:30:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 37910,
+                        "id": 41887,
                         "nodeType": "RevertStatement",
-                        "src": "3219:37:22"
+                        "src": "3219:37:27"
                       }
                     ]
                   }
@@ -3126,40 +3126,40 @@ export const ERC721Upgradeable = {
                   "expression": {
                     "baseExpression": {
                       "expression": {
-                        "id": 37913,
+                        "id": 41890,
                         "name": "$",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37894,
-                        "src": "3283:1:22",
+                        "referencedDeclaration": 41871,
+                        "src": "3283:1:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                         }
                       },
-                      "id": 37914,
+                      "id": 41891,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3285:9:22",
+                      "memberLocation": "3285:9:27",
                       "memberName": "_balances",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 37787,
-                      "src": "3283:11:22",
+                      "referencedDeclaration": 41764,
+                      "src": "3283:11:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                         "typeString": "mapping(address => uint256)"
                       }
                     },
-                    "id": 37916,
+                    "id": 41893,
                     "indexExpression": {
-                      "id": 37915,
+                      "id": 41892,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37887,
-                      "src": "3295:5:22",
+                      "referencedDeclaration": 41864,
+                      "src": "3295:5:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -3170,26 +3170,26 @@ export const ERC721Upgradeable = {
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "3283:18:22",
+                    "src": "3283:18:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 37891,
-                  "id": 37917,
+                  "functionReturnParameters": 41868,
+                  "id": 41894,
                   "nodeType": "Return",
-                  "src": "3276:25:22"
+                  "src": "3276:25:27"
                 }
               ]
             },
             "baseFunctions": [
-              39883
+              44401
             ],
             "documentation": {
-              "id": 37885,
+              "id": 41862,
               "nodeType": "StructuredDocumentation",
-              "src": "2990:48:22",
+              "src": "2990:48:27",
               "text": " @dev See {IERC721-balanceOf}."
             },
             "functionSelector": "70a08231",
@@ -3197,20 +3197,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "balanceOf",
-            "nameLocation": "3052:9:22",
+            "nameLocation": "3052:9:27",
             "parameters": {
-              "id": 37888,
+              "id": 41865,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37887,
+                  "id": 41864,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "3070:5:22",
+                  "nameLocation": "3070:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37919,
-                  "src": "3062:13:22",
+                  "scope": 41896,
+                  "src": "3062:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3218,10 +3218,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 37886,
+                    "id": 41863,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3062:7:22",
+                    "src": "3062:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3231,21 +3231,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3061:15:22"
+              "src": "3061:15:27"
             },
             "returnParameters": {
-              "id": 37891,
+              "id": 41868,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37890,
+                  "id": 41867,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37919,
-                  "src": "3106:7:22",
+                  "scope": 41896,
+                  "src": "3106:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3253,10 +3253,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 37889,
+                    "id": 41866,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3106:7:22",
+                    "src": "3106:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3265,34 +3265,34 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3105:9:22"
+              "src": "3105:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 37932,
+            "id": 41909,
             "nodeType": "FunctionDefinition",
-            "src": "3365:118:22",
+            "src": "3365:118:27",
             "nodes": [],
             "body": {
-              "id": 37931,
+              "id": 41908,
               "nodeType": "Block",
-              "src": "3437:46:22",
+              "src": "3437:46:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 37928,
+                        "id": 41905,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37922,
-                        "src": "3468:7:22",
+                        "referencedDeclaration": 41899,
+                        "src": "3468:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3306,18 +3306,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 37927,
+                      "id": 41904,
                       "name": "_requireOwned",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38817,
-                      "src": "3454:13:22",
+                      "referencedDeclaration": 42794,
+                      "src": "3454:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                         "typeString": "function (uint256) view returns (address)"
                       }
                     },
-                    "id": 37929,
+                    "id": 41906,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3326,27 +3326,27 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3454:22:22",
+                    "src": "3454:22:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 37926,
-                  "id": 37930,
+                  "functionReturnParameters": 41903,
+                  "id": 41907,
                   "nodeType": "Return",
-                  "src": "3447:29:22"
+                  "src": "3447:29:27"
                 }
               ]
             },
             "baseFunctions": [
-              39891
+              44409
             ],
             "documentation": {
-              "id": 37920,
+              "id": 41897,
               "nodeType": "StructuredDocumentation",
-              "src": "3314:46:22",
+              "src": "3314:46:27",
               "text": " @dev See {IERC721-ownerOf}."
             },
             "functionSelector": "6352211e",
@@ -3354,20 +3354,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "ownerOf",
-            "nameLocation": "3374:7:22",
+            "nameLocation": "3374:7:27",
             "parameters": {
-              "id": 37923,
+              "id": 41900,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37922,
+                  "id": 41899,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "3390:7:22",
+                  "nameLocation": "3390:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37932,
-                  "src": "3382:15:22",
+                  "scope": 41909,
+                  "src": "3382:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3375,10 +3375,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 37921,
+                    "id": 41898,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3382:7:22",
+                    "src": "3382:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3387,21 +3387,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3381:17:22"
+              "src": "3381:17:27"
             },
             "returnParameters": {
-              "id": 37926,
+              "id": 41903,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37925,
+                  "id": 41902,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37932,
-                  "src": "3428:7:22",
+                  "scope": 41909,
+                  "src": "3428:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3409,10 +3409,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 37924,
+                    "id": 41901,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3428:7:22",
+                    "src": "3428:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3422,84 +3422,84 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3427:9:22"
+              "src": "3427:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 37948,
+            "id": 41925,
             "nodeType": "FunctionDefinition",
-            "src": "3545:146:22",
+            "src": "3545:146:27",
             "nodes": [],
             "body": {
-              "id": 37947,
+              "id": 41924,
               "nodeType": "Block",
-              "src": "3605:86:22",
+              "src": "3605:86:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    37940
+                    41917
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 37940,
+                      "id": 41917,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "3637:1:22",
+                      "nameLocation": "3637:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 37947,
-                      "src": "3615:23:22",
+                      "scope": 41924,
+                      "src": "3615:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 37939,
+                        "id": 41916,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 37938,
+                          "id": 41915,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "3615:13:22"
+                            "3615:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "3615:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "3615:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "3615:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "3615:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 37943,
+                  "id": 41920,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 37941,
+                      "id": 41918,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "3641:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "3641:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 37942,
+                    "id": 41919,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3508,59 +3508,59 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3641:19:22",
+                    "src": "3641:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "3615:45:22"
+                  "src": "3615:45:27"
                 },
                 {
                   "expression": {
                     "expression": {
-                      "id": 37944,
+                      "id": 41921,
                       "name": "$",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37940,
-                      "src": "3677:1:22",
+                      "referencedDeclaration": 41917,
+                      "src": "3677:1:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                       }
                     },
-                    "id": 37945,
+                    "id": 41922,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "3679:5:22",
+                    "memberLocation": "3679:5:27",
                     "memberName": "_name",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 37777,
-                    "src": "3677:7:22",
+                    "referencedDeclaration": 41754,
+                    "src": "3677:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 37937,
-                  "id": 37946,
+                  "functionReturnParameters": 41914,
+                  "id": 41923,
                   "nodeType": "Return",
-                  "src": "3670:14:22"
+                  "src": "3670:14:27"
                 }
               ]
             },
             "baseFunctions": [
-              39989
+              44507
             ],
             "documentation": {
-              "id": 37933,
+              "id": 41910,
               "nodeType": "StructuredDocumentation",
-              "src": "3489:51:22",
+              "src": "3489:51:27",
               "text": " @dev See {IERC721Metadata-name}."
             },
             "functionSelector": "06fdde03",
@@ -3568,26 +3568,26 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "name",
-            "nameLocation": "3554:4:22",
+            "nameLocation": "3554:4:27",
             "parameters": {
-              "id": 37934,
+              "id": 41911,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3558:2:22"
+              "src": "3558:2:27"
             },
             "returnParameters": {
-              "id": 37937,
+              "id": 41914,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37936,
+                  "id": 41913,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37948,
-                  "src": "3590:13:22",
+                  "scope": 41925,
+                  "src": "3590:13:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -3595,10 +3595,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37935,
+                    "id": 41912,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3590:6:22",
+                    "src": "3590:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -3607,84 +3607,84 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3589:15:22"
+              "src": "3589:15:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 37964,
+            "id": 41941,
             "nodeType": "FunctionDefinition",
-            "src": "3755:150:22",
+            "src": "3755:150:27",
             "nodes": [],
             "body": {
-              "id": 37963,
+              "id": 41940,
               "nodeType": "Block",
-              "src": "3817:88:22",
+              "src": "3817:88:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    37956
+                    41933
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 37956,
+                      "id": 41933,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "3849:1:22",
+                      "nameLocation": "3849:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 37963,
-                      "src": "3827:23:22",
+                      "scope": 41940,
+                      "src": "3827:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 37955,
+                        "id": 41932,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 37954,
+                          "id": 41931,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "3827:13:22"
+                            "3827:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "3827:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "3827:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "3827:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "3827:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 37959,
+                  "id": 41936,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 37957,
+                      "id": 41934,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "3853:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "3853:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 37958,
+                    "id": 41935,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3693,59 +3693,59 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3853:19:22",
+                    "src": "3853:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "3827:45:22"
+                  "src": "3827:45:27"
                 },
                 {
                   "expression": {
                     "expression": {
-                      "id": 37960,
+                      "id": 41937,
                       "name": "$",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37956,
-                      "src": "3889:1:22",
+                      "referencedDeclaration": 41933,
+                      "src": "3889:1:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                       }
                     },
-                    "id": 37961,
+                    "id": 41938,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "3891:7:22",
+                    "memberLocation": "3891:7:27",
                     "memberName": "_symbol",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 37779,
-                    "src": "3889:9:22",
+                    "referencedDeclaration": 41756,
+                    "src": "3889:9:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage",
                       "typeString": "string storage ref"
                     }
                   },
-                  "functionReturnParameters": 37953,
-                  "id": 37962,
+                  "functionReturnParameters": 41930,
+                  "id": 41939,
                   "nodeType": "Return",
-                  "src": "3882:16:22"
+                  "src": "3882:16:27"
                 }
               ]
             },
             "baseFunctions": [
-              39995
+              44513
             ],
             "documentation": {
-              "id": 37949,
+              "id": 41926,
               "nodeType": "StructuredDocumentation",
-              "src": "3697:53:22",
+              "src": "3697:53:27",
               "text": " @dev See {IERC721Metadata-symbol}."
             },
             "functionSelector": "95d89b41",
@@ -3753,26 +3753,26 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
-            "nameLocation": "3764:6:22",
+            "nameLocation": "3764:6:27",
             "parameters": {
-              "id": 37950,
+              "id": 41927,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3770:2:22"
+              "src": "3770:2:27"
             },
             "returnParameters": {
-              "id": 37953,
+              "id": 41930,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37952,
+                  "id": 41929,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 37964,
-                  "src": "3802:13:22",
+                  "scope": 41941,
+                  "src": "3802:13:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -3780,10 +3780,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37951,
+                    "id": 41928,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3802:6:22",
+                    "src": "3802:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -3792,34 +3792,34 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3801:15:22"
+              "src": "3801:15:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38000,
+            "id": 41977,
             "nodeType": "FunctionDefinition",
-            "src": "3971:255:22",
+            "src": "3971:255:27",
             "nodes": [],
             "body": {
-              "id": 37999,
+              "id": 41976,
               "nodeType": "Block",
-              "src": "4050:176:22",
+              "src": "4050:176:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 37973,
+                        "id": 41950,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 37967,
-                        "src": "4074:7:22",
+                        "referencedDeclaration": 41944,
+                        "src": "4074:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3833,18 +3833,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 37972,
+                      "id": 41949,
                       "name": "_requireOwned",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38817,
-                      "src": "4060:13:22",
+                      "referencedDeclaration": 42794,
+                      "src": "4060:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                         "typeString": "function (uint256) view returns (address)"
                       }
                     },
-                    "id": 37974,
+                    "id": 41951,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3853,31 +3853,31 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4060:22:22",
+                    "src": "4060:22:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 37975,
+                  "id": 41952,
                   "nodeType": "ExpressionStatement",
-                  "src": "4060:22:22"
+                  "src": "4060:22:27"
                 },
                 {
                   "assignments": [
-                    37977
+                    41954
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 37977,
+                      "id": 41954,
                       "mutability": "mutable",
                       "name": "baseURI",
-                      "nameLocation": "4107:7:22",
+                      "nameLocation": "4107:7:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 37999,
-                      "src": "4093:21:22",
+                      "scope": 41976,
+                      "src": "4093:21:27",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
@@ -3885,10 +3885,10 @@ export const ERC721Upgradeable = {
                         "typeString": "string"
                       },
                       "typeName": {
-                        "id": 37976,
+                        "id": 41953,
                         "name": "string",
                         "nodeType": "ElementaryTypeName",
-                        "src": "4093:6:22",
+                        "src": "4093:6:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_storage_ptr",
                           "typeString": "string"
@@ -3897,23 +3897,23 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 37980,
+                  "id": 41957,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 37978,
+                      "id": 41955,
                       "name": "_baseURI",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38009,
-                      "src": "4117:8:22",
+                      "referencedDeclaration": 41986,
+                      "src": "4117:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$__$returns$_t_string_memory_ptr_$",
                         "typeString": "function () view returns (string memory)"
                       }
                     },
-                    "id": 37979,
+                    "id": 41956,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3922,7 +3922,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4117:10:22",
+                    "src": "4117:10:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_memory_ptr",
@@ -3930,7 +3930,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "4093:34:22"
+                  "src": "4093:34:27"
                 },
                 {
                   "expression": {
@@ -3939,7 +3939,7 @@ export const ERC721Upgradeable = {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 37987,
+                      "id": 41964,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3948,12 +3948,12 @@ export const ERC721Upgradeable = {
                         "expression": {
                           "arguments": [
                             {
-                              "id": 37983,
+                              "id": 41960,
                               "name": "baseURI",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 37977,
-                              "src": "4150:7:22",
+                              "referencedDeclaration": 41954,
+                              "src": "4150:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
                                 "typeString": "string memory"
@@ -3967,26 +3967,26 @@ export const ERC721Upgradeable = {
                                 "typeString": "string memory"
                               }
                             ],
-                            "id": 37982,
+                            "id": 41959,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "4144:5:22",
+                            "src": "4144:5:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_bytes_storage_ptr_$",
                               "typeString": "type(bytes storage pointer)"
                             },
                             "typeName": {
-                              "id": 37981,
+                              "id": 41958,
                               "name": "bytes",
                               "nodeType": "ElementaryTypeName",
-                              "src": "4144:5:22",
+                              "src": "4144:5:27",
                               "typeDescriptions": {}
                             }
                           },
-                          "id": 37984,
+                          "id": 41961,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3995,22 +3995,22 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "4144:14:22",
+                          "src": "4144:14:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes_memory_ptr",
                             "typeString": "bytes memory"
                           }
                         },
-                        "id": 37985,
+                        "id": 41962,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "4159:6:22",
+                        "memberLocation": "4159:6:27",
                         "memberName": "length",
                         "nodeType": "MemberAccess",
-                        "src": "4144:21:22",
+                        "src": "4144:21:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4020,21 +4020,21 @@ export const ERC721Upgradeable = {
                       "operator": ">",
                       "rightExpression": {
                         "hexValue": "30",
-                        "id": 37986,
+                        "id": 41963,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "4168:1:22",
+                        "src": "4168:1:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
                           "typeString": "int_const 0"
                         },
                         "value": "0"
                       },
-                      "src": "4144:25:22",
+                      "src": "4144:25:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -4042,36 +4042,36 @@ export const ERC721Upgradeable = {
                     },
                     "falseExpression": {
                       "hexValue": "",
-                      "id": 37996,
+                      "id": 41973,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "string",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "4217:2:22",
+                      "src": "4217:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                         "typeString": "literal_string \"\""
                       },
                       "value": ""
                     },
-                    "id": 37997,
+                    "id": 41974,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "Conditional",
-                    "src": "4144:75:22",
+                    "src": "4144:75:27",
                     "trueExpression": {
                       "arguments": [
                         {
-                          "id": 37991,
+                          "id": 41968,
                           "name": "baseURI",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 37977,
-                          "src": "4186:7:22",
+                          "referencedDeclaration": 41954,
+                          "src": "4186:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -4082,33 +4082,33 @@ export const ERC721Upgradeable = {
                           "expression": {
                             "argumentTypes": [],
                             "expression": {
-                              "id": 37992,
+                              "id": 41969,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 37967,
-                              "src": "4195:7:22",
+                              "referencedDeclaration": 41944,
+                              "src": "4195:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             },
-                            "id": 37993,
+                            "id": 41970,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "4203:8:22",
+                            "memberLocation": "4203:8:27",
                             "memberName": "toString",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 41365,
-                            "src": "4195:16:22",
+                            "referencedDeclaration": 45913,
+                            "src": "4195:16:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_string_memory_ptr_$attached_to$_t_uint256_$",
                               "typeString": "function (uint256) pure returns (string memory)"
                             }
                           },
-                          "id": 37994,
+                          "id": 41971,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4117,7 +4117,7 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "4195:18:22",
+                          "src": "4195:18:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -4137,40 +4137,40 @@ export const ERC721Upgradeable = {
                           }
                         ],
                         "expression": {
-                          "id": 37989,
+                          "id": 41966,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "4172:6:22",
+                          "src": "4172:6:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_string_storage_ptr_$",
                             "typeString": "type(string storage pointer)"
                           },
                           "typeName": {
-                            "id": 37988,
+                            "id": 41965,
                             "name": "string",
                             "nodeType": "ElementaryTypeName",
-                            "src": "4172:6:22",
+                            "src": "4172:6:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 37990,
+                        "id": 41967,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "4179:6:22",
+                        "memberLocation": "4179:6:27",
                         "memberName": "concat",
                         "nodeType": "MemberAccess",
-                        "src": "4172:13:22",
+                        "src": "4172:13:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_stringconcat_pure$__$returns$_t_string_memory_ptr_$",
                           "typeString": "function () pure returns (string memory)"
                         }
                       },
-                      "id": 37995,
+                      "id": 41972,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4179,7 +4179,7 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "4172:42:22",
+                      "src": "4172:42:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -4191,20 +4191,20 @@ export const ERC721Upgradeable = {
                       "typeString": "string memory"
                     }
                   },
-                  "functionReturnParameters": 37971,
-                  "id": 37998,
+                  "functionReturnParameters": 41948,
+                  "id": 41975,
                   "nodeType": "Return",
-                  "src": "4137:82:22"
+                  "src": "4137:82:27"
                 }
               ]
             },
             "baseFunctions": [
-              40003
+              44521
             ],
             "documentation": {
-              "id": 37965,
+              "id": 41942,
               "nodeType": "StructuredDocumentation",
-              "src": "3911:55:22",
+              "src": "3911:55:27",
               "text": " @dev See {IERC721Metadata-tokenURI}."
             },
             "functionSelector": "c87b56dd",
@@ -4212,20 +4212,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "tokenURI",
-            "nameLocation": "3980:8:22",
+            "nameLocation": "3980:8:27",
             "parameters": {
-              "id": 37968,
+              "id": 41945,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37967,
+                  "id": 41944,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "3997:7:22",
+                  "nameLocation": "3997:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38000,
-                  "src": "3989:15:22",
+                  "scope": 41977,
+                  "src": "3989:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4233,10 +4233,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 37966,
+                    "id": 41943,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3989:7:22",
+                    "src": "3989:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4245,21 +4245,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3988:17:22"
+              "src": "3988:17:27"
             },
             "returnParameters": {
-              "id": 37971,
+              "id": 41948,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 37970,
+                  "id": 41947,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38000,
-                  "src": "4035:13:22",
+                  "scope": 41977,
+                  "src": "4035:13:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -4267,10 +4267,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 37969,
+                    "id": 41946,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4035:6:22",
+                    "src": "4035:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -4279,78 +4279,78 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "4034:15:22"
+              "src": "4034:15:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38009,
+            "id": 41986,
             "nodeType": "FunctionDefinition",
-            "src": "4468:92:22",
+            "src": "4468:92:27",
             "nodes": [],
             "body": {
-              "id": 38008,
+              "id": 41985,
               "nodeType": "Block",
-              "src": "4534:26:22",
+              "src": "4534:26:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "hexValue": "",
-                    "id": 38006,
+                    "id": 41983,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "string",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "4551:2:22",
+                    "src": "4551:2:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                       "typeString": "literal_string \"\""
                     },
                     "value": ""
                   },
-                  "functionReturnParameters": 38005,
-                  "id": 38007,
+                  "functionReturnParameters": 41982,
+                  "id": 41984,
                   "nodeType": "Return",
-                  "src": "4544:9:22"
+                  "src": "4544:9:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38001,
+              "id": 41978,
               "nodeType": "StructuredDocumentation",
-              "src": "4232:231:22",
+              "src": "4232:231:27",
               "text": " @dev Base URI for computing {tokenURI}. If set, the resulting URI for each\n token will be the concatenation of the `baseURI` and the `tokenId`. Empty\n by default, can be overridden in child contracts."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_baseURI",
-            "nameLocation": "4477:8:22",
+            "nameLocation": "4477:8:27",
             "parameters": {
-              "id": 38002,
+              "id": 41979,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4485:2:22"
+              "src": "4485:2:27"
             },
             "returnParameters": {
-              "id": 38005,
+              "id": 41982,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38004,
+                  "id": 41981,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38009,
-                  "src": "4519:13:22",
+                  "scope": 41986,
+                  "src": "4519:13:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -4358,10 +4358,10 @@ export const ERC721Upgradeable = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 38003,
+                    "id": 41980,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4519:6:22",
+                    "src": "4519:6:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -4370,46 +4370,46 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "4518:15:22"
+              "src": "4518:15:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38025,
+            "id": 42002,
             "nodeType": "FunctionDefinition",
-            "src": "4617:113:22",
+            "src": "4617:113:27",
             "nodes": [],
             "body": {
-              "id": 38024,
+              "id": 42001,
               "nodeType": "Block",
-              "src": "4678:52:22",
+              "src": "4678:52:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38018,
+                        "id": 41995,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38012,
-                        "src": "4697:2:22",
+                        "referencedDeclaration": 41989,
+                        "src": "4697:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38019,
+                        "id": 41996,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38014,
-                        "src": "4701:7:22",
+                        "referencedDeclaration": 41991,
+                        "src": "4701:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4419,18 +4419,18 @@ export const ERC721Upgradeable = {
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 38020,
+                          "id": 41997,
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38846,
-                          "src": "4710:10:22",
+                          "referencedDeclaration": 42823,
+                          "src": "4710:10:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                             "typeString": "function () view returns (address)"
                           }
                         },
-                        "id": 38021,
+                        "id": 41998,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4439,7 +4439,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "4710:12:22",
+                        "src": "4710:12:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4462,21 +4462,21 @@ export const ERC721Upgradeable = {
                           "typeString": "address"
                         }
                       ],
-                      "id": 38017,
+                      "id": 41994,
                       "name": "_approve",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        38669,
-                        38743
+                        42646,
+                        42720
                       ],
-                      "referencedDeclaration": 38669,
-                      "src": "4688:8:22",
+                      "referencedDeclaration": 42646,
+                      "src": "4688:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$returns$__$",
                         "typeString": "function (address,uint256,address)"
                       }
                     },
-                    "id": 38022,
+                    "id": 41999,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4485,26 +4485,26 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4688:35:22",
+                    "src": "4688:35:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38023,
+                  "id": 42000,
                   "nodeType": "ExpressionStatement",
-                  "src": "4688:35:22"
+                  "src": "4688:35:27"
                 }
               ]
             },
             "baseFunctions": [
-              39931
+              44449
             ],
             "documentation": {
-              "id": 38010,
+              "id": 41987,
               "nodeType": "StructuredDocumentation",
-              "src": "4566:46:22",
+              "src": "4566:46:27",
               "text": " @dev See {IERC721-approve}."
             },
             "functionSelector": "095ea7b3",
@@ -4512,20 +4512,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "approve",
-            "nameLocation": "4626:7:22",
+            "nameLocation": "4626:7:27",
             "parameters": {
-              "id": 38015,
+              "id": 41992,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38012,
+                  "id": 41989,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "4642:2:22",
+                  "nameLocation": "4642:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38025,
-                  "src": "4634:10:22",
+                  "scope": 42002,
+                  "src": "4634:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4533,10 +4533,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38011,
+                    "id": 41988,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4634:7:22",
+                    "src": "4634:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4547,13 +4547,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38014,
+                  "id": 41991,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "4654:7:22",
+                  "nameLocation": "4654:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38025,
-                  "src": "4646:15:22",
+                  "scope": 42002,
+                  "src": "4646:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4561,10 +4561,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38013,
+                    "id": 41990,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4646:7:22",
+                    "src": "4646:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4573,40 +4573,40 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "4633:29:22"
+              "src": "4633:29:27"
             },
             "returnParameters": {
-              "id": 38016,
+              "id": 41993,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4678:0:22"
+              "src": "4678:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38042,
+            "id": 42019,
             "nodeType": "FunctionDefinition",
-            "src": "4791:154:22",
+            "src": "4791:154:27",
             "nodes": [],
             "body": {
-              "id": 38041,
+              "id": 42018,
               "nodeType": "Block",
-              "src": "4867:78:22",
+              "src": "4867:78:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38034,
+                        "id": 42011,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38028,
-                        "src": "4891:7:22",
+                        "referencedDeclaration": 42005,
+                        "src": "4891:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4620,18 +4620,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38033,
+                      "id": 42010,
                       "name": "_requireOwned",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38817,
-                      "src": "4877:13:22",
+                      "referencedDeclaration": 42794,
+                      "src": "4877:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                         "typeString": "function (uint256) view returns (address)"
                       }
                     },
-                    "id": 38035,
+                    "id": 42012,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4640,27 +4640,27 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4877:22:22",
+                    "src": "4877:22:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 38036,
+                  "id": 42013,
                   "nodeType": "ExpressionStatement",
-                  "src": "4877:22:22"
+                  "src": "4877:22:27"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38038,
+                        "id": 42015,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38028,
-                        "src": "4930:7:22",
+                        "referencedDeclaration": 42005,
+                        "src": "4930:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4674,18 +4674,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38037,
+                      "id": 42014,
                       "name": "_getApproved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38216,
-                      "src": "4917:12:22",
+                      "referencedDeclaration": 42193,
+                      "src": "4917:12:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                         "typeString": "function (uint256) view returns (address)"
                       }
                     },
-                    "id": 38039,
+                    "id": 42016,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4694,27 +4694,27 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4917:21:22",
+                    "src": "4917:21:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 38032,
-                  "id": 38040,
+                  "functionReturnParameters": 42009,
+                  "id": 42017,
                   "nodeType": "Return",
-                  "src": "4910:28:22"
+                  "src": "4910:28:27"
                 }
               ]
             },
             "baseFunctions": [
-              39947
+              44465
             ],
             "documentation": {
-              "id": 38026,
+              "id": 42003,
               "nodeType": "StructuredDocumentation",
-              "src": "4736:50:22",
+              "src": "4736:50:27",
               "text": " @dev See {IERC721-getApproved}."
             },
             "functionSelector": "081812fc",
@@ -4722,20 +4722,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "getApproved",
-            "nameLocation": "4800:11:22",
+            "nameLocation": "4800:11:27",
             "parameters": {
-              "id": 38029,
+              "id": 42006,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38028,
+                  "id": 42005,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "4820:7:22",
+                  "nameLocation": "4820:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38042,
-                  "src": "4812:15:22",
+                  "scope": 42019,
+                  "src": "4812:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4743,10 +4743,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38027,
+                    "id": 42004,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4812:7:22",
+                    "src": "4812:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -4755,21 +4755,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "4811:17:22"
+              "src": "4811:17:27"
             },
             "returnParameters": {
-              "id": 38032,
+              "id": 42009,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38031,
+                  "id": 42008,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38042,
-                  "src": "4858:7:22",
+                  "scope": 42019,
+                  "src": "4858:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4777,10 +4777,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38030,
+                    "id": 42007,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4858:7:22",
+                    "src": "4858:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4790,22 +4790,22 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "4857:9:22"
+              "src": "4857:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38058,
+            "id": 42035,
             "nodeType": "FunctionDefinition",
-            "src": "5012:144:22",
+            "src": "5012:144:27",
             "nodes": [],
             "body": {
-              "id": 38057,
+              "id": 42034,
               "nodeType": "Block",
-              "src": "5087:69:22",
+              "src": "5087:69:27",
               "nodes": [],
               "statements": [
                 {
@@ -4815,18 +4815,18 @@ export const ERC721Upgradeable = {
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 38051,
+                          "id": 42028,
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38846,
-                          "src": "5116:10:22",
+                          "referencedDeclaration": 42823,
+                          "src": "5116:10:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                             "typeString": "function () view returns (address)"
                           }
                         },
-                        "id": 38052,
+                        "id": 42029,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4835,7 +4835,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "5116:12:22",
+                        "src": "5116:12:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4843,24 +4843,24 @@ export const ERC721Upgradeable = {
                         }
                       },
                       {
-                        "id": 38053,
+                        "id": 42030,
                         "name": "operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38045,
-                        "src": "5130:8:22",
+                        "referencedDeclaration": 42022,
+                        "src": "5130:8:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38054,
+                        "id": 42031,
                         "name": "approved",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38047,
-                        "src": "5140:8:22",
+                        "referencedDeclaration": 42024,
+                        "src": "5140:8:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -4882,18 +4882,18 @@ export const ERC721Upgradeable = {
                           "typeString": "bool"
                         }
                       ],
-                      "id": 38050,
+                      "id": 42027,
                       "name": "_setApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38788,
-                      "src": "5097:18:22",
+                      "referencedDeclaration": 42765,
+                      "src": "5097:18:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_bool_$returns$__$",
                         "typeString": "function (address,address,bool)"
                       }
                     },
-                    "id": 38055,
+                    "id": 42032,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4902,26 +4902,26 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "5097:52:22",
+                    "src": "5097:52:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38056,
+                  "id": 42033,
                   "nodeType": "ExpressionStatement",
-                  "src": "5097:52:22"
+                  "src": "5097:52:27"
                 }
               ]
             },
             "baseFunctions": [
-              39939
+              44457
             ],
             "documentation": {
-              "id": 38043,
+              "id": 42020,
               "nodeType": "StructuredDocumentation",
-              "src": "4951:56:22",
+              "src": "4951:56:27",
               "text": " @dev See {IERC721-setApprovalForAll}."
             },
             "functionSelector": "a22cb465",
@@ -4929,20 +4929,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "setApprovalForAll",
-            "nameLocation": "5021:17:22",
+            "nameLocation": "5021:17:27",
             "parameters": {
-              "id": 38048,
+              "id": 42025,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38045,
+                  "id": 42022,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "5047:8:22",
+                  "nameLocation": "5047:8:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38058,
-                  "src": "5039:16:22",
+                  "scope": 42035,
+                  "src": "5039:16:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4950,10 +4950,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38044,
+                    "id": 42021,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5039:7:22",
+                    "src": "5039:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -4964,13 +4964,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38047,
+                  "id": 42024,
                   "mutability": "mutable",
                   "name": "approved",
-                  "nameLocation": "5062:8:22",
+                  "nameLocation": "5062:8:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38058,
-                  "src": "5057:13:22",
+                  "scope": 42035,
+                  "src": "5057:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4978,10 +4978,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 38046,
+                    "id": 42023,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5057:4:22",
+                    "src": "5057:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -4990,90 +4990,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "5038:33:22"
+              "src": "5038:33:27"
             },
             "returnParameters": {
-              "id": 38049,
+              "id": 42026,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5087:0:22"
+              "src": "5087:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38082,
+            "id": 42059,
             "nodeType": "FunctionDefinition",
-            "src": "5222:210:22",
+            "src": "5222:210:27",
             "nodes": [],
             "body": {
-              "id": 38081,
+              "id": 42058,
               "nodeType": "Block",
-              "src": "5316:116:22",
+              "src": "5316:116:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38070
+                    42047
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38070,
+                      "id": 42047,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "5348:1:22",
+                      "nameLocation": "5348:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38081,
-                      "src": "5326:23:22",
+                      "scope": 42058,
+                      "src": "5326:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38069,
+                        "id": 42046,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38068,
+                          "id": 42045,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "5326:13:22"
+                            "5326:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "5326:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "5326:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "5326:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "5326:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38073,
+                  "id": 42050,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38071,
+                      "id": 42048,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "5352:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "5352:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38072,
+                    "id": 42049,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5082,55 +5082,55 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "5352:19:22",
+                    "src": "5352:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "5326:45:22"
+                  "src": "5326:45:27"
                 },
                 {
                   "expression": {
                     "baseExpression": {
                       "baseExpression": {
                         "expression": {
-                          "id": 38074,
+                          "id": 42051,
                           "name": "$",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38070,
-                          "src": "5388:1:22",
+                          "referencedDeclaration": 42047,
+                          "src": "5388:1:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                            "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                             "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                           }
                         },
-                        "id": 38075,
+                        "id": 42052,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "5390:18:22",
+                        "memberLocation": "5390:18:27",
                         "memberName": "_operatorApprovals",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 37797,
-                        "src": "5388:20:22",
+                        "referencedDeclaration": 41774,
+                        "src": "5388:20:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
                           "typeString": "mapping(address => mapping(address => bool))"
                         }
                       },
-                      "id": 38077,
+                      "id": 42054,
                       "indexExpression": {
-                        "id": 38076,
+                        "id": 42053,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38061,
-                        "src": "5409:5:22",
+                        "referencedDeclaration": 42038,
+                        "src": "5409:5:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -5141,20 +5141,20 @@ export const ERC721Upgradeable = {
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
-                      "src": "5388:27:22",
+                      "src": "5388:27:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                         "typeString": "mapping(address => bool)"
                       }
                     },
-                    "id": 38079,
+                    "id": 42056,
                     "indexExpression": {
-                      "id": 38078,
+                      "id": 42055,
                       "name": "operator",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38063,
-                      "src": "5416:8:22",
+                      "referencedDeclaration": 42040,
+                      "src": "5416:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -5165,26 +5165,26 @@ export const ERC721Upgradeable = {
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "5388:37:22",
+                    "src": "5388:37:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 38067,
-                  "id": 38080,
+                  "functionReturnParameters": 42044,
+                  "id": 42057,
                   "nodeType": "Return",
-                  "src": "5381:44:22"
+                  "src": "5381:44:27"
                 }
               ]
             },
             "baseFunctions": [
-              39957
+              44475
             ],
             "documentation": {
-              "id": 38059,
+              "id": 42036,
               "nodeType": "StructuredDocumentation",
-              "src": "5162:55:22",
+              "src": "5162:55:27",
               "text": " @dev See {IERC721-isApprovedForAll}."
             },
             "functionSelector": "e985e9c5",
@@ -5192,20 +5192,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "isApprovedForAll",
-            "nameLocation": "5231:16:22",
+            "nameLocation": "5231:16:27",
             "parameters": {
-              "id": 38064,
+              "id": 42041,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38061,
+                  "id": 42038,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "5256:5:22",
+                  "nameLocation": "5256:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38082,
-                  "src": "5248:13:22",
+                  "scope": 42059,
+                  "src": "5248:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5213,10 +5213,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38060,
+                    "id": 42037,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5248:7:22",
+                    "src": "5248:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5227,13 +5227,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38063,
+                  "id": 42040,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "5271:8:22",
+                  "nameLocation": "5271:8:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38082,
-                  "src": "5263:16:22",
+                  "scope": 42059,
+                  "src": "5263:16:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5241,10 +5241,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38062,
+                    "id": 42039,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5263:7:22",
+                    "src": "5263:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5254,21 +5254,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "5247:33:22"
+              "src": "5247:33:27"
             },
             "returnParameters": {
-              "id": 38067,
+              "id": 42044,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38066,
+                  "id": 42043,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38082,
-                  "src": "5310:4:22",
+                  "scope": 42059,
+                  "src": "5310:4:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5276,10 +5276,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 38065,
+                    "id": 42042,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5310:4:22",
+                    "src": "5310:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -5288,22 +5288,22 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "5309:6:22"
+              "src": "5309:6:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38128,
+            "id": 42105,
             "nodeType": "FunctionDefinition",
-            "src": "5494:578:22",
+            "src": "5494:578:27",
             "nodes": [],
             "body": {
-              "id": 38127,
+              "id": 42104,
               "nodeType": "Block",
-              "src": "5574:498:22",
+              "src": "5574:498:27",
               "nodes": [],
               "statements": [
                 {
@@ -5312,18 +5312,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38097,
+                    "id": 42074,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38092,
+                      "id": 42069,
                       "name": "to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38087,
-                      "src": "5588:2:22",
+                      "referencedDeclaration": 42064,
+                      "src": "5588:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -5335,14 +5335,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38095,
+                          "id": 42072,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "5602:1:22",
+                          "src": "5602:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -5357,26 +5357,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38094,
+                        "id": 42071,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "5594:7:22",
+                        "src": "5594:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38093,
+                          "id": 42070,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "5594:7:22",
+                          "src": "5594:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38096,
+                      "id": 42073,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -5385,26 +5385,26 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "5594:10:22",
+                      "src": "5594:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "5588:16:22",
+                    "src": "5588:16:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38106,
+                  "id": 42083,
                   "nodeType": "IfStatement",
-                  "src": "5584:87:22",
+                  "src": "5584:87:27",
                   "trueBody": {
-                    "id": 38105,
+                    "id": 42082,
                     "nodeType": "Block",
-                    "src": "5606:65:22",
+                    "src": "5606:65:27",
                     "statements": [
                       {
                         "errorCall": {
@@ -5413,14 +5413,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 38101,
+                                  "id": 42078,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "5657:1:22",
+                                  "src": "5657:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -5435,26 +5435,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 38100,
+                                "id": 42077,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "5649:7:22",
+                                "src": "5649:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 38099,
+                                  "id": 42076,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "5649:7:22",
+                                  "src": "5649:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 38102,
+                              "id": 42079,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -5463,7 +5463,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "5649:10:22",
+                              "src": "5649:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -5478,18 +5478,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 38098,
+                            "id": 42075,
                             "name": "ERC721InvalidReceiver",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39363,
-                            "src": "5627:21:22",
+                            "referencedDeclaration": 43340,
+                            "src": "5627:21:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                               "typeString": "function (address) pure returns (error)"
                             }
                           },
-                          "id": 38103,
+                          "id": 42080,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5498,34 +5498,34 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "5627:33:22",
+                          "src": "5627:33:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38104,
+                        "id": 42081,
                         "nodeType": "RevertStatement",
-                        "src": "5620:40:22"
+                        "src": "5620:40:27"
                       }
                     ]
                   }
                 },
                 {
                   "assignments": [
-                    38108
+                    42085
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38108,
+                      "id": 42085,
                       "mutability": "mutable",
                       "name": "previousOwner",
-                      "nameLocation": "5897:13:22",
+                      "nameLocation": "5897:13:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38127,
-                      "src": "5889:21:22",
+                      "scope": 42104,
+                      "src": "5889:21:27",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -5533,10 +5533,10 @@ export const ERC721Upgradeable = {
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 38107,
+                        "id": 42084,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
-                        "src": "5889:7:22",
+                        "src": "5889:7:27",
                         "stateMutability": "nonpayable",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5546,28 +5546,28 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38115,
+                  "id": 42092,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 38110,
+                        "id": 42087,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38087,
-                        "src": "5921:2:22",
+                        "referencedDeclaration": 42064,
+                        "src": "5921:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38111,
+                        "id": 42088,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38089,
-                        "src": "5925:7:22",
+                        "referencedDeclaration": 42066,
+                        "src": "5925:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -5577,18 +5577,18 @@ export const ERC721Upgradeable = {
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 38112,
+                          "id": 42089,
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38846,
-                          "src": "5934:10:22",
+                          "referencedDeclaration": 42823,
+                          "src": "5934:10:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                             "typeString": "function () view returns (address)"
                           }
                         },
-                        "id": 38113,
+                        "id": 42090,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -5597,7 +5597,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "5934:12:22",
+                        "src": "5934:12:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5620,18 +5620,18 @@ export const ERC721Upgradeable = {
                           "typeString": "address"
                         }
                       ],
-                      "id": 38109,
+                      "id": 42086,
                       "name": "_update",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38415,
-                      "src": "5913:7:22",
+                      "referencedDeclaration": 42392,
+                      "src": "5913:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$returns$_t_address_$",
                         "typeString": "function (address,uint256,address) returns (address)"
                       }
                     },
-                    "id": 38114,
+                    "id": 42091,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -5640,7 +5640,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "5913:34:22",
+                    "src": "5913:34:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5648,7 +5648,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "5889:58:22"
+                  "src": "5889:58:27"
                 },
                 {
                   "condition": {
@@ -5656,18 +5656,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38118,
+                    "id": 42095,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38116,
+                      "id": 42093,
                       "name": "previousOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38108,
-                      "src": "5961:13:22",
+                      "referencedDeclaration": 42085,
+                      "src": "5961:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -5676,65 +5676,65 @@ export const ERC721Upgradeable = {
                     "nodeType": "BinaryOperation",
                     "operator": "!=",
                     "rightExpression": {
-                      "id": 38117,
+                      "id": 42094,
                       "name": "from",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38085,
-                      "src": "5978:4:22",
+                      "referencedDeclaration": 42062,
+                      "src": "5978:4:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "5961:21:22",
+                    "src": "5961:21:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38126,
+                  "id": 42103,
                   "nodeType": "IfStatement",
-                  "src": "5957:109:22",
+                  "src": "5957:109:27",
                   "trueBody": {
-                    "id": 38125,
+                    "id": 42102,
                     "nodeType": "Block",
-                    "src": "5984:82:22",
+                    "src": "5984:82:27",
                     "statements": [
                       {
                         "errorCall": {
                           "arguments": [
                             {
-                              "id": 38120,
+                              "id": 42097,
                               "name": "from",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38085,
-                              "src": "6026:4:22",
+                              "referencedDeclaration": 42062,
+                              "src": "6026:4:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 38121,
+                              "id": 42098,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38089,
-                              "src": "6032:7:22",
+                              "referencedDeclaration": 42066,
+                              "src": "6032:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             },
                             {
-                              "id": 38122,
+                              "id": 42099,
                               "name": "previousOwner",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38108,
-                              "src": "6041:13:22",
+                              "referencedDeclaration": 42085,
+                              "src": "6041:13:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -5756,18 +5756,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 38119,
+                            "id": 42096,
                             "name": "ERC721IncorrectOwner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39353,
-                            "src": "6005:20:22",
+                            "referencedDeclaration": 43330,
+                            "src": "6005:20:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$_t_uint256_$_t_address_$returns$_t_error_$",
                               "typeString": "function (address,uint256,address) pure returns (error)"
                             }
                           },
-                          "id": 38123,
+                          "id": 42100,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -5776,16 +5776,16 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "6005:50:22",
+                          "src": "6005:50:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38124,
+                        "id": 42101,
                         "nodeType": "RevertStatement",
-                        "src": "5998:57:22"
+                        "src": "5998:57:27"
                       }
                     ]
                   }
@@ -5793,12 +5793,12 @@ export const ERC721Upgradeable = {
               ]
             },
             "baseFunctions": [
-              39923
+              44441
             ],
             "documentation": {
-              "id": 38083,
+              "id": 42060,
               "nodeType": "StructuredDocumentation",
-              "src": "5438:51:22",
+              "src": "5438:51:27",
               "text": " @dev See {IERC721-transferFrom}."
             },
             "functionSelector": "23b872dd",
@@ -5806,20 +5806,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "transferFrom",
-            "nameLocation": "5503:12:22",
+            "nameLocation": "5503:12:27",
             "parameters": {
-              "id": 38090,
+              "id": 42067,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38085,
+                  "id": 42062,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "5524:4:22",
+                  "nameLocation": "5524:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38128,
-                  "src": "5516:12:22",
+                  "scope": 42105,
+                  "src": "5516:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5827,10 +5827,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38084,
+                    "id": 42061,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5516:7:22",
+                    "src": "5516:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5841,13 +5841,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38087,
+                  "id": 42064,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "5538:2:22",
+                  "nameLocation": "5538:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38128,
-                  "src": "5530:10:22",
+                  "scope": 42105,
+                  "src": "5530:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5855,10 +5855,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38086,
+                    "id": 42063,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5530:7:22",
+                    "src": "5530:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -5869,13 +5869,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38089,
+                  "id": 42066,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "5550:7:22",
+                  "nameLocation": "5550:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38128,
-                  "src": "5542:15:22",
+                  "scope": 42105,
+                  "src": "5542:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5883,10 +5883,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38088,
+                    "id": 42065,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5542:7:22",
+                    "src": "5542:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -5895,64 +5895,64 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "5515:43:22"
+              "src": "5515:43:27"
             },
             "returnParameters": {
-              "id": 38091,
+              "id": 42068,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5574:0:22"
+              "src": "5574:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38146,
+            "id": 42123,
             "nodeType": "FunctionDefinition",
-            "src": "6138:132:22",
+            "src": "6138:132:27",
             "nodes": [],
             "body": {
-              "id": 38145,
+              "id": 42122,
               "nodeType": "Block",
-              "src": "6214:56:22",
+              "src": "6214:56:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38139,
+                        "id": 42116,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38131,
-                        "src": "6241:4:22",
+                        "referencedDeclaration": 42108,
+                        "src": "6241:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38140,
+                        "id": 42117,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38133,
-                        "src": "6247:2:22",
+                        "referencedDeclaration": 42110,
+                        "src": "6247:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38141,
+                        "id": 42118,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38135,
-                        "src": "6251:7:22",
+                        "referencedDeclaration": 42112,
+                        "src": "6251:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -5960,14 +5960,14 @@ export const ERC721Upgradeable = {
                       },
                       {
                         "hexValue": "",
-                        "id": 38142,
+                        "id": 42119,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "6260:2:22",
+                        "src": "6260:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                           "typeString": "literal_string \"\""
@@ -5994,21 +5994,21 @@ export const ERC721Upgradeable = {
                           "typeString": "literal_string \"\""
                         }
                       ],
-                      "id": 38138,
+                      "id": 42115,
                       "name": "safeTransferFrom",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        38146,
-                        38176
+                        42123,
+                        42153
                       ],
-                      "referencedDeclaration": 38176,
-                      "src": "6224:16:22",
+                      "referencedDeclaration": 42153,
+                      "src": "6224:16:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,address,uint256,bytes memory)"
                       }
                     },
-                    "id": 38143,
+                    "id": 42120,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6017,26 +6017,26 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "6224:39:22",
+                    "src": "6224:39:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38144,
+                  "id": 42121,
                   "nodeType": "ExpressionStatement",
-                  "src": "6224:39:22"
+                  "src": "6224:39:27"
                 }
               ]
             },
             "baseFunctions": [
-              39913
+              44431
             ],
             "documentation": {
-              "id": 38129,
+              "id": 42106,
               "nodeType": "StructuredDocumentation",
-              "src": "6078:55:22",
+              "src": "6078:55:27",
               "text": " @dev See {IERC721-safeTransferFrom}."
             },
             "functionSelector": "42842e0e",
@@ -6044,20 +6044,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "6147:16:22",
+            "nameLocation": "6147:16:27",
             "parameters": {
-              "id": 38136,
+              "id": 42113,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38131,
+                  "id": 42108,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "6172:4:22",
+                  "nameLocation": "6172:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38146,
-                  "src": "6164:12:22",
+                  "scope": 42123,
+                  "src": "6164:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6065,10 +6065,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38130,
+                    "id": 42107,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6164:7:22",
+                    "src": "6164:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -6079,13 +6079,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38133,
+                  "id": 42110,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "6186:2:22",
+                  "nameLocation": "6186:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38146,
-                  "src": "6178:10:22",
+                  "scope": 42123,
+                  "src": "6178:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6093,10 +6093,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38132,
+                    "id": 42109,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6178:7:22",
+                    "src": "6178:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -6107,13 +6107,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38135,
+                  "id": 42112,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "6198:7:22",
+                  "nameLocation": "6198:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38146,
-                  "src": "6190:15:22",
+                  "scope": 42123,
+                  "src": "6190:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6121,10 +6121,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38134,
+                    "id": 42111,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6190:7:22",
+                    "src": "6190:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -6133,64 +6133,64 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "6163:43:22"
+              "src": "6163:43:27"
             },
             "returnParameters": {
-              "id": 38137,
+              "id": 42114,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6214:0:22"
+              "src": "6214:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "public"
           },
           {
-            "id": 38176,
+            "id": 42153,
             "nodeType": "FunctionDefinition",
-            "src": "6336:233:22",
+            "src": "6336:233:27",
             "nodes": [],
             "body": {
-              "id": 38175,
+              "id": 42152,
               "nodeType": "Block",
-              "src": "6439:130:22",
+              "src": "6439:130:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38159,
+                        "id": 42136,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38149,
-                        "src": "6462:4:22",
+                        "referencedDeclaration": 42126,
+                        "src": "6462:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38160,
+                        "id": 42137,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38151,
-                        "src": "6468:2:22",
+                        "referencedDeclaration": 42128,
+                        "src": "6468:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38161,
+                        "id": 42138,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38153,
-                        "src": "6472:7:22",
+                        "referencedDeclaration": 42130,
+                        "src": "6472:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -6212,18 +6212,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38158,
+                      "id": 42135,
                       "name": "transferFrom",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38128,
-                      "src": "6449:12:22",
+                      "referencedDeclaration": 42105,
+                      "src": "6449:12:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 38162,
+                    "id": 42139,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6232,16 +6232,16 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "6449:31:22",
+                    "src": "6449:31:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38163,
+                  "id": 42140,
                   "nodeType": "ExpressionStatement",
-                  "src": "6449:31:22"
+                  "src": "6449:31:27"
                 },
                 {
                   "expression": {
@@ -6250,18 +6250,18 @@ export const ERC721Upgradeable = {
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 38167,
+                          "id": 42144,
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38846,
-                          "src": "6524:10:22",
+                          "referencedDeclaration": 42823,
+                          "src": "6524:10:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                             "typeString": "function () view returns (address)"
                           }
                         },
-                        "id": 38168,
+                        "id": 42145,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -6270,7 +6270,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "6524:12:22",
+                        "src": "6524:12:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -6278,48 +6278,48 @@ export const ERC721Upgradeable = {
                         }
                       },
                       {
-                        "id": 38169,
+                        "id": 42146,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38149,
-                        "src": "6538:4:22",
+                        "referencedDeclaration": 42126,
+                        "src": "6538:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38170,
+                        "id": 42147,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38151,
-                        "src": "6544:2:22",
+                        "referencedDeclaration": 42128,
+                        "src": "6544:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38171,
+                        "id": 42148,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38153,
-                        "src": "6548:7:22",
+                        "referencedDeclaration": 42130,
+                        "src": "6548:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 38172,
+                        "id": 42149,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38155,
-                        "src": "6557:4:22",
+                        "referencedDeclaration": 42132,
+                        "src": "6557:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
@@ -6350,33 +6350,33 @@ export const ERC721Upgradeable = {
                         }
                       ],
                       "expression": {
-                        "id": 38164,
+                        "id": 42141,
                         "name": "ERC721Utils",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40081,
-                        "src": "6490:11:22",
+                        "referencedDeclaration": 44599,
+                        "src": "6490:11:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC721Utils_$40081_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC721Utils_$44599_$",
                           "typeString": "type(library ERC721Utils)"
                         }
                       },
-                      "id": 38166,
+                      "id": 42143,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "6502:21:22",
+                      "memberLocation": "6502:21:27",
                       "memberName": "checkOnERC721Received",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 40080,
-                      "src": "6490:33:22",
+                      "referencedDeclaration": 44598,
+                      "src": "6490:33:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,address,address,uint256,bytes memory)"
                       }
                     },
-                    "id": 38173,
+                    "id": 42150,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6385,26 +6385,26 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "6490:72:22",
+                    "src": "6490:72:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38174,
+                  "id": 42151,
                   "nodeType": "ExpressionStatement",
-                  "src": "6490:72:22"
+                  "src": "6490:72:27"
                 }
               ]
             },
             "baseFunctions": [
-              39903
+              44421
             ],
             "documentation": {
-              "id": 38147,
+              "id": 42124,
               "nodeType": "StructuredDocumentation",
-              "src": "6276:55:22",
+              "src": "6276:55:27",
               "text": " @dev See {IERC721-safeTransferFrom}."
             },
             "functionSelector": "b88d4fde",
@@ -6412,20 +6412,20 @@ export const ERC721Upgradeable = {
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "6345:16:22",
+            "nameLocation": "6345:16:27",
             "parameters": {
-              "id": 38156,
+              "id": 42133,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38149,
+                  "id": 42126,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "6370:4:22",
+                  "nameLocation": "6370:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38176,
-                  "src": "6362:12:22",
+                  "scope": 42153,
+                  "src": "6362:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6433,10 +6433,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38148,
+                    "id": 42125,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6362:7:22",
+                    "src": "6362:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -6447,13 +6447,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38151,
+                  "id": 42128,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "6384:2:22",
+                  "nameLocation": "6384:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38176,
-                  "src": "6376:10:22",
+                  "scope": 42153,
+                  "src": "6376:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6461,10 +6461,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38150,
+                    "id": 42127,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6376:7:22",
+                    "src": "6376:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -6475,13 +6475,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38153,
+                  "id": 42130,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "6396:7:22",
+                  "nameLocation": "6396:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38176,
-                  "src": "6388:15:22",
+                  "scope": 42153,
+                  "src": "6388:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6489,10 +6489,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38152,
+                    "id": 42129,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6388:7:22",
+                    "src": "6388:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -6502,13 +6502,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38155,
+                  "id": 42132,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "6418:4:22",
+                  "nameLocation": "6418:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38176,
-                  "src": "6405:17:22",
+                  "scope": 42153,
+                  "src": "6405:17:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -6516,10 +6516,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 38154,
+                    "id": 42131,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "6405:5:22",
+                    "src": "6405:5:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -6528,90 +6528,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "6361:62:22"
+              "src": "6361:62:27"
             },
             "returnParameters": {
-              "id": 38157,
+              "id": 42134,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "6439:0:22"
+              "src": "6439:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "public"
           },
           {
-            "id": 38196,
+            "id": 42173,
             "nodeType": "FunctionDefinition",
-            "src": "7084:172:22",
+            "src": "7084:172:27",
             "nodes": [],
             "body": {
-              "id": 38195,
+              "id": 42172,
               "nodeType": "Block",
-              "src": "7159:97:22",
+              "src": "7159:97:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38186
+                    42163
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38186,
+                      "id": 42163,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "7191:1:22",
+                      "nameLocation": "7191:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38195,
-                      "src": "7169:23:22",
+                      "scope": 42172,
+                      "src": "7169:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38185,
+                        "id": 42162,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38184,
+                          "id": 42161,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "7169:13:22"
+                            "7169:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "7169:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "7169:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "7169:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "7169:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38189,
+                  "id": 42166,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38187,
+                      "id": 42164,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "7195:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "7195:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38188,
+                    "id": 42165,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6620,54 +6620,54 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "7195:19:22",
+                    "src": "7195:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "7169:45:22"
+                  "src": "7169:45:27"
                 },
                 {
                   "expression": {
                     "baseExpression": {
                       "expression": {
-                        "id": 38190,
+                        "id": 42167,
                         "name": "$",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38186,
-                        "src": "7231:1:22",
+                        "referencedDeclaration": 42163,
+                        "src": "7231:1:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                         }
                       },
-                      "id": 38191,
+                      "id": 42168,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "7233:7:22",
+                      "memberLocation": "7233:7:27",
                       "memberName": "_owners",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 37783,
-                      "src": "7231:9:22",
+                      "referencedDeclaration": 41760,
+                      "src": "7231:9:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                         "typeString": "mapping(uint256 => address)"
                       }
                     },
-                    "id": 38193,
+                    "id": 42170,
                     "indexExpression": {
-                      "id": 38192,
+                      "id": 42169,
                       "name": "tokenId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38179,
-                      "src": "7241:7:22",
+                      "referencedDeclaration": 42156,
+                      "src": "7241:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6678,43 +6678,43 @@ export const ERC721Upgradeable = {
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "7231:18:22",
+                    "src": "7231:18:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 38183,
-                  "id": 38194,
+                  "functionReturnParameters": 42160,
+                  "id": 42171,
                   "nodeType": "Return",
-                  "src": "7224:25:22"
+                  "src": "7224:25:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38177,
+              "id": 42154,
               "nodeType": "StructuredDocumentation",
-              "src": "6575:504:22",
+              "src": "6575:504:27",
               "text": " @dev Returns the owner of the `tokenId`. Does NOT revert if token doesn't exist\n IMPORTANT: Any overrides to this function that add ownership of tokens not tracked by the\n core ERC-721 logic MUST be matched with the use of {_increaseBalance} to keep balances\n consistent with ownership. The invariant to preserve is that for any address `a` the value returned by\n `balanceOf(a)` must be equal to the number of tokens such that `_ownerOf(tokenId)` is `a`."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_ownerOf",
-            "nameLocation": "7093:8:22",
+            "nameLocation": "7093:8:27",
             "parameters": {
-              "id": 38180,
+              "id": 42157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38179,
+                  "id": 42156,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "7110:7:22",
+                  "nameLocation": "7110:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38196,
-                  "src": "7102:15:22",
+                  "scope": 42173,
+                  "src": "7102:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6722,10 +6722,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38178,
+                    "id": 42155,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7102:7:22",
+                    "src": "7102:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -6734,21 +6734,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "7101:17:22"
+              "src": "7101:17:27"
             },
             "returnParameters": {
-              "id": 38183,
+              "id": 42160,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38182,
+                  "id": 42159,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38196,
-                  "src": "7150:7:22",
+                  "scope": 42173,
+                  "src": "7150:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6756,10 +6756,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38181,
+                    "id": 42158,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7150:7:22",
+                    "src": "7150:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -6769,84 +6769,84 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "7149:9:22"
+              "src": "7149:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38216,
+            "id": 42193,
             "nodeType": "FunctionDefinition",
-            "src": "7372:184:22",
+            "src": "7372:184:27",
             "nodes": [],
             "body": {
-              "id": 38215,
+              "id": 42192,
               "nodeType": "Block",
-              "src": "7451:105:22",
+              "src": "7451:105:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38206
+                    42183
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38206,
+                      "id": 42183,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "7483:1:22",
+                      "nameLocation": "7483:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38215,
-                      "src": "7461:23:22",
+                      "scope": 42192,
+                      "src": "7461:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38205,
+                        "id": 42182,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38204,
+                          "id": 42181,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "7461:13:22"
+                            "7461:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "7461:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "7461:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "7461:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "7461:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38209,
+                  "id": 42186,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38207,
+                      "id": 42184,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "7487:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "7487:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38208,
+                    "id": 42185,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -6855,54 +6855,54 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "7487:19:22",
+                    "src": "7487:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "7461:45:22"
+                  "src": "7461:45:27"
                 },
                 {
                   "expression": {
                     "baseExpression": {
                       "expression": {
-                        "id": 38210,
+                        "id": 42187,
                         "name": "$",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38206,
-                        "src": "7523:1:22",
+                        "referencedDeclaration": 42183,
+                        "src": "7523:1:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                         }
                       },
-                      "id": 38211,
+                      "id": 42188,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "7525:15:22",
+                      "memberLocation": "7525:15:27",
                       "memberName": "_tokenApprovals",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 37791,
-                      "src": "7523:17:22",
+                      "referencedDeclaration": 41768,
+                      "src": "7523:17:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                         "typeString": "mapping(uint256 => address)"
                       }
                     },
-                    "id": 38213,
+                    "id": 42190,
                     "indexExpression": {
-                      "id": 38212,
+                      "id": 42189,
                       "name": "tokenId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38199,
-                      "src": "7541:7:22",
+                      "referencedDeclaration": 42176,
+                      "src": "7541:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6913,43 +6913,43 @@ export const ERC721Upgradeable = {
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "7523:26:22",
+                    "src": "7523:26:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 38203,
-                  "id": 38214,
+                  "functionReturnParameters": 42180,
+                  "id": 42191,
                   "nodeType": "Return",
-                  "src": "7516:33:22"
+                  "src": "7516:33:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38197,
+              "id": 42174,
               "nodeType": "StructuredDocumentation",
-              "src": "7262:105:22",
+              "src": "7262:105:27",
               "text": " @dev Returns the approved address for `tokenId`. Returns 0 if `tokenId` is not minted."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_getApproved",
-            "nameLocation": "7381:12:22",
+            "nameLocation": "7381:12:27",
             "parameters": {
-              "id": 38200,
+              "id": 42177,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38199,
+                  "id": 42176,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "7402:7:22",
+                  "nameLocation": "7402:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38216,
-                  "src": "7394:15:22",
+                  "scope": 42193,
+                  "src": "7394:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6957,10 +6957,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38198,
+                    "id": 42175,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7394:7:22",
+                    "src": "7394:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -6969,21 +6969,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "7393:17:22"
+              "src": "7393:17:27"
             },
             "returnParameters": {
-              "id": 38203,
+              "id": 42180,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38202,
+                  "id": 42179,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38216,
-                  "src": "7442:7:22",
+                  "scope": 42193,
+                  "src": "7442:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6991,10 +6991,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38201,
+                    "id": 42178,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7442:7:22",
+                    "src": "7442:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -7004,22 +7004,22 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "7441:9:22"
+              "src": "7441:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38252,
+            "id": 42229,
             "nodeType": "FunctionDefinition",
-            "src": "7867:272:22",
+            "src": "7867:272:27",
             "nodes": [],
             "body": {
-              "id": 38251,
+              "id": 42228,
               "nodeType": "Block",
-              "src": "7976:163:22",
+              "src": "7976:163:27",
               "nodes": [],
               "statements": [
                 {
@@ -7028,7 +7028,7 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 38249,
+                    "id": 42226,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -7038,18 +7038,18 @@ export const ERC721Upgradeable = {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       },
-                      "id": 38233,
+                      "id": 42210,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 38228,
+                        "id": 42205,
                         "name": "spender",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38221,
-                        "src": "8005:7:22",
+                        "referencedDeclaration": 42198,
+                        "src": "8005:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -7061,14 +7061,14 @@ export const ERC721Upgradeable = {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38231,
+                            "id": 42208,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "8024:1:22",
+                            "src": "8024:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -7083,26 +7083,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38230,
+                          "id": 42207,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "8016:7:22",
+                          "src": "8016:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38229,
+                            "id": 42206,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "8016:7:22",
+                            "src": "8016:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38232,
+                        "id": 42209,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -7111,14 +7111,14 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "8016:10:22",
+                        "src": "8016:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "src": "8005:21:22",
+                      "src": "8005:21:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -7133,7 +7133,7 @@ export const ERC721Upgradeable = {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           },
-                          "id": 38247,
+                          "id": 42224,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -7143,7 +7143,7 @@ export const ERC721Upgradeable = {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
                             },
-                            "id": 38241,
+                            "id": 42218,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -7153,18 +7153,18 @@ export const ERC721Upgradeable = {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               },
-                              "id": 38236,
+                              "id": 42213,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftExpression": {
-                                "id": 38234,
+                                "id": 42211,
                                 "name": "owner",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38219,
-                                "src": "8043:5:22",
+                                "referencedDeclaration": 42196,
+                                "src": "8043:5:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -7173,18 +7173,18 @@ export const ERC721Upgradeable = {
                               "nodeType": "BinaryOperation",
                               "operator": "==",
                               "rightExpression": {
-                                "id": 38235,
+                                "id": 42212,
                                 "name": "spender",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38221,
-                                "src": "8052:7:22",
+                                "referencedDeclaration": 42198,
+                                "src": "8052:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
                                 }
                               },
-                              "src": "8043:16:22",
+                              "src": "8043:16:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -7195,24 +7195,24 @@ export const ERC721Upgradeable = {
                             "rightExpression": {
                               "arguments": [
                                 {
-                                  "id": 38238,
+                                  "id": 42215,
                                   "name": "owner",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38219,
-                                  "src": "8080:5:22",
+                                  "referencedDeclaration": 42196,
+                                  "src": "8080:5:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
                                   }
                                 },
                                 {
-                                  "id": 38239,
+                                  "id": 42216,
                                   "name": "spender",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38221,
-                                  "src": "8087:7:22",
+                                  "referencedDeclaration": 42198,
+                                  "src": "8087:7:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
@@ -7230,18 +7230,18 @@ export const ERC721Upgradeable = {
                                     "typeString": "address"
                                   }
                                 ],
-                                "id": 38237,
+                                "id": 42214,
                                 "name": "isApprovedForAll",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38082,
-                                "src": "8063:16:22",
+                                "referencedDeclaration": 42059,
+                                "src": "8063:16:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$returns$_t_bool_$",
                                   "typeString": "function (address,address) view returns (bool)"
                                 }
                               },
-                              "id": 38240,
+                              "id": 42217,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -7250,14 +7250,14 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "8063:32:22",
+                              "src": "8063:32:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
                               }
                             },
-                            "src": "8043:52:22",
+                            "src": "8043:52:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
@@ -7270,7 +7270,7 @@ export const ERC721Upgradeable = {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
                             },
-                            "id": 38246,
+                            "id": 42223,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -7278,12 +7278,12 @@ export const ERC721Upgradeable = {
                             "leftExpression": {
                               "arguments": [
                                 {
-                                  "id": 38243,
+                                  "id": 42220,
                                   "name": "tokenId",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38223,
-                                  "src": "8112:7:22",
+                                  "referencedDeclaration": 42200,
+                                  "src": "8112:7:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
                                     "typeString": "uint256"
@@ -7297,18 +7297,18 @@ export const ERC721Upgradeable = {
                                     "typeString": "uint256"
                                   }
                                 ],
-                                "id": 38242,
+                                "id": 42219,
                                 "name": "_getApproved",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38216,
-                                "src": "8099:12:22",
+                                "referencedDeclaration": 42193,
+                                "src": "8099:12:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                                   "typeString": "function (uint256) view returns (address)"
                                 }
                               },
-                              "id": 38244,
+                              "id": 42221,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -7317,7 +7317,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "8099:21:22",
+                              "src": "8099:21:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -7327,80 +7327,80 @@ export const ERC721Upgradeable = {
                             "nodeType": "BinaryOperation",
                             "operator": "==",
                             "rightExpression": {
-                              "id": 38245,
+                              "id": 42222,
                               "name": "spender",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38221,
-                              "src": "8124:7:22",
+                              "referencedDeclaration": 42198,
+                              "src": "8124:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
-                            "src": "8099:32:22",
+                            "src": "8099:32:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
                             }
                           },
-                          "src": "8043:88:22",
+                          "src": "8043:88:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         }
                       ],
-                      "id": 38248,
+                      "id": 42225,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "TupleExpression",
-                      "src": "8042:90:22",
+                      "src": "8042:90:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "8005:127:22",
+                    "src": "8005:127:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 38227,
-                  "id": 38250,
+                  "functionReturnParameters": 42204,
+                  "id": 42227,
                   "nodeType": "Return",
-                  "src": "7986:146:22"
+                  "src": "7986:146:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38217,
+              "id": 42194,
               "nodeType": "StructuredDocumentation",
-              "src": "7562:300:22",
+              "src": "7562:300:27",
               "text": " @dev Returns whether `spender` is allowed to manage `owner`'s tokens, or `tokenId` in\n particular (ignoring whether it is owned by `owner`).\n WARNING: This function assumes that `owner` is the actual owner of `tokenId` and does not verify this\n assumption."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_isAuthorized",
-            "nameLocation": "7876:13:22",
+            "nameLocation": "7876:13:27",
             "parameters": {
-              "id": 38224,
+              "id": 42201,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38219,
+                  "id": 42196,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "7898:5:22",
+                  "nameLocation": "7898:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38252,
-                  "src": "7890:13:22",
+                  "scope": 42229,
+                  "src": "7890:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7408,10 +7408,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38218,
+                    "id": 42195,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7890:7:22",
+                    "src": "7890:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -7422,13 +7422,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38221,
+                  "id": 42198,
                   "mutability": "mutable",
                   "name": "spender",
-                  "nameLocation": "7913:7:22",
+                  "nameLocation": "7913:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38252,
-                  "src": "7905:15:22",
+                  "scope": 42229,
+                  "src": "7905:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7436,10 +7436,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38220,
+                    "id": 42197,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7905:7:22",
+                    "src": "7905:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -7450,13 +7450,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38223,
+                  "id": 42200,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "7930:7:22",
+                  "nameLocation": "7930:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38252,
-                  "src": "7922:15:22",
+                  "scope": 42229,
+                  "src": "7922:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7464,10 +7464,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38222,
+                    "id": 42199,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7922:7:22",
+                    "src": "7922:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -7476,21 +7476,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "7889:49:22"
+              "src": "7889:49:27"
             },
             "returnParameters": {
-              "id": 38227,
+              "id": 42204,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38226,
+                  "id": 42203,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38252,
-                  "src": "7970:4:22",
+                  "scope": 42229,
+                  "src": "7970:4:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7498,10 +7498,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 38225,
+                    "id": 42202,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "7970:4:22",
+                    "src": "7970:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -7510,27 +7510,27 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "7969:6:22"
+              "src": "7969:6:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38289,
+            "id": 42266,
             "nodeType": "FunctionDefinition",
-            "src": "8571:368:22",
+            "src": "8571:368:27",
             "nodes": [],
             "body": {
-              "id": 38288,
+              "id": 42265,
               "nodeType": "Block",
-              "src": "8668:271:22",
+              "src": "8668:271:27",
               "nodes": [],
               "statements": [
                 {
                   "condition": {
-                    "id": 38267,
+                    "id": 42244,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -7538,40 +7538,40 @@ export const ERC721Upgradeable = {
                     "nodeType": "UnaryOperation",
                     "operator": "!",
                     "prefix": true,
-                    "src": "8682:39:22",
+                    "src": "8682:39:27",
                     "subExpression": {
                       "arguments": [
                         {
-                          "id": 38263,
+                          "id": 42240,
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38255,
-                          "src": "8697:5:22",
+                          "referencedDeclaration": 42232,
+                          "src": "8697:5:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
                         {
-                          "id": 38264,
+                          "id": 42241,
                           "name": "spender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38257,
-                          "src": "8704:7:22",
+                          "referencedDeclaration": 42234,
+                          "src": "8704:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
                         {
-                          "id": 38265,
+                          "id": 42242,
                           "name": "tokenId",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38259,
-                          "src": "8713:7:22",
+                          "referencedDeclaration": 42236,
+                          "src": "8713:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -7593,18 +7593,18 @@ export const ERC721Upgradeable = {
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 38262,
+                        "id": 42239,
                         "name": "_isAuthorized",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38252,
-                        "src": "8683:13:22",
+                        "referencedDeclaration": 42229,
+                        "src": "8683:13:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
                           "typeString": "function (address,address,uint256) view returns (bool)"
                         }
                       },
-                      "id": 38266,
+                      "id": 42243,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -7613,7 +7613,7 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "8683:38:22",
+                      "src": "8683:38:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -7625,13 +7625,13 @@ export const ERC721Upgradeable = {
                       "typeString": "bool"
                     }
                   },
-                  "id": 38287,
+                  "id": 42264,
                   "nodeType": "IfStatement",
-                  "src": "8678:255:22",
+                  "src": "8678:255:27",
                   "trueBody": {
-                    "id": 38286,
+                    "id": 42263,
                     "nodeType": "Block",
-                    "src": "8723:210:22",
+                    "src": "8723:210:27",
                     "statements": [
                       {
                         "condition": {
@@ -7639,18 +7639,18 @@ export const ERC721Upgradeable = {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           },
-                          "id": 38273,
+                          "id": 42250,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 38268,
+                            "id": 42245,
                             "name": "owner",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 38255,
-                            "src": "8741:5:22",
+                            "referencedDeclaration": 42232,
+                            "src": "8741:5:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -7662,14 +7662,14 @@ export const ERC721Upgradeable = {
                             "arguments": [
                               {
                                 "hexValue": "30",
-                                "id": 38271,
+                                "id": 42248,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "kind": "number",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "8758:1:22",
+                                "src": "8758:1:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_rational_0_by_1",
                                   "typeString": "int_const 0"
@@ -7684,26 +7684,26 @@ export const ERC721Upgradeable = {
                                   "typeString": "int_const 0"
                                 }
                               ],
-                              "id": 38270,
+                              "id": 42247,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "8750:7:22",
+                              "src": "8750:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_address_$",
                                 "typeString": "type(address)"
                               },
                               "typeName": {
-                                "id": 38269,
+                                "id": 42246,
                                 "name": "address",
                                 "nodeType": "ElementaryTypeName",
-                                "src": "8750:7:22",
+                                "src": "8750:7:27",
                                 "typeDescriptions": {}
                               }
                             },
-                            "id": 38272,
+                            "id": 42249,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -7712,46 +7712,46 @@ export const ERC721Upgradeable = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "8750:10:22",
+                            "src": "8750:10:27",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
                             }
                           },
-                          "src": "8741:19:22",
+                          "src": "8741:19:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
                         "falseBody": {
-                          "id": 38284,
+                          "id": 42261,
                           "nodeType": "Block",
-                          "src": "8839:84:22",
+                          "src": "8839:84:27",
                           "statements": [
                             {
                               "errorCall": {
                                 "arguments": [
                                   {
-                                    "id": 38280,
+                                    "id": 42257,
                                     "name": "spender",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38257,
-                                    "src": "8891:7:22",
+                                    "referencedDeclaration": 42234,
+                                    "src": "8891:7:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
                                     }
                                   },
                                   {
-                                    "id": 38281,
+                                    "id": 42258,
                                     "name": "tokenId",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38259,
-                                    "src": "8900:7:22",
+                                    "referencedDeclaration": 42236,
+                                    "src": "8900:7:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
@@ -7769,18 +7769,18 @@ export const ERC721Upgradeable = {
                                       "typeString": "uint256"
                                     }
                                   ],
-                                  "id": 38279,
+                                  "id": 42256,
                                   "name": "ERC721InsufficientApproval",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 39370,
-                                  "src": "8864:26:22",
+                                  "referencedDeclaration": 43347,
+                                  "src": "8864:26:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_error_pure$_t_address_$_t_uint256_$returns$_t_error_$",
                                     "typeString": "function (address,uint256) pure returns (error)"
                                   }
                                 },
-                                "id": 38282,
+                                "id": 42259,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -7789,37 +7789,37 @@ export const ERC721Upgradeable = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "8864:44:22",
+                                "src": "8864:44:27",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_error",
                                   "typeString": "error"
                                 }
                               },
-                              "id": 38283,
+                              "id": 42260,
                               "nodeType": "RevertStatement",
-                              "src": "8857:51:22"
+                              "src": "8857:51:27"
                             }
                           ]
                         },
-                        "id": 38285,
+                        "id": 42262,
                         "nodeType": "IfStatement",
-                        "src": "8737:186:22",
+                        "src": "8737:186:27",
                         "trueBody": {
-                          "id": 38278,
+                          "id": 42255,
                           "nodeType": "Block",
-                          "src": "8762:71:22",
+                          "src": "8762:71:27",
                           "statements": [
                             {
                               "errorCall": {
                                 "arguments": [
                                   {
-                                    "id": 38275,
+                                    "id": 42252,
                                     "name": "tokenId",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38259,
-                                    "src": "8810:7:22",
+                                    "referencedDeclaration": 42236,
+                                    "src": "8810:7:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
@@ -7833,18 +7833,18 @@ export const ERC721Upgradeable = {
                                       "typeString": "uint256"
                                     }
                                   ],
-                                  "id": 38274,
+                                  "id": 42251,
                                   "name": "ERC721NonexistentToken",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 39344,
-                                  "src": "8787:22:22",
+                                  "referencedDeclaration": 43321,
+                                  "src": "8787:22:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$_t_error_$",
                                     "typeString": "function (uint256) pure returns (error)"
                                   }
                                 },
-                                "id": 38276,
+                                "id": 42253,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -7853,16 +7853,16 @@ export const ERC721Upgradeable = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "8787:31:22",
+                                "src": "8787:31:27",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_error",
                                   "typeString": "error"
                                 }
                               },
-                              "id": 38277,
+                              "id": 42254,
                               "nodeType": "RevertStatement",
-                              "src": "8780:38:22"
+                              "src": "8780:38:27"
                             }
                           ]
                         }
@@ -7873,29 +7873,29 @@ export const ERC721Upgradeable = {
               ]
             },
             "documentation": {
-              "id": 38253,
+              "id": 42230,
               "nodeType": "StructuredDocumentation",
-              "src": "8145:421:22",
+              "src": "8145:421:27",
               "text": " @dev Checks if `spender` can operate on `tokenId`, assuming the provided `owner` is the actual owner.\n Reverts if:\n - `spender` does not have approval from `owner` for `tokenId`.\n - `spender` does not have approval to manage all of `owner`'s assets.\n WARNING: This function assumes that `owner` is the actual owner of `tokenId` and does not verify this\n assumption."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_checkAuthorized",
-            "nameLocation": "8580:16:22",
+            "nameLocation": "8580:16:27",
             "parameters": {
-              "id": 38260,
+              "id": 42237,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38255,
+                  "id": 42232,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "8605:5:22",
+                  "nameLocation": "8605:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38289,
-                  "src": "8597:13:22",
+                  "scope": 42266,
+                  "src": "8597:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7903,10 +7903,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38254,
+                    "id": 42231,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "8597:7:22",
+                    "src": "8597:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -7917,13 +7917,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38257,
+                  "id": 42234,
                   "mutability": "mutable",
                   "name": "spender",
-                  "nameLocation": "8620:7:22",
+                  "nameLocation": "8620:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38289,
-                  "src": "8612:15:22",
+                  "scope": 42266,
+                  "src": "8612:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7931,10 +7931,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38256,
+                    "id": 42233,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "8612:7:22",
+                    "src": "8612:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -7945,13 +7945,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38259,
+                  "id": 42236,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "8637:7:22",
+                  "nameLocation": "8637:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38289,
-                  "src": "8629:15:22",
+                  "scope": 42266,
+                  "src": "8629:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7959,10 +7959,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38258,
+                    "id": 42235,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "8629:7:22",
+                    "src": "8629:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -7971,90 +7971,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "8596:49:22"
+              "src": "8596:49:27"
             },
             "returnParameters": {
-              "id": 38261,
+              "id": 42238,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "8668:0:22"
+              "src": "8668:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38313,
+            "id": 42290,
             "nodeType": "FunctionDefinition",
-            "src": "9581:210:22",
+            "src": "9581:210:27",
             "nodes": [],
             "body": {
-              "id": 38312,
+              "id": 42289,
               "nodeType": "Block",
-              "src": "9656:135:22",
+              "src": "9656:135:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38299
+                    42276
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38299,
+                      "id": 42276,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "9688:1:22",
+                      "nameLocation": "9688:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38312,
-                      "src": "9666:23:22",
+                      "scope": 42289,
+                      "src": "9666:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38298,
+                        "id": 42275,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38297,
+                          "id": 42274,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "9666:13:22"
+                            "9666:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "9666:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "9666:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "9666:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "9666:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38302,
+                  "id": 42279,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38300,
+                      "id": 42277,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "9692:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "9692:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38301,
+                    "id": 42278,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8063,24 +8063,24 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "9692:19:22",
+                    "src": "9692:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "9666:45:22"
+                  "src": "9666:45:27"
                 },
                 {
-                  "id": 38311,
+                  "id": 42288,
                   "nodeType": "UncheckedBlock",
-                  "src": "9721:64:22",
+                  "src": "9721:64:27",
                   "statements": [
                     {
                       "expression": {
-                        "id": 38309,
+                        "id": 42286,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -8088,40 +8088,40 @@ export const ERC721Upgradeable = {
                         "leftHandSide": {
                           "baseExpression": {
                             "expression": {
-                              "id": 38303,
+                              "id": 42280,
                               "name": "$",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38299,
-                              "src": "9745:1:22",
+                              "referencedDeclaration": 42276,
+                              "src": "9745:1:27",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                                "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                                 "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                               }
                             },
-                            "id": 38306,
+                            "id": 42283,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "9747:9:22",
+                            "memberLocation": "9747:9:27",
                             "memberName": "_balances",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 37787,
-                            "src": "9745:11:22",
+                            "referencedDeclaration": 41764,
+                            "src": "9745:11:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                               "typeString": "mapping(address => uint256)"
                             }
                           },
-                          "id": 38307,
+                          "id": 42284,
                           "indexExpression": {
-                            "id": 38305,
+                            "id": 42282,
                             "name": "account",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 38292,
-                            "src": "9757:7:22",
+                            "referencedDeclaration": 42269,
+                            "src": "9757:7:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
@@ -8132,7 +8132,7 @@ export const ERC721Upgradeable = {
                           "isPure": false,
                           "lValueRequested": true,
                           "nodeType": "IndexAccess",
-                          "src": "9745:20:22",
+                          "src": "9745:20:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -8141,55 +8141,55 @@ export const ERC721Upgradeable = {
                         "nodeType": "Assignment",
                         "operator": "+=",
                         "rightHandSide": {
-                          "id": 38308,
+                          "id": 42285,
                           "name": "value",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38294,
-                          "src": "9769:5:22",
+                          "referencedDeclaration": 42271,
+                          "src": "9769:5:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint128",
                             "typeString": "uint128"
                           }
                         },
-                        "src": "9745:29:22",
+                        "src": "9745:29:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "id": 38310,
+                      "id": 42287,
                       "nodeType": "ExpressionStatement",
-                      "src": "9745:29:22"
+                      "src": "9745:29:27"
                     }
                   ]
                 }
               ]
             },
             "documentation": {
-              "id": 38290,
+              "id": 42267,
               "nodeType": "StructuredDocumentation",
-              "src": "8945:631:22",
+              "src": "8945:631:27",
               "text": " @dev Unsafe write access to the balances, used by extensions that \"mint\" tokens using an {ownerOf} override.\n NOTE: the value is limited to type(uint128).max. This protect against _balance overflow. It is unrealistic that\n a uint256 would ever overflow from increments when these increments are bounded to uint128 values.\n WARNING: Increasing an account's balance using this function tends to be paired with an override of the\n {_ownerOf} function to resolve the ownership of the corresponding tokens so that balances and ownership\n remain consistent with one another."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_increaseBalance",
-            "nameLocation": "9590:16:22",
+            "nameLocation": "9590:16:27",
             "parameters": {
-              "id": 38295,
+              "id": 42272,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38292,
+                  "id": 42269,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "9615:7:22",
+                  "nameLocation": "9615:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38313,
-                  "src": "9607:15:22",
+                  "scope": 42290,
+                  "src": "9607:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -8197,10 +8197,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38291,
+                    "id": 42268,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "9607:7:22",
+                    "src": "9607:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -8211,13 +8211,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38294,
+                  "id": 42271,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "9632:5:22",
+                  "nameLocation": "9632:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38313,
-                  "src": "9624:13:22",
+                  "scope": 42290,
+                  "src": "9624:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -8225,10 +8225,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint128"
                   },
                   "typeName": {
-                    "id": 38293,
+                    "id": 42270,
                     "name": "uint128",
                     "nodeType": "ElementaryTypeName",
-                    "src": "9624:7:22",
+                    "src": "9624:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint128",
                       "typeString": "uint128"
@@ -8237,90 +8237,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "9606:32:22"
+              "src": "9606:32:27"
             },
             "returnParameters": {
-              "id": 38296,
+              "id": 42273,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "9656:0:22"
+              "src": "9656:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38415,
+            "id": 42392,
             "nodeType": "FunctionDefinition",
-            "src": "10384:856:22",
+            "src": "10384:856:27",
             "nodes": [],
             "body": {
-              "id": 38414,
+              "id": 42391,
               "nodeType": "Block",
-              "src": "10479:761:22",
+              "src": "10479:761:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38327
+                    42304
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38327,
+                      "id": 42304,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "10511:1:22",
+                      "nameLocation": "10511:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38414,
-                      "src": "10489:23:22",
+                      "scope": 42391,
+                      "src": "10489:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38326,
+                        "id": 42303,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38325,
+                          "id": 42302,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "10489:13:22"
+                            "10489:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "10489:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "10489:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "10489:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "10489:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38330,
+                  "id": 42307,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38328,
+                      "id": 42305,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "10515:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "10515:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38329,
+                    "id": 42306,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8329,30 +8329,30 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "10515:19:22",
+                    "src": "10515:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "10489:45:22"
+                  "src": "10489:45:27"
                 },
                 {
                   "assignments": [
-                    38332
+                    42309
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38332,
+                      "id": 42309,
                       "mutability": "mutable",
                       "name": "from",
-                      "nameLocation": "10552:4:22",
+                      "nameLocation": "10552:4:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38414,
-                      "src": "10544:12:22",
+                      "scope": 42391,
+                      "src": "10544:12:27",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -8360,10 +8360,10 @@ export const ERC721Upgradeable = {
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 38331,
+                        "id": 42308,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
-                        "src": "10544:7:22",
+                        "src": "10544:7:27",
                         "stateMutability": "nonpayable",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -8373,16 +8373,16 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38336,
+                  "id": 42313,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 38334,
+                        "id": 42311,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38318,
-                        "src": "10568:7:22",
+                        "referencedDeclaration": 42295,
+                        "src": "10568:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -8396,18 +8396,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38333,
+                      "id": 42310,
                       "name": "_ownerOf",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38196,
-                      "src": "10559:8:22",
+                      "referencedDeclaration": 42173,
+                      "src": "10559:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                         "typeString": "function (uint256) view returns (address)"
                       }
                     },
-                    "id": 38335,
+                    "id": 42312,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -8416,7 +8416,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "10559:17:22",
+                    "src": "10559:17:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -8424,7 +8424,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "10544:32:22"
+                  "src": "10544:32:27"
                 },
                 {
                   "condition": {
@@ -8432,18 +8432,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38342,
+                    "id": 42319,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38337,
+                      "id": 42314,
                       "name": "auth",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38320,
-                      "src": "10636:4:22",
+                      "referencedDeclaration": 42297,
+                      "src": "10636:4:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -8455,14 +8455,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38340,
+                          "id": 42317,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "10652:1:22",
+                          "src": "10652:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -8477,26 +8477,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38339,
+                        "id": 42316,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "10644:7:22",
+                        "src": "10644:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38338,
+                          "id": 42315,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "10644:7:22",
+                          "src": "10644:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38341,
+                      "id": 42318,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -8505,61 +8505,61 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "10644:10:22",
+                      "src": "10644:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "10636:18:22",
+                    "src": "10636:18:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38350,
+                  "id": 42327,
                   "nodeType": "IfStatement",
-                  "src": "10632:86:22",
+                  "src": "10632:86:27",
                   "trueBody": {
-                    "id": 38349,
+                    "id": 42326,
                     "nodeType": "Block",
-                    "src": "10656:62:22",
+                    "src": "10656:62:27",
                     "statements": [
                       {
                         "expression": {
                           "arguments": [
                             {
-                              "id": 38344,
+                              "id": 42321,
                               "name": "from",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38332,
-                              "src": "10687:4:22",
+                              "referencedDeclaration": 42309,
+                              "src": "10687:4:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 38345,
+                              "id": 42322,
                               "name": "auth",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38320,
-                              "src": "10693:4:22",
+                              "referencedDeclaration": 42297,
+                              "src": "10693:4:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 38346,
+                              "id": 42323,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38318,
-                              "src": "10699:7:22",
+                              "referencedDeclaration": 42295,
+                              "src": "10699:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -8581,18 +8581,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 38343,
+                            "id": 42320,
                             "name": "_checkAuthorized",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 38289,
-                            "src": "10670:16:22",
+                            "referencedDeclaration": 42266,
+                            "src": "10670:16:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$_t_uint256_$returns$__$",
                               "typeString": "function (address,address,uint256) view"
                             }
                           },
-                          "id": 38347,
+                          "id": 42324,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -8601,16 +8601,16 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "10670:37:22",
+                          "src": "10670:37:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 38348,
+                        "id": 42325,
                         "nodeType": "ExpressionStatement",
-                        "src": "10670:37:22"
+                        "src": "10670:37:27"
                       }
                     ]
                   }
@@ -8621,18 +8621,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38356,
+                    "id": 42333,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38351,
+                      "id": 42328,
                       "name": "from",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38332,
-                      "src": "10762:4:22",
+                      "referencedDeclaration": 42309,
+                      "src": "10762:4:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -8644,14 +8644,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38354,
+                          "id": 42331,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "10778:1:22",
+                          "src": "10778:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -8666,26 +8666,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38353,
+                        "id": 42330,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "10770:7:22",
+                        "src": "10770:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38352,
+                          "id": 42329,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "10770:7:22",
+                          "src": "10770:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38355,
+                      "id": 42332,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -8694,26 +8694,26 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "10770:10:22",
+                      "src": "10770:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "10762:18:22",
+                    "src": "10762:18:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38380,
+                  "id": 42357,
                   "nodeType": "IfStatement",
-                  "src": "10758:258:22",
+                  "src": "10758:258:27",
                   "trueBody": {
-                    "id": 38379,
+                    "id": 42356,
                     "nodeType": "Block",
-                    "src": "10782:234:22",
+                    "src": "10782:234:27",
                     "statements": [
                       {
                         "expression": {
@@ -8722,14 +8722,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 38360,
+                                  "id": 42337,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "10895:1:22",
+                                  "src": "10895:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -8744,26 +8744,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 38359,
+                                "id": 42336,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "10887:7:22",
+                                "src": "10887:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 38358,
+                                  "id": 42335,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "10887:7:22",
+                                  "src": "10887:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 38361,
+                              "id": 42338,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -8772,7 +8772,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "10887:10:22",
+                              "src": "10887:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -8780,12 +8780,12 @@ export const ERC721Upgradeable = {
                               }
                             },
                             {
-                              "id": 38362,
+                              "id": 42339,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38318,
-                              "src": "10899:7:22",
+                              "referencedDeclaration": 42295,
+                              "src": "10899:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -8795,14 +8795,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 38365,
+                                  "id": 42342,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "10916:1:22",
+                                  "src": "10916:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -8817,26 +8817,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 38364,
+                                "id": 42341,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "10908:7:22",
+                                "src": "10908:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 38363,
+                                  "id": 42340,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "10908:7:22",
+                                  "src": "10908:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 38366,
+                              "id": 42343,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -8845,7 +8845,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "10908:10:22",
+                              "src": "10908:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -8854,14 +8854,14 @@ export const ERC721Upgradeable = {
                             },
                             {
                               "hexValue": "66616c7365",
-                              "id": 38367,
+                              "id": 42344,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "bool",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "10920:5:22",
+                              "src": "10920:5:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -8888,21 +8888,21 @@ export const ERC721Upgradeable = {
                                 "typeString": "bool"
                               }
                             ],
-                            "id": 38357,
+                            "id": 42334,
                             "name": "_approve",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              38669,
-                              38743
+                              42646,
+                              42720
                             ],
-                            "referencedDeclaration": 38743,
-                            "src": "10878:8:22",
+                            "referencedDeclaration": 42720,
+                            "src": "10878:8:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$_t_bool_$returns$__$",
                               "typeString": "function (address,uint256,address,bool)"
                             }
                           },
-                          "id": 38368,
+                          "id": 42345,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -8911,25 +8911,25 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "10878:48:22",
+                          "src": "10878:48:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 38369,
+                        "id": 42346,
                         "nodeType": "ExpressionStatement",
-                        "src": "10878:48:22"
+                        "src": "10878:48:27"
                       },
                       {
-                        "id": 38378,
+                        "id": 42355,
                         "nodeType": "UncheckedBlock",
-                        "src": "10941:65:22",
+                        "src": "10941:65:27",
                         "statements": [
                           {
                             "expression": {
-                              "id": 38376,
+                              "id": 42353,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -8937,40 +8937,40 @@ export const ERC721Upgradeable = {
                               "leftHandSide": {
                                 "baseExpression": {
                                   "expression": {
-                                    "id": 38370,
+                                    "id": 42347,
                                     "name": "$",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38327,
-                                    "src": "10969:1:22",
+                                    "referencedDeclaration": 42304,
+                                    "src": "10969:1:27",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                                     }
                                   },
-                                  "id": 38373,
+                                  "id": 42350,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "10971:9:22",
+                                  "memberLocation": "10971:9:27",
                                   "memberName": "_balances",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 37787,
-                                  "src": "10969:11:22",
+                                  "referencedDeclaration": 41764,
+                                  "src": "10969:11:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                                     "typeString": "mapping(address => uint256)"
                                   }
                                 },
-                                "id": 38374,
+                                "id": 42351,
                                 "indexExpression": {
-                                  "id": 38372,
+                                  "id": 42349,
                                   "name": "from",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38332,
-                                  "src": "10981:4:22",
+                                  "referencedDeclaration": 42309,
+                                  "src": "10981:4:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
@@ -8981,7 +8981,7 @@ export const ERC721Upgradeable = {
                                 "isPure": false,
                                 "lValueRequested": true,
                                 "nodeType": "IndexAccess",
-                                "src": "10969:17:22",
+                                "src": "10969:17:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -8991,29 +8991,29 @@ export const ERC721Upgradeable = {
                               "operator": "-=",
                               "rightHandSide": {
                                 "hexValue": "31",
-                                "id": 38375,
+                                "id": 42352,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "kind": "number",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "10990:1:22",
+                                "src": "10990:1:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_rational_1_by_1",
                                   "typeString": "int_const 1"
                                 },
                                 "value": "1"
                               },
-                              "src": "10969:22:22",
+                              "src": "10969:22:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             },
-                            "id": 38377,
+                            "id": 42354,
                             "nodeType": "ExpressionStatement",
-                            "src": "10969:22:22"
+                            "src": "10969:22:27"
                           }
                         ]
                       }
@@ -9026,18 +9026,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38386,
+                    "id": 42363,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38381,
+                      "id": 42358,
                       "name": "to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38316,
-                      "src": "11030:2:22",
+                      "referencedDeclaration": 42293,
+                      "src": "11030:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -9049,14 +9049,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38384,
+                          "id": 42361,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "11044:1:22",
+                          "src": "11044:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -9071,26 +9071,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38383,
+                        "id": 42360,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "11036:7:22",
+                        "src": "11036:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38382,
+                          "id": 42359,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "11036:7:22",
+                          "src": "11036:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38385,
+                      "id": 42362,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -9099,35 +9099,35 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "11036:10:22",
+                      "src": "11036:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "11030:16:22",
+                    "src": "11030:16:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38397,
+                  "id": 42374,
                   "nodeType": "IfStatement",
-                  "src": "11026:109:22",
+                  "src": "11026:109:27",
                   "trueBody": {
-                    "id": 38396,
+                    "id": 42373,
                     "nodeType": "Block",
-                    "src": "11048:87:22",
+                    "src": "11048:87:27",
                     "statements": [
                       {
-                        "id": 38395,
+                        "id": 42372,
                         "nodeType": "UncheckedBlock",
-                        "src": "11062:63:22",
+                        "src": "11062:63:27",
                         "statements": [
                           {
                             "expression": {
-                              "id": 38393,
+                              "id": 42370,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -9135,40 +9135,40 @@ export const ERC721Upgradeable = {
                               "leftHandSide": {
                                 "baseExpression": {
                                   "expression": {
-                                    "id": 38387,
+                                    "id": 42364,
                                     "name": "$",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38327,
-                                    "src": "11090:1:22",
+                                    "referencedDeclaration": 42304,
+                                    "src": "11090:1:27",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                                     }
                                   },
-                                  "id": 38390,
+                                  "id": 42367,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "11092:9:22",
+                                  "memberLocation": "11092:9:27",
                                   "memberName": "_balances",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 37787,
-                                  "src": "11090:11:22",
+                                  "referencedDeclaration": 41764,
+                                  "src": "11090:11:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                                     "typeString": "mapping(address => uint256)"
                                   }
                                 },
-                                "id": 38391,
+                                "id": 42368,
                                 "indexExpression": {
-                                  "id": 38389,
+                                  "id": 42366,
                                   "name": "to",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38316,
-                                  "src": "11102:2:22",
+                                  "referencedDeclaration": 42293,
+                                  "src": "11102:2:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
@@ -9179,7 +9179,7 @@ export const ERC721Upgradeable = {
                                 "isPure": false,
                                 "lValueRequested": true,
                                 "nodeType": "IndexAccess",
-                                "src": "11090:15:22",
+                                "src": "11090:15:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -9189,29 +9189,29 @@ export const ERC721Upgradeable = {
                               "operator": "+=",
                               "rightHandSide": {
                                 "hexValue": "31",
-                                "id": 38392,
+                                "id": 42369,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "kind": "number",
                                 "lValueRequested": false,
                                 "nodeType": "Literal",
-                                "src": "11109:1:22",
+                                "src": "11109:1:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_rational_1_by_1",
                                   "typeString": "int_const 1"
                                 },
                                 "value": "1"
                               },
-                              "src": "11090:20:22",
+                              "src": "11090:20:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
                               }
                             },
-                            "id": 38394,
+                            "id": 42371,
                             "nodeType": "ExpressionStatement",
-                            "src": "11090:20:22"
+                            "src": "11090:20:27"
                           }
                         ]
                       }
@@ -9220,7 +9220,7 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "expression": {
-                    "id": 38404,
+                    "id": 42381,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9228,40 +9228,40 @@ export const ERC721Upgradeable = {
                     "leftHandSide": {
                       "baseExpression": {
                         "expression": {
-                          "id": 38398,
+                          "id": 42375,
                           "name": "$",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38327,
-                          "src": "11145:1:22",
+                          "referencedDeclaration": 42304,
+                          "src": "11145:1:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                            "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                             "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                           }
                         },
-                        "id": 38401,
+                        "id": 42378,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "11147:7:22",
+                        "memberLocation": "11147:7:27",
                         "memberName": "_owners",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 37783,
-                        "src": "11145:9:22",
+                        "referencedDeclaration": 41760,
+                        "src": "11145:9:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                           "typeString": "mapping(uint256 => address)"
                         }
                       },
-                      "id": 38402,
+                      "id": 42379,
                       "indexExpression": {
-                        "id": 38400,
+                        "id": 42377,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38318,
-                        "src": "11155:7:22",
+                        "referencedDeclaration": 42295,
+                        "src": "11155:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -9272,7 +9272,7 @@ export const ERC721Upgradeable = {
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "11145:18:22",
+                      "src": "11145:18:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -9281,61 +9281,61 @@ export const ERC721Upgradeable = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 38403,
+                      "id": 42380,
                       "name": "to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38316,
-                      "src": "11166:2:22",
+                      "referencedDeclaration": 42293,
+                      "src": "11166:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "11145:23:22",
+                    "src": "11145:23:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 38405,
+                  "id": 42382,
                   "nodeType": "ExpressionStatement",
-                  "src": "11145:23:22"
+                  "src": "11145:23:27"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 38407,
+                        "id": 42384,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38332,
-                        "src": "11193:4:22",
+                        "referencedDeclaration": 42309,
+                        "src": "11193:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38408,
+                        "id": 42385,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38316,
-                        "src": "11199:2:22",
+                        "referencedDeclaration": 42293,
+                        "src": "11199:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38409,
+                        "id": 42386,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38318,
-                        "src": "11203:7:22",
+                        "referencedDeclaration": 42295,
+                        "src": "11203:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -9357,18 +9357,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38406,
+                      "id": 42383,
                       "name": "Transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 39857,
-                      "src": "11184:8:22",
+                      "referencedDeclaration": 44375,
+                      "src": "11184:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 38410,
+                    "id": 42387,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9377,61 +9377,61 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "11184:27:22",
+                    "src": "11184:27:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38411,
+                  "id": 42388,
                   "nodeType": "EmitStatement",
-                  "src": "11179:32:22"
+                  "src": "11179:32:27"
                 },
                 {
                   "expression": {
-                    "id": 38412,
+                    "id": 42389,
                     "name": "from",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 38332,
-                    "src": "11229:4:22",
+                    "referencedDeclaration": 42309,
+                    "src": "11229:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 38324,
-                  "id": 38413,
+                  "functionReturnParameters": 42301,
+                  "id": 42390,
                   "nodeType": "Return",
-                  "src": "11222:11:22"
+                  "src": "11222:11:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38314,
+              "id": 42291,
               "nodeType": "StructuredDocumentation",
-              "src": "9797:582:22",
+              "src": "9797:582:27",
               "text": " @dev Transfers `tokenId` from its current owner to `to`, or alternatively mints (or burns) if the current owner\n (or `to`) is the zero address. Returns the owner of the `tokenId` before the update.\n The `auth` argument is optional. If the value passed is non 0, then this function will check that\n `auth` is either the owner of the token, or approved to operate on the token (by the owner).\n Emits a {Transfer} event.\n NOTE: If overriding this function in a way that tracks balances, see also {_increaseBalance}."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_update",
-            "nameLocation": "10393:7:22",
+            "nameLocation": "10393:7:27",
             "parameters": {
-              "id": 38321,
+              "id": 42298,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38316,
+                  "id": 42293,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "10409:2:22",
+                  "nameLocation": "10409:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38415,
-                  "src": "10401:10:22",
+                  "scope": 42392,
+                  "src": "10401:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -9439,10 +9439,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38315,
+                    "id": 42292,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "10401:7:22",
+                    "src": "10401:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -9453,13 +9453,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38318,
+                  "id": 42295,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "10421:7:22",
+                  "nameLocation": "10421:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38415,
-                  "src": "10413:15:22",
+                  "scope": 42392,
+                  "src": "10413:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -9467,10 +9467,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38317,
+                    "id": 42294,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "10413:7:22",
+                    "src": "10413:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -9480,13 +9480,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38320,
+                  "id": 42297,
                   "mutability": "mutable",
                   "name": "auth",
-                  "nameLocation": "10438:4:22",
+                  "nameLocation": "10438:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38415,
-                  "src": "10430:12:22",
+                  "scope": 42392,
+                  "src": "10430:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -9494,10 +9494,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38319,
+                    "id": 42296,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "10430:7:22",
+                    "src": "10430:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -9507,21 +9507,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "10400:43:22"
+              "src": "10400:43:27"
             },
             "returnParameters": {
-              "id": 38324,
+              "id": 42301,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38323,
+                  "id": 42300,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38415,
-                  "src": "10470:7:22",
+                  "scope": 42392,
+                  "src": "10470:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -9529,10 +9529,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38322,
+                    "id": 42299,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "10470:7:22",
+                    "src": "10470:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -9542,22 +9542,22 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "10469:9:22"
+              "src": "10469:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38465,
+            "id": 42442,
             "nodeType": "FunctionDefinition",
-            "src": "11562:327:22",
+            "src": "11562:327:27",
             "nodes": [],
             "body": {
-              "id": 38464,
+              "id": 42441,
               "nodeType": "Block",
-              "src": "11615:274:22",
+              "src": "11615:274:27",
               "nodes": [],
               "statements": [
                 {
@@ -9566,18 +9566,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38428,
+                    "id": 42405,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38423,
+                      "id": 42400,
                       "name": "to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38418,
-                      "src": "11629:2:22",
+                      "referencedDeclaration": 42395,
+                      "src": "11629:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -9589,14 +9589,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38426,
+                          "id": 42403,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "11643:1:22",
+                          "src": "11643:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -9611,26 +9611,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38425,
+                        "id": 42402,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "11635:7:22",
+                        "src": "11635:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38424,
+                          "id": 42401,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "11635:7:22",
+                          "src": "11635:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38427,
+                      "id": 42404,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -9639,26 +9639,26 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "11635:10:22",
+                      "src": "11635:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "11629:16:22",
+                    "src": "11629:16:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38437,
+                  "id": 42414,
                   "nodeType": "IfStatement",
-                  "src": "11625:87:22",
+                  "src": "11625:87:27",
                   "trueBody": {
-                    "id": 38436,
+                    "id": 42413,
                     "nodeType": "Block",
-                    "src": "11647:65:22",
+                    "src": "11647:65:27",
                     "statements": [
                       {
                         "errorCall": {
@@ -9667,14 +9667,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 38432,
+                                  "id": 42409,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "11698:1:22",
+                                  "src": "11698:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -9689,26 +9689,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 38431,
+                                "id": 42408,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "11690:7:22",
+                                "src": "11690:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 38430,
+                                  "id": 42407,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "11690:7:22",
+                                  "src": "11690:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 38433,
+                              "id": 42410,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -9717,7 +9717,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "11690:10:22",
+                              "src": "11690:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -9732,18 +9732,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 38429,
+                            "id": 42406,
                             "name": "ERC721InvalidReceiver",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39363,
-                            "src": "11668:21:22",
+                            "referencedDeclaration": 43340,
+                            "src": "11668:21:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                               "typeString": "function (address) pure returns (error)"
                             }
                           },
-                          "id": 38434,
+                          "id": 42411,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -9752,34 +9752,34 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "11668:33:22",
+                          "src": "11668:33:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38435,
+                        "id": 42412,
                         "nodeType": "RevertStatement",
-                        "src": "11661:40:22"
+                        "src": "11661:40:27"
                       }
                     ]
                   }
                 },
                 {
                   "assignments": [
-                    38439
+                    42416
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38439,
+                      "id": 42416,
                       "mutability": "mutable",
                       "name": "previousOwner",
-                      "nameLocation": "11729:13:22",
+                      "nameLocation": "11729:13:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38464,
-                      "src": "11721:21:22",
+                      "scope": 42441,
+                      "src": "11721:21:27",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -9787,10 +9787,10 @@ export const ERC721Upgradeable = {
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 38438,
+                        "id": 42415,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
-                        "src": "11721:7:22",
+                        "src": "11721:7:27",
                         "stateMutability": "nonpayable",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -9800,28 +9800,28 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38448,
+                  "id": 42425,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 38441,
+                        "id": 42418,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38418,
-                        "src": "11753:2:22",
+                        "referencedDeclaration": 42395,
+                        "src": "11753:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38442,
+                        "id": 42419,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38420,
-                        "src": "11757:7:22",
+                        "referencedDeclaration": 42397,
+                        "src": "11757:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -9831,14 +9831,14 @@ export const ERC721Upgradeable = {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38445,
+                            "id": 42422,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "11774:1:22",
+                            "src": "11774:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -9853,26 +9853,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38444,
+                          "id": 42421,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "11766:7:22",
+                          "src": "11766:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38443,
+                            "id": 42420,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "11766:7:22",
+                            "src": "11766:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38446,
+                        "id": 42423,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -9881,7 +9881,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "11766:10:22",
+                        "src": "11766:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -9904,18 +9904,18 @@ export const ERC721Upgradeable = {
                           "typeString": "address"
                         }
                       ],
-                      "id": 38440,
+                      "id": 42417,
                       "name": "_update",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38415,
-                      "src": "11745:7:22",
+                      "referencedDeclaration": 42392,
+                      "src": "11745:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$returns$_t_address_$",
                         "typeString": "function (address,uint256,address) returns (address)"
                       }
                     },
-                    "id": 38447,
+                    "id": 42424,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -9924,7 +9924,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "11745:32:22",
+                    "src": "11745:32:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -9932,7 +9932,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "11721:56:22"
+                  "src": "11721:56:27"
                 },
                 {
                   "condition": {
@@ -9940,18 +9940,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38454,
+                    "id": 42431,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38449,
+                      "id": 42426,
                       "name": "previousOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38439,
-                      "src": "11791:13:22",
+                      "referencedDeclaration": 42416,
+                      "src": "11791:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -9963,14 +9963,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38452,
+                          "id": 42429,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "11816:1:22",
+                          "src": "11816:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -9985,26 +9985,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38451,
+                        "id": 42428,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "11808:7:22",
+                        "src": "11808:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38450,
+                          "id": 42427,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "11808:7:22",
+                          "src": "11808:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38453,
+                      "id": 42430,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -10013,26 +10013,26 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "11808:10:22",
+                      "src": "11808:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "11791:27:22",
+                    "src": "11791:27:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38463,
+                  "id": 42440,
                   "nodeType": "IfStatement",
-                  "src": "11787:96:22",
+                  "src": "11787:96:27",
                   "trueBody": {
-                    "id": 38462,
+                    "id": 42439,
                     "nodeType": "Block",
-                    "src": "11820:63:22",
+                    "src": "11820:63:27",
                     "statements": [
                       {
                         "errorCall": {
@@ -10041,14 +10041,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 38458,
+                                  "id": 42435,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "11869:1:22",
+                                  "src": "11869:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -10063,26 +10063,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 38457,
+                                "id": 42434,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "11861:7:22",
+                                "src": "11861:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 38456,
+                                  "id": 42433,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "11861:7:22",
+                                  "src": "11861:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 38459,
+                              "id": 42436,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -10091,7 +10091,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "11861:10:22",
+                              "src": "11861:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -10106,18 +10106,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 38455,
+                            "id": 42432,
                             "name": "ERC721InvalidSender",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39358,
-                            "src": "11841:19:22",
+                            "referencedDeclaration": 43335,
+                            "src": "11841:19:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                               "typeString": "function (address) pure returns (error)"
                             }
                           },
-                          "id": 38460,
+                          "id": 42437,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -10126,16 +10126,16 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "11841:31:22",
+                          "src": "11841:31:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38461,
+                        "id": 42438,
                         "nodeType": "RevertStatement",
-                        "src": "11834:38:22"
+                        "src": "11834:38:27"
                       }
                     ]
                   }
@@ -10143,29 +10143,29 @@ export const ERC721Upgradeable = {
               ]
             },
             "documentation": {
-              "id": 38416,
+              "id": 42393,
               "nodeType": "StructuredDocumentation",
-              "src": "11246:311:22",
+              "src": "11246:311:27",
               "text": " @dev Mints `tokenId` and transfers it to `to`.\n WARNING: Usage of this method is discouraged, use {_safeMint} whenever possible\n Requirements:\n - `tokenId` must not exist.\n - `to` cannot be the zero address.\n Emits a {Transfer} event."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_mint",
-            "nameLocation": "11571:5:22",
+            "nameLocation": "11571:5:27",
             "parameters": {
-              "id": 38421,
+              "id": 42398,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38418,
+                  "id": 42395,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "11585:2:22",
+                  "nameLocation": "11585:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38465,
-                  "src": "11577:10:22",
+                  "scope": 42442,
+                  "src": "11577:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10173,10 +10173,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38417,
+                    "id": 42394,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "11577:7:22",
+                    "src": "11577:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -10187,13 +10187,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38420,
+                  "id": 42397,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "11597:7:22",
+                  "nameLocation": "11597:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38465,
-                  "src": "11589:15:22",
+                  "scope": 42442,
+                  "src": "11589:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10201,10 +10201,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38419,
+                    "id": 42396,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "11589:7:22",
+                    "src": "11589:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -10213,52 +10213,52 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "11576:29:22"
+              "src": "11576:29:27"
             },
             "returnParameters": {
-              "id": 38422,
+              "id": 42399,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "11615:0:22"
+              "src": "11615:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 38480,
+            "id": 42457,
             "nodeType": "FunctionDefinition",
-            "src": "12240:100:22",
+            "src": "12240:100:27",
             "nodes": [],
             "body": {
-              "id": 38479,
+              "id": 42456,
               "nodeType": "Block",
-              "src": "12297:43:22",
+              "src": "12297:43:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38474,
+                        "id": 42451,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38468,
-                        "src": "12317:2:22",
+                        "referencedDeclaration": 42445,
+                        "src": "12317:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38475,
+                        "id": 42452,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38470,
-                        "src": "12321:7:22",
+                        "referencedDeclaration": 42447,
+                        "src": "12321:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -10266,14 +10266,14 @@ export const ERC721Upgradeable = {
                       },
                       {
                         "hexValue": "",
-                        "id": 38476,
+                        "id": 42453,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "12330:2:22",
+                        "src": "12330:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                           "typeString": "literal_string \"\""
@@ -10296,21 +10296,21 @@ export const ERC721Upgradeable = {
                           "typeString": "literal_string \"\""
                         }
                       ],
-                      "id": 38473,
+                      "id": 42450,
                       "name": "_safeMint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        38480,
-                        38510
+                        42457,
+                        42487
                       ],
-                      "referencedDeclaration": 38510,
-                      "src": "12307:9:22",
+                      "referencedDeclaration": 42487,
+                      "src": "12307:9:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,uint256,bytes memory)"
                       }
                     },
-                    "id": 38477,
+                    "id": 42454,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10319,43 +10319,43 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "12307:26:22",
+                    "src": "12307:26:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38478,
+                  "id": 42455,
                   "nodeType": "ExpressionStatement",
-                  "src": "12307:26:22"
+                  "src": "12307:26:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38466,
+              "id": 42443,
               "nodeType": "StructuredDocumentation",
-              "src": "11895:340:22",
+              "src": "11895:340:27",
               "text": " @dev Mints `tokenId`, transfers it to `to` and checks for `to` acceptance.\n Requirements:\n - `tokenId` must not exist.\n - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\n Emits a {Transfer} event."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_safeMint",
-            "nameLocation": "12249:9:22",
+            "nameLocation": "12249:9:27",
             "parameters": {
-              "id": 38471,
+              "id": 42448,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38468,
+                  "id": 42445,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "12267:2:22",
+                  "nameLocation": "12267:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38480,
-                  "src": "12259:10:22",
+                  "scope": 42457,
+                  "src": "12259:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10363,10 +10363,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38467,
+                    "id": 42444,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "12259:7:22",
+                    "src": "12259:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -10377,13 +10377,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38470,
+                  "id": 42447,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "12279:7:22",
+                  "nameLocation": "12279:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38480,
-                  "src": "12271:15:22",
+                  "scope": 42457,
+                  "src": "12271:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10391,10 +10391,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38469,
+                    "id": 42446,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "12271:7:22",
+                    "src": "12271:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -10403,52 +10403,52 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "12258:29:22"
+              "src": "12258:29:27"
             },
             "returnParameters": {
-              "id": 38472,
+              "id": 42449,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "12297:0:22"
+              "src": "12297:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 38510,
+            "id": 42487,
             "nodeType": "FunctionDefinition",
-            "src": "12561:207:22",
+            "src": "12561:207:27",
             "nodes": [],
             "body": {
-              "id": 38509,
+              "id": 42486,
               "nodeType": "Block",
-              "src": "12645:123:22",
+              "src": "12645:123:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38491,
+                        "id": 42468,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38483,
-                        "src": "12661:2:22",
+                        "referencedDeclaration": 42460,
+                        "src": "12661:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38492,
+                        "id": 42469,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38485,
-                        "src": "12665:7:22",
+                        "referencedDeclaration": 42462,
+                        "src": "12665:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -10466,18 +10466,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38490,
+                      "id": 42467,
                       "name": "_mint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38465,
-                      "src": "12655:5:22",
+                      "referencedDeclaration": 42442,
+                      "src": "12655:5:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,uint256)"
                       }
                     },
-                    "id": 38493,
+                    "id": 42470,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10486,16 +10486,16 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "12655:18:22",
+                    "src": "12655:18:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38494,
+                  "id": 42471,
                   "nodeType": "ExpressionStatement",
-                  "src": "12655:18:22"
+                  "src": "12655:18:27"
                 },
                 {
                   "expression": {
@@ -10504,18 +10504,18 @@ export const ERC721Upgradeable = {
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 38498,
+                          "id": 42475,
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38846,
-                          "src": "12717:10:22",
+                          "referencedDeclaration": 42823,
+                          "src": "12717:10:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                             "typeString": "function () view returns (address)"
                           }
                         },
-                        "id": 38499,
+                        "id": 42476,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -10524,7 +10524,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "12717:12:22",
+                        "src": "12717:12:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10535,14 +10535,14 @@ export const ERC721Upgradeable = {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38502,
+                            "id": 42479,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "12739:1:22",
+                            "src": "12739:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -10557,26 +10557,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38501,
+                          "id": 42478,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "12731:7:22",
+                          "src": "12731:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38500,
+                            "id": 42477,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "12731:7:22",
+                            "src": "12731:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38503,
+                        "id": 42480,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -10585,7 +10585,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "12731:10:22",
+                        "src": "12731:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10593,36 +10593,36 @@ export const ERC721Upgradeable = {
                         }
                       },
                       {
-                        "id": 38504,
+                        "id": 42481,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38483,
-                        "src": "12743:2:22",
+                        "referencedDeclaration": 42460,
+                        "src": "12743:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38505,
+                        "id": 42482,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38485,
-                        "src": "12747:7:22",
+                        "referencedDeclaration": 42462,
+                        "src": "12747:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 38506,
+                        "id": 42483,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38487,
-                        "src": "12756:4:22",
+                        "referencedDeclaration": 42464,
+                        "src": "12756:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
@@ -10653,33 +10653,33 @@ export const ERC721Upgradeable = {
                         }
                       ],
                       "expression": {
-                        "id": 38495,
+                        "id": 42472,
                         "name": "ERC721Utils",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40081,
-                        "src": "12683:11:22",
+                        "referencedDeclaration": 44599,
+                        "src": "12683:11:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC721Utils_$40081_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC721Utils_$44599_$",
                           "typeString": "type(library ERC721Utils)"
                         }
                       },
-                      "id": 38497,
+                      "id": 42474,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "12695:21:22",
+                      "memberLocation": "12695:21:27",
                       "memberName": "checkOnERC721Received",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 40080,
-                      "src": "12683:33:22",
+                      "referencedDeclaration": 44598,
+                      "src": "12683:33:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,address,address,uint256,bytes memory)"
                       }
                     },
-                    "id": 38507,
+                    "id": 42484,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -10688,43 +10688,43 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "12683:78:22",
+                    "src": "12683:78:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38508,
+                  "id": 42485,
                   "nodeType": "ExpressionStatement",
-                  "src": "12683:78:22"
+                  "src": "12683:78:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38481,
+              "id": 42458,
               "nodeType": "StructuredDocumentation",
-              "src": "12346:210:22",
+              "src": "12346:210:27",
               "text": " @dev Same as {xref-ERC721-_safeMint-address-uint256-}[`_safeMint`], with an additional `data` parameter which is\n forwarded in {IERC721Receiver-onERC721Received} to contract recipients."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_safeMint",
-            "nameLocation": "12570:9:22",
+            "nameLocation": "12570:9:27",
             "parameters": {
-              "id": 38488,
+              "id": 42465,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38483,
+                  "id": 42460,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "12588:2:22",
+                  "nameLocation": "12588:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38510,
-                  "src": "12580:10:22",
+                  "scope": 42487,
+                  "src": "12580:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10732,10 +10732,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38482,
+                    "id": 42459,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "12580:7:22",
+                    "src": "12580:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -10746,13 +10746,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38485,
+                  "id": 42462,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "12600:7:22",
+                  "nameLocation": "12600:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38510,
-                  "src": "12592:15:22",
+                  "scope": 42487,
+                  "src": "12592:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -10760,10 +10760,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38484,
+                    "id": 42461,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "12592:7:22",
+                    "src": "12592:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -10773,13 +10773,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38487,
+                  "id": 42464,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "12622:4:22",
+                  "nameLocation": "12622:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38510,
-                  "src": "12609:17:22",
+                  "scope": 42487,
+                  "src": "12609:17:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -10787,10 +10787,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 38486,
+                    "id": 42463,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "12609:5:22",
+                    "src": "12609:5:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -10799,44 +10799,44 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "12579:48:22"
+              "src": "12579:48:27"
             },
             "returnParameters": {
-              "id": 38489,
+              "id": 42466,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "12645:0:22"
+              "src": "12645:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38543,
+            "id": 42520,
             "nodeType": "FunctionDefinition",
-            "src": "13094:227:22",
+            "src": "13094:227:27",
             "nodes": [],
             "body": {
-              "id": 38542,
+              "id": 42519,
               "nodeType": "Block",
-              "src": "13135:186:22",
+              "src": "13135:186:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38517
+                    42494
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38517,
+                      "id": 42494,
                       "mutability": "mutable",
                       "name": "previousOwner",
-                      "nameLocation": "13153:13:22",
+                      "nameLocation": "13153:13:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38542,
-                      "src": "13145:21:22",
+                      "scope": 42519,
+                      "src": "13145:21:27",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -10844,10 +10844,10 @@ export const ERC721Upgradeable = {
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 38516,
+                        "id": 42493,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
-                        "src": "13145:7:22",
+                        "src": "13145:7:27",
                         "stateMutability": "nonpayable",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10857,21 +10857,21 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38529,
+                  "id": 42506,
                   "initialValue": {
                     "arguments": [
                       {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38521,
+                            "id": 42498,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "13185:1:22",
+                            "src": "13185:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -10886,26 +10886,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38520,
+                          "id": 42497,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "13177:7:22",
+                          "src": "13177:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38519,
+                            "id": 42496,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "13177:7:22",
+                            "src": "13177:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38522,
+                        "id": 42499,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -10914,7 +10914,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "13177:10:22",
+                        "src": "13177:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -10922,12 +10922,12 @@ export const ERC721Upgradeable = {
                         }
                       },
                       {
-                        "id": 38523,
+                        "id": 42500,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38513,
-                        "src": "13189:7:22",
+                        "referencedDeclaration": 42490,
+                        "src": "13189:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -10937,14 +10937,14 @@ export const ERC721Upgradeable = {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38526,
+                            "id": 42503,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "13206:1:22",
+                            "src": "13206:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -10959,26 +10959,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38525,
+                          "id": 42502,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "13198:7:22",
+                          "src": "13198:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38524,
+                            "id": 42501,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "13198:7:22",
+                            "src": "13198:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38527,
+                        "id": 42504,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -10987,7 +10987,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "13198:10:22",
+                        "src": "13198:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -11010,18 +11010,18 @@ export const ERC721Upgradeable = {
                           "typeString": "address"
                         }
                       ],
-                      "id": 38518,
+                      "id": 42495,
                       "name": "_update",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38415,
-                      "src": "13169:7:22",
+                      "referencedDeclaration": 42392,
+                      "src": "13169:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$returns$_t_address_$",
                         "typeString": "function (address,uint256,address) returns (address)"
                       }
                     },
-                    "id": 38528,
+                    "id": 42505,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11030,7 +11030,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "13169:40:22",
+                    "src": "13169:40:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -11038,7 +11038,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "13145:64:22"
+                  "src": "13145:64:27"
                 },
                 {
                   "condition": {
@@ -11046,18 +11046,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38535,
+                    "id": 42512,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38530,
+                      "id": 42507,
                       "name": "previousOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38517,
-                      "src": "13223:13:22",
+                      "referencedDeclaration": 42494,
+                      "src": "13223:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -11069,14 +11069,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38533,
+                          "id": 42510,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "13248:1:22",
+                          "src": "13248:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -11091,26 +11091,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38532,
+                        "id": 42509,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "13240:7:22",
+                        "src": "13240:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38531,
+                          "id": 42508,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "13240:7:22",
+                          "src": "13240:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38534,
+                      "id": 42511,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -11119,37 +11119,37 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "13240:10:22",
+                      "src": "13240:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "13223:27:22",
+                    "src": "13223:27:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38541,
+                  "id": 42518,
                   "nodeType": "IfStatement",
-                  "src": "13219:96:22",
+                  "src": "13219:96:27",
                   "trueBody": {
-                    "id": 38540,
+                    "id": 42517,
                     "nodeType": "Block",
-                    "src": "13252:63:22",
+                    "src": "13252:63:27",
                     "statements": [
                       {
                         "errorCall": {
                           "arguments": [
                             {
-                              "id": 38537,
+                              "id": 42514,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38513,
-                              "src": "13296:7:22",
+                              "referencedDeclaration": 42490,
+                              "src": "13296:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -11163,18 +11163,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 38536,
+                            "id": 42513,
                             "name": "ERC721NonexistentToken",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39344,
-                            "src": "13273:22:22",
+                            "referencedDeclaration": 43321,
+                            "src": "13273:22:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$_t_error_$",
                               "typeString": "function (uint256) pure returns (error)"
                             }
                           },
-                          "id": 38538,
+                          "id": 42515,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -11183,16 +11183,16 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "13273:31:22",
+                          "src": "13273:31:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38539,
+                        "id": 42516,
                         "nodeType": "RevertStatement",
-                        "src": "13266:38:22"
+                        "src": "13266:38:27"
                       }
                     ]
                   }
@@ -11200,29 +11200,29 @@ export const ERC721Upgradeable = {
               ]
             },
             "documentation": {
-              "id": 38511,
+              "id": 42488,
               "nodeType": "StructuredDocumentation",
-              "src": "12774:315:22",
+              "src": "12774:315:27",
               "text": " @dev Destroys `tokenId`.\n The approval is cleared when the token is burned.\n This is an internal function that does not check if the sender is authorized to operate on the token.\n Requirements:\n - `tokenId` must exist.\n Emits a {Transfer} event."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_burn",
-            "nameLocation": "13103:5:22",
+            "nameLocation": "13103:5:27",
             "parameters": {
-              "id": 38514,
+              "id": 42491,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38513,
+                  "id": 42490,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "13117:7:22",
+                  "nameLocation": "13117:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38543,
-                  "src": "13109:15:22",
+                  "scope": 42520,
+                  "src": "13109:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -11230,10 +11230,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38512,
+                    "id": 42489,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "13109:7:22",
+                    "src": "13109:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -11242,28 +11242,28 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "13108:17:22"
+              "src": "13108:17:27"
             },
             "returnParameters": {
-              "id": 38515,
+              "id": 42492,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "13135:0:22"
+              "src": "13135:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 38603,
+            "id": 42580,
             "nodeType": "FunctionDefinition",
-            "src": "13645:460:22",
+            "src": "13645:460:27",
             "nodes": [],
             "body": {
-              "id": 38602,
+              "id": 42579,
               "nodeType": "Block",
-              "src": "13716:389:22",
+              "src": "13716:389:27",
               "nodes": [],
               "statements": [
                 {
@@ -11272,18 +11272,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38558,
+                    "id": 42535,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38553,
+                      "id": 42530,
                       "name": "to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38548,
-                      "src": "13730:2:22",
+                      "referencedDeclaration": 42525,
+                      "src": "13730:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -11295,14 +11295,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38556,
+                          "id": 42533,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "13744:1:22",
+                          "src": "13744:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -11317,26 +11317,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38555,
+                        "id": 42532,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "13736:7:22",
+                        "src": "13736:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38554,
+                          "id": 42531,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "13736:7:22",
+                          "src": "13736:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38557,
+                      "id": 42534,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -11345,26 +11345,26 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "13736:10:22",
+                      "src": "13736:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "13730:16:22",
+                    "src": "13730:16:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38567,
+                  "id": 42544,
                   "nodeType": "IfStatement",
-                  "src": "13726:87:22",
+                  "src": "13726:87:27",
                   "trueBody": {
-                    "id": 38566,
+                    "id": 42543,
                     "nodeType": "Block",
-                    "src": "13748:65:22",
+                    "src": "13748:65:27",
                     "statements": [
                       {
                         "errorCall": {
@@ -11373,14 +11373,14 @@ export const ERC721Upgradeable = {
                               "arguments": [
                                 {
                                   "hexValue": "30",
-                                  "id": 38562,
+                                  "id": 42539,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "13799:1:22",
+                                  "src": "13799:1:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_0_by_1",
                                     "typeString": "int_const 0"
@@ -11395,26 +11395,26 @@ export const ERC721Upgradeable = {
                                     "typeString": "int_const 0"
                                   }
                                 ],
-                                "id": 38561,
+                                "id": 42538,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "ElementaryTypeNameExpression",
-                                "src": "13791:7:22",
+                                "src": "13791:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_address_$",
                                   "typeString": "type(address)"
                                 },
                                 "typeName": {
-                                  "id": 38560,
+                                  "id": 42537,
                                   "name": "address",
                                   "nodeType": "ElementaryTypeName",
-                                  "src": "13791:7:22",
+                                  "src": "13791:7:27",
                                   "typeDescriptions": {}
                                 }
                               },
-                              "id": 38563,
+                              "id": 42540,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -11423,7 +11423,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "13791:10:22",
+                              "src": "13791:10:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -11438,18 +11438,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 38559,
+                            "id": 42536,
                             "name": "ERC721InvalidReceiver",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39363,
-                            "src": "13769:21:22",
+                            "referencedDeclaration": 43340,
+                            "src": "13769:21:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                               "typeString": "function (address) pure returns (error)"
                             }
                           },
-                          "id": 38564,
+                          "id": 42541,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -11458,34 +11458,34 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "13769:33:22",
+                          "src": "13769:33:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38565,
+                        "id": 42542,
                         "nodeType": "RevertStatement",
-                        "src": "13762:40:22"
+                        "src": "13762:40:27"
                       }
                     ]
                   }
                 },
                 {
                   "assignments": [
-                    38569
+                    42546
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38569,
+                      "id": 42546,
                       "mutability": "mutable",
                       "name": "previousOwner",
-                      "nameLocation": "13830:13:22",
+                      "nameLocation": "13830:13:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38602,
-                      "src": "13822:21:22",
+                      "scope": 42579,
+                      "src": "13822:21:27",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -11493,10 +11493,10 @@ export const ERC721Upgradeable = {
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 38568,
+                        "id": 42545,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
-                        "src": "13822:7:22",
+                        "src": "13822:7:27",
                         "stateMutability": "nonpayable",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -11506,28 +11506,28 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38578,
+                  "id": 42555,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 38571,
+                        "id": 42548,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38548,
-                        "src": "13854:2:22",
+                        "referencedDeclaration": 42525,
+                        "src": "13854:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38572,
+                        "id": 42549,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38550,
-                        "src": "13858:7:22",
+                        "referencedDeclaration": 42527,
+                        "src": "13858:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -11537,14 +11537,14 @@ export const ERC721Upgradeable = {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38575,
+                            "id": 42552,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "13875:1:22",
+                            "src": "13875:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -11559,26 +11559,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38574,
+                          "id": 42551,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "13867:7:22",
+                          "src": "13867:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38573,
+                            "id": 42550,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "13867:7:22",
+                            "src": "13867:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38576,
+                        "id": 42553,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -11587,7 +11587,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "13867:10:22",
+                        "src": "13867:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -11610,18 +11610,18 @@ export const ERC721Upgradeable = {
                           "typeString": "address"
                         }
                       ],
-                      "id": 38570,
+                      "id": 42547,
                       "name": "_update",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38415,
-                      "src": "13846:7:22",
+                      "referencedDeclaration": 42392,
+                      "src": "13846:7:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$returns$_t_address_$",
                         "typeString": "function (address,uint256,address) returns (address)"
                       }
                     },
-                    "id": 38577,
+                    "id": 42554,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -11630,7 +11630,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "13846:32:22",
+                    "src": "13846:32:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -11638,7 +11638,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "13822:56:22"
+                  "src": "13822:56:27"
                 },
                 {
                   "condition": {
@@ -11646,18 +11646,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38584,
+                    "id": 42561,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38579,
+                      "id": 42556,
                       "name": "previousOwner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38569,
-                      "src": "13892:13:22",
+                      "referencedDeclaration": 42546,
+                      "src": "13892:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -11669,14 +11669,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38582,
+                          "id": 42559,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "13917:1:22",
+                          "src": "13917:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -11691,26 +11691,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38581,
+                        "id": 42558,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "13909:7:22",
+                        "src": "13909:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38580,
+                          "id": 42557,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "13909:7:22",
+                          "src": "13909:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38583,
+                      "id": 42560,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -11719,14 +11719,14 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "13909:10:22",
+                      "src": "13909:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "13892:27:22",
+                    "src": "13892:27:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -11738,18 +11738,18 @@ export const ERC721Upgradeable = {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       },
-                      "id": 38592,
+                      "id": 42569,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 38590,
+                        "id": 42567,
                         "name": "previousOwner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38569,
-                        "src": "13994:13:22",
+                        "referencedDeclaration": 42546,
+                        "src": "13994:13:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -11758,65 +11758,65 @@ export const ERC721Upgradeable = {
                       "nodeType": "BinaryOperation",
                       "operator": "!=",
                       "rightExpression": {
-                        "id": 38591,
+                        "id": 42568,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38546,
-                        "src": "14011:4:22",
+                        "referencedDeclaration": 42523,
+                        "src": "14011:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "src": "13994:21:22",
+                      "src": "13994:21:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "id": 38600,
+                    "id": 42577,
                     "nodeType": "IfStatement",
-                    "src": "13990:109:22",
+                    "src": "13990:109:27",
                     "trueBody": {
-                      "id": 38599,
+                      "id": 42576,
                       "nodeType": "Block",
-                      "src": "14017:82:22",
+                      "src": "14017:82:27",
                       "statements": [
                         {
                           "errorCall": {
                             "arguments": [
                               {
-                                "id": 38594,
+                                "id": 42571,
                                 "name": "from",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38546,
-                                "src": "14059:4:22",
+                                "referencedDeclaration": 42523,
+                                "src": "14059:4:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
                                 }
                               },
                               {
-                                "id": 38595,
+                                "id": 42572,
                                 "name": "tokenId",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38550,
-                                "src": "14065:7:22",
+                                "referencedDeclaration": 42527,
+                                "src": "14065:7:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 }
                               },
                               {
-                                "id": 38596,
+                                "id": 42573,
                                 "name": "previousOwner",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38569,
-                                "src": "14074:13:22",
+                                "referencedDeclaration": 42546,
+                                "src": "14074:13:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -11838,18 +11838,18 @@ export const ERC721Upgradeable = {
                                   "typeString": "address"
                                 }
                               ],
-                              "id": 38593,
+                              "id": 42570,
                               "name": "ERC721IncorrectOwner",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39353,
-                              "src": "14038:20:22",
+                              "referencedDeclaration": 43330,
+                              "src": "14038:20:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_error_pure$_t_address_$_t_uint256_$_t_address_$returns$_t_error_$",
                                 "typeString": "function (address,uint256,address) pure returns (error)"
                               }
                             },
-                            "id": 38597,
+                            "id": 42574,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -11858,38 +11858,38 @@ export const ERC721Upgradeable = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "14038:50:22",
+                            "src": "14038:50:27",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_error",
                               "typeString": "error"
                             }
                           },
-                          "id": 38598,
+                          "id": 42575,
                           "nodeType": "RevertStatement",
-                          "src": "14031:57:22"
+                          "src": "14031:57:27"
                         }
                       ]
                     }
                   },
-                  "id": 38601,
+                  "id": 42578,
                   "nodeType": "IfStatement",
-                  "src": "13888:211:22",
+                  "src": "13888:211:27",
                   "trueBody": {
-                    "id": 38589,
+                    "id": 42566,
                     "nodeType": "Block",
-                    "src": "13921:63:22",
+                    "src": "13921:63:27",
                     "statements": [
                       {
                         "errorCall": {
                           "arguments": [
                             {
-                              "id": 38586,
+                              "id": 42563,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38550,
-                              "src": "13965:7:22",
+                              "referencedDeclaration": 42527,
+                              "src": "13965:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -11903,18 +11903,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 38585,
+                            "id": 42562,
                             "name": "ERC721NonexistentToken",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39344,
-                            "src": "13942:22:22",
+                            "referencedDeclaration": 43321,
+                            "src": "13942:22:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$_t_error_$",
                               "typeString": "function (uint256) pure returns (error)"
                             }
                           },
-                          "id": 38587,
+                          "id": 42564,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -11923,16 +11923,16 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "13942:31:22",
+                          "src": "13942:31:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38588,
+                        "id": 42565,
                         "nodeType": "RevertStatement",
-                        "src": "13935:38:22"
+                        "src": "13935:38:27"
                       }
                     ]
                   }
@@ -11940,29 +11940,29 @@ export const ERC721Upgradeable = {
               ]
             },
             "documentation": {
-              "id": 38544,
+              "id": 42521,
               "nodeType": "StructuredDocumentation",
-              "src": "13327:313:22",
+              "src": "13327:313:27",
               "text": " @dev Transfers `tokenId` from `from` to `to`.\n  As opposed to {transferFrom}, this imposes no restrictions on msg.sender.\n Requirements:\n - `to` cannot be the zero address.\n - `tokenId` token must be owned by `from`.\n Emits a {Transfer} event."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_transfer",
-            "nameLocation": "13654:9:22",
+            "nameLocation": "13654:9:27",
             "parameters": {
-              "id": 38551,
+              "id": 42528,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38546,
+                  "id": 42523,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "13672:4:22",
+                  "nameLocation": "13672:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38603,
-                  "src": "13664:12:22",
+                  "scope": 42580,
+                  "src": "13664:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -11970,10 +11970,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38545,
+                    "id": 42522,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "13664:7:22",
+                    "src": "13664:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -11984,13 +11984,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38548,
+                  "id": 42525,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "13686:2:22",
+                  "nameLocation": "13686:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38603,
-                  "src": "13678:10:22",
+                  "scope": 42580,
+                  "src": "13678:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -11998,10 +11998,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38547,
+                    "id": 42524,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "13678:7:22",
+                    "src": "13678:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12012,13 +12012,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38550,
+                  "id": 42527,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "13698:7:22",
+                  "nameLocation": "13698:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38603,
-                  "src": "13690:15:22",
+                  "scope": 42580,
+                  "src": "13690:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12026,10 +12026,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38549,
+                    "id": 42526,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "13690:7:22",
+                    "src": "13690:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -12038,64 +12038,64 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "13663:43:22"
+              "src": "13663:43:27"
             },
             "returnParameters": {
-              "id": 38552,
+              "id": 42529,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "13716:0:22"
+              "src": "13716:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 38621,
+            "id": 42598,
             "nodeType": "FunctionDefinition",
-            "src": "15039:128:22",
+            "src": "15039:128:27",
             "nodes": [],
             "body": {
-              "id": 38620,
+              "id": 42597,
               "nodeType": "Block",
-              "src": "15114:53:22",
+              "src": "15114:53:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38614,
+                        "id": 42591,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38606,
-                        "src": "15138:4:22",
+                        "referencedDeclaration": 42583,
+                        "src": "15138:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38615,
+                        "id": 42592,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38608,
-                        "src": "15144:2:22",
+                        "referencedDeclaration": 42585,
+                        "src": "15144:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38616,
+                        "id": 42593,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38610,
-                        "src": "15148:7:22",
+                        "referencedDeclaration": 42587,
+                        "src": "15148:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -12103,14 +12103,14 @@ export const ERC721Upgradeable = {
                       },
                       {
                         "hexValue": "",
-                        "id": 38617,
+                        "id": 42594,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "15157:2:22",
+                        "src": "15157:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
                           "typeString": "literal_string \"\""
@@ -12137,21 +12137,21 @@ export const ERC721Upgradeable = {
                           "typeString": "literal_string \"\""
                         }
                       ],
-                      "id": 38613,
+                      "id": 42590,
                       "name": "_safeTransfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        38621,
-                        38651
+                        42598,
+                        42628
                       ],
-                      "referencedDeclaration": 38651,
-                      "src": "15124:13:22",
+                      "referencedDeclaration": 42628,
+                      "src": "15124:13:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,address,uint256,bytes memory)"
                       }
                     },
-                    "id": 38618,
+                    "id": 42595,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -12160,43 +12160,43 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "15124:36:22",
+                    "src": "15124:36:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38619,
+                  "id": 42596,
                   "nodeType": "ExpressionStatement",
-                  "src": "15124:36:22"
+                  "src": "15124:36:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38604,
+              "id": 42581,
               "nodeType": "StructuredDocumentation",
-              "src": "14111:923:22",
+              "src": "14111:923:27",
               "text": " @dev Safely transfers `tokenId` token from `from` to `to`, checking that contract recipients\n are aware of the ERC-721 standard to prevent tokens from being forever locked.\n `data` is additional data, it has no specified format and it is sent in call to `to`.\n This internal function is like {safeTransferFrom} in the sense that it invokes\n {IERC721Receiver-onERC721Received} on the receiver, and can be used to e.g.\n implement alternative mechanisms to perform token transfer, such as signature-based.\n Requirements:\n - `tokenId` token must exist and be owned by `from`.\n - `to` cannot be the zero address.\n - `from` cannot be the zero address.\n - If `to` refers to a smart contract, it must implement {IERC721Receiver-onERC721Received}, which is called upon a safe transfer.\n Emits a {Transfer} event."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_safeTransfer",
-            "nameLocation": "15048:13:22",
+            "nameLocation": "15048:13:27",
             "parameters": {
-              "id": 38611,
+              "id": 42588,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38606,
+                  "id": 42583,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "15070:4:22",
+                  "nameLocation": "15070:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38621,
-                  "src": "15062:12:22",
+                  "scope": 42598,
+                  "src": "15062:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12204,10 +12204,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38605,
+                    "id": 42582,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15062:7:22",
+                    "src": "15062:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12218,13 +12218,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38608,
+                  "id": 42585,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "15084:2:22",
+                  "nameLocation": "15084:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38621,
-                  "src": "15076:10:22",
+                  "scope": 42598,
+                  "src": "15076:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12232,10 +12232,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38607,
+                    "id": 42584,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15076:7:22",
+                    "src": "15076:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12246,13 +12246,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38610,
+                  "id": 42587,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "15096:7:22",
+                  "nameLocation": "15096:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38621,
-                  "src": "15088:15:22",
+                  "scope": 42598,
+                  "src": "15088:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12260,10 +12260,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38609,
+                    "id": 42586,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15088:7:22",
+                    "src": "15088:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -12272,64 +12272,64 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "15061:43:22"
+              "src": "15061:43:27"
             },
             "returnParameters": {
-              "id": 38612,
+              "id": 42589,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "15114:0:22"
+              "src": "15114:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 38651,
+            "id": 42628,
             "nodeType": "FunctionDefinition",
-            "src": "15404:229:22",
+            "src": "15404:229:27",
             "nodes": [],
             "body": {
-              "id": 38650,
+              "id": 42627,
               "nodeType": "Block",
-              "src": "15506:127:22",
+              "src": "15506:127:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38634,
+                        "id": 42611,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38624,
-                        "src": "15526:4:22",
+                        "referencedDeclaration": 42601,
+                        "src": "15526:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38635,
+                        "id": 42612,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38626,
-                        "src": "15532:2:22",
+                        "referencedDeclaration": 42603,
+                        "src": "15532:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38636,
+                        "id": 42613,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38628,
-                        "src": "15536:7:22",
+                        "referencedDeclaration": 42605,
+                        "src": "15536:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -12351,18 +12351,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38633,
+                      "id": 42610,
                       "name": "_transfer",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38603,
-                      "src": "15516:9:22",
+                      "referencedDeclaration": 42580,
+                      "src": "15516:9:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                         "typeString": "function (address,address,uint256)"
                       }
                     },
-                    "id": 38637,
+                    "id": 42614,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -12371,16 +12371,16 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "15516:28:22",
+                    "src": "15516:28:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38638,
+                  "id": 42615,
                   "nodeType": "ExpressionStatement",
-                  "src": "15516:28:22"
+                  "src": "15516:28:27"
                 },
                 {
                   "expression": {
@@ -12389,18 +12389,18 @@ export const ERC721Upgradeable = {
                         "arguments": [],
                         "expression": {
                           "argumentTypes": [],
-                          "id": 38642,
+                          "id": 42619,
                           "name": "_msgSender",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38846,
-                          "src": "15588:10:22",
+                          "referencedDeclaration": 42823,
+                          "src": "15588:10:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
                             "typeString": "function () view returns (address)"
                           }
                         },
-                        "id": 38643,
+                        "id": 42620,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -12409,7 +12409,7 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "15588:12:22",
+                        "src": "15588:12:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -12417,48 +12417,48 @@ export const ERC721Upgradeable = {
                         }
                       },
                       {
-                        "id": 38644,
+                        "id": 42621,
                         "name": "from",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38624,
-                        "src": "15602:4:22",
+                        "referencedDeclaration": 42601,
+                        "src": "15602:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38645,
+                        "id": 42622,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38626,
-                        "src": "15608:2:22",
+                        "referencedDeclaration": 42603,
+                        "src": "15608:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38646,
+                        "id": 42623,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38628,
-                        "src": "15612:7:22",
+                        "referencedDeclaration": 42605,
+                        "src": "15612:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 38647,
+                        "id": 42624,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38630,
-                        "src": "15621:4:22",
+                        "referencedDeclaration": 42607,
+                        "src": "15621:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
@@ -12489,33 +12489,33 @@ export const ERC721Upgradeable = {
                         }
                       ],
                       "expression": {
-                        "id": 38639,
+                        "id": 42616,
                         "name": "ERC721Utils",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 40081,
-                        "src": "15554:11:22",
+                        "referencedDeclaration": 44599,
+                        "src": "15554:11:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC721Utils_$40081_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC721Utils_$44599_$",
                           "typeString": "type(library ERC721Utils)"
                         }
                       },
-                      "id": 38641,
+                      "id": 42618,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "15566:21:22",
+                      "memberLocation": "15566:21:27",
                       "memberName": "checkOnERC721Received",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 40080,
-                      "src": "15554:33:22",
+                      "referencedDeclaration": 44598,
+                      "src": "15554:33:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$returns$__$",
                         "typeString": "function (address,address,address,uint256,bytes memory)"
                       }
                     },
-                    "id": 38648,
+                    "id": 42625,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -12524,43 +12524,43 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "15554:72:22",
+                    "src": "15554:72:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38649,
+                  "id": 42626,
                   "nodeType": "ExpressionStatement",
-                  "src": "15554:72:22"
+                  "src": "15554:72:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38622,
+              "id": 42599,
               "nodeType": "StructuredDocumentation",
-              "src": "15173:226:22",
+              "src": "15173:226:27",
               "text": " @dev Same as {xref-ERC721-_safeTransfer-address-address-uint256-}[`_safeTransfer`], with an additional `data` parameter which is\n forwarded in {IERC721Receiver-onERC721Received} to contract recipients."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_safeTransfer",
-            "nameLocation": "15413:13:22",
+            "nameLocation": "15413:13:27",
             "parameters": {
-              "id": 38631,
+              "id": 42608,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38624,
+                  "id": 42601,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "15435:4:22",
+                  "nameLocation": "15435:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38651,
-                  "src": "15427:12:22",
+                  "scope": 42628,
+                  "src": "15427:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12568,10 +12568,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38623,
+                    "id": 42600,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15427:7:22",
+                    "src": "15427:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12582,13 +12582,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38626,
+                  "id": 42603,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "15449:2:22",
+                  "nameLocation": "15449:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38651,
-                  "src": "15441:10:22",
+                  "scope": 42628,
+                  "src": "15441:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12596,10 +12596,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38625,
+                    "id": 42602,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15441:7:22",
+                    "src": "15441:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12610,13 +12610,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38628,
+                  "id": 42605,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "15461:7:22",
+                  "nameLocation": "15461:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38651,
-                  "src": "15453:15:22",
+                  "scope": 42628,
+                  "src": "15453:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12624,10 +12624,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38627,
+                    "id": 42604,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15453:7:22",
+                    "src": "15453:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -12637,13 +12637,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38630,
+                  "id": 42607,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "15483:4:22",
+                  "nameLocation": "15483:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38651,
-                  "src": "15470:17:22",
+                  "scope": 42628,
+                  "src": "15470:17:27",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -12651,10 +12651,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 38629,
+                    "id": 42606,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "15470:5:22",
+                    "src": "15470:5:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -12663,64 +12663,64 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "15426:62:22"
+              "src": "15426:62:27"
             },
             "returnParameters": {
-              "id": 38632,
+              "id": 42609,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "15506:0:22"
+              "src": "15506:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38669,
+            "id": 42646,
             "nodeType": "FunctionDefinition",
-            "src": "16076:120:22",
+            "src": "16076:120:27",
             "nodes": [],
             "body": {
-              "id": 38668,
+              "id": 42645,
               "nodeType": "Block",
-              "src": "16146:50:22",
+              "src": "16146:50:27",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 38662,
+                        "id": 42639,
                         "name": "to",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38654,
-                        "src": "16165:2:22",
+                        "referencedDeclaration": 42631,
+                        "src": "16165:2:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38663,
+                        "id": 42640,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38656,
-                        "src": "16169:7:22",
+                        "referencedDeclaration": 42633,
+                        "src": "16169:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 38664,
+                        "id": 42641,
                         "name": "auth",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38658,
-                        "src": "16178:4:22",
+                        "referencedDeclaration": 42635,
+                        "src": "16178:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -12728,14 +12728,14 @@ export const ERC721Upgradeable = {
                       },
                       {
                         "hexValue": "74727565",
-                        "id": 38665,
+                        "id": 42642,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "bool",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "16184:4:22",
+                        "src": "16184:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -12762,21 +12762,21 @@ export const ERC721Upgradeable = {
                           "typeString": "bool"
                         }
                       ],
-                      "id": 38661,
+                      "id": 42638,
                       "name": "_approve",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        38669,
-                        38743
+                        42646,
+                        42720
                       ],
-                      "referencedDeclaration": 38743,
-                      "src": "16156:8:22",
+                      "referencedDeclaration": 42720,
+                      "src": "16156:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_uint256_$_t_address_$_t_bool_$returns$__$",
                         "typeString": "function (address,uint256,address,bool)"
                       }
                     },
-                    "id": 38666,
+                    "id": 42643,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -12785,43 +12785,43 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "16156:33:22",
+                    "src": "16156:33:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38667,
+                  "id": 42644,
                   "nodeType": "ExpressionStatement",
-                  "src": "16156:33:22"
+                  "src": "16156:33:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38652,
+              "id": 42629,
               "nodeType": "StructuredDocumentation",
-              "src": "15639:432:22",
+              "src": "15639:432:27",
               "text": " @dev Approve `to` to operate on `tokenId`\n The `auth` argument is optional. If the value passed is non 0, then this function will check that `auth` is\n either the owner of the token, or approved to operate on all tokens held by this owner.\n Emits an {Approval} event.\n Overrides to this logic should be done to the variant with an additional `bool emitEvent` argument."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_approve",
-            "nameLocation": "16085:8:22",
+            "nameLocation": "16085:8:27",
             "parameters": {
-              "id": 38659,
+              "id": 42636,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38654,
+                  "id": 42631,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "16102:2:22",
+                  "nameLocation": "16102:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38669,
-                  "src": "16094:10:22",
+                  "scope": 42646,
+                  "src": "16094:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12829,10 +12829,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38653,
+                    "id": 42630,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16094:7:22",
+                    "src": "16094:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12843,13 +12843,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38656,
+                  "id": 42633,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "16114:7:22",
+                  "nameLocation": "16114:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38669,
-                  "src": "16106:15:22",
+                  "scope": 42646,
+                  "src": "16106:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12857,10 +12857,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38655,
+                    "id": 42632,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16106:7:22",
+                    "src": "16106:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -12870,13 +12870,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38658,
+                  "id": 42635,
                   "mutability": "mutable",
                   "name": "auth",
-                  "nameLocation": "16131:4:22",
+                  "nameLocation": "16131:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38669,
-                  "src": "16123:12:22",
+                  "scope": 42646,
+                  "src": "16123:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -12884,10 +12884,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38657,
+                    "id": 42634,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16123:7:22",
+                    "src": "16123:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -12897,90 +12897,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "16093:43:22"
+              "src": "16093:43:27"
             },
             "returnParameters": {
-              "id": 38660,
+              "id": 42637,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "16146:0:22"
+              "src": "16146:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 38743,
+            "id": 42720,
             "nodeType": "FunctionDefinition",
-            "src": "16378:719:22",
+            "src": "16378:719:27",
             "nodes": [],
             "body": {
-              "id": 38742,
+              "id": 42719,
               "nodeType": "Block",
-              "src": "16472:625:22",
+              "src": "16472:625:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38683
+                    42660
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38683,
+                      "id": 42660,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "16504:1:22",
+                      "nameLocation": "16504:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38742,
-                      "src": "16482:23:22",
+                      "scope": 42719,
+                      "src": "16482:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38682,
+                        "id": 42659,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38681,
+                          "id": 42658,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "16482:13:22"
+                            "16482:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "16482:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "16482:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "16482:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "16482:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38686,
+                  "id": 42663,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38684,
+                      "id": 42661,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "16508:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "16508:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38685,
+                    "id": 42662,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -12989,15 +12989,15 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "16508:19:22",
+                    "src": "16508:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "16482:45:22"
+                  "src": "16482:45:27"
                 },
                 {
                   "condition": {
@@ -13005,18 +13005,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     },
-                    "id": 38694,
+                    "id": 42671,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38687,
+                      "id": 42664,
                       "name": "emitEvent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38678,
-                      "src": "16593:9:22",
+                      "referencedDeclaration": 42655,
+                      "src": "16593:9:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -13029,18 +13029,18 @@ export const ERC721Upgradeable = {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       },
-                      "id": 38693,
+                      "id": 42670,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
-                        "id": 38688,
+                        "id": 42665,
                         "name": "auth",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38676,
-                        "src": "16606:4:22",
+                        "referencedDeclaration": 42653,
+                        "src": "16606:4:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -13052,14 +13052,14 @@ export const ERC721Upgradeable = {
                         "arguments": [
                           {
                             "hexValue": "30",
-                            "id": 38691,
+                            "id": 42668,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "16622:1:22",
+                            "src": "16622:1:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
@@ -13074,26 +13074,26 @@ export const ERC721Upgradeable = {
                               "typeString": "int_const 0"
                             }
                           ],
-                          "id": 38690,
+                          "id": 42667,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "16614:7:22",
+                          "src": "16614:7:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_address_$",
                             "typeString": "type(address)"
                           },
                           "typeName": {
-                            "id": 38689,
+                            "id": 42666,
                             "name": "address",
                             "nodeType": "ElementaryTypeName",
-                            "src": "16614:7:22",
+                            "src": "16614:7:27",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 38692,
+                        "id": 42669,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -13102,47 +13102,47 @@ export const ERC721Upgradeable = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "16614:10:22",
+                        "src": "16614:10:27",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "src": "16606:18:22",
+                      "src": "16606:18:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "16593:31:22",
+                    "src": "16593:31:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38733,
+                  "id": 42710,
                   "nodeType": "IfStatement",
-                  "src": "16589:460:22",
+                  "src": "16589:460:27",
                   "trueBody": {
-                    "id": 38732,
+                    "id": 42709,
                     "nodeType": "Block",
-                    "src": "16626:423:22",
+                    "src": "16626:423:27",
                     "statements": [
                       {
                         "assignments": [
-                          38696
+                          42673
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 38696,
+                            "id": 42673,
                             "mutability": "mutable",
                             "name": "owner",
-                            "nameLocation": "16648:5:22",
+                            "nameLocation": "16648:5:27",
                             "nodeType": "VariableDeclaration",
-                            "scope": 38732,
-                            "src": "16640:13:22",
+                            "scope": 42709,
+                            "src": "16640:13:27",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -13150,10 +13150,10 @@ export const ERC721Upgradeable = {
                               "typeString": "address"
                             },
                             "typeName": {
-                              "id": 38695,
+                              "id": 42672,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
-                              "src": "16640:7:22",
+                              "src": "16640:7:27",
                               "stateMutability": "nonpayable",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -13163,16 +13163,16 @@ export const ERC721Upgradeable = {
                             "visibility": "internal"
                           }
                         ],
-                        "id": 38700,
+                        "id": 42677,
                         "initialValue": {
                           "arguments": [
                             {
-                              "id": 38698,
+                              "id": 42675,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38674,
-                              "src": "16670:7:22",
+                              "referencedDeclaration": 42651,
+                              "src": "16670:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -13186,18 +13186,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 38697,
+                            "id": 42674,
                             "name": "_requireOwned",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 38817,
-                            "src": "16656:13:22",
+                            "referencedDeclaration": 42794,
+                            "src": "16656:13:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                               "typeString": "function (uint256) view returns (address)"
                             }
                           },
-                          "id": 38699,
+                          "id": 42676,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -13206,7 +13206,7 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "16656:22:22",
+                          "src": "16656:22:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -13214,7 +13214,7 @@ export const ERC721Upgradeable = {
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "16640:38:22"
+                        "src": "16640:38:27"
                       },
                       {
                         "condition": {
@@ -13222,7 +13222,7 @@ export const ERC721Upgradeable = {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           },
-                          "id": 38716,
+                          "id": 42693,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -13232,7 +13232,7 @@ export const ERC721Upgradeable = {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
                             },
-                            "id": 38710,
+                            "id": 42687,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -13242,18 +13242,18 @@ export const ERC721Upgradeable = {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               },
-                              "id": 38706,
+                              "id": 42683,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftExpression": {
-                                "id": 38701,
+                                "id": 42678,
                                 "name": "auth",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38676,
-                                "src": "16806:4:22",
+                                "referencedDeclaration": 42653,
+                                "src": "16806:4:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -13265,14 +13265,14 @@ export const ERC721Upgradeable = {
                                 "arguments": [
                                   {
                                     "hexValue": "30",
-                                    "id": 38704,
+                                    "id": 42681,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
                                     "kind": "number",
                                     "lValueRequested": false,
                                     "nodeType": "Literal",
-                                    "src": "16822:1:22",
+                                    "src": "16822:1:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_rational_0_by_1",
                                       "typeString": "int_const 0"
@@ -13287,26 +13287,26 @@ export const ERC721Upgradeable = {
                                       "typeString": "int_const 0"
                                     }
                                   ],
-                                  "id": 38703,
+                                  "id": 42680,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "lValueRequested": false,
                                   "nodeType": "ElementaryTypeNameExpression",
-                                  "src": "16814:7:22",
+                                  "src": "16814:7:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_type$_t_address_$",
                                     "typeString": "type(address)"
                                   },
                                   "typeName": {
-                                    "id": 38702,
+                                    "id": 42679,
                                     "name": "address",
                                     "nodeType": "ElementaryTypeName",
-                                    "src": "16814:7:22",
+                                    "src": "16814:7:27",
                                     "typeDescriptions": {}
                                   }
                                 },
-                                "id": 38705,
+                                "id": 42682,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -13315,14 +13315,14 @@ export const ERC721Upgradeable = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "16814:10:22",
+                                "src": "16814:10:27",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
                                 }
                               },
-                              "src": "16806:18:22",
+                              "src": "16806:18:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
@@ -13335,18 +13335,18 @@ export const ERC721Upgradeable = {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               },
-                              "id": 38709,
+                              "id": 42686,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "leftExpression": {
-                                "id": 38707,
+                                "id": 42684,
                                 "name": "owner",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38696,
-                                "src": "16828:5:22",
+                                "referencedDeclaration": 42673,
+                                "src": "16828:5:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
@@ -13355,24 +13355,24 @@ export const ERC721Upgradeable = {
                               "nodeType": "BinaryOperation",
                               "operator": "!=",
                               "rightExpression": {
-                                "id": 38708,
+                                "id": 42685,
                                 "name": "auth",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38676,
-                                "src": "16837:4:22",
+                                "referencedDeclaration": 42653,
+                                "src": "16837:4:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
                                   "typeString": "address"
                                 }
                               },
-                              "src": "16828:13:22",
+                              "src": "16828:13:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
                                 "typeString": "bool"
                               }
                             },
-                            "src": "16806:35:22",
+                            "src": "16806:35:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
@@ -13381,7 +13381,7 @@ export const ERC721Upgradeable = {
                           "nodeType": "BinaryOperation",
                           "operator": "&&",
                           "rightExpression": {
-                            "id": 38715,
+                            "id": 42692,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -13389,28 +13389,28 @@ export const ERC721Upgradeable = {
                             "nodeType": "UnaryOperation",
                             "operator": "!",
                             "prefix": true,
-                            "src": "16845:30:22",
+                            "src": "16845:30:27",
                             "subExpression": {
                               "arguments": [
                                 {
-                                  "id": 38712,
+                                  "id": 42689,
                                   "name": "owner",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38696,
-                                  "src": "16863:5:22",
+                                  "referencedDeclaration": 42673,
+                                  "src": "16863:5:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
                                   }
                                 },
                                 {
-                                  "id": 38713,
+                                  "id": 42690,
                                   "name": "auth",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 38676,
-                                  "src": "16870:4:22",
+                                  "referencedDeclaration": 42653,
+                                  "src": "16870:4:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_address",
                                     "typeString": "address"
@@ -13428,18 +13428,18 @@ export const ERC721Upgradeable = {
                                     "typeString": "address"
                                   }
                                 ],
-                                "id": 38711,
+                                "id": 42688,
                                 "name": "isApprovedForAll",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 38082,
-                                "src": "16846:16:22",
+                                "referencedDeclaration": 42059,
+                                "src": "16846:16:27",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_view$_t_address_$_t_address_$returns$_t_bool_$",
                                   "typeString": "function (address,address) view returns (bool)"
                                 }
                               },
-                              "id": 38714,
+                              "id": 42691,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -13448,7 +13448,7 @@ export const ERC721Upgradeable = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "16846:29:22",
+                              "src": "16846:29:27",
                               "tryCall": false,
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bool",
@@ -13460,30 +13460,30 @@ export const ERC721Upgradeable = {
                               "typeString": "bool"
                             }
                           },
-                          "src": "16806:69:22",
+                          "src": "16806:69:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "id": 38722,
+                        "id": 42699,
                         "nodeType": "IfStatement",
-                        "src": "16802:142:22",
+                        "src": "16802:142:27",
                         "trueBody": {
-                          "id": 38721,
+                          "id": 42698,
                           "nodeType": "Block",
-                          "src": "16877:67:22",
+                          "src": "16877:67:27",
                           "statements": [
                             {
                               "errorCall": {
                                 "arguments": [
                                   {
-                                    "id": 38718,
+                                    "id": 42695,
                                     "name": "auth",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38676,
-                                    "src": "16924:4:22",
+                                    "referencedDeclaration": 42653,
+                                    "src": "16924:4:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
@@ -13497,18 +13497,18 @@ export const ERC721Upgradeable = {
                                       "typeString": "address"
                                     }
                                   ],
-                                  "id": 38717,
+                                  "id": 42694,
                                   "name": "ERC721InvalidApprover",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 39375,
-                                  "src": "16902:21:22",
+                                  "referencedDeclaration": 43352,
+                                  "src": "16902:21:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                                     "typeString": "function (address) pure returns (error)"
                                   }
                                 },
-                                "id": 38719,
+                                "id": 42696,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -13517,75 +13517,75 @@ export const ERC721Upgradeable = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "16902:27:22",
+                                "src": "16902:27:27",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_error",
                                   "typeString": "error"
                                 }
                               },
-                              "id": 38720,
+                              "id": 42697,
                               "nodeType": "RevertStatement",
-                              "src": "16895:34:22"
+                              "src": "16895:34:27"
                             }
                           ]
                         }
                       },
                       {
                         "condition": {
-                          "id": 38723,
+                          "id": 42700,
                           "name": "emitEvent",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38678,
-                          "src": "16962:9:22",
+                          "referencedDeclaration": 42655,
+                          "src": "16962:9:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "id": 38731,
+                        "id": 42708,
                         "nodeType": "IfStatement",
-                        "src": "16958:81:22",
+                        "src": "16958:81:27",
                         "trueBody": {
-                          "id": 38730,
+                          "id": 42707,
                           "nodeType": "Block",
-                          "src": "16973:66:22",
+                          "src": "16973:66:27",
                           "statements": [
                             {
                               "eventCall": {
                                 "arguments": [
                                   {
-                                    "id": 38725,
+                                    "id": 42702,
                                     "name": "owner",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38696,
-                                    "src": "17005:5:22",
+                                    "referencedDeclaration": 42673,
+                                    "src": "17005:5:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
                                     }
                                   },
                                   {
-                                    "id": 38726,
+                                    "id": 42703,
                                     "name": "to",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38672,
-                                    "src": "17012:2:22",
+                                    "referencedDeclaration": 42649,
+                                    "src": "17012:2:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
                                     }
                                   },
                                   {
-                                    "id": 38727,
+                                    "id": 42704,
                                     "name": "tokenId",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 38674,
-                                    "src": "17016:7:22",
+                                    "referencedDeclaration": 42651,
+                                    "src": "17016:7:27",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
@@ -13607,18 +13607,18 @@ export const ERC721Upgradeable = {
                                       "typeString": "uint256"
                                     }
                                   ],
-                                  "id": 38724,
+                                  "id": 42701,
                                   "name": "Approval",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 39866,
-                                  "src": "16996:8:22",
+                                  "referencedDeclaration": 44384,
+                                  "src": "16996:8:27",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                                     "typeString": "function (address,address,uint256)"
                                   }
                                 },
-                                "id": 38728,
+                                "id": 42705,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -13627,16 +13627,16 @@ export const ERC721Upgradeable = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "16996:28:22",
+                                "src": "16996:28:27",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_tuple$__$",
                                   "typeString": "tuple()"
                                 }
                               },
-                              "id": 38729,
+                              "id": 42706,
                               "nodeType": "EmitStatement",
-                              "src": "16991:33:22"
+                              "src": "16991:33:27"
                             }
                           ]
                         }
@@ -13646,7 +13646,7 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "expression": {
-                    "id": 38740,
+                    "id": 42717,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -13654,40 +13654,40 @@ export const ERC721Upgradeable = {
                     "leftHandSide": {
                       "baseExpression": {
                         "expression": {
-                          "id": 38734,
+                          "id": 42711,
                           "name": "$",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38683,
-                          "src": "17059:1:22",
+                          "referencedDeclaration": 42660,
+                          "src": "17059:1:27",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                            "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                             "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                           }
                         },
-                        "id": 38737,
+                        "id": 42714,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "17061:15:22",
+                        "memberLocation": "17061:15:27",
                         "memberName": "_tokenApprovals",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 37791,
-                        "src": "17059:17:22",
+                        "referencedDeclaration": 41768,
+                        "src": "17059:17:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                           "typeString": "mapping(uint256 => address)"
                         }
                       },
-                      "id": 38738,
+                      "id": 42715,
                       "indexExpression": {
-                        "id": 38736,
+                        "id": 42713,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38674,
-                        "src": "17077:7:22",
+                        "referencedDeclaration": 42651,
+                        "src": "17077:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -13698,7 +13698,7 @@ export const ERC721Upgradeable = {
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "17059:26:22",
+                      "src": "17059:26:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -13707,53 +13707,53 @@ export const ERC721Upgradeable = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 38739,
+                      "id": 42716,
                       "name": "to",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38672,
-                      "src": "17088:2:22",
+                      "referencedDeclaration": 42649,
+                      "src": "17088:2:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "17059:31:22",
+                    "src": "17059:31:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 38741,
+                  "id": 42718,
                   "nodeType": "ExpressionStatement",
-                  "src": "17059:31:22"
+                  "src": "17059:31:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38670,
+              "id": 42647,
               "nodeType": "StructuredDocumentation",
-              "src": "16202:171:22",
+              "src": "16202:171:27",
               "text": " @dev Variant of `_approve` with an optional flag to enable or disable the {Approval} event. The event is not\n emitted in the context of transfers."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_approve",
-            "nameLocation": "16387:8:22",
+            "nameLocation": "16387:8:27",
             "parameters": {
-              "id": 38679,
+              "id": 42656,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38672,
+                  "id": 42649,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "16404:2:22",
+                  "nameLocation": "16404:2:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38743,
-                  "src": "16396:10:22",
+                  "scope": 42720,
+                  "src": "16396:10:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -13761,10 +13761,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38671,
+                    "id": 42648,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16396:7:22",
+                    "src": "16396:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -13775,13 +13775,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38674,
+                  "id": 42651,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "16416:7:22",
+                  "nameLocation": "16416:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38743,
-                  "src": "16408:15:22",
+                  "scope": 42720,
+                  "src": "16408:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -13789,10 +13789,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38673,
+                    "id": 42650,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16408:7:22",
+                    "src": "16408:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -13802,13 +13802,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38676,
+                  "id": 42653,
                   "mutability": "mutable",
                   "name": "auth",
-                  "nameLocation": "16433:4:22",
+                  "nameLocation": "16433:4:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38743,
-                  "src": "16425:12:22",
+                  "scope": 42720,
+                  "src": "16425:12:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -13816,10 +13816,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38675,
+                    "id": 42652,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16425:7:22",
+                    "src": "16425:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -13830,13 +13830,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38678,
+                  "id": 42655,
                   "mutability": "mutable",
                   "name": "emitEvent",
-                  "nameLocation": "16444:9:22",
+                  "nameLocation": "16444:9:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38743,
-                  "src": "16439:14:22",
+                  "scope": 42720,
+                  "src": "16439:14:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -13844,10 +13844,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 38677,
+                    "id": 42654,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "16439:4:22",
+                    "src": "16439:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -13856,90 +13856,90 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "16395:59:22"
+              "src": "16395:59:27"
             },
             "returnParameters": {
-              "id": 38680,
+              "id": 42657,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "16472:0:22"
+              "src": "16472:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38788,
+            "id": 42765,
             "nodeType": "FunctionDefinition",
-            "src": "17306:369:22",
+            "src": "17306:369:27",
             "nodes": [],
             "body": {
-              "id": 38787,
+              "id": 42764,
               "nodeType": "Block",
-              "src": "17399:276:22",
+              "src": "17399:276:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38755
+                    42732
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38755,
+                      "id": 42732,
                       "mutability": "mutable",
                       "name": "$",
-                      "nameLocation": "17431:1:22",
+                      "nameLocation": "17431:1:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38787,
-                      "src": "17409:23:22",
+                      "scope": 42764,
+                      "src": "17409:23:27",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                        "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                         "typeString": "struct ERC721Upgradeable.ERC721Storage"
                       },
                       "typeName": {
-                        "id": 38754,
+                        "id": 42731,
                         "nodeType": "UserDefinedTypeName",
                         "pathNode": {
-                          "id": 38753,
+                          "id": 42730,
                           "name": "ERC721Storage",
                           "nameLocations": [
-                            "17409:13:22"
+                            "17409:13:27"
                           ],
                           "nodeType": "IdentifierPath",
-                          "referencedDeclaration": 37798,
-                          "src": "17409:13:22"
+                          "referencedDeclaration": 41775,
+                          "src": "17409:13:27"
                         },
-                        "referencedDeclaration": 37798,
-                        "src": "17409:13:22",
+                        "referencedDeclaration": 41775,
+                        "src": "17409:13:27",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                          "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                           "typeString": "struct ERC721Upgradeable.ERC721Storage"
                         }
                       },
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38758,
+                  "id": 42735,
                   "initialValue": {
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 38756,
+                      "id": 42733,
                       "name": "_getERC721Storage",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 37809,
-                      "src": "17435:17:22",
+                      "referencedDeclaration": 41786,
+                      "src": "17435:17:27",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$37798_storage_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$__$returns$_t_struct$_ERC721Storage_$41775_storage_ptr_$",
                         "typeString": "function () pure returns (struct ERC721Upgradeable.ERC721Storage storage pointer)"
                       }
                     },
-                    "id": 38757,
+                    "id": 42734,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -13948,15 +13948,15 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17435:19:22",
+                    "src": "17435:19:27",
                     "tryCall": false,
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                      "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                       "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "17409:45:22"
+                  "src": "17409:45:27"
                 },
                 {
                   "condition": {
@@ -13964,18 +13964,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38764,
+                    "id": 42741,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38759,
+                      "id": 42736,
                       "name": "operator",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38748,
-                      "src": "17468:8:22",
+                      "referencedDeclaration": 42725,
+                      "src": "17468:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -13987,14 +13987,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38762,
+                          "id": 42739,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "17488:1:22",
+                          "src": "17488:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -14009,26 +14009,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38761,
+                        "id": 42738,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "17480:7:22",
+                        "src": "17480:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38760,
+                          "id": 42737,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "17480:7:22",
+                          "src": "17480:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38763,
+                      "id": 42740,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -14037,37 +14037,37 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "17480:10:22",
+                      "src": "17480:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "17468:22:22",
+                    "src": "17468:22:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38770,
+                  "id": 42747,
                   "nodeType": "IfStatement",
-                  "src": "17464:91:22",
+                  "src": "17464:91:27",
                   "trueBody": {
-                    "id": 38769,
+                    "id": 42746,
                     "nodeType": "Block",
-                    "src": "17492:63:22",
+                    "src": "17492:63:27",
                     "statements": [
                       {
                         "errorCall": {
                           "arguments": [
                             {
-                              "id": 38766,
+                              "id": 42743,
                               "name": "operator",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38748,
-                              "src": "17535:8:22",
+                              "referencedDeclaration": 42725,
+                              "src": "17535:8:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -14081,18 +14081,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "address"
                               }
                             ],
-                            "id": 38765,
+                            "id": 42742,
                             "name": "ERC721InvalidOperator",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39380,
-                            "src": "17513:21:22",
+                            "referencedDeclaration": 43357,
+                            "src": "17513:21:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_address_$returns$_t_error_$",
                               "typeString": "function (address) pure returns (error)"
                             }
                           },
-                          "id": 38767,
+                          "id": 42744,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -14101,23 +14101,23 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "17513:31:22",
+                          "src": "17513:31:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38768,
+                        "id": 42745,
                         "nodeType": "RevertStatement",
-                        "src": "17506:38:22"
+                        "src": "17506:38:27"
                       }
                     ]
                   }
                 },
                 {
                   "expression": {
-                    "id": 38779,
+                    "id": 42756,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14126,40 +14126,40 @@ export const ERC721Upgradeable = {
                       "baseExpression": {
                         "baseExpression": {
                           "expression": {
-                            "id": 38771,
+                            "id": 42748,
                             "name": "$",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 38755,
-                            "src": "17564:1:22",
+                            "referencedDeclaration": 42732,
+                            "src": "17564:1:27",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_ERC721Storage_$37798_storage_ptr",
+                              "typeIdentifier": "t_struct$_ERC721Storage_$41775_storage_ptr",
                               "typeString": "struct ERC721Upgradeable.ERC721Storage storage pointer"
                             }
                           },
-                          "id": 38775,
+                          "id": 42752,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "17566:18:22",
+                          "memberLocation": "17566:18:27",
                           "memberName": "_operatorApprovals",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 37797,
-                          "src": "17564:20:22",
+                          "referencedDeclaration": 41774,
+                          "src": "17564:20:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
                             "typeString": "mapping(address => mapping(address => bool))"
                           }
                         },
-                        "id": 38776,
+                        "id": 42753,
                         "indexExpression": {
-                          "id": 38773,
+                          "id": 42750,
                           "name": "owner",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 38746,
-                          "src": "17585:5:22",
+                          "referencedDeclaration": 42723,
+                          "src": "17585:5:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -14170,20 +14170,20 @@ export const ERC721Upgradeable = {
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "IndexAccess",
-                        "src": "17564:27:22",
+                        "src": "17564:27:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 38777,
+                      "id": 42754,
                       "indexExpression": {
-                        "id": 38774,
+                        "id": 42751,
                         "name": "operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38748,
-                        "src": "17592:8:22",
+                        "referencedDeclaration": 42725,
+                        "src": "17592:8:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -14194,7 +14194,7 @@ export const ERC721Upgradeable = {
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "17564:37:22",
+                      "src": "17564:37:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -14203,61 +14203,61 @@ export const ERC721Upgradeable = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 38778,
+                      "id": 42755,
                       "name": "approved",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38750,
-                      "src": "17604:8:22",
+                      "referencedDeclaration": 42727,
+                      "src": "17604:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
                       }
                     },
-                    "src": "17564:48:22",
+                    "src": "17564:48:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38780,
+                  "id": 42757,
                   "nodeType": "ExpressionStatement",
-                  "src": "17564:48:22"
+                  "src": "17564:48:27"
                 },
                 {
                   "eventCall": {
                     "arguments": [
                       {
-                        "id": 38782,
+                        "id": 42759,
                         "name": "owner",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38746,
-                        "src": "17642:5:22",
+                        "referencedDeclaration": 42723,
+                        "src": "17642:5:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38783,
+                        "id": 42760,
                         "name": "operator",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38748,
-                        "src": "17649:8:22",
+                        "referencedDeclaration": 42725,
+                        "src": "17649:8:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 38784,
+                        "id": 42761,
                         "name": "approved",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38750,
-                        "src": "17659:8:22",
+                        "referencedDeclaration": 42727,
+                        "src": "17659:8:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -14279,18 +14279,18 @@ export const ERC721Upgradeable = {
                           "typeString": "bool"
                         }
                       ],
-                      "id": 38781,
+                      "id": 42758,
                       "name": "ApprovalForAll",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 39875,
-                      "src": "17627:14:22",
+                      "referencedDeclaration": 44393,
+                      "src": "17627:14:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_bool_$returns$__$",
                         "typeString": "function (address,address,bool)"
                       }
                     },
-                    "id": 38785,
+                    "id": 42762,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14299,43 +14299,43 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "17627:41:22",
+                    "src": "17627:41:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 38786,
+                  "id": 42763,
                   "nodeType": "EmitStatement",
-                  "src": "17622:46:22"
+                  "src": "17622:46:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38744,
+              "id": 42721,
               "nodeType": "StructuredDocumentation",
-              "src": "17103:198:22",
+              "src": "17103:198:27",
               "text": " @dev Approve `operator` to operate on all of `owner` tokens\n Requirements:\n - operator can't be the address zero.\n Emits an {ApprovalForAll} event."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_setApprovalForAll",
-            "nameLocation": "17315:18:22",
+            "nameLocation": "17315:18:27",
             "parameters": {
-              "id": 38751,
+              "id": 42728,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38746,
+                  "id": 42723,
                   "mutability": "mutable",
                   "name": "owner",
-                  "nameLocation": "17342:5:22",
+                  "nameLocation": "17342:5:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38788,
-                  "src": "17334:13:22",
+                  "scope": 42765,
+                  "src": "17334:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -14343,10 +14343,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38745,
+                    "id": 42722,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "17334:7:22",
+                    "src": "17334:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -14357,13 +14357,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38748,
+                  "id": 42725,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "17357:8:22",
+                  "nameLocation": "17357:8:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38788,
-                  "src": "17349:16:22",
+                  "scope": 42765,
+                  "src": "17349:16:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -14371,10 +14371,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38747,
+                    "id": 42724,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "17349:7:22",
+                    "src": "17349:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -14385,13 +14385,13 @@ export const ERC721Upgradeable = {
                 },
                 {
                   "constant": false,
-                  "id": 38750,
+                  "id": 42727,
                   "mutability": "mutable",
                   "name": "approved",
-                  "nameLocation": "17372:8:22",
+                  "nameLocation": "17372:8:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38788,
-                  "src": "17367:13:22",
+                  "scope": 42765,
+                  "src": "17367:13:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -14399,10 +14399,10 @@ export const ERC721Upgradeable = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 38749,
+                    "id": 42726,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "17367:4:22",
+                    "src": "17367:4:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -14411,44 +14411,44 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "17333:48:22"
+              "src": "17333:48:27"
             },
             "returnParameters": {
-              "id": 38752,
+              "id": 42729,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "17399:0:22"
+              "src": "17399:0:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "nonpayable",
             "virtual": true,
             "visibility": "internal"
           },
           {
-            "id": 38817,
+            "id": 42794,
             "nodeType": "FunctionDefinition",
-            "src": "17910:241:22",
+            "src": "17910:241:27",
             "nodes": [],
             "body": {
-              "id": 38816,
+              "id": 42793,
               "nodeType": "Block",
-              "src": "17982:169:22",
+              "src": "17982:169:27",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    38797
+                    42774
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 38797,
+                      "id": 42774,
                       "mutability": "mutable",
                       "name": "owner",
-                      "nameLocation": "18000:5:22",
+                      "nameLocation": "18000:5:27",
                       "nodeType": "VariableDeclaration",
-                      "scope": 38816,
-                      "src": "17992:13:22",
+                      "scope": 42793,
+                      "src": "17992:13:27",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -14456,10 +14456,10 @@ export const ERC721Upgradeable = {
                         "typeString": "address"
                       },
                       "typeName": {
-                        "id": 38796,
+                        "id": 42773,
                         "name": "address",
                         "nodeType": "ElementaryTypeName",
-                        "src": "17992:7:22",
+                        "src": "17992:7:27",
                         "stateMutability": "nonpayable",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -14469,16 +14469,16 @@ export const ERC721Upgradeable = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 38801,
+                  "id": 42778,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 38799,
+                        "id": 42776,
                         "name": "tokenId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 38791,
-                        "src": "18017:7:22",
+                        "referencedDeclaration": 42768,
+                        "src": "18017:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -14492,18 +14492,18 @@ export const ERC721Upgradeable = {
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 38798,
+                      "id": 42775,
                       "name": "_ownerOf",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38196,
-                      "src": "18008:8:22",
+                      "referencedDeclaration": 42173,
+                      "src": "18008:8:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_uint256_$returns$_t_address_$",
                         "typeString": "function (uint256) view returns (address)"
                       }
                     },
-                    "id": 38800,
+                    "id": 42777,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -14512,7 +14512,7 @@ export const ERC721Upgradeable = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "18008:17:22",
+                    "src": "18008:17:27",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -14520,7 +14520,7 @@ export const ERC721Upgradeable = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "17992:33:22"
+                  "src": "17992:33:27"
                 },
                 {
                   "condition": {
@@ -14528,18 +14528,18 @@ export const ERC721Upgradeable = {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     },
-                    "id": 38807,
+                    "id": 42784,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 38802,
+                      "id": 42779,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 38797,
-                      "src": "18039:5:22",
+                      "referencedDeclaration": 42774,
+                      "src": "18039:5:27",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -14551,14 +14551,14 @@ export const ERC721Upgradeable = {
                       "arguments": [
                         {
                           "hexValue": "30",
-                          "id": 38805,
+                          "id": 42782,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "18056:1:22",
+                          "src": "18056:1:27",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_0_by_1",
                             "typeString": "int_const 0"
@@ -14573,26 +14573,26 @@ export const ERC721Upgradeable = {
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 38804,
+                        "id": 42781,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "18048:7:22",
+                        "src": "18048:7:27",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_address_$",
                           "typeString": "type(address)"
                         },
                         "typeName": {
-                          "id": 38803,
+                          "id": 42780,
                           "name": "address",
                           "nodeType": "ElementaryTypeName",
-                          "src": "18048:7:22",
+                          "src": "18048:7:27",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 38806,
+                      "id": 42783,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -14601,37 +14601,37 @@ export const ERC721Upgradeable = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "18048:10:22",
+                      "src": "18048:10:27",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "18039:19:22",
+                    "src": "18039:19:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 38813,
+                  "id": 42790,
                   "nodeType": "IfStatement",
-                  "src": "18035:88:22",
+                  "src": "18035:88:27",
                   "trueBody": {
-                    "id": 38812,
+                    "id": 42789,
                     "nodeType": "Block",
-                    "src": "18060:63:22",
+                    "src": "18060:63:27",
                     "statements": [
                       {
                         "errorCall": {
                           "arguments": [
                             {
-                              "id": 38809,
+                              "id": 42786,
                               "name": "tokenId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 38791,
-                              "src": "18104:7:22",
+                              "referencedDeclaration": 42768,
+                              "src": "18104:7:27",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -14645,18 +14645,18 @@ export const ERC721Upgradeable = {
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 38808,
+                            "id": 42785,
                             "name": "ERC721NonexistentToken",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 39344,
-                            "src": "18081:22:22",
+                            "referencedDeclaration": 43321,
+                            "src": "18081:22:27",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$_t_error_$",
                               "typeString": "function (uint256) pure returns (error)"
                             }
                           },
-                          "id": 38810,
+                          "id": 42787,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -14665,64 +14665,64 @@ export const ERC721Upgradeable = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "18081:31:22",
+                          "src": "18081:31:27",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_error",
                             "typeString": "error"
                           }
                         },
-                        "id": 38811,
+                        "id": 42788,
                         "nodeType": "RevertStatement",
-                        "src": "18074:38:22"
+                        "src": "18074:38:27"
                       }
                     ]
                   }
                 },
                 {
                   "expression": {
-                    "id": 38814,
+                    "id": 42791,
                     "name": "owner",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 38797,
-                    "src": "18139:5:22",
+                    "referencedDeclaration": 42774,
+                    "src": "18139:5:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 38795,
-                  "id": 38815,
+                  "functionReturnParameters": 42772,
+                  "id": 42792,
                   "nodeType": "Return",
-                  "src": "18132:12:22"
+                  "src": "18132:12:27"
                 }
               ]
             },
             "documentation": {
-              "id": 38789,
+              "id": 42766,
               "nodeType": "StructuredDocumentation",
-              "src": "17681:224:22",
+              "src": "17681:224:27",
               "text": " @dev Reverts if the `tokenId` doesn't have a current owner (it hasn't been minted, or it has been burned).\n Returns the owner.\n Overrides to ownership logic should be done to {_ownerOf}."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "_requireOwned",
-            "nameLocation": "17919:13:22",
+            "nameLocation": "17919:13:27",
             "parameters": {
-              "id": 38792,
+              "id": 42769,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38791,
+                  "id": 42768,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "17941:7:22",
+                  "nameLocation": "17941:7:27",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38817,
-                  "src": "17933:15:22",
+                  "scope": 42794,
+                  "src": "17933:15:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -14730,10 +14730,10 @@ export const ERC721Upgradeable = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 38790,
+                    "id": 42767,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "17933:7:22",
+                    "src": "17933:7:27",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -14742,21 +14742,21 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "17932:17:22"
+              "src": "17932:17:27"
             },
             "returnParameters": {
-              "id": 38795,
+              "id": 42772,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 38794,
+                  "id": 42771,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 38817,
-                  "src": "17973:7:22",
+                  "scope": 42794,
+                  "src": "17973:7:27",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -14764,10 +14764,10 @@ export const ERC721Upgradeable = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 38793,
+                    "id": 42770,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "17973:7:22",
+                    "src": "17973:7:27",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -14777,9 +14777,9 @@ export const ERC721Upgradeable = {
                   "visibility": "internal"
                 }
               ],
-              "src": "17972:9:22"
+              "src": "17972:9:27"
             },
-            "scope": 38818,
+            "scope": 42795,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
@@ -14789,139 +14789,139 @@ export const ERC721Upgradeable = {
         "baseContracts": [
           {
             "baseName": {
-              "id": 37760,
+              "id": 41737,
               "name": "Initializable",
               "nameLocations": [
-                "1138:13:22"
+                "1138:13:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 36741,
-              "src": "1138:13:22"
+              "referencedDeclaration": 40718,
+              "src": "1138:13:27"
             },
-            "id": 37761,
+            "id": 41738,
             "nodeType": "InheritanceSpecifier",
-            "src": "1138:13:22"
+            "src": "1138:13:27"
           },
           {
             "baseName": {
-              "id": 37762,
+              "id": 41739,
               "name": "ContextUpgradeable",
               "nameLocations": [
-                "1153:18:22"
+                "1153:18:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 38864,
-              "src": "1153:18:22"
+              "referencedDeclaration": 42841,
+              "src": "1153:18:27"
             },
-            "id": 37763,
+            "id": 41740,
             "nodeType": "InheritanceSpecifier",
-            "src": "1153:18:22"
+            "src": "1153:18:27"
           },
           {
             "baseName": {
-              "id": 37764,
+              "id": 41741,
               "name": "ERC165Upgradeable",
               "nameLocations": [
-                "1173:17:22"
+                "1173:17:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 39248,
-              "src": "1173:17:22"
+              "referencedDeclaration": 43225,
+              "src": "1173:17:27"
             },
-            "id": 37765,
+            "id": 41742,
             "nodeType": "InheritanceSpecifier",
-            "src": "1173:17:22"
+            "src": "1173:17:27"
           },
           {
             "baseName": {
-              "id": 37766,
+              "id": 41743,
               "name": "IERC721",
               "nameLocations": [
-                "1192:7:22"
+                "1192:7:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 39958,
-              "src": "1192:7:22"
+              "referencedDeclaration": 44476,
+              "src": "1192:7:27"
             },
-            "id": 37767,
+            "id": 41744,
             "nodeType": "InheritanceSpecifier",
-            "src": "1192:7:22"
+            "src": "1192:7:27"
           },
           {
             "baseName": {
-              "id": 37768,
+              "id": 41745,
               "name": "IERC721Metadata",
               "nameLocations": [
-                "1201:15:22"
+                "1201:15:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 40004,
-              "src": "1201:15:22"
+              "referencedDeclaration": 44522,
+              "src": "1201:15:27"
             },
-            "id": 37769,
+            "id": 41746,
             "nodeType": "InheritanceSpecifier",
-            "src": "1201:15:22"
+            "src": "1201:15:27"
           },
           {
             "baseName": {
-              "id": 37770,
+              "id": 41747,
               "name": "IERC721Errors",
               "nameLocations": [
-                "1218:13:22"
+                "1218:13:27"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 39381,
-              "src": "1218:13:22"
+              "referencedDeclaration": 43358,
+              "src": "1218:13:27"
             },
-            "id": 37771,
+            "id": 41748,
             "nodeType": "InheritanceSpecifier",
-            "src": "1218:13:22"
+            "src": "1218:13:27"
           }
         ],
         "canonicalName": "ERC721Upgradeable",
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
-          "id": 37759,
+          "id": 41736,
           "nodeType": "StructuredDocumentation",
-          "src": "851:247:22",
+          "src": "851:247:27",
           "text": " @dev Implementation of https://eips.ethereum.org/EIPS/eip-721[ERC-721] Non-Fungible Token Standard, including\n the Metadata extension, but not including the Enumerable extension, which is available separately as\n {ERC721Enumerable}."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          38818,
-          39381,
-          40004,
-          39958,
-          39248,
-          42159,
-          38864,
-          36741
+          42795,
+          43358,
+          44522,
+          44476,
+          43225,
+          46707,
+          42841,
+          40718
         ],
         "name": "ERC721Upgradeable",
-        "nameLocation": "1117:17:22",
-        "scope": 38819,
+        "nameLocation": "1117:17:27",
+        "scope": 42796,
         "usedErrors": [
-          36504,
-          36507,
-          39339,
-          39344,
-          39353,
-          39358,
-          39363,
-          39370,
-          39375,
-          39380
+          40481,
+          40484,
+          43316,
+          43321,
+          43330,
+          43335,
+          43340,
+          43347,
+          43352,
+          43357
         ],
         "usedEvents": [
-          36512,
-          39857,
-          39866,
-          39875
+          40489,
+          44375,
+          44384,
+          44393
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 22
+  "id": 27
 } as const;

@@ -55,12 +55,12 @@ export const Constants = {
   ],
   "bytecode": {
     "object": "0x61011d610039600b82828239805160001a607314602c57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060515760003560e01c80630e45766114605657806341fb6a6b14608e57806347d92e861460955780639984c03514609b575b600080fd5b607c7fa850f9cb190d34eca968aeee8c951b4765e62744d7c13847a3ad392ad864910181565b60405190815260200160405180910390f35b607c600181565b607c60a9565b607c670de0b6b3a764000081565b60ba670de0b6b3a7640000606460bd565b81565b808202811582820484141760e157634e487b7160e01b600052601160045260246000fd5b9291505056fea26469706673582212207bec99ee502afa75ae165898745ae069b901f8dfcd9951de1a64e7177585d77c64736f6c634300081a0033",
-    "sourceMap": "77:395:63:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;77:395:63;;;;;;;;;;;;;;;;;",
+    "sourceMap": "77:395:71:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;77:395:71;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x730000000000000000000000000000000000000000301460806040526004361060515760003560e01c80630e45766114605657806341fb6a6b14608e57806347d92e861460955780639984c03514609b575b600080fd5b607c7fa850f9cb190d34eca968aeee8c951b4765e62744d7c13847a3ad392ad864910181565b60405190815260200160405180910390f35b607c600181565b607c60a9565b607c670de0b6b3a764000081565b60ba670de0b6b3a7640000606460bd565b81565b808202811582820484141760e157634e487b7160e01b600052601160045260246000fd5b9291505056fea26469706673582212207bec99ee502afa75ae165898745ae069b901f8dfcd9951de1a64e7177585d77c64736f6c634300081a0033",
-    "sourceMap": "77:395:63:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;200:114;;248:66;200:114;;;;;168:25:66;;;156:2;141:18;200:114:63;;;;;;;321:45;;365:1;321:45;;418:51;;;:::i;373:38::-;;407:4;373:38;;418:51;456:13;407:4;456:3;:13;:::i;:::-;418:51;:::o;394:265:66:-;467:9;;;498;;515:15;;;509:22;;495:37;485:168;;575:10;570:3;566:20;563:1;556:31;610:4;607:1;600:15;638:4;635:1;628:15;485:168;394:265;;;;:::o",
+    "sourceMap": "77:395:71:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;200:114;;248:66;200:114;;;;;168:25:76;;;156:2;141:18;200:114:71;;;;;;;321:45;;365:1;321:45;;418:51;;;:::i;373:38::-;;407:4;373:38;;418:51;456:13;407:4;456:3;:13;:::i;:::-;418:51;:::o;394:265:76:-;467:9;;;498;;515:15;;;509:22;;495:37;485:168;;575:10;570:3;566:20;563:1;556:31;610:4;607:1;600:15;638:4;635:1;628:15;485:168;394:265;;;;:::o",
     "linkReferences": {}
   },
   "methodIdentifiers": {
@@ -175,19 +175,19 @@ export const Constants = {
   },
   "ast": {
     "absolutePath": "src/interface/Constants.sol",
-    "id": 52126,
+    "id": 56708,
     "exportedSymbols": {
       "Constants": [
-        52125
+        56707
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "51:422:63",
+    "src": "51:422:71",
     "nodes": [
       {
-        "id": 52110,
+        "id": 56692,
         "nodeType": "PragmaDirective",
-        "src": "51:24:63",
+        "src": "51:24:71",
         "nodes": [],
         "literals": [
           "solidity",
@@ -197,21 +197,21 @@ export const Constants = {
         ]
       },
       {
-        "id": 52125,
+        "id": 56707,
         "nodeType": "ContractDefinition",
-        "src": "77:395:63",
+        "src": "77:395:71",
         "nodes": [
           {
-            "id": 52113,
+            "id": 56695,
             "nodeType": "VariableDeclaration",
-            "src": "200:114:63",
+            "src": "200:114:71",
             "nodes": [],
             "constant": true,
             "functionSelector": "0e457661",
             "mutability": "constant",
             "name": "TICKET_STORAGE_PREFIX",
-            "nameLocation": "224:21:63",
-            "scope": 52125,
+            "nameLocation": "224:21:71",
+            "scope": 56707,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -219,10 +219,10 @@ export const Constants = {
               "typeString": "bytes32"
             },
             "typeName": {
-              "id": 52111,
+              "id": 56693,
               "name": "bytes32",
               "nodeType": "ElementaryTypeName",
-              "src": "200:7:63",
+              "src": "200:7:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_bytes32",
                 "typeString": "bytes32"
@@ -230,14 +230,14 @@ export const Constants = {
             },
             "value": {
               "hexValue": "307861383530663963623139306433346563613936386165656538633935316234373635653632373434643763313338343761336164333932616438363439313031",
-              "id": 52112,
+              "id": 56694,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "248:66:63",
+              "src": "248:66:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_76131630337518788502901501502746484041859407509608347545736598695983404323073_by_1",
                 "typeString": "int_const 7613...(69 digits omitted)...3073"
@@ -247,16 +247,16 @@ export const Constants = {
             "visibility": "public"
           },
           {
-            "id": 52116,
+            "id": 56698,
             "nodeType": "VariableDeclaration",
-            "src": "321:45:63",
+            "src": "321:45:71",
             "nodes": [],
             "constant": true,
             "functionSelector": "41fb6a6b",
             "mutability": "constant",
             "name": "DEFAULT_POLICY_ID",
-            "nameLocation": "345:17:63",
-            "scope": 52125,
+            "nameLocation": "345:17:71",
+            "scope": 56707,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -264,10 +264,10 @@ export const Constants = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52114,
+              "id": 56696,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "321:7:63",
+              "src": "321:7:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -275,14 +275,14 @@ export const Constants = {
             },
             "value": {
               "hexValue": "31",
-              "id": 52115,
+              "id": 56697,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "365:1:63",
+              "src": "365:1:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_1_by_1",
                 "typeString": "int_const 1"
@@ -292,16 +292,16 @@ export const Constants = {
             "visibility": "public"
           },
           {
-            "id": 52119,
+            "id": 56701,
             "nodeType": "VariableDeclaration",
-            "src": "373:38:63",
+            "src": "373:38:71",
             "nodes": [],
             "constant": true,
             "functionSelector": "9984c035",
             "mutability": "constant",
             "name": "ONE_WAD",
-            "nameLocation": "397:7:63",
-            "scope": 52125,
+            "nameLocation": "397:7:71",
+            "scope": 56707,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -309,10 +309,10 @@ export const Constants = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52117,
+              "id": 56699,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "373:7:63",
+              "src": "373:7:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -320,14 +320,14 @@ export const Constants = {
             },
             "value": {
               "hexValue": "31653138",
-              "id": 52118,
+              "id": 56700,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "407:4:63",
+              "src": "407:4:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_1000000000000000000_by_1",
                 "typeString": "int_const 1000000000000000000"
@@ -337,16 +337,16 @@ export const Constants = {
             "visibility": "public"
           },
           {
-            "id": 52124,
+            "id": 56706,
             "nodeType": "VariableDeclaration",
-            "src": "418:51:63",
+            "src": "418:51:71",
             "nodes": [],
             "constant": true,
             "functionSelector": "47d92e86",
             "mutability": "constant",
             "name": "HUNDRED_WAD",
-            "nameLocation": "442:11:63",
-            "scope": 52125,
+            "nameLocation": "442:11:71",
+            "scope": 56707,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -354,10 +354,10 @@ export const Constants = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52120,
+              "id": 56702,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "418:7:63",
+              "src": "418:7:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -368,21 +368,21 @@ export const Constants = {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
               },
-              "id": 52123,
+              "id": 56705,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "lValueRequested": false,
               "leftExpression": {
                 "hexValue": "313030",
-                "id": 52121,
+                "id": 56703,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
                 "kind": "number",
                 "lValueRequested": false,
                 "nodeType": "Literal",
-                "src": "456:3:63",
+                "src": "456:3:71",
                 "typeDescriptions": {
                   "typeIdentifier": "t_rational_100_by_1",
                   "typeString": "int_const 100"
@@ -392,18 +392,18 @@ export const Constants = {
               "nodeType": "BinaryOperation",
               "operator": "*",
               "rightExpression": {
-                "id": 52122,
+                "id": 56704,
                 "name": "ONE_WAD",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 52119,
-                "src": "462:7:63",
+                "referencedDeclaration": 56701,
+                "src": "462:7:71",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
-              "src": "456:13:63",
+              "src": "456:13:71",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -419,16 +419,16 @@ export const Constants = {
         "contractKind": "library",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          52125
+          56707
         ],
         "name": "Constants",
-        "nameLocation": "85:9:63",
-        "scope": 52126,
+        "nameLocation": "85:9:71",
+        "scope": 56708,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "SEE LICENSE IN LICENSE"
   },
-  "id": 63
+  "id": 71
 } as const;

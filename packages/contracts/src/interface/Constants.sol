@@ -10,4 +10,13 @@ library Constants {
     uint256 public constant ONE_WAD = 1e18;
 
     uint256 public constant HUNDRED_WAD = 100 * ONE_WAD;
+
+    bytes32 public constant TICKETDATA_TYPEHASH =
+        keccak256("TicketData(address asset,uint96 showTime,uint256 amount,uint256 showId,SeatData[] seats)");
+
+    bytes32 public constant SEATDATA_TYPEHASH = keccak256("SeatData(uint128 seatId,uint128 price)");
+
+    bytes32 public constant PURCHASE_DATA_TYPEHASH =
+        keccak256("PurchaseData(TicketData ticketData,address user,uint96 timestamp,uint256 nonce)");
+
 }

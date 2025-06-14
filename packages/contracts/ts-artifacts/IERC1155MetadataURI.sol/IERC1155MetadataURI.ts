@@ -737,22 +737,22 @@ export const IERC1155MetadataURI = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC1155/extensions/IERC1155MetadataURI.sol",
-    "id": 39610,
+    "id": 43587,
     "exportedSymbols": {
       "IERC1155": [
-        39551
+        43528
       ],
       "IERC1155MetadataURI": [
-        39609
+        43586
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "132:545:32",
+    "src": "132:545:37",
     "nodes": [
       {
-        "id": 39595,
+        "id": 43572,
         "nodeType": "PragmaDirective",
-        "src": "132:24:32",
+        "src": "132:24:37",
         "nodes": [],
         "literals": [
           "solidity",
@@ -762,24 +762,24 @@ export const IERC1155MetadataURI = {
         ]
       },
       {
-        "id": 39597,
+        "id": 43574,
         "nodeType": "ImportDirective",
-        "src": "158:41:32",
+        "src": "158:41:37",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
         "file": "../IERC1155.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 39610,
-        "sourceUnit": 39552,
+        "scope": 43587,
+        "sourceUnit": 43529,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39596,
+              "id": 43573,
               "name": "IERC1155",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39551,
-              "src": "166:8:32",
+              "referencedDeclaration": 43528,
+              "src": "166:8:37",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -788,19 +788,19 @@ export const IERC1155MetadataURI = {
         "unitAlias": ""
       },
       {
-        "id": 39609,
+        "id": 43586,
         "nodeType": "ContractDefinition",
-        "src": "366:310:32",
+        "src": "366:310:37",
         "nodes": [
           {
-            "id": 39608,
+            "id": 43585,
             "nodeType": "FunctionDefinition",
-            "src": "611:63:32",
+            "src": "611:63:37",
             "nodes": [],
             "documentation": {
-              "id": 39601,
+              "id": 43578,
               "nodeType": "StructuredDocumentation",
-              "src": "414:192:32",
+              "src": "414:192:37",
               "text": " @dev Returns the URI for token type `id`.\n If the `\\{id\\}` substring is present in the URI, it must be replaced by\n clients with the actual token type ID."
             },
             "functionSelector": "0e89341c",
@@ -808,20 +808,20 @@ export const IERC1155MetadataURI = {
             "kind": "function",
             "modifiers": [],
             "name": "uri",
-            "nameLocation": "620:3:32",
+            "nameLocation": "620:3:37",
             "parameters": {
-              "id": 39604,
+              "id": 43581,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39603,
+                  "id": 43580,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "632:2:32",
+                  "nameLocation": "632:2:37",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39608,
-                  "src": "624:10:32",
+                  "scope": 43585,
+                  "src": "624:10:37",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -829,10 +829,10 @@ export const IERC1155MetadataURI = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39602,
+                    "id": 43579,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "624:7:32",
+                    "src": "624:7:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -841,21 +841,21 @@ export const IERC1155MetadataURI = {
                   "visibility": "internal"
                 }
               ],
-              "src": "623:12:32"
+              "src": "623:12:37"
             },
             "returnParameters": {
-              "id": 39607,
+              "id": 43584,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39606,
+                  "id": 43583,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39608,
-                  "src": "659:13:32",
+                  "scope": 43585,
+                  "src": "659:13:37",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -863,10 +863,10 @@ export const IERC1155MetadataURI = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 39605,
+                    "id": 43582,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "659:6:32",
+                    "src": "659:6:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -875,9 +875,9 @@ export const IERC1155MetadataURI = {
                   "visibility": "internal"
                 }
               ],
-              "src": "658:15:32"
+              "src": "658:15:37"
             },
-            "scope": 39609,
+            "scope": 43586,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -887,48 +887,48 @@ export const IERC1155MetadataURI = {
         "baseContracts": [
           {
             "baseName": {
-              "id": 39599,
+              "id": 43576,
               "name": "IERC1155",
               "nameLocations": [
-                "399:8:32"
+                "399:8:37"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 39551,
-              "src": "399:8:32"
+              "referencedDeclaration": 43528,
+              "src": "399:8:37"
             },
-            "id": 39600,
+            "id": 43577,
             "nodeType": "InheritanceSpecifier",
-            "src": "399:8:32"
+            "src": "399:8:37"
           }
         ],
         "canonicalName": "IERC1155MetadataURI",
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 39598,
+          "id": 43575,
           "nodeType": "StructuredDocumentation",
-          "src": "201:164:32",
+          "src": "201:164:37",
           "text": " @dev Interface of the optional ERC1155MetadataExtension interface, as defined\n in the https://eips.ethereum.org/EIPS/eip-1155#metadata-extensions[ERC]."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          39609,
-          39551,
-          42159
+          43586,
+          43528,
+          46707
         ],
         "name": "IERC1155MetadataURI",
-        "nameLocation": "376:19:32",
-        "scope": 39610,
+        "nameLocation": "376:19:37",
+        "scope": 43587,
         "usedErrors": [],
         "usedEvents": [
-          39448,
-          39463,
-          39472,
-          39479
+          43425,
+          43440,
+          43449,
+          43456
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 32
+  "id": 37
 } as const;

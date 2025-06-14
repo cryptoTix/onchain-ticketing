@@ -2,12 +2,12 @@ export const SignedMath = {
   "abi": [],
   "bytecode": {
     "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122022cadfd884207f22f9b7463752a44b907b0efe3fbadad368eb62de554cf5491664736f6c634300081a0033",
-    "sourceMap": "258:2354:51:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;258:2354:51;;;;;;;;;;;;;;;;;",
+    "sourceMap": "258:2354:59:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;258:2354:59;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122022cadfd884207f22f9b7463752a44b907b0efe3fbadad368eb62de554cf5491664736f6c634300081a0033",
-    "sourceMap": "258:2354:51:-:0;;;;;;;;",
+    "sourceMap": "258:2354:59:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -72,22 +72,22 @@ export const SignedMath = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/utils/math/SignedMath.sol",
-    "id": 45675,
+    "id": 50223,
     "exportedSymbols": {
       "SafeCast": [
-        45530
+        50078
       ],
       "SignedMath": [
-        45674
+        50222
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "109:2504:51",
+    "src": "109:2504:59",
     "nodes": [
       {
-        "id": 45532,
+        "id": 50080,
         "nodeType": "PragmaDirective",
-        "src": "109:24:51",
+        "src": "109:24:59",
         "nodes": [],
         "literals": [
           "solidity",
@@ -97,24 +97,24 @@ export const SignedMath = {
         ]
       },
       {
-        "id": 45534,
+        "id": 50082,
         "nodeType": "ImportDirective",
-        "src": "135:40:51",
+        "src": "135:40:59",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol",
         "file": "./SafeCast.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 45675,
-        "sourceUnit": 45531,
+        "scope": 50223,
+        "sourceUnit": 50079,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 45533,
+              "id": 50081,
               "name": "SafeCast",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 45530,
-              "src": "143:8:51",
+              "referencedDeclaration": 50078,
+              "src": "143:8:59",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -123,25 +123,25 @@ export const SignedMath = {
         "unitAlias": ""
       },
       {
-        "id": 45674,
+        "id": 50222,
         "nodeType": "ContractDefinition",
-        "src": "258:2354:51",
+        "src": "258:2354:59",
         "nodes": [
           {
-            "id": 45565,
+            "id": 50113,
             "nodeType": "FunctionDefinition",
-            "src": "662:299:51",
+            "src": "662:299:59",
             "nodes": [],
             "body": {
-              "id": 45564,
+              "id": 50112,
               "nodeType": "Block",
-              "src": "746:215:51",
+              "src": "746:215:59",
               "nodes": [],
               "statements": [
                 {
-                  "id": 45563,
+                  "id": 50111,
                   "nodeType": "UncheckedBlock",
-                  "src": "756:199:51",
+                  "src": "756:199:59",
                   "statements": [
                     {
                       "expression": {
@@ -149,18 +149,18 @@ export const SignedMath = {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         },
-                        "id": 45561,
+                        "id": 50109,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 45547,
+                          "id": 50095,
                           "name": "b",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 45542,
-                          "src": "894:1:51",
+                          "referencedDeclaration": 50090,
+                          "src": "894:1:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
@@ -175,7 +175,7 @@ export const SignedMath = {
                                 "typeIdentifier": "t_int256",
                                 "typeString": "int256"
                               },
-                              "id": 45559,
+                              "id": 50107,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -187,18 +187,18 @@ export const SignedMath = {
                                       "typeIdentifier": "t_int256",
                                       "typeString": "int256"
                                     },
-                                    "id": 45550,
+                                    "id": 50098,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "leftExpression": {
-                                      "id": 45548,
+                                      "id": 50096,
                                       "name": "a",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 45540,
-                                      "src": "900:1:51",
+                                      "referencedDeclaration": 50088,
+                                      "src": "900:1:59",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_int256",
                                         "typeString": "int256"
@@ -207,32 +207,32 @@ export const SignedMath = {
                                     "nodeType": "BinaryOperation",
                                     "operator": "^",
                                     "rightExpression": {
-                                      "id": 45549,
+                                      "id": 50097,
                                       "name": "b",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 45542,
-                                      "src": "904:1:51",
+                                      "referencedDeclaration": 50090,
+                                      "src": "904:1:59",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_int256",
                                         "typeString": "int256"
                                       }
                                     },
-                                    "src": "900:5:51",
+                                    "src": "900:5:59",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_int256",
                                       "typeString": "int256"
                                     }
                                   }
                                 ],
-                                "id": 45551,
+                                "id": 50099,
                                 "isConstant": false,
                                 "isInlineArray": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "nodeType": "TupleExpression",
-                                "src": "899:7:51",
+                                "src": "899:7:59",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_int256",
                                   "typeString": "int256"
@@ -245,12 +245,12 @@ export const SignedMath = {
                                   {
                                     "arguments": [
                                       {
-                                        "id": 45556,
+                                        "id": 50104,
                                         "name": "condition",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 45538,
-                                        "src": "932:9:51",
+                                        "referencedDeclaration": 50086,
+                                        "src": "932:9:59",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_bool",
                                           "typeString": "bool"
@@ -265,33 +265,33 @@ export const SignedMath = {
                                         }
                                       ],
                                       "expression": {
-                                        "id": 45554,
+                                        "id": 50102,
                                         "name": "SafeCast",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 45530,
-                                        "src": "916:8:51",
+                                        "referencedDeclaration": 50078,
+                                        "src": "916:8:59",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_type$_t_contract$_SafeCast_$45530_$",
+                                          "typeIdentifier": "t_type$_t_contract$_SafeCast_$50078_$",
                                           "typeString": "type(library SafeCast)"
                                         }
                                       },
-                                      "id": 45555,
+                                      "id": 50103,
                                       "isConstant": false,
                                       "isLValue": false,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "925:6:51",
+                                      "memberLocation": "925:6:59",
                                       "memberName": "toUint",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 45529,
-                                      "src": "916:15:51",
+                                      "referencedDeclaration": 50077,
+                                      "src": "916:15:59",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_internal_pure$_t_bool_$returns$_t_uint256_$",
                                         "typeString": "function (bool) pure returns (uint256)"
                                       }
                                     },
-                                    "id": 45557,
+                                    "id": 50105,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": false,
@@ -300,7 +300,7 @@ export const SignedMath = {
                                     "nameLocations": [],
                                     "names": [],
                                     "nodeType": "FunctionCall",
-                                    "src": "916:26:51",
+                                    "src": "916:26:59",
                                     "tryCall": false,
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
@@ -315,26 +315,26 @@ export const SignedMath = {
                                       "typeString": "uint256"
                                     }
                                   ],
-                                  "id": 45553,
+                                  "id": 50101,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "lValueRequested": false,
                                   "nodeType": "ElementaryTypeNameExpression",
-                                  "src": "909:6:51",
+                                  "src": "909:6:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_type$_t_int256_$",
                                     "typeString": "type(int256)"
                                   },
                                   "typeName": {
-                                    "id": 45552,
+                                    "id": 50100,
                                     "name": "int256",
                                     "nodeType": "ElementaryTypeName",
-                                    "src": "909:6:51",
+                                    "src": "909:6:59",
                                     "typeDescriptions": {}
                                   }
                                 },
-                                "id": 45558,
+                                "id": 50106,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -343,72 +343,72 @@ export const SignedMath = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "909:34:51",
+                                "src": "909:34:59",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_int256",
                                   "typeString": "int256"
                                 }
                               },
-                              "src": "899:44:51",
+                              "src": "899:44:59",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_int256",
                                 "typeString": "int256"
                               }
                             }
                           ],
-                          "id": 45560,
+                          "id": 50108,
                           "isConstant": false,
                           "isInlineArray": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "TupleExpression",
-                          "src": "898:46:51",
+                          "src": "898:46:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           }
                         },
-                        "src": "894:50:51",
+                        "src": "894:50:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         }
                       },
-                      "functionReturnParameters": 45546,
-                      "id": 45562,
+                      "functionReturnParameters": 50094,
+                      "id": 50110,
                       "nodeType": "Return",
-                      "src": "887:57:51"
+                      "src": "887:57:59"
                     }
                   ]
                 }
               ]
             },
             "documentation": {
-              "id": 45536,
+              "id": 50084,
               "nodeType": "StructuredDocumentation",
-              "src": "283:374:51",
+              "src": "283:374:59",
               "text": " @dev Branchless ternary evaluation for `a ? b : c`. Gas costs are constant.\n IMPORTANT: This function may reduce bytecode size and consume less gas when used standalone.\n However, the compiler may optimize Solidity ternary operations (i.e. `a ? b : c`) to only compute\n one branch when needed, making this function more expensive."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "ternary",
-            "nameLocation": "671:7:51",
+            "nameLocation": "671:7:59",
             "parameters": {
-              "id": 45543,
+              "id": 50091,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45538,
+                  "id": 50086,
                   "mutability": "mutable",
                   "name": "condition",
-                  "nameLocation": "684:9:51",
+                  "nameLocation": "684:9:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45565,
-                  "src": "679:14:51",
+                  "scope": 50113,
+                  "src": "679:14:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -416,10 +416,10 @@ export const SignedMath = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 45537,
+                    "id": 50085,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "679:4:51",
+                    "src": "679:4:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -429,13 +429,13 @@ export const SignedMath = {
                 },
                 {
                   "constant": false,
-                  "id": 45540,
+                  "id": 50088,
                   "mutability": "mutable",
                   "name": "a",
-                  "nameLocation": "702:1:51",
+                  "nameLocation": "702:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45565,
-                  "src": "695:8:51",
+                  "scope": 50113,
+                  "src": "695:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -443,10 +443,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45539,
+                    "id": 50087,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "695:6:51",
+                    "src": "695:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -456,13 +456,13 @@ export const SignedMath = {
                 },
                 {
                   "constant": false,
-                  "id": 45542,
+                  "id": 50090,
                   "mutability": "mutable",
                   "name": "b",
-                  "nameLocation": "712:1:51",
+                  "nameLocation": "712:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45565,
-                  "src": "705:8:51",
+                  "scope": 50113,
+                  "src": "705:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -470,10 +470,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45541,
+                    "id": 50089,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "705:6:51",
+                    "src": "705:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -482,21 +482,21 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "678:36:51"
+              "src": "678:36:59"
             },
             "returnParameters": {
-              "id": 45546,
+              "id": 50094,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45545,
+                  "id": 50093,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45565,
-                  "src": "738:6:51",
+                  "scope": 50113,
+                  "src": "738:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -504,10 +504,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45544,
+                    "id": 50092,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "738:6:51",
+                    "src": "738:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -516,22 +516,22 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "737:8:51"
+              "src": "737:8:59"
             },
-            "scope": 45674,
+            "scope": 50222,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 45584,
+            "id": 50132,
             "nodeType": "FunctionDefinition",
-            "src": "1038:108:51",
+            "src": "1038:108:59",
             "nodes": [],
             "body": {
-              "id": 45583,
+              "id": 50131,
               "nodeType": "Block",
-              "src": "1102:44:51",
+              "src": "1102:44:59",
               "nodes": [],
               "statements": [
                 {
@@ -542,18 +542,18 @@ export const SignedMath = {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         },
-                        "id": 45578,
+                        "id": 50126,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 45576,
+                          "id": 50124,
                           "name": "a",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 45568,
-                          "src": "1127:1:51",
+                          "referencedDeclaration": 50116,
+                          "src": "1127:1:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
@@ -562,42 +562,42 @@ export const SignedMath = {
                         "nodeType": "BinaryOperation",
                         "operator": ">",
                         "rightExpression": {
-                          "id": 45577,
+                          "id": 50125,
                           "name": "b",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 45570,
-                          "src": "1131:1:51",
+                          "referencedDeclaration": 50118,
+                          "src": "1131:1:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           }
                         },
-                        "src": "1127:5:51",
+                        "src": "1127:5:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         }
                       },
                       {
-                        "id": 45579,
+                        "id": 50127,
                         "name": "a",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 45568,
-                        "src": "1134:1:51",
+                        "referencedDeclaration": 50116,
+                        "src": "1134:1:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         }
                       },
                       {
-                        "id": 45580,
+                        "id": 50128,
                         "name": "b",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 45570,
-                        "src": "1137:1:51",
+                        "referencedDeclaration": 50118,
+                        "src": "1137:1:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
@@ -619,18 +619,18 @@ export const SignedMath = {
                           "typeString": "int256"
                         }
                       ],
-                      "id": 45575,
+                      "id": 50123,
                       "name": "ternary",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 45565,
-                      "src": "1119:7:51",
+                      "referencedDeclaration": 50113,
+                      "src": "1119:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_bool_$_t_int256_$_t_int256_$returns$_t_int256_$",
                         "typeString": "function (bool,int256,int256) pure returns (int256)"
                       }
                     },
-                    "id": 45581,
+                    "id": 50129,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -639,44 +639,44 @@ export const SignedMath = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1119:20:51",
+                    "src": "1119:20:59",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 45574,
-                  "id": 45582,
+                  "functionReturnParameters": 50122,
+                  "id": 50130,
                   "nodeType": "Return",
-                  "src": "1112:27:51"
+                  "src": "1112:27:59"
                 }
               ]
             },
             "documentation": {
-              "id": 45566,
+              "id": 50114,
               "nodeType": "StructuredDocumentation",
-              "src": "967:66:51",
+              "src": "967:66:59",
               "text": " @dev Returns the largest of two signed numbers."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "max",
-            "nameLocation": "1047:3:51",
+            "nameLocation": "1047:3:59",
             "parameters": {
-              "id": 45571,
+              "id": 50119,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45568,
+                  "id": 50116,
                   "mutability": "mutable",
                   "name": "a",
-                  "nameLocation": "1058:1:51",
+                  "nameLocation": "1058:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45584,
-                  "src": "1051:8:51",
+                  "scope": 50132,
+                  "src": "1051:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -684,10 +684,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45567,
+                    "id": 50115,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1051:6:51",
+                    "src": "1051:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -697,13 +697,13 @@ export const SignedMath = {
                 },
                 {
                   "constant": false,
-                  "id": 45570,
+                  "id": 50118,
                   "mutability": "mutable",
                   "name": "b",
-                  "nameLocation": "1068:1:51",
+                  "nameLocation": "1068:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45584,
-                  "src": "1061:8:51",
+                  "scope": 50132,
+                  "src": "1061:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -711,10 +711,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45569,
+                    "id": 50117,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1061:6:51",
+                    "src": "1061:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -723,21 +723,21 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1050:20:51"
+              "src": "1050:20:59"
             },
             "returnParameters": {
-              "id": 45574,
+              "id": 50122,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45573,
+                  "id": 50121,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45584,
-                  "src": "1094:6:51",
+                  "scope": 50132,
+                  "src": "1094:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -745,10 +745,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45572,
+                    "id": 50120,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1094:6:51",
+                    "src": "1094:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -757,22 +757,22 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1093:8:51"
+              "src": "1093:8:59"
             },
-            "scope": 45674,
+            "scope": 50222,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 45603,
+            "id": 50151,
             "nodeType": "FunctionDefinition",
-            "src": "1224:108:51",
+            "src": "1224:108:59",
             "nodes": [],
             "body": {
-              "id": 45602,
+              "id": 50150,
               "nodeType": "Block",
-              "src": "1288:44:51",
+              "src": "1288:44:59",
               "nodes": [],
               "statements": [
                 {
@@ -783,18 +783,18 @@ export const SignedMath = {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         },
-                        "id": 45597,
+                        "id": 50145,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 45595,
+                          "id": 50143,
                           "name": "a",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 45587,
-                          "src": "1313:1:51",
+                          "referencedDeclaration": 50135,
+                          "src": "1313:1:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
@@ -803,42 +803,42 @@ export const SignedMath = {
                         "nodeType": "BinaryOperation",
                         "operator": "<",
                         "rightExpression": {
-                          "id": 45596,
+                          "id": 50144,
                           "name": "b",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 45589,
-                          "src": "1317:1:51",
+                          "referencedDeclaration": 50137,
+                          "src": "1317:1:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           }
                         },
-                        "src": "1313:5:51",
+                        "src": "1313:5:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         }
                       },
                       {
-                        "id": 45598,
+                        "id": 50146,
                         "name": "a",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 45587,
-                        "src": "1320:1:51",
+                        "referencedDeclaration": 50135,
+                        "src": "1320:1:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         }
                       },
                       {
-                        "id": 45599,
+                        "id": 50147,
                         "name": "b",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 45589,
-                        "src": "1323:1:51",
+                        "referencedDeclaration": 50137,
+                        "src": "1323:1:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
@@ -860,18 +860,18 @@ export const SignedMath = {
                           "typeString": "int256"
                         }
                       ],
-                      "id": 45594,
+                      "id": 50142,
                       "name": "ternary",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 45565,
-                      "src": "1305:7:51",
+                      "referencedDeclaration": 50113,
+                      "src": "1305:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_pure$_t_bool_$_t_int256_$_t_int256_$returns$_t_int256_$",
                         "typeString": "function (bool,int256,int256) pure returns (int256)"
                       }
                     },
-                    "id": 45600,
+                    "id": 50148,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -880,44 +880,44 @@ export const SignedMath = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1305:20:51",
+                    "src": "1305:20:59",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 45593,
-                  "id": 45601,
+                  "functionReturnParameters": 50141,
+                  "id": 50149,
                   "nodeType": "Return",
-                  "src": "1298:27:51"
+                  "src": "1298:27:59"
                 }
               ]
             },
             "documentation": {
-              "id": 45585,
+              "id": 50133,
               "nodeType": "StructuredDocumentation",
-              "src": "1152:67:51",
+              "src": "1152:67:59",
               "text": " @dev Returns the smallest of two signed numbers."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "min",
-            "nameLocation": "1233:3:51",
+            "nameLocation": "1233:3:59",
             "parameters": {
-              "id": 45590,
+              "id": 50138,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45587,
+                  "id": 50135,
                   "mutability": "mutable",
                   "name": "a",
-                  "nameLocation": "1244:1:51",
+                  "nameLocation": "1244:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45603,
-                  "src": "1237:8:51",
+                  "scope": 50151,
+                  "src": "1237:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -925,10 +925,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45586,
+                    "id": 50134,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1237:6:51",
+                    "src": "1237:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -938,13 +938,13 @@ export const SignedMath = {
                 },
                 {
                   "constant": false,
-                  "id": 45589,
+                  "id": 50137,
                   "mutability": "mutable",
                   "name": "b",
-                  "nameLocation": "1254:1:51",
+                  "nameLocation": "1254:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45603,
-                  "src": "1247:8:51",
+                  "scope": 50151,
+                  "src": "1247:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -952,10 +952,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45588,
+                    "id": 50136,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1247:6:51",
+                    "src": "1247:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -964,21 +964,21 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1236:20:51"
+              "src": "1236:20:59"
             },
             "returnParameters": {
-              "id": 45593,
+              "id": 50141,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45592,
+                  "id": 50140,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45603,
-                  "src": "1280:6:51",
+                  "scope": 50151,
+                  "src": "1280:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -986,10 +986,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45591,
+                    "id": 50139,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1280:6:51",
+                    "src": "1280:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -998,38 +998,38 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1279:8:51"
+              "src": "1279:8:59"
             },
-            "scope": 45674,
+            "scope": 50222,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 45647,
+            "id": 50195,
             "nodeType": "FunctionDefinition",
-            "src": "1469:230:51",
+            "src": "1469:230:59",
             "nodes": [],
             "body": {
-              "id": 45646,
+              "id": 50194,
               "nodeType": "Block",
-              "src": "1537:162:51",
+              "src": "1537:162:59",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    45614
+                    50162
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 45614,
+                      "id": 50162,
                       "mutability": "mutable",
                       "name": "x",
-                      "nameLocation": "1606:1:51",
+                      "nameLocation": "1606:1:59",
                       "nodeType": "VariableDeclaration",
-                      "scope": 45646,
-                      "src": "1599:8:51",
+                      "scope": 50194,
+                      "src": "1599:8:59",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1037,10 +1037,10 @@ export const SignedMath = {
                         "typeString": "int256"
                       },
                       "typeName": {
-                        "id": 45613,
+                        "id": 50161,
                         "name": "int256",
                         "nodeType": "ElementaryTypeName",
-                        "src": "1599:6:51",
+                        "src": "1599:6:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
@@ -1049,13 +1049,13 @@ export const SignedMath = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 45627,
+                  "id": 50175,
                   "initialValue": {
                     "commonType": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     },
-                    "id": 45626,
+                    "id": 50174,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1067,18 +1067,18 @@ export const SignedMath = {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           },
-                          "id": 45617,
+                          "id": 50165,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 45615,
+                            "id": 50163,
                             "name": "a",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 45606,
-                            "src": "1611:1:51",
+                            "referencedDeclaration": 50154,
+                            "src": "1611:1:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
@@ -1087,32 +1087,32 @@ export const SignedMath = {
                           "nodeType": "BinaryOperation",
                           "operator": "&",
                           "rightExpression": {
-                            "id": 45616,
+                            "id": 50164,
                             "name": "b",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 45608,
-                            "src": "1615:1:51",
+                            "referencedDeclaration": 50156,
+                            "src": "1615:1:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
                             }
                           },
-                          "src": "1611:5:51",
+                          "src": "1611:5:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           }
                         }
                       ],
-                      "id": 45618,
+                      "id": 50166,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "TupleExpression",
-                      "src": "1610:7:51",
+                      "src": "1610:7:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
                         "typeString": "int256"
@@ -1127,7 +1127,7 @@ export const SignedMath = {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           },
-                          "id": 45624,
+                          "id": 50172,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1139,18 +1139,18 @@ export const SignedMath = {
                                   "typeIdentifier": "t_int256",
                                   "typeString": "int256"
                                 },
-                                "id": 45621,
+                                "id": 50169,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "leftExpression": {
-                                  "id": 45619,
+                                  "id": 50167,
                                   "name": "a",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 45606,
-                                  "src": "1622:1:51",
+                                  "referencedDeclaration": 50154,
+                                  "src": "1622:1:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_int256",
                                     "typeString": "int256"
@@ -1159,32 +1159,32 @@ export const SignedMath = {
                                 "nodeType": "BinaryOperation",
                                 "operator": "^",
                                 "rightExpression": {
-                                  "id": 45620,
+                                  "id": 50168,
                                   "name": "b",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 45608,
-                                  "src": "1626:1:51",
+                                  "referencedDeclaration": 50156,
+                                  "src": "1626:1:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_int256",
                                     "typeString": "int256"
                                   }
                                 },
-                                "src": "1622:5:51",
+                                "src": "1622:5:59",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_int256",
                                   "typeString": "int256"
                                 }
                               }
                             ],
-                            "id": 45622,
+                            "id": 50170,
                             "isConstant": false,
                             "isInlineArray": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "nodeType": "TupleExpression",
-                            "src": "1621:7:51",
+                            "src": "1621:7:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
@@ -1194,48 +1194,48 @@ export const SignedMath = {
                           "operator": ">>",
                           "rightExpression": {
                             "hexValue": "31",
-                            "id": 45623,
+                            "id": 50171,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "1632:1:51",
+                            "src": "1632:1:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_1_by_1",
                               "typeString": "int_const 1"
                             },
                             "value": "1"
                           },
-                          "src": "1621:12:51",
+                          "src": "1621:12:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           }
                         }
                       ],
-                      "id": 45625,
+                      "id": 50173,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "TupleExpression",
-                      "src": "1620:14:51",
+                      "src": "1620:14:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
                         "typeString": "int256"
                       }
                     },
-                    "src": "1610:24:51",
+                    "src": "1610:24:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "1599:35:51"
+                  "src": "1599:35:59"
                 },
                 {
                   "expression": {
@@ -1243,18 +1243,18 @@ export const SignedMath = {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     },
-                    "id": 45644,
+                    "id": 50192,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 45628,
+                      "id": 50176,
                       "name": "x",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 45614,
-                      "src": "1651:1:51",
+                      "referencedDeclaration": 50162,
+                      "src": "1651:1:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
                         "typeString": "int256"
@@ -1269,7 +1269,7 @@ export const SignedMath = {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           },
-                          "id": 45642,
+                          "id": 50190,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1281,7 +1281,7 @@ export const SignedMath = {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 },
-                                "id": 45636,
+                                "id": 50184,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1289,12 +1289,12 @@ export const SignedMath = {
                                 "leftExpression": {
                                   "arguments": [
                                     {
-                                      "id": 45633,
+                                      "id": 50181,
                                       "name": "x",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 45614,
-                                      "src": "1671:1:51",
+                                      "referencedDeclaration": 50162,
+                                      "src": "1671:1:59",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_int256",
                                         "typeString": "int256"
@@ -1308,26 +1308,26 @@ export const SignedMath = {
                                         "typeString": "int256"
                                       }
                                     ],
-                                    "id": 45632,
+                                    "id": 50180,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
                                     "lValueRequested": false,
                                     "nodeType": "ElementaryTypeNameExpression",
-                                    "src": "1663:7:51",
+                                    "src": "1663:7:59",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_type$_t_uint256_$",
                                       "typeString": "type(uint256)"
                                     },
                                     "typeName": {
-                                      "id": 45631,
+                                      "id": 50179,
                                       "name": "uint256",
                                       "nodeType": "ElementaryTypeName",
-                                      "src": "1663:7:51",
+                                      "src": "1663:7:59",
                                       "typeDescriptions": {}
                                     }
                                   },
-                                  "id": 45634,
+                                  "id": 50182,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -1336,7 +1336,7 @@ export const SignedMath = {
                                   "nameLocations": [],
                                   "names": [],
                                   "nodeType": "FunctionCall",
-                                  "src": "1663:10:51",
+                                  "src": "1663:10:59",
                                   "tryCall": false,
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
@@ -1347,21 +1347,21 @@ export const SignedMath = {
                                 "operator": ">>",
                                 "rightExpression": {
                                   "hexValue": "323535",
-                                  "id": 45635,
+                                  "id": 50183,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "1677:3:51",
+                                  "src": "1677:3:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_255_by_1",
                                     "typeString": "int_const 255"
                                   },
                                   "value": "255"
                                 },
-                                "src": "1663:17:51",
+                                "src": "1663:17:59",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -1375,26 +1375,26 @@ export const SignedMath = {
                                   "typeString": "uint256"
                                 }
                               ],
-                              "id": 45630,
+                              "id": 50178,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "1656:6:51",
+                              "src": "1656:6:59",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_int256_$",
                                 "typeString": "type(int256)"
                               },
                               "typeName": {
-                                "id": 45629,
+                                "id": 50177,
                                 "name": "int256",
                                 "nodeType": "ElementaryTypeName",
-                                "src": "1656:6:51",
+                                "src": "1656:6:59",
                                 "typeDescriptions": {}
                               }
                             },
-                            "id": 45637,
+                            "id": 50185,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1403,7 +1403,7 @@ export const SignedMath = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "1656:25:51",
+                            "src": "1656:25:59",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
@@ -1419,18 +1419,18 @@ export const SignedMath = {
                                   "typeIdentifier": "t_int256",
                                   "typeString": "int256"
                                 },
-                                "id": 45640,
+                                "id": 50188,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "leftExpression": {
-                                  "id": 45638,
+                                  "id": 50186,
                                   "name": "a",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 45606,
-                                  "src": "1685:1:51",
+                                  "referencedDeclaration": 50154,
+                                  "src": "1685:1:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_int256",
                                     "typeString": "int256"
@@ -1439,94 +1439,94 @@ export const SignedMath = {
                                 "nodeType": "BinaryOperation",
                                 "operator": "^",
                                 "rightExpression": {
-                                  "id": 45639,
+                                  "id": 50187,
                                   "name": "b",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 45608,
-                                  "src": "1689:1:51",
+                                  "referencedDeclaration": 50156,
+                                  "src": "1689:1:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_int256",
                                     "typeString": "int256"
                                   }
                                 },
-                                "src": "1685:5:51",
+                                "src": "1685:5:59",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_int256",
                                   "typeString": "int256"
                                 }
                               }
                             ],
-                            "id": 45641,
+                            "id": 50189,
                             "isConstant": false,
                             "isInlineArray": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "nodeType": "TupleExpression",
-                            "src": "1684:7:51",
+                            "src": "1684:7:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
                             }
                           },
-                          "src": "1656:35:51",
+                          "src": "1656:35:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
                           }
                         }
                       ],
-                      "id": 45643,
+                      "id": 50191,
                       "isConstant": false,
                       "isInlineArray": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "TupleExpression",
-                      "src": "1655:37:51",
+                      "src": "1655:37:59",
                       "typeDescriptions": {
                         "typeIdentifier": "t_int256",
                         "typeString": "int256"
                       }
                     },
-                    "src": "1651:41:51",
+                    "src": "1651:41:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
                     }
                   },
-                  "functionReturnParameters": 45612,
-                  "id": 45645,
+                  "functionReturnParameters": 50160,
+                  "id": 50193,
                   "nodeType": "Return",
-                  "src": "1644:48:51"
+                  "src": "1644:48:59"
                 }
               ]
             },
             "documentation": {
-              "id": 45604,
+              "id": 50152,
               "nodeType": "StructuredDocumentation",
-              "src": "1338:126:51",
+              "src": "1338:126:59",
               "text": " @dev Returns the average of two signed numbers without overflow.\n The result is rounded towards zero."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "average",
-            "nameLocation": "1478:7:51",
+            "nameLocation": "1478:7:59",
             "parameters": {
-              "id": 45609,
+              "id": 50157,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45606,
+                  "id": 50154,
                   "mutability": "mutable",
                   "name": "a",
-                  "nameLocation": "1493:1:51",
+                  "nameLocation": "1493:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45647,
-                  "src": "1486:8:51",
+                  "scope": 50195,
+                  "src": "1486:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1534,10 +1534,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45605,
+                    "id": 50153,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1486:6:51",
+                    "src": "1486:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -1547,13 +1547,13 @@ export const SignedMath = {
                 },
                 {
                   "constant": false,
-                  "id": 45608,
+                  "id": 50156,
                   "mutability": "mutable",
                   "name": "b",
-                  "nameLocation": "1503:1:51",
+                  "nameLocation": "1503:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45647,
-                  "src": "1496:8:51",
+                  "scope": 50195,
+                  "src": "1496:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1561,10 +1561,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45607,
+                    "id": 50155,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1496:6:51",
+                    "src": "1496:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -1573,21 +1573,21 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1485:20:51"
+              "src": "1485:20:59"
             },
             "returnParameters": {
-              "id": 45612,
+              "id": 50160,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45611,
+                  "id": 50159,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45647,
-                  "src": "1529:6:51",
+                  "scope": 50195,
+                  "src": "1529:6:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1595,10 +1595,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45610,
+                    "id": 50158,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1529:6:51",
+                    "src": "1529:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -1607,43 +1607,43 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1528:8:51"
+              "src": "1528:8:59"
             },
-            "scope": 45674,
+            "scope": 50222,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 45673,
+            "id": 50221,
             "nodeType": "FunctionDefinition",
-            "src": "1788:822:51",
+            "src": "1788:822:59",
             "nodes": [],
             "body": {
-              "id": 45672,
+              "id": 50220,
               "nodeType": "Block",
-              "src": "1843:767:51",
+              "src": "1843:767:59",
               "nodes": [],
               "statements": [
                 {
-                  "id": 45671,
+                  "id": 50219,
                   "nodeType": "UncheckedBlock",
-                  "src": "1853:751:51",
+                  "src": "1853:751:59",
                   "statements": [
                     {
                       "assignments": [
-                        45656
+                        50204
                       ],
                       "declarations": [
                         {
                           "constant": false,
-                          "id": 45656,
+                          "id": 50204,
                           "mutability": "mutable",
                           "name": "mask",
-                          "nameLocation": "2424:4:51",
+                          "nameLocation": "2424:4:59",
                           "nodeType": "VariableDeclaration",
-                          "scope": 45671,
-                          "src": "2417:11:51",
+                          "scope": 50219,
+                          "src": "2417:11:59",
                           "stateVariable": false,
                           "storageLocation": "default",
                           "typeDescriptions": {
@@ -1651,10 +1651,10 @@ export const SignedMath = {
                             "typeString": "int256"
                           },
                           "typeName": {
-                            "id": 45655,
+                            "id": 50203,
                             "name": "int256",
                             "nodeType": "ElementaryTypeName",
-                            "src": "2417:6:51",
+                            "src": "2417:6:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
@@ -1663,24 +1663,24 @@ export const SignedMath = {
                           "visibility": "internal"
                         }
                       ],
-                      "id": 45660,
+                      "id": 50208,
                       "initialValue": {
                         "commonType": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         },
-                        "id": 45659,
+                        "id": 50207,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "leftExpression": {
-                          "id": 45657,
+                          "id": 50205,
                           "name": "n",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 45650,
-                          "src": "2431:1:51",
+                          "referencedDeclaration": 50198,
+                          "src": "2431:1:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_int256",
                             "typeString": "int256"
@@ -1690,28 +1690,28 @@ export const SignedMath = {
                         "operator": ">>",
                         "rightExpression": {
                           "hexValue": "323535",
-                          "id": 45658,
+                          "id": 50206,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "kind": "number",
                           "lValueRequested": false,
                           "nodeType": "Literal",
-                          "src": "2436:3:51",
+                          "src": "2436:3:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_rational_255_by_1",
                             "typeString": "int_const 255"
                           },
                           "value": "255"
                         },
-                        "src": "2431:8:51",
+                        "src": "2431:8:59",
                         "typeDescriptions": {
                           "typeIdentifier": "t_int256",
                           "typeString": "int256"
                         }
                       },
                       "nodeType": "VariableDeclarationStatement",
-                      "src": "2417:22:51"
+                      "src": "2417:22:59"
                     },
                     {
                       "expression": {
@@ -1721,7 +1721,7 @@ export const SignedMath = {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
                             },
-                            "id": 45668,
+                            "id": 50216,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1733,18 +1733,18 @@ export const SignedMath = {
                                     "typeIdentifier": "t_int256",
                                     "typeString": "int256"
                                   },
-                                  "id": 45665,
+                                  "id": 50213,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "leftExpression": {
-                                    "id": 45663,
+                                    "id": 50211,
                                     "name": "n",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 45650,
-                                    "src": "2576:1:51",
+                                    "referencedDeclaration": 50198,
+                                    "src": "2576:1:59",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_int256",
                                       "typeString": "int256"
@@ -1753,32 +1753,32 @@ export const SignedMath = {
                                   "nodeType": "BinaryOperation",
                                   "operator": "+",
                                   "rightExpression": {
-                                    "id": 45664,
+                                    "id": 50212,
                                     "name": "mask",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 45656,
-                                    "src": "2580:4:51",
+                                    "referencedDeclaration": 50204,
+                                    "src": "2580:4:59",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_int256",
                                       "typeString": "int256"
                                     }
                                   },
-                                  "src": "2576:8:51",
+                                  "src": "2576:8:59",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_int256",
                                     "typeString": "int256"
                                   }
                                 }
                               ],
-                              "id": 45666,
+                              "id": 50214,
                               "isConstant": false,
                               "isInlineArray": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "TupleExpression",
-                              "src": "2575:10:51",
+                              "src": "2575:10:59",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_int256",
                                 "typeString": "int256"
@@ -1787,18 +1787,18 @@ export const SignedMath = {
                             "nodeType": "BinaryOperation",
                             "operator": "^",
                             "rightExpression": {
-                              "id": 45667,
+                              "id": 50215,
                               "name": "mask",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 45656,
-                              "src": "2588:4:51",
+                              "referencedDeclaration": 50204,
+                              "src": "2588:4:59",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_int256",
                                 "typeString": "int256"
                               }
                             },
-                            "src": "2575:17:51",
+                            "src": "2575:17:59",
                             "typeDescriptions": {
                               "typeIdentifier": "t_int256",
                               "typeString": "int256"
@@ -1812,26 +1812,26 @@ export const SignedMath = {
                               "typeString": "int256"
                             }
                           ],
-                          "id": 45662,
+                          "id": 50210,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
                           "nodeType": "ElementaryTypeNameExpression",
-                          "src": "2567:7:51",
+                          "src": "2567:7:59",
                           "typeDescriptions": {
                             "typeIdentifier": "t_type$_t_uint256_$",
                             "typeString": "type(uint256)"
                           },
                           "typeName": {
-                            "id": 45661,
+                            "id": 50209,
                             "name": "uint256",
                             "nodeType": "ElementaryTypeName",
-                            "src": "2567:7:51",
+                            "src": "2567:7:59",
                             "typeDescriptions": {}
                           }
                         },
-                        "id": 45669,
+                        "id": 50217,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1840,46 +1840,46 @@ export const SignedMath = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "2567:26:51",
+                        "src": "2567:26:59",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "functionReturnParameters": 45654,
-                      "id": 45670,
+                      "functionReturnParameters": 50202,
+                      "id": 50218,
                       "nodeType": "Return",
-                      "src": "2560:33:51"
+                      "src": "2560:33:59"
                     }
                   ]
                 }
               ]
             },
             "documentation": {
-              "id": 45648,
+              "id": 50196,
               "nodeType": "StructuredDocumentation",
-              "src": "1705:78:51",
+              "src": "1705:78:59",
               "text": " @dev Returns the absolute unsigned value of a signed value."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "abs",
-            "nameLocation": "1797:3:51",
+            "nameLocation": "1797:3:59",
             "parameters": {
-              "id": 45651,
+              "id": 50199,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45650,
+                  "id": 50198,
                   "mutability": "mutable",
                   "name": "n",
-                  "nameLocation": "1808:1:51",
+                  "nameLocation": "1808:1:59",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45673,
-                  "src": "1801:8:51",
+                  "scope": 50221,
+                  "src": "1801:8:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1887,10 +1887,10 @@ export const SignedMath = {
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 45649,
+                    "id": 50197,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1801:6:51",
+                    "src": "1801:6:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_int256",
                       "typeString": "int256"
@@ -1899,21 +1899,21 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1800:10:51"
+              "src": "1800:10:59"
             },
             "returnParameters": {
-              "id": 45654,
+              "id": 50202,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 45653,
+                  "id": 50201,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 45673,
-                  "src": "1834:7:51",
+                  "scope": 50221,
+                  "src": "1834:7:59",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1921,10 +1921,10 @@ export const SignedMath = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 45652,
+                    "id": 50200,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1834:7:51",
+                    "src": "1834:7:59",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1933,9 +1933,9 @@ export const SignedMath = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1833:9:51"
+              "src": "1833:9:59"
             },
-            "scope": 45674,
+            "scope": 50222,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
@@ -1947,23 +1947,23 @@ export const SignedMath = {
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 45535,
+          "id": 50083,
           "nodeType": "StructuredDocumentation",
-          "src": "177:80:51",
+          "src": "177:80:59",
           "text": " @dev Standard signed math utilities missing in the Solidity language."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          45674
+          50222
         ],
         "name": "SignedMath",
-        "nameLocation": "266:10:51",
-        "scope": 45675,
+        "nameLocation": "266:10:59",
+        "scope": 50223,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 51
+  "id": 59
 } as const;

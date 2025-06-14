@@ -2,12 +2,12 @@ export const Panic = {
   "abi": [],
   "bytecode": {
     "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220634f722f642f2217ddf307ccaed36dbd712aa07640e491385d7e9040442af72064736f6c634300081a0033",
-    "sourceMap": "657:1315:41:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;657:1315:41;;;;;;;;;;;;;;;;;",
+    "sourceMap": "657:1315:49:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;657:1315:49;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220634f722f642f2217ddf307ccaed36dbd712aa07640e491385d7e9040442af72064736f6c634300081a0033",
-    "sourceMap": "657:1315:41:-:0;;;;;;;;",
+    "sourceMap": "657:1315:49:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -64,19 +64,19 @@ export const Panic = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/utils/Panic.sol",
-    "id": 41044,
+    "id": 45592,
     "exportedSymbols": {
       "Panic": [
-        41043
+        45591
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "99:1874:41",
+    "src": "99:1874:49",
     "nodes": [
       {
-        "id": 40993,
+        "id": 45541,
         "nodeType": "PragmaDirective",
-        "src": "99:24:41",
+        "src": "99:24:49",
         "nodes": [],
         "literals": [
           "solidity",
@@ -86,26 +86,26 @@ export const Panic = {
         ]
       },
       {
-        "id": 41043,
+        "id": 45591,
         "nodeType": "ContractDefinition",
-        "src": "657:1315:41",
+        "src": "657:1315:49",
         "nodes": [
           {
-            "id": 40998,
+            "id": 45546,
             "nodeType": "VariableDeclaration",
-            "src": "718:40:41",
+            "src": "718:40:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 40995,
+              "id": 45543,
               "nodeType": "StructuredDocumentation",
-              "src": "677:36:41",
+              "src": "677:36:49",
               "text": "@dev generic / unspecified error"
             },
             "mutability": "constant",
             "name": "GENERIC",
-            "nameLocation": "744:7:41",
-            "scope": 41043,
+            "nameLocation": "744:7:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -113,10 +113,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 40996,
+              "id": 45544,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "718:7:41",
+              "src": "718:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -124,14 +124,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783030",
-              "id": 40997,
+              "id": 45545,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "754:4:41",
+              "src": "754:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_0_by_1",
                 "typeString": "int_const 0"
@@ -141,21 +141,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41002,
+            "id": 45550,
             "nodeType": "VariableDeclaration",
-            "src": "806:39:41",
+            "src": "806:39:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 40999,
+              "id": 45547,
               "nodeType": "StructuredDocumentation",
-              "src": "764:37:41",
+              "src": "764:37:49",
               "text": "@dev used by the assert() builtin"
             },
             "mutability": "constant",
             "name": "ASSERT",
-            "nameLocation": "832:6:41",
-            "scope": 41043,
+            "nameLocation": "832:6:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -163,10 +163,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41000,
+              "id": 45548,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "806:7:41",
+              "src": "806:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -174,14 +174,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783031",
-              "id": 41001,
+              "id": 45549,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "841:4:41",
+              "src": "841:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_1_by_1",
                 "typeString": "int_const 1"
@@ -191,21 +191,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41006,
+            "id": 45554,
             "nodeType": "VariableDeclaration",
-            "src": "897:47:41",
+            "src": "897:47:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41003,
+              "id": 45551,
               "nodeType": "StructuredDocumentation",
-              "src": "851:41:41",
+              "src": "851:41:49",
               "text": "@dev arithmetic underflow or overflow"
             },
             "mutability": "constant",
             "name": "UNDER_OVERFLOW",
-            "nameLocation": "923:14:41",
-            "scope": 41043,
+            "nameLocation": "923:14:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -213,10 +213,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41004,
+              "id": 45552,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "897:7:41",
+              "src": "897:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -224,14 +224,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783131",
-              "id": 41005,
+              "id": 45553,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "940:4:41",
+              "src": "940:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_17_by_1",
                 "typeString": "int_const 17"
@@ -241,21 +241,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41010,
+            "id": 45558,
             "nodeType": "VariableDeclaration",
-            "src": "990:49:41",
+            "src": "990:49:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41007,
+              "id": 45555,
               "nodeType": "StructuredDocumentation",
-              "src": "950:35:41",
+              "src": "950:35:49",
               "text": "@dev division or modulo by zero"
             },
             "mutability": "constant",
             "name": "DIVISION_BY_ZERO",
-            "nameLocation": "1016:16:41",
-            "scope": 41043,
+            "nameLocation": "1016:16:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -263,10 +263,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41008,
+              "id": 45556,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "990:7:41",
+              "src": "990:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -274,14 +274,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783132",
-              "id": 41009,
+              "id": 45557,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1035:4:41",
+              "src": "1035:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_18_by_1",
                 "typeString": "int_const 18"
@@ -291,21 +291,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41014,
+            "id": 45562,
             "nodeType": "VariableDeclaration",
-            "src": "1080:54:41",
+            "src": "1080:54:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41011,
+              "id": 45559,
               "nodeType": "StructuredDocumentation",
-              "src": "1045:30:41",
+              "src": "1045:30:49",
               "text": "@dev enum conversion error"
             },
             "mutability": "constant",
             "name": "ENUM_CONVERSION_ERROR",
-            "nameLocation": "1106:21:41",
-            "scope": 41043,
+            "nameLocation": "1106:21:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -313,10 +313,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41012,
+              "id": 45560,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1080:7:41",
+              "src": "1080:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -324,14 +324,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783231",
-              "id": 41013,
+              "id": 45561,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1130:4:41",
+              "src": "1130:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_33_by_1",
                 "typeString": "int_const 33"
@@ -341,21 +341,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41018,
+            "id": 45566,
             "nodeType": "VariableDeclaration",
-            "src": "1181:55:41",
+            "src": "1181:55:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41015,
+              "id": 45563,
               "nodeType": "StructuredDocumentation",
-              "src": "1140:36:41",
+              "src": "1140:36:49",
               "text": "@dev invalid encoding in storage"
             },
             "mutability": "constant",
             "name": "STORAGE_ENCODING_ERROR",
-            "nameLocation": "1207:22:41",
-            "scope": 41043,
+            "nameLocation": "1207:22:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -363,10 +363,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41016,
+              "id": 45564,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1181:7:41",
+              "src": "1181:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -374,14 +374,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783232",
-              "id": 41017,
+              "id": 45565,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1232:4:41",
+              "src": "1232:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_34_by_1",
                 "typeString": "int_const 34"
@@ -391,21 +391,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41022,
+            "id": 45570,
             "nodeType": "VariableDeclaration",
-            "src": "1271:48:41",
+            "src": "1271:48:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41019,
+              "id": 45567,
               "nodeType": "StructuredDocumentation",
-              "src": "1242:24:41",
+              "src": "1242:24:49",
               "text": "@dev empty array pop"
             },
             "mutability": "constant",
             "name": "EMPTY_ARRAY_POP",
-            "nameLocation": "1297:15:41",
-            "scope": 41043,
+            "nameLocation": "1297:15:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -413,10 +413,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41020,
+              "id": 45568,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1271:7:41",
+              "src": "1271:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -424,14 +424,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783331",
-              "id": 41021,
+              "id": 45569,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1315:4:41",
+              "src": "1315:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_49_by_1",
                 "typeString": "int_const 49"
@@ -441,21 +441,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41026,
+            "id": 45574,
             "nodeType": "VariableDeclaration",
-            "src": "1365:52:41",
+            "src": "1365:52:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41023,
+              "id": 45571,
               "nodeType": "StructuredDocumentation",
-              "src": "1325:35:41",
+              "src": "1325:35:49",
               "text": "@dev array out of bounds access"
             },
             "mutability": "constant",
             "name": "ARRAY_OUT_OF_BOUNDS",
-            "nameLocation": "1391:19:41",
-            "scope": 41043,
+            "nameLocation": "1391:19:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -463,10 +463,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41024,
+              "id": 45572,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1365:7:41",
+              "src": "1365:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -474,14 +474,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783332",
-              "id": 41025,
+              "id": 45573,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1413:4:41",
+              "src": "1413:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_50_by_1",
                 "typeString": "int_const 50"
@@ -491,21 +491,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41030,
+            "id": 45578,
             "nodeType": "VariableDeclaration",
-            "src": "1493:47:41",
+            "src": "1493:47:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41027,
+              "id": 45575,
               "nodeType": "StructuredDocumentation",
-              "src": "1423:65:41",
+              "src": "1423:65:49",
               "text": "@dev resource error (too large allocation or too large array)"
             },
             "mutability": "constant",
             "name": "RESOURCE_ERROR",
-            "nameLocation": "1519:14:41",
-            "scope": 41043,
+            "nameLocation": "1519:14:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -513,10 +513,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41028,
+              "id": 45576,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1493:7:41",
+              "src": "1493:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -524,14 +524,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783431",
-              "id": 41029,
+              "id": 45577,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1536:4:41",
+              "src": "1536:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_65_by_1",
                 "typeString": "int_const 65"
@@ -541,21 +541,21 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41034,
+            "id": 45582,
             "nodeType": "VariableDeclaration",
-            "src": "1593:58:41",
+            "src": "1593:58:49",
             "nodes": [],
             "constant": true,
             "documentation": {
-              "id": 41031,
+              "id": 45579,
               "nodeType": "StructuredDocumentation",
-              "src": "1546:42:41",
+              "src": "1546:42:49",
               "text": "@dev calling invalid internal function"
             },
             "mutability": "constant",
             "name": "INVALID_INTERNAL_FUNCTION",
-            "nameLocation": "1619:25:41",
-            "scope": 41043,
+            "nameLocation": "1619:25:49",
+            "scope": 45591,
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -563,10 +563,10 @@ export const Panic = {
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 41032,
+              "id": 45580,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "1593:7:41",
+              "src": "1593:7:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -574,14 +574,14 @@ export const Panic = {
             },
             "value": {
               "hexValue": "30783531",
-              "id": 41033,
+              "id": 45581,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "1647:4:41",
+              "src": "1647:4:49",
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_81_by_1",
                 "typeString": "int_const 81"
@@ -591,167 +591,167 @@ export const Panic = {
             "visibility": "internal"
           },
           {
-            "id": 41042,
+            "id": 45590,
             "nodeType": "FunctionDefinition",
-            "src": "1776:194:41",
+            "src": "1776:194:49",
             "nodes": [],
             "body": {
-              "id": 41041,
+              "id": 45589,
               "nodeType": "Block",
-              "src": "1819:151:41",
+              "src": "1819:151:49",
               "nodes": [],
               "statements": [
                 {
                   "AST": {
-                    "nativeSrc": "1854:110:41",
+                    "nativeSrc": "1854:110:49",
                     "nodeType": "YulBlock",
-                    "src": "1854:110:41",
+                    "src": "1854:110:49",
                     "statements": [
                       {
                         "expression": {
                           "arguments": [
                             {
                               "kind": "number",
-                              "nativeSrc": "1875:4:41",
+                              "nativeSrc": "1875:4:49",
                               "nodeType": "YulLiteral",
-                              "src": "1875:4:41",
+                              "src": "1875:4:49",
                               "type": "",
                               "value": "0x00"
                             },
                             {
                               "kind": "number",
-                              "nativeSrc": "1881:10:41",
+                              "nativeSrc": "1881:10:49",
                               "nodeType": "YulLiteral",
-                              "src": "1881:10:41",
+                              "src": "1881:10:49",
                               "type": "",
                               "value": "0x4e487b71"
                             }
                           ],
                           "functionName": {
                             "name": "mstore",
-                            "nativeSrc": "1868:6:41",
+                            "nativeSrc": "1868:6:49",
                             "nodeType": "YulIdentifier",
-                            "src": "1868:6:41"
+                            "src": "1868:6:49"
                           },
-                          "nativeSrc": "1868:24:41",
+                          "nativeSrc": "1868:24:49",
                           "nodeType": "YulFunctionCall",
-                          "src": "1868:24:41"
+                          "src": "1868:24:49"
                         },
-                        "nativeSrc": "1868:24:41",
+                        "nativeSrc": "1868:24:49",
                         "nodeType": "YulExpressionStatement",
-                        "src": "1868:24:41"
+                        "src": "1868:24:49"
                       },
                       {
                         "expression": {
                           "arguments": [
                             {
                               "kind": "number",
-                              "nativeSrc": "1912:4:41",
+                              "nativeSrc": "1912:4:49",
                               "nodeType": "YulLiteral",
-                              "src": "1912:4:41",
+                              "src": "1912:4:49",
                               "type": "",
                               "value": "0x20"
                             },
                             {
                               "name": "code",
-                              "nativeSrc": "1918:4:41",
+                              "nativeSrc": "1918:4:49",
                               "nodeType": "YulIdentifier",
-                              "src": "1918:4:41"
+                              "src": "1918:4:49"
                             }
                           ],
                           "functionName": {
                             "name": "mstore",
-                            "nativeSrc": "1905:6:41",
+                            "nativeSrc": "1905:6:49",
                             "nodeType": "YulIdentifier",
-                            "src": "1905:6:41"
+                            "src": "1905:6:49"
                           },
-                          "nativeSrc": "1905:18:41",
+                          "nativeSrc": "1905:18:49",
                           "nodeType": "YulFunctionCall",
-                          "src": "1905:18:41"
+                          "src": "1905:18:49"
                         },
-                        "nativeSrc": "1905:18:41",
+                        "nativeSrc": "1905:18:49",
                         "nodeType": "YulExpressionStatement",
-                        "src": "1905:18:41"
+                        "src": "1905:18:49"
                       },
                       {
                         "expression": {
                           "arguments": [
                             {
                               "kind": "number",
-                              "nativeSrc": "1943:4:41",
+                              "nativeSrc": "1943:4:49",
                               "nodeType": "YulLiteral",
-                              "src": "1943:4:41",
+                              "src": "1943:4:49",
                               "type": "",
                               "value": "0x1c"
                             },
                             {
                               "kind": "number",
-                              "nativeSrc": "1949:4:41",
+                              "nativeSrc": "1949:4:49",
                               "nodeType": "YulLiteral",
-                              "src": "1949:4:41",
+                              "src": "1949:4:49",
                               "type": "",
                               "value": "0x24"
                             }
                           ],
                           "functionName": {
                             "name": "revert",
-                            "nativeSrc": "1936:6:41",
+                            "nativeSrc": "1936:6:49",
                             "nodeType": "YulIdentifier",
-                            "src": "1936:6:41"
+                            "src": "1936:6:49"
                           },
-                          "nativeSrc": "1936:18:41",
+                          "nativeSrc": "1936:18:49",
                           "nodeType": "YulFunctionCall",
-                          "src": "1936:18:41"
+                          "src": "1936:18:49"
                         },
-                        "nativeSrc": "1936:18:41",
+                        "nativeSrc": "1936:18:49",
                         "nodeType": "YulExpressionStatement",
-                        "src": "1936:18:41"
+                        "src": "1936:18:49"
                       }
                     ]
                   },
                   "evmVersion": "paris",
                   "externalReferences": [
                     {
-                      "declaration": 41037,
+                      "declaration": 45585,
                       "isOffset": false,
                       "isSlot": false,
-                      "src": "1918:4:41",
+                      "src": "1918:4:49",
                       "valueSize": 1
                     }
                   ],
                   "flags": [
                     "memory-safe"
                   ],
-                  "id": 41040,
+                  "id": 45588,
                   "nodeType": "InlineAssembly",
-                  "src": "1829:135:41"
+                  "src": "1829:135:49"
                 }
               ]
             },
             "documentation": {
-              "id": 41035,
+              "id": 45583,
               "nodeType": "StructuredDocumentation",
-              "src": "1658:113:41",
+              "src": "1658:113:49",
               "text": "@dev Reverts with a panic code. Recommended to use with\n the internal constants with predefined codes."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "panic",
-            "nameLocation": "1785:5:41",
+            "nameLocation": "1785:5:49",
             "parameters": {
-              "id": 41038,
+              "id": 45586,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 41037,
+                  "id": 45585,
                   "mutability": "mutable",
                   "name": "code",
-                  "nameLocation": "1799:4:41",
+                  "nameLocation": "1799:4:49",
                   "nodeType": "VariableDeclaration",
-                  "scope": 41042,
-                  "src": "1791:12:41",
+                  "scope": 45590,
+                  "src": "1791:12:49",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -759,10 +759,10 @@ export const Panic = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 41036,
+                    "id": 45584,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1791:7:41",
+                    "src": "1791:7:49",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -771,15 +771,15 @@ export const Panic = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1790:14:41"
+              "src": "1790:14:49"
             },
             "returnParameters": {
-              "id": 41039,
+              "id": 45587,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1819:0:41"
+              "src": "1819:0:49"
             },
-            "scope": 41043,
+            "scope": 45591,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
@@ -791,23 +791,23 @@ export const Panic = {
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 40994,
+          "id": 45542,
           "nodeType": "StructuredDocumentation",
-          "src": "125:489:41",
+          "src": "125:489:49",
           "text": " @dev Helper library for emitting standardized panic codes.\n ```solidity\n contract Example {\n      using Panic for uint256;\n      // Use any of the declared internal constants\n      function foo() { Panic.GENERIC.panic(); }\n      // Alternatively\n      function foo() { Panic.panic(Panic.GENERIC); }\n }\n ```\n Follows the list from https://github.com/ethereum/solidity/blob/v0.8.24/libsolutil/ErrorCodes.h[libsolutil].\n _Available since v5.1._"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          41043
+          45591
         ],
         "name": "Panic",
-        "nameLocation": "665:5:41",
-        "scope": 41044,
+        "nameLocation": "665:5:49",
+        "scope": 45592,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 41
+  "id": 49
 } as const;

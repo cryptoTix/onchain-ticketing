@@ -140,19 +140,19 @@ export const IERC721Receiver = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
-    "id": 39977,
+    "id": 44495,
     "exportedSymbols": {
       "IERC721Receiver": [
-        39976
+        44494
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "116:881:36",
+    "src": "116:881:43",
     "nodes": [
       {
-        "id": 39960,
+        "id": 44478,
         "nodeType": "PragmaDirective",
-        "src": "116:24:36",
+        "src": "116:24:43",
         "nodes": [],
         "literals": [
           "solidity",
@@ -162,19 +162,19 @@ export const IERC721Receiver = {
         ]
       },
       {
-        "id": 39976,
+        "id": 44494,
         "nodeType": "ContractDefinition",
-        "src": "297:699:36",
+        "src": "297:699:43",
         "nodes": [
           {
-            "id": 39975,
+            "id": 44493,
             "nodeType": "FunctionDefinition",
-            "src": "834:160:36",
+            "src": "834:160:43",
             "nodes": [],
             "documentation": {
-              "id": 39962,
+              "id": 44480,
               "nodeType": "StructuredDocumentation",
-              "src": "329:500:36",
+              "src": "329:500:43",
               "text": " @dev Whenever an {IERC721} `tokenId` token is transferred to this contract via {IERC721-safeTransferFrom}\n by `operator` from `from`, this function is called.\n It must return its Solidity selector to confirm the token transfer.\n If any other value is returned or the interface is not implemented by the recipient, the transfer will be\n reverted.\n The selector can be obtained in Solidity with `IERC721Receiver.onERC721Received.selector`."
             },
             "functionSelector": "150b7a02",
@@ -182,20 +182,20 @@ export const IERC721Receiver = {
             "kind": "function",
             "modifiers": [],
             "name": "onERC721Received",
-            "nameLocation": "843:16:36",
+            "nameLocation": "843:16:43",
             "parameters": {
-              "id": 39971,
+              "id": 44489,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39964,
+                  "id": 44482,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "877:8:36",
+                  "nameLocation": "877:8:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39975,
-                  "src": "869:16:36",
+                  "scope": 44493,
+                  "src": "869:16:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -203,10 +203,10 @@ export const IERC721Receiver = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39963,
+                    "id": 44481,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "869:7:36",
+                    "src": "869:7:43",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -217,13 +217,13 @@ export const IERC721Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39966,
+                  "id": 44484,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "903:4:36",
+                  "nameLocation": "903:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39975,
-                  "src": "895:12:36",
+                  "scope": 44493,
+                  "src": "895:12:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -231,10 +231,10 @@ export const IERC721Receiver = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39965,
+                    "id": 44483,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "895:7:36",
+                    "src": "895:7:43",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -245,13 +245,13 @@ export const IERC721Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39968,
+                  "id": 44486,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "925:7:36",
+                  "nameLocation": "925:7:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39975,
-                  "src": "917:15:36",
+                  "scope": 44493,
+                  "src": "917:15:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -259,10 +259,10 @@ export const IERC721Receiver = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39967,
+                    "id": 44485,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "917:7:36",
+                    "src": "917:7:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -272,13 +272,13 @@ export const IERC721Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39970,
+                  "id": 44488,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "957:4:36",
+                  "nameLocation": "957:4:43",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39975,
-                  "src": "942:19:36",
+                  "scope": 44493,
+                  "src": "942:19:43",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -286,10 +286,10 @@ export const IERC721Receiver = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39969,
+                    "id": 44487,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "942:5:36",
+                    "src": "942:5:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -298,21 +298,21 @@ export const IERC721Receiver = {
                   "visibility": "internal"
                 }
               ],
-              "src": "859:108:36"
+              "src": "859:108:43"
             },
             "returnParameters": {
-              "id": 39974,
+              "id": 44492,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39973,
+                  "id": 44491,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39975,
-                  "src": "986:6:36",
+                  "scope": 44493,
+                  "src": "986:6:43",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -320,10 +320,10 @@ export const IERC721Receiver = {
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 39972,
+                    "id": 44490,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "986:6:36",
+                    "src": "986:6:43",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -332,9 +332,9 @@ export const IERC721Receiver = {
                   "visibility": "internal"
                 }
               ],
-              "src": "985:8:36"
+              "src": "985:8:43"
             },
-            "scope": 39976,
+            "scope": 44494,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -346,23 +346,23 @@ export const IERC721Receiver = {
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 39961,
+          "id": 44479,
           "nodeType": "StructuredDocumentation",
-          "src": "142:154:36",
+          "src": "142:154:43",
           "text": " @title ERC-721 token receiver interface\n @dev Interface for any contract that wants to support safeTransfers\n from ERC-721 asset contracts."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          39976
+          44494
         ],
         "name": "IERC721Receiver",
-        "nameLocation": "307:15:36",
-        "scope": 39977,
+        "nameLocation": "307:15:43",
+        "scope": 44495,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 36
+  "id": 43
 } as const;

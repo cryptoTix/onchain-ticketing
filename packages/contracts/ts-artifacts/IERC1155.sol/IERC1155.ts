@@ -687,22 +687,22 @@ export const IERC1155 = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
-    "id": 39552,
+    "id": 43529,
     "exportedSymbols": {
       "IERC1155": [
-        39551
+        43528
       ],
       "IERC165": [
-        42159
+        46707
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "110:4606:30",
+    "src": "110:4606:35",
     "nodes": [
       {
-        "id": 39430,
+        "id": 43407,
         "nodeType": "PragmaDirective",
-        "src": "110:24:30",
+        "src": "110:24:35",
         "nodes": [],
         "literals": [
           "solidity",
@@ -712,24 +712,24 @@ export const IERC1155 = {
         ]
       },
       {
-        "id": 39432,
+        "id": 43409,
         "nodeType": "ImportDirective",
-        "src": "136:62:30",
+        "src": "136:62:35",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
         "file": "../../utils/introspection/IERC165.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 39552,
-        "sourceUnit": 42160,
+        "scope": 43529,
+        "sourceUnit": 46708,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39431,
+              "id": 43408,
               "name": "IERC165",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 42159,
-              "src": "144:7:30",
+              "referencedDeclaration": 46707,
+              "src": "144:7:35",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -738,39 +738,39 @@ export const IERC1155 = {
         "unitAlias": ""
       },
       {
-        "id": 39551,
+        "id": 43528,
         "nodeType": "ContractDefinition",
-        "src": "337:4378:30",
+        "src": "337:4378:35",
         "nodes": [
           {
-            "id": 39448,
+            "id": 43425,
             "nodeType": "EventDefinition",
-            "src": "503:116:30",
+            "src": "503:116:35",
             "nodes": [],
             "anonymous": false,
             "documentation": {
-              "id": 39436,
+              "id": 43413,
               "nodeType": "StructuredDocumentation",
-              "src": "373:125:30",
+              "src": "373:125:35",
               "text": " @dev Emitted when `value` amount of tokens of type `id` are transferred from `from` to `to` by `operator`."
             },
             "eventSelector": "c3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62",
             "name": "TransferSingle",
-            "nameLocation": "509:14:30",
+            "nameLocation": "509:14:35",
             "parameters": {
-              "id": 39447,
+              "id": 43424,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39438,
+                  "id": 43415,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "540:8:30",
+                  "nameLocation": "540:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39448,
-                  "src": "524:24:30",
+                  "scope": 43425,
+                  "src": "524:24:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -778,10 +778,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39437,
+                    "id": 43414,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "524:7:30",
+                    "src": "524:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -792,14 +792,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39440,
+                  "id": 43417,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "566:4:30",
+                  "nameLocation": "566:4:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39448,
-                  "src": "550:20:30",
+                  "scope": 43425,
+                  "src": "550:20:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -807,10 +807,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39439,
+                    "id": 43416,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "550:7:30",
+                    "src": "550:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -821,14 +821,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39442,
+                  "id": 43419,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "588:2:30",
+                  "nameLocation": "588:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39448,
-                  "src": "572:18:30",
+                  "scope": 43425,
+                  "src": "572:18:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -836,10 +836,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39441,
+                    "id": 43418,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "572:7:30",
+                    "src": "572:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -850,14 +850,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39444,
+                  "id": 43421,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "600:2:30",
+                  "nameLocation": "600:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39448,
-                  "src": "592:10:30",
+                  "scope": 43425,
+                  "src": "592:10:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -865,10 +865,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39443,
+                    "id": 43420,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "592:7:30",
+                    "src": "592:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -878,14 +878,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39446,
+                  "id": 43423,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "612:5:30",
+                  "nameLocation": "612:5:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39448,
-                  "src": "604:13:30",
+                  "scope": 43425,
+                  "src": "604:13:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -893,10 +893,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39445,
+                    "id": 43422,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "604:7:30",
+                    "src": "604:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -905,38 +905,38 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "523:95:30"
+              "src": "523:95:35"
             }
           },
           {
-            "id": 39463,
+            "id": 43440,
             "nodeType": "EventDefinition",
-            "src": "774:167:30",
+            "src": "774:167:35",
             "nodes": [],
             "anonymous": false,
             "documentation": {
-              "id": 39449,
+              "id": 43426,
               "nodeType": "StructuredDocumentation",
-              "src": "625:144:30",
+              "src": "625:144:35",
               "text": " @dev Equivalent to multiple {TransferSingle} events, where `operator`, `from` and `to` are the same for all\n transfers."
             },
             "eventSelector": "4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb",
             "name": "TransferBatch",
-            "nameLocation": "780:13:30",
+            "nameLocation": "780:13:35",
             "parameters": {
-              "id": 39462,
+              "id": 43439,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39451,
+                  "id": 43428,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "819:8:30",
+                  "nameLocation": "819:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39463,
-                  "src": "803:24:30",
+                  "scope": 43440,
+                  "src": "803:24:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -944,10 +944,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39450,
+                    "id": 43427,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "803:7:30",
+                    "src": "803:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -958,14 +958,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39453,
+                  "id": 43430,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "853:4:30",
+                  "nameLocation": "853:4:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39463,
-                  "src": "837:20:30",
+                  "scope": 43440,
+                  "src": "837:20:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -973,10 +973,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39452,
+                    "id": 43429,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "837:7:30",
+                    "src": "837:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -987,14 +987,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39455,
+                  "id": 43432,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "883:2:30",
+                  "nameLocation": "883:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39463,
-                  "src": "867:18:30",
+                  "scope": 43440,
+                  "src": "867:18:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1002,10 +1002,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39454,
+                    "id": 43431,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "867:7:30",
+                    "src": "867:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1016,14 +1016,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39458,
+                  "id": 43435,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "ids",
-                  "nameLocation": "905:3:30",
+                  "nameLocation": "905:3:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39463,
-                  "src": "895:13:30",
+                  "scope": 43440,
+                  "src": "895:13:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1032,18 +1032,18 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39456,
+                      "id": 43433,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "895:7:30",
+                      "src": "895:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39457,
+                    "id": 43434,
                     "nodeType": "ArrayTypeName",
-                    "src": "895:9:30",
+                    "src": "895:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -1053,14 +1053,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39461,
+                  "id": 43438,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "values",
-                  "nameLocation": "928:6:30",
+                  "nameLocation": "928:6:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39463,
-                  "src": "918:16:30",
+                  "scope": 43440,
+                  "src": "918:16:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1069,18 +1069,18 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39459,
+                      "id": 43436,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "918:7:30",
+                      "src": "918:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39460,
+                    "id": 43437,
                     "nodeType": "ArrayTypeName",
-                    "src": "918:9:30",
+                    "src": "918:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -1089,38 +1089,38 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "793:147:30"
+              "src": "793:147:35"
             }
           },
           {
-            "id": 39472,
+            "id": 43449,
             "nodeType": "EventDefinition",
-            "src": "1099:87:30",
+            "src": "1099:87:35",
             "nodes": [],
             "anonymous": false,
             "documentation": {
-              "id": 39464,
+              "id": 43441,
               "nodeType": "StructuredDocumentation",
-              "src": "947:147:30",
+              "src": "947:147:35",
               "text": " @dev Emitted when `account` grants or revokes permission to `operator` to transfer their tokens, according to\n `approved`."
             },
             "eventSelector": "17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31",
             "name": "ApprovalForAll",
-            "nameLocation": "1105:14:30",
+            "nameLocation": "1105:14:35",
             "parameters": {
-              "id": 39471,
+              "id": 43448,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39466,
+                  "id": 43443,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "1136:7:30",
+                  "nameLocation": "1136:7:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39472,
-                  "src": "1120:23:30",
+                  "scope": 43449,
+                  "src": "1120:23:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1128,10 +1128,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39465,
+                    "id": 43442,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1120:7:30",
+                    "src": "1120:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1142,14 +1142,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39468,
+                  "id": 43445,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "1161:8:30",
+                  "nameLocation": "1161:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39472,
-                  "src": "1145:24:30",
+                  "scope": 43449,
+                  "src": "1145:24:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1157,10 +1157,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39467,
+                    "id": 43444,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1145:7:30",
+                    "src": "1145:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1171,14 +1171,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39470,
+                  "id": 43447,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "approved",
-                  "nameLocation": "1176:8:30",
+                  "nameLocation": "1176:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39472,
-                  "src": "1171:13:30",
+                  "scope": 43449,
+                  "src": "1171:13:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1186,10 +1186,10 @@ export const IERC1155 = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 39469,
+                    "id": 43446,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1171:4:30",
+                    "src": "1171:4:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1198,38 +1198,38 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1119:66:30"
+              "src": "1119:66:35"
             }
           },
           {
-            "id": 39479,
+            "id": 43456,
             "nodeType": "EventDefinition",
-            "src": "1540:44:30",
+            "src": "1540:44:35",
             "nodes": [],
             "anonymous": false,
             "documentation": {
-              "id": 39473,
+              "id": 43450,
               "nodeType": "StructuredDocumentation",
-              "src": "1192:343:30",
+              "src": "1192:343:35",
               "text": " @dev Emitted when the URI for token type `id` changes to `value`, if it is a non-programmatic URI.\n If an {URI} event was emitted for `id`, the standard\n https://eips.ethereum.org/EIPS/eip-1155#metadata-extensions[guarantees] that `value` will equal the value\n returned by {IERC1155MetadataURI-uri}."
             },
             "eventSelector": "6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b",
             "name": "URI",
-            "nameLocation": "1546:3:30",
+            "nameLocation": "1546:3:35",
             "parameters": {
-              "id": 39478,
+              "id": 43455,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39475,
+                  "id": 43452,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "1557:5:30",
+                  "nameLocation": "1557:5:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39479,
-                  "src": "1550:12:30",
+                  "scope": 43456,
+                  "src": "1550:12:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1237,10 +1237,10 @@ export const IERC1155 = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 39474,
+                    "id": 43451,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1550:6:30",
+                    "src": "1550:6:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1250,14 +1250,14 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39477,
+                  "id": 43454,
                   "indexed": true,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "1580:2:30",
+                  "nameLocation": "1580:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39479,
-                  "src": "1564:18:30",
+                  "scope": 43456,
+                  "src": "1564:18:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1265,10 +1265,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39476,
+                    "id": 43453,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1564:7:30",
+                    "src": "1564:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1277,18 +1277,18 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1549:34:30"
+              "src": "1549:34:35"
             }
           },
           {
-            "id": 39489,
+            "id": 43466,
             "nodeType": "FunctionDefinition",
-            "src": "1685:80:30",
+            "src": "1685:80:35",
             "nodes": [],
             "documentation": {
-              "id": 39480,
+              "id": 43457,
               "nodeType": "StructuredDocumentation",
-              "src": "1590:90:30",
+              "src": "1590:90:35",
               "text": " @dev Returns the value of tokens of token type `id` owned by `account`."
             },
             "functionSelector": "00fdd58e",
@@ -1296,20 +1296,20 @@ export const IERC1155 = {
             "kind": "function",
             "modifiers": [],
             "name": "balanceOf",
-            "nameLocation": "1694:9:30",
+            "nameLocation": "1694:9:35",
             "parameters": {
-              "id": 39485,
+              "id": 43462,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39482,
+                  "id": 43459,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "1712:7:30",
+                  "nameLocation": "1712:7:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39489,
-                  "src": "1704:15:30",
+                  "scope": 43466,
+                  "src": "1704:15:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1317,10 +1317,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39481,
+                    "id": 43458,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1704:7:30",
+                    "src": "1704:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1331,13 +1331,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39484,
+                  "id": 43461,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "1729:2:30",
+                  "nameLocation": "1729:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39489,
-                  "src": "1721:10:30",
+                  "scope": 43466,
+                  "src": "1721:10:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1345,10 +1345,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39483,
+                    "id": 43460,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1721:7:30",
+                    "src": "1721:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1357,21 +1357,21 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1703:29:30"
+              "src": "1703:29:35"
             },
             "returnParameters": {
-              "id": 39488,
+              "id": 43465,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39487,
+                  "id": 43464,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39489,
-                  "src": "1756:7:30",
+                  "scope": 43466,
+                  "src": "1756:7:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1379,10 +1379,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39486,
+                    "id": 43463,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1756:7:30",
+                    "src": "1756:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1391,22 +1391,22 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1755:9:30"
+              "src": "1755:9:35"
             },
-            "scope": 39551,
+            "scope": 43528,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39502,
+            "id": 43479,
             "nodeType": "FunctionDefinition",
-            "src": "1964:140:30",
+            "src": "1964:140:35",
             "nodes": [],
             "documentation": {
-              "id": 39490,
+              "id": 43467,
               "nodeType": "StructuredDocumentation",
-              "src": "1771:188:30",
+              "src": "1771:188:35",
               "text": " @dev xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {balanceOf}.\n Requirements:\n - `accounts` and `ids` must have the same length."
             },
             "functionSelector": "4e1273f4",
@@ -1414,20 +1414,20 @@ export const IERC1155 = {
             "kind": "function",
             "modifiers": [],
             "name": "balanceOfBatch",
-            "nameLocation": "1973:14:30",
+            "nameLocation": "1973:14:35",
             "parameters": {
-              "id": 39497,
+              "id": 43474,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39493,
+                  "id": 43470,
                   "mutability": "mutable",
                   "name": "accounts",
-                  "nameLocation": "2016:8:30",
+                  "nameLocation": "2016:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39502,
-                  "src": "1997:27:30",
+                  "scope": 43479,
+                  "src": "1997:27:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -1436,19 +1436,19 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39491,
+                      "id": 43468,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
-                      "src": "1997:7:30",
+                      "src": "1997:7:35",
                       "stateMutability": "nonpayable",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "id": 39492,
+                    "id": 43469,
                     "nodeType": "ArrayTypeName",
-                    "src": "1997:9:30",
+                    "src": "1997:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
                       "typeString": "address[]"
@@ -1458,13 +1458,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39496,
+                  "id": 43473,
                   "mutability": "mutable",
                   "name": "ids",
-                  "nameLocation": "2053:3:30",
+                  "nameLocation": "2053:3:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39502,
-                  "src": "2034:22:30",
+                  "scope": 43479,
+                  "src": "2034:22:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -1473,18 +1473,18 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39494,
+                      "id": 43471,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2034:7:30",
+                      "src": "2034:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39495,
+                    "id": 43472,
                     "nodeType": "ArrayTypeName",
-                    "src": "2034:9:30",
+                    "src": "2034:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -1493,21 +1493,21 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1987:75:30"
+              "src": "1987:75:35"
             },
             "returnParameters": {
-              "id": 39501,
+              "id": 43478,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39500,
+                  "id": 43477,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39502,
-                  "src": "2086:16:30",
+                  "scope": 43479,
+                  "src": "2086:16:35",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1516,18 +1516,18 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39498,
+                      "id": 43475,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2086:7:30",
+                      "src": "2086:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39499,
+                    "id": 43476,
                     "nodeType": "ArrayTypeName",
-                    "src": "2086:9:30",
+                    "src": "2086:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -1536,22 +1536,22 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2085:18:30"
+              "src": "2085:18:35"
             },
-            "scope": 39551,
+            "scope": 43528,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39510,
+            "id": 43487,
             "nodeType": "FunctionDefinition",
-            "src": "2369:69:30",
+            "src": "2369:69:35",
             "nodes": [],
             "documentation": {
-              "id": 39503,
+              "id": 43480,
               "nodeType": "StructuredDocumentation",
-              "src": "2110:254:30",
+              "src": "2110:254:35",
               "text": " @dev Grants or revokes permission to `operator` to transfer the caller's tokens, according to `approved`,\n Emits an {ApprovalForAll} event.\n Requirements:\n - `operator` cannot be the zero address."
             },
             "functionSelector": "a22cb465",
@@ -1559,20 +1559,20 @@ export const IERC1155 = {
             "kind": "function",
             "modifiers": [],
             "name": "setApprovalForAll",
-            "nameLocation": "2378:17:30",
+            "nameLocation": "2378:17:35",
             "parameters": {
-              "id": 39508,
+              "id": 43485,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39505,
+                  "id": 43482,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "2404:8:30",
+                  "nameLocation": "2404:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39510,
-                  "src": "2396:16:30",
+                  "scope": 43487,
+                  "src": "2396:16:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1580,10 +1580,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39504,
+                    "id": 43481,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2396:7:30",
+                    "src": "2396:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1594,13 +1594,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39507,
+                  "id": 43484,
                   "mutability": "mutable",
                   "name": "approved",
-                  "nameLocation": "2419:8:30",
+                  "nameLocation": "2419:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39510,
-                  "src": "2414:13:30",
+                  "scope": 43487,
+                  "src": "2414:13:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1608,10 +1608,10 @@ export const IERC1155 = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 39506,
+                    "id": 43483,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2414:4:30",
+                    "src": "2414:4:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1620,28 +1620,28 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2395:33:30"
+              "src": "2395:33:35"
             },
             "returnParameters": {
-              "id": 39509,
+              "id": 43486,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2437:0:30"
+              "src": "2437:0:35"
             },
-            "scope": 39551,
+            "scope": 43528,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39520,
+            "id": 43497,
             "nodeType": "FunctionDefinition",
-            "src": "2584:90:30",
+            "src": "2584:90:35",
             "nodes": [],
             "documentation": {
-              "id": 39511,
+              "id": 43488,
               "nodeType": "StructuredDocumentation",
-              "src": "2444:135:30",
+              "src": "2444:135:35",
               "text": " @dev Returns true if `operator` is approved to transfer ``account``'s tokens.\n See {setApprovalForAll}."
             },
             "functionSelector": "e985e9c5",
@@ -1649,20 +1649,20 @@ export const IERC1155 = {
             "kind": "function",
             "modifiers": [],
             "name": "isApprovedForAll",
-            "nameLocation": "2593:16:30",
+            "nameLocation": "2593:16:35",
             "parameters": {
-              "id": 39516,
+              "id": 43493,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39513,
+                  "id": 43490,
                   "mutability": "mutable",
                   "name": "account",
-                  "nameLocation": "2618:7:30",
+                  "nameLocation": "2618:7:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39520,
-                  "src": "2610:15:30",
+                  "scope": 43497,
+                  "src": "2610:15:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1670,10 +1670,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39512,
+                    "id": 43489,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2610:7:30",
+                    "src": "2610:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1684,13 +1684,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39515,
+                  "id": 43492,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "2635:8:30",
+                  "nameLocation": "2635:8:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39520,
-                  "src": "2627:16:30",
+                  "scope": 43497,
+                  "src": "2627:16:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1698,10 +1698,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39514,
+                    "id": 43491,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2627:7:30",
+                    "src": "2627:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1711,21 +1711,21 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2609:35:30"
+              "src": "2609:35:35"
             },
             "returnParameters": {
-              "id": 39519,
+              "id": 43496,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39518,
+                  "id": 43495,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39520,
-                  "src": "2668:4:30",
+                  "scope": 43497,
+                  "src": "2668:4:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1733,10 +1733,10 @@ export const IERC1155 = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 39517,
+                    "id": 43494,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2668:4:30",
+                    "src": "2668:4:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1745,22 +1745,22 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2667:6:30"
+              "src": "2667:6:35"
             },
-            "scope": 39551,
+            "scope": 43528,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39534,
+            "id": 43511,
             "nodeType": "FunctionDefinition",
-            "src": "3595:109:30",
+            "src": "3595:109:35",
             "nodes": [],
             "documentation": {
-              "id": 39521,
+              "id": 43498,
               "nodeType": "StructuredDocumentation",
-              "src": "2680:910:30",
+              "src": "2680:910:35",
               "text": " @dev Transfers a `value` amount of tokens of type `id` from `from` to `to`.\n WARNING: This function can potentially allow a reentrancy attack when transferring tokens\n to an untrusted contract, when invoking {onERC1155Received} on the receiver.\n Ensure to follow the checks-effects-interactions pattern and consider employing\n reentrancy guards when interacting with untrusted contracts.\n Emits a {TransferSingle} event.\n Requirements:\n - `to` cannot be the zero address.\n - If the caller is not `from`, it must have been approved to spend ``from``'s tokens via {setApprovalForAll}.\n - `from` must have a balance of tokens of type `id` of at least `value` amount.\n - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155Received} and return the\n acceptance magic value."
             },
             "functionSelector": "f242432a",
@@ -1768,20 +1768,20 @@ export const IERC1155 = {
             "kind": "function",
             "modifiers": [],
             "name": "safeTransferFrom",
-            "nameLocation": "3604:16:30",
+            "nameLocation": "3604:16:35",
             "parameters": {
-              "id": 39532,
+              "id": 43509,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39523,
+                  "id": 43500,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "3629:4:30",
+                  "nameLocation": "3629:4:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39534,
-                  "src": "3621:12:30",
+                  "scope": 43511,
+                  "src": "3621:12:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1789,10 +1789,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39522,
+                    "id": 43499,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3621:7:30",
+                    "src": "3621:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1803,13 +1803,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39525,
+                  "id": 43502,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "3643:2:30",
+                  "nameLocation": "3643:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39534,
-                  "src": "3635:10:30",
+                  "scope": 43511,
+                  "src": "3635:10:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1817,10 +1817,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39524,
+                    "id": 43501,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3635:7:30",
+                    "src": "3635:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1831,13 +1831,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39527,
+                  "id": 43504,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "3655:2:30",
+                  "nameLocation": "3655:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39534,
-                  "src": "3647:10:30",
+                  "scope": 43511,
+                  "src": "3647:10:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1845,10 +1845,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39526,
+                    "id": 43503,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3647:7:30",
+                    "src": "3647:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1858,13 +1858,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39529,
+                  "id": 43506,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "3667:5:30",
+                  "nameLocation": "3667:5:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39534,
-                  "src": "3659:13:30",
+                  "scope": 43511,
+                  "src": "3659:13:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1872,10 +1872,10 @@ export const IERC1155 = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39528,
+                    "id": 43505,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3659:7:30",
+                    "src": "3659:7:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1885,13 +1885,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39531,
+                  "id": 43508,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "3689:4:30",
+                  "nameLocation": "3689:4:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39534,
-                  "src": "3674:19:30",
+                  "scope": 43511,
+                  "src": "3674:19:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -1899,10 +1899,10 @@ export const IERC1155 = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39530,
+                    "id": 43507,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3674:5:30",
+                    "src": "3674:5:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -1911,28 +1911,28 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "3620:74:30"
+              "src": "3620:74:35"
             },
             "returnParameters": {
-              "id": 39533,
+              "id": 43510,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3703:0:30"
+              "src": "3703:0:35"
             },
-            "scope": 39551,
+            "scope": 43528,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39550,
+            "id": 43527,
             "nodeType": "FunctionDefinition",
-            "src": "4529:184:30",
+            "src": "4529:184:35",
             "nodes": [],
             "documentation": {
-              "id": 39535,
+              "id": 43512,
               "nodeType": "StructuredDocumentation",
-              "src": "3710:814:30",
+              "src": "3710:814:35",
               "text": " @dev xref:ROOT:erc1155.adoc#batch-operations[Batched] version of {safeTransferFrom}.\n WARNING: This function can potentially allow a reentrancy attack when transferring tokens\n to an untrusted contract, when invoking {onERC1155BatchReceived} on the receiver.\n Ensure to follow the checks-effects-interactions pattern and consider employing\n reentrancy guards when interacting with untrusted contracts.\n Emits either a {TransferSingle} or a {TransferBatch} event, depending on the length of the array arguments.\n Requirements:\n - `ids` and `values` must have the same length.\n - If `to` refers to a smart contract, it must implement {IERC1155Receiver-onERC1155BatchReceived} and return the\n acceptance magic value."
             },
             "functionSelector": "2eb2c2d6",
@@ -1940,20 +1940,20 @@ export const IERC1155 = {
             "kind": "function",
             "modifiers": [],
             "name": "safeBatchTransferFrom",
-            "nameLocation": "4538:21:30",
+            "nameLocation": "4538:21:35",
             "parameters": {
-              "id": 39548,
+              "id": 43525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39537,
+                  "id": 43514,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "4577:4:30",
+                  "nameLocation": "4577:4:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39550,
-                  "src": "4569:12:30",
+                  "scope": 43527,
+                  "src": "4569:12:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1961,10 +1961,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39536,
+                    "id": 43513,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4569:7:30",
+                    "src": "4569:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1975,13 +1975,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39539,
+                  "id": 43516,
                   "mutability": "mutable",
                   "name": "to",
-                  "nameLocation": "4599:2:30",
+                  "nameLocation": "4599:2:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39550,
-                  "src": "4591:10:30",
+                  "scope": 43527,
+                  "src": "4591:10:35",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1989,10 +1989,10 @@ export const IERC1155 = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39538,
+                    "id": 43515,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4591:7:30",
+                    "src": "4591:7:35",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -2003,13 +2003,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39542,
+                  "id": 43519,
                   "mutability": "mutable",
                   "name": "ids",
-                  "nameLocation": "4630:3:30",
+                  "nameLocation": "4630:3:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39550,
-                  "src": "4611:22:30",
+                  "scope": 43527,
+                  "src": "4611:22:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -2018,18 +2018,18 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39540,
+                      "id": 43517,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "4611:7:30",
+                      "src": "4611:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39541,
+                    "id": 43518,
                     "nodeType": "ArrayTypeName",
-                    "src": "4611:9:30",
+                    "src": "4611:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -2039,13 +2039,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39545,
+                  "id": 43522,
                   "mutability": "mutable",
                   "name": "values",
-                  "nameLocation": "4662:6:30",
+                  "nameLocation": "4662:6:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39550,
-                  "src": "4643:25:30",
+                  "scope": 43527,
+                  "src": "4643:25:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -2054,18 +2054,18 @@ export const IERC1155 = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39543,
+                      "id": 43520,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "4643:7:30",
+                      "src": "4643:7:35",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39544,
+                    "id": 43521,
                     "nodeType": "ArrayTypeName",
-                    "src": "4643:9:30",
+                    "src": "4643:9:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -2075,13 +2075,13 @@ export const IERC1155 = {
                 },
                 {
                   "constant": false,
-                  "id": 39547,
+                  "id": 43524,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "4693:4:30",
+                  "nameLocation": "4693:4:35",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39550,
-                  "src": "4678:19:30",
+                  "scope": 43527,
+                  "src": "4678:19:35",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -2089,10 +2089,10 @@ export const IERC1155 = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39546,
+                    "id": 43523,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4678:5:30",
+                    "src": "4678:5:35",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -2101,15 +2101,15 @@ export const IERC1155 = {
                   "visibility": "internal"
                 }
               ],
-              "src": "4559:144:30"
+              "src": "4559:144:35"
             },
             "returnParameters": {
-              "id": 39549,
+              "id": 43526,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4712:0:30"
+              "src": "4712:0:35"
             },
-            "scope": 39551,
+            "scope": 43528,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -2119,47 +2119,47 @@ export const IERC1155 = {
         "baseContracts": [
           {
             "baseName": {
-              "id": 39434,
+              "id": 43411,
               "name": "IERC165",
               "nameLocations": [
-                "359:7:30"
+                "359:7:35"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 42159,
-              "src": "359:7:30"
+              "referencedDeclaration": 46707,
+              "src": "359:7:35"
             },
-            "id": 39435,
+            "id": 43412,
             "nodeType": "InheritanceSpecifier",
-            "src": "359:7:30"
+            "src": "359:7:35"
           }
         ],
         "canonicalName": "IERC1155",
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 39433,
+          "id": 43410,
           "nodeType": "StructuredDocumentation",
-          "src": "200:136:30",
+          "src": "200:136:35",
           "text": " @dev Required interface of an ERC-1155 compliant contract, as defined in the\n https://eips.ethereum.org/EIPS/eip-1155[ERC]."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          39551,
-          42159
+          43528,
+          46707
         ],
         "name": "IERC1155",
-        "nameLocation": "347:8:30",
-        "scope": 39552,
+        "nameLocation": "347:8:35",
+        "scope": 43529,
         "usedErrors": [],
         "usedEvents": [
-          39448,
-          39463,
-          39472,
-          39479
+          43425,
+          43440,
+          43449,
+          43456
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 30
+  "id": 35
 } as const;

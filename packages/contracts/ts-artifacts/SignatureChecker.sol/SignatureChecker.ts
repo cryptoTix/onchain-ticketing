@@ -2,12 +2,12 @@ export const SignatureChecker = {
   "abi": [],
   "bytecode": {
     "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220f9bdaa17cdda2abf999f404d9a59671fda474c5c9971bdcca9888c23aea7890264736f6c634300081a0033",
-    "sourceMap": "532:1805:47:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;532:1805:47;;;;;;;;;;;;;;;;;",
+    "sourceMap": "532:1805:55:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;532:1805:55;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220f9bdaa17cdda2abf999f404d9a59671fda474c5c9971bdcca9888c23aea7890264736f6c634300081a0033",
-    "sourceMap": "532:1805:47:-:0;;;;;;;;",
+    "sourceMap": "532:1805:55:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -80,25 +80,25 @@ export const SignatureChecker = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol",
-    "id": 42148,
+    "id": 46696,
     "exportedSymbols": {
       "ECDSA": [
-        41965
+        46513
       ],
       "IERC1271": [
-        39262
+        43239
       ],
       "SignatureChecker": [
-        42147
+        46695
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "123:2215:47",
+    "src": "123:2215:55",
     "nodes": [
       {
-        "id": 42041,
+        "id": 46589,
         "nodeType": "PragmaDirective",
-        "src": "123:24:47",
+        "src": "123:24:55",
         "nodes": [],
         "literals": [
           "solidity",
@@ -108,24 +108,24 @@ export const SignatureChecker = {
         ]
       },
       {
-        "id": 42043,
+        "id": 46591,
         "nodeType": "ImportDirective",
-        "src": "149:34:47",
+        "src": "149:34:55",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
         "file": "./ECDSA.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 42148,
-        "sourceUnit": 41966,
+        "scope": 46696,
+        "sourceUnit": 46514,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 42042,
+              "id": 46590,
               "name": "ECDSA",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 41965,
-              "src": "157:5:47",
+              "referencedDeclaration": 46513,
+              "src": "157:5:55",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -134,24 +134,24 @@ export const SignatureChecker = {
         "unitAlias": ""
       },
       {
-        "id": 42045,
+        "id": 46593,
         "nodeType": "ImportDirective",
-        "src": "184:55:47",
+        "src": "184:55:55",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/IERC1271.sol",
         "file": "../../interfaces/IERC1271.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 42148,
-        "sourceUnit": 39263,
+        "scope": 46696,
+        "sourceUnit": 43240,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 42044,
+              "id": 46592,
               "name": "IERC1271",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39262,
-              "src": "192:8:47",
+              "referencedDeclaration": 43239,
+              "src": "192:8:55",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -160,19 +160,19 @@ export const SignatureChecker = {
         "unitAlias": ""
       },
       {
-        "id": 42147,
+        "id": 46695,
         "nodeType": "ContractDefinition",
-        "src": "532:1805:47",
+        "src": "532:1805:55",
         "nodes": [
           {
-            "id": 42094,
+            "id": 46642,
             "nodeType": "FunctionDefinition",
-            "src": "1041:429:47",
+            "src": "1041:429:55",
             "nodes": [],
             "body": {
-              "id": 42093,
+              "id": 46641,
               "nodeType": "Block",
-              "src": "1153:317:47",
+              "src": "1153:317:55",
               "nodes": [],
               "statements": [
                 {
@@ -181,7 +181,7 @@ export const SignatureChecker = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 42062,
+                    "id": 46610,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -189,40 +189,40 @@ export const SignatureChecker = {
                     "leftExpression": {
                       "expression": {
                         "expression": {
-                          "id": 42058,
+                          "id": 46606,
                           "name": "signer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 42049,
-                          "src": "1167:6:47",
+                          "referencedDeclaration": 46597,
+                          "src": "1167:6:55",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
                           }
                         },
-                        "id": 42059,
+                        "id": 46607,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "1174:4:47",
+                        "memberLocation": "1174:4:55",
                         "memberName": "code",
                         "nodeType": "MemberAccess",
-                        "src": "1167:11:47",
+                        "src": "1167:11:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
                         }
                       },
-                      "id": 42060,
+                      "id": 46608,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1179:6:47",
+                      "memberLocation": "1179:6:55",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "1167:18:47",
+                      "src": "1167:18:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -232,65 +232,65 @@ export const SignatureChecker = {
                     "operator": "==",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 42061,
+                      "id": 46609,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1189:1:47",
+                      "src": "1189:1:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
                       },
                       "value": "0"
                     },
-                    "src": "1167:23:47",
+                    "src": "1167:23:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
                   "falseBody": {
-                    "id": 42091,
+                    "id": 46639,
                     "nodeType": "Block",
-                    "src": "1381:83:47",
+                    "src": "1381:83:55",
                     "statements": [
                       {
                         "expression": {
                           "arguments": [
                             {
-                              "id": 42086,
+                              "id": 46634,
                               "name": "signer",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42049,
-                              "src": "1429:6:47",
+                              "referencedDeclaration": 46597,
+                              "src": "1429:6:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
                             {
-                              "id": 42087,
+                              "id": 46635,
                               "name": "hash",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42051,
-                              "src": "1437:4:47",
+                              "referencedDeclaration": 46599,
+                              "src": "1437:4:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes32",
                                 "typeString": "bytes32"
                               }
                             },
                             {
-                              "id": 42088,
+                              "id": 46636,
                               "name": "signature",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42053,
-                              "src": "1443:9:47",
+                              "referencedDeclaration": 46601,
+                              "src": "1443:9:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes_memory_ptr",
                                 "typeString": "bytes memory"
@@ -312,18 +312,18 @@ export const SignatureChecker = {
                                 "typeString": "bytes memory"
                               }
                             ],
-                            "id": 42085,
+                            "id": 46633,
                             "name": "isValidERC1271SignatureNow",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 42146,
-                            "src": "1402:26:47",
+                            "referencedDeclaration": 46694,
+                            "src": "1402:26:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_address_$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bool_$",
                               "typeString": "function (address,bytes32,bytes memory) view returns (bool)"
                             }
                           },
-                          "id": 42089,
+                          "id": 46637,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -332,44 +332,44 @@ export const SignatureChecker = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1402:51:47",
+                          "src": "1402:51:55",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "functionReturnParameters": 42057,
-                        "id": 42090,
+                        "functionReturnParameters": 46605,
+                        "id": 46638,
                         "nodeType": "Return",
-                        "src": "1395:58:47"
+                        "src": "1395:58:55"
                       }
                     ]
                   },
-                  "id": 42092,
+                  "id": 46640,
                   "nodeType": "IfStatement",
-                  "src": "1163:301:47",
+                  "src": "1163:301:55",
                   "trueBody": {
-                    "id": 42084,
+                    "id": 46632,
                     "nodeType": "Block",
-                    "src": "1192:183:47",
+                    "src": "1192:183:55",
                     "statements": [
                       {
                         "assignments": [
-                          42064,
-                          42067,
+                          46612,
+                          46615,
                           null
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 42064,
+                            "id": 46612,
                             "mutability": "mutable",
                             "name": "recovered",
-                            "nameLocation": "1215:9:47",
+                            "nameLocation": "1215:9:55",
                             "nodeType": "VariableDeclaration",
-                            "scope": 42084,
-                            "src": "1207:17:47",
+                            "scope": 46632,
+                            "src": "1207:17:55",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -377,10 +377,10 @@ export const SignatureChecker = {
                               "typeString": "address"
                             },
                             "typeName": {
-                              "id": 42063,
+                              "id": 46611,
                               "name": "address",
                               "nodeType": "ElementaryTypeName",
-                              "src": "1207:7:47",
+                              "src": "1207:7:55",
                               "stateMutability": "nonpayable",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -391,37 +391,37 @@ export const SignatureChecker = {
                           },
                           {
                             "constant": false,
-                            "id": 42067,
+                            "id": 46615,
                             "mutability": "mutable",
                             "name": "err",
-                            "nameLocation": "1245:3:47",
+                            "nameLocation": "1245:3:55",
                             "nodeType": "VariableDeclaration",
-                            "scope": 42084,
-                            "src": "1226:22:47",
+                            "scope": 46632,
+                            "src": "1226:22:55",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_enum$_RecoverError_$41625",
+                              "typeIdentifier": "t_enum$_RecoverError_$46173",
                               "typeString": "enum ECDSA.RecoverError"
                             },
                             "typeName": {
-                              "id": 42066,
+                              "id": 46614,
                               "nodeType": "UserDefinedTypeName",
                               "pathNode": {
-                                "id": 42065,
+                                "id": 46613,
                                 "name": "ECDSA.RecoverError",
                                 "nameLocations": [
-                                  "1226:5:47",
-                                  "1232:12:47"
+                                  "1226:5:55",
+                                  "1232:12:55"
                                 ],
                                 "nodeType": "IdentifierPath",
-                                "referencedDeclaration": 41625,
-                                "src": "1226:18:47"
+                                "referencedDeclaration": 46173,
+                                "src": "1226:18:55"
                               },
-                              "referencedDeclaration": 41625,
-                              "src": "1226:18:47",
+                              "referencedDeclaration": 46173,
+                              "src": "1226:18:55",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_enum$_RecoverError_$41625",
+                                "typeIdentifier": "t_enum$_RecoverError_$46173",
                                 "typeString": "enum ECDSA.RecoverError"
                               }
                             },
@@ -429,28 +429,28 @@ export const SignatureChecker = {
                           },
                           null
                         ],
-                        "id": 42073,
+                        "id": 46621,
                         "initialValue": {
                           "arguments": [
                             {
-                              "id": 42070,
+                              "id": 46618,
                               "name": "hash",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42051,
-                              "src": "1271:4:47",
+                              "referencedDeclaration": 46599,
+                              "src": "1271:4:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes32",
                                 "typeString": "bytes32"
                               }
                             },
                             {
-                              "id": 42071,
+                              "id": 46619,
                               "name": "signature",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42053,
-                              "src": "1277:9:47",
+                              "referencedDeclaration": 46601,
+                              "src": "1277:9:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_bytes_memory_ptr",
                                 "typeString": "bytes memory"
@@ -469,33 +469,33 @@ export const SignatureChecker = {
                               }
                             ],
                             "expression": {
-                              "id": 42068,
+                              "id": 46616,
                               "name": "ECDSA",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 41965,
-                              "src": "1254:5:47",
+                              "referencedDeclaration": 46513,
+                              "src": "1254:5:55",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_ECDSA_$41965_$",
+                                "typeIdentifier": "t_type$_t_contract$_ECDSA_$46513_$",
                                 "typeString": "type(library ECDSA)"
                               }
                             },
-                            "id": 42069,
+                            "id": 46617,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "1260:10:47",
+                            "memberLocation": "1260:10:55",
                             "memberName": "tryRecover",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 41691,
-                            "src": "1254:16:47",
+                            "referencedDeclaration": 46239,
+                            "src": "1254:16:55",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_address_$_t_enum$_RecoverError_$41625_$_t_bytes32_$",
+                              "typeIdentifier": "t_function_internal_pure$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_address_$_t_enum$_RecoverError_$46173_$_t_bytes32_$",
                               "typeString": "function (bytes32,bytes memory) pure returns (address,enum ECDSA.RecoverError,bytes32)"
                             }
                           },
-                          "id": 42072,
+                          "id": 46620,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -504,15 +504,15 @@ export const SignatureChecker = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1254:33:47",
+                          "src": "1254:33:55",
                           "tryCall": false,
                           "typeDescriptions": {
-                            "typeIdentifier": "t_tuple$_t_address_$_t_enum$_RecoverError_$41625_$_t_bytes32_$",
+                            "typeIdentifier": "t_tuple$_t_address_$_t_enum$_RecoverError_$46173_$_t_bytes32_$",
                             "typeString": "tuple(address,enum ECDSA.RecoverError,bytes32)"
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "1206:81:47"
+                        "src": "1206:81:55"
                       },
                       {
                         "expression": {
@@ -520,30 +520,30 @@ export const SignatureChecker = {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           },
-                          "id": 42082,
+                          "id": 46630,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "commonType": {
-                              "typeIdentifier": "t_enum$_RecoverError_$41625",
+                              "typeIdentifier": "t_enum$_RecoverError_$46173",
                               "typeString": "enum ECDSA.RecoverError"
                             },
-                            "id": 42078,
+                            "id": 46626,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
-                              "id": 42074,
+                              "id": 46622,
                               "name": "err",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42067,
-                              "src": "1308:3:47",
+                              "referencedDeclaration": 46615,
+                              "src": "1308:3:55",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_enum$_RecoverError_$41625",
+                                "typeIdentifier": "t_enum$_RecoverError_$46173",
                                 "typeString": "enum ECDSA.RecoverError"
                               }
                             },
@@ -552,48 +552,48 @@ export const SignatureChecker = {
                             "rightExpression": {
                               "expression": {
                                 "expression": {
-                                  "id": 42075,
+                                  "id": 46623,
                                   "name": "ECDSA",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 41965,
-                                  "src": "1315:5:47",
+                                  "referencedDeclaration": 46513,
+                                  "src": "1315:5:55",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_ECDSA_$41965_$",
+                                    "typeIdentifier": "t_type$_t_contract$_ECDSA_$46513_$",
                                     "typeString": "type(library ECDSA)"
                                   }
                                 },
-                                "id": 42076,
+                                "id": 46624,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
-                                "memberLocation": "1321:12:47",
+                                "memberLocation": "1321:12:55",
                                 "memberName": "RecoverError",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 41625,
-                                "src": "1315:18:47",
+                                "referencedDeclaration": 46173,
+                                "src": "1315:18:55",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_enum$_RecoverError_$41625_$",
+                                  "typeIdentifier": "t_type$_t_enum$_RecoverError_$46173_$",
                                   "typeString": "type(enum ECDSA.RecoverError)"
                                 }
                               },
-                              "id": 42077,
+                              "id": 46625,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
-                              "memberLocation": "1334:7:47",
+                              "memberLocation": "1334:7:55",
                               "memberName": "NoError",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 41621,
-                              "src": "1315:26:47",
+                              "referencedDeclaration": 46169,
+                              "src": "1315:26:55",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_enum$_RecoverError_$41625",
+                                "typeIdentifier": "t_enum$_RecoverError_$46173",
                                 "typeString": "enum ECDSA.RecoverError"
                               }
                             },
-                            "src": "1308:33:47",
+                            "src": "1308:33:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
@@ -606,18 +606,18 @@ export const SignatureChecker = {
                               "typeIdentifier": "t_address",
                               "typeString": "address"
                             },
-                            "id": 42081,
+                            "id": 46629,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
-                              "id": 42079,
+                              "id": 46627,
                               "name": "recovered",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42064,
-                              "src": "1345:9:47",
+                              "referencedDeclaration": 46612,
+                              "src": "1345:9:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -626,33 +626,33 @@ export const SignatureChecker = {
                             "nodeType": "BinaryOperation",
                             "operator": "==",
                             "rightExpression": {
-                              "id": 42080,
+                              "id": 46628,
                               "name": "signer",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 42049,
-                              "src": "1358:6:47",
+                              "referencedDeclaration": 46597,
+                              "src": "1358:6:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
                               }
                             },
-                            "src": "1345:19:47",
+                            "src": "1345:19:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
                             }
                           },
-                          "src": "1308:56:47",
+                          "src": "1308:56:55",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "functionReturnParameters": 42057,
-                        "id": 42083,
+                        "functionReturnParameters": 46605,
+                        "id": 46631,
                         "nodeType": "Return",
-                        "src": "1301:63:47"
+                        "src": "1301:63:55"
                       }
                     ]
                   }
@@ -660,29 +660,29 @@ export const SignatureChecker = {
               ]
             },
             "documentation": {
-              "id": 42047,
+              "id": 46595,
               "nodeType": "StructuredDocumentation",
-              "src": "563:473:47",
+              "src": "563:473:55",
               "text": " @dev Checks if a signature is valid for a given signer and data hash. If the signer is a smart contract, the\n signature is validated against that smart contract using ERC-1271, otherwise it's validated using `ECDSA.recover`.\n NOTE: Unlike ECDSA signatures, contract signatures are revocable, and the outcome of this function can thus\n change through time. It could return true at block N and false at block N+1 (or the opposite)."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidSignatureNow",
-            "nameLocation": "1050:19:47",
+            "nameLocation": "1050:19:55",
             "parameters": {
-              "id": 42054,
+              "id": 46602,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 42049,
+                  "id": 46597,
                   "mutability": "mutable",
                   "name": "signer",
-                  "nameLocation": "1078:6:47",
+                  "nameLocation": "1078:6:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42094,
-                  "src": "1070:14:47",
+                  "scope": 46642,
+                  "src": "1070:14:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -690,10 +690,10 @@ export const SignatureChecker = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 42048,
+                    "id": 46596,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1070:7:47",
+                    "src": "1070:7:55",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -704,13 +704,13 @@ export const SignatureChecker = {
                 },
                 {
                   "constant": false,
-                  "id": 42051,
+                  "id": 46599,
                   "mutability": "mutable",
                   "name": "hash",
-                  "nameLocation": "1094:4:47",
+                  "nameLocation": "1094:4:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42094,
-                  "src": "1086:12:47",
+                  "scope": 46642,
+                  "src": "1086:12:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -718,10 +718,10 @@ export const SignatureChecker = {
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 42050,
+                    "id": 46598,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1086:7:47",
+                    "src": "1086:7:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -731,13 +731,13 @@ export const SignatureChecker = {
                 },
                 {
                   "constant": false,
-                  "id": 42053,
+                  "id": 46601,
                   "mutability": "mutable",
                   "name": "signature",
-                  "nameLocation": "1113:9:47",
+                  "nameLocation": "1113:9:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42094,
-                  "src": "1100:22:47",
+                  "scope": 46642,
+                  "src": "1100:22:55",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -745,10 +745,10 @@ export const SignatureChecker = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 42052,
+                    "id": 46600,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1100:5:47",
+                    "src": "1100:5:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -757,21 +757,21 @@ export const SignatureChecker = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1069:54:47"
+              "src": "1069:54:55"
             },
             "returnParameters": {
-              "id": 42057,
+              "id": 46605,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 42056,
+                  "id": 46604,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42094,
-                  "src": "1147:4:47",
+                  "scope": 46642,
+                  "src": "1147:4:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -779,10 +779,10 @@ export const SignatureChecker = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 42055,
+                    "id": 46603,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1147:4:47",
+                    "src": "1147:4:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -791,39 +791,39 @@ export const SignatureChecker = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1146:6:47"
+              "src": "1146:6:55"
             },
-            "scope": 42147,
+            "scope": 46695,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 42146,
+            "id": 46694,
             "nodeType": "FunctionDefinition",
-            "src": "1877:458:47",
+            "src": "1877:458:55",
             "nodes": [],
             "body": {
-              "id": 42145,
+              "id": 46693,
               "nodeType": "Block",
-              "src": "2026:309:47",
+              "src": "2026:309:55",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    42107,
-                    42109
+                    46655,
+                    46657
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 42107,
+                      "id": 46655,
                       "mutability": "mutable",
                       "name": "success",
-                      "nameLocation": "2042:7:47",
+                      "nameLocation": "2042:7:55",
                       "nodeType": "VariableDeclaration",
-                      "scope": 42145,
-                      "src": "2037:12:47",
+                      "scope": 46693,
+                      "src": "2037:12:55",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -831,10 +831,10 @@ export const SignatureChecker = {
                         "typeString": "bool"
                       },
                       "typeName": {
-                        "id": 42106,
+                        "id": 46654,
                         "name": "bool",
                         "nodeType": "ElementaryTypeName",
-                        "src": "2037:4:47",
+                        "src": "2037:4:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
@@ -844,13 +844,13 @@ export const SignatureChecker = {
                     },
                     {
                       "constant": false,
-                      "id": 42109,
+                      "id": 46657,
                       "mutability": "mutable",
                       "name": "result",
-                      "nameLocation": "2064:6:47",
+                      "nameLocation": "2064:6:55",
                       "nodeType": "VariableDeclaration",
-                      "scope": 42145,
-                      "src": "2051:19:47",
+                      "scope": 46693,
+                      "src": "2051:19:55",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
@@ -858,10 +858,10 @@ export const SignatureChecker = {
                         "typeString": "bytes"
                       },
                       "typeName": {
-                        "id": 42108,
+                        "id": 46656,
                         "name": "bytes",
                         "nodeType": "ElementaryTypeName",
-                        "src": "2051:5:47",
+                        "src": "2051:5:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_storage_ptr",
                           "typeString": "bytes"
@@ -870,34 +870,34 @@ export const SignatureChecker = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 42121,
+                  "id": 46669,
                   "initialValue": {
                     "arguments": [
                       {
                         "arguments": [
                           {
                             "expression": {
-                              "id": 42114,
+                              "id": 46662,
                               "name": "IERC1271",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 39262,
-                              "src": "2120:8:47",
+                              "referencedDeclaration": 43239,
+                              "src": "2120:8:55",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_contract$_IERC1271_$39262_$",
+                                "typeIdentifier": "t_type$_t_contract$_IERC1271_$43239_$",
                                 "typeString": "type(contract IERC1271)"
                               }
                             },
-                            "id": 42115,
+                            "id": 46663,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
-                            "memberLocation": "2129:16:47",
+                            "memberLocation": "2129:16:55",
                             "memberName": "isValidSignature",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 39261,
-                            "src": "2120:25:47",
+                            "referencedDeclaration": 43238,
+                            "src": "2120:25:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_declaration_view$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
                               "typeString": "function IERC1271.isValidSignature(bytes32,bytes memory) view returns (bytes4)"
@@ -906,38 +906,38 @@ export const SignatureChecker = {
                           {
                             "components": [
                               {
-                                "id": 42116,
+                                "id": 46664,
                                 "name": "hash",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 42099,
-                                "src": "2148:4:47",
+                                "referencedDeclaration": 46647,
+                                "src": "2148:4:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bytes32",
                                   "typeString": "bytes32"
                                 }
                               },
                               {
-                                "id": 42117,
+                                "id": 46665,
                                 "name": "signature",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 42101,
-                                "src": "2154:9:47",
+                                "referencedDeclaration": 46649,
+                                "src": "2154:9:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bytes_memory_ptr",
                                   "typeString": "bytes memory"
                                 }
                               }
                             ],
-                            "id": 42118,
+                            "id": 46666,
                             "isConstant": false,
                             "isInlineArray": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "nodeType": "TupleExpression",
-                            "src": "2147:17:47",
+                            "src": "2147:17:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_tuple$_t_bytes32_$_t_bytes_memory_ptr_$",
                               "typeString": "tuple(bytes32,bytes memory)"
@@ -956,32 +956,32 @@ export const SignatureChecker = {
                             }
                           ],
                           "expression": {
-                            "id": 42112,
+                            "id": 46660,
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": -1,
-                            "src": "2105:3:47",
+                            "src": "2105:3:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_abi",
                               "typeString": "abi"
                             }
                           },
-                          "id": 42113,
+                          "id": 46661,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
                           "lValueRequested": false,
-                          "memberLocation": "2109:10:47",
+                          "memberLocation": "2109:10:55",
                           "memberName": "encodeCall",
                           "nodeType": "MemberAccess",
-                          "src": "2105:14:47",
+                          "src": "2105:14:55",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_abiencodecall_pure$__$returns$_t_bytes_memory_ptr_$",
                             "typeString": "function () pure returns (bytes memory)"
                           }
                         },
-                        "id": 42119,
+                        "id": 46667,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -990,7 +990,7 @@ export const SignatureChecker = {
                         "nameLocations": [],
                         "names": [],
                         "nodeType": "FunctionCall",
-                        "src": "2105:60:47",
+                        "src": "2105:60:55",
                         "tryCall": false,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
@@ -1006,32 +1006,32 @@ export const SignatureChecker = {
                         }
                       ],
                       "expression": {
-                        "id": 42110,
+                        "id": 46658,
                         "name": "signer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 42097,
-                        "src": "2074:6:47",
+                        "referencedDeclaration": 46645,
+                        "src": "2074:6:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "id": 42111,
+                      "id": 46659,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2081:10:47",
+                      "memberLocation": "2081:10:55",
                       "memberName": "staticcall",
                       "nodeType": "MemberAccess",
-                      "src": "2074:17:47",
+                      "src": "2074:17:55",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_barestaticcall_view$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
                         "typeString": "function (bytes memory) view returns (bool,bytes memory)"
                       }
                     },
-                    "id": 42120,
+                    "id": 46668,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1040,7 +1040,7 @@ export const SignatureChecker = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2074:101:47",
+                    "src": "2074:101:55",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
@@ -1048,7 +1048,7 @@ export const SignatureChecker = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2036:139:47"
+                  "src": "2036:139:55"
                 },
                 {
                   "expression": {
@@ -1058,7 +1058,7 @@ export const SignatureChecker = {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         },
-                        "id": 42142,
+                        "id": 46690,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1068,18 +1068,18 @@ export const SignatureChecker = {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           },
-                          "id": 42127,
+                          "id": 46675,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 42122,
+                            "id": 46670,
                             "name": "success",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 42107,
-                            "src": "2193:7:47",
+                            "referencedDeclaration": 46655,
+                            "src": "2193:7:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
@@ -1092,33 +1092,33 @@ export const SignatureChecker = {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             },
-                            "id": 42126,
+                            "id": 46674,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "expression": {
-                                "id": 42123,
+                                "id": 46671,
                                 "name": "result",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 42109,
-                                "src": "2216:6:47",
+                                "referencedDeclaration": 46657,
+                                "src": "2216:6:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bytes_memory_ptr",
                                   "typeString": "bytes memory"
                                 }
                               },
-                              "id": 42124,
+                              "id": 46672,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
                               "lValueRequested": false,
-                              "memberLocation": "2223:6:47",
+                              "memberLocation": "2223:6:55",
                               "memberName": "length",
                               "nodeType": "MemberAccess",
-                              "src": "2216:13:47",
+                              "src": "2216:13:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1128,27 +1128,27 @@ export const SignatureChecker = {
                             "operator": ">=",
                             "rightExpression": {
                               "hexValue": "3332",
-                              "id": 42125,
+                              "id": 46673,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "kind": "number",
                               "lValueRequested": false,
                               "nodeType": "Literal",
-                              "src": "2233:2:47",
+                              "src": "2233:2:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_rational_32_by_1",
                                 "typeString": "int_const 32"
                               },
                               "value": "32"
                             },
-                            "src": "2216:19:47",
+                            "src": "2216:19:55",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bool",
                               "typeString": "bool"
                             }
                           },
-                          "src": "2193:42:47",
+                          "src": "2193:42:55",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -1161,7 +1161,7 @@ export const SignatureChecker = {
                             "typeIdentifier": "t_bytes32",
                             "typeString": "bytes32"
                           },
-                          "id": 42141,
+                          "id": 46689,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1169,12 +1169,12 @@ export const SignatureChecker = {
                           "leftExpression": {
                             "arguments": [
                               {
-                                "id": 42130,
+                                "id": 46678,
                                 "name": "result",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 42109,
-                                "src": "2262:6:47",
+                                "referencedDeclaration": 46657,
+                                "src": "2262:6:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bytes_memory_ptr",
                                   "typeString": "bytes memory"
@@ -1183,34 +1183,34 @@ export const SignatureChecker = {
                               {
                                 "components": [
                                   {
-                                    "id": 42132,
+                                    "id": 46680,
                                     "isConstant": false,
                                     "isLValue": false,
                                     "isPure": true,
                                     "lValueRequested": false,
                                     "nodeType": "ElementaryTypeNameExpression",
-                                    "src": "2271:7:47",
+                                    "src": "2271:7:55",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_type$_t_bytes32_$",
                                       "typeString": "type(bytes32)"
                                     },
                                     "typeName": {
-                                      "id": 42131,
+                                      "id": 46679,
                                       "name": "bytes32",
                                       "nodeType": "ElementaryTypeName",
-                                      "src": "2271:7:47",
+                                      "src": "2271:7:55",
                                       "typeDescriptions": {}
                                     }
                                   }
                                 ],
-                                "id": 42133,
+                                "id": 46681,
                                 "isConstant": false,
                                 "isInlineArray": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
                                 "nodeType": "TupleExpression",
-                                "src": "2270:9:47",
+                                "src": "2270:9:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_type$_t_bytes32_$",
                                   "typeString": "type(bytes32)"
@@ -1229,32 +1229,32 @@ export const SignatureChecker = {
                                 }
                               ],
                               "expression": {
-                                "id": 42128,
+                                "id": 46676,
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": -1,
-                                "src": "2251:3:47",
+                                "src": "2251:3:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
                                   "typeString": "abi"
                                 }
                               },
-                              "id": 42129,
+                              "id": 46677,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
-                              "memberLocation": "2255:6:47",
+                              "memberLocation": "2255:6:55",
                               "memberName": "decode",
                               "nodeType": "MemberAccess",
-                              "src": "2251:10:47",
+                              "src": "2251:10:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_abidecode_pure$__$returns$__$",
                                 "typeString": "function () pure"
                               }
                             },
-                            "id": 42134,
+                            "id": 46682,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1263,7 +1263,7 @@ export const SignatureChecker = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "2251:29:47",
+                            "src": "2251:29:55",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
@@ -1277,41 +1277,41 @@ export const SignatureChecker = {
                               {
                                 "expression": {
                                   "expression": {
-                                    "id": 42137,
+                                    "id": 46685,
                                     "name": "IERC1271",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 39262,
-                                    "src": "2292:8:47",
+                                    "referencedDeclaration": 43239,
+                                    "src": "2292:8:55",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_type$_t_contract$_IERC1271_$39262_$",
+                                      "typeIdentifier": "t_type$_t_contract$_IERC1271_$43239_$",
                                       "typeString": "type(contract IERC1271)"
                                     }
                                   },
-                                  "id": 42138,
+                                  "id": 46686,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "lValueRequested": false,
-                                  "memberLocation": "2301:16:47",
+                                  "memberLocation": "2301:16:55",
                                   "memberName": "isValidSignature",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 39261,
-                                  "src": "2292:25:47",
+                                  "referencedDeclaration": 43238,
+                                  "src": "2292:25:55",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_declaration_view$_t_bytes32_$_t_bytes_memory_ptr_$returns$_t_bytes4_$",
                                     "typeString": "function IERC1271.isValidSignature(bytes32,bytes memory) view returns (bytes4)"
                                   }
                                 },
-                                "id": 42139,
+                                "id": 46687,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
                                 "lValueRequested": false,
-                                "memberLocation": "2318:8:47",
+                                "memberLocation": "2318:8:55",
                                 "memberName": "selector",
                                 "nodeType": "MemberAccess",
-                                "src": "2292:34:47",
+                                "src": "2292:34:55",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_bytes4",
                                   "typeString": "bytes4"
@@ -1325,26 +1325,26 @@ export const SignatureChecker = {
                                   "typeString": "bytes4"
                                 }
                               ],
-                              "id": 42136,
+                              "id": 46684,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
                               "lValueRequested": false,
                               "nodeType": "ElementaryTypeNameExpression",
-                              "src": "2284:7:47",
+                              "src": "2284:7:55",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_type$_t_bytes32_$",
                                 "typeString": "type(bytes32)"
                               },
                               "typeName": {
-                                "id": 42135,
+                                "id": 46683,
                                 "name": "bytes32",
                                 "nodeType": "ElementaryTypeName",
-                                "src": "2284:7:47",
+                                "src": "2284:7:55",
                                 "typeDescriptions": {}
                               }
                             },
-                            "id": 42140,
+                            "id": 46688,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
@@ -1353,70 +1353,70 @@ export const SignatureChecker = {
                             "nameLocations": [],
                             "names": [],
                             "nodeType": "FunctionCall",
-                            "src": "2284:43:47",
+                            "src": "2284:43:55",
                             "tryCall": false,
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
                             }
                           },
-                          "src": "2251:76:47",
+                          "src": "2251:76:55",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "src": "2193:134:47",
+                        "src": "2193:134:55",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
                           "typeString": "bool"
                         }
                       }
                     ],
-                    "id": 42143,
+                    "id": 46691,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "TupleExpression",
-                    "src": "2192:136:47",
+                    "src": "2192:136:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 42105,
-                  "id": 42144,
+                  "functionReturnParameters": 46653,
+                  "id": 46692,
                   "nodeType": "Return",
-                  "src": "2185:143:47"
+                  "src": "2185:143:55"
                 }
               ]
             },
             "documentation": {
-              "id": 42095,
+              "id": 46643,
               "nodeType": "StructuredDocumentation",
-              "src": "1476:396:47",
+              "src": "1476:396:55",
               "text": " @dev Checks if a signature is valid for a given signer and data hash. The signature is validated\n against the signer smart contract using ERC-1271.\n NOTE: Unlike ECDSA signatures, contract signatures are revocable, and the outcome of this function can thus\n change through time. It could return true at block N and false at block N+1 (or the opposite)."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "isValidERC1271SignatureNow",
-            "nameLocation": "1886:26:47",
+            "nameLocation": "1886:26:55",
             "parameters": {
-              "id": 42102,
+              "id": 46650,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 42097,
+                  "id": 46645,
                   "mutability": "mutable",
                   "name": "signer",
-                  "nameLocation": "1930:6:47",
+                  "nameLocation": "1930:6:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42146,
-                  "src": "1922:14:47",
+                  "scope": 46694,
+                  "src": "1922:14:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1424,10 +1424,10 @@ export const SignatureChecker = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 42096,
+                    "id": 46644,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1922:7:47",
+                    "src": "1922:7:55",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1438,13 +1438,13 @@ export const SignatureChecker = {
                 },
                 {
                   "constant": false,
-                  "id": 42099,
+                  "id": 46647,
                   "mutability": "mutable",
                   "name": "hash",
-                  "nameLocation": "1954:4:47",
+                  "nameLocation": "1954:4:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42146,
-                  "src": "1946:12:47",
+                  "scope": 46694,
+                  "src": "1946:12:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1452,10 +1452,10 @@ export const SignatureChecker = {
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 42098,
+                    "id": 46646,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1946:7:47",
+                    "src": "1946:7:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1465,13 +1465,13 @@ export const SignatureChecker = {
                 },
                 {
                   "constant": false,
-                  "id": 42101,
+                  "id": 46649,
                   "mutability": "mutable",
                   "name": "signature",
-                  "nameLocation": "1981:9:47",
+                  "nameLocation": "1981:9:55",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42146,
-                  "src": "1968:22:47",
+                  "scope": 46694,
+                  "src": "1968:22:55",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1479,10 +1479,10 @@ export const SignatureChecker = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 42100,
+                    "id": 46648,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1968:5:47",
+                    "src": "1968:5:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -1491,21 +1491,21 @@ export const SignatureChecker = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1912:84:47"
+              "src": "1912:84:55"
             },
             "returnParameters": {
-              "id": 42105,
+              "id": 46653,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 42104,
+                  "id": 46652,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 42146,
-                  "src": "2020:4:47",
+                  "scope": 46694,
+                  "src": "2020:4:55",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1513,10 +1513,10 @@ export const SignatureChecker = {
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 42103,
+                    "id": 46651,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2020:4:47",
+                    "src": "2020:4:55",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1525,9 +1525,9 @@ export const SignatureChecker = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2019:6:47"
+              "src": "2019:6:55"
             },
-            "scope": 42147,
+            "scope": 46695,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
@@ -1539,23 +1539,23 @@ export const SignatureChecker = {
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 42046,
+          "id": 46594,
           "nodeType": "StructuredDocumentation",
-          "src": "241:290:47",
+          "src": "241:290:55",
           "text": " @dev Signature verification helper that can be used instead of `ECDSA.recover` to seamlessly support both ECDSA\n signatures from externally owned accounts (EOAs) as well as ERC-1271 signatures from smart contract wallets like\n Argent and Safe Wallet (previously Gnosis Safe)."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          42147
+          46695
         ],
         "name": "SignatureChecker",
-        "nameLocation": "540:16:47",
-        "scope": 42148,
+        "nameLocation": "540:16:55",
+        "scope": 46696,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 47
+  "id": 55
 } as const;

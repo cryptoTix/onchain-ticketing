@@ -10,12 +10,12 @@ export const Ticket = {
   },
   "ast": {
     "absolutePath": "src/Ticket.sol",
-    "id": 51524,
+    "id": 56117,
     "exportedSymbols": {},
     "nodeType": "SourceUnit",
-    "src": "1037:0:59",
+    "src": "1037:0:67",
     "nodes": [],
     "license": "SEE LICENSE IN LICENSE"
   },
-  "id": 59
+  "id": 67
 } as const;

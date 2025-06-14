@@ -302,22 +302,22 @@ export const IERC1155Receiver = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol",
-    "id": 39594,
+    "id": 43571,
     "exportedSymbols": {
       "IERC1155Receiver": [
-        39593
+        43570
       ],
       "IERC165": [
-        42159
+        46707
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "118:2481:31",
+    "src": "118:2481:36",
     "nodes": [
       {
-        "id": 39553,
+        "id": 43530,
         "nodeType": "PragmaDirective",
-        "src": "118:24:31",
+        "src": "118:24:36",
         "nodes": [],
         "literals": [
           "solidity",
@@ -327,24 +327,24 @@ export const IERC1155Receiver = {
         ]
       },
       {
-        "id": 39555,
+        "id": 43532,
         "nodeType": "ImportDirective",
-        "src": "144:62:31",
+        "src": "144:62:36",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol",
         "file": "../../utils/introspection/IERC165.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 39594,
-        "sourceUnit": 42160,
+        "scope": 43571,
+        "sourceUnit": 46708,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39554,
+              "id": 43531,
               "name": "IERC165",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 42159,
-              "src": "152:7:31",
+              "referencedDeclaration": 46707,
+              "src": "152:7:36",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -353,19 +353,19 @@ export const IERC1155Receiver = {
         "unitAlias": ""
       },
       {
-        "id": 39593,
+        "id": 43570,
         "nodeType": "ContractDefinition",
-        "src": "327:2271:31",
+        "src": "327:2271:36",
         "nodes": [
           {
-            "id": 39574,
+            "id": 43551,
             "nodeType": "FunctionDefinition",
-            "src": "1203:179:31",
+            "src": "1203:179:36",
             "nodes": [],
             "documentation": {
-              "id": 39559,
+              "id": 43536,
               "nodeType": "StructuredDocumentation",
-              "src": "371:827:31",
+              "src": "371:827:36",
               "text": " @dev Handles the receipt of a single ERC-1155 token type. This function is\n called at the end of a `safeTransferFrom` after the balance has been updated.\n NOTE: To accept the transfer, this must return\n `bytes4(keccak256(\"onERC1155Received(address,address,uint256,uint256,bytes)\"))`\n (i.e. 0xf23a6e61, or its own function selector).\n @param operator The address which initiated the transfer (i.e. msg.sender)\n @param from The address which previously owned the token\n @param id The ID of the token being transferred\n @param value The amount of tokens being transferred\n @param data Additional data with no specified format\n @return `bytes4(keccak256(\"onERC1155Received(address,address,uint256,uint256,bytes)\"))` if transfer is allowed"
             },
             "functionSelector": "f23a6e61",
@@ -373,20 +373,20 @@ export const IERC1155Receiver = {
             "kind": "function",
             "modifiers": [],
             "name": "onERC1155Received",
-            "nameLocation": "1212:17:31",
+            "nameLocation": "1212:17:36",
             "parameters": {
-              "id": 39570,
+              "id": 43547,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39561,
+                  "id": 43538,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "1247:8:31",
+                  "nameLocation": "1247:8:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39574,
-                  "src": "1239:16:31",
+                  "scope": 43551,
+                  "src": "1239:16:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -394,10 +394,10 @@ export const IERC1155Receiver = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39560,
+                    "id": 43537,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1239:7:31",
+                    "src": "1239:7:36",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -408,13 +408,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39563,
+                  "id": 43540,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "1273:4:31",
+                  "nameLocation": "1273:4:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39574,
-                  "src": "1265:12:31",
+                  "scope": 43551,
+                  "src": "1265:12:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -422,10 +422,10 @@ export const IERC1155Receiver = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39562,
+                    "id": 43539,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1265:7:31",
+                    "src": "1265:7:36",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -436,13 +436,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39565,
+                  "id": 43542,
                   "mutability": "mutable",
                   "name": "id",
-                  "nameLocation": "1295:2:31",
+                  "nameLocation": "1295:2:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39574,
-                  "src": "1287:10:31",
+                  "scope": 43551,
+                  "src": "1287:10:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -450,10 +450,10 @@ export const IERC1155Receiver = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39564,
+                    "id": 43541,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1287:7:31",
+                    "src": "1287:7:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -463,13 +463,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39567,
+                  "id": 43544,
                   "mutability": "mutable",
                   "name": "value",
-                  "nameLocation": "1315:5:31",
+                  "nameLocation": "1315:5:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39574,
-                  "src": "1307:13:31",
+                  "scope": 43551,
+                  "src": "1307:13:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -477,10 +477,10 @@ export const IERC1155Receiver = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39566,
+                    "id": 43543,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1307:7:31",
+                    "src": "1307:7:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -490,13 +490,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39569,
+                  "id": 43546,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "1345:4:31",
+                  "nameLocation": "1345:4:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39574,
-                  "src": "1330:19:31",
+                  "scope": 43551,
+                  "src": "1330:19:36",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -504,10 +504,10 @@ export const IERC1155Receiver = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39568,
+                    "id": 43545,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1330:5:31",
+                    "src": "1330:5:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -516,21 +516,21 @@ export const IERC1155Receiver = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1229:126:31"
+              "src": "1229:126:36"
             },
             "returnParameters": {
-              "id": 39573,
+              "id": 43550,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39572,
+                  "id": 43549,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39574,
-                  "src": "1374:6:31",
+                  "scope": 43551,
+                  "src": "1374:6:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -538,10 +538,10 @@ export const IERC1155Receiver = {
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 39571,
+                    "id": 43548,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1374:6:31",
+                    "src": "1374:6:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -550,22 +550,22 @@ export const IERC1155Receiver = {
                   "visibility": "internal"
                 }
               ],
-              "src": "1373:8:31"
+              "src": "1373:8:36"
             },
-            "scope": 39593,
+            "scope": 43570,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39592,
+            "id": 43569,
             "nodeType": "FunctionDefinition",
-            "src": "2388:208:31",
+            "src": "2388:208:36",
             "nodes": [],
             "documentation": {
-              "id": 39575,
+              "id": 43552,
               "nodeType": "StructuredDocumentation",
-              "src": "1388:995:31",
+              "src": "1388:995:36",
               "text": " @dev Handles the receipt of a multiple ERC-1155 token types. This function\n is called at the end of a `safeBatchTransferFrom` after the balances have\n been updated.\n NOTE: To accept the transfer(s), this must return\n `bytes4(keccak256(\"onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)\"))`\n (i.e. 0xbc197c81, or its own function selector).\n @param operator The address which initiated the batch transfer (i.e. msg.sender)\n @param from The address which previously owned the token\n @param ids An array containing ids of each token being transferred (order and length must match values array)\n @param values An array containing amounts of each token being transferred (order and length must match ids array)\n @param data Additional data with no specified format\n @return `bytes4(keccak256(\"onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)\"))` if transfer is allowed"
             },
             "functionSelector": "bc197c81",
@@ -573,20 +573,20 @@ export const IERC1155Receiver = {
             "kind": "function",
             "modifiers": [],
             "name": "onERC1155BatchReceived",
-            "nameLocation": "2397:22:31",
+            "nameLocation": "2397:22:36",
             "parameters": {
-              "id": 39588,
+              "id": 43565,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39577,
+                  "id": 43554,
                   "mutability": "mutable",
                   "name": "operator",
-                  "nameLocation": "2437:8:31",
+                  "nameLocation": "2437:8:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39592,
-                  "src": "2429:16:31",
+                  "scope": 43569,
+                  "src": "2429:16:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -594,10 +594,10 @@ export const IERC1155Receiver = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39576,
+                    "id": 43553,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2429:7:31",
+                    "src": "2429:7:36",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -608,13 +608,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39579,
+                  "id": 43556,
                   "mutability": "mutable",
                   "name": "from",
-                  "nameLocation": "2463:4:31",
+                  "nameLocation": "2463:4:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39592,
-                  "src": "2455:12:31",
+                  "scope": 43569,
+                  "src": "2455:12:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -622,10 +622,10 @@ export const IERC1155Receiver = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 39578,
+                    "id": 43555,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2455:7:31",
+                    "src": "2455:7:36",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -636,13 +636,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39582,
+                  "id": 43559,
                   "mutability": "mutable",
                   "name": "ids",
-                  "nameLocation": "2496:3:31",
+                  "nameLocation": "2496:3:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39592,
-                  "src": "2477:22:31",
+                  "scope": 43569,
+                  "src": "2477:22:36",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -651,18 +651,18 @@ export const IERC1155Receiver = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39580,
+                      "id": 43557,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2477:7:31",
+                      "src": "2477:7:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39581,
+                    "id": 43558,
                     "nodeType": "ArrayTypeName",
-                    "src": "2477:9:31",
+                    "src": "2477:9:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -672,13 +672,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39585,
+                  "id": 43562,
                   "mutability": "mutable",
                   "name": "values",
-                  "nameLocation": "2528:6:31",
+                  "nameLocation": "2528:6:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39592,
-                  "src": "2509:25:31",
+                  "scope": 43569,
+                  "src": "2509:25:36",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -687,18 +687,18 @@ export const IERC1155Receiver = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 39583,
+                      "id": 43560,
                       "name": "uint256",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2509:7:31",
+                      "src": "2509:7:36",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "id": 39584,
+                    "id": 43561,
                     "nodeType": "ArrayTypeName",
-                    "src": "2509:9:31",
+                    "src": "2509:9:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
                       "typeString": "uint256[]"
@@ -708,13 +708,13 @@ export const IERC1155Receiver = {
                 },
                 {
                   "constant": false,
-                  "id": 39587,
+                  "id": 43564,
                   "mutability": "mutable",
                   "name": "data",
-                  "nameLocation": "2559:4:31",
+                  "nameLocation": "2559:4:36",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39592,
-                  "src": "2544:19:31",
+                  "scope": 43569,
+                  "src": "2544:19:36",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -722,10 +722,10 @@ export const IERC1155Receiver = {
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 39586,
+                    "id": 43563,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2544:5:31",
+                    "src": "2544:5:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -734,21 +734,21 @@ export const IERC1155Receiver = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2419:150:31"
+              "src": "2419:150:36"
             },
             "returnParameters": {
-              "id": 39591,
+              "id": 43568,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39590,
+                  "id": 43567,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39592,
-                  "src": "2588:6:31",
+                  "scope": 43569,
+                  "src": "2588:6:36",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -756,10 +756,10 @@ export const IERC1155Receiver = {
                     "typeString": "bytes4"
                   },
                   "typeName": {
-                    "id": 39589,
+                    "id": 43566,
                     "name": "bytes4",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2588:6:31",
+                    "src": "2588:6:36",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes4",
                       "typeString": "bytes4"
@@ -768,9 +768,9 @@ export const IERC1155Receiver = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2587:8:31"
+              "src": "2587:8:36"
             },
-            "scope": 39593,
+            "scope": 43570,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -780,42 +780,42 @@ export const IERC1155Receiver = {
         "baseContracts": [
           {
             "baseName": {
-              "id": 39557,
+              "id": 43534,
               "name": "IERC165",
               "nameLocations": [
-                "357:7:31"
+                "357:7:36"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 42159,
-              "src": "357:7:31"
+              "referencedDeclaration": 46707,
+              "src": "357:7:36"
             },
-            "id": 39558,
+            "id": 43535,
             "nodeType": "InheritanceSpecifier",
-            "src": "357:7:31"
+            "src": "357:7:36"
           }
         ],
         "canonicalName": "IERC1155Receiver",
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 39556,
+          "id": 43533,
           "nodeType": "StructuredDocumentation",
-          "src": "208:118:31",
+          "src": "208:118:36",
           "text": " @dev Interface that must be implemented by smart contracts in order to receive\n ERC-1155 token transfers."
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          39593,
-          42159
+          43570,
+          46707
         ],
         "name": "IERC1155Receiver",
-        "nameLocation": "337:16:31",
-        "scope": 39594,
+        "nameLocation": "337:16:36",
+        "scope": 43571,
         "usedErrors": [],
         "usedEvents": []
       }
     ],
     "license": "MIT"
   },
-  "id": 31
+  "id": 36
 } as const;

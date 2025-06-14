@@ -10,19 +10,19 @@ export const IERC20 = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/interfaces/IERC20.sol",
-    "id": 39267,
+    "id": 43244,
     "exportedSymbols": {
       "IERC20": [
-        39841
+        44333
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "105:76:27",
+    "src": "105:76:32",
     "nodes": [
       {
-        "id": 39264,
+        "id": 43241,
         "nodeType": "PragmaDirective",
-        "src": "105:24:27",
+        "src": "105:24:32",
         "nodes": [],
         "literals": [
           "solidity",
@@ -32,24 +32,24 @@ export const IERC20 = {
         ]
       },
       {
-        "id": 39266,
+        "id": 43243,
         "nodeType": "ImportDirective",
-        "src": "131:49:27",
+        "src": "131:49:32",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol",
         "file": "../token/ERC20/IERC20.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 39267,
-        "sourceUnit": 39842,
+        "scope": 43244,
+        "sourceUnit": 44334,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39265,
+              "id": 43242,
               "name": "IERC20",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39841,
-              "src": "139:6:27",
+              "referencedDeclaration": 44333,
+              "src": "139:6:32",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -60,5 +60,5 @@ export const IERC20 = {
     ],
     "license": "MIT"
   },
-  "id": 27
+  "id": 32
 } as const;

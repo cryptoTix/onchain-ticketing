@@ -791,22 +791,22 @@ export const IERC721Metadata = {
   },
   "ast": {
     "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
-    "id": 40005,
+    "id": 44523,
     "exportedSymbols": {
       "IERC721": [
-        39958
+        44476
       ],
       "IERC721Metadata": [
-        40004
+        44522
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "127:665:37",
+    "src": "127:665:44",
     "nodes": [
       {
-        "id": 39978,
+        "id": 44496,
         "nodeType": "PragmaDirective",
-        "src": "127:24:37",
+        "src": "127:24:44",
         "nodes": [],
         "literals": [
           "solidity",
@@ -816,24 +816,24 @@ export const IERC721Metadata = {
         ]
       },
       {
-        "id": 39980,
+        "id": 44498,
         "nodeType": "ImportDirective",
-        "src": "153:39:37",
+        "src": "153:39:44",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/token/ERC721/IERC721.sol",
         "file": "../IERC721.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 40005,
-        "sourceUnit": 39959,
+        "scope": 44523,
+        "sourceUnit": 44477,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 39979,
+              "id": 44497,
               "name": "IERC721",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
-              "referencedDeclaration": 39958,
-              "src": "161:7:37",
+              "referencedDeclaration": 44476,
+              "src": "161:7:44",
               "typeDescriptions": {}
             },
             "nameLocation": "-1:-1:-1"
@@ -842,19 +842,19 @@ export const IERC721Metadata = {
         "unitAlias": ""
       },
       {
-        "id": 40004,
+        "id": 44522,
         "nodeType": "ContractDefinition",
-        "src": "328:463:37",
+        "src": "328:463:44",
         "nodes": [
           {
-            "id": 39989,
+            "id": 44507,
             "nodeType": "FunctionDefinition",
-            "src": "434:54:37",
+            "src": "434:54:44",
             "nodes": [],
             "documentation": {
-              "id": 39984,
+              "id": 44502,
               "nodeType": "StructuredDocumentation",
-              "src": "371:58:37",
+              "src": "371:58:44",
               "text": " @dev Returns the token collection name."
             },
             "functionSelector": "06fdde03",
@@ -862,26 +862,26 @@ export const IERC721Metadata = {
             "kind": "function",
             "modifiers": [],
             "name": "name",
-            "nameLocation": "443:4:37",
+            "nameLocation": "443:4:44",
             "parameters": {
-              "id": 39985,
+              "id": 44503,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "447:2:37"
+              "src": "447:2:44"
             },
             "returnParameters": {
-              "id": 39988,
+              "id": 44506,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39987,
+                  "id": 44505,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39989,
-                  "src": "473:13:37",
+                  "scope": 44507,
+                  "src": "473:13:44",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -889,10 +889,10 @@ export const IERC721Metadata = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 39986,
+                    "id": 44504,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "473:6:37",
+                    "src": "473:6:44",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -901,22 +901,22 @@ export const IERC721Metadata = {
                   "visibility": "internal"
                 }
               ],
-              "src": "472:15:37"
+              "src": "472:15:44"
             },
-            "scope": 40004,
+            "scope": 44522,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 39995,
+            "id": 44513,
             "nodeType": "FunctionDefinition",
-            "src": "559:56:37",
+            "src": "559:56:44",
             "nodes": [],
             "documentation": {
-              "id": 39990,
+              "id": 44508,
               "nodeType": "StructuredDocumentation",
-              "src": "494:60:37",
+              "src": "494:60:44",
               "text": " @dev Returns the token collection symbol."
             },
             "functionSelector": "95d89b41",
@@ -924,26 +924,26 @@ export const IERC721Metadata = {
             "kind": "function",
             "modifiers": [],
             "name": "symbol",
-            "nameLocation": "568:6:37",
+            "nameLocation": "568:6:44",
             "parameters": {
-              "id": 39991,
+              "id": 44509,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "574:2:37"
+              "src": "574:2:44"
             },
             "returnParameters": {
-              "id": 39994,
+              "id": 44512,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39993,
+                  "id": 44511,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 39995,
-                  "src": "600:13:37",
+                  "scope": 44513,
+                  "src": "600:13:44",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -951,10 +951,10 @@ export const IERC721Metadata = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 39992,
+                    "id": 44510,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "600:6:37",
+                    "src": "600:6:44",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -963,22 +963,22 @@ export const IERC721Metadata = {
                   "visibility": "internal"
                 }
               ],
-              "src": "599:15:37"
+              "src": "599:15:44"
             },
-            "scope": 40004,
+            "scope": 44522,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 40003,
+            "id": 44521,
             "nodeType": "FunctionDefinition",
-            "src": "716:73:37",
+            "src": "716:73:44",
             "nodes": [],
             "documentation": {
-              "id": 39996,
+              "id": 44514,
               "nodeType": "StructuredDocumentation",
-              "src": "621:90:37",
+              "src": "621:90:44",
               "text": " @dev Returns the Uniform Resource Identifier (URI) for `tokenId` token."
             },
             "functionSelector": "c87b56dd",
@@ -986,20 +986,20 @@ export const IERC721Metadata = {
             "kind": "function",
             "modifiers": [],
             "name": "tokenURI",
-            "nameLocation": "725:8:37",
+            "nameLocation": "725:8:44",
             "parameters": {
-              "id": 39999,
+              "id": 44517,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 39998,
+                  "id": 44516,
                   "mutability": "mutable",
                   "name": "tokenId",
-                  "nameLocation": "742:7:37",
+                  "nameLocation": "742:7:44",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40003,
-                  "src": "734:15:37",
+                  "scope": 44521,
+                  "src": "734:15:44",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1007,10 +1007,10 @@ export const IERC721Metadata = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 39997,
+                    "id": 44515,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "734:7:37",
+                    "src": "734:7:44",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1019,21 +1019,21 @@ export const IERC721Metadata = {
                   "visibility": "internal"
                 }
               ],
-              "src": "733:17:37"
+              "src": "733:17:44"
             },
             "returnParameters": {
-              "id": 40002,
+              "id": 44520,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 40001,
+                  "id": 44519,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 40003,
-                  "src": "774:13:37",
+                  "scope": 44521,
+                  "src": "774:13:44",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -1041,10 +1041,10 @@ export const IERC721Metadata = {
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 40000,
+                    "id": 44518,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "774:6:37",
+                    "src": "774:6:44",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -1053,9 +1053,9 @@ export const IERC721Metadata = {
                   "visibility": "internal"
                 }
               ],
-              "src": "773:15:37"
+              "src": "773:15:44"
             },
-            "scope": 40004,
+            "scope": 44522,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
@@ -1065,47 +1065,47 @@ export const IERC721Metadata = {
         "baseContracts": [
           {
             "baseName": {
-              "id": 39982,
+              "id": 44500,
               "name": "IERC721",
               "nameLocations": [
-                "357:7:37"
+                "357:7:44"
               ],
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 39958,
-              "src": "357:7:37"
+              "referencedDeclaration": 44476,
+              "src": "357:7:44"
             },
-            "id": 39983,
+            "id": 44501,
             "nodeType": "InheritanceSpecifier",
-            "src": "357:7:37"
+            "src": "357:7:44"
           }
         ],
         "canonicalName": "IERC721Metadata",
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 39981,
+          "id": 44499,
           "nodeType": "StructuredDocumentation",
-          "src": "194:133:37",
+          "src": "194:133:44",
           "text": " @title ERC-721 Non-Fungible Token Standard, optional metadata extension\n @dev See https://eips.ethereum.org/EIPS/eip-721"
         },
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          40004,
-          39958,
-          42159
+          44522,
+          44476,
+          46707
         ],
         "name": "IERC721Metadata",
-        "nameLocation": "338:15:37",
-        "scope": 40005,
+        "nameLocation": "338:15:44",
+        "scope": 44523,
         "usedErrors": [],
         "usedEvents": [
-          39857,
-          39866,
-          39875
+          44375,
+          44384,
+          44393
         ]
       }
     ],
     "license": "MIT"
   },
-  "id": 37
+  "id": 44
 } as const;

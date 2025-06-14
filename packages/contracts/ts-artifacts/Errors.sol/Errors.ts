@@ -10,55 +10,55 @@ export const Errors = {
   },
   "ast": {
     "absolutePath": "src/interface/Errors.sol",
-    "id": 52154,
+    "id": 56736,
     "exportedSymbols": {
       "AlreadyUsedData": [
-        52133
+        56715
       ],
       "CancellerNotOwner": [
-        52145
+        56727
       ],
       "InvalidAmount": [
-        52153
+        56735
       ],
       "InvalidAsset": [
-        52139
+        56721
       ],
       "InvalidInput": [
-        52129
+        56711
       ],
       "InvalidPurchaseData": [
-        52135
+        56717
       ],
       "NotAllowlistedAsset": [
-        52141
+        56723
       ],
       "ShowtimeNotPassed": [
-        52149
+        56731
       ],
       "ShowtimePassed": [
-        52147
+        56729
       ],
       "SignerNotOwner": [
-        52143
+        56725
       ],
       "StalePurchaseData": [
-        52131
+        56713
       ],
       "UnsortedSeatsInput": [
-        52151
+        56733
       ],
       "ZeroLength": [
-        52137
+        56719
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "51:353:64",
+    "src": "51:353:72",
     "nodes": [
       {
-        "id": 52127,
+        "id": 56709,
         "nodeType": "PragmaDirective",
-        "src": "51:24:64",
+        "src": "51:24:72",
         "nodes": [],
         "literals": [
           "solidity",
@@ -68,202 +68,202 @@ export const Errors = {
         ]
       },
       {
-        "id": 52129,
+        "id": 56711,
         "nodeType": "ErrorDefinition",
-        "src": "77:21:64",
+        "src": "77:21:72",
         "nodes": [],
         "errorSelector": "b4fa3fb3",
         "name": "InvalidInput",
-        "nameLocation": "83:12:64",
+        "nameLocation": "83:12:72",
         "parameters": {
-          "id": 52128,
+          "id": 56710,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "95:2:64"
+          "src": "95:2:72"
         }
       },
       {
-        "id": 52131,
+        "id": 56713,
         "nodeType": "ErrorDefinition",
-        "src": "99:26:64",
+        "src": "99:26:72",
         "nodes": [],
         "errorSelector": "f1b24311",
         "name": "StalePurchaseData",
-        "nameLocation": "105:17:64",
+        "nameLocation": "105:17:72",
         "parameters": {
-          "id": 52130,
+          "id": 56712,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "122:2:64"
+          "src": "122:2:72"
         }
       },
       {
-        "id": 52133,
+        "id": 56715,
         "nodeType": "ErrorDefinition",
-        "src": "126:24:64",
+        "src": "126:24:72",
         "nodes": [],
         "errorSelector": "96c9d05f",
         "name": "AlreadyUsedData",
-        "nameLocation": "132:15:64",
+        "nameLocation": "132:15:72",
         "parameters": {
-          "id": 52132,
+          "id": 56714,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "147:2:64"
+          "src": "147:2:72"
         }
       },
       {
-        "id": 52135,
+        "id": 56717,
         "nodeType": "ErrorDefinition",
-        "src": "151:28:64",
+        "src": "151:28:72",
         "nodes": [],
         "errorSelector": "a570c89c",
         "name": "InvalidPurchaseData",
-        "nameLocation": "157:19:64",
+        "nameLocation": "157:19:72",
         "parameters": {
-          "id": 52134,
+          "id": 56716,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "176:2:64"
+          "src": "176:2:72"
         }
       },
       {
-        "id": 52137,
+        "id": 56719,
         "nodeType": "ErrorDefinition",
-        "src": "180:19:64",
+        "src": "180:19:72",
         "nodes": [],
         "errorSelector": "bf557497",
         "name": "ZeroLength",
-        "nameLocation": "186:10:64",
+        "nameLocation": "186:10:72",
         "parameters": {
-          "id": 52136,
+          "id": 56718,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "196:2:64"
+          "src": "196:2:72"
         }
       },
       {
-        "id": 52139,
+        "id": 56721,
         "nodeType": "ErrorDefinition",
-        "src": "200:21:64",
+        "src": "200:21:72",
         "nodes": [],
         "errorSelector": "c891add2",
         "name": "InvalidAsset",
-        "nameLocation": "206:12:64",
+        "nameLocation": "206:12:72",
         "parameters": {
-          "id": 52138,
+          "id": 56720,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "218:2:64"
+          "src": "218:2:72"
         }
       },
       {
-        "id": 52141,
+        "id": 56723,
         "nodeType": "ErrorDefinition",
-        "src": "222:28:64",
+        "src": "222:28:72",
         "nodes": [],
         "errorSelector": "45326c46",
         "name": "NotAllowlistedAsset",
-        "nameLocation": "228:19:64",
+        "nameLocation": "228:19:72",
         "parameters": {
-          "id": 52140,
+          "id": 56722,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "247:2:64"
+          "src": "247:2:72"
         }
       },
       {
-        "id": 52143,
+        "id": 56725,
         "nodeType": "ErrorDefinition",
-        "src": "251:23:64",
+        "src": "251:23:72",
         "nodes": [],
         "errorSelector": "51c65eae",
         "name": "SignerNotOwner",
-        "nameLocation": "257:14:64",
+        "nameLocation": "257:14:72",
         "parameters": {
-          "id": 52142,
+          "id": 56724,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "271:2:64"
+          "src": "271:2:72"
         }
       },
       {
-        "id": 52145,
+        "id": 56727,
         "nodeType": "ErrorDefinition",
-        "src": "275:26:64",
+        "src": "275:26:72",
         "nodes": [],
         "errorSelector": "508229e4",
         "name": "CancellerNotOwner",
-        "nameLocation": "281:17:64",
+        "nameLocation": "281:17:72",
         "parameters": {
-          "id": 52144,
+          "id": 56726,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "298:2:64"
+          "src": "298:2:72"
         }
       },
       {
-        "id": 52147,
+        "id": 56729,
         "nodeType": "ErrorDefinition",
-        "src": "302:23:64",
+        "src": "302:23:72",
         "nodes": [],
         "errorSelector": "415900e2",
         "name": "ShowtimePassed",
-        "nameLocation": "308:14:64",
+        "nameLocation": "308:14:72",
         "parameters": {
-          "id": 52146,
+          "id": 56728,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "322:2:64"
+          "src": "322:2:72"
         }
       },
       {
-        "id": 52149,
+        "id": 56731,
         "nodeType": "ErrorDefinition",
-        "src": "326:26:64",
+        "src": "326:26:72",
         "nodes": [],
         "errorSelector": "3f583607",
         "name": "ShowtimeNotPassed",
-        "nameLocation": "332:17:64",
+        "nameLocation": "332:17:72",
         "parameters": {
-          "id": 52148,
+          "id": 56730,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "349:2:64"
+          "src": "349:2:72"
         }
       },
       {
-        "id": 52151,
+        "id": 56733,
         "nodeType": "ErrorDefinition",
-        "src": "353:27:64",
+        "src": "353:27:72",
         "nodes": [],
         "errorSelector": "1103f79c",
         "name": "UnsortedSeatsInput",
-        "nameLocation": "359:18:64",
+        "nameLocation": "359:18:72",
         "parameters": {
-          "id": 52150,
+          "id": 56732,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "377:2:64"
+          "src": "377:2:72"
         }
       },
       {
-        "id": 52153,
+        "id": 56735,
         "nodeType": "ErrorDefinition",
-        "src": "381:22:64",
+        "src": "381:22:72",
         "nodes": [],
         "errorSelector": "2c5211c6",
         "name": "InvalidAmount",
-        "nameLocation": "387:13:64",
+        "nameLocation": "387:13:72",
         "parameters": {
-          "id": 52152,
+          "id": 56734,
           "nodeType": "ParameterList",
           "parameters": [],
-          "src": "400:2:64"
+          "src": "400:2:72"
         }
       }
     ],
     "license": "SEE LICENSE IN LICENSE"
   },
-  "id": 64
+  "id": 72
 } as const;
