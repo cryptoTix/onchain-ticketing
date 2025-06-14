@@ -18,6 +18,7 @@ import ShowCard from "../ShowCard/ShowCard";
 import { useRouter } from "next/navigation";
 import { ShowInterface } from "../../models/show";
 import { useEffect, useState } from "react";
+import { ToastNotification } from "../Toast/ToastNotification";
 
 export const MainPage: React.FC = () => {
   const [shows, setShows] = useState<ShowInterface[]>([]);
@@ -32,16 +33,15 @@ export const MainPage: React.FC = () => {
   }, []);
 
   const handleShowClick = (showId: string) => {
-    console.log("clicked bithc");
     router.push(`/sellers/${showId}`);
   };
   return (
     
     <div className= "flex flex-col items-center mt-12 w-full gap-12">
-
-        <div className="text-4xl font-bold">Book Movies With Crypto</div>
-        <div className="text-lg mt-2">SAVE UP TO 60%</div>
-        <button className="mt-5 bg-purple-500 px-6 py-3 rounded-md">Explore Now</button>
+      <ToastNotification/>
+      <div className="text-4xl font-bold">Book Movies With Crypto</div>
+      <div className="text-lg mt-2">SAVE UP TO 60%</div>
+      <button className="mt-5 bg-purple-500 px-6 py-3 rounded-md">Explore Now</button>
       {/* Movie Details Section (Side-by-Side) */}
       <div className="mt-10 mx-auto max-w-6xl p-5 rounded-lg flex items-center space-x-10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">

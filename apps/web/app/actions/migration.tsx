@@ -1,53 +1,22 @@
-"use client";
-
-import { getPublicClient, getWalletClient } from "@wagmi/core";
-import { config } from "../contexts/Web3Provider";
-import { Address, Chain, getContract, keccak256 } from "viem";
 import { Master, Master__factory } from "../../../../typechain-types";
-import { PurchaseLib, TicketLib } from "../../../../typechain-types/src/Master";
-import { Logger } from "../utils/logger";
-import { toast } from "react-hot-toast";
-import { makeTxExplorerLink } from "../utils/txExplorerLink";
-import { VaultSupervisor } from "../types/VaultSupervisor";
-import { PaymentRequest, PaymentMetadata, ValidationSignatureRequest, ValidationSignatureResponse } from "../models/paymentRequest";
+import { PaymentRequest, PaymentMetadata, ValidationSignatureRequest, ValidationSignatureResponse, SeatData, TicketData, PurchaseData } from "../models/paymentRequest";
 import Decimal from "decimal.js";
 import { Time } from "../utils/time";
-import "ethers";
-import { BigNumber, ethers, providers } from "ethers";
-import { joinSignature } from "@ethersproject/bytes";
-import { _TypedDataEncoder } from "@ethersproject/hash";
+import { ethers } from "ethers";
+import { privateKeyToAccount } from "viem/accounts";
+import { MASTER_ADDR, PRIVATE_KEY } from "../utils/consts";
+import { erc20Abi, Hex } from "viem";
 
-const paymentMetadata : PaymentMetadata = {
+export const paymentMetadata : PaymentMetadata = {
   requestId: "",
   sellerId: "",
   showId: "",
-  showTime : Number(1746978816),
+  showTime : Number(1780265189),
   seatIds: [],
   totalPrice: new Decimal(0),
 };
+export var nftId : Hex;
 const seatPrice = 5.44;
-const contractAddr : Address = '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266'
-const PRIVATE_KEY = "ac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80"; 
-const domain = { name : "PurchaseData", version : "1.0.0" }
-// Types definition
-const types = {
-  SeatData: [
-    { name: "seatId", type: "uint128" },
-    { name: "price", type: "uint128" },
-  ],
-  TicketData: [
-    { name: "asset", type: "address" },
-    { name: "showTime", type: "uint96" },
-    { name: "amount", type: "uint256" },
-    { name: "showId", type: "uint256" },
-    { name: "seats", type: "SeatData[]" },
-  ],
-  PurchaseData: [
-    { name: "ticketData", type: "TicketData" },
-    { name: "timestamp", type: "uint256" },
-    { name: "nonce", type: "uint256" },
-  ],
-};
 
 // Backend needs to validate the payload before generating signature
 export async function submitPaymentRequest(
@@ -66,101 +35,88 @@ export async function submitPaymentRequest(
 
 
 export async function fetchPaymentRequest(requestId : String) : Promise<PaymentMetadata> {
-  
+  await new Promise(resolve => setTimeout(resolve, 3000)); // 3 sec
+  // TODO: Call must be done to backend for data
   return paymentMetadata
+}
 
-  // const walletClient = await getWalletClient(config);
-  // const publicClient = getPublicClient(config);
-  
-  // if (!walletClient || !publicClient) {
-  //   throw new Error("wallet client or public client is still missing");
-  // }
-  
-  // const tokenERC20 = getContract({
-  //   abi: ERC20.abi,
-  //   address: vaultAddress,
-  //   client: walletClient,
-  // });
-  
-  // const allowance = await tokenERC20.read.allowance([
-  //   walletClient.account.address,
-  //   vaultSupervisorAddr,
-  // ]);
-  
-  // if (allowance < amount) {
-  //   const approveTxHash = await tokenERC20.write.approve([
-  //     vaultSupervisorAddr,
-  //     amount,
-  //   ]);
-  //   Logger.info("Approve tx hash for returning receipt tokens:", approveTxHash);
-  
-  //   const txReceipt = await publicClient.waitForTransactionReceipt({
-  //     hash: approveTxHash,
-  //   });
-  //   Logger.info(
-  //     "Approve tx confirmed for returning receipt tokens - tx receipt hash:",
-  //     txReceipt.transactionHash
-  //   );
-  // }
-  
-  // const vaultSupervisor = getContract({
-  //   abi: VaultSupervisor.abi,
-  //   address: vaultSupervisorAddr,
-  //   client: {
-  //     wallet: walletClient,
-  //     public: publicClient,
-  //   },
-  // });
-  
-  // const txHash = await vaultSupervisor.write.returnShares([
-  //   vaultAddress,
-  //   amount,
-  // ]);
-  
-  // const returnSharesTxReceipt = await publicClient.waitForTransactionReceipt({
-  //   confirmations: 1,
-  //   hash: txHash,
-  // });
-  
-  // Logger.info(
-  //   `Successfully returned receipt tokens to vault:`,
-  //   returnSharesTxReceipt.transactionHash
-  // );
-  
-  // const txLinkInfo = makeTxExplorerLink(chain, txHash);
-  // toast.success(
-  //   `Successfully returned ${tokenSymbol} receipt tokens!$${txLinkInfo.string()}`
-  // );
+export async function fetchNftIdByRequest(requestId : String) : Promise<string> {
+  await new Promise(resolve => setTimeout(resolve, 3000)); // 3 sec
+  // TODO: Call must be done to backend for data
+  return nftId
 }
 
 export async function fetchValidationSignature(requestData : ValidationSignatureRequest) : Promise<ValidationSignatureResponse> {
-  const wallet = new ethers.Wallet(PRIVATE_KEY);
-  // wallet.address
-  const contract = new ethers.Contract(contractAddr, Master__factory.abi, wallet) as Master;
-  const seatData : TicketLib.SeatDataStruct[] = [];
+  // Locks must be acquired on DB before generating signature
+  const provider = new ethers.JsonRpcProvider("http://localhost:8545");
+  const account = privateKeyToAccount(PRIVATE_KEY);
+  const wallet = new ethers.Wallet(PRIVATE_KEY, provider);
+  const contract = new ethers.Contract(MASTER_ADDR, Master__factory.abi, provider) as unknown as  Master;
+  const assetERC20 = new ethers.Contract(requestData.assetAddress, erc20Abi, wallet);
+
+  var currentTime = Time.now.toMilliseconds()
+  currentTime = currentTime - currentTime%1000
+  currentTime/=1000
+  var totalAmount = BigInt(0);
+  const seatData : SeatData[] = [];
   paymentMetadata.seatIds.forEach((_, index) => {
     seatData.push({
-      seatId : index,
-      price: seatPrice * ( 10 ** 6),
-    })
+      seatId : BigInt(index),
+      price: BigInt(seatPrice * ( 10 ** 6)),
+    });
+    totalAmount += seatData[seatData.length - 1].price;
   })
-  const ticketData : TicketLib.StateStruct = {
+  const ticketData : TicketData = {
     asset : requestData.assetAddress,
-    showTime : BigNumber.from(paymentMetadata.showTime),
-    amount : BigNumber.from(paymentMetadata.totalPrice.mul(10 ** 6).toNumber()),
-    showId : paymentMetadata.showId,
+    showTime : BigInt(paymentMetadata.showTime),
+    amount : totalAmount,
+    showId : BigInt(0),
+    owner : requestData.user,
+    originTimestamp : BigInt(currentTime),
     seats : seatData
   };
-  const purchaseData : PurchaseLib.PurchaseDataStruct = {
+  const nonce : ethers.BigNumberish = (await contract.getNonce(requestData.user))
+  const purchaseData : PurchaseData = {
     ticketData : ticketData,
-    timestamp : Date.now(),
-    nonce : 0
+    nonce : ethers.getBigInt(nonce)
   }
+
+  console.log(ticketData)
+  const purchaseDataHash = await contract.getPurchaseDataSignatureHash(ticketData) as `0x{string}`
+  console.log(purchaseDataHash)
+  const sign = await account.sign({hash : purchaseDataHash}) as `0x{string}`
+  console.log(sign)
   const response : ValidationSignatureResponse = {
     paymentRequestId : requestData.paymentRequestId,
-    contract : contractAddr,
-    signature : joinSignature(wallet._signingKey().signDigest(_TypedDataEncoder.hash({name : domain.name, version : domain.version, chainId : requestData.chainId, verifyingContract : contractAddr}, types, purchaseData))),
-    purchaseData : purchaseData
+    contract : MASTER_ADDR,
+    signature : sign,
+    purchaseData : purchaseData,
+    chainId : requestData.chainId
   };
+  nftId = purchaseDataHash
   return response
 }
+
+/*
+Might come handy later
+function hashArray(arr: string[], type : string) : string{
+  const typeArr: string[] = [];
+  arr.forEach(() => {
+    typeArr.push("type");
+  })
+  return ethers.utils.keccak256(ethers.utils.solidityPack(typeArr, arr));
+}
+async function encodePurchaseData(purchaseData : PurchaseData, contract : Constants) {
+    const seatHashes : `0x{string}`[] = [];
+    const defaultAbiCoder = ethers.utils.defaultAbiCoder;
+    const SEATDATA_TYPEHASH = await contract.SEATDATA_TYPEHASH();
+    const TICKETDATA_TYPEHASH = await contract.TICKETDATA_TYPEHASH();
+    const PURCHASE_DATA_TYPEHASH = await contract.PURCHASE_DATA_TYPEHASH(); 
+    purchaseData.ticketData.seats.forEach(async seat => {
+      seatHashes.push(ethers.utils.keccak256(defaultAbiCoder.encode(["bytes32", "uint128", "uint128"], [SEATDATA_TYPEHASH, seat.seatId, seat.price])) as `0x{string}`)
+    })
+    const ticketDataHash = ethers.utils.keccak256(defaultAbiCoder.encode(["bytes32","address","uint96","uint256","uint256","bytes32"], [TICKETDATA_TYPEHASH, purchaseData.ticketData.asset, purchaseData.ticketData.showTime, purchaseData.ticketData.amount, purchaseData.ticketData.showId, hashArray(seatHashes, "bytes32")])) as `0x{string}`
+    const purchaseDataHash = ethers.utils.keccak256(defaultAbiCoder.encode(["bytes32", "bytes32", "address", "uint96", "uint256"], [PURCHASE_DATA_TYPEHASH, ticketDataHash, purchaseData.user, purchaseData.nonce]))
+    return purchaseDataHash
+}
+//*/

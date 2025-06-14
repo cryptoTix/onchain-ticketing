@@ -11,21 +11,27 @@ import { Menu } from "@headlessui/react";
 import { config } from "../contexts/Web3Provider";
 import { chainImageMap } from "../constants/constants";
 import { DarkChevronDownIcon } from "../components/Shared/shared";
-import { PaymentMetadata } from "../models/paymentRequest";
+import { PaymentMetadata, ValidationSignatureResponse } from "../models/paymentRequest";
 import { Asset } from "../models/seller";
 import { getTokenImg } from "../utils/helpers";
 import { useAccount } from "wagmi";
+import { approve, isApproved, purchase } from "../actions/deposit";
+import { ToastNotification } from "../components/Toast/ToastNotification";
+import { Dialog } from "@headlessui/react";
 
 export default function PaymentPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const requestId = searchParams.get("requestId")!; // TODO: display some invalid page on invalid request ID
   const [paymentMetadata, setPaymentMetadata] = useState<PaymentMetadata>()
-  const [isAssetFetched, setIsAssetFetched] = useState<boolean>(false)
+  const [validationSignatureResponse, setValidationSignatureResponse] = useState<ValidationSignatureResponse>()
   const [acceptedAssets, setAcceptedAssets] = useState<Asset[]>([])
   const [selectedChain, setSelectedChain] = useState<Chain>(mainnet);
   const [selectedAsset, setSelectedAsset] = useState<Asset>();
-  const {isConnected} =  useAccount()
+  const [approved, setIsApproved] = useState<boolean>(false);
+  const [openDialogBox, setOpenDialogBox] = useState<boolean>(false);
+  const [isPendingTx, setPendingTx] = useState<boolean>(false);
+  const {isConnected, address} =  useAccount()
 
   // Fetch and load the payment metadata for requestId
   useEffect(() => {
@@ -48,13 +54,11 @@ export default function PaymentPage() {
         }
       }
       setAcceptedAssets(assets)
-      setIsAssetFetched(true)
     }
-    setIsAssetFetched(false)
     loadAssets()
   }, [paymentMetadata])
 
-  // Set 
+  // Set assets
   useEffect(() => {
     setSelectedAsset({
       symbol : ""
@@ -67,17 +71,52 @@ export default function PaymentPage() {
       if(index === acceptedAssets.length - 1) setSelectedAsset({symbol : ""} as Asset)
     }
   }, [selectedChain])
+  async function onClickApproveNPurchase() {
+    if (selectedAsset !== undefined && selectedAsset.chainId === selectedChain.id){
+      const validationData = await fetchValidationSignature({
+        paymentRequestId : requestId,
+        assetAddress : selectedAsset.address,
+        chainId : selectedChain.id,
+        user : address as `0x{string}`,
+      })
+      setValidationSignatureResponse(validationData)
+      setIsApproved(await isApproved(validationData))
+      setOpenDialogBox(true);
+    }
+  }
+  async function onClickApprove() {
+    if (validationSignatureResponse !== undefined ){
+
+      if (!approved) {
+        setPendingTx(true)
+        const isApproved = await approve(validationSignatureResponse)
+        setPendingTx(false)
+        if (isApproved) {
+          // set approved as true and proceed further
+          setIsApproved(true)
+        } else{
+          // close the dialog box
+          setOpenDialogBox(false)
+        }
+      }
+    }
+  }
   async function onClickPurchase() {
-    const signature = selectedAsset !== undefined && selectedAsset.chainId === selectedChain.id ? 
-    await fetchValidationSignature( {
-      paymentRequestId : requestId,
-      assetAddress : selectedAsset.address,
-      chainId : selectedChain.id
-    }) : "Not fetched"
-    console.log(signature)
+    if (validationSignatureResponse !== undefined ){
+      if (approved) {
+        setPendingTx(true)
+        const status = await purchase(validationSignatureResponse)
+        setPendingTx(false)
+        setOpenDialogBox(false)
+        if (status) { // on success redirect to ticket page
+          router.push(`/ticket?requestId=${requestId}`);
+        }
+      }
+    }
   }
     return (
       <div className="w-screen h-screen text-white flex flex-col justify-between overflow-hidden">
+        <ToastNotification/>
         <main className="flex justify-center items-start gap-10 px-10 py-10 flex-grow max-w-7xl mx-auto w-full">
           <section className="bg-gradient-to-r from-indigo-300 to-purple-300 p-12 rounded-xl w-[80%]">
             <h2 className="text-lg font-semibold mb-4">PAYMENT</h2>
@@ -184,11 +223,12 @@ export default function PaymentPage() {
             </div>
   
             <div className="flex gap-4">
-            <button className={`bg-gray-800 text-white px-6 py-3 rounded-md ${!isConnected ? `opacity-50` : `` }`} disabled = {isConnected}  onClick={() => {onClickPurchase()}}>Purchase</button>
+            <button className={`bg-gray-800 text-white px-6 py-3 rounded-md ${!isConnected ? `opacity-50` : `` }`}  onClick={() => {onClickApproveNPurchase()}}>Approve & Purchase</button>
               <button className="border border-white text-white px-4 py-2 rounded" onClick={() => {router.back()}}>Cancel</button>
             </div>
+            <br/>
+            <h2 className="text-white font-semibold text-lg mb-4 items-center">ADD TIMER</h2>
           </section>
-  
           {paymentMetadata !== undefined ? (<section className="bg-[#0b0033] p-6 rounded-xl h-[50vh] w-[30%] overflow-auto space-y-12">
             <h2 className="text-white font-semibold text-lg mb-4">BOOKING SUMMARY</h2>
             <p className="text-sm mb-1">{paymentMetadata.seatIds.toString() + " (" + paymentMetadata.seatIds.length + "Tickets)"}</p>
@@ -217,16 +257,31 @@ export default function PaymentPage() {
                           <div className="rounded-md bg-purple-300 w-full h-full" />
                         </section>)}
         </main>
-  
-        <footer className="px-10 py-6 flex justify-between items-center border-t border-gray-700">
-          <h2 className="text-yellow-400 font-bold text-xl">CRYPTOTIX</h2>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded">Contact For Partnership</button>
-          <div className="flex gap-4">
-            <a href="#"><img src="/icons/facebook.svg" alt="Facebook" /></a>
-            <a href="#"><img src="/icons/linkedin.svg" alt="LinkedIn" /></a>
-            <a href="#"><img src="/icons/twitter.svg" alt="Twitter" /></a>
+        <Dialog open={openDialogBox} onClose={() => {}} className="relative z-50">
+          <div className="fixed inset-0 bg-black/50" aria-hidden="true" />
+
+          <div className="fixed inset-0 flex items-center justify-center p-4">
+            <Dialog.Panel className="max-w-sm w-full bg-[#1A1A1A] text-white p-6 rounded-xl flex flex-col items-center space-y-4 shadow-xl border border-gray-700">
+              <img
+                src="/awaiting.svg" // Make sure this image exists in /public
+                alt="Waiting Animation"
+                className="w-full h-3/4"
+              />
+              <p className="text-sm text-gray-300 text-center">{approved ? "Please confirm purchase" : `Please approve USDC`}</p>
+              {
+                !isPendingTx ? (<button
+                  className="mt-6 px-4 py-2 bg-purple-600 hover:bg-purple-700 transition rounded text-sm font-medium"
+                  onClick={()=> { approved ? onClickPurchase() : onClickApprove()}}
+                >
+                  {approved ? "Purchase" : "Confirm Approval" }
+                </button>) : (
+                  <h3 className="text-lg font-semibold">Waiting for confirmation</h3>
+                )
+              }
+              <p className="text-xs text-purple-300 text-center">Do not close the web page</p>
+            </Dialog.Panel>
           </div>
-        </footer>
+        </Dialog>
       </div>
     );
   };

@@ -6,22 +6,22 @@ import { useEffect, useState } from "react";
 import { fetchShow } from "../../utils/showlist";
 import { ShowInterface } from "../../models/show";
 
-// TODO: Fetch these from api.
+// TODO: Fetch these from api. (showId) => {sellersData}
 const sellers = [
   {
     id: "grand-indonesia-cgv",
     name: "Grand Indonesia CGV",
     location: "JL. MH. TAHRIN NO.1",
     formats: [
-      { type: "Regular 2D", price: "20.88 ETH", times: ["11:00", "13:45", "14:40", "15:40", "17:15"] },
-      { type: "Gold Class 2D", price: "20.88 ETH", times: ["12:40", "15:40", "18:35", "17:10"] },
+      { type: "Regular 2D", price: "20.88 USD", times: ["11:00", "13:45", "14:40", "15:40", "17:15"] },
+      { type: "Gold Class 2D", price: "20.88 USD", times: ["12:40", "15:40", "18:35", "17:10"] },
     ],
   },
   {
     id: "mangga-dua-cinepolis",
     name: "Mangga Dua Square Cinépolis",
     location: "JL. MH. TAHRIN NO.1",
-    formats: [{ type: "2D", price: "20.88 ETH", times: ["13:45", "17:15", "20:00"] }],
+    formats: [{ type: "2D", price: "20.88 USD", times: ["13:45", "17:15", "20:00"] }],
   },
   {
     id: "plaza-indonesia-xxi",

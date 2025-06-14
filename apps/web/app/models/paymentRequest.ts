@@ -1,6 +1,6 @@
 import Decimal from "decimal.js"
-import { Address, Hex } from "viem"
-import { Bytes } from "ethers";
+import { Hex } from "viem"
+import { Bytes, BytesLike } from "ethers";
 import { } from "../../../../typechain-types";
 import { PurchaseLib } from "../../../../typechain-types/src/Master";
 
@@ -8,13 +8,13 @@ export interface PaymentMetadata {
     requestId: string,
     sellerId : string,
     showId: string,
-    showTime: Number,
+    showTime: number,
     seatIds : string[],
     totalPrice : Decimal,
 }
 
 export interface PaymentRequest {
-    user : Address | undefined,
+    user : `0x{string}`,
     sellerId : string,
     showId: string,
     showTime: string,
@@ -23,13 +23,46 @@ export interface PaymentRequest {
 
 export interface ValidationSignatureRequest {
     paymentRequestId : string,
-    assetAddress : Address,
+    assetAddress : `0x{string}`,
+    user : `0x{string}`,
     chainId : number,
 }
 
+export interface CancelRequest {
+    cancelRequest : `0x{string}`
+}
+// export interface ValidationSignatureResponse {
+//     paymentRequestId : string,
+//     contract : `0x{string}`
+//     purchaseData : PurchaseData,
+//     signature : `0x{string}`,
+//     chainId : number,
+// }
+
 export interface ValidationSignatureResponse {
     paymentRequestId : string,
-    contract : Address,
-    purchaseData : PurchaseLib.PurchaseDataStruct,
-    signature : string
+    contract : `0x{string}`
+    purchaseData : PurchaseData,
+    signature : `0x{string}`,
+    chainId : number,
+}
+
+export interface PurchaseData  {
+    ticketData: TicketData;
+    nonce: bigint;
+};
+
+export interface TicketData {
+    asset: `0x{string}`;
+    showTime: bigint;
+    owner: `0x{string}`;
+    amount: bigint;
+    showId: bigint;
+    originTimestamp: bigint;
+    seats: SeatData[];
+};
+
+export interface SeatData {
+    seatId: bigint;
+    price: bigint 
 }

@@ -1,5 +1,3 @@
-import { Address } from "viem";
-
 export interface Seller {
     id: string;
     name: string;
@@ -11,5 +9,5 @@ export interface Asset {
     name : string;
     symbol : string;
     chainId : number;
-    address : Address;
+    address : `0x{string}`;
 }
