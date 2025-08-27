@@ -1,5 +1,7 @@
 import { Address, Chain, Hex } from "viem";
 
+export type SeatAvailabilityType = "FILLED" | "AVAILABLE" | "SELECTED";
+
 export type UserXpData = {
   v2Points: number;
   v1Points: number;

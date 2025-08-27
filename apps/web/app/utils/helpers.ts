@@ -1,13 +1,18 @@
 import numeral from "numeral";
 import Decimal from "decimal.js";
 import { FixedPointNumber } from "./fixedPoint";
-import { Address, createPublicClient, fallback, getAddress, http, zeroAddress } from "viem";
+import { Address, createPublicClient, fallback, getAddress, http, isAddress, zeroAddress } from "viem";
 // import { ERC20 } from "@repo/contracts";
 import { Maybe } from "./maybe";
 import { MigrateV1Position, Asset, OperatorVault } from "../types/types";
 import { mainnet } from "viem/chains";
 import { assetImageMap } from "../constants/constants";
 import { VAULTS_TO_HIDE } from "../config";
+import { BlockData, SeatClass, SeatData } from "../../../../shared";
+import { TicketLib } from "../../../../typechain-types/src/Master";
+import { TicketData, ValidationSignatureResponse } from "../models/paymentRequest";
+import { src } from "../../../../typechain-types";
+import { convertOffsetToTimes } from "framer-motion";
 
 export const decimalFormat = (amount: string, twoPlaces?: boolean) => {
   return numeral(Number(amount).toFixed(4)).format(
@@ -160,3 +165,131 @@ export function filterHiddenVaultsOnDeposit(selectedChainId: number, operatorVau
   }
   return operatorVaults;
 }
+
+export function fetchNext7days() : Date[] {
+  const today = new Date(Date.now());
+  const week : Date[] = new Array(7);
+  const oneDay = (new Date())
+  for (let index = 0; index < 7; index++) {
+    week[index] = new Date();
+    week[index].setDate(today.getDate() + index)
+  }
+  return week;
+}
+
+export function displayLongDate(date:Date) : string {
+  return date.toLocaleDateString("en-US", {
+      weekday: "long",
+      day: "numeric",
+      month: "long", 
+      year: "numeric",
+  });
+}
+
+export function displayTime(date:Date) : string {
+  return date.toLocaleTimeString([],
+          { hour: '2-digit',
+          minute: '2-digit'
+          }
+  );
+}
+
+export function getDateAndMonth(date:Date) : string {
+  return date.toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "short", // 'Jan', 'Feb', etc.
+  });
+}
+
+export function getDay(date:Date) : string {
+  return date.toLocaleDateString("en-US", {
+    weekday : "short"
+  });
+}
+
+export function isSameDate(date1:Date, date2 : Date | number) {
+  if (typeof(date2) === "number") {
+    return date1.getDate() == new Date(date2).getDate()
+  }
+  return date1.getDate() == date2.getDate()
+}
+
+export function fetchSeatPriceFromRows(rows:BlockData[][]) : number {
+  for (let i = 0; i < rows.length; i++) {
+    for (let j = 0; j < rows[i].length; j++) {
+      if (rows[i][j].isSeat) return rows[i][j].seatData.price
+    }
+  }
+  return 0;
+}
+
+export function fetchRowIdFromRow(rows:BlockData[]) : string {
+  for (let i = 0; i < rows.length; i++) {
+      if (rows[i].isSeat) return rows[i].seatData.rowId
+  }
+  return "";
+}
+
+export function fetchChainName(id : string) : string {
+  const chainNames: Record<number, string> = {
+    1: "Ethereum Mainnet",
+    5: "Goerli Testnet",
+    11155111: "Sepolia Testnet",
+    137: "Polygon",
+    80001: "Mumbai",
+    56: "BNB Chain",
+    42161: "Arbitrum One",
+    10: "Optimism",
+    43114: "Avalanche C-Chain",
+    31337: "ANVIL",
+  };
+  return chainNames[parseInt(id)];
+}
+
+export function getSeatIdsToStr(seats: Record<string, SeatClass>) : string {
+  if (!seats) {
+    return ""
+  }
+  const seatArr : string[] = [];
+  Object.entries(seats).map(([_, seat]) => {
+    seatArr.push(seat.toString())
+  })
+  return seatArr.toString()
+}
+
+export function getSeatsToStr(seats: SeatData[]) : string {
+  console.log(seats)
+  let str = "";
+  for (let i = 0; i < seats.length; i++) {
+    const obj = new SeatClass(seats[i])
+    str += obj.toString()
+    if (i != seats.length - 1) {
+      str += ","
+    }
+  }
+  return str
+}
+
+export function trimAddress(addr : Address) : string {
+    if (isAddress(addr)) return `${addr.slice(0,6)}...${addr.slice(-4)}`
+    return addr
+}
+
+// export function getTicketDataObj(data : TicketLib.StateStruct) : TicketData {
+//   const seats : SeatData[] = [];
+//   data.seats.forEach((value) => {
+//     seats.push({
+//       seatId : value.seatId,
+//       price : value.price
+//     })
+//   })
+//   return {
+//     asset : data.asset as `0x{string}`,
+//     showTime : data.showTime,
+//     owner : data.owner as `0x{string}`,
+//     amount : data.amount,
+//     showId : data.showId,
+//     originTimestamp : data.originTimestamp,
+//     seats : seats
+//   }
+// }

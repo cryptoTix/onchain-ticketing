@@ -107,7 +107,7 @@ export interface MasterInterface extends utils.Interface {
     "getApproved(uint256)": FunctionFragment;
     "getCancellationAmount(uint256)": FunctionFragment;
     "getNonce(address)": FunctionFragment;
-    "getPurchaseDataSignatureHash((address,uint96,address,uint96,uint256,uint256,(uint128,uint128)[]))": FunctionFragment;
+    "getPurchaseDataSignatureHash((address,uint96,address,uint96,uint256,uint256,(uint256,uint256)[]))": FunctionFragment;
     "getUserVerificationSignatureHash(uint256)": FunctionFragment;
     "initialize(address,address,uint96,((uint128,uint128)[]))": FunctionFragment;
     "isApprovedForAll(address,address)": FunctionFragment;
@@ -115,7 +115,7 @@ export interface MasterInterface extends utils.Interface {
     "name()": FunctionFragment;
     "owner()": FunctionFragment;
     "ownerOf(uint256)": FunctionFragment;
-    "purchase(address,((address,uint96,address,uint96,uint256,uint256,(uint128,uint128)[]),uint256),bytes)": FunctionFragment;
+    "purchase(address,((address,uint96,address,uint96,uint256,uint256,(uint256,uint256)[]),uint256),bytes)": FunctionFragment;
     "redeem(uint256[])": FunctionFragment;
     "renounceOwnership()": FunctionFragment;
     "safeTransferFrom(address,address,uint256)": FunctionFragment;
@@ -367,6 +367,7 @@ export interface MasterInterface extends utils.Interface {
   events: {
     "Approval(address,address,uint256)": EventFragment;
     "ApprovalForAll(address,address,bool)": EventFragment;
+    "CancelledTicket(uint256)": EventFragment;
     "EIP712DomainChanged()": EventFragment;
     "Initialized(uint64)": EventFragment;
     "OwnershipTransferred(address,address)": EventFragment;
@@ -375,6 +376,7 @@ export interface MasterInterface extends utils.Interface {
 
   getEvent(nameOrSignatureOrTopic: "Approval"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "ApprovalForAll"): EventFragment;
+  getEvent(nameOrSignatureOrTopic: "CancelledTicket"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "EIP712DomainChanged"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "Initialized"): EventFragment;
   getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
@@ -404,6 +406,16 @@ export type ApprovalForAllEvent = TypedEvent<
 >;
 
 export type ApprovalForAllEventFilter = TypedEventFilter<ApprovalForAllEvent>;
+
+export interface CancelledTicketEventObject {
+  ticketId: BigNumber;
+}
+export type CancelledTicketEvent = TypedEvent<
+  [BigNumber],
+  CancelledTicketEventObject
+>;
+
+export type CancelledTicketEventFilter = TypedEventFilter<CancelledTicketEvent>;
 
 export interface EIP712DomainChangedEventObject {}
 export type EIP712DomainChangedEvent = TypedEvent<
@@ -981,6 +993,11 @@ export interface Master extends BaseContract {
       operator?: string | null,
       approved?: null
     ): ApprovalForAllEventFilter;
+
+    "CancelledTicket(uint256)"(
+      ticketId?: BigNumberish | null
+    ): CancelledTicketEventFilter;
+    CancelledTicket(ticketId?: BigNumberish | null): CancelledTicketEventFilter;
 
     "EIP712DomainChanged()"(): EIP712DomainChangedEventFilter;
     EIP712DomainChanged(): EIP712DomainChangedEventFilter;

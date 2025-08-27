@@ -1,88 +1,131 @@
 "use client";
-import { getPublicClient, getWalletClient } from "@wagmi/core";
+import { getPublicClient, getWalletClient, waitForTransactionReceipt } from "@wagmi/core";
 import { config } from "../contexts/Web3Provider";
 import { erc20Abi, stringify, getContract } from "viem";
 import { Logger } from "../utils/logger";
 import { toast } from "react-hot-toast";
 import { makeTxExplorerLink } from "../utils/txExplorerLink";
-import { Master__factory } from "../../../../typechain-types";
+import { IERC20__factory, Master__factory } from "../../../../typechain-types";
 import { ValidationSignatureResponse } from "../models/paymentRequest";
-import { nftId } from "./migration";
+import { getTicketStruct, PaymentMetadata } from "../../../../shared";
+import { fetchChainName } from "../utils/helpers";
+
+
+function makeReadonly<T>(array: T[]): ReadonlyArray<T> {
+  return array
+}
+
+
+
 
 export async function purchase(
-  purchaseMetada : ValidationSignatureResponse
+  purchaseMetada : PaymentMetadata
 ) : Promise<boolean> {
+  console.log("in purchase", purchaseMetada)
+  if (!purchaseMetada) {
+    console.log("got purchase data", purchaseMetada)
+    return false
+  }
   const walletClient = await getWalletClient(config);
   const publicClient = getPublicClient(config);
   if (!walletClient || !publicClient) {
-    throw new Error("wallet client or public client is still missing");
+    toast.error("Please connect wallet")
+    return false;
   }
 
   if (walletClient) {
-    if (walletClient.chain.id != purchaseMetada.chainId) {
-      // console.log(walletClient.chain.id, purchaseMetada)
-      throw new Error("Wallet chainId diffrent than selected one");
+    if (walletClient.chain.id != purchaseMetada.selectedChain) {
+      console.error(walletClient.chain.id, purchaseMetada)
+      toast.error("Wallet chainId diffrent than selected one")
+      return false;
     }
   }
-  const masterContractAddr = purchaseMetada.contract;
-  const amount = purchaseMetada.purchaseData.ticketData.amount;
-  const asset = purchaseMetada.purchaseData.ticketData.asset;
+  const masterContractAddr = purchaseMetada.masterContract;
+  const amount = purchaseMetada.totalAmount;
+  const asset = purchaseMetada.asset;
 
-
-  const tokenERC20 = getContract({
-    abi : erc20Abi,
-    address : asset,
-    client : {
-      wallet: walletClient,
-      public: publicClient
-    }
-  })
-  const allowance = await tokenERC20.read.allowance([
-    walletClient.account.address,
-    masterContractAddr,
-  ]);
-  if (allowance < amount) {
+  if (!await isApproved(purchaseMetada)) {
     toast.error("Tokens not approved, pls try again")
     return false
   }
-  const masterContract = getContract({
-    abi : Master__factory.abi,
-    address : masterContractAddr,
-    client : {
-      wallet : walletClient,
-    }
-  })
-
   try {
-    const txHash = await masterContract.write.purchase([walletClient.account.address, purchaseMetada.purchaseData, purchaseMetada.signature])
-  
+    const obj = getTicketStruct(purchaseMetada)
+    console.log("got to tx", obj)
+    console.log("passing seats",  makeReadonly(obj.seats.map((seat) => {
+      return {
+        seatId : BigInt(seat.seatId),
+        price : BigInt(seat.price)
+      }
+    })))
+    const purchaseHash = await publicClient.readContract({
+      address : masterContractAddr,
+      abi : Master__factory.abi,
+      functionName : "getPurchaseDataSignatureHash",
+      args : [{
+        asset : obj.asset as `0x{string}`,
+        showTime: obj.showTime,
+        seats: makeReadonly(obj.seats.map((seat) => {
+          return {
+            seatId : (seat.seatId),
+            price : (seat.price)
+          }
+        })),
+        showId: obj.showId,
+        originTimestamp : obj.originTimestamp,
+        owner : obj.owner as `0x{string}`,
+        amount : obj.amount
+      }]
+    })
+    console.log(purchaseHash)
+    const nonce = await publicClient.readContract({
+      address : masterContractAddr,
+      abi : Master__factory.abi,
+      functionName : "getNonce",
+      args : [purchaseMetada.ticketOwner]
+    })
+    const txHash = await walletClient.writeContract({
+      address : masterContractAddr,
+      abi : Master__factory.abi,
+      functionName : "purchase",
+      args : [
+          purchaseMetada.ticketOwner, {
+          ticketData : {
+            asset : obj.asset as `0x{string}`,
+            showTime: obj.showTime,
+            seats: makeReadonly(obj.seats.map((seat) => {
+              return {
+                seatId : BigInt(seat.seatId),
+                price : BigInt(seat.price)
+              }
+            })),
+            showId: obj.showId,
+            originTimestamp : obj.originTimestamp,
+            owner : obj.owner as `0x{string}`,
+            amount : obj.amount
+          },
+          nonce
+        },
+        purchaseMetada.validationSignature
+      ],
+      account : walletClient.account.address,
+      chain : undefined
+    })
     toast.success(`Sent purchase TX`)
     Logger.info(
       "Purchase tx hash:",
       txHash
     );
-    const depositTxReceipt = await publicClient.waitForTransactionReceipt({
+    const purchaseTxReceipt = await publicClient.waitForTransactionReceipt({
       confirmations: 1,
       hash: txHash,
     });
-    
-    if (depositTxReceipt.status == "reverted") {
+    if (purchaseTxReceipt.status == "reverted") {
       toast.error(`Error purchasing ticket`);
-      Logger.error(`Failed to purchase ticket: ${stringify(depositTxReceipt, null, 2)}`)
+      Logger.error(`Failed to purchase ticket: ${stringify(purchaseTxReceipt, null, 2)}`)
       return false;
-    } else {
-      toast.success(
-        `Successfully purchased ticket`
-      );
     }
-    Logger.info(
-      depositTxReceipt.status == "success" ? 
-      "Successfully deposited into vault:" : "tx reverted",
-      depositTxReceipt.transactionHash
-    );
-    const txLinkInfo = makeTxExplorerLink(walletClient.chain, txHash);
     toast.success(
-      `Successfully purchased ticket $${txLinkInfo.string()}`
+      `Successfully purchased ticket`
     );
     return true
   } catch (error) {
@@ -94,79 +137,72 @@ export async function purchase(
   }
 }
 
-export async function isApproved(purchaseMetada : ValidationSignatureResponse) : Promise<boolean> {
+export async function isApproved(purchaseMetada : PaymentMetadata) : Promise<boolean> {
+  if (!purchaseMetada) {
+    return false
+  }
   const walletClient = await getWalletClient(config);
   const publicClient = getPublicClient(config);
   if (!walletClient || !publicClient) {
-    throw new Error("wallet client or public client is still missing");
+    toast.error("Please connect wallet")
+    return false;
   }
 
   if (walletClient) {
-    if (walletClient.chain.id != purchaseMetada.chainId) {
-      // console.log(walletClient.chain.id, purchaseMetada)
-      throw new Error("Wallet chainId diffrent than selected one");
+    if (walletClient.chain.id != purchaseMetada.selectedChain) {
+      toast.error("Pls select " + fetchChainName((purchaseMetada.selectedChain).toString()));
+      return false;
     }
   }
-  const masterContractAddr = purchaseMetada.contract;
-  const amount = purchaseMetada.purchaseData.ticketData.amount;
-  const asset = purchaseMetada.purchaseData.ticketData.asset;
+  const masterContractAddr = purchaseMetada.masterContract;
+  const amount = purchaseMetada.totalAmount;
+  const asset = purchaseMetada.asset;
 
-
-  const tokenERC20 = getContract({
-    abi : erc20Abi,
-    address : asset,
-    client : {
-      wallet: walletClient,
-      public: publicClient
-    }
-  })
-  console.log(publicClient.chain)
-  console.log(walletClient.chain)
-  // publicClient.getCode(asset)
-  // const allowance = await publicClient.readContract({
-  //   address: asset,
-  //   abi : erc20Abi,
-  //   functionName : "balanceOf",
-  //   args : [walletClient.account.address]
-  // })
-  const allowance = await tokenERC20.read.allowance([
-    walletClient.account.address,
-    masterContractAddr,
-  ]);
-  return allowance >= amount
+  try {
+    const allowance = await publicClient.readContract({
+      address : asset,
+      abi : erc20Abi,
+      functionName : "allowance",
+      args : [walletClient.account.address, masterContractAddr]
+    })
+    console.log(allowance, amount, allowance >= amount)
+    return allowance >= amount
+  } catch (error) {
+    Logger.error(error)
+    return false
+  }
 }
 
-export async function approve(purchaseMetada : ValidationSignatureResponse) : Promise<boolean> {
+export async function approve(purchaseMetada : PaymentMetadata) : Promise<boolean> {
+  if (!purchaseMetada) {
+    return false
+  }
   const walletClient = await getWalletClient(config);
   const publicClient = getPublicClient(config);
   if (!walletClient || !publicClient) {
-    throw new Error("wallet client or public client is still missing");
+    toast.error("Please connect wallet")
+    return false
   }
 
   if (walletClient) {
-    if (walletClient.chain.id != purchaseMetada.chainId) {
-      // console.log(walletClient.chain.id, purchaseMetada)
-      throw new Error("Wallet chainId diffrent than selected one");
+    if (walletClient.chain.id != purchaseMetada.selectedChain) {
+      toast.error("Pls select " + fetchChainName((purchaseMetada.selectedChain).toString()));
+      return false;
     }
   }
-  const masterContractAddr = purchaseMetada.contract;
-  const amount = purchaseMetada.purchaseData.ticketData.amount;
-  const asset = purchaseMetada.purchaseData.ticketData.asset;
-
-
-  const tokenERC20 = getContract({
-    abi : erc20Abi,
-    address : asset,
-    client : {
-      wallet: walletClient,
-      public: publicClient
-    }
-  })
+  const masterContractAddr = purchaseMetada.masterContract;
+  const amount = purchaseMetada.totalAmount;
+  const asset = purchaseMetada.asset;
   try {
-    const approveTxHash = await tokenERC20.write.approve([
-      masterContractAddr,
-      amount,
-    ]);
+    const {request} = await publicClient.simulateContract({
+      address : asset,
+      abi : erc20Abi,
+      functionName : "approve",
+      args : [masterContractAddr , BigInt(amount)],
+      account : walletClient.account.address
+    })
+    const approveTxHash = await walletClient.writeContract(request)
+
     toast.success(`Sent approve successfully`)
     Logger.info("Approve tx hash:", approveTxHash);
 

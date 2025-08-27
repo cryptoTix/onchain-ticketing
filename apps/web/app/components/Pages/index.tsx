@@ -13,27 +13,27 @@ import { Orderbox } from "../Orderbox/Orderbox";
 import { Tvl } from "../Tvl/Tvl";
 import { Header } from "../Header/Header";
 import spiderMan from "../../../public/SpiderMan.svg";
-import { fetchShows } from "../../utils/showlist";
-import ShowCard from "../ShowCard/ShowCard";
+import MovieCard from "../MovieCard/MovieCard";
 import { useRouter } from "next/navigation";
-import { ShowInterface } from "../../models/show";
+import { MovieInterface } from "../../../../../shared";
 import { useEffect, useState } from "react";
 import { ToastNotification } from "../Toast/ToastNotification";
+import { fetchMovies } from "../../api/fetchMovies";
 
 export const MainPage: React.FC = () => {
-  const [shows, setShows] = useState<ShowInterface[]>([]);
+  const [movies, setMovies] = useState<MovieInterface[]>([]);
   const router = useRouter();
 
   useEffect(() => {
-    async function loadShows() {
-      const data = await fetchShows({ showFeatured: false });
-      setShows(data);
+    async function loadMovies() {
+      const data = await fetchMovies(null);
+      setMovies(data);
     }
-    loadShows();
+    loadMovies();
   }, []);
 
-  const handleShowClick = (showId: string) => {
-    router.push(`/sellers/${showId}`);
+  const handleMovieClick = (movieId: string) => {
+    router.push(`/sellers/${movieId}`);
   };
   return (
     
@@ -45,11 +45,11 @@ export const MainPage: React.FC = () => {
       {/* Movie Details Section (Side-by-Side) */}
       <div className="mt-10 mx-auto max-w-6xl p-5 rounded-lg flex items-center space-x-10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
-            {shows.length === 0 ? (
+            {movies.length === 0 ? (
               <p>No Shows Found</p>
             ) : (
-              shows.map((show) => (
-                <ShowCard key={show.id} show={show} onShowClick={handleShowClick}/>
+              movies.map((movie) => (
+                <MovieCard key={movie.id} show={movie} onShowClick={handleMovieClick}/>
               ))
             )}
           </div>

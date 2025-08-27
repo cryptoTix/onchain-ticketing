@@ -3,7 +3,7 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { fetchShow } from "../utils/showlist";
-import { ShowInterface } from "../models/show";
+import { ShowInterface } from "../models/movie";
 import { submitPaymentRequest } from "../actions/migration";
 import { useAccount } from "wagmi";
 

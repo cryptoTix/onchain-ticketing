@@ -19,8 +19,8 @@ library TicketLib {
 
     // add this in a format of row, col
     struct SeatData {
-        uint128 seatId; 
-        uint128 price;
+        uint256 seatId; 
+        uint256 price;
     }
 
     function hash(SeatData memory seatData) internal view returns (bytes32) {

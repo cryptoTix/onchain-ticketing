@@ -179,8 +179,8 @@ export const config: Config = createConfig(
       ethMainnet,
       anvil
     ],
-    walletConnectProjectId: "c57993d078245f9d020900fa488586fd",
-    appName: "Karak Restaking",
+    walletConnectProjectId: "3c2a0a26bc7892ad1101134ccfcf4b57",
+    appName: "test",
     ssr: true,
   })
 );

@@ -46,21 +46,21 @@ contract DeployMaster is Script {
 
     function check() external {
         vm.startBroadcast(msg.sender);
-        Master master = Master(0x49131cccE712f95c88eDC494e593439CA66B726b);
+        Master master = Master(0xDe17fF229E6a9EA25F0C255735258aA07E12739c);
         // master.initialize(owner, verifier, ttl, defaultCancelPolicy);
-        (
-            bytes1 fields,
-            string memory name,
-            string memory version,
-            uint256 chainId,
-            address verifyingContract,
-            bytes32 salt,
-            uint256[] memory extensions
-        ) = master.eip712Domain();
+        // (
+        //     bytes1 fields,
+        //     string memory name,
+        //     string memory version,
+        //     uint256 chainId,
+        //     address verifyingContract,
+        //     bytes32 salt,
+        //     uint256[] memory extensions
+        // ) = master.eip712Domain();
         // assertEq(address(1), master.owner());
         // assertEq(0, chainId);
         // assertEq(name, "--");
-        ERC20Test asset = ERC20Test(0x54943ECbF9A92086C91500Ed8ca4A6AB018D8e30);
+        ERC20Test asset = ERC20Test(0x41a78AA83bb0274b2CC60c31534E8500AD571eaA);
 
         TicketLib.SeatData[] memory seats = new TicketLib.SeatData[](1);
         seats[0].seatId = uint128(0);
@@ -68,21 +68,21 @@ contract DeployMaster is Script {
         // seats[1].seatId = uint128(1);
         // seats[1].price = uint128(1000000);
         PurchaseLib.PurchaseData memory purchaseData;
-        purchaseData.nonce = 0;
+        purchaseData.nonce = master.getNonce(msg.sender);
         purchaseData.ticketData = TicketLib.State({
-            asset: address(0x54943ECbF9A92086C91500Ed8ca4A6AB018D8e30),
-            showTime: uint96(1746978816),
+            asset: address(0x41a78AA83bb0274b2CC60c31534E8500AD571eaA),
+            showTime: uint96(1754721000000),
             amount: uint256(5440000),
             showId: uint96(0),
             seats: seats,
             owner: msg.sender,
-            originTimestamp : 1748550387
+            originTimestamp : 1754689698
         });
         bytes32 dataHash = master.getPurchaseDataSignatureHash(purchaseData.ticketData);
         require(purchaseData.nonce == master.getNonce(msg.sender), "Unequal nonce");
         // require(dataHash == bytes32(0xfc15c017157e21b1bae953c29d08e203992065b14681808dae5ea4fd091c3465), "unequal hash");
         (uint8 v, bytes32 r, bytes32 s) = vm.sign(
-            0xeea9eee10792495d055f00674a231e87821eadb6b70fe62dbf09cf5651e4b50e,
+            0x5a9cea68693a5347c31c51572d8c46f93ece71cd6332d5ffabc442ad8920a3c5,
             dataHash            
         );
         // console.logBytes32(master.getPurchaseDataSignatureHash(purchaseData));
@@ -104,7 +104,7 @@ contract DeployMaster is Script {
         // address user = vm.randomAddress();
         // asset.mint(user, 1000000000);
         // vm.startBroadcast(msg.sender);
-        asset.approve(address(master), 40000000);
+        asset.approve(address(master), purchaseData.ticketData.amount);
         master.purchase(msg.sender, purchaseData, signature);
         // (SignatureChecker.isValidSignatureNow(verifier, dataHash, signature));
         // assertEq(master.balanceOf(user), 1);

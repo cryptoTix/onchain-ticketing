@@ -1,16 +1,12 @@
-import { ShowInterface } from "../models/show";
+import { MovieInterface } from "../../../../shared/src/types/movie";
 import "../../public/Frame_36.png";
-import { PaymentMetadata } from "../models/paymentRequest";
-import { Hex } from "viem";
-import {  } from "../../../../packages/contracts/ts-artifacts/PurchaseLib.sol/PurchaseLib";
 import { Asset } from "../models/seller";
-import { Asset } from "next/font/google";
 
-type FetchShowsParams = {
+type FetchMoviesParams = {
   showFeatured?: boolean;
 };
 
-const showMap: Record<string, ShowInterface> = {
+const showMap: Record<string, MovieInterface> = {
   '0' : {
     id: "0",
     name: "Furiosa",
@@ -50,10 +46,10 @@ const showMap: Record<string, ShowInterface> = {
 };
 
 // Fetch properties from the API
-export async function fetchShows({
+export async function fetchMovies({
   showFeatured = false,
-}: FetchShowsParams = {}) {
-    const shows = [] as ShowInterface[];
+}: FetchMoviesParams = {}) {
+    const shows = [] as MovieInterface[];
     for (const key in showMap) {
       shows.push(showMap[key]!);
     }
@@ -77,7 +73,7 @@ export async function fetchShows({
 // Fetch a single property from the API
 export async function fetchShow(
   id: string
-): Promise<ShowInterface | null> {
+): Promise<MovieInterface | null> {
   return showMap[id]!;
   // try {
   //   if (!apiDomain) return null;

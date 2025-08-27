@@ -12,10 +12,12 @@ import "@openzeppelin/contracts/utils/math/Math.sol";
 import "solady/src/utils/SafeTransferLib.sol";
 import "solady/src/utils/ReentrancyGuard.sol";
 
-import "./entities/MasterLib.sol";
-import "./entities/PurchaseLib.sol";
+import "./interface/Errors.sol";
+import {MasterLib} from "./entities/MasterLib.sol";
+import {PurchaseLib, TicketLib} from "./entities/PurchaseLib.sol";
 
 import "./interface/Constants.sol";
+import {CancelledTicket} from "./interface/Events.sol";
 
 contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, ReentrancyGuard {
     using MasterLib for MasterLib.State;
@@ -58,12 +60,13 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         ticketId = uint256(purchaseDataHash);
         _verifyPurchaseData(purchaseData, purchaseDataHash, signature);
         _ticketLibStatePtr(ticketId).init(purchaseData.ticketData);
-        _safeMint(ticketOwner, ticketId, "");
+        _safeMint(purchaseData.ticketData.owner, ticketId, "");
         SafeTransferLib.safeTransferFrom(
             purchaseData.ticketData.asset, msg.sender, address(this), purchaseData.ticketData.amount
         );
     }
 
+    // Need to change this
     function redeem(uint256[] memory ticketIds) external {
         if (ticketIds.length == 0) revert ZeroLength();
         for (uint256 i = 0; i < ticketIds.length; i++) {
@@ -110,6 +113,7 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
 
     function cancel(uint256 ticketId) external onlyTicketOwner(ticketId) {
         _cancel(ticketId);
+        emit CancelledTicket(ticketId);
     }
 
     /**
@@ -146,6 +150,13 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
     }
 
     /* ================ VIEW FUNCTIONS ================ */
+
+    /**
+     * @dev See {IERC721-ownerOf}.
+     */
+    function ownerOf(uint256 tokenId) public view override returns (address) {
+        return _ownerOf(tokenId);
+    }
 
     /**
      * Fetches hash of the purchase data to be signed message.

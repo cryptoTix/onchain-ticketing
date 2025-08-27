@@ -21,7 +21,8 @@ export async function cancelTicket(
   const publicClient = getPublicClient(config);
 
   if (!walletClient || !publicClient) {
-    throw new Error("wallet client or public client is still missing");
+    toast.error("Please connect wallet")
+    return false;
   }
 
   const txHash = await writeContract(config, {
@@ -58,7 +59,7 @@ export async function cancelTicket(
   return true
 }
 
-export async function fetchCancellationAmount(ticketId : Hex) : Promise<Decimal> {
+export async function fetchCancellationAmount(ticketId : Hex) : Promise<number> {
   const walletClient = await getWalletClient(config);
   const publicClient = getPublicClient(config);
 
@@ -76,5 +77,5 @@ export async function fetchCancellationAmount(ticketId : Hex) : Promise<Decimal>
     address: asset,
     functionName: "decimals"
   })
-  return new Decimal(refundAmount.toString()).div(new Decimal(10 ** (decimal)))
+  return new Decimal(refundAmount.toString()).div(new Decimal(10 ** (decimal))).toNumber()
 }

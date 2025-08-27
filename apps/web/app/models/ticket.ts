@@ -20,4 +20,4 @@ export interface OrderHistoryMetadata {
     ticketPrice: string;
     amountPaid: string;
     posterUrl: string;
-  };
+};

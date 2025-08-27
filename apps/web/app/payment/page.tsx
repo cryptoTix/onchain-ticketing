@@ -284,6 +284,6 @@ export default function PaymentPage() {
         </Dialog>
       </div>
     );
-  };
+};
   
 

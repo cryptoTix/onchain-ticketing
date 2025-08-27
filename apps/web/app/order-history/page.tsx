@@ -1,18 +1,22 @@
 "use client"
 
 import { useAccount } from "wagmi"
-import { fetchOrderHistory } from "../utils/historyAPIs"
 import { useEffect, useState } from "react"
-import { OrderHistoryMetadata } from "../models/ticket"
 import OrderHistoryCard from "../components/OrderHistroyCard/OrderHistroy"
-import { Menu } from "@headlessui/react"
+import { OrderMetadata } from "../../../../shared"
+import { fetchOrders } from "../api/fetchOrders"
+import { BookingInfo } from "../components/BookingInfoCard/BookingInfo"
+import { useRouter } from "next/navigation"
+import { ToastNotification } from "../components/Toast/ToastNotification"
 
 export default function OrderHistoryPage() {
-    const [orders, setOrders] = useState<OrderHistoryMetadata[]>([])
+    const router = useRouter();
+    const [orders, setOrders] = useState<OrderMetadata[]>([])
+    const [selectedOrder, setSelectedOrder] = useState<OrderMetadata>();
     const {isConnected, address} =  useAccount()
     useEffect(() => {
         async function loadOrders() {
-            const orders = await fetchOrderHistory(address)
+            const orders = await fetchOrders(address)
             setOrders(orders)
         }
         if (isConnected) {
@@ -23,22 +27,24 @@ export default function OrderHistoryPage() {
     },[isConnected])
 
     return (
-        <div className="max-w-6xl mx-auto px-4 py-8 w-full">
-          <h1 className="text-xl font-bold mb-6 text-white">Your Order History</h1>
-    
-          {!isConnected ? (
-            <div className="text-gray-300">Please connect your wallet to view orders.</div>
-          ) : orders.length === 0 ? (
-            <div className="text-gray-300">No orders found.</div>
-          ) : (
-            <div className="flex flex-col gap-6">
-              {orders.map((order) => (
-                <OrderHistoryCard
-                  orderData={order}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        selectedOrder ? 
+          <BookingInfo orderData={selectedOrder} onSucessCancel={() => {router.refresh()}}/> :
+          <div className="max-w-6xl mx-auto px-4 py-8 w-full">
+            <h1 className="text-xl font-bold mb-6 text-white">Your Order History</h1>
+            {!isConnected ? (
+              <div className="text-gray-300">Please connect your wallet to view orders.</div>
+              ) : orders.length === 0 ? (
+                <div className="text-gray-300">No orders found.</div>
+                ) : (
+                  <div className="flex flex-col gap-6">
+                    {orders.map((order) => (
+                      <OrderHistoryCard
+                      orderData={order}
+                      onSelectBookingInfo={setSelectedOrder}
+                      />
+                      ))}
+                  </div>
+                )}
+          </div>
       );
 }
