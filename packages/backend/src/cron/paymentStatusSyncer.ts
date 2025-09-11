@@ -26,6 +26,7 @@ class PaymentStatusSyncer {
     try {
       for (let i = 0; i < this.pendingOrders.length; i++) {
         const order = this.pendingOrders[i];
+        console.log("validating cron for", order)
         if (order.paymentData.originTimestampUTC + 2 * LOCK_DURATION_SEC < Date.now() / 1000) {
           this.pendingOrders[i] = this.pendingOrders[-1]
           this.pendingOrders.pop()
@@ -36,7 +37,7 @@ class PaymentStatusSyncer {
           const tokenOwner = await master.ownerOf(order.paymentData.purchaseDataHash) as Address
           if (isAddressEqual(tokenOwner, order.paymentData.ticketOwner)) {
             if (await bookSeatIds(order.paymentData.sellerId, order.paymentData.showId, order.paymentData.selectedSeats)) {
-              const movieData = await getMovies(order.paymentData.movieId)
+              const movieData = await getMovies({movieId : order.paymentData.movieId})
               if (movieData && movieData.length == 1) {
                 writeOrderHistory(tokenOwner, {
                   ...order,
@@ -67,6 +68,7 @@ class PaymentStatusSyncer {
   public async AddPendingOrderData(data: BookingData) {
     const release = await this.ordersMutex.obtain()
     try {
+      console.log("Added to queue", data)
       this.pendingOrders.push(data)
     } catch (error) {
       console.log("Got error", error)

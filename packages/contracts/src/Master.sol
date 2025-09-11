@@ -12,12 +12,12 @@ import "@openzeppelin/contracts/utils/math/Math.sol";
 import "solady/src/utils/SafeTransferLib.sol";
 import "solady/src/utils/ReentrancyGuard.sol";
 
-import "./interface/Errors.sol";
+import "./interfaces/Errors.sol";
 import {MasterLib} from "./entities/MasterLib.sol";
 import {PurchaseLib, TicketLib} from "./entities/PurchaseLib.sol";
 
-import "./interface/Constants.sol";
-import {CancelledTicket} from "./interface/Events.sol";
+import "./interfaces/Constants.sol";
+import {CancelledTicket} from "./interfaces/Events.sol";
 
 contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, ReentrancyGuard {
     using MasterLib for MasterLib.State;
@@ -196,16 +196,19 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         returns (uint256)
     {
         MasterLib.CancelPolicyMetadata storage policy = _self().fetchPolicyForShowId(ticketData.showId);
-        uint256 leftTime = ticketData.showTime - block.timestamp;
-        uint256 index = 0;
-        while (index < policy.policyMetadata.length && leftTime > policy.policyMetadata[index].durationLeft) {
-            index++;
-            continue;
+        if (ticketData.showTime > block.timestamp) {
+            uint256 leftTime = ticketData.showTime - block.timestamp;
+            uint256 index = 0;
+            while (index < policy.policyMetadata.length && leftTime > policy.policyMetadata[index].durationLeft) {
+                index++;
+                continue;
+            }
+            if (index == policy.policyMetadata.length) {
+                index--;
+            }
+            return Math.mulDiv(amount, policy.policyMetadata[index].percentageWad, Constants.HUNDRED_WAD);
         }
-        if (index == policy.policyMetadata.length) {
-            index--;
-        }
-        return Math.mulDiv(amount, policy.policyMetadata[index].percentageWad, Constants.HUNDRED_WAD);
+        return 0;
     }
 
     function _verifyPurchaseData(PurchaseLib.PurchaseData memory purchaseData, bytes32 purchaseDataHash, bytes memory signature) internal {

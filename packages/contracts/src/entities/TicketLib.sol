@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.25;
 
-import "../interface/Errors.sol";
+import "../interfaces/Errors.sol";
 import {PurchaseLib} from "./PurchaseLib.sol";
-import {Constants} from "../interface/Constants.sol";
+import {Constants} from "../interfaces/Constants.sol";
 
 library TicketLib {
 

@@ -56,17 +56,17 @@ export const SafeCast = {
     }
   ],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220efe89360a80ee4172cf91c02cd82f1b2e37ab342be70eb01b3e4f6a35a5d8f1464736f6c634300081a0033",
-    "sourceMap": "769:34173:58:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;769:34173:58;;;;;;;;;;;;;;;;;",
+    "object": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea26469706673582212204138c320284d8176164e52d2c5665393da96ad9e832096a0b95b916532ea8e5864736f6c634300081a0033",
+    "sourceMap": "769:34173:58:-:0;;;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220efe89360a80ee4172cf91c02cd82f1b2e37ab342be70eb01b3e4f6a35a5d8f1464736f6c634300081a0033",
-    "sourceMap": "769:34173:58:-:0;;;;;;;;",
+    "object": "0x5f80fdfea26469706673582212204138c320284d8176164e52d2c5665393da96ad9e832096a0b95b916532ea8e5864736f6c634300081a0033",
+    "sourceMap": "769:34173:58:-:0;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"bits\",\"type\":\"uint8\"},{\"internalType\":\"int256\",\"name\":\"value\",\"type\":\"int256\"}],\"name\":\"SafeCastOverflowedIntDowncast\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"value\",\"type\":\"int256\"}],\"name\":\"SafeCastOverflowedIntToUint\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"bits\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SafeCastOverflowedUintDowncast\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SafeCastOverflowedUintToInt\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Wrappers over Solidity's uintXX/intXX/bool casting operators with added overflow checks. Downcasting from uint256/int256 in Solidity does not revert on overflow. This can easily result in undesired exploitation or bugs, since developers usually assume that overflows raise errors. `SafeCast` restores this intuition by reverting the transaction when such an operation overflows. Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.\",\"errors\":{\"SafeCastOverflowedIntDowncast(uint8,int256)\":[{\"details\":\"Value doesn't fit in an int of `bits` size.\"}],\"SafeCastOverflowedIntToUint(int256)\":[{\"details\":\"An int value doesn't fit in an uint of `bits` size.\"}],\"SafeCastOverflowedUintDowncast(uint8,uint256)\":[{\"details\":\"Value doesn't fit in an uint of `bits` size.\"}],\"SafeCastOverflowedUintToInt(uint256)\":[{\"details\":\"An uint value doesn't fit in an int of `bits` size.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol\":\"SafeCast\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol\":{\"keccak256\":\"0x195533c86d0ef72bcc06456a4f66a9b941f38eb403739b00f21fd7c1abd1ae54\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b1d578337048cad08c1c03041cca5978eff5428aa130c781b271ad9e5566e1f8\",\"dweb:/ipfs/QmPFKL2r9CBsMwmUqqdcFPfHZB2qcs9g1HDrPxzWSxomvy\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"bits\",\"type\":\"uint8\"},{\"internalType\":\"int256\",\"name\":\"value\",\"type\":\"int256\"}],\"name\":\"SafeCastOverflowedIntDowncast\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"value\",\"type\":\"int256\"}],\"name\":\"SafeCastOverflowedIntToUint\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"bits\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SafeCastOverflowedUintDowncast\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"SafeCastOverflowedUintToInt\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Wrappers over Solidity's uintXX/intXX/bool casting operators with added overflow checks. Downcasting from uint256/int256 in Solidity does not revert on overflow. This can easily result in undesired exploitation or bugs, since developers usually assume that overflows raise errors. `SafeCast` restores this intuition by reverting the transaction when such an operation overflows. Using this library instead of the unchecked operations eliminates an entire class of bugs, so it's recommended to use it always.\",\"errors\":{\"SafeCastOverflowedIntDowncast(uint8,int256)\":[{\"details\":\"Value doesn't fit in an int of `bits` size.\"}],\"SafeCastOverflowedIntToUint(int256)\":[{\"details\":\"An int value doesn't fit in an uint of `bits` size.\"}],\"SafeCastOverflowedUintDowncast(uint8,uint256)\":[{\"details\":\"Value doesn't fit in an uint of `bits` size.\"}],\"SafeCastOverflowedUintToInt(uint256)\":[{\"details\":\"An uint value doesn't fit in an int of `bits` size.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol\":\"SafeCast\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"],\"viaIR\":true},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol\":{\"keccak256\":\"0x195533c86d0ef72bcc06456a4f66a9b941f38eb403739b00f21fd7c1abd1ae54\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b1d578337048cad08c1c03041cca5978eff5428aa130c781b271ad9e5566e1f8\",\"dweb:/ipfs/QmPFKL2r9CBsMwmUqqdcFPfHZB2qcs9g1HDrPxzWSxomvy\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.26+commit.8a97fa7a"
@@ -157,8 +157,9 @@ export const SafeCast = {
       "compilationTarget": {
         "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": "SafeCast"
       },
-      "evmVersion": "paris",
-      "libraries": {}
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
     },
     "sources": {
       "node_modules/@openzeppelin/contracts/utils/math/SafeCast.sol": {
@@ -21650,7 +21651,7 @@ export const SafeCast = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 50070,

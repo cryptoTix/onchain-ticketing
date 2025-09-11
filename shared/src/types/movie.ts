@@ -18,7 +18,8 @@ export type ShowInterface = {
 }
 
 export type MovieRequestInterface = {
-    movieId : string
+    movieId : string;
+    location?: string;
 }
 
 export type ShowType = string

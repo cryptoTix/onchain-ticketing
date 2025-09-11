@@ -1,17 +1,17 @@
 export const ERC1155Utils = {
   "abi": [],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220a7d9d43e68b724ff65e5876668ca45cd6584b6a26cf7dd9f95ac6725a7fbc05864736f6c634300081a0033",
-    "sourceMap": "439:3094:38:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;439:3094:38;;;;;;;;;;;;;;;;;",
+    "object": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220947e56cf34ae6a05a62e10897816d3be99a24abdc601ede4958105b906a5689c64736f6c634300081a0033",
+    "sourceMap": "439:3094:38:-:0;;;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220a7d9d43e68b724ff65e5876668ca45cd6584b6a26cf7dd9f95ac6725a7fbc05864736f6c634300081a0033",
-    "sourceMap": "439:3094:38:-:0;;;;;;;;",
+    "object": "0x5f80fdfea2646970667358221220947e56cf34ae6a05a62e10897816d3be99a24abdc601ede4958105b906a5689c64736f6c634300081a0033",
+    "sourceMap": "439:3094:38:-:0;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library that provide common ERC-1155 utility functions. See https://eips.ethereum.org/EIPS/eip-1155[ERC-1155]. _Available since v5.1._\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol\":\"ERC1155Utils\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol\":{\"keccak256\":\"0x880da465c203cec76b10d72dbd87c80f387df4102274f23eea1f9c9b0918792b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://399594cd8bb0143bc9e55e0f1d071d0d8c850a394fb7a319d50edd55d9ed822b\",\"dweb:/ipfs/QmbPZzgtT6LEm9CMqWfagQFwETbV1ztpECBB1DtQHrKiRz\"]},\"node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol\":{\"keccak256\":\"0x61a23d601c2ab69dd726ac55058604cbda98e1d728ba31a51c379a3f9eeea715\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d8cbb06152d82ebdd5ba1d33454e5759492040f309a82637c7e99c948a04fa20\",\"dweb:/ipfs/QmQQuLr6WSfLu97pMEh6XLefk99TSj9k5Qu1zXGPepwGiK\"]},\"node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol\":{\"keccak256\":\"0x30afe9013aaeb3ba735284a9310792776f57a3b2db6fc1d99628f2c47287f5cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c675b740746031092efcedb2e18179f05fce8ba482de64e982715e4aa16bc90\",\"dweb:/ipfs/QmVdUD89qYudLc88k5AsuQ6VWyz9SE1c6UXrVK32Yqh1YS\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621\",\"dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library that provide common ERC-1155 utility functions. See https://eips.ethereum.org/EIPS/eip-1155[ERC-1155]. _Available since v5.1._\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol\":\"ERC1155Utils\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"],\"viaIR\":true},\"sources\":{\"node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol\":{\"keccak256\":\"0x880da465c203cec76b10d72dbd87c80f387df4102274f23eea1f9c9b0918792b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://399594cd8bb0143bc9e55e0f1d071d0d8c850a394fb7a319d50edd55d9ed822b\",\"dweb:/ipfs/QmbPZzgtT6LEm9CMqWfagQFwETbV1ztpECBB1DtQHrKiRz\"]},\"node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155Receiver.sol\":{\"keccak256\":\"0x61a23d601c2ab69dd726ac55058604cbda98e1d728ba31a51c379a3f9eeea715\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d8cbb06152d82ebdd5ba1d33454e5759492040f309a82637c7e99c948a04fa20\",\"dweb:/ipfs/QmQQuLr6WSfLu97pMEh6XLefk99TSj9k5Qu1zXGPepwGiK\"]},\"node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol\":{\"keccak256\":\"0x30afe9013aaeb3ba735284a9310792776f57a3b2db6fc1d99628f2c47287f5cf\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c675b740746031092efcedb2e18179f05fce8ba482de64e982715e4aa16bc90\",\"dweb:/ipfs/QmVdUD89qYudLc88k5AsuQ6VWyz9SE1c6UXrVK32Yqh1YS\"]},\"node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x79796192ec90263f21b464d5bc90b777a525971d3de8232be80d9c4f9fb353b8\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f6fda447a62815e8064f47eff0dd1cf58d9207ad69b5d32280f8d7ed1d1e4621\",\"dweb:/ipfs/QmfDRc7pxfaXB2Dh9np5Uf29Na3pQ7tafRS684wd3GLjVL\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.26+commit.8a97fa7a"
@@ -47,8 +47,9 @@ export const ERC1155Utils = {
       "compilationTarget": {
         "node_modules/@openzeppelin/contracts/token/ERC1155/utils/ERC1155Utils.sol": "ERC1155Utils"
       },
-      "evmVersion": "paris",
-      "libraries": {}
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
     },
     "sources": {
       "node_modules/@openzeppelin/contracts/interfaces/draft-IERC6093.sol": {
@@ -617,7 +618,7 @@ export const ERC1155Utils = {
                                             }
                                           ]
                                         },
-                                        "evmVersion": "paris",
+                                        "evmVersion": "cancun",
                                         "externalReferences": [
                                           {
                                             "declaration": 43643,
@@ -1580,7 +1581,7 @@ export const ERC1155Utils = {
                                             }
                                           ]
                                         },
-                                        "evmVersion": "paris",
+                                        "evmVersion": "cancun",
                                         "externalReferences": [
                                           {
                                             "declaration": 43717,

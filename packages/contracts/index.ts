@@ -17,6 +17,7 @@ export { ERC721Utils } from "./ts-artifacts/ERC721Utils.sol/ERC721Utils";
 export { EnumerableMap } from "./ts-artifacts/EnumerableMap.sol/EnumerableMap";
 export { EnumerableSet } from "./ts-artifacts/EnumerableSet.sol/EnumerableSet";
 export { Errors } from "./ts-artifacts/Errors.sol/Errors";
+export { Events } from "./ts-artifacts/Events.sol/Events";
 export { IERC1155 } from "./ts-artifacts/IERC1155.sol/IERC1155";
 export { IERC1155MetadataURI } from "./ts-artifacts/IERC1155MetadataURI.sol/IERC1155MetadataURI";
 export { IERC1155Receiver } from "./ts-artifacts/IERC1155Receiver.sol/IERC1155Receiver";

@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "prebuild": "rimraf -G dist",
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/packages/backend/src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,10 +16,10 @@
     "cors": "^2.8.5",
     "decimals": "^1.0.0",
     "dotenv": "^16.5.0",
-    "ethers": "^6.13.4",
     "express": "^5.1.0",
     "mutex-ts": "^1.2.1",
-    "viem": "^2.31.7"
+    "viem": "^2.31.7",
+    "ethers": "^6.15.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

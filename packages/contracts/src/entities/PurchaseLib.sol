@@ -2,7 +2,7 @@
 pragma solidity ^0.8.25;
 
 import {TicketLib} from "./TicketLib.sol";
-import {Constants} from "../interface/Constants.sol";
+import {Constants} from "../interfaces/Constants.sol";
 
 library PurchaseLib {
     using TicketLib for TicketLib.State;

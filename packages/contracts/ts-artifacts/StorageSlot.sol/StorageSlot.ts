@@ -1,17 +1,17 @@
 export const StorageSlot = {
   "abi": [],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212203508a22de8e68940b2b71c9fc55d133155eb0e36e78be5114d70ac0288c3c2a764736f6c634300081a0033",
-    "sourceMap": "1407:2774:51:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;1407:2774:51;;;;;;;;;;;;;;;;;",
+    "object": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea26469706673582212207a9e7cf45a579697456c2cf26c6b42a2fa568a72e0d82ef485fc93c4204867c064736f6c634300081a0033",
+    "sourceMap": "1407:2774:51:-:0;;;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212203508a22de8e68940b2b71c9fc55d133155eb0e36e78be5114d70ac0288c3c2a764736f6c634300081a0033",
-    "sourceMap": "1407:2774:51:-:0;;;;;;;;",
+    "object": "0x5f80fdfea26469706673582212207a9e7cf45a579697456c2cf26c6b42a2fa568a72e0d82ef485fc93c4204867c064736f6c634300081a0033",
+    "sourceMap": "1407:2774:51:-:0;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for reading and writing primitive types to specific storage slots. Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts. This library helps with reading and writing to such slots without the need for inline assembly. The functions in this library return Slot structs that contain a `value` member that can be used to read or write. Example usage to set ERC-1967 implementation slot: ```solidity contract ERC1967 {     // Define the slot. Alternatively, use the SlotDerivation library to derive the slot.     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;     function _getImplementation() internal view returns (address) {         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;     }     function _setImplementation(address newImplementation) internal {         require(newImplementation.code.length > 0);         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;     } } ``` TIP: Consider using this library along with {SlotDerivation}.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/utils/StorageSlot.sol\":\"StorageSlot\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b\",\"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for reading and writing primitive types to specific storage slots. Storage slots are often used to avoid storage conflict when dealing with upgradeable contracts. This library helps with reading and writing to such slots without the need for inline assembly. The functions in this library return Slot structs that contain a `value` member that can be used to read or write. Example usage to set ERC-1967 implementation slot: ```solidity contract ERC1967 {     // Define the slot. Alternatively, use the SlotDerivation library to derive the slot.     bytes32 internal constant _IMPLEMENTATION_SLOT = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;     function _getImplementation() internal view returns (address) {         return StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value;     }     function _setImplementation(address newImplementation) internal {         require(newImplementation.code.length > 0);         StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value = newImplementation;     } } ``` TIP: Consider using this library along with {SlotDerivation}.\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/utils/StorageSlot.sol\":\"StorageSlot\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"],\"viaIR\":true},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0xcf74f855663ce2ae00ed8352666b7935f6cddea2932fdf2c3ecd30a9b1cd0e97\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9f660b1f351b757dfe01438e59888f31f33ded3afcf5cb5b0d9bf9aa6f320a8b\",\"dweb:/ipfs/QmarDJ5hZEgBtCmmrVzEZWjub9769eD686jmzb2XpSU1cM\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.26+commit.8a97fa7a"
@@ -47,8 +47,9 @@ export const StorageSlot = {
       "compilationTarget": {
         "node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": "StorageSlot"
       },
-      "evmVersion": "paris",
-      "libraries": {}
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
     },
     "sources": {
       "node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
@@ -409,7 +410,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45752,
@@ -568,7 +569,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45763,
@@ -727,7 +728,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45774,
@@ -886,7 +887,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45785,
@@ -1045,7 +1046,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45796,
@@ -1204,7 +1205,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45807,
@@ -1363,7 +1364,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45818,
@@ -1523,7 +1524,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45829,
@@ -1682,7 +1683,7 @@ export const StorageSlot = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45840,

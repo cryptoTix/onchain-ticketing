@@ -5,7 +5,7 @@ import { MutexRW } from "mutex-ts";
 
 const LAYOUT_DIR = path.resolve(__dirname, "../../data/layouts");
 
-const seatLayoutLock : Map<string, MutexRW> = {};
+const seatLayoutLock : Map<string, MutexRW> = new Map();
 
 export async function getOrCreateSeatLayout(sellerId: string, showId: string): Promise<SeatLayout> {
   console.log("fethcing for", sellerId, showId)

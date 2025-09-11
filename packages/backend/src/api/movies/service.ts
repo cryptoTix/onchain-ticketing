@@ -1,4 +1,4 @@
-import { MovieInterface } from "../../../../../shared/index";
+import { MovieInterface, MovieRequestInterface } from "../../../../../shared/index";
 
 const showMap: Record<string, MovieInterface> = {
     '0' : {
@@ -39,11 +39,12 @@ const showMap: Record<string, MovieInterface> = {
   }, 
   };
 
-export async function getMovies(movieId : string | null) : Promise<MovieInterface[]> {
-  console.log("fetching movies", movieId)
+export async function getMovies(data : MovieRequestInterface) : Promise<MovieInterface[]> {
+  console.log("fetching movies", data)
     const shows = [] as MovieInterface[];
-    if (movieId && movieId != "") {
-      shows.push(showMap[movieId]);
+    if (data.movieId && data.movieId != "") {
+      shows.push(showMap[data.movieId]);
+      
       return shows
     }
     for (const key in showMap) {

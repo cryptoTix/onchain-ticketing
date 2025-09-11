@@ -1,4 +1,4 @@
-import { SellerShowIdInterface, SellerCurrencyResponseInterface, BookingValidationData, BookingValidationResponse, PaymentMetadata, PaymentMetadataRequest, PaymentMetadataResponse, getTicketStruct, SeatClass, BookingDataRequest, BookingDataResponse, SeatData } from "../../../../../shared/index";
+import { SellerShowIdInterface, SellerCurrencyResponseInterface, BookingValidationData, BookingValidationResponse, PaymentMetadata, PaymentMetadataRequest, PaymentMetadataResponse, getTicketStruct, SeatClass, BookingDataRequest, BookingDataResponse, SeatData, SellerRequestInterface } from "../../../../../shared/index";
 import { SellerInterface } from "../../../../../shared";
 import { getAssetAddress, getMasterContract, getPriceToCurrencyExponent, getSellerCurrencies } from "../../helpers/cryptoCurrencies";
 import { getOrCreateSeatLayout, updateSeatLayoutFile } from "../../helpers/seatLayout";
@@ -37,12 +37,13 @@ import { paymetSyncerCron } from "../../cron/paymentStatusSyncer";
 //   formats: [{ type: "2D", price: "Rp. 50.000", times: ["12:10", "16:45", "19:45"] }],
 // },
 // TODO: Fetch these from api. (showId) => {sellersData}
+// Map of movie Id to sellers
 const sellers : Record<string, SellerInterface[]> = {
     "0" : [
         {
             id : "0",
             name: "INOX",
-            location: "BPL",
+            location: "BHOPAL",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -96,13 +97,29 @@ const sellers : Record<string, SellerInterface[]> = {
                         showTime: new Date(Date.now()).setHours(16, 0, 0, 0),
                         screenId: "2"
                     },
+                    {
+                        id: "6",
+                        movieId: "0",
+                        type: "3D",
+                        price: 5.4,
+                        showTime: new Date(Date.now()).setHours(23, 59, 0, 0),
+                        screenId: "2"
+                    },
+                    {
+                        id: "7",
+                        movieId: "0",
+                        type: "3D",
+                        price: 5.4,
+                        showTime: new Date(Date.now() + 24 * 60 * 60 * 1000).setHours(10, 0, 0, 0),
+                        screenId: "2"
+                    },
                 ]
             }
         },
         {
             id : "1",
             name: "PVR",
-            location: "BPL",
+            location: "DELHI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -162,7 +179,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "2",
             name: "Test Ver",
-            location: "BPL",
+            location: "MUMBAI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -224,7 +241,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "0",
             name: "INOX",
-            location: "BPL",
+            location: "BHOPAL",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -278,13 +295,21 @@ const sellers : Record<string, SellerInterface[]> = {
                     showTime : new Date(Date.now()).setHours(17, 0, 0, 0),
                     screenId : "2"
                 },
+                {
+                    id : "5",
+                    movieId : "1",
+                    type : "3D",
+                    price : 6.4,
+                    showTime : new Date(Date.now()).setHours(20, 0, 0, 0),
+                    screenId : "2"
+                },
             ]    
             }
         },
         {
             id : "1",
             name: "PVR",
-            location: "BPL",
+            location: "DELHI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -344,7 +369,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "2",
             name: "Test Ver",
-            location: "BPL",
+            location: "MUMBAI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -406,7 +431,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "0",
             name: "INOX",
-            location: "BPL",
+            location: "BHOPAL",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -466,7 +491,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "1",
             name: "PVR",
-            location: "BPL",
+            location: "DELHI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -526,7 +551,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "2",
             name: "Test Ver",
-            location: "BPL",
+            location: "MUMBAI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -588,7 +613,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "0",
             name: "INOX",
-            location: "BPL",
+            location: "BHOPAL",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -648,7 +673,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "1",
             name: "PVR",
-            location: "BPL",
+            location: "DELHI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -708,7 +733,7 @@ const sellers : Record<string, SellerInterface[]> = {
         {
             id : "2",
             name: "Test Ver",
-            location: "BPL",
+            location: "MUMBAI",
             utcTimeDiff : 0,
             shows : {
                 "2D": [
@@ -769,50 +794,70 @@ const sellers : Record<string, SellerInterface[]> = {
 };
 const seatMutex = new Mutex();
 
-export async function getSellers(movieId : string, date : number) : Promise<SellerInterface[]> {
-    const selectedDate = new Date(date)
-    console.log(selectedDate, date)
+export async function getSellers(req : SellerRequestInterface) : Promise<SellerInterface[]> {
+    const selectedDate = new Date()
+    selectedDate.setTime(req.showDate)
+    if (!selectedDate || isNaN(selectedDate.getTime())) {
+        console.log("invalid data sent: ", req.showDate)
+        return[]
+    }
+    console.log(selectedDate, req.showDate, selectedDate.getDate())
     const res : SellerInterface[] = new Array();
-    for (let index = 0; index < sellers[movieId].length; index++) {
-        const sellerData : SellerInterface = {
-            id: sellers[movieId][index].id,
-            name: sellers[movieId][index].name,
-            location: sellers[movieId][index].location,
-            utcTimeDiff: sellers[movieId][index].utcTimeDiff,
-            shows: {}
-        };
-        console.log("fetched shows", sellers[movieId][index].shows)
-        Object.entries(sellers[movieId][index].shows).map(([showType,shows]) => {
-            sellerData.shows[showType] = shows.filter((show) => selectedDate.getDate() == new Date(show.showTime).getDate())
-            if (sellerData.shows[showType].length == 0) {
-                delete sellerData.shows[showType]
+    for (let index = 0; index < sellers[req.movieId].length; index++) {
+        if (!req.location || req.location.localeCompare(sellers[req.movieId][index].location) == 0) {
+            const sellerData : SellerInterface = {
+                id: sellers[req.movieId][index].id,
+                name: sellers[req.movieId][index].name,
+                location: sellers[req.movieId][index].location,
+                utcTimeDiff: sellers[req.movieId][index].utcTimeDiff,
+                shows: {}
+            };
+            console.log("fetched shows", sellers[req.movieId][index].shows)
+            Object.entries(sellers[req.movieId][index].shows).map(([showType,shows]) => {
+                sellerData.shows[showType] =
+                    shows.filter((show) => {
+                        console.log(selectedDate.getDate(), new Date(show.showTime).getDate())
+                        return (
+                        selectedDate.getMonth() == new Date(show.showTime).getMonth() &&
+                        selectedDate.getDate() == new Date(show.showTime).getDate() &&
+                        show.showTime >= selectedDate.getTime()
+                    )})
+                if (sellerData.shows[showType].length == 0) {
+                    delete sellerData.shows[showType]
+                }
+            })
+            if (Object.entries(sellerData.shows).length != 0) {
+                res.push(sellerData)
             }
-        })
-        if (Object.entries(sellerData.shows).length != 0) {
-            res.push(sellerData)
         }
     }
     return res
 }
 
 export async function getSellerShowId(sellerId: string, showId : string) : Promise<SellerShowIdInterface | undefined> {
-    let res : (SellerShowIdInterface) | undefined;
-    for (let i = 0; i < sellers[sellerId].length; i++) {
-        Object.entries(sellers[sellerId][i].shows).map(([_, shows]) => {
-            const found = shows.find((show) => {
-                return show.id === showId
-            })
-            if (found) {
-                res = {
-                    id : sellers[sellerId][i].id,
-                    location : sellers[sellerId][i].location,
-                    name : sellers[sellerId][i].name,
-                    utcTimeDiff : sellers[sellerId][i].utcTimeDiff,
-                    show : found
-                }
+    let res : (SellerShowIdInterface) | undefined = undefined;
+    Object.entries(sellers).map(([_, sellers]) => {
+        if (res) {
+            return
+        }
+        sellers.forEach(seller => {
+            if (seller.id.localeCompare(sellerId) == 0) {
+                Object.entries(seller.shows).map(([_, shows]) => {
+                    shows.forEach(show => {
+                        if(show.id.localeCompare(showId) == 0) {
+                            res = {
+                                id : seller.id,
+                                location : seller.location,
+                                name : seller.name,
+                                utcTimeDiff : seller.utcTimeDiff,
+                                show : show
+                            }
+                        }
+                    })
+                })
             }
         })
-    }
+    })
     return res;
 }
 
@@ -900,7 +945,7 @@ export async function validateBookingMetadata(data : BookingValidationData) : Pr
 export async function fetchBookingDataByBookingId(req : BookingDataRequest) : Promise<BookingDataResponse | null> {
     const paymentData = getBookingById(req.bookingId)
     if (paymentData) {
-        const movie = await getMovies(paymentData.movieId)
+        const movie = await getMovies({movieId : paymentData.movieId})
         if (movie.length != 1 || (!movie[0].name || movie[0].name === "")) {
             return null
         }
@@ -1034,4 +1079,21 @@ async function getSelectedSeats(selectedSeatIds: string[], showId : string, sell
         })
     }
     return seats
+}
+
+async function bookingSanityChecks(data : BookingValidationData) : Promise<boolean> {
+    const sellers = await getSellers({movieId: data.movieId, showDate : Date.now()})
+    let isValid = false;
+    sellers.forEach((seller) => {
+        if(seller.id.localeCompare(data.sellerId) == 0) {
+            Object.entries(seller.shows).map(([_, shows]) => {
+                shows.forEach(show => {
+                    if (show.id.localeCompare(data.showId) == 0 && show.showTime >= Date.now()) {
+                        isValid = true;
+                    }
+                })
+            })
+        }
+    })
+    return isValid;
 }

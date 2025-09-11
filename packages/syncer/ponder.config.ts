@@ -15,7 +15,7 @@ export default createConfig({
       abi: MasterABI,
       chain : "anvil",
       address : "0xDe17fF229E6a9EA25F0C255735258aA07E12739c",
-      startBlock: 23235860
+      startBlock: 23325966
     },
   },
 });

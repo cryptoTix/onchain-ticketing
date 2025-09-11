@@ -14,7 +14,7 @@ module.exports = {
   },
   typechain: {
     outDir: "../../typechain-types", // Adjust based on your desired output directory
-    target: "ethers-v5",
+    target: "ethers-v6",
   },
   paths: {
     sources: "./src", // Adjust if your contracts are in a subdirectory like `src/`

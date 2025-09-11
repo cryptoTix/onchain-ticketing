@@ -32,17 +32,17 @@ export const SafeTransferLib = {
     }
   ],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c6617226d2c647bca5169a99546a2c4ec48b6ab26e68cbf663285373ca19db2364736f6c634300081a0033",
-    "sourceMap": "579:25737:64:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;579:25737:64;;;;;;;;;;;;;;;;;",
+    "object": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220ccac34f2027899164eab4efe03cf668edfe175857b8b0fa82ba3b06523ccbb2d64736f6c634300081a0033",
+    "sourceMap": "579:25737:64:-:0;;;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c6617226d2c647bca5169a99546a2c4ec48b6ab26e68cbf663285373ca19db2364736f6c634300081a0033",
-    "sourceMap": "579:25737:64:-:0;;;;;;;;",
+    "object": "0x5f80fdfea2646970667358221220ccac34f2027899164eab4efe03cf668edfe175857b8b0fa82ba3b06523ccbb2d64736f6c634300081a0033",
+    "sourceMap": "579:25737:64:-:0;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"ApproveFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ETHTransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Permit2AmountOverflow\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Permit2Failed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFromFailed\",\"type\":\"error\"}],\"devdoc\":{\"author\":\"Solady (https://github.com/vectorized/solady/blob/main/src/utils/SafeTransferLib.sol)Modified from Solmate (https://github.com/transmissions11/solmate/blob/main/src/utils/SafeTransferLib.sol)Permit2 operations from (https://github.com/Uniswap/permit2/blob/main/src/libraries/Permit2Lib.sol)\",\"details\":\"Note: - For ETH transfers, please use `forceSafeTransferETH` for DoS protection.\",\"errors\":{\"ApproveFailed()\":[{\"details\":\"The ERC20 `approve` has failed.\"}],\"ETHTransferFailed()\":[{\"details\":\"The ETH transfer has failed.\"}],\"Permit2AmountOverflow()\":[{\"details\":\"The Permit2 amount must be less than `2**160 - 1`.\"}],\"Permit2Failed()\":[{\"details\":\"The Permit2 operation has failed.\"}],\"TransferFailed()\":[{\"details\":\"The ERC20 `transfer` has failed.\"}],\"TransferFromFailed()\":[{\"details\":\"The ERC20 `transferFrom` has failed.\"}]},\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"DAI_DOMAIN_SEPARATOR\":{\"details\":\"The unique EIP-712 domain domain separator for the DAI token contract.\"},\"GAS_STIPEND_NO_GRIEF\":{\"details\":\"Suggested gas stipend for contract receiving ETH to perform a few storage reads and writes, but low enough to prevent griefing.\"},\"GAS_STIPEND_NO_STORAGE_WRITES\":{\"details\":\"Suggested gas stipend for contract receiving ETH that disallows any storage writes.\"},\"PERMIT2\":{\"details\":\"The canonical Permit2 address. [Github](https://github.com/Uniswap/permit2) [Etherscan](https://etherscan.io/address/0x000000000022D473030F116dDEE9F6B43aC78BA3)\"},\"WETH9\":{\"details\":\"The address for the WETH9 contract on Ethereum mainnet.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Safe ETH and ERC20 transfer library that gracefully handles missing return values.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/solady/src/utils/SafeTransferLib.sol\":\"SafeTransferLib\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"]},\"sources\":{\"node_modules/solady/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0x7d0de1ff3be5dc32635283280b000d4794015a1b61d7dae7f3ff7b0721b07210\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e307c9eece677565e7d584ee77c56134b5db38a70f557f9d2b1b308219276c0c\",\"dweb:/ipfs/QmTEtqaTFgRBFGpJyb5o4v2w8yrSpcNThov4bNpcLr2tTR\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"ApproveFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ETHTransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Permit2AmountOverflow\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"Permit2Failed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFailed\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"TransferFromFailed\",\"type\":\"error\"}],\"devdoc\":{\"author\":\"Solady (https://github.com/vectorized/solady/blob/main/src/utils/SafeTransferLib.sol)Modified from Solmate (https://github.com/transmissions11/solmate/blob/main/src/utils/SafeTransferLib.sol)Permit2 operations from (https://github.com/Uniswap/permit2/blob/main/src/libraries/Permit2Lib.sol)\",\"details\":\"Note: - For ETH transfers, please use `forceSafeTransferETH` for DoS protection.\",\"errors\":{\"ApproveFailed()\":[{\"details\":\"The ERC20 `approve` has failed.\"}],\"ETHTransferFailed()\":[{\"details\":\"The ETH transfer has failed.\"}],\"Permit2AmountOverflow()\":[{\"details\":\"The Permit2 amount must be less than `2**160 - 1`.\"}],\"Permit2Failed()\":[{\"details\":\"The Permit2 operation has failed.\"}],\"TransferFailed()\":[{\"details\":\"The ERC20 `transfer` has failed.\"}],\"TransferFromFailed()\":[{\"details\":\"The ERC20 `transferFrom` has failed.\"}]},\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"DAI_DOMAIN_SEPARATOR\":{\"details\":\"The unique EIP-712 domain domain separator for the DAI token contract.\"},\"GAS_STIPEND_NO_GRIEF\":{\"details\":\"Suggested gas stipend for contract receiving ETH to perform a few storage reads and writes, but low enough to prevent griefing.\"},\"GAS_STIPEND_NO_STORAGE_WRITES\":{\"details\":\"Suggested gas stipend for contract receiving ETH that disallows any storage writes.\"},\"PERMIT2\":{\"details\":\"The canonical Permit2 address. [Github](https://github.com/Uniswap/permit2) [Etherscan](https://etherscan.io/address/0x000000000022D473030F116dDEE9F6B43aC78BA3)\"},\"WETH9\":{\"details\":\"The address for the WETH9 contract on Ethereum mainnet.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Safe ETH and ERC20 transfer library that gracefully handles missing return values.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/solady/src/utils/SafeTransferLib.sol\":\"SafeTransferLib\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"],\"viaIR\":true},\"sources\":{\"node_modules/solady/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0x7d0de1ff3be5dc32635283280b000d4794015a1b61d7dae7f3ff7b0721b07210\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e307c9eece677565e7d584ee77c56134b5db38a70f557f9d2b1b308219276c0c\",\"dweb:/ipfs/QmTEtqaTFgRBFGpJyb5o4v2w8yrSpcNThov4bNpcLr2tTR\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.26+commit.8a97fa7a"
@@ -109,8 +109,9 @@ export const SafeTransferLib = {
       "compilationTarget": {
         "node_modules/solady/src/utils/SafeTransferLib.sol": "SafeTransferLib"
       },
-      "evmVersion": "paris",
-      "libraries": {}
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
     },
     "sources": {
       "node_modules/solady/src/utils/SafeTransferLib.sol": {
@@ -720,7 +721,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54941,
@@ -1023,7 +1024,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54949,
@@ -1525,7 +1526,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54959,
@@ -2017,7 +2018,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54971,
@@ -2560,7 +2561,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54924,
@@ -3025,7 +3026,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54924,
@@ -3216,7 +3217,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54999,
@@ -3502,7 +3503,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55013,
@@ -4256,7 +4257,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55029,
@@ -4971,7 +4972,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55043,
@@ -6061,7 +6062,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55060,
@@ -6745,7 +6746,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55071,
@@ -7662,7 +7663,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55084,
@@ -8311,7 +8312,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55095,
@@ -9416,7 +9417,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55107,
@@ -9835,7 +9836,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 55117,
@@ -11205,7 +11206,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54936,
@@ -12887,7 +12888,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54928,
@@ -14964,7 +14965,7 @@ export const SafeTransferLib = {
                     ]
                   },
                   "documentation": "@solidity memory-safe-assembly",
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 54936,

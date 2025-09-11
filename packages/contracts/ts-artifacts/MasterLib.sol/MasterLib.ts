@@ -1,17 +1,17 @@
 export const MasterLib = {
   "abi": [],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220597ca355cf268a68288191224aa34251ca235c3bc8b08f3ae942780f3aa4c3f564736f6c634300081a0033",
-    "sourceMap": "255:4036:68:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;255:4036:68;;;;;;;;;;;;;;;;;",
+    "object": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220a459c73216ecb44b67676185bb89a164415cbb366befcde88c84c9c59156435864736f6c634300081a0033",
+    "sourceMap": "255:4384:68:-:0;;;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220597ca355cf268a68288191224aa34251ca235c3bc8b08f3ae942780f3aa4c3f564736f6c634300081a0033",
-    "sourceMap": "255:4036:68:-:0;;;;;;;;",
+    "object": "0x5f80fdfea2646970667358221220a459c73216ecb44b67676185bb89a164415cbb366befcde88c84c9c59156435864736f6c634300081a0033",
+    "sourceMap": "255:4384:68:-:0;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/entities/MasterLib.sol\":\"MasterLib\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol\":{\"keccak256\":\"0xafb7be6c8945a04bdd080fd6a3a3d0fa0329f1ad0d3bcd431dc1dcf2462d3da9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e5a595aaee5f9fcfa163293afd9518d069fa424bffbf65d53d961d0394ed1dc5\",\"dweb:/ipfs/Qmb8U9Z38K1nmKwP895JoUo8pupwexUnjzcgAC6STzpQo4\"]},\"node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol\":{\"keccak256\":\"0x9b161e97b8967d4bc0c08d25741889a30692cdda4b71910bf1b0e315f1962212\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://821500c39d095eaa25b06f46e65f1d0e97c4c96b39227f79077dee7d9e84051f\",\"dweb:/ipfs/QmSTeGorKzSWF6HAmxo32uCZiEuKNvreQdUiX1AaYtUMTz\"]},\"node_modules/solady/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0x7d0de1ff3be5dc32635283280b000d4794015a1b61d7dae7f3ff7b0721b07210\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e307c9eece677565e7d584ee77c56134b5db38a70f557f9d2b1b308219276c0c\",\"dweb:/ipfs/QmTEtqaTFgRBFGpJyb5o4v2w8yrSpcNThov4bNpcLr2tTR\"]},\"src/entities/MasterLib.sol\":{\"keccak256\":\"0xcb0f41cd1fe21a25ba1472ce58459c0b577e7f325480477e199db2e83bba5bba\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://f0bd1a834e2afe85ccebbfb2a8aa8da87f75dca37cacbfc8016c768e3cf7d90e\",\"dweb:/ipfs/Qma9TnPNvhLrQjipraBvrasSS9C1x54stAiMxsQkEJxihY\"]},\"src/entities/PurchaseLib.sol\":{\"keccak256\":\"0x8b26b9ceea524ebe69783c705877bf03b0b14d545956be67af639c40ea2928f0\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://d349a78f4210a17a92686e10a47a1e9f731b7522cf8e618a95e1a90009a52836\",\"dweb:/ipfs/QmfEp7AZbDLe8fJDqfocDg7eCYTtqgAhG5MvxdveBgRgdN\"]},\"src/entities/TicketLib.sol\":{\"keccak256\":\"0x0d42afc2cdba1d2eb76061267981655b36a4a88cbec76a8ada002936680e28cd\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://96501bfc92e5493ea6efb88d2421b39a5dfd1b9e696abd5c242e47d3168abe24\",\"dweb:/ipfs/QmPNknwHh42xDm5osuJeZ9iq3v9bJXC2LQryWSEfXzMDpx\"]},\"src/interface/Errors.sol\":{\"keccak256\":\"0x2e676a9069368eb6a529e68cfa4b8ded2a7fd0fc94582ad9dd57c00b969f3796\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://66d44d0664c9037c1a3e857e50671fe0d0c4e27c9175166909afca2b1a01a092\",\"dweb:/ipfs/QmXbdDk7p99hdoca9MqNz9SZs87AeNH3T9AqMywUGDEJGs\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/entities/MasterLib.sol\":\"MasterLib\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"],\"viaIR\":true},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol\":{\"keccak256\":\"0xafb7be6c8945a04bdd080fd6a3a3d0fa0329f1ad0d3bcd431dc1dcf2462d3da9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e5a595aaee5f9fcfa163293afd9518d069fa424bffbf65d53d961d0394ed1dc5\",\"dweb:/ipfs/Qmb8U9Z38K1nmKwP895JoUo8pupwexUnjzcgAC6STzpQo4\"]},\"node_modules/@openzeppelin/contracts/utils/structs/EnumerableSet.sol\":{\"keccak256\":\"0x9b161e97b8967d4bc0c08d25741889a30692cdda4b71910bf1b0e315f1962212\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://821500c39d095eaa25b06f46e65f1d0e97c4c96b39227f79077dee7d9e84051f\",\"dweb:/ipfs/QmSTeGorKzSWF6HAmxo32uCZiEuKNvreQdUiX1AaYtUMTz\"]},\"node_modules/solady/src/utils/SafeTransferLib.sol\":{\"keccak256\":\"0x7d0de1ff3be5dc32635283280b000d4794015a1b61d7dae7f3ff7b0721b07210\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e307c9eece677565e7d584ee77c56134b5db38a70f557f9d2b1b308219276c0c\",\"dweb:/ipfs/QmTEtqaTFgRBFGpJyb5o4v2w8yrSpcNThov4bNpcLr2tTR\"]},\"src/entities/MasterLib.sol\":{\"keccak256\":\"0x837c509b89b4a1ec8c38c7bec32fefada40cdc1e96e4d4d62ae806efa8691d16\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://885e3e1c56e1ae980c42cf66b3fc8a5520c5a9872c179167c6eef7f058768b9f\",\"dweb:/ipfs/QmeqypkS8ujW8njcanzPc9QQWz5Uo3BGgTTj3cYig6DE1t\"]},\"src/entities/PurchaseLib.sol\":{\"keccak256\":\"0x0faf175977a5a4a1ca3cf6be67491d50faa16a70588fc91ec8de661eb81b288f\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://83a9356cf98d7b0a11385178e64bfb112b6b3ab21ff55239aba0b9083a3e2b1d\",\"dweb:/ipfs/QmZ4AypZZkB3P5eS4vFzEr8jep5rT5oYZZApGsKkSAQqAy\"]},\"src/entities/TicketLib.sol\":{\"keccak256\":\"0xa6ccfa22ffb3bb618fc6f5eff76305ee2b841bedb62a047b6a59fa7377bb1054\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://0e5abecb549920be4e17adfc716a4bb15f920b0d87c799b5a05af2696814798b\",\"dweb:/ipfs/QmZK4MqhwudXgFjDcgdb8sMjUKgscy6STh2wZov9kfytGm\"]},\"src/interface/Constants.sol\":{\"keccak256\":\"0x9d8af3fdec1edf3be3195790a120cc804291c35f9fa2913ff081014929bae4d0\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://12502fc73c76bfc0a4949825ce5a80b3ac3741e545fa4dd718ee4a93485744ea\",\"dweb:/ipfs/QmaFgjXeS8pZTue2DtLv7Ei1Z3rtBoA5znqSxaw1KSpo1E\"]},\"src/interface/Errors.sol\":{\"keccak256\":\"0x2e676a9069368eb6a529e68cfa4b8ded2a7fd0fc94582ad9dd57c00b969f3796\",\"license\":\"SEE LICENSE IN LICENSE\",\"urls\":[\"bzz-raw://66d44d0664c9037c1a3e857e50671fe0d0c4e27c9175166909afca2b1a01a092\",\"dweb:/ipfs/QmXbdDk7p99hdoca9MqNz9SZs87AeNH3T9AqMywUGDEJGs\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.26+commit.8a97fa7a"
@@ -47,8 +47,9 @@ export const MasterLib = {
       "compilationTarget": {
         "src/entities/MasterLib.sol": "MasterLib"
       },
-      "evmVersion": "paris",
-      "libraries": {}
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
     },
     "sources": {
       "node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol": {
@@ -76,26 +77,34 @@ export const MasterLib = {
         "license": "MIT"
       },
       "src/entities/MasterLib.sol": {
-        "keccak256": "0xcb0f41cd1fe21a25ba1472ce58459c0b577e7f325480477e199db2e83bba5bba",
+        "keccak256": "0x837c509b89b4a1ec8c38c7bec32fefada40cdc1e96e4d4d62ae806efa8691d16",
         "urls": [
-          "bzz-raw://f0bd1a834e2afe85ccebbfb2a8aa8da87f75dca37cacbfc8016c768e3cf7d90e",
-          "dweb:/ipfs/Qma9TnPNvhLrQjipraBvrasSS9C1x54stAiMxsQkEJxihY"
+          "bzz-raw://885e3e1c56e1ae980c42cf66b3fc8a5520c5a9872c179167c6eef7f058768b9f",
+          "dweb:/ipfs/QmeqypkS8ujW8njcanzPc9QQWz5Uo3BGgTTj3cYig6DE1t"
         ],
         "license": "SEE LICENSE IN LICENSE"
       },
       "src/entities/PurchaseLib.sol": {
-        "keccak256": "0x8b26b9ceea524ebe69783c705877bf03b0b14d545956be67af639c40ea2928f0",
+        "keccak256": "0x0faf175977a5a4a1ca3cf6be67491d50faa16a70588fc91ec8de661eb81b288f",
         "urls": [
-          "bzz-raw://d349a78f4210a17a92686e10a47a1e9f731b7522cf8e618a95e1a90009a52836",
-          "dweb:/ipfs/QmfEp7AZbDLe8fJDqfocDg7eCYTtqgAhG5MvxdveBgRgdN"
+          "bzz-raw://83a9356cf98d7b0a11385178e64bfb112b6b3ab21ff55239aba0b9083a3e2b1d",
+          "dweb:/ipfs/QmZ4AypZZkB3P5eS4vFzEr8jep5rT5oYZZApGsKkSAQqAy"
         ],
         "license": "SEE LICENSE IN LICENSE"
       },
       "src/entities/TicketLib.sol": {
-        "keccak256": "0x0d42afc2cdba1d2eb76061267981655b36a4a88cbec76a8ada002936680e28cd",
+        "keccak256": "0xa6ccfa22ffb3bb618fc6f5eff76305ee2b841bedb62a047b6a59fa7377bb1054",
         "urls": [
-          "bzz-raw://96501bfc92e5493ea6efb88d2421b39a5dfd1b9e696abd5c242e47d3168abe24",
-          "dweb:/ipfs/QmPNknwHh42xDm5osuJeZ9iq3v9bJXC2LQryWSEfXzMDpx"
+          "bzz-raw://0e5abecb549920be4e17adfc716a4bb15f920b0d87c799b5a05af2696814798b",
+          "dweb:/ipfs/QmZK4MqhwudXgFjDcgdb8sMjUKgscy6STh2wZov9kfytGm"
+        ],
+        "license": "SEE LICENSE IN LICENSE"
+      },
+      "src/interface/Constants.sol": {
+        "keccak256": "0x9d8af3fdec1edf3be3195790a120cc804291c35f9fa2913ff081014929bae4d0",
+        "urls": [
+          "bzz-raw://12502fc73c76bfc0a4949825ce5a80b3ac3741e545fa4dd718ee4a93485744ea",
+          "dweb:/ipfs/QmaFgjXeS8pZTue2DtLv7Ei1Z3rtBoA5znqSxaw1KSpo1E"
         ],
         "license": "SEE LICENSE IN LICENSE"
       },
@@ -112,13 +121,16 @@ export const MasterLib = {
   },
   "ast": {
     "absolutePath": "src/entities/MasterLib.sol",
-    "id": 56524,
+    "id": 56939,
     "exportedSymbols": {
       "AlreadyUsedData": [
-        56715
+        57294
       ],
       "CancellerNotOwner": [
-        56727
+        57306
+      ],
+      "Constants": [
+        57286
       ],
       "EnumerableMap": [
         52255
@@ -127,56 +139,56 @@ export const MasterLib = {
         52868
       ],
       "InvalidAmount": [
-        56735
+        57314
       ],
       "InvalidAsset": [
-        56721
+        57300
       ],
       "InvalidInput": [
-        56711
+        57290
       ],
       "InvalidPurchaseData": [
-        56717
+        57296
       ],
       "MasterLib": [
-        56523
+        56938
       ],
       "NotAllowlistedAsset": [
-        56723
+        57302
       ],
       "PurchaseLib": [
-        56536
+        56978
       ],
       "SafeTransferLib": [
         55229
       ],
       "ShowtimeNotPassed": [
-        56731
+        57310
       ],
       "ShowtimePassed": [
-        56729
+        57308
       ],
       "SignerNotOwner": [
-        56725
+        57304
       ],
       "StalePurchaseData": [
-        56713
+        57292
       ],
       "TicketLib": [
-        56690
+        57254
       ],
       "UnsortedSeatsInput": [
-        56733
+        57312
       ],
       "ZeroLength": [
-        56719
+        57298
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "51:4241:68",
+    "src": "51:4589:68",
     "nodes": [
       {
-        "id": 56118,
+        "id": 56501,
         "nodeType": "PragmaDirective",
         "src": "51:24:68",
         "nodes": [],
@@ -188,70 +200,70 @@ export const MasterLib = {
         ]
       },
       {
-        "id": 56119,
+        "id": 56502,
         "nodeType": "ImportDirective",
         "src": "77:65:68",
         "nodes": [],
         "absolutePath": "node_modules/@openzeppelin/contracts/utils/structs/EnumerableMap.sol",
         "file": "@openzeppelin/contracts/utils/structs/EnumerableMap.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 56524,
+        "scope": 56939,
         "sourceUnit": 52256,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 56120,
+        "id": 56503,
         "nodeType": "ImportDirective",
         "src": "143:46:68",
         "nodes": [],
         "absolutePath": "node_modules/solady/src/utils/SafeTransferLib.sol",
         "file": "solady/src/utils/SafeTransferLib.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 56524,
+        "scope": 56939,
         "sourceUnit": 55230,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 56121,
+        "id": 56504,
         "nodeType": "ImportDirective",
         "src": "191:27:68",
         "nodes": [],
         "absolutePath": "src/entities/PurchaseLib.sol",
         "file": "./PurchaseLib.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 56524,
-        "sourceUnit": 56537,
+        "scope": 56939,
+        "sourceUnit": 56979,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 56122,
+        "id": 56505,
         "nodeType": "ImportDirective",
         "src": "220:33:68",
         "nodes": [],
         "absolutePath": "src/interface/Errors.sol",
         "file": "../interface/Errors.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 56524,
-        "sourceUnit": 56736,
+        "scope": 56939,
+        "sourceUnit": 57315,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 56523,
+        "id": 56938,
         "nodeType": "ContractDefinition",
-        "src": "255:4036:68",
+        "src": "255:4384:68",
         "nodes": [
           {
-            "id": 56126,
+            "id": 56509,
             "nodeType": "UsingForDirective",
             "src": "279:55:68",
             "nodes": [],
             "global": false,
             "libraryName": {
-              "id": 56123,
+              "id": 56506,
               "name": "EnumerableMap",
               "nameLocations": [
                 "285:13:68"
@@ -261,10 +273,10 @@ export const MasterLib = {
               "src": "285:13:68"
             },
             "typeName": {
-              "id": 56125,
+              "id": 56508,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 56124,
+                "id": 56507,
                 "name": "EnumerableMap.AddressToUintMap",
                 "nameLocations": [
                   "303:13:68",
@@ -283,20 +295,20 @@ export const MasterLib = {
             }
           },
           {
-            "id": 56154,
+            "id": 56539,
             "nodeType": "StructDefinition",
-            "src": "340:427:68",
+            "src": "340:466:68",
             "nodes": [],
             "canonicalName": "MasterLib.State",
             "members": [
               {
                 "constant": false,
-                "id": 56128,
+                "id": 56511,
                 "mutability": "mutable",
                 "name": "verifier",
                 "nameLocation": "371:8:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
+                "scope": 56539,
                 "src": "363:16:68",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -305,7 +317,7 @@ export const MasterLib = {
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 56127,
+                  "id": 56510,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "363:7:68",
@@ -319,12 +331,12 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56130,
+                "id": 56513,
                 "mutability": "mutable",
                 "name": "ttl",
                 "nameLocation": "396:3:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
+                "scope": 56539,
                 "src": "389:10:68",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -333,7 +345,7 @@ export const MasterLib = {
                   "typeString": "uint96"
                 },
                 "typeName": {
-                  "id": 56129,
+                  "id": 56512,
                   "name": "uint96",
                   "nodeType": "ElementaryTypeName",
                   "src": "389:6:68",
@@ -346,12 +358,12 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56132,
+                "id": 56515,
                 "mutability": "mutable",
                 "name": "benefactor",
                 "nameLocation": "417:10:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
+                "scope": 56539,
                 "src": "409:18:68",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -360,7 +372,7 @@ export const MasterLib = {
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 56131,
+                  "id": 56514,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "409:7:68",
@@ -374,40 +386,63 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56134,
+                "id": 56519,
                 "mutability": "mutable",
-                "name": "nonce",
-                "nameLocation": "445:5:68",
+                "name": "userNonceMap",
+                "nameLocation": "477:12:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
-                "src": "437:13:68",
+                "scope": 56539,
+                "src": "437:52:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
                 },
                 "typeName": {
-                  "id": 56133,
-                  "name": "uint256",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "437:7:68",
+                  "id": 56518,
+                  "keyName": "user",
+                  "keyNameLocation": "454:4:68",
+                  "keyType": {
+                    "id": 56516,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "446:7:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "Mapping",
+                  "src": "437:39:68",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
+                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                    "typeString": "mapping(address => uint256)"
+                  },
+                  "valueName": "nonce",
+                  "valueNameLocation": "470:5:68",
+                  "valueType": {
+                    "id": 56517,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
                   }
                 },
                 "visibility": "internal"
               },
               {
                 "constant": false,
-                "id": 56138,
+                "id": 56523,
                 "mutability": "mutable",
                 "name": "allowlistedAssets",
-                "nameLocation": "485:17:68",
+                "nameLocation": "524:17:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
-                "src": "460:42:68",
+                "scope": 56539,
+                "src": "499:42:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -415,21 +450,21 @@ export const MasterLib = {
                   "typeString": "mapping(address => bool)"
                 },
                 "typeName": {
-                  "id": 56137,
+                  "id": 56522,
                   "keyName": "",
                   "keyNameLocation": "-1:-1:-1",
                   "keyType": {
-                    "id": 56135,
+                    "id": 56520,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "468:7:68",
+                    "src": "507:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "460:24:68",
+                  "src": "499:24:68",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                     "typeString": "mapping(address => bool)"
@@ -437,10 +472,10 @@ export const MasterLib = {
                   "valueName": "",
                   "valueNameLocation": "-1:-1:-1",
                   "valueType": {
-                    "id": 56136,
+                    "id": 56521,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "479:4:68",
+                    "src": "518:4:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -451,13 +486,13 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56141,
+                "id": 56526,
                 "mutability": "mutable",
                 "name": "withdrawableAssets",
-                "nameLocation": "543:18:68",
+                "nameLocation": "582:18:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
-                "src": "512:49:68",
+                "scope": 56539,
+                "src": "551:49:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -465,21 +500,21 @@ export const MasterLib = {
                   "typeString": "struct EnumerableMap.AddressToUintMap"
                 },
                 "typeName": {
-                  "id": 56140,
+                  "id": 56525,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 56139,
+                    "id": 56524,
                     "name": "EnumerableMap.AddressToUintMap",
                     "nameLocations": [
-                      "512:13:68",
-                      "526:16:68"
+                      "551:13:68",
+                      "565:16:68"
                     ],
                     "nodeType": "IdentifierPath",
                     "referencedDeclaration": 51100,
-                    "src": "512:30:68"
+                    "src": "551:30:68"
                   },
                   "referencedDeclaration": 51100,
-                  "src": "512:30:68",
+                  "src": "551:30:68",
                   "typeDescriptions": {
                     "typeIdentifier": "t_struct$_AddressToUintMap_$51100_storage_ptr",
                     "typeString": "struct EnumerableMap.AddressToUintMap"
@@ -489,13 +524,13 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56145,
+                "id": 56530,
                 "mutability": "mutable",
                 "name": "showIdToPolicyIdMap",
-                "nameLocation": "615:19:68",
+                "nameLocation": "654:19:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
-                "src": "571:63:68",
+                "scope": 56539,
+                "src": "610:63:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -503,32 +538,32 @@ export const MasterLib = {
                   "typeString": "mapping(uint256 => uint256)"
                 },
                 "typeName": {
-                  "id": 56144,
+                  "id": 56529,
                   "keyName": "showId",
-                  "keyNameLocation": "587:6:68",
+                  "keyNameLocation": "626:6:68",
                   "keyType": {
-                    "id": 56142,
+                    "id": 56527,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "579:7:68",
+                    "src": "618:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "571:43:68",
+                  "src": "610:43:68",
                   "typeDescriptions": {
                     "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                     "typeString": "mapping(uint256 => uint256)"
                   },
                   "valueName": "policyId",
-                  "valueNameLocation": "605:8:68",
+                  "valueNameLocation": "644:8:68",
                   "valueType": {
-                    "id": 56143,
+                    "id": 56528,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "597:7:68",
+                    "src": "636:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -539,58 +574,58 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56150,
+                "id": 56535,
                 "mutability": "mutable",
                 "name": "policyMap",
-                "nameLocation": "701:9:68",
+                "nameLocation": "740:9:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
-                "src": "644:66:68",
+                "scope": 56539,
+                "src": "683:66:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56159_storage_$",
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56544_storage_$",
                   "typeString": "mapping(uint256 => struct MasterLib.CancelPolicyMetadata)"
                 },
                 "typeName": {
-                  "id": 56149,
+                  "id": 56534,
                   "keyName": "policyId",
-                  "keyNameLocation": "660:8:68",
+                  "keyNameLocation": "699:8:68",
                   "keyType": {
-                    "id": 56146,
+                    "id": 56531,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "652:7:68",
+                    "src": "691:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "Mapping",
-                  "src": "644:56:68",
+                  "src": "683:56:68",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56159_storage_$",
+                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56544_storage_$",
                     "typeString": "mapping(uint256 => struct MasterLib.CancelPolicyMetadata)"
                   },
                   "valueName": "policy",
-                  "valueNameLocation": "693:6:68",
+                  "valueNameLocation": "732:6:68",
                   "valueType": {
-                    "id": 56148,
+                    "id": 56533,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56147,
+                      "id": 56532,
                       "name": "CancelPolicyMetadata",
                       "nameLocations": [
-                        "672:20:68"
+                        "711:20:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56159,
-                      "src": "672:20:68"
+                      "referencedDeclaration": 56544,
+                      "src": "711:20:68"
                     },
-                    "referencedDeclaration": 56159,
-                    "src": "672:20:68",
+                    "referencedDeclaration": 56544,
+                    "src": "711:20:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                       "typeString": "struct MasterLib.CancelPolicyMetadata"
                     }
                   }
@@ -599,36 +634,36 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56153,
+                "id": 56538,
                 "mutability": "mutable",
                 "name": "defaultCancelPolicy",
-                "nameLocation": "741:19:68",
+                "nameLocation": "780:19:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56154,
-                "src": "720:40:68",
+                "scope": 56539,
+                "src": "759:40:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                  "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                   "typeString": "struct MasterLib.CancelPolicyMetadata"
                 },
                 "typeName": {
-                  "id": 56152,
+                  "id": 56537,
                   "nodeType": "UserDefinedTypeName",
                   "pathNode": {
-                    "id": 56151,
+                    "id": 56536,
                     "name": "CancelPolicyMetadata",
                     "nameLocations": [
-                      "720:20:68"
+                      "759:20:68"
                     ],
                     "nodeType": "IdentifierPath",
-                    "referencedDeclaration": 56159,
-                    "src": "720:20:68"
+                    "referencedDeclaration": 56544,
+                    "src": "759:20:68"
                   },
-                  "referencedDeclaration": 56159,
-                  "src": "720:20:68",
+                  "referencedDeclaration": 56544,
+                  "src": "759:20:68",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                     "typeString": "struct MasterLib.CancelPolicyMetadata"
                   }
                 },
@@ -637,57 +672,57 @@ export const MasterLib = {
             ],
             "name": "State",
             "nameLocation": "347:5:68",
-            "scope": 56523,
+            "scope": 56938,
             "visibility": "public"
           },
           {
-            "id": 56159,
+            "id": 56544,
             "nodeType": "StructDefinition",
-            "src": "773:76:68",
+            "src": "812:76:68",
             "nodes": [],
             "canonicalName": "MasterLib.CancelPolicyMetadata",
             "members": [
               {
                 "constant": false,
-                "id": 56158,
+                "id": 56543,
                 "mutability": "mutable",
                 "name": "policyMetadata",
-                "nameLocation": "828:14:68",
+                "nameLocation": "867:14:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56159,
-                "src": "811:31:68",
+                "scope": 56544,
+                "src": "850:31:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage_ptr",
+                  "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage_ptr",
                   "typeString": "struct MasterLib.TimePercentage[]"
                 },
                 "typeName": {
                   "baseType": {
-                    "id": 56156,
+                    "id": 56541,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56155,
+                      "id": 56540,
                       "name": "TimePercentage",
                       "nameLocations": [
-                        "811:14:68"
+                        "850:14:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56164,
-                      "src": "811:14:68"
+                      "referencedDeclaration": 56549,
+                      "src": "850:14:68"
                     },
-                    "referencedDeclaration": 56164,
-                    "src": "811:14:68",
+                    "referencedDeclaration": 56549,
+                    "src": "850:14:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimePercentage_$56164_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimePercentage_$56549_storage_ptr",
                       "typeString": "struct MasterLib.TimePercentage"
                     }
                   },
-                  "id": 56157,
+                  "id": 56542,
                   "nodeType": "ArrayTypeName",
-                  "src": "811:16:68",
+                  "src": "850:16:68",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage_ptr",
                     "typeString": "struct MasterLib.TimePercentage[]"
                   }
                 },
@@ -695,26 +730,26 @@ export const MasterLib = {
               }
             ],
             "name": "CancelPolicyMetadata",
-            "nameLocation": "780:20:68",
-            "scope": 56523,
+            "nameLocation": "819:20:68",
+            "scope": 56938,
             "visibility": "public"
           },
           {
-            "id": 56164,
+            "id": 56549,
             "nodeType": "StructDefinition",
-            "src": "855:90:68",
+            "src": "894:90:68",
             "nodes": [],
             "canonicalName": "MasterLib.TimePercentage",
             "members": [
               {
                 "constant": false,
-                "id": 56161,
+                "id": 56546,
                 "mutability": "mutable",
                 "name": "durationLeft",
-                "nameLocation": "895:12:68",
+                "nameLocation": "934:12:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56164,
-                "src": "887:20:68",
+                "scope": 56549,
+                "src": "926:20:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -722,10 +757,10 @@ export const MasterLib = {
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 56160,
+                  "id": 56545,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-                  "src": "887:7:68",
+                  "src": "926:7:68",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -735,13 +770,13 @@ export const MasterLib = {
               },
               {
                 "constant": false,
-                "id": 56163,
+                "id": 56548,
                 "mutability": "mutable",
                 "name": "percentageWad",
-                "nameLocation": "925:13:68",
+                "nameLocation": "964:13:68",
                 "nodeType": "VariableDeclaration",
-                "scope": 56164,
-                "src": "917:21:68",
+                "scope": 56549,
+                "src": "956:21:68",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -749,10 +784,10 @@ export const MasterLib = {
                   "typeString": "uint128"
                 },
                 "typeName": {
-                  "id": 56162,
+                  "id": 56547,
                   "name": "uint128",
                   "nodeType": "ElementaryTypeName",
-                  "src": "917:7:68",
+                  "src": "956:7:68",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint128",
                     "typeString": "uint128"
@@ -762,51 +797,51 @@ export const MasterLib = {
               }
             ],
             "name": "TimePercentage",
-            "nameLocation": "862:14:68",
-            "scope": 56523,
+            "nameLocation": "901:14:68",
+            "scope": 56938,
             "visibility": "public"
           },
           {
-            "id": 56195,
+            "id": 56580,
             "nodeType": "FunctionDefinition",
-            "src": "951:248:68",
+            "src": "990:248:68",
             "nodes": [],
             "body": {
-              "id": 56194,
+              "id": 56579,
               "nodeType": "Block",
-              "src": "1080:119:68",
+              "src": "1119:119:68",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 56181,
+                    "id": 56566,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 56177,
+                        "id": 56562,
                         "name": "self",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56167,
-                        "src": "1090:4:68",
+                        "referencedDeclaration": 56552,
+                        "src": "1129:4:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                          "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                           "typeString": "struct MasterLib.State storage pointer"
                         }
                       },
-                      "id": 56179,
+                      "id": 56564,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberLocation": "1095:8:68",
+                      "memberLocation": "1134:8:68",
                       "memberName": "verifier",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 56128,
-                      "src": "1090:13:68",
+                      "referencedDeclaration": 56511,
+                      "src": "1129:13:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -815,57 +850,57 @@ export const MasterLib = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 56180,
+                      "id": 56565,
                       "name": "_verifier",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56169,
-                      "src": "1106:9:68",
+                      "referencedDeclaration": 56554,
+                      "src": "1145:9:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "src": "1090:25:68",
+                    "src": "1129:25:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 56182,
+                  "id": 56567,
                   "nodeType": "ExpressionStatement",
-                  "src": "1090:25:68"
+                  "src": "1129:25:68"
                 },
                 {
                   "expression": {
-                    "id": 56187,
+                    "id": 56572,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "expression": {
-                        "id": 56183,
+                        "id": 56568,
                         "name": "self",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56167,
-                        "src": "1125:4:68",
+                        "referencedDeclaration": 56552,
+                        "src": "1164:4:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                          "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                           "typeString": "struct MasterLib.State storage pointer"
                         }
                       },
-                      "id": 56185,
+                      "id": 56570,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": true,
-                      "memberLocation": "1130:3:68",
+                      "memberLocation": "1169:3:68",
                       "memberName": "ttl",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 56130,
-                      "src": "1125:8:68",
+                      "referencedDeclaration": 56513,
+                      "src": "1164:8:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint96",
                         "typeString": "uint96"
@@ -874,51 +909,51 @@ export const MasterLib = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 56186,
+                      "id": 56571,
                       "name": "_ttl",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56171,
-                      "src": "1136:4:68",
+                      "referencedDeclaration": 56556,
+                      "src": "1175:4:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint96",
                         "typeString": "uint96"
                       }
                     },
-                    "src": "1125:15:68",
+                    "src": "1164:15:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint96",
                       "typeString": "uint96"
                     }
                   },
-                  "id": 56188,
+                  "id": 56573,
                   "nodeType": "ExpressionStatement",
-                  "src": "1125:15:68"
+                  "src": "1164:15:68"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 56190,
+                        "id": 56575,
                         "name": "self",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56167,
-                        "src": "1173:4:68",
+                        "referencedDeclaration": 56552,
+                        "src": "1212:4:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                          "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                           "typeString": "struct MasterLib.State storage pointer"
                         }
                       },
                       {
-                        "id": 56191,
+                        "id": 56576,
                         "name": "cancelPolicy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56174,
-                        "src": "1179:12:68",
+                        "referencedDeclaration": 56559,
+                        "src": "1218:12:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                           "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                         }
                       }
@@ -926,26 +961,26 @@ export const MasterLib = {
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                          "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                           "typeString": "struct MasterLib.State storage pointer"
                         },
                         {
-                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                           "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                         }
                       ],
-                      "id": 56189,
+                      "id": 56574,
                       "name": "setDefaultCancelPolicy",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56240,
-                      "src": "1150:22:68",
+                      "referencedDeclaration": 56625,
+                      "src": "1189:22:68",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$56154_storage_ptr_$_t_struct$_CancelPolicyMetadata_$56159_memory_ptr_$returns$__$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_State_$56539_storage_ptr_$_t_struct$_CancelPolicyMetadata_$56544_memory_ptr_$returns$__$",
                         "typeString": "function (struct MasterLib.State storage pointer,struct MasterLib.CancelPolicyMetadata memory)"
                       }
                     },
-                    "id": 56192,
+                    "id": 56577,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -954,16 +989,16 @@ export const MasterLib = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "1150:42:68",
+                    "src": "1189:42:68",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 56193,
+                  "id": 56578,
                   "nodeType": "ExpressionStatement",
-                  "src": "1150:42:68"
+                  "src": "1189:42:68"
                 }
               ]
             },
@@ -971,43 +1006,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "init",
-            "nameLocation": "960:4:68",
+            "nameLocation": "999:4:68",
             "parameters": {
-              "id": 56175,
+              "id": 56560,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56167,
+                  "id": 56552,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "979:4:68",
+                  "nameLocation": "1018:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56195,
-                  "src": "965:18:68",
+                  "scope": 56580,
+                  "src": "1004:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56166,
+                    "id": 56551,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56165,
+                      "id": 56550,
                       "name": "State",
                       "nameLocations": [
-                        "965:5:68"
+                        "1004:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "965:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "1004:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "965:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "1004:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -1015,13 +1050,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56169,
+                  "id": 56554,
                   "mutability": "mutable",
                   "name": "_verifier",
-                  "nameLocation": "993:9:68",
+                  "nameLocation": "1032:9:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56195,
-                  "src": "985:17:68",
+                  "scope": 56580,
+                  "src": "1024:17:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1029,10 +1064,10 @@ export const MasterLib = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 56168,
+                    "id": 56553,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "985:7:68",
+                    "src": "1024:7:68",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -1043,13 +1078,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56171,
+                  "id": 56556,
                   "mutability": "mutable",
                   "name": "_ttl",
-                  "nameLocation": "1011:4:68",
+                  "nameLocation": "1050:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56195,
-                  "src": "1004:11:68",
+                  "scope": 56580,
+                  "src": "1043:11:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1057,10 +1092,10 @@ export const MasterLib = {
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 56170,
+                    "id": 56555,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1004:6:68",
+                    "src": "1043:6:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint96",
                       "typeString": "uint96"
@@ -1070,71 +1105,71 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56174,
+                  "id": 56559,
                   "mutability": "mutable",
                   "name": "cancelPolicy",
-                  "nameLocation": "1045:12:68",
+                  "nameLocation": "1084:12:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56195,
-                  "src": "1017:40:68",
+                  "scope": 56580,
+                  "src": "1056:40:68",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                     "typeString": "struct MasterLib.CancelPolicyMetadata"
                   },
                   "typeName": {
-                    "id": 56173,
+                    "id": 56558,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56172,
+                      "id": 56557,
                       "name": "CancelPolicyMetadata",
                       "nameLocations": [
-                        "1017:20:68"
+                        "1056:20:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56159,
-                      "src": "1017:20:68"
+                      "referencedDeclaration": 56544,
+                      "src": "1056:20:68"
                     },
-                    "referencedDeclaration": 56159,
-                    "src": "1017:20:68",
+                    "referencedDeclaration": 56544,
+                    "src": "1056:20:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                       "typeString": "struct MasterLib.CancelPolicyMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "964:94:68"
+              "src": "1003:94:68"
             },
             "returnParameters": {
-              "id": 56176,
+              "id": 56561,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1080:0:68"
+              "src": "1119:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56240,
+            "id": 56625,
             "nodeType": "FunctionDefinition",
-            "src": "1205:428:68",
+            "src": "1244:428:68",
             "nodes": [],
             "body": {
-              "id": 56239,
+              "id": 56624,
               "nodeType": "Block",
-              "src": "1308:325:68",
+              "src": "1347:325:68",
               "nodes": [],
               "statements": [
                 {
                   "body": {
-                    "id": 56237,
+                    "id": 56622,
                     "nodeType": "Block",
-                    "src": "1383:244:68",
+                    "src": "1422:244:68",
                     "statements": [
                       {
                         "expression": {
@@ -1145,40 +1180,40 @@ export const MasterLib = {
                                   "expression": {
                                     "baseExpression": {
                                       "expression": {
-                                        "id": 56224,
+                                        "id": 56609,
                                         "name": "cancelPolicy",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 56201,
-                                        "src": "1495:12:68",
+                                        "referencedDeclaration": 56586,
+                                        "src": "1534:12:68",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                                           "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                                         }
                                       },
-                                      "id": 56225,
+                                      "id": 56610,
                                       "isConstant": false,
                                       "isLValue": true,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "1508:14:68",
+                                      "memberLocation": "1547:14:68",
                                       "memberName": "policyMetadata",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 56158,
-                                      "src": "1495:27:68",
+                                      "referencedDeclaration": 56543,
+                                      "src": "1534:27:68",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_memory_ptr_$dyn_memory_ptr",
+                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_memory_ptr_$dyn_memory_ptr",
                                         "typeString": "struct MasterLib.TimePercentage memory[] memory"
                                       }
                                     },
-                                    "id": 56227,
+                                    "id": 56612,
                                     "indexExpression": {
-                                      "id": 56226,
+                                      "id": 56611,
                                       "name": "i",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 56205,
-                                      "src": "1523:1:68",
+                                      "referencedDeclaration": 56590,
+                                      "src": "1562:1:68",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -1189,22 +1224,22 @@ export const MasterLib = {
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "nodeType": "IndexAccess",
-                                    "src": "1495:30:68",
+                                    "src": "1534:30:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                      "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                       "typeString": "struct MasterLib.TimePercentage memory"
                                     }
                                   },
-                                  "id": 56228,
+                                  "id": 56613,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "1526:12:68",
+                                  "memberLocation": "1565:12:68",
                                   "memberName": "durationLeft",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56161,
-                                  "src": "1495:43:68",
+                                  "referencedDeclaration": 56546,
+                                  "src": "1534:43:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint128",
                                     "typeString": "uint128"
@@ -1214,40 +1249,40 @@ export const MasterLib = {
                                   "expression": {
                                     "baseExpression": {
                                       "expression": {
-                                        "id": 56229,
+                                        "id": 56614,
                                         "name": "cancelPolicy",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 56201,
-                                        "src": "1540:12:68",
+                                        "referencedDeclaration": 56586,
+                                        "src": "1579:12:68",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                                           "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                                         }
                                       },
-                                      "id": 56230,
+                                      "id": 56615,
                                       "isConstant": false,
                                       "isLValue": true,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "1553:14:68",
+                                      "memberLocation": "1592:14:68",
                                       "memberName": "policyMetadata",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 56158,
-                                      "src": "1540:27:68",
+                                      "referencedDeclaration": 56543,
+                                      "src": "1579:27:68",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_memory_ptr_$dyn_memory_ptr",
+                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_memory_ptr_$dyn_memory_ptr",
                                         "typeString": "struct MasterLib.TimePercentage memory[] memory"
                                       }
                                     },
-                                    "id": 56232,
+                                    "id": 56617,
                                     "indexExpression": {
-                                      "id": 56231,
+                                      "id": 56616,
                                       "name": "i",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 56205,
-                                      "src": "1568:1:68",
+                                      "referencedDeclaration": 56590,
+                                      "src": "1607:1:68",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -1258,22 +1293,22 @@ export const MasterLib = {
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "nodeType": "IndexAccess",
-                                    "src": "1540:30:68",
+                                    "src": "1579:30:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                      "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                       "typeString": "struct MasterLib.TimePercentage memory"
                                     }
                                   },
-                                  "id": 56233,
+                                  "id": 56618,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "1571:13:68",
+                                  "memberLocation": "1610:13:68",
                                   "memberName": "percentageWad",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56163,
-                                  "src": "1540:44:68",
+                                  "referencedDeclaration": 56548,
+                                  "src": "1579:44:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint128",
                                     "typeString": "uint128"
@@ -1291,18 +1326,18 @@ export const MasterLib = {
                                     "typeString": "uint128"
                                   }
                                 ],
-                                "id": 56223,
+                                "id": 56608,
                                 "name": "TimePercentage",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56164,
-                                "src": "1459:14:68",
+                                "referencedDeclaration": 56549,
+                                "src": "1498:14:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_struct$_TimePercentage_$56164_storage_ptr_$",
+                                  "typeIdentifier": "t_type$_t_struct$_TimePercentage_$56549_storage_ptr_$",
                                   "typeString": "type(struct MasterLib.TimePercentage storage pointer)"
                                 }
                               },
-                              "id": 56234,
+                              "id": 56619,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1311,10 +1346,10 @@ export const MasterLib = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "1459:143:68",
+                              "src": "1498:143:68",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                 "typeString": "struct MasterLib.TimePercentage memory"
                               }
                             }
@@ -1322,69 +1357,69 @@ export const MasterLib = {
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                 "typeString": "struct MasterLib.TimePercentage memory"
                               }
                             ],
                             "expression": {
                               "expression": {
                                 "expression": {
-                                  "id": 56216,
+                                  "id": 56601,
                                   "name": "self",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 56198,
-                                  "src": "1397:4:68",
+                                  "referencedDeclaration": 56583,
+                                  "src": "1436:4:68",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                                     "typeString": "struct MasterLib.State storage pointer"
                                   }
                                 },
-                                "id": 56220,
+                                "id": 56605,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
-                                "memberLocation": "1402:19:68",
+                                "memberLocation": "1441:19:68",
                                 "memberName": "defaultCancelPolicy",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 56153,
-                                "src": "1397:24:68",
+                                "referencedDeclaration": 56538,
+                                "src": "1436:24:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage",
+                                  "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage",
                                   "typeString": "struct MasterLib.CancelPolicyMetadata storage ref"
                                 }
                               },
-                              "id": 56221,
+                              "id": 56606,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
-                              "memberLocation": "1422:14:68",
+                              "memberLocation": "1461:14:68",
                               "memberName": "policyMetadata",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 56158,
-                              "src": "1397:39:68",
+                              "referencedDeclaration": 56543,
+                              "src": "1436:39:68",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage",
                                 "typeString": "struct MasterLib.TimePercentage storage ref[] storage ref"
                               }
                             },
-                            "id": 56222,
+                            "id": 56607,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "1437:4:68",
+                            "memberLocation": "1476:4:68",
                             "memberName": "push",
                             "nodeType": "MemberAccess",
-                            "src": "1397:44:68",
+                            "src": "1436:44:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage_ptr_$_t_struct$_TimePercentage_$56164_storage_$returns$__$attached_to$_t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage_ptr_$",
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage_ptr_$_t_struct$_TimePercentage_$56549_storage_$returns$__$attached_to$_t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage_ptr_$",
                               "typeString": "function (struct MasterLib.TimePercentage storage ref[] storage pointer,struct MasterLib.TimePercentage storage ref)"
                             }
                           },
-                          "id": 56235,
+                          "id": 56620,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1393,16 +1428,16 @@ export const MasterLib = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1397:219:68",
+                          "src": "1436:219:68",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 56236,
+                        "id": 56621,
                         "nodeType": "ExpressionStatement",
-                        "src": "1397:219:68"
+                        "src": "1436:219:68"
                       }
                     ]
                   },
@@ -1411,18 +1446,18 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56212,
+                    "id": 56597,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 56208,
+                      "id": 56593,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56205,
-                      "src": "1338:1:68",
+                      "referencedDeclaration": 56590,
+                      "src": "1377:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1433,67 +1468,67 @@ export const MasterLib = {
                     "rightExpression": {
                       "expression": {
                         "expression": {
-                          "id": 56209,
+                          "id": 56594,
                           "name": "cancelPolicy",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56201,
-                          "src": "1342:12:68",
+                          "referencedDeclaration": 56586,
+                          "src": "1381:12:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                             "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                           }
                         },
-                        "id": 56210,
+                        "id": 56595,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "1355:14:68",
+                        "memberLocation": "1394:14:68",
                         "memberName": "policyMetadata",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56158,
-                        "src": "1342:27:68",
+                        "referencedDeclaration": 56543,
+                        "src": "1381:27:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct MasterLib.TimePercentage memory[] memory"
                         }
                       },
-                      "id": 56211,
+                      "id": 56596,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1370:6:68",
+                      "memberLocation": "1409:6:68",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "1342:34:68",
+                      "src": "1381:34:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1338:38:68",
+                    "src": "1377:38:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56238,
+                  "id": 56623,
                   "initializationExpression": {
                     "assignments": [
-                      56205
+                      56590
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 56205,
+                        "id": 56590,
                         "mutability": "mutable",
                         "name": "i",
-                        "nameLocation": "1331:1:68",
+                        "nameLocation": "1370:1:68",
                         "nodeType": "VariableDeclaration",
-                        "scope": 56238,
-                        "src": "1323:9:68",
+                        "scope": 56623,
+                        "src": "1362:9:68",
                         "stateVariable": false,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -1501,10 +1536,10 @@ export const MasterLib = {
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 56204,
+                          "id": 56589,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "1323:7:68",
+                          "src": "1362:7:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1513,17 +1548,17 @@ export const MasterLib = {
                         "visibility": "internal"
                       }
                     ],
-                    "id": 56207,
+                    "id": 56592,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 56206,
+                      "id": 56591,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1335:1:68",
+                      "src": "1374:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
@@ -1531,12 +1566,12 @@ export const MasterLib = {
                       "value": "0"
                     },
                     "nodeType": "VariableDeclarationStatement",
-                    "src": "1323:13:68"
+                    "src": "1362:13:68"
                   },
                   "isSimpleCounterLoop": true,
                   "loopExpression": {
                     "expression": {
-                      "id": 56214,
+                      "id": 56599,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1544,14 +1579,14 @@ export const MasterLib = {
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": false,
-                      "src": "1378:3:68",
+                      "src": "1417:3:68",
                       "subExpression": {
-                        "id": 56213,
+                        "id": 56598,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56205,
-                        "src": "1378:1:68",
+                        "referencedDeclaration": 56590,
+                        "src": "1417:1:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1562,12 +1597,12 @@ export const MasterLib = {
                         "typeString": "uint256"
                       }
                     },
-                    "id": 56215,
+                    "id": 56600,
                     "nodeType": "ExpressionStatement",
-                    "src": "1378:3:68"
+                    "src": "1417:3:68"
                   },
                   "nodeType": "ForStatement",
-                  "src": "1318:309:68"
+                  "src": "1357:309:68"
                 }
               ]
             },
@@ -1575,43 +1610,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "setDefaultCancelPolicy",
-            "nameLocation": "1214:22:68",
+            "nameLocation": "1253:22:68",
             "parameters": {
-              "id": 56202,
+              "id": 56587,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56198,
+                  "id": 56583,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "1251:4:68",
+                  "nameLocation": "1290:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56240,
-                  "src": "1237:18:68",
+                  "scope": 56625,
+                  "src": "1276:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56197,
+                    "id": 56582,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56196,
+                      "id": 56581,
                       "name": "State",
                       "nameLocations": [
-                        "1237:5:68"
+                        "1276:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "1237:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "1276:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "1237:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "1276:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -1619,71 +1654,71 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56201,
+                  "id": 56586,
                   "mutability": "mutable",
                   "name": "cancelPolicy",
-                  "nameLocation": "1285:12:68",
+                  "nameLocation": "1324:12:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56240,
-                  "src": "1257:40:68",
+                  "scope": 56625,
+                  "src": "1296:40:68",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                     "typeString": "struct MasterLib.CancelPolicyMetadata"
                   },
                   "typeName": {
-                    "id": 56200,
+                    "id": 56585,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56199,
+                      "id": 56584,
                       "name": "CancelPolicyMetadata",
                       "nameLocations": [
-                        "1257:20:68"
+                        "1296:20:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56159,
-                      "src": "1257:20:68"
+                      "referencedDeclaration": 56544,
+                      "src": "1296:20:68"
                     },
-                    "referencedDeclaration": 56159,
-                    "src": "1257:20:68",
+                    "referencedDeclaration": 56544,
+                    "src": "1296:20:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                       "typeString": "struct MasterLib.CancelPolicyMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1236:62:68"
+              "src": "1275:62:68"
             },
             "returnParameters": {
-              "id": 56203,
+              "id": 56588,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1308:0:68"
+              "src": "1347:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56287,
+            "id": 56672,
             "nodeType": "FunctionDefinition",
-            "src": "1639:439:68",
+            "src": "1678:439:68",
             "nodes": [],
             "body": {
-              "id": 56286,
+              "id": 56671,
               "nodeType": "Block",
-              "src": "1753:325:68",
+              "src": "1792:325:68",
               "nodes": [],
               "statements": [
                 {
                   "body": {
-                    "id": 56284,
+                    "id": 56669,
                     "nodeType": "Block",
-                    "src": "1828:244:68",
+                    "src": "1867:244:68",
                     "statements": [
                       {
                         "expression": {
@@ -1694,40 +1729,40 @@ export const MasterLib = {
                                   "expression": {
                                     "baseExpression": {
                                       "expression": {
-                                        "id": 56271,
+                                        "id": 56656,
                                         "name": "cancelPolicy",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 56248,
-                                        "src": "1940:12:68",
+                                        "referencedDeclaration": 56633,
+                                        "src": "1979:12:68",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                                           "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                                         }
                                       },
-                                      "id": 56272,
+                                      "id": 56657,
                                       "isConstant": false,
                                       "isLValue": true,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "1953:14:68",
+                                      "memberLocation": "1992:14:68",
                                       "memberName": "policyMetadata",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 56158,
-                                      "src": "1940:27:68",
+                                      "referencedDeclaration": 56543,
+                                      "src": "1979:27:68",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_memory_ptr_$dyn_memory_ptr",
+                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_memory_ptr_$dyn_memory_ptr",
                                         "typeString": "struct MasterLib.TimePercentage memory[] memory"
                                       }
                                     },
-                                    "id": 56274,
+                                    "id": 56659,
                                     "indexExpression": {
-                                      "id": 56273,
+                                      "id": 56658,
                                       "name": "i",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 56252,
-                                      "src": "1968:1:68",
+                                      "referencedDeclaration": 56637,
+                                      "src": "2007:1:68",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -1738,22 +1773,22 @@ export const MasterLib = {
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "nodeType": "IndexAccess",
-                                    "src": "1940:30:68",
+                                    "src": "1979:30:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                      "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                       "typeString": "struct MasterLib.TimePercentage memory"
                                     }
                                   },
-                                  "id": 56275,
+                                  "id": 56660,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "1971:12:68",
+                                  "memberLocation": "2010:12:68",
                                   "memberName": "durationLeft",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56161,
-                                  "src": "1940:43:68",
+                                  "referencedDeclaration": 56546,
+                                  "src": "1979:43:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint128",
                                     "typeString": "uint128"
@@ -1763,40 +1798,40 @@ export const MasterLib = {
                                   "expression": {
                                     "baseExpression": {
                                       "expression": {
-                                        "id": 56276,
+                                        "id": 56661,
                                         "name": "cancelPolicy",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 56248,
-                                        "src": "1985:12:68",
+                                        "referencedDeclaration": 56633,
+                                        "src": "2024:12:68",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                                           "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                                         }
                                       },
-                                      "id": 56277,
+                                      "id": 56662,
                                       "isConstant": false,
                                       "isLValue": true,
                                       "isPure": false,
                                       "lValueRequested": false,
-                                      "memberLocation": "1998:14:68",
+                                      "memberLocation": "2037:14:68",
                                       "memberName": "policyMetadata",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 56158,
-                                      "src": "1985:27:68",
+                                      "referencedDeclaration": 56543,
+                                      "src": "2024:27:68",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_memory_ptr_$dyn_memory_ptr",
+                                        "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_memory_ptr_$dyn_memory_ptr",
                                         "typeString": "struct MasterLib.TimePercentage memory[] memory"
                                       }
                                     },
-                                    "id": 56279,
+                                    "id": 56664,
                                     "indexExpression": {
-                                      "id": 56278,
+                                      "id": 56663,
                                       "name": "i",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 56252,
-                                      "src": "2013:1:68",
+                                      "referencedDeclaration": 56637,
+                                      "src": "2052:1:68",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -1807,22 +1842,22 @@ export const MasterLib = {
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "nodeType": "IndexAccess",
-                                    "src": "1985:30:68",
+                                    "src": "2024:30:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                      "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                       "typeString": "struct MasterLib.TimePercentage memory"
                                     }
                                   },
-                                  "id": 56280,
+                                  "id": 56665,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "2016:13:68",
+                                  "memberLocation": "2055:13:68",
                                   "memberName": "percentageWad",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56163,
-                                  "src": "1985:44:68",
+                                  "referencedDeclaration": 56548,
+                                  "src": "2024:44:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint128",
                                     "typeString": "uint128"
@@ -1840,18 +1875,18 @@ export const MasterLib = {
                                     "typeString": "uint128"
                                   }
                                 ],
-                                "id": 56270,
+                                "id": 56655,
                                 "name": "TimePercentage",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56164,
-                                "src": "1904:14:68",
+                                "referencedDeclaration": 56549,
+                                "src": "1943:14:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_struct$_TimePercentage_$56164_storage_ptr_$",
+                                  "typeIdentifier": "t_type$_t_struct$_TimePercentage_$56549_storage_ptr_$",
                                   "typeString": "type(struct MasterLib.TimePercentage storage pointer)"
                                 }
                               },
-                              "id": 56281,
+                              "id": 56666,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1860,10 +1895,10 @@ export const MasterLib = {
                               "nameLocations": [],
                               "names": [],
                               "nodeType": "FunctionCall",
-                              "src": "1904:143:68",
+                              "src": "1943:143:68",
                               "tryCall": false,
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                 "typeString": "struct MasterLib.TimePercentage memory"
                               }
                             }
@@ -1871,7 +1906,7 @@ export const MasterLib = {
                           "expression": {
                             "argumentTypes": [
                               {
-                                "typeIdentifier": "t_struct$_TimePercentage_$56164_memory_ptr",
+                                "typeIdentifier": "t_struct$_TimePercentage_$56549_memory_ptr",
                                 "typeString": "struct MasterLib.TimePercentage memory"
                               }
                             ],
@@ -1879,40 +1914,40 @@ export const MasterLib = {
                               "expression": {
                                 "baseExpression": {
                                   "expression": {
-                                    "id": 56263,
+                                    "id": 56648,
                                     "name": "self",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 56243,
-                                    "src": "1842:4:68",
+                                    "referencedDeclaration": 56628,
+                                    "src": "1881:4:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                                       "typeString": "struct MasterLib.State storage pointer"
                                     }
                                   },
-                                  "id": 56266,
+                                  "id": 56651,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "1847:9:68",
+                                  "memberLocation": "1886:9:68",
                                   "memberName": "policyMap",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56150,
-                                  "src": "1842:14:68",
+                                  "referencedDeclaration": 56535,
+                                  "src": "1881:14:68",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56159_storage_$",
+                                    "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56544_storage_$",
                                     "typeString": "mapping(uint256 => struct MasterLib.CancelPolicyMetadata storage ref)"
                                   }
                                 },
-                                "id": 56267,
+                                "id": 56652,
                                 "indexExpression": {
-                                  "id": 56265,
+                                  "id": 56650,
                                   "name": "policyId",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 56245,
-                                  "src": "1857:8:68",
+                                  "referencedDeclaration": 56630,
+                                  "src": "1896:8:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
                                     "typeString": "uint256"
@@ -1923,42 +1958,42 @@ export const MasterLib = {
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "nodeType": "IndexAccess",
-                                "src": "1842:24:68",
+                                "src": "1881:24:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage",
+                                  "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage",
                                   "typeString": "struct MasterLib.CancelPolicyMetadata storage ref"
                                 }
                               },
-                              "id": 56268,
+                              "id": 56653,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
-                              "memberLocation": "1867:14:68",
+                              "memberLocation": "1906:14:68",
                               "memberName": "policyMetadata",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 56158,
-                              "src": "1842:39:68",
+                              "referencedDeclaration": 56543,
+                              "src": "1881:39:68",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage",
                                 "typeString": "struct MasterLib.TimePercentage storage ref[] storage ref"
                               }
                             },
-                            "id": 56269,
+                            "id": 56654,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "1882:4:68",
+                            "memberLocation": "1921:4:68",
                             "memberName": "push",
                             "nodeType": "MemberAccess",
-                            "src": "1842:44:68",
+                            "src": "1881:44:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage_ptr_$_t_struct$_TimePercentage_$56164_storage_$returns$__$attached_to$_t_array$_t_struct$_TimePercentage_$56164_storage_$dyn_storage_ptr_$",
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage_ptr_$_t_struct$_TimePercentage_$56549_storage_$returns$__$attached_to$_t_array$_t_struct$_TimePercentage_$56549_storage_$dyn_storage_ptr_$",
                               "typeString": "function (struct MasterLib.TimePercentage storage ref[] storage pointer,struct MasterLib.TimePercentage storage ref)"
                             }
                           },
-                          "id": 56282,
+                          "id": 56667,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1967,16 +2002,16 @@ export const MasterLib = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1842:219:68",
+                          "src": "1881:219:68",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$__$",
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 56283,
+                        "id": 56668,
                         "nodeType": "ExpressionStatement",
-                        "src": "1842:219:68"
+                        "src": "1881:219:68"
                       }
                     ]
                   },
@@ -1985,18 +2020,18 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56259,
+                    "id": 56644,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 56255,
+                      "id": 56640,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56252,
-                      "src": "1783:1:68",
+                      "referencedDeclaration": 56637,
+                      "src": "1822:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2007,67 +2042,67 @@ export const MasterLib = {
                     "rightExpression": {
                       "expression": {
                         "expression": {
-                          "id": 56256,
+                          "id": 56641,
                           "name": "cancelPolicy",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56248,
-                          "src": "1787:12:68",
+                          "referencedDeclaration": 56633,
+                          "src": "1826:12:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                             "typeString": "struct MasterLib.CancelPolicyMetadata memory"
                           }
                         },
-                        "id": 56257,
+                        "id": 56642,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "1800:14:68",
+                        "memberLocation": "1839:14:68",
                         "memberName": "policyMetadata",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56158,
-                        "src": "1787:27:68",
+                        "referencedDeclaration": 56543,
+                        "src": "1826:27:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56164_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_TimePercentage_$56549_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct MasterLib.TimePercentage memory[] memory"
                         }
                       },
-                      "id": 56258,
+                      "id": 56643,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "1815:6:68",
+                      "memberLocation": "1854:6:68",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "1787:34:68",
+                      "src": "1826:34:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "1783:38:68",
+                    "src": "1822:38:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56285,
+                  "id": 56670,
                   "initializationExpression": {
                     "assignments": [
-                      56252
+                      56637
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 56252,
+                        "id": 56637,
                         "mutability": "mutable",
                         "name": "i",
-                        "nameLocation": "1776:1:68",
+                        "nameLocation": "1815:1:68",
                         "nodeType": "VariableDeclaration",
-                        "scope": 56285,
-                        "src": "1768:9:68",
+                        "scope": 56670,
+                        "src": "1807:9:68",
                         "stateVariable": false,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -2075,10 +2110,10 @@ export const MasterLib = {
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 56251,
+                          "id": 56636,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "1768:7:68",
+                          "src": "1807:7:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2087,17 +2122,17 @@ export const MasterLib = {
                         "visibility": "internal"
                       }
                     ],
-                    "id": 56254,
+                    "id": 56639,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 56253,
+                      "id": 56638,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "1780:1:68",
+                      "src": "1819:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
@@ -2105,12 +2140,12 @@ export const MasterLib = {
                       "value": "0"
                     },
                     "nodeType": "VariableDeclarationStatement",
-                    "src": "1768:13:68"
+                    "src": "1807:13:68"
                   },
                   "isSimpleCounterLoop": true,
                   "loopExpression": {
                     "expression": {
-                      "id": 56261,
+                      "id": 56646,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2118,14 +2153,14 @@ export const MasterLib = {
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": false,
-                      "src": "1823:3:68",
+                      "src": "1862:3:68",
                       "subExpression": {
-                        "id": 56260,
+                        "id": 56645,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56252,
-                        "src": "1823:1:68",
+                        "referencedDeclaration": 56637,
+                        "src": "1862:1:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2136,12 +2171,12 @@ export const MasterLib = {
                         "typeString": "uint256"
                       }
                     },
-                    "id": 56262,
+                    "id": 56647,
                     "nodeType": "ExpressionStatement",
-                    "src": "1823:3:68"
+                    "src": "1862:3:68"
                   },
                   "nodeType": "ForStatement",
-                  "src": "1763:309:68"
+                  "src": "1802:309:68"
                 }
               ]
             },
@@ -2149,43 +2184,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "addCancelPolicy",
-            "nameLocation": "1648:15:68",
+            "nameLocation": "1687:15:68",
             "parameters": {
-              "id": 56249,
+              "id": 56634,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56243,
+                  "id": 56628,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "1678:4:68",
+                  "nameLocation": "1717:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56287,
-                  "src": "1664:18:68",
+                  "scope": 56672,
+                  "src": "1703:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56242,
+                    "id": 56627,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56241,
+                      "id": 56626,
                       "name": "State",
                       "nameLocations": [
-                        "1664:5:68"
+                        "1703:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "1664:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "1703:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "1664:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "1703:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -2193,13 +2228,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56245,
+                  "id": 56630,
                   "mutability": "mutable",
                   "name": "policyId",
-                  "nameLocation": "1692:8:68",
+                  "nameLocation": "1731:8:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56287,
-                  "src": "1684:16:68",
+                  "scope": 56672,
+                  "src": "1723:16:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2207,10 +2242,10 @@ export const MasterLib = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 56244,
+                    "id": 56629,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1684:7:68",
+                    "src": "1723:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2220,69 +2255,69 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56248,
+                  "id": 56633,
                   "mutability": "mutable",
                   "name": "cancelPolicy",
-                  "nameLocation": "1730:12:68",
+                  "nameLocation": "1769:12:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56287,
-                  "src": "1702:40:68",
+                  "scope": 56672,
+                  "src": "1741:40:68",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_memory_ptr",
+                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_memory_ptr",
                     "typeString": "struct MasterLib.CancelPolicyMetadata"
                   },
                   "typeName": {
-                    "id": 56247,
+                    "id": 56632,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56246,
+                      "id": 56631,
                       "name": "CancelPolicyMetadata",
                       "nameLocations": [
-                        "1702:20:68"
+                        "1741:20:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56159,
-                      "src": "1702:20:68"
+                      "referencedDeclaration": 56544,
+                      "src": "1741:20:68"
                     },
-                    "referencedDeclaration": 56159,
-                    "src": "1702:20:68",
+                    "referencedDeclaration": 56544,
+                    "src": "1741:20:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                       "typeString": "struct MasterLib.CancelPolicyMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "1663:80:68"
+              "src": "1702:80:68"
             },
             "returnParameters": {
-              "id": 56250,
+              "id": 56635,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1753:0:68"
+              "src": "1792:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56306,
+            "id": 56691,
             "nodeType": "FunctionDefinition",
-            "src": "2084:159:68",
+            "src": "2123:159:68",
             "nodes": [],
             "body": {
-              "id": 56305,
+              "id": 56690,
               "nodeType": "Block",
-              "src": "2183:60:68",
+              "src": "2222:60:68",
               "nodes": [],
               "statements": [
                 {
                   "expression": {
-                    "id": 56303,
+                    "id": 56688,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2290,40 +2325,40 @@ export const MasterLib = {
                     "leftHandSide": {
                       "baseExpression": {
                         "expression": {
-                          "id": 56297,
+                          "id": 56682,
                           "name": "self",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56290,
-                          "src": "2193:4:68",
+                          "referencedDeclaration": 56675,
+                          "src": "2232:4:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                            "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                             "typeString": "struct MasterLib.State storage pointer"
                           }
                         },
-                        "id": 56300,
+                        "id": 56685,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "2198:19:68",
+                        "memberLocation": "2237:19:68",
                         "memberName": "showIdToPolicyIdMap",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56145,
-                        "src": "2193:24:68",
+                        "referencedDeclaration": 56530,
+                        "src": "2232:24:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                           "typeString": "mapping(uint256 => uint256)"
                         }
                       },
-                      "id": 56301,
+                      "id": 56686,
                       "indexExpression": {
-                        "id": 56299,
+                        "id": 56684,
                         "name": "showId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56292,
-                        "src": "2218:6:68",
+                        "referencedDeclaration": 56677,
+                        "src": "2257:6:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2334,7 +2369,7 @@ export const MasterLib = {
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "2193:32:68",
+                      "src": "2232:32:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2343,26 +2378,26 @@ export const MasterLib = {
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "id": 56302,
+                      "id": 56687,
                       "name": "policyId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56294,
-                      "src": "2228:8:68",
+                      "referencedDeclaration": 56679,
+                      "src": "2267:8:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "2193:43:68",
+                    "src": "2232:43:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 56304,
+                  "id": 56689,
                   "nodeType": "ExpressionStatement",
-                  "src": "2193:43:68"
+                  "src": "2232:43:68"
                 }
               ]
             },
@@ -2370,43 +2405,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "setCancelPolicyIdForShowId",
-            "nameLocation": "2093:26:68",
+            "nameLocation": "2132:26:68",
             "parameters": {
-              "id": 56295,
+              "id": 56680,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56290,
+                  "id": 56675,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "2134:4:68",
+                  "nameLocation": "2173:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56306,
-                  "src": "2120:18:68",
+                  "scope": 56691,
+                  "src": "2159:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56289,
+                    "id": 56674,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56288,
+                      "id": 56673,
                       "name": "State",
                       "nameLocations": [
-                        "2120:5:68"
+                        "2159:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "2120:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "2159:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "2120:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "2159:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -2414,13 +2449,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56292,
+                  "id": 56677,
                   "mutability": "mutable",
                   "name": "showId",
-                  "nameLocation": "2148:6:68",
+                  "nameLocation": "2187:6:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56306,
-                  "src": "2140:14:68",
+                  "scope": 56691,
+                  "src": "2179:14:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2428,10 +2463,10 @@ export const MasterLib = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 56291,
+                    "id": 56676,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2140:7:68",
+                    "src": "2179:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2441,13 +2476,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56294,
+                  "id": 56679,
                   "mutability": "mutable",
                   "name": "policyId",
-                  "nameLocation": "2164:8:68",
+                  "nameLocation": "2203:8:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56306,
-                  "src": "2156:16:68",
+                  "scope": 56691,
+                  "src": "2195:16:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2455,10 +2490,10 @@ export const MasterLib = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 56293,
+                    "id": 56678,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2156:7:68",
+                    "src": "2195:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2467,44 +2502,44 @@ export const MasterLib = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2119:54:68"
+              "src": "2158:54:68"
             },
             "returnParameters": {
-              "id": 56296,
+              "id": 56681,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2183:0:68"
+              "src": "2222:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56337,
+            "id": 56722,
             "nodeType": "FunctionDefinition",
-            "src": "2249:301:68",
+            "src": "2288:301:68",
             "nodes": [],
             "body": {
-              "id": 56336,
+              "id": 56721,
               "nodeType": "Block",
-              "src": "2396:154:68",
+              "src": "2435:154:68",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
-                    56318
+                    56703
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 56318,
+                      "id": 56703,
                       "mutability": "mutable",
                       "name": "policyId",
-                      "nameLocation": "2414:8:68",
+                      "nameLocation": "2453:8:68",
                       "nodeType": "VariableDeclaration",
-                      "scope": 56336,
-                      "src": "2406:16:68",
+                      "scope": 56721,
+                      "src": "2445:16:68",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2512,10 +2547,10 @@ export const MasterLib = {
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 56317,
+                        "id": 56702,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
-                        "src": "2406:7:68",
+                        "src": "2445:7:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2524,44 +2559,44 @@ export const MasterLib = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 56323,
+                  "id": 56708,
                   "initialValue": {
                     "baseExpression": {
                       "expression": {
-                        "id": 56319,
+                        "id": 56704,
                         "name": "self",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56309,
-                        "src": "2425:4:68",
+                        "referencedDeclaration": 56694,
+                        "src": "2464:4:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                          "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                           "typeString": "struct MasterLib.State storage pointer"
                         }
                       },
-                      "id": 56320,
+                      "id": 56705,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2430:19:68",
+                      "memberLocation": "2469:19:68",
                       "memberName": "showIdToPolicyIdMap",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 56145,
-                      "src": "2425:24:68",
+                      "referencedDeclaration": 56530,
+                      "src": "2464:24:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
                         "typeString": "mapping(uint256 => uint256)"
                       }
                     },
-                    "id": 56322,
+                    "id": 56707,
                     "indexExpression": {
-                      "id": 56321,
+                      "id": 56706,
                       "name": "showId",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56311,
-                      "src": "2450:6:68",
+                      "referencedDeclaration": 56696,
+                      "src": "2489:6:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2572,14 +2607,14 @@ export const MasterLib = {
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "2425:32:68",
+                    "src": "2464:32:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2406:51:68"
+                  "src": "2445:51:68"
                 },
                 {
                   "expression": {
@@ -2590,18 +2625,18 @@ export const MasterLib = {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 56326,
+                          "id": 56711,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 56324,
+                            "id": 56709,
                             "name": "policyId",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56318,
-                            "src": "2475:8:68",
+                            "referencedDeclaration": 56703,
+                            "src": "2514:8:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2611,21 +2646,21 @@ export const MasterLib = {
                           "operator": "==",
                           "rightExpression": {
                             "hexValue": "30",
-                            "id": 56325,
+                            "id": 56710,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "2487:1:68",
+                            "src": "2526:1:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
                             },
                             "value": "0"
                           },
-                          "src": "2475:13:68",
+                          "src": "2514:13:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
@@ -2634,40 +2669,40 @@ export const MasterLib = {
                         "falseExpression": {
                           "baseExpression": {
                             "expression": {
-                              "id": 56329,
+                              "id": 56714,
                               "name": "self",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 56309,
-                              "src": "2518:4:68",
+                              "referencedDeclaration": 56694,
+                              "src": "2557:4:68",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                                "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                                 "typeString": "struct MasterLib.State storage pointer"
                               }
                             },
-                            "id": 56330,
+                            "id": 56715,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "2523:9:68",
+                            "memberLocation": "2562:9:68",
                             "memberName": "policyMap",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 56150,
-                            "src": "2518:14:68",
+                            "referencedDeclaration": 56535,
+                            "src": "2557:14:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56159_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_CancelPolicyMetadata_$56544_storage_$",
                               "typeString": "mapping(uint256 => struct MasterLib.CancelPolicyMetadata storage ref)"
                             }
                           },
-                          "id": 56332,
+                          "id": 56717,
                           "indexExpression": {
-                            "id": 56331,
+                            "id": 56716,
                             "name": "policyId",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56318,
-                            "src": "2533:8:68",
+                            "referencedDeclaration": 56703,
+                            "src": "2572:8:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -2678,70 +2713,70 @@ export const MasterLib = {
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "2518:24:68",
+                          "src": "2557:24:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage",
+                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage",
                             "typeString": "struct MasterLib.CancelPolicyMetadata storage ref"
                           }
                         },
-                        "id": 56333,
+                        "id": 56718,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
                         "lValueRequested": false,
                         "nodeType": "Conditional",
-                        "src": "2475:67:68",
+                        "src": "2514:67:68",
                         "trueExpression": {
                           "expression": {
-                            "id": 56327,
+                            "id": 56712,
                             "name": "self",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56309,
-                            "src": "2491:4:68",
+                            "referencedDeclaration": 56694,
+                            "src": "2530:4:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                              "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                               "typeString": "struct MasterLib.State storage pointer"
                             }
                           },
-                          "id": 56328,
+                          "id": 56713,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "2496:19:68",
+                          "memberLocation": "2535:19:68",
                           "memberName": "defaultCancelPolicy",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 56153,
-                          "src": "2491:24:68",
+                          "referencedDeclaration": 56538,
+                          "src": "2530:24:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage",
+                            "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage",
                             "typeString": "struct MasterLib.CancelPolicyMetadata storage ref"
                           }
                         },
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                          "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                           "typeString": "struct MasterLib.CancelPolicyMetadata storage pointer"
                         }
                       }
                     ],
-                    "id": 56334,
+                    "id": 56719,
                     "isConstant": false,
                     "isInlineArray": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "TupleExpression",
-                    "src": "2474:69:68",
+                    "src": "2513:69:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                       "typeString": "struct MasterLib.CancelPolicyMetadata storage pointer"
                     }
                   },
-                  "functionReturnParameters": 56316,
-                  "id": 56335,
+                  "functionReturnParameters": 56701,
+                  "id": 56720,
                   "nodeType": "Return",
-                  "src": "2467:76:68"
+                  "src": "2506:76:68"
                 }
               ]
             },
@@ -2749,43 +2784,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "fetchPolicyForShowId",
-            "nameLocation": "2258:20:68",
+            "nameLocation": "2297:20:68",
             "parameters": {
-              "id": 56312,
+              "id": 56697,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56309,
+                  "id": 56694,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "2293:4:68",
+                  "nameLocation": "2332:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56337,
-                  "src": "2279:18:68",
+                  "scope": 56722,
+                  "src": "2318:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56308,
+                    "id": 56693,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56307,
+                      "id": 56692,
                       "name": "State",
                       "nameLocations": [
-                        "2279:5:68"
+                        "2318:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "2279:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "2318:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "2279:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "2318:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -2793,13 +2828,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56311,
+                  "id": 56696,
                   "mutability": "mutable",
                   "name": "showId",
-                  "nameLocation": "2307:6:68",
+                  "nameLocation": "2346:6:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56337,
-                  "src": "2299:14:68",
+                  "scope": 56722,
+                  "src": "2338:14:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2807,10 +2842,10 @@ export const MasterLib = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 56310,
+                    "id": 56695,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2299:7:68",
+                    "src": "2338:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2819,84 +2854,84 @@ export const MasterLib = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2278:36:68"
+              "src": "2317:36:68"
             },
             "returnParameters": {
-              "id": 56316,
+              "id": 56701,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56315,
+                  "id": 56700,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56337,
-                  "src": "2362:28:68",
+                  "scope": 56722,
+                  "src": "2401:28:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                    "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                     "typeString": "struct MasterLib.CancelPolicyMetadata"
                   },
                   "typeName": {
-                    "id": 56314,
+                    "id": 56699,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56313,
+                      "id": 56698,
                       "name": "CancelPolicyMetadata",
                       "nameLocations": [
-                        "2362:20:68"
+                        "2401:20:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56159,
-                      "src": "2362:20:68"
+                      "referencedDeclaration": 56544,
+                      "src": "2401:20:68"
                     },
-                    "referencedDeclaration": 56159,
-                    "src": "2362:20:68",
+                    "referencedDeclaration": 56544,
+                    "src": "2401:20:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56159_storage_ptr",
+                      "typeIdentifier": "t_struct$_CancelPolicyMetadata_$56544_storage_ptr",
                       "typeString": "struct MasterLib.CancelPolicyMetadata"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "2361:30:68"
+              "src": "2400:30:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56369,
+            "id": 56754,
             "nodeType": "FunctionDefinition",
-            "src": "2661:257:68",
+            "src": "2700:257:68",
             "nodes": [],
             "body": {
-              "id": 56368,
+              "id": 56753,
               "nodeType": "Block",
-              "src": "2753:165:68",
+              "src": "2792:165:68",
               "nodes": [],
               "statements": [
                 {
                   "assignments": [
                     null,
-                    56348
+                    56733
                   ],
                   "declarations": [
                     null,
                     {
                       "constant": false,
-                      "id": 56348,
+                      "id": 56733,
                       "mutability": "mutable",
                       "name": "currentBal",
-                      "nameLocation": "2774:10:68",
+                      "nameLocation": "2813:10:68",
                       "nodeType": "VariableDeclaration",
-                      "scope": 56368,
-                      "src": "2766:18:68",
+                      "scope": 56753,
+                      "src": "2805:18:68",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2904,10 +2939,10 @@ export const MasterLib = {
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 56347,
+                        "id": 56732,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
-                        "src": "2766:7:68",
+                        "src": "2805:7:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2916,16 +2951,16 @@ export const MasterLib = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 56354,
+                  "id": 56739,
                   "initialValue": {
                     "arguments": [
                       {
-                        "id": 56352,
+                        "id": 56737,
                         "name": "asset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56342,
-                        "src": "2819:5:68",
+                        "referencedDeclaration": 56727,
+                        "src": "2858:5:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2941,48 +2976,48 @@ export const MasterLib = {
                       ],
                       "expression": {
                         "expression": {
-                          "id": 56349,
+                          "id": 56734,
                           "name": "self",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56340,
-                          "src": "2788:4:68",
+                          "referencedDeclaration": 56725,
+                          "src": "2827:4:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                            "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                             "typeString": "struct MasterLib.State storage pointer"
                           }
                         },
-                        "id": 56350,
+                        "id": 56735,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "2793:18:68",
+                        "memberLocation": "2832:18:68",
                         "memberName": "withdrawableAssets",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56141,
-                        "src": "2788:23:68",
+                        "referencedDeclaration": 56526,
+                        "src": "2827:23:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_AddressToUintMap_$51100_storage",
                           "typeString": "struct EnumerableMap.AddressToUintMap storage ref"
                         }
                       },
-                      "id": 56351,
+                      "id": 56736,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2812:6:68",
+                      "memberLocation": "2851:6:68",
                       "memberName": "tryGet",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 51282,
-                      "src": "2788:30:68",
+                      "src": "2827:30:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_view$_t_struct$_AddressToUintMap_$51100_storage_ptr_$_t_address_$returns$_t_bool_$_t_uint256_$attached_to$_t_struct$_AddressToUintMap_$51100_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.AddressToUintMap storage pointer,address) view returns (bool,uint256)"
                       }
                     },
-                    "id": 56353,
+                    "id": 56738,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2991,7 +3026,7 @@ export const MasterLib = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2788:37:68",
+                    "src": "2827:37:68",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$_t_bool_$_t_uint256_$",
@@ -2999,22 +3034,22 @@ export const MasterLib = {
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "2763:62:68"
+                  "src": "2802:62:68"
                 },
                 {
                   "expression": {
-                    "id": 56357,
+                    "id": 56742,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "id": 56355,
+                      "id": 56740,
                       "name": "currentBal",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56348,
-                      "src": "2835:10:68",
+                      "referencedDeclaration": 56733,
+                      "src": "2874:10:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3023,49 +3058,49 @@ export const MasterLib = {
                     "nodeType": "Assignment",
                     "operator": "+=",
                     "rightHandSide": {
-                      "id": 56356,
+                      "id": 56741,
                       "name": "amount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56344,
-                      "src": "2849:6:68",
+                      "referencedDeclaration": 56729,
+                      "src": "2888:6:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "2835:20:68",
+                    "src": "2874:20:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 56358,
+                  "id": 56743,
                   "nodeType": "ExpressionStatement",
-                  "src": "2835:20:68"
+                  "src": "2874:20:68"
                 },
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 56364,
+                        "id": 56749,
                         "name": "asset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56342,
-                        "src": "2893:5:68",
+                        "referencedDeclaration": 56727,
+                        "src": "2932:5:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
                       {
-                        "id": 56365,
+                        "id": 56750,
                         "name": "currentBal",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56348,
-                        "src": "2900:10:68",
+                        "referencedDeclaration": 56733,
+                        "src": "2939:10:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3085,48 +3120,48 @@ export const MasterLib = {
                       ],
                       "expression": {
                         "expression": {
-                          "id": 56359,
+                          "id": 56744,
                           "name": "self",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56340,
-                          "src": "2865:4:68",
+                          "referencedDeclaration": 56725,
+                          "src": "2904:4:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                            "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                             "typeString": "struct MasterLib.State storage pointer"
                           }
                         },
-                        "id": 56362,
+                        "id": 56747,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "2870:18:68",
+                        "memberLocation": "2909:18:68",
                         "memberName": "withdrawableAssets",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56141,
-                        "src": "2865:23:68",
+                        "referencedDeclaration": 56526,
+                        "src": "2904:23:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_AddressToUintMap_$51100_storage",
                           "typeString": "struct EnumerableMap.AddressToUintMap storage ref"
                         }
                       },
-                      "id": 56363,
+                      "id": 56748,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "2889:3:68",
+                      "memberLocation": "2928:3:68",
                       "memberName": "set",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 51133,
-                      "src": "2865:27:68",
+                      "src": "2904:27:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_AddressToUintMap_$51100_storage_ptr_$_t_address_$_t_uint256_$returns$_t_bool_$attached_to$_t_struct$_AddressToUintMap_$51100_storage_ptr_$",
                         "typeString": "function (struct EnumerableMap.AddressToUintMap storage pointer,address,uint256) returns (bool)"
                       }
                     },
-                    "id": 56366,
+                    "id": 56751,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3135,16 +3170,16 @@ export const MasterLib = {
                     "nameLocations": [],
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2865:46:68",
+                    "src": "2904:46:68",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56367,
+                  "id": 56752,
                   "nodeType": "ExpressionStatement",
-                  "src": "2865:46:68"
+                  "src": "2904:46:68"
                 }
               ]
             },
@@ -3152,43 +3187,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "addAssetsForWithdrawal",
-            "nameLocation": "2670:22:68",
+            "nameLocation": "2709:22:68",
             "parameters": {
-              "id": 56345,
+              "id": 56730,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56340,
+                  "id": 56725,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "2707:4:68",
+                  "nameLocation": "2746:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56369,
-                  "src": "2693:18:68",
+                  "scope": 56754,
+                  "src": "2732:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56339,
+                    "id": 56724,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56338,
+                      "id": 56723,
                       "name": "State",
                       "nameLocations": [
-                        "2693:5:68"
+                        "2732:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "2693:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "2732:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "2693:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "2732:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -3196,13 +3231,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56342,
+                  "id": 56727,
                   "mutability": "mutable",
                   "name": "asset",
-                  "nameLocation": "2721:5:68",
+                  "nameLocation": "2760:5:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56369,
-                  "src": "2713:13:68",
+                  "scope": 56754,
+                  "src": "2752:13:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3210,10 +3245,10 @@ export const MasterLib = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 56341,
+                    "id": 56726,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2713:7:68",
+                    "src": "2752:7:68",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3224,13 +3259,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56344,
+                  "id": 56729,
                   "mutability": "mutable",
                   "name": "amount",
-                  "nameLocation": "2736:6:68",
+                  "nameLocation": "2775:6:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56369,
-                  "src": "2728:14:68",
+                  "scope": 56754,
+                  "src": "2767:14:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3238,10 +3273,10 @@ export const MasterLib = {
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 56343,
+                    "id": 56728,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2728:7:68",
+                    "src": "2767:7:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -3250,52 +3285,52 @@ export const MasterLib = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2692:51:68"
+              "src": "2731:51:68"
             },
             "returnParameters": {
-              "id": 56346,
+              "id": 56731,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2753:0:68"
+              "src": "2792:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56419,
+            "id": 56804,
             "nodeType": "FunctionDefinition",
-            "src": "2924:402:68",
+            "src": "2963:402:68",
             "nodes": [],
             "body": {
-              "id": 56418,
+              "id": 56803,
               "nodeType": "Block",
-              "src": "3022:304:68",
+              "src": "3061:304:68",
               "nodes": [],
               "statements": [
                 {
                   "body": {
-                    "id": 56416,
+                    "id": 56801,
                     "nodeType": "Block",
-                    "src": "3076:244:68",
+                    "src": "3115:244:68",
                     "statements": [
                       {
                         "assignments": [
                           null,
-                          56392
+                          56777
                         ],
                         "declarations": [
                           null,
                           {
                             "constant": false,
-                            "id": 56392,
+                            "id": 56777,
                             "mutability": "mutable",
                             "name": "withdrawableTokens",
-                            "nameLocation": "3101:18:68",
+                            "nameLocation": "3140:18:68",
                             "nodeType": "VariableDeclaration",
-                            "scope": 56416,
-                            "src": "3093:26:68",
+                            "scope": 56801,
+                            "src": "3132:26:68",
                             "stateVariable": false,
                             "storageLocation": "default",
                             "typeDescriptions": {
@@ -3303,10 +3338,10 @@ export const MasterLib = {
                               "typeString": "uint256"
                             },
                             "typeName": {
-                              "id": 56391,
+                              "id": 56776,
                               "name": "uint256",
                               "nodeType": "ElementaryTypeName",
-                              "src": "3093:7:68",
+                              "src": "3132:7:68",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -3315,30 +3350,30 @@ export const MasterLib = {
                             "visibility": "internal"
                           }
                         ],
-                        "id": 56400,
+                        "id": 56785,
                         "initialValue": {
                           "arguments": [
                             {
                               "baseExpression": {
-                                "id": 56396,
+                                "id": 56781,
                                 "name": "assets",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56375,
-                                "src": "3154:6:68",
+                                "referencedDeclaration": 56760,
+                                "src": "3193:6:68",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                                   "typeString": "address[] memory"
                                 }
                               },
-                              "id": 56398,
+                              "id": 56783,
                               "indexExpression": {
-                                "id": 56397,
+                                "id": 56782,
                                 "name": "i",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56381,
-                                "src": "3161:1:68",
+                                "referencedDeclaration": 56766,
+                                "src": "3200:1:68",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -3349,7 +3384,7 @@ export const MasterLib = {
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "3154:9:68",
+                              "src": "3193:9:68",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
                                 "typeString": "address"
@@ -3365,48 +3400,48 @@ export const MasterLib = {
                             ],
                             "expression": {
                               "expression": {
-                                "id": 56393,
+                                "id": 56778,
                                 "name": "self",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56372,
-                                "src": "3123:4:68",
+                                "referencedDeclaration": 56757,
+                                "src": "3162:4:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                                  "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                                   "typeString": "struct MasterLib.State storage pointer"
                                 }
                               },
-                              "id": 56394,
+                              "id": 56779,
                               "isConstant": false,
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": false,
-                              "memberLocation": "3128:18:68",
+                              "memberLocation": "3167:18:68",
                               "memberName": "withdrawableAssets",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 56141,
-                              "src": "3123:23:68",
+                              "referencedDeclaration": 56526,
+                              "src": "3162:23:68",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_struct$_AddressToUintMap_$51100_storage",
                                 "typeString": "struct EnumerableMap.AddressToUintMap storage ref"
                               }
                             },
-                            "id": 56395,
+                            "id": 56780,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "3147:6:68",
+                            "memberLocation": "3186:6:68",
                             "memberName": "tryGet",
                             "nodeType": "MemberAccess",
                             "referencedDeclaration": 51282,
-                            "src": "3123:30:68",
+                            "src": "3162:30:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_internal_view$_t_struct$_AddressToUintMap_$51100_storage_ptr_$_t_address_$returns$_t_bool_$_t_uint256_$attached_to$_t_struct$_AddressToUintMap_$51100_storage_ptr_$",
                               "typeString": "function (struct EnumerableMap.AddressToUintMap storage pointer,address) view returns (bool,uint256)"
                             }
                           },
-                          "id": 56399,
+                          "id": 56784,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3415,7 +3450,7 @@ export const MasterLib = {
                           "nameLocations": [],
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "3123:41:68",
+                          "src": "3162:41:68",
                           "tryCall": false,
                           "typeDescriptions": {
                             "typeIdentifier": "t_tuple$_t_bool_$_t_uint256_$",
@@ -3423,7 +3458,7 @@ export const MasterLib = {
                           }
                         },
                         "nodeType": "VariableDeclarationStatement",
-                        "src": "3090:74:68"
+                        "src": "3129:74:68"
                       },
                       {
                         "condition": {
@@ -3431,18 +3466,18 @@ export const MasterLib = {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           },
-                          "id": 56403,
+                          "id": 56788,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
-                            "id": 56401,
+                            "id": 56786,
                             "name": "withdrawableTokens",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56392,
-                            "src": "3182:18:68",
+                            "referencedDeclaration": 56777,
+                            "src": "3221:18:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -3452,58 +3487,58 @@ export const MasterLib = {
                           "operator": ">",
                           "rightExpression": {
                             "hexValue": "30",
-                            "id": 56402,
+                            "id": 56787,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "kind": "number",
                             "lValueRequested": false,
                             "nodeType": "Literal",
-                            "src": "3203:1:68",
+                            "src": "3242:1:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_rational_0_by_1",
                               "typeString": "int_const 0"
                             },
                             "value": "0"
                           },
-                          "src": "3182:22:68",
+                          "src": "3221:22:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "id": 56415,
+                        "id": 56800,
                         "nodeType": "IfStatement",
-                        "src": "3178:132:68",
+                        "src": "3217:132:68",
                         "trueBody": {
-                          "id": 56414,
+                          "id": 56799,
                           "nodeType": "Block",
-                          "src": "3206:104:68",
+                          "src": "3245:104:68",
                           "statements": [
                             {
                               "expression": {
                                 "arguments": [
                                   {
                                     "baseExpression": {
-                                      "id": 56407,
+                                      "id": 56792,
                                       "name": "assets",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 56375,
-                                      "src": "3253:6:68",
+                                      "referencedDeclaration": 56760,
+                                      "src": "3292:6:68",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                                         "typeString": "address[] memory"
                                       }
                                     },
-                                    "id": 56409,
+                                    "id": 56794,
                                     "indexExpression": {
-                                      "id": 56408,
+                                      "id": 56793,
                                       "name": "i",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 56381,
-                                      "src": "3260:1:68",
+                                      "referencedDeclaration": 56766,
+                                      "src": "3299:1:68",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
                                         "typeString": "uint256"
@@ -3514,31 +3549,31 @@ export const MasterLib = {
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "nodeType": "IndexAccess",
-                                    "src": "3253:9:68",
+                                    "src": "3292:9:68",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
                                     }
                                   },
                                   {
-                                    "id": 56410,
+                                    "id": 56795,
                                     "name": "benefactor",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 56377,
-                                    "src": "3264:10:68",
+                                    "referencedDeclaration": 56762,
+                                    "src": "3303:10:68",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_address",
                                       "typeString": "address"
                                     }
                                   },
                                   {
-                                    "id": 56411,
+                                    "id": 56796,
                                     "name": "withdrawableTokens",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 56392,
-                                    "src": "3276:18:68",
+                                    "referencedDeclaration": 56777,
+                                    "src": "3315:18:68",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_uint256",
                                       "typeString": "uint256"
@@ -3561,33 +3596,33 @@ export const MasterLib = {
                                     }
                                   ],
                                   "expression": {
-                                    "id": 56404,
+                                    "id": 56789,
                                     "name": "SafeTransferLib",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
                                     "referencedDeclaration": 55229,
-                                    "src": "3224:15:68",
+                                    "src": "3263:15:68",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_type$_t_contract$_SafeTransferLib_$55229_$",
                                       "typeString": "type(library SafeTransferLib)"
                                     }
                                   },
-                                  "id": 56406,
+                                  "id": 56791,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "3240:12:68",
+                                  "memberLocation": "3279:12:68",
                                   "memberName": "safeTransfer",
                                   "nodeType": "MemberAccess",
                                   "referencedDeclaration": 55076,
-                                  "src": "3224:28:68",
+                                  "src": "3263:28:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
                                     "typeString": "function (address,address,uint256)"
                                   }
                                 },
-                                "id": 56412,
+                                "id": 56797,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -3596,16 +3631,16 @@ export const MasterLib = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "3224:71:68",
+                                "src": "3263:71:68",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_tuple$__$",
                                   "typeString": "tuple()"
                                 }
                               },
-                              "id": 56413,
+                              "id": 56798,
                               "nodeType": "ExpressionStatement",
-                              "src": "3224:71:68"
+                              "src": "3263:71:68"
                             }
                           ]
                         }
@@ -3617,18 +3652,18 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56387,
+                    "id": 56772,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 56384,
+                      "id": 56769,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56381,
-                      "src": "3052:1:68",
+                      "referencedDeclaration": 56766,
+                      "src": "3091:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3638,52 +3673,52 @@ export const MasterLib = {
                     "operator": "<",
                     "rightExpression": {
                       "expression": {
-                        "id": 56385,
+                        "id": 56770,
                         "name": "assets",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56375,
-                        "src": "3056:6:68",
+                        "referencedDeclaration": 56760,
+                        "src": "3095:6:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
                           "typeString": "address[] memory"
                         }
                       },
-                      "id": 56386,
+                      "id": 56771,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3063:6:68",
+                      "memberLocation": "3102:6:68",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "3056:13:68",
+                      "src": "3095:13:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "3052:17:68",
+                    "src": "3091:17:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56417,
+                  "id": 56802,
                   "initializationExpression": {
                     "assignments": [
-                      56381
+                      56766
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 56381,
+                        "id": 56766,
                         "mutability": "mutable",
                         "name": "i",
-                        "nameLocation": "3045:1:68",
+                        "nameLocation": "3084:1:68",
                         "nodeType": "VariableDeclaration",
-                        "scope": 56417,
-                        "src": "3037:9:68",
+                        "scope": 56802,
+                        "src": "3076:9:68",
                         "stateVariable": false,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -3691,10 +3726,10 @@ export const MasterLib = {
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 56380,
+                          "id": 56765,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "3037:7:68",
+                          "src": "3076:7:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -3703,17 +3738,17 @@ export const MasterLib = {
                         "visibility": "internal"
                       }
                     ],
-                    "id": 56383,
+                    "id": 56768,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 56382,
+                      "id": 56767,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "3049:1:68",
+                      "src": "3088:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
@@ -3721,12 +3756,12 @@ export const MasterLib = {
                       "value": "0"
                     },
                     "nodeType": "VariableDeclarationStatement",
-                    "src": "3037:13:68"
+                    "src": "3076:13:68"
                   },
                   "isSimpleCounterLoop": true,
                   "loopExpression": {
                     "expression": {
-                      "id": 56389,
+                      "id": 56774,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3734,14 +3769,14 @@ export const MasterLib = {
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": false,
-                      "src": "3071:3:68",
+                      "src": "3110:3:68",
                       "subExpression": {
-                        "id": 56388,
+                        "id": 56773,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56381,
-                        "src": "3071:1:68",
+                        "referencedDeclaration": 56766,
+                        "src": "3110:1:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -3752,12 +3787,12 @@ export const MasterLib = {
                         "typeString": "uint256"
                       }
                     },
-                    "id": 56390,
+                    "id": 56775,
                     "nodeType": "ExpressionStatement",
-                    "src": "3071:3:68"
+                    "src": "3110:3:68"
                   },
                   "nodeType": "ForStatement",
-                  "src": "3032:288:68"
+                  "src": "3071:288:68"
                 }
               ]
             },
@@ -3765,43 +3800,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "withdrawAssets",
-            "nameLocation": "2933:14:68",
+            "nameLocation": "2972:14:68",
             "parameters": {
-              "id": 56378,
+              "id": 56763,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56372,
+                  "id": 56757,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "2962:4:68",
+                  "nameLocation": "3001:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56419,
-                  "src": "2948:18:68",
+                  "scope": 56804,
+                  "src": "2987:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56371,
+                    "id": 56756,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56370,
+                      "id": 56755,
                       "name": "State",
                       "nameLocations": [
-                        "2948:5:68"
+                        "2987:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "2948:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "2987:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "2948:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "2987:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -3809,13 +3844,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56375,
+                  "id": 56760,
                   "mutability": "mutable",
                   "name": "assets",
-                  "nameLocation": "2985:6:68",
+                  "nameLocation": "3024:6:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56419,
-                  "src": "2968:23:68",
+                  "scope": 56804,
+                  "src": "3007:23:68",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -3824,19 +3859,19 @@ export const MasterLib = {
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 56373,
+                      "id": 56758,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
-                      "src": "2968:7:68",
+                      "src": "3007:7:68",
                       "stateMutability": "nonpayable",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "id": 56374,
+                    "id": 56759,
                     "nodeType": "ArrayTypeName",
-                    "src": "2968:9:68",
+                    "src": "3007:9:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
                       "typeString": "address[]"
@@ -3846,13 +3881,13 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56377,
+                  "id": 56762,
                   "mutability": "mutable",
                   "name": "benefactor",
-                  "nameLocation": "3001:10:68",
+                  "nameLocation": "3040:10:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56419,
-                  "src": "2993:18:68",
+                  "scope": 56804,
+                  "src": "3032:18:68",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3860,10 +3895,10 @@ export const MasterLib = {
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 56376,
+                    "id": 56761,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2993:7:68",
+                    "src": "3032:7:68",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -3873,28 +3908,28 @@ export const MasterLib = {
                   "visibility": "internal"
                 }
               ],
-              "src": "2947:65:68"
+              "src": "2986:65:68"
             },
             "returnParameters": {
-              "id": 56379,
+              "id": 56764,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3022:0:68"
+              "src": "3061:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 56522,
+            "id": 56921,
             "nodeType": "FunctionDefinition",
-            "src": "3332:957:68",
+            "src": "3435:1061:68",
             "nodes": [],
             "body": {
-              "id": 56521,
+              "id": 56920,
               "nodeType": "Block",
-              "src": "3442:847:68",
+              "src": "3540:956:68",
               "nodes": [],
               "statements": [
                 {
@@ -3903,7 +3938,7 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56433,
+                    "id": 56818,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3912,56 +3947,56 @@ export const MasterLib = {
                       "expression": {
                         "expression": {
                           "expression": {
-                            "id": 56428,
+                            "id": 56813,
                             "name": "purchaseData",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56425,
-                            "src": "3456:12:68",
+                            "referencedDeclaration": 56810,
+                            "src": "3554:12:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                              "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                               "typeString": "struct PurchaseLib.PurchaseData memory"
                             }
                           },
-                          "id": 56429,
+                          "id": 56814,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "3469:10:68",
+                          "memberLocation": "3567:10:68",
                           "memberName": "ticketData",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 56530,
-                          "src": "3456:23:68",
+                          "referencedDeclaration": 56951,
+                          "src": "3554:23:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                            "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                             "typeString": "struct TicketLib.State memory"
                           }
                         },
-                        "id": 56430,
+                        "id": 56815,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "3480:5:68",
+                        "memberLocation": "3578:5:68",
                         "memberName": "seats",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56553,
-                        "src": "3456:29:68",
+                        "referencedDeclaration": 57001,
+                        "src": "3554:29:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_SeatData_$56559_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_SeatData_$57007_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct TicketLib.SeatData memory[] memory"
                         }
                       },
-                      "id": 56431,
+                      "id": 56816,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3486:6:68",
+                      "memberLocation": "3584:6:68",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "3456:36:68",
+                      "src": "3554:36:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3971,46 +4006,46 @@ export const MasterLib = {
                     "operator": "==",
                     "rightExpression": {
                       "hexValue": "30",
-                      "id": 56432,
+                      "id": 56817,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "3496:1:68",
+                      "src": "3594:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
                       },
                       "value": "0"
                     },
-                    "src": "3456:41:68",
+                    "src": "3554:41:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56437,
+                  "id": 56822,
                   "nodeType": "IfStatement",
-                  "src": "3452:66:68",
+                  "src": "3550:66:68",
                   "trueBody": {
                     "errorCall": {
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 56434,
+                        "id": 56819,
                         "name": "ZeroLength",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56719,
-                        "src": "3506:10:68",
+                        "referencedDeclaration": 57298,
+                        "src": "3604:10:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$_t_error_$",
                           "typeString": "function () pure returns (error)"
                         }
                       },
-                      "id": 56435,
+                      "id": 56820,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4019,16 +4054,16 @@ export const MasterLib = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "3506:12:68",
+                      "src": "3604:12:68",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_error",
                         "typeString": "error"
                       }
                     },
-                    "id": 56436,
+                    "id": 56821,
                     "nodeType": "RevertStatement",
-                    "src": "3499:19:68"
+                    "src": "3597:19:68"
                   }
                 },
                 {
@@ -4037,33 +4072,33 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56445,
+                    "id": 56831,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 56438,
+                        "id": 56823,
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": -4,
-                        "src": "3532:5:68",
+                        "src": "3630:5:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
                           "typeString": "block"
                         }
                       },
-                      "id": 56439,
+                      "id": 56824,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3538:9:68",
+                      "memberLocation": "3636:9:68",
                       "memberName": "timestamp",
                       "nodeType": "MemberAccess",
-                      "src": "3532:15:68",
+                      "src": "3630:15:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -4076,34 +4111,50 @@ export const MasterLib = {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       },
-                      "id": 56444,
+                      "id": 56830,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "expression": {
-                          "id": 56440,
-                          "name": "purchaseData",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 56425,
-                          "src": "3550:12:68",
+                          "expression": {
+                            "id": 56825,
+                            "name": "purchaseData",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 56810,
+                            "src": "3648:12:68",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
+                              "typeString": "struct PurchaseLib.PurchaseData memory"
+                            }
+                          },
+                          "id": 56826,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "3661:10:68",
+                          "memberName": "ticketData",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 56951,
+                          "src": "3648:23:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
-                            "typeString": "struct PurchaseLib.PurchaseData memory"
+                            "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
+                            "typeString": "struct TicketLib.State memory"
                           }
                         },
-                        "id": 56441,
+                        "id": 56827,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "3563:9:68",
-                        "memberName": "timestamp",
+                        "memberLocation": "3672:15:68",
+                        "memberName": "originTimestamp",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56532,
-                        "src": "3550:22:68",
+                        "referencedDeclaration": 56995,
+                        "src": "3648:39:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4113,64 +4164,64 @@ export const MasterLib = {
                       "operator": "+",
                       "rightExpression": {
                         "expression": {
-                          "id": 56442,
+                          "id": 56828,
                           "name": "self",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56422,
-                          "src": "3575:4:68",
+                          "referencedDeclaration": 56807,
+                          "src": "3690:4:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                            "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                             "typeString": "struct MasterLib.State storage pointer"
                           }
                         },
-                        "id": 56443,
+                        "id": 56829,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "3580:3:68",
+                        "memberLocation": "3695:3:68",
                         "memberName": "ttl",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56130,
-                        "src": "3575:8:68",
+                        "referencedDeclaration": 56513,
+                        "src": "3690:8:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint96",
                           "typeString": "uint96"
                         }
                       },
-                      "src": "3550:33:68",
+                      "src": "3648:50:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "3532:51:68",
+                    "src": "3630:68:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56449,
+                  "id": 56835,
                   "nodeType": "IfStatement",
-                  "src": "3528:83:68",
+                  "src": "3626:100:68",
                   "trueBody": {
                     "errorCall": {
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 56446,
+                        "id": 56832,
                         "name": "StalePurchaseData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56713,
-                        "src": "3592:17:68",
+                        "referencedDeclaration": 57292,
+                        "src": "3707:17:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$_t_error_$",
                           "typeString": "function () pure returns (error)"
                         }
                       },
-                      "id": 56447,
+                      "id": 56833,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4179,16 +4230,16 @@ export const MasterLib = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "3592:19:68",
+                      "src": "3707:19:68",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_error",
                         "typeString": "error"
                       }
                     },
-                    "id": 56448,
+                    "id": 56834,
                     "nodeType": "RevertStatement",
-                    "src": "3585:26:68"
+                    "src": "3700:26:68"
                   }
                 },
                 {
@@ -4197,34 +4248,34 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56454,
+                    "id": 56844,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "expression": {
-                        "id": 56450,
+                        "id": 56836,
                         "name": "purchaseData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56425,
-                        "src": "3625:12:68",
+                        "referencedDeclaration": 56810,
+                        "src": "3740:12:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                          "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                           "typeString": "struct PurchaseLib.PurchaseData memory"
                         }
                       },
-                      "id": 56451,
+                      "id": 56837,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3638:5:68",
+                      "memberLocation": "3753:5:68",
                       "memberName": "nonce",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 56534,
-                      "src": "3625:18:68",
+                      "referencedDeclaration": 56953,
+                      "src": "3740:18:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -4233,59 +4284,116 @@ export const MasterLib = {
                     "nodeType": "BinaryOperation",
                     "operator": "!=",
                     "rightExpression": {
-                      "expression": {
-                        "id": 56452,
-                        "name": "self",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 56422,
-                        "src": "3647:4:68",
+                      "baseExpression": {
+                        "expression": {
+                          "id": 56838,
+                          "name": "self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 56807,
+                          "src": "3762:4:68",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
+                            "typeString": "struct MasterLib.State storage pointer"
+                          }
+                        },
+                        "id": 56839,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "3767:12:68",
+                        "memberName": "userNonceMap",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 56519,
+                        "src": "3762:17:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
-                          "typeString": "struct MasterLib.State storage pointer"
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 56453,
+                      "id": 56843,
+                      "indexExpression": {
+                        "expression": {
+                          "expression": {
+                            "id": 56840,
+                            "name": "purchaseData",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 56810,
+                            "src": "3780:12:68",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
+                              "typeString": "struct PurchaseLib.PurchaseData memory"
+                            }
+                          },
+                          "id": 56841,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "3793:10:68",
+                          "memberName": "ticketData",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 56951,
+                          "src": "3780:23:68",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
+                            "typeString": "struct TicketLib.State memory"
+                          }
+                        },
+                        "id": 56842,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "3804:5:68",
+                        "memberName": "owner",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 56991,
+                        "src": "3780:29:68",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3652:5:68",
-                      "memberName": "nonce",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 56134,
-                      "src": "3647:10:68",
+                      "nodeType": "IndexAccess",
+                      "src": "3762:48:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "3625:32:68",
+                    "src": "3740:70:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56458,
+                  "id": 56848,
                   "nodeType": "IfStatement",
-                  "src": "3621:62:68",
+                  "src": "3736:100:68",
                   "trueBody": {
                     "errorCall": {
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 56455,
+                        "id": 56845,
                         "name": "AlreadyUsedData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56715,
-                        "src": "3666:15:68",
+                        "referencedDeclaration": 57294,
+                        "src": "3819:15:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$_t_error_$",
                           "typeString": "function () pure returns (error)"
                         }
                       },
-                      "id": 56456,
+                      "id": 56846,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4294,32 +4402,32 @@ export const MasterLib = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "3666:17:68",
+                      "src": "3819:17:68",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_error",
                         "typeString": "error"
                       }
                     },
-                    "id": 56457,
+                    "id": 56847,
                     "nodeType": "RevertStatement",
-                    "src": "3659:24:68"
+                    "src": "3812:24:68"
                   }
                 },
                 {
                   "assignments": [
-                    56460
+                    56850
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 56460,
+                      "id": 56850,
                       "mutability": "mutable",
                       "name": "localSum",
-                      "nameLocation": "3837:8:68",
+                      "nameLocation": "3984:8:68",
                       "nodeType": "VariableDeclaration",
-                      "scope": 56521,
-                      "src": "3829:16:68",
+                      "scope": 56920,
+                      "src": "3976:16:68",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -4327,10 +4435,10 @@ export const MasterLib = {
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 56459,
+                        "id": 56849,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
-                        "src": "3829:7:68",
+                        "src": "3976:7:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4339,64 +4447,64 @@ export const MasterLib = {
                       "visibility": "internal"
                     }
                   ],
-                  "id": 56467,
+                  "id": 56857,
                   "initialValue": {
                     "expression": {
                       "baseExpression": {
                         "expression": {
                           "expression": {
-                            "id": 56461,
+                            "id": 56851,
                             "name": "purchaseData",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56425,
-                            "src": "3848:12:68",
+                            "referencedDeclaration": 56810,
+                            "src": "3995:12:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                              "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                               "typeString": "struct PurchaseLib.PurchaseData memory"
                             }
                           },
-                          "id": 56462,
+                          "id": 56852,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "3861:10:68",
+                          "memberLocation": "4008:10:68",
                           "memberName": "ticketData",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 56530,
-                          "src": "3848:23:68",
+                          "referencedDeclaration": 56951,
+                          "src": "3995:23:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                            "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                             "typeString": "struct TicketLib.State memory"
                           }
                         },
-                        "id": 56463,
+                        "id": 56853,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "3872:5:68",
+                        "memberLocation": "4019:5:68",
                         "memberName": "seats",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56553,
-                        "src": "3848:29:68",
+                        "referencedDeclaration": 57001,
+                        "src": "3995:29:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_SeatData_$56559_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_SeatData_$57007_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct TicketLib.SeatData memory[] memory"
                         }
                       },
-                      "id": 56465,
+                      "id": 56855,
                       "indexExpression": {
                         "hexValue": "30",
-                        "id": 56464,
+                        "id": 56854,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "3878:1:68",
+                        "src": "4025:1:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_0_by_1",
                           "typeString": "int_const 0"
@@ -4408,43 +4516,43 @@ export const MasterLib = {
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
-                      "src": "3848:32:68",
+                      "src": "3995:32:68",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_SeatData_$56559_memory_ptr",
+                        "typeIdentifier": "t_struct$_SeatData_$57007_memory_ptr",
                         "typeString": "struct TicketLib.SeatData memory"
                       }
                     },
-                    "id": 56466,
+                    "id": 56856,
                     "isConstant": false,
                     "isLValue": true,
                     "isPure": false,
                     "lValueRequested": false,
-                    "memberLocation": "3881:5:68",
+                    "memberLocation": "4028:5:68",
                     "memberName": "price",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 56558,
-                    "src": "3848:38:68",
+                    "referencedDeclaration": 57006,
+                    "src": "3995:38:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_uint128",
-                      "typeString": "uint128"
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "3829:57:68"
+                  "src": "3976:57:68"
                 },
                 {
                   "body": {
-                    "id": 56510,
+                    "id": 56900,
                     "nodeType": "Block",
-                    "src": "3963:240:68",
+                    "src": "4110:240:68",
                     "statements": [
                       {
                         "condition": {
                           "commonType": {
-                            "typeIdentifier": "t_uint128",
-                            "typeString": "uint128"
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
                           },
-                          "id": 56495,
+                          "id": 56885,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4454,55 +4562,55 @@ export const MasterLib = {
                               "baseExpression": {
                                 "expression": {
                                   "expression": {
-                                    "id": 56481,
+                                    "id": 56871,
                                     "name": "purchaseData",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 56425,
-                                    "src": "3981:12:68",
+                                    "referencedDeclaration": 56810,
+                                    "src": "4128:12:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                                      "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                                       "typeString": "struct PurchaseLib.PurchaseData memory"
                                     }
                                   },
-                                  "id": 56482,
+                                  "id": 56872,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "3994:10:68",
+                                  "memberLocation": "4141:10:68",
                                   "memberName": "ticketData",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56530,
-                                  "src": "3981:23:68",
+                                  "referencedDeclaration": 56951,
+                                  "src": "4128:23:68",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                                    "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                                     "typeString": "struct TicketLib.State memory"
                                   }
                                 },
-                                "id": 56483,
+                                "id": 56873,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
-                                "memberLocation": "4005:5:68",
+                                "memberLocation": "4152:5:68",
                                 "memberName": "seats",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 56553,
-                                "src": "3981:29:68",
+                                "referencedDeclaration": 57001,
+                                "src": "4128:29:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_SeatData_$56559_memory_ptr_$dyn_memory_ptr",
+                                  "typeIdentifier": "t_array$_t_struct$_SeatData_$57007_memory_ptr_$dyn_memory_ptr",
                                   "typeString": "struct TicketLib.SeatData memory[] memory"
                                 }
                               },
-                              "id": 56485,
+                              "id": 56875,
                               "indexExpression": {
-                                "id": 56484,
+                                "id": 56874,
                                 "name": "i",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56469,
-                                "src": "4011:1:68",
+                                "referencedDeclaration": 56859,
+                                "src": "4158:1:68",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -4513,25 +4621,25 @@ export const MasterLib = {
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "3981:32:68",
+                              "src": "4128:32:68",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_SeatData_$56559_memory_ptr",
+                                "typeIdentifier": "t_struct$_SeatData_$57007_memory_ptr",
                                 "typeString": "struct TicketLib.SeatData memory"
                               }
                             },
-                            "id": 56486,
+                            "id": 56876,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "4014:6:68",
+                            "memberLocation": "4161:6:68",
                             "memberName": "seatId",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 56556,
-                            "src": "3981:39:68",
+                            "referencedDeclaration": 57004,
+                            "src": "4128:39:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_uint128",
-                              "typeString": "uint128"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
                           "nodeType": "BinaryOperation",
@@ -4541,65 +4649,65 @@ export const MasterLib = {
                               "baseExpression": {
                                 "expression": {
                                   "expression": {
-                                    "id": 56487,
+                                    "id": 56877,
                                     "name": "purchaseData",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 56425,
-                                    "src": "4024:12:68",
+                                    "referencedDeclaration": 56810,
+                                    "src": "4171:12:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                                      "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                                       "typeString": "struct PurchaseLib.PurchaseData memory"
                                     }
                                   },
-                                  "id": 56488,
+                                  "id": 56878,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "4037:10:68",
+                                  "memberLocation": "4184:10:68",
                                   "memberName": "ticketData",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56530,
-                                  "src": "4024:23:68",
+                                  "referencedDeclaration": 56951,
+                                  "src": "4171:23:68",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                                    "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                                     "typeString": "struct TicketLib.State memory"
                                   }
                                 },
-                                "id": 56489,
+                                "id": 56879,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
-                                "memberLocation": "4048:5:68",
+                                "memberLocation": "4195:5:68",
                                 "memberName": "seats",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 56553,
-                                "src": "4024:29:68",
+                                "referencedDeclaration": 57001,
+                                "src": "4171:29:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_SeatData_$56559_memory_ptr_$dyn_memory_ptr",
+                                  "typeIdentifier": "t_array$_t_struct$_SeatData_$57007_memory_ptr_$dyn_memory_ptr",
                                   "typeString": "struct TicketLib.SeatData memory[] memory"
                                 }
                               },
-                              "id": 56493,
+                              "id": 56883,
                               "indexExpression": {
                                 "commonType": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 },
-                                "id": 56492,
+                                "id": 56882,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
                                 "lValueRequested": false,
                                 "leftExpression": {
-                                  "id": 56490,
+                                  "id": 56880,
                                   "name": "i",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 56469,
-                                  "src": "4054:1:68",
+                                  "referencedDeclaration": 56859,
+                                  "src": "4201:1:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_uint256",
                                     "typeString": "uint256"
@@ -4609,21 +4717,21 @@ export const MasterLib = {
                                 "operator": "-",
                                 "rightExpression": {
                                   "hexValue": "31",
-                                  "id": 56491,
+                                  "id": 56881,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
                                   "kind": "number",
                                   "lValueRequested": false,
                                   "nodeType": "Literal",
-                                  "src": "4058:1:68",
+                                  "src": "4205:1:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_rational_1_by_1",
                                     "typeString": "int_const 1"
                                   },
                                   "value": "1"
                                 },
-                                "src": "4054:5:68",
+                                "src": "4201:5:68",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -4634,58 +4742,58 @@ export const MasterLib = {
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "4024:36:68",
+                              "src": "4171:36:68",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_SeatData_$56559_memory_ptr",
+                                "typeIdentifier": "t_struct$_SeatData_$57007_memory_ptr",
                                 "typeString": "struct TicketLib.SeatData memory"
                               }
                             },
-                            "id": 56494,
+                            "id": 56884,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "4061:6:68",
+                            "memberLocation": "4208:6:68",
                             "memberName": "seatId",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 56556,
-                            "src": "4024:43:68",
+                            "referencedDeclaration": 57004,
+                            "src": "4171:43:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_uint128",
-                              "typeString": "uint128"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
-                          "src": "3981:86:68",
+                          "src": "4128:86:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_bool",
                             "typeString": "bool"
                           }
                         },
-                        "id": 56500,
+                        "id": 56890,
                         "nodeType": "IfStatement",
-                        "src": "3977:152:68",
+                        "src": "4124:152:68",
                         "trueBody": {
-                          "id": 56499,
+                          "id": 56889,
                           "nodeType": "Block",
-                          "src": "4069:60:68",
+                          "src": "4216:60:68",
                           "statements": [
                             {
                               "errorCall": {
                                 "arguments": [],
                                 "expression": {
                                   "argumentTypes": [],
-                                  "id": 56496,
+                                  "id": 56886,
                                   "name": "UnsortedSeatsInput",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 56733,
-                                  "src": "4094:18:68",
+                                  "referencedDeclaration": 57312,
+                                  "src": "4241:18:68",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_error_pure$__$returns$_t_error_$",
                                     "typeString": "function () pure returns (error)"
                                   }
                                 },
-                                "id": 56497,
+                                "id": 56887,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -4694,34 +4802,34 @@ export const MasterLib = {
                                 "nameLocations": [],
                                 "names": [],
                                 "nodeType": "FunctionCall",
-                                "src": "4094:20:68",
+                                "src": "4241:20:68",
                                 "tryCall": false,
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_error",
                                   "typeString": "error"
                                 }
                               },
-                              "id": 56498,
+                              "id": 56888,
                               "nodeType": "RevertStatement",
-                              "src": "4087:27:68"
+                              "src": "4234:27:68"
                             }
                           ]
                         }
                       },
                       {
                         "expression": {
-                          "id": 56508,
+                          "id": 56898,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
-                            "id": 56501,
+                            "id": 56891,
                             "name": "localSum",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56460,
-                            "src": "4142:8:68",
+                            "referencedDeclaration": 56850,
+                            "src": "4289:8:68",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -4734,55 +4842,55 @@ export const MasterLib = {
                               "baseExpression": {
                                 "expression": {
                                   "expression": {
-                                    "id": 56502,
+                                    "id": 56892,
                                     "name": "purchaseData",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 56425,
-                                    "src": "4154:12:68",
+                                    "referencedDeclaration": 56810,
+                                    "src": "4301:12:68",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                                      "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                                       "typeString": "struct PurchaseLib.PurchaseData memory"
                                     }
                                   },
-                                  "id": 56503,
+                                  "id": 56893,
                                   "isConstant": false,
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "memberLocation": "4167:10:68",
+                                  "memberLocation": "4314:10:68",
                                   "memberName": "ticketData",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 56530,
-                                  "src": "4154:23:68",
+                                  "referencedDeclaration": 56951,
+                                  "src": "4301:23:68",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                                    "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                                     "typeString": "struct TicketLib.State memory"
                                   }
                                 },
-                                "id": 56504,
+                                "id": 56894,
                                 "isConstant": false,
                                 "isLValue": true,
                                 "isPure": false,
                                 "lValueRequested": false,
-                                "memberLocation": "4178:5:68",
+                                "memberLocation": "4325:5:68",
                                 "memberName": "seats",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 56553,
-                                "src": "4154:29:68",
+                                "referencedDeclaration": 57001,
+                                "src": "4301:29:68",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_SeatData_$56559_memory_ptr_$dyn_memory_ptr",
+                                  "typeIdentifier": "t_array$_t_struct$_SeatData_$57007_memory_ptr_$dyn_memory_ptr",
                                   "typeString": "struct TicketLib.SeatData memory[] memory"
                                 }
                               },
-                              "id": 56506,
+                              "id": 56896,
                               "indexExpression": {
-                                "id": 56505,
+                                "id": 56895,
                                 "name": "i",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 56469,
-                                "src": "4184:1:68",
+                                "referencedDeclaration": 56859,
+                                "src": "4331:1:68",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
@@ -4793,36 +4901,36 @@ export const MasterLib = {
                               "isPure": false,
                               "lValueRequested": false,
                               "nodeType": "IndexAccess",
-                              "src": "4154:32:68",
+                              "src": "4301:32:68",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_SeatData_$56559_memory_ptr",
+                                "typeIdentifier": "t_struct$_SeatData_$57007_memory_ptr",
                                 "typeString": "struct TicketLib.SeatData memory"
                               }
                             },
-                            "id": 56507,
+                            "id": 56897,
                             "isConstant": false,
                             "isLValue": true,
                             "isPure": false,
                             "lValueRequested": false,
-                            "memberLocation": "4187:5:68",
+                            "memberLocation": "4334:5:68",
                             "memberName": "price",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 56558,
-                            "src": "4154:38:68",
+                            "referencedDeclaration": 57006,
+                            "src": "4301:38:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_uint128",
-                              "typeString": "uint128"
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
                             }
                           },
-                          "src": "4142:50:68",
+                          "src": "4289:50:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "id": 56509,
+                        "id": 56899,
                         "nodeType": "ExpressionStatement",
-                        "src": "4142:50:68"
+                        "src": "4289:50:68"
                       }
                     ]
                   },
@@ -4831,18 +4939,18 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56477,
+                    "id": 56867,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 56472,
+                      "id": 56862,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56469,
-                      "src": "3916:1:68",
+                      "referencedDeclaration": 56859,
+                      "src": "4063:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -4854,82 +4962,82 @@ export const MasterLib = {
                       "expression": {
                         "expression": {
                           "expression": {
-                            "id": 56473,
+                            "id": 56863,
                             "name": "purchaseData",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 56425,
-                            "src": "3920:12:68",
+                            "referencedDeclaration": 56810,
+                            "src": "4067:12:68",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                              "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                               "typeString": "struct PurchaseLib.PurchaseData memory"
                             }
                           },
-                          "id": 56474,
+                          "id": 56864,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberLocation": "3933:10:68",
+                          "memberLocation": "4080:10:68",
                           "memberName": "ticketData",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 56530,
-                          "src": "3920:23:68",
+                          "referencedDeclaration": 56951,
+                          "src": "4067:23:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                            "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                             "typeString": "struct TicketLib.State memory"
                           }
                         },
-                        "id": 56475,
+                        "id": 56865,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "3944:5:68",
+                        "memberLocation": "4091:5:68",
                         "memberName": "seats",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56553,
-                        "src": "3920:29:68",
+                        "referencedDeclaration": 57001,
+                        "src": "4067:29:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_SeatData_$56559_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_SeatData_$57007_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct TicketLib.SeatData memory[] memory"
                         }
                       },
-                      "id": 56476,
+                      "id": 56866,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "3950:6:68",
+                      "memberLocation": "4097:6:68",
                       "memberName": "length",
                       "nodeType": "MemberAccess",
-                      "src": "3920:36:68",
+                      "src": "4067:36:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "3916:40:68",
+                    "src": "4063:40:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56511,
+                  "id": 56901,
                   "initializationExpression": {
                     "assignments": [
-                      56469
+                      56859
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 56469,
+                        "id": 56859,
                         "mutability": "mutable",
                         "name": "i",
-                        "nameLocation": "3909:1:68",
+                        "nameLocation": "4056:1:68",
                         "nodeType": "VariableDeclaration",
-                        "scope": 56511,
-                        "src": "3901:9:68",
+                        "scope": 56901,
+                        "src": "4048:9:68",
                         "stateVariable": false,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -4937,10 +5045,10 @@ export const MasterLib = {
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 56468,
+                          "id": 56858,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "3901:7:68",
+                          "src": "4048:7:68",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -4949,17 +5057,17 @@ export const MasterLib = {
                         "visibility": "internal"
                       }
                     ],
-                    "id": 56471,
+                    "id": 56861,
                     "initialValue": {
                       "hexValue": "31",
-                      "id": 56470,
+                      "id": 56860,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "3913:1:68",
+                      "src": "4060:1:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_1_by_1",
                         "typeString": "int_const 1"
@@ -4967,12 +5075,12 @@ export const MasterLib = {
                       "value": "1"
                     },
                     "nodeType": "VariableDeclarationStatement",
-                    "src": "3901:13:68"
+                    "src": "4048:13:68"
                   },
                   "isSimpleCounterLoop": true,
                   "loopExpression": {
                     "expression": {
-                      "id": 56479,
+                      "id": 56869,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4980,14 +5088,14 @@ export const MasterLib = {
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": false,
-                      "src": "3958:3:68",
+                      "src": "4105:3:68",
                       "subExpression": {
-                        "id": 56478,
+                        "id": 56868,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56469,
-                        "src": "3958:1:68",
+                        "referencedDeclaration": 56859,
+                        "src": "4105:1:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -4998,12 +5106,12 @@ export const MasterLib = {
                         "typeString": "uint256"
                       }
                     },
-                    "id": 56480,
+                    "id": 56870,
                     "nodeType": "ExpressionStatement",
-                    "src": "3958:3:68"
+                    "src": "4105:3:68"
                   },
                   "nodeType": "ForStatement",
-                  "src": "3896:307:68"
+                  "src": "4043:307:68"
                 },
                 {
                   "condition": {
@@ -5011,18 +5119,18 @@ export const MasterLib = {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 56516,
+                    "id": 56906,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 56512,
+                      "id": 56902,
                       "name": "localSum",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 56460,
-                      "src": "4216:8:68",
+                      "referencedDeclaration": 56850,
+                      "src": "4363:8:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -5033,73 +5141,73 @@ export const MasterLib = {
                     "rightExpression": {
                       "expression": {
                         "expression": {
-                          "id": 56513,
+                          "id": 56903,
                           "name": "purchaseData",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 56425,
-                          "src": "4228:12:68",
+                          "referencedDeclaration": 56810,
+                          "src": "4375:12:68",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                            "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                             "typeString": "struct PurchaseLib.PurchaseData memory"
                           }
                         },
-                        "id": 56514,
+                        "id": 56904,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberLocation": "4241:10:68",
+                        "memberLocation": "4388:10:68",
                         "memberName": "ticketData",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 56530,
-                        "src": "4228:23:68",
+                        "referencedDeclaration": 56951,
+                        "src": "4375:23:68",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_State_$56554_memory_ptr",
+                          "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
                           "typeString": "struct TicketLib.State memory"
                         }
                       },
-                      "id": 56515,
+                      "id": 56905,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
-                      "memberLocation": "4252:6:68",
+                      "memberLocation": "4399:6:68",
                       "memberName": "amount",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 56547,
-                      "src": "4228:30:68",
+                      "referencedDeclaration": 56997,
+                      "src": "4375:30:68",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "4216:42:68",
+                    "src": "4363:42:68",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 56520,
+                  "id": 56910,
                   "nodeType": "IfStatement",
-                  "src": "4212:70:68",
+                  "src": "4359:70:68",
                   "trueBody": {
                     "errorCall": {
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 56517,
+                        "id": 56907,
                         "name": "InvalidAmount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 56735,
-                        "src": "4267:13:68",
+                        "referencedDeclaration": 57314,
+                        "src": "4414:13:68",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$_t_error_$",
                           "typeString": "function () pure returns (error)"
                         }
                       },
-                      "id": 56518,
+                      "id": 56908,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -5108,17 +5216,122 @@ export const MasterLib = {
                       "nameLocations": [],
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "4267:15:68",
+                      "src": "4414:15:68",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_error",
                         "typeString": "error"
                       }
                     },
-                    "id": 56519,
+                    "id": 56909,
                     "nodeType": "RevertStatement",
-                    "src": "4260:22:68"
+                    "src": "4407:22:68"
                   }
+                },
+                {
+                  "expression": {
+                    "id": 56918,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "4439:50:68",
+                    "subExpression": {
+                      "baseExpression": {
+                        "expression": {
+                          "id": 56911,
+                          "name": "self",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 56807,
+                          "src": "4439:4:68",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
+                            "typeString": "struct MasterLib.State storage pointer"
+                          }
+                        },
+                        "id": 56916,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "4444:12:68",
+                        "memberName": "userNonceMap",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 56519,
+                        "src": "4439:17:68",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 56917,
+                      "indexExpression": {
+                        "expression": {
+                          "expression": {
+                            "id": 56913,
+                            "name": "purchaseData",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 56810,
+                            "src": "4457:12:68",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
+                              "typeString": "struct PurchaseLib.PurchaseData memory"
+                            }
+                          },
+                          "id": 56914,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "4470:10:68",
+                          "memberName": "ticketData",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 56951,
+                          "src": "4457:23:68",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_State_$57002_memory_ptr",
+                            "typeString": "struct TicketLib.State memory"
+                          }
+                        },
+                        "id": 56915,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "4481:5:68",
+                        "memberName": "owner",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 56991,
+                        "src": "4457:29:68",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "4439:48:68",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 56919,
+                  "nodeType": "ExpressionStatement",
+                  "src": "4439:50:68"
                 }
               ]
             },
@@ -5126,43 +5339,43 @@ export const MasterLib = {
             "kind": "function",
             "modifiers": [],
             "name": "validatePurchaseData",
-            "nameLocation": "3341:20:68",
+            "nameLocation": "3444:20:68",
             "parameters": {
-              "id": 56426,
+              "id": 56811,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 56422,
+                  "id": 56807,
                   "mutability": "mutable",
                   "name": "self",
-                  "nameLocation": "3376:4:68",
+                  "nameLocation": "3479:4:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56522,
-                  "src": "3362:18:68",
+                  "scope": 56921,
+                  "src": "3465:18:68",
                   "stateVariable": false,
                   "storageLocation": "storage",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                     "typeString": "struct MasterLib.State"
                   },
                   "typeName": {
-                    "id": 56421,
+                    "id": 56806,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56420,
+                      "id": 56805,
                       "name": "State",
                       "nameLocations": [
-                        "3362:5:68"
+                        "3465:5:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56154,
-                      "src": "3362:5:68"
+                      "referencedDeclaration": 56539,
+                      "src": "3465:5:68"
                     },
-                    "referencedDeclaration": 56154,
-                    "src": "3362:5:68",
+                    "referencedDeclaration": 56539,
+                    "src": "3465:5:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_State_$56154_storage_ptr",
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
                       "typeString": "struct MasterLib.State"
                     }
                   },
@@ -5170,52 +5383,240 @@ export const MasterLib = {
                 },
                 {
                   "constant": false,
-                  "id": 56425,
+                  "id": 56810,
                   "mutability": "mutable",
                   "name": "purchaseData",
-                  "nameLocation": "3414:12:68",
+                  "nameLocation": "3517:12:68",
                   "nodeType": "VariableDeclaration",
-                  "scope": 56522,
-                  "src": "3382:44:68",
+                  "scope": 56921,
+                  "src": "3485:44:68",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_PurchaseData_$56535_memory_ptr",
+                    "typeIdentifier": "t_struct$_PurchaseData_$56954_memory_ptr",
                     "typeString": "struct PurchaseLib.PurchaseData"
                   },
                   "typeName": {
-                    "id": 56424,
+                    "id": 56809,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 56423,
+                      "id": 56808,
                       "name": "PurchaseLib.PurchaseData",
                       "nameLocations": [
-                        "3382:11:68",
-                        "3394:12:68"
+                        "3485:11:68",
+                        "3497:12:68"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 56535,
-                      "src": "3382:24:68"
+                      "referencedDeclaration": 56954,
+                      "src": "3485:24:68"
                     },
-                    "referencedDeclaration": 56535,
-                    "src": "3382:24:68",
+                    "referencedDeclaration": 56954,
+                    "src": "3485:24:68",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_PurchaseData_$56535_storage_ptr",
+                      "typeIdentifier": "t_struct$_PurchaseData_$56954_storage_ptr",
                       "typeString": "struct PurchaseLib.PurchaseData"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "3361:66:68"
+              "src": "3464:66:68"
             },
             "returnParameters": {
-              "id": 56427,
+              "id": 56812,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3442:0:68"
+              "src": "3540:0:68"
             },
-            "scope": 56523,
+            "scope": 56938,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 56937,
+            "nodeType": "FunctionDefinition",
+            "src": "4502:135:68",
+            "nodes": [],
+            "body": {
+              "id": 56936,
+              "nodeType": "Block",
+              "src": "4590:47:68",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "expression": {
+                        "id": 56931,
+                        "name": "self",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 56924,
+                        "src": "4607:4:68",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
+                          "typeString": "struct MasterLib.State storage pointer"
+                        }
+                      },
+                      "id": 56932,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberLocation": "4612:12:68",
+                      "memberName": "userNonceMap",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 56519,
+                      "src": "4607:17:68",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 56934,
+                    "indexExpression": {
+                      "id": 56933,
+                      "name": "user",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 56926,
+                      "src": "4625:4:68",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "4607:23:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 56930,
+                  "id": 56935,
+                  "nodeType": "Return",
+                  "src": "4600:30:68"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUserNonce",
+            "nameLocation": "4511:12:68",
+            "parameters": {
+              "id": 56927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 56924,
+                  "mutability": "mutable",
+                  "name": "self",
+                  "nameLocation": "4538:4:68",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56937,
+                  "src": "4524:18:68",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
+                    "typeString": "struct MasterLib.State"
+                  },
+                  "typeName": {
+                    "id": 56923,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 56922,
+                      "name": "State",
+                      "nameLocations": [
+                        "4524:5:68"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 56539,
+                      "src": "4524:5:68"
+                    },
+                    "referencedDeclaration": 56539,
+                    "src": "4524:5:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_State_$56539_storage_ptr",
+                      "typeString": "struct MasterLib.State"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 56926,
+                  "mutability": "mutable",
+                  "name": "user",
+                  "nameLocation": "4552:4:68",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56937,
+                  "src": "4544:12:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 56925,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4544:7:68",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4523:34:68"
+            },
+            "returnParameters": {
+              "id": 56930,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 56929,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 56937,
+                  "src": "4581:7:68",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 56928,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4581:7:68",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4580:9:68"
+            },
+            "scope": 56938,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "internal"
@@ -5228,11 +5629,11 @@ export const MasterLib = {
         "contractKind": "library",
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          56523
+          56938
         ],
         "name": "MasterLib",
         "nameLocation": "263:9:68",
-        "scope": 56524,
+        "scope": 56939,
         "usedErrors": [],
         "usedEvents": []
       }

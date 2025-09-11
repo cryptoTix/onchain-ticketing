@@ -8,9 +8,8 @@ export async function fetchMovies(
   next: any
 ) {
     try {
-        const { movieId } = req.query
-        const data = await getMovies(movieId);
-        console.log("response for:",movieId,data)
+        const data = await getMovies(req.query);
+        console.log("response for:", req.query, data)
         res.json({ success: true, data, statusCode : 200 });
         return
     } catch (error) {
