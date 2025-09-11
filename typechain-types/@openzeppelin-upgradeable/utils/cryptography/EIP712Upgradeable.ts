@@ -3,32 +3,31 @@
 /* eslint-disable */
 import type {
   BaseContract,
-  BigNumber,
+  BigNumberish,
   BytesLike,
-  CallOverrides,
-  PopulatedTransaction,
-  Signer,
-  utils,
-} from "ethers";
-import type {
   FunctionFragment,
   Result,
+  Interface,
   EventFragment,
-} from "@ethersproject/abi";
-import type { Listener, Provider } from "@ethersproject/providers";
+  ContractRunner,
+  ContractMethod,
+  Listener,
+} from "ethers";
 import type {
-  TypedEventFilter,
-  TypedEvent,
+  TypedContractEvent,
+  TypedDeferredTopicFilter,
+  TypedEventLog,
+  TypedLogDescription,
   TypedListener,
-  OnEvent,
+  TypedContractMethod,
 } from "../../../common";
 
-export interface EIP712UpgradeableInterface extends utils.Interface {
-  functions: {
-    "eip712Domain()": FunctionFragment;
-  };
+export interface EIP712UpgradeableInterface extends Interface {
+  getFunction(nameOrSignature: "eip712Domain"): FunctionFragment;
 
-  getFunction(nameOrSignatureOrTopic: "eip712Domain"): FunctionFragment;
+  getEvent(
+    nameOrSignatureOrTopic: "EIP712DomainChanged" | "Initialized"
+  ): EventFragment;
 
   encodeFunctionData(
     functionFragment: "eip712Domain",
@@ -39,117 +38,147 @@ export interface EIP712UpgradeableInterface extends utils.Interface {
     functionFragment: "eip712Domain",
     data: BytesLike
   ): Result;
-
-  events: {
-    "EIP712DomainChanged()": EventFragment;
-    "Initialized(uint64)": EventFragment;
-  };
-
-  getEvent(nameOrSignatureOrTopic: "EIP712DomainChanged"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Initialized"): EventFragment;
 }
 
-export interface EIP712DomainChangedEventObject {}
-export type EIP712DomainChangedEvent = TypedEvent<
-  [],
-  EIP712DomainChangedEventObject
->;
-
-export type EIP712DomainChangedEventFilter =
-  TypedEventFilter<EIP712DomainChangedEvent>;
-
-export interface InitializedEventObject {
-  version: BigNumber;
+export namespace EIP712DomainChangedEvent {
+  export type InputTuple = [];
+  export type OutputTuple = [];
+  export interface OutputObject {}
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type InitializedEvent = TypedEvent<[BigNumber], InitializedEventObject>;
 
-export type InitializedEventFilter = TypedEventFilter<InitializedEvent>;
+export namespace InitializedEvent {
+  export type InputTuple = [version: BigNumberish];
+  export type OutputTuple = [version: bigint];
+  export interface OutputObject {
+    version: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
 
 export interface EIP712Upgradeable extends BaseContract {
-  connect(signerOrProvider: Signer | Provider | string): this;
-  attach(addressOrName: string): this;
-  deployed(): Promise<this>;
+  connect(runner?: ContractRunner | null): EIP712Upgradeable;
+  waitForDeployment(): Promise<this>;
 
   interface: EIP712UpgradeableInterface;
 
-  queryFilter<TEvent extends TypedEvent>(
-    event: TypedEventFilter<TEvent>,
+  queryFilter<TCEvent extends TypedContractEvent>(
+    event: TCEvent,
     fromBlockOrBlockhash?: string | number | undefined,
     toBlock?: string | number | undefined
-  ): Promise<Array<TEvent>>;
+  ): Promise<Array<TypedEventLog<TCEvent>>>;
+  queryFilter<TCEvent extends TypedContractEvent>(
+    filter: TypedDeferredTopicFilter<TCEvent>,
+    fromBlockOrBlockhash?: string | number | undefined,
+    toBlock?: string | number | undefined
+  ): Promise<Array<TypedEventLog<TCEvent>>>;
 
-  listeners<TEvent extends TypedEvent>(
-    eventFilter?: TypedEventFilter<TEvent>
-  ): Array<TypedListener<TEvent>>;
-  listeners(eventName?: string): Array<Listener>;
-  removeAllListeners<TEvent extends TypedEvent>(
-    eventFilter: TypedEventFilter<TEvent>
-  ): this;
-  removeAllListeners(eventName?: string): this;
-  off: OnEvent<this>;
-  on: OnEvent<this>;
-  once: OnEvent<this>;
-  removeListener: OnEvent<this>;
+  on<TCEvent extends TypedContractEvent>(
+    event: TCEvent,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
+  on<TCEvent extends TypedContractEvent>(
+    filter: TypedDeferredTopicFilter<TCEvent>,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
 
-  functions: {
-    eip712Domain(
-      overrides?: CallOverrides
-    ): Promise<
-      [string, string, string, BigNumber, string, string, BigNumber[]] & {
+  once<TCEvent extends TypedContractEvent>(
+    event: TCEvent,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
+  once<TCEvent extends TypedContractEvent>(
+    filter: TypedDeferredTopicFilter<TCEvent>,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
+
+  listeners<TCEvent extends TypedContractEvent>(
+    event: TCEvent
+  ): Promise<Array<TypedListener<TCEvent>>>;
+  listeners(eventName?: string): Promise<Array<Listener>>;
+  removeAllListeners<TCEvent extends TypedContractEvent>(
+    event?: TCEvent
+  ): Promise<this>;
+
+  eip712Domain: TypedContractMethod<
+    [],
+    [
+      [string, string, string, bigint, string, string, bigint[]] & {
         fields: string;
         name: string;
         version: string;
-        chainId: BigNumber;
+        chainId: bigint;
         verifyingContract: string;
         salt: string;
-        extensions: BigNumber[];
+        extensions: bigint[];
       }
-    >;
-  };
-
-  eip712Domain(
-    overrides?: CallOverrides
-  ): Promise<
-    [string, string, string, BigNumber, string, string, BigNumber[]] & {
-      fields: string;
-      name: string;
-      version: string;
-      chainId: BigNumber;
-      verifyingContract: string;
-      salt: string;
-      extensions: BigNumber[];
-    }
+    ],
+    "view"
   >;
 
-  callStatic: {
-    eip712Domain(
-      overrides?: CallOverrides
-    ): Promise<
-      [string, string, string, BigNumber, string, string, BigNumber[]] & {
+  getFunction<T extends ContractMethod = ContractMethod>(
+    key: string | FunctionFragment
+  ): T;
+
+  getFunction(
+    nameOrSignature: "eip712Domain"
+  ): TypedContractMethod<
+    [],
+    [
+      [string, string, string, bigint, string, string, bigint[]] & {
         fields: string;
         name: string;
         version: string;
-        chainId: BigNumber;
+        chainId: bigint;
         verifyingContract: string;
         salt: string;
-        extensions: BigNumber[];
+        extensions: bigint[];
       }
-    >;
-  };
+    ],
+    "view"
+  >;
+
+  getEvent(
+    key: "EIP712DomainChanged"
+  ): TypedContractEvent<
+    EIP712DomainChangedEvent.InputTuple,
+    EIP712DomainChangedEvent.OutputTuple,
+    EIP712DomainChangedEvent.OutputObject
+  >;
+  getEvent(
+    key: "Initialized"
+  ): TypedContractEvent<
+    InitializedEvent.InputTuple,
+    InitializedEvent.OutputTuple,
+    InitializedEvent.OutputObject
+  >;
 
   filters: {
-    "EIP712DomainChanged()"(): EIP712DomainChangedEventFilter;
-    EIP712DomainChanged(): EIP712DomainChangedEventFilter;
+    "EIP712DomainChanged()": TypedContractEvent<
+      EIP712DomainChangedEvent.InputTuple,
+      EIP712DomainChangedEvent.OutputTuple,
+      EIP712DomainChangedEvent.OutputObject
+    >;
+    EIP712DomainChanged: TypedContractEvent<
+      EIP712DomainChangedEvent.InputTuple,
+      EIP712DomainChangedEvent.OutputTuple,
+      EIP712DomainChangedEvent.OutputObject
+    >;
 
-    "Initialized(uint64)"(version?: null): InitializedEventFilter;
-    Initialized(version?: null): InitializedEventFilter;
-  };
-
-  estimateGas: {
-    eip712Domain(overrides?: CallOverrides): Promise<BigNumber>;
-  };
-
-  populateTransaction: {
-    eip712Domain(overrides?: CallOverrides): Promise<PopulatedTransaction>;
+    "Initialized(uint64)": TypedContractEvent<
+      InitializedEvent.InputTuple,
+      InitializedEvent.OutputTuple,
+      InitializedEvent.OutputObject
+    >;
+    Initialized: TypedContractEvent<
+      InitializedEvent.InputTuple,
+      InitializedEvent.OutputTuple,
+      InitializedEvent.OutputObject
+    >;
   };
 }

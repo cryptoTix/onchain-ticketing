@@ -2,9 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { Contract, Signer, utils } from "ethers";
-import type { Provider } from "@ethersproject/providers";
-import type { ITicket, ITicketInterface } from "../../../src/interface/ITicket";
+import { Contract, Interface, type ContractRunner } from "ethers";
+import type {
+  ITicket,
+  ITicketInterface,
+} from "../../../src/interfaces/ITicket";
 
 const _abi = [
   {
@@ -26,12 +28,9 @@ const _abi = [
 export class ITicket__factory {
   static readonly abi = _abi;
   static createInterface(): ITicketInterface {
-    return new utils.Interface(_abi) as ITicketInterface;
+    return new Interface(_abi) as ITicketInterface;
   }
-  static connect(
-    address: string,
-    signerOrProvider: Signer | Provider
-  ): ITicket {
-    return new Contract(address, _abi, signerOrProvider) as ITicket;
+  static connect(address: string, runner?: ContractRunner | null): ITicket {
+    return new Contract(address, _abi, runner) as unknown as ITicket;
   }
 }

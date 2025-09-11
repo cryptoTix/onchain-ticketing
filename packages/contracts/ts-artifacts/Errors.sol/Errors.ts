@@ -10,53 +10,53 @@ export const Errors = {
   },
   "ast": {
     "absolutePath": "src/interface/Errors.sol",
-    "id": 56736,
+    "id": 57315,
     "exportedSymbols": {
       "AlreadyUsedData": [
-        56715
+        57294
       ],
       "CancellerNotOwner": [
-        56727
+        57306
       ],
       "InvalidAmount": [
-        56735
+        57314
       ],
       "InvalidAsset": [
-        56721
+        57300
       ],
       "InvalidInput": [
-        56711
+        57290
       ],
       "InvalidPurchaseData": [
-        56717
+        57296
       ],
       "NotAllowlistedAsset": [
-        56723
+        57302
       ],
       "ShowtimeNotPassed": [
-        56731
+        57310
       ],
       "ShowtimePassed": [
-        56729
+        57308
       ],
       "SignerNotOwner": [
-        56725
+        57304
       ],
       "StalePurchaseData": [
-        56713
+        57292
       ],
       "UnsortedSeatsInput": [
-        56733
+        57312
       ],
       "ZeroLength": [
-        56719
+        57298
       ]
     },
     "nodeType": "SourceUnit",
     "src": "51:353:72",
     "nodes": [
       {
-        "id": 56709,
+        "id": 57288,
         "nodeType": "PragmaDirective",
         "src": "51:24:72",
         "nodes": [],
@@ -68,7 +68,7 @@ export const Errors = {
         ]
       },
       {
-        "id": 56711,
+        "id": 57290,
         "nodeType": "ErrorDefinition",
         "src": "77:21:72",
         "nodes": [],
@@ -76,14 +76,14 @@ export const Errors = {
         "name": "InvalidInput",
         "nameLocation": "83:12:72",
         "parameters": {
-          "id": 56710,
+          "id": 57289,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "95:2:72"
         }
       },
       {
-        "id": 56713,
+        "id": 57292,
         "nodeType": "ErrorDefinition",
         "src": "99:26:72",
         "nodes": [],
@@ -91,14 +91,14 @@ export const Errors = {
         "name": "StalePurchaseData",
         "nameLocation": "105:17:72",
         "parameters": {
-          "id": 56712,
+          "id": 57291,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "122:2:72"
         }
       },
       {
-        "id": 56715,
+        "id": 57294,
         "nodeType": "ErrorDefinition",
         "src": "126:24:72",
         "nodes": [],
@@ -106,14 +106,14 @@ export const Errors = {
         "name": "AlreadyUsedData",
         "nameLocation": "132:15:72",
         "parameters": {
-          "id": 56714,
+          "id": 57293,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "147:2:72"
         }
       },
       {
-        "id": 56717,
+        "id": 57296,
         "nodeType": "ErrorDefinition",
         "src": "151:28:72",
         "nodes": [],
@@ -121,14 +121,14 @@ export const Errors = {
         "name": "InvalidPurchaseData",
         "nameLocation": "157:19:72",
         "parameters": {
-          "id": 56716,
+          "id": 57295,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "176:2:72"
         }
       },
       {
-        "id": 56719,
+        "id": 57298,
         "nodeType": "ErrorDefinition",
         "src": "180:19:72",
         "nodes": [],
@@ -136,14 +136,14 @@ export const Errors = {
         "name": "ZeroLength",
         "nameLocation": "186:10:72",
         "parameters": {
-          "id": 56718,
+          "id": 57297,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "196:2:72"
         }
       },
       {
-        "id": 56721,
+        "id": 57300,
         "nodeType": "ErrorDefinition",
         "src": "200:21:72",
         "nodes": [],
@@ -151,14 +151,14 @@ export const Errors = {
         "name": "InvalidAsset",
         "nameLocation": "206:12:72",
         "parameters": {
-          "id": 56720,
+          "id": 57299,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "218:2:72"
         }
       },
       {
-        "id": 56723,
+        "id": 57302,
         "nodeType": "ErrorDefinition",
         "src": "222:28:72",
         "nodes": [],
@@ -166,14 +166,14 @@ export const Errors = {
         "name": "NotAllowlistedAsset",
         "nameLocation": "228:19:72",
         "parameters": {
-          "id": 56722,
+          "id": 57301,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "247:2:72"
         }
       },
       {
-        "id": 56725,
+        "id": 57304,
         "nodeType": "ErrorDefinition",
         "src": "251:23:72",
         "nodes": [],
@@ -181,14 +181,14 @@ export const Errors = {
         "name": "SignerNotOwner",
         "nameLocation": "257:14:72",
         "parameters": {
-          "id": 56724,
+          "id": 57303,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "271:2:72"
         }
       },
       {
-        "id": 56727,
+        "id": 57306,
         "nodeType": "ErrorDefinition",
         "src": "275:26:72",
         "nodes": [],
@@ -196,14 +196,14 @@ export const Errors = {
         "name": "CancellerNotOwner",
         "nameLocation": "281:17:72",
         "parameters": {
-          "id": 56726,
+          "id": 57305,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "298:2:72"
         }
       },
       {
-        "id": 56729,
+        "id": 57308,
         "nodeType": "ErrorDefinition",
         "src": "302:23:72",
         "nodes": [],
@@ -211,14 +211,14 @@ export const Errors = {
         "name": "ShowtimePassed",
         "nameLocation": "308:14:72",
         "parameters": {
-          "id": 56728,
+          "id": 57307,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "322:2:72"
         }
       },
       {
-        "id": 56731,
+        "id": 57310,
         "nodeType": "ErrorDefinition",
         "src": "326:26:72",
         "nodes": [],
@@ -226,14 +226,14 @@ export const Errors = {
         "name": "ShowtimeNotPassed",
         "nameLocation": "332:17:72",
         "parameters": {
-          "id": 56730,
+          "id": 57309,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "349:2:72"
         }
       },
       {
-        "id": 56733,
+        "id": 57312,
         "nodeType": "ErrorDefinition",
         "src": "353:27:72",
         "nodes": [],
@@ -241,14 +241,14 @@ export const Errors = {
         "name": "UnsortedSeatsInput",
         "nameLocation": "359:18:72",
         "parameters": {
-          "id": 56732,
+          "id": 57311,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "377:2:72"
         }
       },
       {
-        "id": 56735,
+        "id": 57314,
         "nodeType": "ErrorDefinition",
         "src": "381:22:72",
         "nodes": [],
@@ -256,7 +256,7 @@ export const Errors = {
         "name": "InvalidAmount",
         "nameLocation": "387:13:72",
         "parameters": {
-          "id": 56734,
+          "id": 57313,
           "nodeType": "ParameterList",
           "parameters": [],
           "src": "400:2:72"

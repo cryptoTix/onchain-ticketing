@@ -52,17 +52,16 @@ export function writeOrderHistory(address: string, order: OrderMetadata) {
 }
 
 /**
- * Modifies an existing order in the order history for the given address.
+ * cancels an existing order in the order history for the given address.
  * @param address Wallet address (case-insensitive)
- * @param matcher Function that identifies the order to modify (e.g., match by order ID)
- * @param modifier Function that modifies the matched order in-place
+ * @param orderId OrderId.
  * @returns true if modification succeeded, false otherwise
  */
-export function modifyOrderHistory(
+
+export async function cancelOrderHistory(
   address: string,
-  matcher: (order: OrderMetadata) => boolean,
-  modifier: (order: OrderMetadata) => void
-): boolean {
+  orderId: string,
+): Promise<boolean> {
   ensureOrderHistoryDir();
   const filePath = path.join(ORDER_HISTORY_DIR, `${address.toLowerCase()}.json`);
 
@@ -74,11 +73,11 @@ export function modifyOrderHistory(
   let modified = false;
 
   orders = orders.map((order) => {
-    console.log("curr order", order)
-    if (matcher(order)) {
-      modifier(order);
-      console.log("setting order as cancelld", order.isCancelled)
+    if (order.orderId.localeCompare(orderId) == 0) {
+      console.log("setting order as cancelld", order)
       modified = true;
+      order.isCancelled = true;
+      return order;
     }
     return order;
   });

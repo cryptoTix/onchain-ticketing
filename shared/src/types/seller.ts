@@ -15,6 +15,7 @@ export type SellerInterface = SellerMetadataInterface & {
 export type SellerRequestInterface = {
     movieId : string;
     showDate : number;
+    location?: string;
 }
 
 export type SellerShowIdRequestInterface = {

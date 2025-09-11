@@ -10,14 +10,14 @@ export async function fetchSellers(
   next: any
 ) {
     try {
-        const movieId  = req.query.movieId as string
-        const time  = Number(req.query.showDate)
+        const {movieId, location, showDate}  = req.query
         if (movieId != "") {
-            const data = await getSellers(movieId, time);
-            console.log("Data for sellers", movieId, data)
+            const data = await getSellers(req.query);
+            
+            console.log("Data for sellers", movieId, showDate, location, data)
             data.length > 0 ? 
             res.json({ success: true, data, statusCode : 200 }):
-            res.status(404).json({ success: false, statusCode : 404 });
+            res.status(204).json({ success: true, statusCode : 204 });
         } else {
             console.log("Failed to fetch sellers for:", movieId)
             res.status(400).json({ success: false, statusCode : 400 });

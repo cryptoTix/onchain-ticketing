@@ -3,27 +3,24 @@
 /* eslint-disable */
 import type {
   BaseContract,
-  BigNumber,
   BigNumberish,
   BytesLike,
-  CallOverrides,
-  ContractTransaction,
-  Overrides,
-  PopulatedTransaction,
-  Signer,
-  utils,
-} from "ethers";
-import type {
   FunctionFragment,
   Result,
+  Interface,
   EventFragment,
-} from "@ethersproject/abi";
-import type { Listener, Provider } from "@ethersproject/providers";
+  AddressLike,
+  ContractRunner,
+  ContractMethod,
+  Listener,
+} from "ethers";
 import type {
-  TypedEventFilter,
-  TypedEvent,
+  TypedContractEvent,
+  TypedDeferredTopicFilter,
+  TypedEventLog,
+  TypedLogDescription,
   TypedListener,
-  OnEvent,
+  TypedContractMethod,
 } from "../common";
 
 export declare namespace MasterLib {
@@ -32,32 +29,32 @@ export declare namespace MasterLib {
     percentageWad: BigNumberish;
   };
 
-  export type TimePercentageStructOutput = [BigNumber, BigNumber] & {
-    durationLeft: BigNumber;
-    percentageWad: BigNumber;
-  };
+  export type TimePercentageStructOutput = [
+    durationLeft: bigint,
+    percentageWad: bigint
+  ] & { durationLeft: bigint; percentageWad: bigint };
 
   export type CancelPolicyMetadataStruct = {
     policyMetadata: MasterLib.TimePercentageStruct[];
   };
 
   export type CancelPolicyMetadataStructOutput = [
-    MasterLib.TimePercentageStructOutput[]
+    policyMetadata: MasterLib.TimePercentageStructOutput[]
   ] & { policyMetadata: MasterLib.TimePercentageStructOutput[] };
 }
 
 export declare namespace TicketLib {
   export type SeatDataStruct = { seatId: BigNumberish; price: BigNumberish };
 
-  export type SeatDataStructOutput = [BigNumber, BigNumber] & {
-    seatId: BigNumber;
-    price: BigNumber;
+  export type SeatDataStructOutput = [seatId: bigint, price: bigint] & {
+    seatId: bigint;
+    price: bigint;
   };
 
   export type StateStruct = {
-    asset: string;
+    asset: AddressLike;
     showTime: BigNumberish;
-    owner: string;
+    owner: AddressLike;
     showId: BigNumberish;
     originTimestamp: BigNumberish;
     amount: BigNumberish;
@@ -65,20 +62,20 @@ export declare namespace TicketLib {
   };
 
   export type StateStructOutput = [
-    string,
-    BigNumber,
-    string,
-    BigNumber,
-    BigNumber,
-    BigNumber,
-    TicketLib.SeatDataStructOutput[]
+    asset: string,
+    showTime: bigint,
+    owner: string,
+    showId: bigint,
+    originTimestamp: bigint,
+    amount: bigint,
+    seats: TicketLib.SeatDataStructOutput[]
   ] & {
     asset: string;
-    showTime: BigNumber;
+    showTime: bigint;
     owner: string;
-    showId: BigNumber;
-    originTimestamp: BigNumber;
-    amount: BigNumber;
+    showId: bigint;
+    originTimestamp: bigint;
+    amount: bigint;
     seats: TicketLib.SeatDataStructOutput[];
   };
 }
@@ -90,48 +87,14 @@ export declare namespace PurchaseLib {
   };
 
   export type PurchaseDataStructOutput = [
-    TicketLib.StateStructOutput,
-    BigNumber
-  ] & { ticketData: TicketLib.StateStructOutput; nonce: BigNumber };
+    ticketData: TicketLib.StateStructOutput,
+    nonce: bigint
+  ] & { ticketData: TicketLib.StateStructOutput; nonce: bigint };
 }
 
-export interface MasterInterface extends utils.Interface {
-  functions: {
-    "addCancelPolicy(uint256,((uint128,uint128)[]))": FunctionFragment;
-    "approve(address,uint256)": FunctionFragment;
-    "balanceOf(address)": FunctionFragment;
-    "cancel(uint256)": FunctionFragment;
-    "cancelPartialTicket(uint256,uint128[])": FunctionFragment;
-    "changeDefaultCancelPolicy(((uint128,uint128)[]))": FunctionFragment;
-    "eip712Domain()": FunctionFragment;
-    "getApproved(uint256)": FunctionFragment;
-    "getCancellationAmount(uint256)": FunctionFragment;
-    "getNonce(address)": FunctionFragment;
-    "getPurchaseDataSignatureHash((address,uint96,address,uint96,uint256,uint256,(uint256,uint256)[]))": FunctionFragment;
-    "getUserVerificationSignatureHash(uint256)": FunctionFragment;
-    "initialize(address,address,uint96,((uint128,uint128)[]))": FunctionFragment;
-    "isApprovedForAll(address,address)": FunctionFragment;
-    "isValidRedeemSignature(uint256,bytes)": FunctionFragment;
-    "name()": FunctionFragment;
-    "owner()": FunctionFragment;
-    "ownerOf(uint256)": FunctionFragment;
-    "purchase(address,((address,uint96,address,uint96,uint256,uint256,(uint256,uint256)[]),uint256),bytes)": FunctionFragment;
-    "redeem(uint256[])": FunctionFragment;
-    "renounceOwnership()": FunctionFragment;
-    "safeTransferFrom(address,address,uint256)": FunctionFragment;
-    "safeTransferFrom(address,address,uint256,bytes)": FunctionFragment;
-    "setApprovalForAll(address,bool)": FunctionFragment;
-    "setCancelPolicyIdForShowId(uint256,uint256)": FunctionFragment;
-    "supportsInterface(bytes4)": FunctionFragment;
-    "symbol()": FunctionFragment;
-    "tokenURI(uint256)": FunctionFragment;
-    "transferFrom(address,address,uint256)": FunctionFragment;
-    "transferOwnership(address)": FunctionFragment;
-    "withdrawAssets(address[],address)": FunctionFragment;
-  };
-
+export interface MasterInterface extends Interface {
   getFunction(
-    nameOrSignatureOrTopic:
+    nameOrSignature:
       | "addCancelPolicy"
       | "approve"
       | "balanceOf"
@@ -165,15 +128,29 @@ export interface MasterInterface extends utils.Interface {
       | "withdrawAssets"
   ): FunctionFragment;
 
+  getEvent(
+    nameOrSignatureOrTopic:
+      | "Approval"
+      | "ApprovalForAll"
+      | "CancelledTicket"
+      | "EIP712DomainChanged"
+      | "Initialized"
+      | "OwnershipTransferred"
+      | "Transfer"
+  ): EventFragment;
+
   encodeFunctionData(
     functionFragment: "addCancelPolicy",
     values: [BigNumberish, MasterLib.CancelPolicyMetadataStruct]
   ): string;
   encodeFunctionData(
     functionFragment: "approve",
-    values: [string, BigNumberish]
+    values: [AddressLike, BigNumberish]
   ): string;
-  encodeFunctionData(functionFragment: "balanceOf", values: [string]): string;
+  encodeFunctionData(
+    functionFragment: "balanceOf",
+    values: [AddressLike]
+  ): string;
   encodeFunctionData(
     functionFragment: "cancel",
     values: [BigNumberish]
@@ -198,7 +175,10 @@ export interface MasterInterface extends utils.Interface {
     functionFragment: "getCancellationAmount",
     values: [BigNumberish]
   ): string;
-  encodeFunctionData(functionFragment: "getNonce", values: [string]): string;
+  encodeFunctionData(
+    functionFragment: "getNonce",
+    values: [AddressLike]
+  ): string;
   encodeFunctionData(
     functionFragment: "getPurchaseDataSignatureHash",
     values: [TicketLib.StateStruct]
@@ -209,11 +189,16 @@ export interface MasterInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "initialize",
-    values: [string, string, BigNumberish, MasterLib.CancelPolicyMetadataStruct]
+    values: [
+      AddressLike,
+      AddressLike,
+      BigNumberish,
+      MasterLib.CancelPolicyMetadataStruct
+    ]
   ): string;
   encodeFunctionData(
     functionFragment: "isApprovedForAll",
-    values: [string, string]
+    values: [AddressLike, AddressLike]
   ): string;
   encodeFunctionData(
     functionFragment: "isValidRedeemSignature",
@@ -227,7 +212,7 @@ export interface MasterInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "purchase",
-    values: [string, PurchaseLib.PurchaseDataStruct, BytesLike]
+    values: [AddressLike, PurchaseLib.PurchaseDataStruct, BytesLike]
   ): string;
   encodeFunctionData(
     functionFragment: "redeem",
@@ -239,15 +224,15 @@ export interface MasterInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "safeTransferFrom(address,address,uint256)",
-    values: [string, string, BigNumberish]
+    values: [AddressLike, AddressLike, BigNumberish]
   ): string;
   encodeFunctionData(
     functionFragment: "safeTransferFrom(address,address,uint256,bytes)",
-    values: [string, string, BigNumberish, BytesLike]
+    values: [AddressLike, AddressLike, BigNumberish, BytesLike]
   ): string;
   encodeFunctionData(
     functionFragment: "setApprovalForAll",
-    values: [string, boolean]
+    values: [AddressLike, boolean]
   ): string;
   encodeFunctionData(
     functionFragment: "setCancelPolicyIdForShowId",
@@ -264,15 +249,15 @@ export interface MasterInterface extends utils.Interface {
   ): string;
   encodeFunctionData(
     functionFragment: "transferFrom",
-    values: [string, string, BigNumberish]
+    values: [AddressLike, AddressLike, BigNumberish]
   ): string;
   encodeFunctionData(
     functionFragment: "transferOwnership",
-    values: [string]
+    values: [AddressLike]
   ): string;
   encodeFunctionData(
     functionFragment: "withdrawAssets",
-    values: [string[], string]
+    values: [AddressLike[], AddressLike]
   ): string;
 
   decodeFunctionResult(
@@ -363,988 +348,644 @@ export interface MasterInterface extends utils.Interface {
     functionFragment: "withdrawAssets",
     data: BytesLike
   ): Result;
-
-  events: {
-    "Approval(address,address,uint256)": EventFragment;
-    "ApprovalForAll(address,address,bool)": EventFragment;
-    "CancelledTicket(uint256)": EventFragment;
-    "EIP712DomainChanged()": EventFragment;
-    "Initialized(uint64)": EventFragment;
-    "OwnershipTransferred(address,address)": EventFragment;
-    "Transfer(address,address,uint256)": EventFragment;
-  };
-
-  getEvent(nameOrSignatureOrTopic: "Approval"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "ApprovalForAll"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "CancelledTicket"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "EIP712DomainChanged"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Initialized"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "OwnershipTransferred"): EventFragment;
-  getEvent(nameOrSignatureOrTopic: "Transfer"): EventFragment;
 }
 
-export interface ApprovalEventObject {
-  owner: string;
-  approved: string;
-  tokenId: BigNumber;
+export namespace ApprovalEvent {
+  export type InputTuple = [
+    owner: AddressLike,
+    approved: AddressLike,
+    tokenId: BigNumberish
+  ];
+  export type OutputTuple = [owner: string, approved: string, tokenId: bigint];
+  export interface OutputObject {
+    owner: string;
+    approved: string;
+    tokenId: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type ApprovalEvent = TypedEvent<
-  [string, string, BigNumber],
-  ApprovalEventObject
->;
 
-export type ApprovalEventFilter = TypedEventFilter<ApprovalEvent>;
-
-export interface ApprovalForAllEventObject {
-  owner: string;
-  operator: string;
-  approved: boolean;
+export namespace ApprovalForAllEvent {
+  export type InputTuple = [
+    owner: AddressLike,
+    operator: AddressLike,
+    approved: boolean
+  ];
+  export type OutputTuple = [
+    owner: string,
+    operator: string,
+    approved: boolean
+  ];
+  export interface OutputObject {
+    owner: string;
+    operator: string;
+    approved: boolean;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type ApprovalForAllEvent = TypedEvent<
-  [string, string, boolean],
-  ApprovalForAllEventObject
->;
 
-export type ApprovalForAllEventFilter = TypedEventFilter<ApprovalForAllEvent>;
-
-export interface CancelledTicketEventObject {
-  ticketId: BigNumber;
+export namespace CancelledTicketEvent {
+  export type InputTuple = [ticketId: BigNumberish];
+  export type OutputTuple = [ticketId: bigint];
+  export interface OutputObject {
+    ticketId: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type CancelledTicketEvent = TypedEvent<
-  [BigNumber],
-  CancelledTicketEventObject
->;
 
-export type CancelledTicketEventFilter = TypedEventFilter<CancelledTicketEvent>;
-
-export interface EIP712DomainChangedEventObject {}
-export type EIP712DomainChangedEvent = TypedEvent<
-  [],
-  EIP712DomainChangedEventObject
->;
-
-export type EIP712DomainChangedEventFilter =
-  TypedEventFilter<EIP712DomainChangedEvent>;
-
-export interface InitializedEventObject {
-  version: BigNumber;
+export namespace EIP712DomainChangedEvent {
+  export type InputTuple = [];
+  export type OutputTuple = [];
+  export interface OutputObject {}
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type InitializedEvent = TypedEvent<[BigNumber], InitializedEventObject>;
 
-export type InitializedEventFilter = TypedEventFilter<InitializedEvent>;
-
-export interface OwnershipTransferredEventObject {
-  previousOwner: string;
-  newOwner: string;
+export namespace InitializedEvent {
+  export type InputTuple = [version: BigNumberish];
+  export type OutputTuple = [version: bigint];
+  export interface OutputObject {
+    version: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type OwnershipTransferredEvent = TypedEvent<
-  [string, string],
-  OwnershipTransferredEventObject
->;
 
-export type OwnershipTransferredEventFilter =
-  TypedEventFilter<OwnershipTransferredEvent>;
-
-export interface TransferEventObject {
-  from: string;
-  to: string;
-  tokenId: BigNumber;
+export namespace OwnershipTransferredEvent {
+  export type InputTuple = [previousOwner: AddressLike, newOwner: AddressLike];
+  export type OutputTuple = [previousOwner: string, newOwner: string];
+  export interface OutputObject {
+    previousOwner: string;
+    newOwner: string;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
 }
-export type TransferEvent = TypedEvent<
-  [string, string, BigNumber],
-  TransferEventObject
->;
 
-export type TransferEventFilter = TypedEventFilter<TransferEvent>;
+export namespace TransferEvent {
+  export type InputTuple = [
+    from: AddressLike,
+    to: AddressLike,
+    tokenId: BigNumberish
+  ];
+  export type OutputTuple = [from: string, to: string, tokenId: bigint];
+  export interface OutputObject {
+    from: string;
+    to: string;
+    tokenId: bigint;
+  }
+  export type Event = TypedContractEvent<InputTuple, OutputTuple, OutputObject>;
+  export type Filter = TypedDeferredTopicFilter<Event>;
+  export type Log = TypedEventLog<Event>;
+  export type LogDescription = TypedLogDescription<Event>;
+}
 
 export interface Master extends BaseContract {
-  connect(signerOrProvider: Signer | Provider | string): this;
-  attach(addressOrName: string): this;
-  deployed(): Promise<this>;
+  connect(runner?: ContractRunner | null): Master;
+  waitForDeployment(): Promise<this>;
 
   interface: MasterInterface;
 
-  queryFilter<TEvent extends TypedEvent>(
-    event: TypedEventFilter<TEvent>,
+  queryFilter<TCEvent extends TypedContractEvent>(
+    event: TCEvent,
     fromBlockOrBlockhash?: string | number | undefined,
     toBlock?: string | number | undefined
-  ): Promise<Array<TEvent>>;
+  ): Promise<Array<TypedEventLog<TCEvent>>>;
+  queryFilter<TCEvent extends TypedContractEvent>(
+    filter: TypedDeferredTopicFilter<TCEvent>,
+    fromBlockOrBlockhash?: string | number | undefined,
+    toBlock?: string | number | undefined
+  ): Promise<Array<TypedEventLog<TCEvent>>>;
 
-  listeners<TEvent extends TypedEvent>(
-    eventFilter?: TypedEventFilter<TEvent>
-  ): Array<TypedListener<TEvent>>;
-  listeners(eventName?: string): Array<Listener>;
-  removeAllListeners<TEvent extends TypedEvent>(
-    eventFilter: TypedEventFilter<TEvent>
-  ): this;
-  removeAllListeners(eventName?: string): this;
-  off: OnEvent<this>;
-  on: OnEvent<this>;
-  once: OnEvent<this>;
-  removeListener: OnEvent<this>;
+  on<TCEvent extends TypedContractEvent>(
+    event: TCEvent,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
+  on<TCEvent extends TypedContractEvent>(
+    filter: TypedDeferredTopicFilter<TCEvent>,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
 
-  functions: {
-    addCancelPolicy(
+  once<TCEvent extends TypedContractEvent>(
+    event: TCEvent,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
+  once<TCEvent extends TypedContractEvent>(
+    filter: TypedDeferredTopicFilter<TCEvent>,
+    listener: TypedListener<TCEvent>
+  ): Promise<this>;
+
+  listeners<TCEvent extends TypedContractEvent>(
+    event: TCEvent
+  ): Promise<Array<TypedListener<TCEvent>>>;
+  listeners(eventName?: string): Promise<Array<Listener>>;
+  removeAllListeners<TCEvent extends TypedContractEvent>(
+    event?: TCEvent
+  ): Promise<this>;
+
+  addCancelPolicy: TypedContractMethod<
+    [
       cancelPolicyId: BigNumberish,
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    approve(
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    balanceOf(owner: string, overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    cancel(
-      ticketId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    cancelPartialTicket(
-      ticketId: BigNumberish,
-      seatIdsToCancel: BigNumberish[],
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    changeDefaultCancelPolicy(
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    eip712Domain(
-      overrides?: CallOverrides
-    ): Promise<
-      [string, string, string, BigNumber, string, string, BigNumber[]] & {
-        fields: string;
-        name: string;
-        version: string;
-        chainId: BigNumber;
-        verifyingContract: string;
-        salt: string;
-        extensions: BigNumber[];
-      }
-    >;
-
-    getApproved(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[string]>;
-
-    getCancellationAmount(
-      ticketId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[string, BigNumber] & { asset: string; amount: BigNumber }>;
-
-    getNonce(user: string, overrides?: CallOverrides): Promise<[BigNumber]>;
-
-    getPurchaseDataSignatureHash(
-      ticketData: TicketLib.StateStruct,
-      overrides?: CallOverrides
-    ): Promise<[string]>;
-
-    getUserVerificationSignatureHash(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[string]>;
-
-    initialize(
-      _owner: string,
-      verifier: string,
-      ttl: BigNumberish,
-      defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    isApprovedForAll(
-      owner: string,
-      operator: string,
-      overrides?: CallOverrides
-    ): Promise<[boolean]>;
-
-    isValidRedeemSignature(
-      tokenId: BigNumberish,
-      signature: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<[boolean]>;
-
-    name(overrides?: CallOverrides): Promise<[string]>;
-
-    owner(overrides?: CallOverrides): Promise<[string]>;
-
-    ownerOf(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[string]>;
-
-    purchase(
-      ticketOwner: string,
-      purchaseData: PurchaseLib.PurchaseDataStruct,
-      signature: BytesLike,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    redeem(
-      ticketIds: BigNumberish[],
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    renounceOwnership(
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    "safeTransferFrom(address,address,uint256)"(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    "safeTransferFrom(address,address,uint256,bytes)"(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      data: BytesLike,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    setApprovalForAll(
-      operator: string,
-      approved: boolean,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    setCancelPolicyIdForShowId(
-      showId: BigNumberish,
-      policyId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    supportsInterface(
-      interfaceId: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<[boolean]>;
-
-    symbol(overrides?: CallOverrides): Promise<[string]>;
-
-    tokenURI(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[string]>;
-
-    transferFrom(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    transferOwnership(
-      newOwner: string,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-
-    withdrawAssets(
-      assets: string[],
-      benefactor: string,
-      overrides?: Overrides & { from?: string }
-    ): Promise<ContractTransaction>;
-  };
-
-  addCancelPolicy(
-    cancelPolicyId: BigNumberish,
-    cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  approve(
-    to: string,
-    tokenId: BigNumberish,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-  cancel(
-    ticketId: BigNumberish,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  cancelPartialTicket(
-    ticketId: BigNumberish,
-    seatIdsToCancel: BigNumberish[],
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  changeDefaultCancelPolicy(
-    cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  eip712Domain(
-    overrides?: CallOverrides
-  ): Promise<
-    [string, string, string, BigNumber, string, string, BigNumber[]] & {
-      fields: string;
-      name: string;
-      version: string;
-      chainId: BigNumber;
-      verifyingContract: string;
-      salt: string;
-      extensions: BigNumber[];
-    }
+      cancelPolicy: MasterLib.CancelPolicyMetadataStruct
+    ],
+    [void],
+    "nonpayable"
   >;
 
-  getApproved(
-    tokenId: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<string>;
+  approve: TypedContractMethod<
+    [to: AddressLike, tokenId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
 
-  getCancellationAmount(
-    ticketId: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<[string, BigNumber] & { asset: string; amount: BigNumber }>;
+  balanceOf: TypedContractMethod<[owner: AddressLike], [bigint], "view">;
 
-  getNonce(user: string, overrides?: CallOverrides): Promise<BigNumber>;
+  cancel: TypedContractMethod<[ticketId: BigNumberish], [void], "nonpayable">;
 
-  getPurchaseDataSignatureHash(
-    ticketData: TicketLib.StateStruct,
-    overrides?: CallOverrides
-  ): Promise<string>;
+  cancelPartialTicket: TypedContractMethod<
+    [ticketId: BigNumberish, seatIdsToCancel: BigNumberish[]],
+    [void],
+    "nonpayable"
+  >;
 
-  getUserVerificationSignatureHash(
-    tokenId: BigNumberish,
-    overrides?: CallOverrides
-  ): Promise<string>;
+  changeDefaultCancelPolicy: TypedContractMethod<
+    [cancelPolicy: MasterLib.CancelPolicyMetadataStruct],
+    [void],
+    "nonpayable"
+  >;
 
-  initialize(
-    _owner: string,
-    verifier: string,
-    ttl: BigNumberish,
-    defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  isApprovedForAll(
-    owner: string,
-    operator: string,
-    overrides?: CallOverrides
-  ): Promise<boolean>;
-
-  isValidRedeemSignature(
-    tokenId: BigNumberish,
-    signature: BytesLike,
-    overrides?: CallOverrides
-  ): Promise<boolean>;
-
-  name(overrides?: CallOverrides): Promise<string>;
-
-  owner(overrides?: CallOverrides): Promise<string>;
-
-  ownerOf(tokenId: BigNumberish, overrides?: CallOverrides): Promise<string>;
-
-  purchase(
-    ticketOwner: string,
-    purchaseData: PurchaseLib.PurchaseDataStruct,
-    signature: BytesLike,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  redeem(
-    ticketIds: BigNumberish[],
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  renounceOwnership(
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  "safeTransferFrom(address,address,uint256)"(
-    from: string,
-    to: string,
-    tokenId: BigNumberish,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  "safeTransferFrom(address,address,uint256,bytes)"(
-    from: string,
-    to: string,
-    tokenId: BigNumberish,
-    data: BytesLike,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  setApprovalForAll(
-    operator: string,
-    approved: boolean,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  setCancelPolicyIdForShowId(
-    showId: BigNumberish,
-    policyId: BigNumberish,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  supportsInterface(
-    interfaceId: BytesLike,
-    overrides?: CallOverrides
-  ): Promise<boolean>;
-
-  symbol(overrides?: CallOverrides): Promise<string>;
-
-  tokenURI(tokenId: BigNumberish, overrides?: CallOverrides): Promise<string>;
-
-  transferFrom(
-    from: string,
-    to: string,
-    tokenId: BigNumberish,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  transferOwnership(
-    newOwner: string,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  withdrawAssets(
-    assets: string[],
-    benefactor: string,
-    overrides?: Overrides & { from?: string }
-  ): Promise<ContractTransaction>;
-
-  callStatic: {
-    addCancelPolicy(
-      cancelPolicyId: BigNumberish,
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    approve(
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    cancel(ticketId: BigNumberish, overrides?: CallOverrides): Promise<void>;
-
-    cancelPartialTicket(
-      ticketId: BigNumberish,
-      seatIdsToCancel: BigNumberish[],
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    changeDefaultCancelPolicy(
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    eip712Domain(
-      overrides?: CallOverrides
-    ): Promise<
-      [string, string, string, BigNumber, string, string, BigNumber[]] & {
+  eip712Domain: TypedContractMethod<
+    [],
+    [
+      [string, string, string, bigint, string, string, bigint[]] & {
         fields: string;
         name: string;
         version: string;
-        chainId: BigNumber;
+        chainId: bigint;
         verifyingContract: string;
         salt: string;
-        extensions: BigNumber[];
+        extensions: bigint[];
       }
-    >;
+    ],
+    "view"
+  >;
 
-    getApproved(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<string>;
+  getApproved: TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
 
-    getCancellationAmount(
-      ticketId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<[string, BigNumber] & { asset: string; amount: BigNumber }>;
+  getCancellationAmount: TypedContractMethod<
+    [ticketId: BigNumberish],
+    [[string, bigint] & { asset: string; amount: bigint }],
+    "view"
+  >;
 
-    getNonce(user: string, overrides?: CallOverrides): Promise<BigNumber>;
+  getNonce: TypedContractMethod<[user: AddressLike], [bigint], "view">;
 
-    getPurchaseDataSignatureHash(
-      ticketData: TicketLib.StateStruct,
-      overrides?: CallOverrides
-    ): Promise<string>;
+  getPurchaseDataSignatureHash: TypedContractMethod<
+    [ticketData: TicketLib.StateStruct],
+    [string],
+    "view"
+  >;
 
-    getUserVerificationSignatureHash(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<string>;
+  getUserVerificationSignatureHash: TypedContractMethod<
+    [tokenId: BigNumberish],
+    [string],
+    "view"
+  >;
 
-    initialize(
-      _owner: string,
-      verifier: string,
+  initialize: TypedContractMethod<
+    [
+      _owner: AddressLike,
+      verifier: AddressLike,
       ttl: BigNumberish,
-      defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: CallOverrides
-    ): Promise<void>;
+      defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct
+    ],
+    [void],
+    "nonpayable"
+  >;
 
-    isApprovedForAll(
-      owner: string,
-      operator: string,
-      overrides?: CallOverrides
-    ): Promise<boolean>;
+  isApprovedForAll: TypedContractMethod<
+    [owner: AddressLike, operator: AddressLike],
+    [boolean],
+    "view"
+  >;
 
-    isValidRedeemSignature(
-      tokenId: BigNumberish,
-      signature: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<boolean>;
+  isValidRedeemSignature: TypedContractMethod<
+    [tokenId: BigNumberish, signature: BytesLike],
+    [boolean],
+    "view"
+  >;
 
-    name(overrides?: CallOverrides): Promise<string>;
+  name: TypedContractMethod<[], [string], "view">;
 
-    owner(overrides?: CallOverrides): Promise<string>;
+  owner: TypedContractMethod<[], [string], "view">;
 
-    ownerOf(tokenId: BigNumberish, overrides?: CallOverrides): Promise<string>;
+  ownerOf: TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
 
-    purchase(
-      ticketOwner: string,
+  purchase: TypedContractMethod<
+    [
+      ticketOwner: AddressLike,
       purchaseData: PurchaseLib.PurchaseDataStruct,
-      signature: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
+      signature: BytesLike
+    ],
+    [bigint],
+    "nonpayable"
+  >;
 
-    redeem(ticketIds: BigNumberish[], overrides?: CallOverrides): Promise<void>;
+  redeem: TypedContractMethod<
+    [ticketIds: BigNumberish[]],
+    [void],
+    "nonpayable"
+  >;
 
-    renounceOwnership(overrides?: CallOverrides): Promise<void>;
+  renounceOwnership: TypedContractMethod<[], [void], "nonpayable">;
 
-    "safeTransferFrom(address,address,uint256)"(
-      from: string,
-      to: string,
+  "safeTransferFrom(address,address,uint256)": TypedContractMethod<
+    [from: AddressLike, to: AddressLike, tokenId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+
+  "safeTransferFrom(address,address,uint256,bytes)": TypedContractMethod<
+    [
+      from: AddressLike,
+      to: AddressLike,
       tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
+      data: BytesLike
+    ],
+    [void],
+    "nonpayable"
+  >;
 
-    "safeTransferFrom(address,address,uint256,bytes)"(
-      from: string,
-      to: string,
+  setApprovalForAll: TypedContractMethod<
+    [operator: AddressLike, approved: boolean],
+    [void],
+    "nonpayable"
+  >;
+
+  setCancelPolicyIdForShowId: TypedContractMethod<
+    [showId: BigNumberish, policyId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+
+  supportsInterface: TypedContractMethod<
+    [interfaceId: BytesLike],
+    [boolean],
+    "view"
+  >;
+
+  symbol: TypedContractMethod<[], [string], "view">;
+
+  tokenURI: TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
+
+  transferFrom: TypedContractMethod<
+    [from: AddressLike, to: AddressLike, tokenId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+
+  transferOwnership: TypedContractMethod<
+    [newOwner: AddressLike],
+    [void],
+    "nonpayable"
+  >;
+
+  withdrawAssets: TypedContractMethod<
+    [assets: AddressLike[], benefactor: AddressLike],
+    [void],
+    "nonpayable"
+  >;
+
+  getFunction<T extends ContractMethod = ContractMethod>(
+    key: string | FunctionFragment
+  ): T;
+
+  getFunction(
+    nameOrSignature: "addCancelPolicy"
+  ): TypedContractMethod<
+    [
+      cancelPolicyId: BigNumberish,
+      cancelPolicy: MasterLib.CancelPolicyMetadataStruct
+    ],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "approve"
+  ): TypedContractMethod<
+    [to: AddressLike, tokenId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "balanceOf"
+  ): TypedContractMethod<[owner: AddressLike], [bigint], "view">;
+  getFunction(
+    nameOrSignature: "cancel"
+  ): TypedContractMethod<[ticketId: BigNumberish], [void], "nonpayable">;
+  getFunction(
+    nameOrSignature: "cancelPartialTicket"
+  ): TypedContractMethod<
+    [ticketId: BigNumberish, seatIdsToCancel: BigNumberish[]],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "changeDefaultCancelPolicy"
+  ): TypedContractMethod<
+    [cancelPolicy: MasterLib.CancelPolicyMetadataStruct],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "eip712Domain"
+  ): TypedContractMethod<
+    [],
+    [
+      [string, string, string, bigint, string, string, bigint[]] & {
+        fields: string;
+        name: string;
+        version: string;
+        chainId: bigint;
+        verifyingContract: string;
+        salt: string;
+        extensions: bigint[];
+      }
+    ],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "getApproved"
+  ): TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
+  getFunction(
+    nameOrSignature: "getCancellationAmount"
+  ): TypedContractMethod<
+    [ticketId: BigNumberish],
+    [[string, bigint] & { asset: string; amount: bigint }],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "getNonce"
+  ): TypedContractMethod<[user: AddressLike], [bigint], "view">;
+  getFunction(
+    nameOrSignature: "getPurchaseDataSignatureHash"
+  ): TypedContractMethod<[ticketData: TicketLib.StateStruct], [string], "view">;
+  getFunction(
+    nameOrSignature: "getUserVerificationSignatureHash"
+  ): TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
+  getFunction(
+    nameOrSignature: "initialize"
+  ): TypedContractMethod<
+    [
+      _owner: AddressLike,
+      verifier: AddressLike,
+      ttl: BigNumberish,
+      defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct
+    ],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "isApprovedForAll"
+  ): TypedContractMethod<
+    [owner: AddressLike, operator: AddressLike],
+    [boolean],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "isValidRedeemSignature"
+  ): TypedContractMethod<
+    [tokenId: BigNumberish, signature: BytesLike],
+    [boolean],
+    "view"
+  >;
+  getFunction(
+    nameOrSignature: "name"
+  ): TypedContractMethod<[], [string], "view">;
+  getFunction(
+    nameOrSignature: "owner"
+  ): TypedContractMethod<[], [string], "view">;
+  getFunction(
+    nameOrSignature: "ownerOf"
+  ): TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
+  getFunction(
+    nameOrSignature: "purchase"
+  ): TypedContractMethod<
+    [
+      ticketOwner: AddressLike,
+      purchaseData: PurchaseLib.PurchaseDataStruct,
+      signature: BytesLike
+    ],
+    [bigint],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "redeem"
+  ): TypedContractMethod<[ticketIds: BigNumberish[]], [void], "nonpayable">;
+  getFunction(
+    nameOrSignature: "renounceOwnership"
+  ): TypedContractMethod<[], [void], "nonpayable">;
+  getFunction(
+    nameOrSignature: "safeTransferFrom(address,address,uint256)"
+  ): TypedContractMethod<
+    [from: AddressLike, to: AddressLike, tokenId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "safeTransferFrom(address,address,uint256,bytes)"
+  ): TypedContractMethod<
+    [
+      from: AddressLike,
+      to: AddressLike,
       tokenId: BigNumberish,
-      data: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<void>;
+      data: BytesLike
+    ],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "setApprovalForAll"
+  ): TypedContractMethod<
+    [operator: AddressLike, approved: boolean],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "setCancelPolicyIdForShowId"
+  ): TypedContractMethod<
+    [showId: BigNumberish, policyId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "supportsInterface"
+  ): TypedContractMethod<[interfaceId: BytesLike], [boolean], "view">;
+  getFunction(
+    nameOrSignature: "symbol"
+  ): TypedContractMethod<[], [string], "view">;
+  getFunction(
+    nameOrSignature: "tokenURI"
+  ): TypedContractMethod<[tokenId: BigNumberish], [string], "view">;
+  getFunction(
+    nameOrSignature: "transferFrom"
+  ): TypedContractMethod<
+    [from: AddressLike, to: AddressLike, tokenId: BigNumberish],
+    [void],
+    "nonpayable"
+  >;
+  getFunction(
+    nameOrSignature: "transferOwnership"
+  ): TypedContractMethod<[newOwner: AddressLike], [void], "nonpayable">;
+  getFunction(
+    nameOrSignature: "withdrawAssets"
+  ): TypedContractMethod<
+    [assets: AddressLike[], benefactor: AddressLike],
+    [void],
+    "nonpayable"
+  >;
 
-    setApprovalForAll(
-      operator: string,
-      approved: boolean,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    setCancelPolicyIdForShowId(
-      showId: BigNumberish,
-      policyId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    supportsInterface(
-      interfaceId: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<boolean>;
-
-    symbol(overrides?: CallOverrides): Promise<string>;
-
-    tokenURI(tokenId: BigNumberish, overrides?: CallOverrides): Promise<string>;
-
-    transferFrom(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    transferOwnership(
-      newOwner: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-
-    withdrawAssets(
-      assets: string[],
-      benefactor: string,
-      overrides?: CallOverrides
-    ): Promise<void>;
-  };
+  getEvent(
+    key: "Approval"
+  ): TypedContractEvent<
+    ApprovalEvent.InputTuple,
+    ApprovalEvent.OutputTuple,
+    ApprovalEvent.OutputObject
+  >;
+  getEvent(
+    key: "ApprovalForAll"
+  ): TypedContractEvent<
+    ApprovalForAllEvent.InputTuple,
+    ApprovalForAllEvent.OutputTuple,
+    ApprovalForAllEvent.OutputObject
+  >;
+  getEvent(
+    key: "CancelledTicket"
+  ): TypedContractEvent<
+    CancelledTicketEvent.InputTuple,
+    CancelledTicketEvent.OutputTuple,
+    CancelledTicketEvent.OutputObject
+  >;
+  getEvent(
+    key: "EIP712DomainChanged"
+  ): TypedContractEvent<
+    EIP712DomainChangedEvent.InputTuple,
+    EIP712DomainChangedEvent.OutputTuple,
+    EIP712DomainChangedEvent.OutputObject
+  >;
+  getEvent(
+    key: "Initialized"
+  ): TypedContractEvent<
+    InitializedEvent.InputTuple,
+    InitializedEvent.OutputTuple,
+    InitializedEvent.OutputObject
+  >;
+  getEvent(
+    key: "OwnershipTransferred"
+  ): TypedContractEvent<
+    OwnershipTransferredEvent.InputTuple,
+    OwnershipTransferredEvent.OutputTuple,
+    OwnershipTransferredEvent.OutputObject
+  >;
+  getEvent(
+    key: "Transfer"
+  ): TypedContractEvent<
+    TransferEvent.InputTuple,
+    TransferEvent.OutputTuple,
+    TransferEvent.OutputObject
+  >;
 
   filters: {
-    "Approval(address,address,uint256)"(
-      owner?: string | null,
-      approved?: string | null,
-      tokenId?: BigNumberish | null
-    ): ApprovalEventFilter;
-    Approval(
-      owner?: string | null,
-      approved?: string | null,
-      tokenId?: BigNumberish | null
-    ): ApprovalEventFilter;
-
-    "ApprovalForAll(address,address,bool)"(
-      owner?: string | null,
-      operator?: string | null,
-      approved?: null
-    ): ApprovalForAllEventFilter;
-    ApprovalForAll(
-      owner?: string | null,
-      operator?: string | null,
-      approved?: null
-    ): ApprovalForAllEventFilter;
-
-    "CancelledTicket(uint256)"(
-      ticketId?: BigNumberish | null
-    ): CancelledTicketEventFilter;
-    CancelledTicket(ticketId?: BigNumberish | null): CancelledTicketEventFilter;
-
-    "EIP712DomainChanged()"(): EIP712DomainChangedEventFilter;
-    EIP712DomainChanged(): EIP712DomainChangedEventFilter;
-
-    "Initialized(uint64)"(version?: null): InitializedEventFilter;
-    Initialized(version?: null): InitializedEventFilter;
-
-    "OwnershipTransferred(address,address)"(
-      previousOwner?: string | null,
-      newOwner?: string | null
-    ): OwnershipTransferredEventFilter;
-    OwnershipTransferred(
-      previousOwner?: string | null,
-      newOwner?: string | null
-    ): OwnershipTransferredEventFilter;
-
-    "Transfer(address,address,uint256)"(
-      from?: string | null,
-      to?: string | null,
-      tokenId?: BigNumberish | null
-    ): TransferEventFilter;
-    Transfer(
-      from?: string | null,
-      to?: string | null,
-      tokenId?: BigNumberish | null
-    ): TransferEventFilter;
-  };
-
-  estimateGas: {
-    addCancelPolicy(
-      cancelPolicyId: BigNumberish,
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    approve(
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    balanceOf(owner: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    cancel(
-      ticketId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    cancelPartialTicket(
-      ticketId: BigNumberish,
-      seatIdsToCancel: BigNumberish[],
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    changeDefaultCancelPolicy(
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    eip712Domain(overrides?: CallOverrides): Promise<BigNumber>;
-
-    getApproved(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    getCancellationAmount(
-      ticketId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    getNonce(user: string, overrides?: CallOverrides): Promise<BigNumber>;
-
-    getPurchaseDataSignatureHash(
-      ticketData: TicketLib.StateStruct,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    getUserVerificationSignatureHash(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    initialize(
-      _owner: string,
-      verifier: string,
-      ttl: BigNumberish,
-      defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    isApprovedForAll(
-      owner: string,
-      operator: string,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    isValidRedeemSignature(
-      tokenId: BigNumberish,
-      signature: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    name(overrides?: CallOverrides): Promise<BigNumber>;
-
-    owner(overrides?: CallOverrides): Promise<BigNumber>;
-
-    ownerOf(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    purchase(
-      ticketOwner: string,
-      purchaseData: PurchaseLib.PurchaseDataStruct,
-      signature: BytesLike,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    redeem(
-      ticketIds: BigNumberish[],
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    renounceOwnership(
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    "safeTransferFrom(address,address,uint256)"(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    "safeTransferFrom(address,address,uint256,bytes)"(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      data: BytesLike,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    setApprovalForAll(
-      operator: string,
-      approved: boolean,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    setCancelPolicyIdForShowId(
-      showId: BigNumberish,
-      policyId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    supportsInterface(
-      interfaceId: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    symbol(overrides?: CallOverrides): Promise<BigNumber>;
-
-    tokenURI(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<BigNumber>;
-
-    transferFrom(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    transferOwnership(
-      newOwner: string,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-
-    withdrawAssets(
-      assets: string[],
-      benefactor: string,
-      overrides?: Overrides & { from?: string }
-    ): Promise<BigNumber>;
-  };
-
-  populateTransaction: {
-    addCancelPolicy(
-      cancelPolicyId: BigNumberish,
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    approve(
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    balanceOf(
-      owner: string,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    cancel(
-      ticketId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    cancelPartialTicket(
-      ticketId: BigNumberish,
-      seatIdsToCancel: BigNumberish[],
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    changeDefaultCancelPolicy(
-      cancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    eip712Domain(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    getApproved(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    getCancellationAmount(
-      ticketId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    getNonce(
-      user: string,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    getPurchaseDataSignatureHash(
-      ticketData: TicketLib.StateStruct,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    getUserVerificationSignatureHash(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    initialize(
-      _owner: string,
-      verifier: string,
-      ttl: BigNumberish,
-      defaultCancelPolicy: MasterLib.CancelPolicyMetadataStruct,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    isApprovedForAll(
-      owner: string,
-      operator: string,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    isValidRedeemSignature(
-      tokenId: BigNumberish,
-      signature: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    name(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    owner(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    ownerOf(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    purchase(
-      ticketOwner: string,
-      purchaseData: PurchaseLib.PurchaseDataStruct,
-      signature: BytesLike,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    redeem(
-      ticketIds: BigNumberish[],
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    renounceOwnership(
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    "safeTransferFrom(address,address,uint256)"(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    "safeTransferFrom(address,address,uint256,bytes)"(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      data: BytesLike,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    setApprovalForAll(
-      operator: string,
-      approved: boolean,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    setCancelPolicyIdForShowId(
-      showId: BigNumberish,
-      policyId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    supportsInterface(
-      interfaceId: BytesLike,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    symbol(overrides?: CallOverrides): Promise<PopulatedTransaction>;
-
-    tokenURI(
-      tokenId: BigNumberish,
-      overrides?: CallOverrides
-    ): Promise<PopulatedTransaction>;
-
-    transferFrom(
-      from: string,
-      to: string,
-      tokenId: BigNumberish,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    transferOwnership(
-      newOwner: string,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
-
-    withdrawAssets(
-      assets: string[],
-      benefactor: string,
-      overrides?: Overrides & { from?: string }
-    ): Promise<PopulatedTransaction>;
+    "Approval(address,address,uint256)": TypedContractEvent<
+      ApprovalEvent.InputTuple,
+      ApprovalEvent.OutputTuple,
+      ApprovalEvent.OutputObject
+    >;
+    Approval: TypedContractEvent<
+      ApprovalEvent.InputTuple,
+      ApprovalEvent.OutputTuple,
+      ApprovalEvent.OutputObject
+    >;
+
+    "ApprovalForAll(address,address,bool)": TypedContractEvent<
+      ApprovalForAllEvent.InputTuple,
+      ApprovalForAllEvent.OutputTuple,
+      ApprovalForAllEvent.OutputObject
+    >;
+    ApprovalForAll: TypedContractEvent<
+      ApprovalForAllEvent.InputTuple,
+      ApprovalForAllEvent.OutputTuple,
+      ApprovalForAllEvent.OutputObject
+    >;
+
+    "CancelledTicket(uint256)": TypedContractEvent<
+      CancelledTicketEvent.InputTuple,
+      CancelledTicketEvent.OutputTuple,
+      CancelledTicketEvent.OutputObject
+    >;
+    CancelledTicket: TypedContractEvent<
+      CancelledTicketEvent.InputTuple,
+      CancelledTicketEvent.OutputTuple,
+      CancelledTicketEvent.OutputObject
+    >;
+
+    "EIP712DomainChanged()": TypedContractEvent<
+      EIP712DomainChangedEvent.InputTuple,
+      EIP712DomainChangedEvent.OutputTuple,
+      EIP712DomainChangedEvent.OutputObject
+    >;
+    EIP712DomainChanged: TypedContractEvent<
+      EIP712DomainChangedEvent.InputTuple,
+      EIP712DomainChangedEvent.OutputTuple,
+      EIP712DomainChangedEvent.OutputObject
+    >;
+
+    "Initialized(uint64)": TypedContractEvent<
+      InitializedEvent.InputTuple,
+      InitializedEvent.OutputTuple,
+      InitializedEvent.OutputObject
+    >;
+    Initialized: TypedContractEvent<
+      InitializedEvent.InputTuple,
+      InitializedEvent.OutputTuple,
+      InitializedEvent.OutputObject
+    >;
+
+    "OwnershipTransferred(address,address)": TypedContractEvent<
+      OwnershipTransferredEvent.InputTuple,
+      OwnershipTransferredEvent.OutputTuple,
+      OwnershipTransferredEvent.OutputObject
+    >;
+    OwnershipTransferred: TypedContractEvent<
+      OwnershipTransferredEvent.InputTuple,
+      OwnershipTransferredEvent.OutputTuple,
+      OwnershipTransferredEvent.OutputObject
+    >;
+
+    "Transfer(address,address,uint256)": TypedContractEvent<
+      TransferEvent.InputTuple,
+      TransferEvent.OutputTuple,
+      TransferEvent.OutputObject
+    >;
+    Transfer: TypedContractEvent<
+      TransferEvent.InputTuple,
+      TransferEvent.OutputTuple,
+      TransferEvent.OutputObject
+    >;
   };
 }

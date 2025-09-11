@@ -6,7 +6,7 @@ import "solady/src/utils/SafeTransferLib.sol";
 
 import "./PurchaseLib.sol";
 
-import "../interface/Errors.sol";
+import "../interfaces/Errors.sol";
 
 library MasterLib {
     using EnumerableMap for EnumerableMap.AddressToUintMap;

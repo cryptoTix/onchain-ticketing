@@ -1,17 +1,17 @@
 export const SlotDerivation = {
   "abi": [],
   "bytecode": {
-    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c3f51f0b17fd0cb70322accc7b2a7c6d505b8683bdc1a45b004ad3b773e1f2d864736f6c634300081a0033",
-    "sourceMap": "1598:3723:50:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;1598:3723:50;;;;;;;;;;;;;;;;;",
+    "object": "0x6080806040523460175760399081601c823930815050f35b5f80fdfe5f80fdfea2646970667358221220570129ceabda162538f54a2285785cc6851d46bb23b20c1b4d44ca8ffd61a36d64736f6c634300081a0033",
+    "sourceMap": "1598:3723:50:-:0;;;;;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
-    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c3f51f0b17fd0cb70322accc7b2a7c6d505b8683bdc1a45b004ad3b773e1f2d864736f6c634300081a0033",
-    "sourceMap": "1598:3723:50:-:0;;;;;;;;",
+    "object": "0x5f80fdfea2646970667358221220570129ceabda162538f54a2285785cc6851d46bb23b20c1b4d44ca8ffd61a36d64736f6c634300081a0033",
+    "sourceMap": "1598:3723:50:-:0;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for computing storage (and transient storage) locations from namespaces and deriving slots corresponding to standard patterns. The derivation method for array and mapping matches the storage layout used by the solidity language / compiler. See https://docs.soliditylang.org/en/v0.8.20/internals/layout_in_storage.html#mappings-and-dynamic-arrays[Solidity docs for mappings and dynamic arrays.]. Example usage: ```solidity contract Example {     // Add the library methods     using StorageSlot for bytes32;     using SlotDerivation for bytes32;     // Declare a namespace     string private constant _NAMESPACE = \\\"<namespace>\\\" // eg. OpenZeppelin.Slot     function setValueInNamespace(uint256 key, address newValue) internal {         _NAMESPACE.erc7201Slot().deriveMapping(key).getAddressSlot().value = newValue;     }     function getValueInNamespace(uint256 key) internal view returns (address) {         return _NAMESPACE.erc7201Slot().deriveMapping(key).getAddressSlot().value;     } } ``` TIP: Consider using this library along with {StorageSlot}. NOTE: This library provides a way to manipulate storage locations in a non-standard way. Tooling for checking upgrade safety will ignore the slots accessed through this library. _Available since v5.1._\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol\":\"SlotDerivation\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"]},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol\":{\"keccak256\":\"0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb\",\"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Library for computing storage (and transient storage) locations from namespaces and deriving slots corresponding to standard patterns. The derivation method for array and mapping matches the storage layout used by the solidity language / compiler. See https://docs.soliditylang.org/en/v0.8.20/internals/layout_in_storage.html#mappings-and-dynamic-arrays[Solidity docs for mappings and dynamic arrays.]. Example usage: ```solidity contract Example {     // Add the library methods     using StorageSlot for bytes32;     using SlotDerivation for bytes32;     // Declare a namespace     string private constant _NAMESPACE = \\\"<namespace>\\\" // eg. OpenZeppelin.Slot     function setValueInNamespace(uint256 key, address newValue) internal {         _NAMESPACE.erc7201Slot().deriveMapping(key).getAddressSlot().value = newValue;     }     function getValueInNamespace(uint256 key) internal view returns (address) {         return _NAMESPACE.erc7201Slot().deriveMapping(key).getAddressSlot().value;     } } ``` TIP: Consider using this library along with {StorageSlot}. NOTE: This library provides a way to manipulate storage locations in a non-standard way. Tooling for checking upgrade safety will ignore the slots accessed through this library. _Available since v5.1._\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol\":\"SlotDerivation\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@openzeppelin-upgradeable/=node_modules/@openzeppelin/contracts-upgradeable/\",\":@openzeppelin/=node_modules/@openzeppelin/\",\":forge-std/=lib/forge-std/src/\",\":solady/=node_modules/solady/\"],\"viaIR\":true},\"sources\":{\"node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol\":{\"keccak256\":\"0x8447b57b63810fe2e367c09496a966f143ec0e825d71ddb9fce2506cff84b618\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://996cb48f793bf151555045b37138e36b3cdb31d6bc6552d3149285260be00cfb\",\"dweb:/ipfs/QmcLaTTMNVbkMx58xhkp6GeFt4V3GtSyupZuaKG3vYW2Zc\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.26+commit.8a97fa7a"
@@ -47,8 +47,9 @@ export const SlotDerivation = {
       "compilationTarget": {
         "node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol": "SlotDerivation"
       },
-      "evmVersion": "paris",
-      "libraries": {}
+      "evmVersion": "cancun",
+      "libraries": {},
+      "viaIR": true
     },
     "sources": {
       "node_modules/@openzeppelin/contracts/utils/SlotDerivation.sol": {
@@ -291,7 +292,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45597,
@@ -770,7 +771,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45632,
@@ -1060,7 +1061,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45641,
@@ -1356,7 +1357,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45653,
@@ -1625,7 +1626,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45665,
@@ -1894,7 +1895,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45677,
@@ -2163,7 +2164,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45689,
@@ -2591,7 +2592,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45701,
@@ -3026,7 +3027,7 @@ export const SlotDerivation = {
                       }
                     ]
                   },
-                  "evmVersion": "paris",
+                  "evmVersion": "cancun",
                   "externalReferences": [
                     {
                       "declaration": 45713,
