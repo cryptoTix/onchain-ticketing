@@ -30,7 +30,7 @@ export const CustomTicketOwner: React.FC<CustomTicketOwnerProps> = ({
     />
     {!ticketOwner ?
       <button
-        className="text hover:underline mt-2"
+        className="text hover:underline"
         onClick={() => setOpenCustomOwnerInputBox(true)}
         >
         Need custom ticket owner?

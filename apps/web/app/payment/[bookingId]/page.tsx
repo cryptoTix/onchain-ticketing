@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 // import { fetchPaymentRequest, fetchValidationSignature } from "../actions/migration";
@@ -33,6 +33,8 @@ import { InfoButton } from "../../components/Button/infoButton";
 import { TimerCard } from "../../components/Timer/TimerCard";
 import { PAYMENT_DURATION } from "../../utils/consts";
 import PaymentButton from "../../components/Button/paymentButton";
+import { useLocationStore } from "../../store/location";
+import { useQuery } from "@tanstack/react-query";
 
 export default function PaymentPage({
   params
@@ -42,7 +44,7 @@ export default function PaymentPage({
   const router = useRouter();
   const searchParams = useSearchParams();
   const [bookingId, setBookingId] = useState<string>()
-  const [bookingData, setBookingData] = useState<BookingData>()
+  const [bookingData, setBookingData] = useState<BookingData>(null)
   const requestId = searchParams.get("requestId")!; // TODO: display some invalid page on invalid request ID
   // const [paymentMetadata, setPaymentMetadata] = useState<PaymentMetadata>()
   // const [validationSignatureResponse, setValidationSignatureResponse] = useState<ValidationSignatureResponse>()
@@ -54,11 +56,13 @@ export default function PaymentPage({
   const [openDialogBox, setOpenDialogBox] = useState<boolean>(false);
   const [isPendingTx, setPendingTx] = useState<boolean>(false);
   const [seatStr, setSeatStr] = useState<string>()
-  const {isConnected, address, chainId} =  useAccount()
+  // const {setIsModifyDisabled} = useLocationStore()
+  // setIsModifyDisabled(true)
 
   // Fetch and load the booking metadata for requestId
   useEffect(() => {
     async function loadBookingData() {
+      setLoader(true)
       console.log("got boking id", params.bookingId)
       setBookingId(params.bookingId)
       setBookingData(
@@ -70,48 +74,14 @@ export default function PaymentPage({
     }
     loadBookingData()
   }, [params])
-  // // Fetch the assets accepted by seller
-  // useEffect(() => {
-  //   async function loadAssets() {
-  //     const assets = paymentMetadata !== undefined ? 
-  //     await fetchSellerAcceptedAssets(paymentMetadata.sellerId) : []
-  //     for (let index = 0; index < assets.length; index++) {
-  //       if (assets[index]!.chainId === selectedChain.id) {
-  //         setSelectedAsset(assets[index]);
-  //         break;
-  //       }
-  //     }
-  //     setAcceptedAssets(assets)
-  //   }
-  //   loadAssets()
-  // }, [paymentMetadata])
-
-  // // Set assets
-  // useEffect(() => {
-  //   setSelectedAsset({
-  //     symbol : ""
-  //   } as Asset)
-  //   for (let index = 0; index < acceptedAssets.length; index++) {
-  //     if (acceptedAssets[index]!.chainId === selectedChain.id) {
-  //       setSelectedAsset(acceptedAssets[index]);
-  //       break;
-  //     }
-  //     if(index === acceptedAssets.length - 1) setSelectedAsset({symbol : ""} as Asset)
-  //   }
-  // }, [selectedChain])
-  // async function onClickApproveNPurchase() {
-  //   if (selectedAsset !== undefined && selectedAsset.chainId === selectedChain.id){
-  //     const validationData = await fetchValidationSignature({
-  //       paymentRequestId : requestId,
-  //       assetAddress : selectedAsset.address,
-  //       chainId : selectedChain.id,
-  //       user : address as `0x{string}`,
-  //     })
-  //     setValidationSignatureResponse(validationData)
-  //     setIsApproved(await isApproved(validationData))
-  //     setOpenDialogBox(true);
-  //   }
-  // }
+  useEffect(() => {
+    async function checkApproval() {
+      if(bookingData) {
+        if(await isApproved(bookingData.paymentData)) setIsApproved(true)
+      }
+    }
+    checkApproval()
+  }, [bookingData])
   async function onClickApprove() {
     if (!approved) {
       setPendingTx(true)
@@ -167,7 +137,7 @@ export default function PaymentPage({
               </div>
             </div>
 
-            <div className="bg-purple-700 text-white px-4 py-2 mt-4 flex justify-between rounded">
+            <div className="text-yellow-500 font-bold mb-2 flex justify-between rounded">
               <span>Amount Payable</span>
               <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
             </div>

@@ -1,27 +1,22 @@
-"use client";
+"use client"
 
-import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
 
-import Decimal from "decimal.js";
-import { useAccount, useFeeData } from "wagmi";
-import { submitPaymentRequest } from "../actions/migration";
+import { useAccount } from "wagmi";
 import SeatLayoutViewer from "../components/SeatLayout";
-import { SeatClass, SeatLayout, SeatLayoutRequest, SellerShowIdInterface, ShowInterface } from "../../../../shared";
-import { fetchSeatLayout } from "../api/fetchSeatLayout";
-import { SeatData } from "../models/paymentRequest";
+import { SeatClass, SellerShowIdInterface } from "../../../../shared";
 import { ShowDetailsViewer } from "../components/ShowDetails/ShowDetails";
 import { CurrencySelectionPage } from "../components/CurrencySelection";
-import { CurrentPage } from "../types/state/SeatSelectionState";
-import { fetchSellerShowData, reserveSeats } from "../api/fetchSellers";
+import { SeatSelectionPage } from "../types/state/PageState";
+import { fetchSellerShowData } from "../api/fetchSellers";
 import { fetchMovies } from "../api/fetchMovies";
 import { MovieInterface } from "../models/movie";
-import { ToastNotification } from "../components/Toast/ToastNotification";
 import toast from "react-hot-toast";
-import { ConfirmBookingDialog } from "../components/DialogBox/ConfirmBooking";
 import { Address, isAddress } from "viem";
+import { useLocationStore } from "../store/location";
 
-export default function SeatSelectionPage() {
+export default function Seats() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const sellerId = searchParams.get("sellerId");
@@ -29,13 +24,15 @@ export default function SeatSelectionPage() {
   const movieId = searchParams.get("movieId");
 
   const [selectedSeats, setSelectedSeats] = useState<Record<string, SeatClass>>({});
-  const [currentPage, setCurrentPage] = useState<CurrentPage>("SEAT_SELECTION");
+  const [currentPage, setCurrentPage] = useState<SeatSelectionPage>("SEAT_SELECTION");
   const [totalPrice, setTotalPrice] = useState<number>(0);
   const [showDetails, setShowDeatils] = useState<SellerShowIdInterface | null>()
   const [movieDetails, setMovieDeatils] = useState<MovieInterface | null>()
   const [ownerAddress, setOwnerAddress] = useState<Address>(null)
 
   const { address, isConnected } = useAccount()
+  // const {setIsModifyDisabled} = useLocationStore()
+  // setIsModifyDisabled(true)
 
   useEffect(() => {
       async function setInitialData() {
@@ -117,3 +114,7 @@ export default function SeatSelectionPage() {
     <CurrencySelectionPage sellerId={sellerId} selectedSeats={selectedSeats} sellerAndshowDetails={showDetails} movieDetails={movieDetails} totalPrice={totalPrice} ticketOwner={ownerAddress} onClickPrevious={handleClickPrevious} onClickPurchase={proceedToPurchase} resetCustomOwnerAddress={resetCustomOwerAddress} onChangeCustomOwnerAddress={onChangeCustomOwerAddress}/> 
   );
 }
+
+// function getSeatchParams(params:type) {
+  
+// }

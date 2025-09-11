@@ -2,7 +2,7 @@ import React from "react";
 import { SellerProps } from "../../types/props/SellerProps";
 import { isSameDate } from "../../utils/helpers";
 
-const SellerCard: React.FC<SellerProps> = ({ sellerData, index, selectedDate, onSelectShowId }) => {
+const SellerCard: React.FC<SellerProps> = ({ sellerData, index, selectedShowId, onSelectShowId }) => {
   return (
     <div className={`w-[85%] gap-y-4 ${index != 0 ? "border-t-2 border-gray": ""}`}>
       {/* Theatre Name & Location */}
@@ -18,7 +18,7 @@ const SellerCard: React.FC<SellerProps> = ({ sellerData, index, selectedDate, on
             </div>
             {/* <p className="text-right text-gray-400 mt-3">{shows[0].price}</p> */}
             <div className="w-3/4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 justify-start">
-              {shows.filter((show) => isSameDate(selectedDate, show.showTime)).map(show => (
+              {shows.map(show => (
                 <button
                   key={show.showTime}
                   onClick={() => onSelectShowId({
@@ -29,7 +29,7 @@ const SellerCard: React.FC<SellerProps> = ({ sellerData, index, selectedDate, on
                     sellerName : sellerData.name,
                     showTime : new Date(show.showTime)
                   })}
-                  className="bg-gray-800 text-white px-4 py-1 rounded-md hover:bg-blue-500 transition"
+                  className={`${selectedShowId.localeCompare(show.id) == 0 ? "bg-blue-500" : "bg-gray-800"} text-white px-4 py-1 rounded-md hover:bg-blue-500 transition`}
                 >
                   {new Date(show.showTime).getHours()}:
                   {(new Date(show.showTime).getMinutes() < 10 ? "0" : "") + new Date(show.showTime).getMinutes()}

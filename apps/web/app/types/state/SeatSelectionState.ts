@@ -1,1 +1,0 @@
-export type CurrentPage = "SEAT_SELECTION" | "CURRENCY_SELECTION";

@@ -4,7 +4,7 @@ import { ShowState } from "../state/ShowState";
 export interface SellerProps {
     sellerData : SellerInterface;
     index : number;
-    selectedDate : Date;
+    selectedShowId : string;
     onSelectShowId: (show: ShowState) => void;
 }
   

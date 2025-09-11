@@ -15,6 +15,8 @@ import { useAccount } from "wagmi";
 import toast from "react-hot-toast";
 import { CustomTicketOwner } from "../CustomTicketOwner/CustomTicketOwner";
 import { InfoButton } from "../Button/infoButton";
+import { ConnectButton } from "../ConnectButton/ConnectButton";
+import { DropdownCard } from "../DropdownMenu/DropdownCard";
 
 export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
     sellerId, selectedSeats, sellerAndshowDetails, movieDetails, totalPrice, ticketOwner,
@@ -77,120 +79,45 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
     }
   }
   return (
-      <div className="w-full text-white mt-12">
+      <div className="w-full mt-12">
         <ToastNotification/>
         <ConfirmBookingDialog isOpen={openConfirmBooking} onClose={() => setOpenConfirmBooking(false)} onConfirm={handleConfirmPurchase} seatCount={Object.entries(selectedSeats).length} totalPrice={totalPrice}/>
-        <main className="flex items-start justify-between">
-          <section className="bg-gradient-to-r from-indigo-300 to-purple-300 p-8 rounded-xl w-[65%] h-[30vh]">
-            <h2 className="text-lg font-semibold mb-4">PAYMENT</h2>
+        <div className="flex items-start justify-between">
+          <div className="bg-gradient-to-r from-indigo-300 to-purple-300 rounded-xl w-[65%] space-y-4 p-4 text-black">
+            <h2 className="text-lg font-semibold">PAYMENT</h2>
             <div className="flex gap-8 mb-6">
               <div className="w-1/2">
-                <p className="text-light font-semibold text-sm">Select Chain</p>
-                <Menu>
-                  <Menu.Button className="w-full p-2 rounded text-white border border-white">
-                    <div className="flex gap-2 items-center">
-                      <Image
-                        src={chainImageMap[parseInt(selectedNetwork)] ?? ""}
-                        alt={fetchChainName(selectedNetwork) ?? ""}
-                        className="size-6"
-                      />
-                      <p className="font-semibold text-base">
-                        {fetchChainName(selectedNetwork)}
-                      </p>
-                      <div className="ml-auto">
-                        <DarkChevronDownIcon />
-                      </div>
-                    </div>
-                  </Menu.Button>
-                  <div className="relative w-full">
-                    {Object.entries(supportedNetworks.tokens).length > 1 && (
-                      <Menu.Items className="absolute z-10 w-full bg-gradient-to-r from-indigo-300 to-purple-300 p-2 rounded text-white border border-white">
-                        {Object.entries(supportedNetworks.tokens).map(([network], index) => (
-                          <Menu.Item key={index}>
-                            <div
-                              className="hover:bg-purple-100 hover:cursor-pointer rounded-[0.3rem]"
-                              onClick={() => setSelectedNetwork(network)}
-                            >
-                              <div className="flex gap-2 py-2 px-2">
-                                <Image
-                                  src={chainImageMap[parseInt(network)] ?? ""}
-                                  alt={fetchChainName(network)}
-                                  className="size-6"
-                                />
-                                <p className="font-[500] text-base">
-                                  {fetchChainName(network)}
-                                </p>
-                              </div>
-                            </div>
-                          </Menu.Item>
-                        ))}
-                      </Menu.Items>
-                    )}
-                  </div>
-                </Menu>
+                <p className="font-semibold text-sm">Select Chain</p>
+                <DropdownCard
+                  selectedItemVal={selectedNetwork}
+                  items={Object.entries(supportedNetworks.tokens).map(([network, _]) => { return {itemImage : chainImageMap[parseInt(network)], itemValue : network}})}
+                  onClickItem={(val) => setSelectedNetwork(val)}
+                  isNetwork={true}/>
               </div>
               <div className="w-1/2">
                 <p className="text-light font-semibold text-sm">Select Cryptocurrency</p>
-                <Menu>
-                  <Menu.Button className="w-full p-2 rounded bg-gray text-white border border-white">
-                    <div className="flex gap-2 items-center">
-                      {selectedCurrency == "" ? (
-                        <div className="animate-pulse flex space-x-4 w-full">
-                          <div className="rounded-md bg-gray-300 h-8 w-full" />
-                        </div>
-                      ) : (
-                        <>
-                          <Image
-                            src={getTokenImg(selectedCurrency)}
-                            alt={selectedCurrency}
-                            className="size-6"
-                          />
-                          <p className="font-semibold text-base">
-                            {selectedCurrency}
-                          </p>
-                          <div className="ml-auto">
-                            <DarkChevronDownIcon />
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </Menu.Button>
-                  <div className="relative w-full">
-                    {supportedNetworks.tokens[selectedNetwork] && supportedNetworks.tokens[selectedNetwork].length > 1 && (
-                      <Menu.Items className="absolute z-10 w-full bg-gradient-to-r from-indigo-300 to-purple-300 p-2 rounded text-white border border-white">
-                        {supportedNetworks.tokens[parseInt(selectedNetwork)].map((asset, index) => (
-                          <Menu.Item key={index}>
-                            <div
-                              className="hover:bg-purple-100 hover:cursor-pointer rounded-[0.3rem]"
-                              onClick={() => setSelectedCurrency(asset)}
-                            >
-                              <div className="flex gap-2 py-2 px-2">
-                              <Image
-                                src={getTokenImg(asset)}
-                                alt={asset}
-                                className="size-6"
-                                />
-                                <p className="font-semibold text-base">
-                                  {asset}
-                                </p>
-                              </div>
-                            </div>
-                          </Menu.Item>
-                        ))}
-                      </Menu.Items>
-                    )}
-                  </div>
-                </Menu>
+                {selectedCurrency == "" ? 
+                <div className="animate-pulse flex space-x-4 w-full">
+                  <div className="rounded-md bg-gray-300 h-8 w-full" />
+                </div> :
+                <DropdownCard
+                  selectedItemVal={selectedCurrency}
+                  items={supportedNetworks.tokens[parseInt(selectedNetwork)].map(token => { return {itemImage : getTokenImg(token), itemValue : token}})}
+                  onClickItem={(val) => setSelectedCurrency(val)}
+                  isNetwork={false}/>}
               </div>
             </div>
-            {/* <h2 className="text-white font-semibold text-lg mb-4 items-center">ADD TIMER</h2> */}
-            <div className="flex w-[55%] justify-start mt-14 gap-4">
-              <button className="w-[45%] bg-purple-700 border border-white py-3 rounded-xl hover:bg-purple-500 transition" onClick={openConfirmBookingDialogBox}>Purchase</button>
-              <button className="w-[45%] border border-white py-3 rounded-xl hover:bg-gray-300 transition" onClick={onClickPrevious}>Go back</button>
-            </div>
+            {
+              !isConnected ?
+              <ConnectButton/> :
+              <div className="flex w-[55%] justify-start gap-4">
+                <button className="w-[45%] bg-purple-700 text-white py-3 rounded-xl hover:bg-purple-500 transition" onClick={openConfirmBookingDialogBox}>Purchase</button>
+                <button className="w-[45%] border border-white py-3 rounded-xl hover:bg-gray-300 transition" onClick={onClickPrevious}>Go back</button>
+              </div>
+            }
             <CustomTicketOwner ticketOwner={ticketOwner} resetTicketOwner={resetCustomOwnerAddress} setTicketOwner={onChangeCustomOwnerAddress}/>
-          </section>
-        <section className="bg-[#0b0033] p-6 rounded-xl w-[30%] overflow-auto">
+          </div>
+          <div className="bg-[#0b0033] p-6 rounded-xl w-[30%] overflow-auto">
             <h2 className="text-white font-semibold text-lg mb-4">BOOKING SUMMARY</h2>
             <p className="text-sm mt-8">{getSeatIdsToStr(selectedSeats) + " (" + (selectedSeats ? Object.entries(selectedSeats).length : 0)  + "Tickets)"}</p>
             <p className="text-sm mt-4">{"Screen: " + sellerAndshowDetails.show.screenId}</p>
@@ -211,12 +138,12 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
               </div>
             </div>
   
-            <div className="bg-purple-700 text-white px-4 py-2 mt-4 flex justify-between rounded">
+            <div className="text-yellow-500 font-bold mt-4 flex justify-between rounded">
               <span>Amount Payable</span>
               <span>USD {totalPrice}</span>
             </div>
-        </section>
-        </main>
+          </div>
+        </div>
       </div>
   );
 }
