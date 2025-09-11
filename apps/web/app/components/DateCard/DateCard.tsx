@@ -10,7 +10,7 @@ const DateCard: React.FC<DateProps> = ({selectedDate, setSelectedDate}) => {
           week.map(day => (
             <button
               onClick={() => {setSelectedDate(day)}}
-              className={`bg-${day.getDate() == selectedDate.getDate() ? "blue-500" : "white"} text-white px-2 py-2 sm:px-3 sm:py-3 md:px-4 md:py-4 rounded-md hover:bg-blue-500 transition`}
+              className={`${day.getDate() == selectedDate.getDate() ? "bg-blue-500" : "bg-white"} text-white px-2 py-2 sm:px-3 sm:py-3 md:px-4 md:py-4 rounded-md hover:bg-blue-500 transition`}
             >
             <div className="flex flex-col">
               <div className={`text-sm font-bold ${day.getDate() == selectedDate.getDate() ? "text-white": "text-[#5A637A]"}`}>{getDateAndMonth(day)}</div>

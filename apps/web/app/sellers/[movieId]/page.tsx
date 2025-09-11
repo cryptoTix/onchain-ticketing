@@ -11,6 +11,10 @@ import SellerCard from "../../components/SellerCard/SellerCard";
 import { ShowState } from "../../types/state/ShowState";
 import { displayLongDate, displayTime } from "../../utils/helpers";
 import  DateCard  from "../../components/DateCard/DateCard";
+import { ToastNotification } from "../../components/Toast/ToastNotification";
+import { RedirectCard } from "../../components/Redirect/RedirectCard";
+import { useLocationStore } from "../../store/location";
+import Button from "../../components/Button/button";
 
 
 interface SellerInput {
@@ -27,7 +31,8 @@ export default function Page({
   const [movieId, setMovieId] = useState<string>();
   const [movieData, setMovieData] = useState<MovieInterface>();
   const [sellers, setSellers] = useState<SellerInterface[]>([]);
-  const [selectedDate, setSelectedDate] = useState<Date>(NOW)
+  const [selectedDate, setSelectedDate] = useState<Date>(NOW);
+  const {location} = useLocationStore()
 
   useEffect(() => {
     async function loadShows() {
@@ -36,42 +41,45 @@ export default function Page({
     }
     loadShows();
   }, []);
-  const [selectedShowId, setSelectedShowId] = useState<ShowState| null>(null);
+  const [selectedShow, setSelectedShow] = useState<ShowState| null>(null);
 
   useEffect(() => {
     async function loadEventData() {
+      if (!movieId || movieId == "" || !selectedDate || !location) return;
       const movieMetadata = await fetchMovies(movieId);
-      if (!movieId || movieId == "") return;
       if (movieMetadata.length != 1) {
         console.log("unable to fetch movie", movieId)
         return
       }
       setMovieData(movieMetadata[0]);
-      const sellersData = await fetchSellers({movieId, showDate : selectedDate.getTime()});
+      const sellersData = await fetchSellers({movieId, showDate : selectedDate.getTime(), location});
       setSellers(sellersData)
       console.log(movieId, movieData, sellers);
     }
     loadEventData();
-  }, [movieId, selectedDate]);
+  }, [movieId, selectedDate, location]);
 
   const handleTimeSelect = (showState: ShowState) => {
-    setSelectedShowId(showState);
-    setTimeout(() => {
-      const seatsSection = document.getElementById("seats-section");
-      if (seatsSection) {
-        seatsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
+    setSelectedShow(showState);
+    // setTimeout(() => {
+    //   const seatsSection = document.getElementById("seats-section");
+    //   if (seatsSection) {
+    //     seatsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    //   }
+    // }, 100);
   }
   return (
     <div className="min-h-screen text-white w-full pt-8 flex">
+      <ToastNotification/>
+      <RedirectCard />
       {/* LEFT: Sellers List */}
       <div className="w-full space-y-4">
         <h1 className="text-3xl font-bold">{movieData?.name}</h1>
         <DateCard selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
         <div className="flex flex-col space-y-8">
-          {sellers.map((seller, index) => (<SellerCard sellerData={seller} index={index} selectedDate={selectedDate} onSelectShowId={handleTimeSelect}/>))}
+          {sellers.length == 0 ? "No shows for this date" : sellers.map((seller, index) => (<SellerCard sellerData={seller} index={index} selectedShowId={selectedShow ? selectedShow.showId : ""} onSelectShowId={handleTimeSelect}/>))}
         </div>
+        {selectedShow && <Button text="Select Seats" onClick={() =>router.push(`/seats?movieId=${movieId}&&sellerId=${selectedShow.sellerId}&&showId=${selectedShow.showId}`)}/>}
       </div>
 
       {/* RIGHT: Movie Metadata */}
@@ -108,24 +116,24 @@ export default function Page({
           </div>
         </div>
 
-        {selectedShowId && (
+        {selectedShow && (
           <div id="seats-section" className="mt-6 w-full p-4 bg-gray-800 text-white rounded-lg">
             <div className="space-y-2 mt-4">
-              <div className="text-2xl font-bold">{selectedShowId.sellerName}</div>
-              <p>{displayLongDate(selectedShowId.showTime)}</p>
+              <div className="text-2xl font-bold">{selectedShow.sellerName}</div>
+              <p>{displayLongDate(selectedShow.showTime)}</p>
               <div className="flex flex-row justify-between w-full">
-                <div className="text-2xl font-bold">{selectedShowId.showType}</div>
-                <div className="text-2xl font-bold">{displayTime(selectedShowId.showTime)}</div>
+                <div className="text-2xl font-bold">{selectedShow.showType}</div>
+                <div className="text-2xl font-bold">{displayTime(selectedShow.showTime)}</div>
               </div>
               {/* TODO: Handle screens here for multiple shows with same name and time*/}
-              <div className="flex justify-center">
+              {/* <div className="flex justify-center">
                 <button
                   className="mt-3 w-full bg-yellow-500 px-6 py-3 rounded-md text-black font-bold"
-                  onClick={() => router.push(`/seats?movieId=${movieId}&&sellerId=${selectedShowId.sellerId}&&showId=${selectedShowId.showId}`)}
+                  onClick={() => router.push(`/seats?movieId=${movieId}&&sellerId=${selectedShow.sellerId}&&showId=${selectedShow.showId}`)}
                   >
                   Select Seats
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

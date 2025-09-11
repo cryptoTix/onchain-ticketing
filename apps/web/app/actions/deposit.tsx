@@ -1,12 +1,11 @@
 "use client";
-import { getPublicClient, getWalletClient, waitForTransactionReceipt } from "@wagmi/core";
-import { config } from "../contexts/Web3Provider";
-import { erc20Abi, stringify, getContract } from "viem";
+import { getPublicClient, getWalletClient } from "@wagmi/core";
+import { anvil, config } from "../contexts/Web3Provider";
+import { erc20Abi, stringify } from "viem";
 import { Logger } from "../utils/logger";
 import { toast } from "react-hot-toast";
 import { makeTxExplorerLink } from "../utils/txExplorerLink";
-import { IERC20__factory, Master__factory } from "../../../../typechain-types";
-import { ValidationSignatureResponse } from "../models/paymentRequest";
+import { Master__factory } from "../../../../typechain-types";
 import { getTicketStruct, PaymentMetadata } from "../../../../shared";
 import { fetchChainName } from "../utils/helpers";
 
@@ -36,7 +35,8 @@ export async function purchase(
   if (walletClient) {
     if (walletClient.chain.id != purchaseMetada.selectedChain) {
       console.error(walletClient.chain.id, purchaseMetada)
-      toast.error("Wallet chainId diffrent than selected one")
+      walletClient.switchChain(anvil)
+      // toast.error("Wallet chainId diffrent than selected one")
       return false;
     }
   }
@@ -229,7 +229,7 @@ export async function approve(purchaseMetada : PaymentMetadata) : Promise<boolea
     return true
   } catch (error) {
     toast.error(
-      `Failed to approve`
+      `Failed to approve` + stringify(error)
     );
     Logger.error(error)
     return false

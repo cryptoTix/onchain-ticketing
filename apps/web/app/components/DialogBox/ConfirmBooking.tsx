@@ -43,11 +43,11 @@ export const ConfirmBookingDialog: React.FC<ConfirmBookingDialogProps> = ({
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <Dialog.Panel className="w-full max-w-md rounded-xl bg-white p-6 text-gray-900 shadow-xl">
+            <Dialog.Panel className="w-full text-white max-w-md rounded-xl bg-gray-500 p-6 text-gray-900 shadow-xl">
               <Dialog.Title className="text-lg font-semibold mb-4">
                 Confirm Your Booking
               </Dialog.Title>
-              <Dialog.Description className="mb-4 text-sm text-gray-700">
+              <Dialog.Description className="mb-4 text-sm">
                 You are about to book <strong>{seatCount}</strong> seat(s) for a total of <strong>{totalPrice} USD</strong>.
                 <br />
                 Once confirmed, your seats will be locked for <strong>15 minutes</strong>. You must complete the payment within this time.

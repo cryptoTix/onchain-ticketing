@@ -78,13 +78,13 @@ export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCan
         console.log("Set cancellation amount", cancellationAmount, orderData.paymentData.purchaseDataHash)
       }
       loadCancellationAmount();
-    }, [])
+    }, [orderData])
   
     async function handleCancel() {
       const success = await cancelTicket(orderData.paymentData.purchaseDataHash);
       if (success) {
         onSucessCancel()
-        // add some pendong state here
+        // add some pending state here
         handleDialogBoxClose()
       }
     };

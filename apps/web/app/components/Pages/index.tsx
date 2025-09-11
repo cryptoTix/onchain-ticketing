@@ -1,24 +1,11 @@
-import { Tab } from "@headlessui/react";
-import Image from "next/image";
-import restakeDark from "../../assets/navbar/restake-dark.svg";
-import restakeLight from "../../assets/navbar/restake-light.svg";
-import portfolioDark from "../../assets/navbar/portfolio-dark.svg";
-import portfolioLight from "../../assets/navbar/portfolio-light.svg";
-import exploreDark from "../../assets/navbar/explore-dark.svg";
-import exploreLight from "../../assets/navbar/explore-light.svg"
-import { DSSs } from "../DSS/DSSs";
-import { Operators } from "../Operator/Operators";
-import { Portfolio } from "../Portfolio/Portfolio";
-import { Orderbox } from "../Orderbox/Orderbox";
-import { Tvl } from "../Tvl/Tvl";
-import { Header } from "../Header/Header";
-import spiderMan from "../../../public/SpiderMan.svg";
 import MovieCard from "../MovieCard/MovieCard";
 import { useRouter } from "next/navigation";
 import { MovieInterface } from "../../../../../shared";
 import { useEffect, useState } from "react";
 import { ToastNotification } from "../Toast/ToastNotification";
 import { fetchMovies } from "../../api/fetchMovies";
+import { RedirectCard } from "../Redirect/RedirectCard";
+import { useLocationStore } from "../../store/location";
 
 export const MainPage: React.FC = () => {
   const [movies, setMovies] = useState<MovieInterface[]>([]);
@@ -36,12 +23,10 @@ export const MainPage: React.FC = () => {
     router.push(`/sellers/${movieId}`);
   };
   return (
-    
     <div className= "flex flex-col items-center mt-12 w-full gap-12">
       <ToastNotification/>
+      <RedirectCard />
       <div className="text-4xl font-bold">Book Movies With Crypto</div>
-      <div className="text-lg mt-2">SAVE UP TO 60%</div>
-      <button className="mt-5 bg-purple-500 px-6 py-3 rounded-md">Explore Now</button>
       {/* Movie Details Section (Side-by-Side) */}
       <div className="mt-10 mx-auto max-w-6xl p-5 rounded-lg flex items-center space-x-10">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">

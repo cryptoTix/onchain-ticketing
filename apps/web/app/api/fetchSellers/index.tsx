@@ -33,7 +33,7 @@ export async function fetchSeatLayout(req: SeatLayoutRequest): Promise<SeatLayou
 export async function fetchSellers(req: SellerRequestInterface): Promise<SellerInterface[]> {
     try {
       console.log("fetching sellers with", req)
-      const res = await fetch(`${BASE_URL}/api/sellers?movieId=${req.movieId}&&showDate=${req.showDate}`, {
+      const res = await fetch(`${BASE_URL}/api/sellers?movieId=${req.movieId}&&showDate=${req.showDate}&&location=${req.location}`, {
         method: "GET",
       });
       console.log("sellers data:",res)
@@ -41,8 +41,12 @@ export async function fetchSellers(req: SellerRequestInterface): Promise<SellerI
           toast.error(`Failed to fetch sellers`)
           return [];
       }
-      const data: ApiResponse<SellerInterface[]> = await res.json();
-      return data.data;
+      if(res.status == 204) {
+        return [] 
+      } else {
+        const data: ApiResponse<SellerInterface[]> = await res.json();
+        return data.data;
+      }
   
     } catch (err: any) {
       toast.error(`Failed to fetch sellers, pls try again`)

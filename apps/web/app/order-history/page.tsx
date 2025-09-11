@@ -8,6 +8,7 @@ import { fetchOrders } from "../api/fetchOrders"
 import { BookingInfo } from "../components/BookingInfoCard/BookingInfo"
 import { useRouter } from "next/navigation"
 import { ToastNotification } from "../components/Toast/ToastNotification"
+import { useLocationStore } from "../store/location"
 
 export default function OrderHistoryPage() {
     const router = useRouter();
