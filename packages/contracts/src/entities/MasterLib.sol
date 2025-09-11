@@ -15,7 +15,7 @@ library MasterLib {
         address verifier;
         uint96 ttl;
         address benefactor;
-        uint256 nonce;
+        mapping (address user => uint256 nonce) userNonceMap;
         mapping(address => bool) allowlistedAssets;
         EnumerableMap.AddressToUintMap withdrawableAssets;
         mapping(uint256 showId => uint256 policyId) showIdToPolicyIdMap;
@@ -73,6 +73,7 @@ library MasterLib {
         return (policyId == 0 ? self.defaultCancelPolicy : self.policyMap[policyId]);
     }
 
+    // TODO: have a 7 day circular queue of assets with assets marked for redeem for each day. Mon - Sun
     function addAssetsForWithdrawal(State storage self, address asset, uint256 amount) internal {
         (, uint256 currentBal) = self.withdrawableAssets.tryGet(asset);
         currentBal += amount;
@@ -88,11 +89,12 @@ library MasterLib {
         }
     }
 
-    function validatePurchaseData(State storage self, PurchaseLib.PurchaseData memory purchaseData) internal view {
+    // TODO: Add check whether seats are already booked or not 
+    function validatePurchaseData(State storage self, PurchaseLib.PurchaseData memory purchaseData) internal {
         if (purchaseData.ticketData.seats.length == 0) revert ZeroLength();
-        if (block.timestamp > purchaseData.timestamp + self.ttl) revert StalePurchaseData();
-        if (purchaseData.nonce <= self.nonce) revert AlreadyUsedData();
-        if (!self.allowlistedAssets[purchaseData.ticketData.asset]) revert NotAllowlistedAsset(); // check for first as all are same
+        if (block.timestamp > purchaseData.ticketData.originTimestamp + self.ttl) revert StalePurchaseData();
+        if (purchaseData.nonce != self.userNonceMap[purchaseData.ticketData.owner]) revert AlreadyUsedData();
+        // if (!self.allowlistedAssets[purchaseData.ticketData.asset]) revert NotAllowlistedAsset(); // TODO: Set asset allowlist
         uint256 localSum = purchaseData.ticketData.seats[0].price;
         for (uint256 i = 1; i < purchaseData.ticketData.seats.length; i++) {
             if (purchaseData.ticketData.seats[i].seatId <= purchaseData.ticketData.seats[i - 1].seatId) {
@@ -101,5 +103,10 @@ library MasterLib {
             localSum += purchaseData.ticketData.seats[i].price;
         }
         if (localSum != purchaseData.ticketData.amount) revert InvalidAmount();
+        self.userNonceMap[purchaseData.ticketData.owner]++;
+    }
+
+    function getUserNonce(State storage self, address user) internal view returns (uint256) {
+        return self.userNonceMap[user];
     }
 }
