@@ -1,10 +1,9 @@
 "use client"
 
-import Image from "next/Image";
+import Button from "../../components/Button/button";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { fetchShow } from "../../utils/showlist";
-import { MovieInterface, SellerInterface, ShowInterface, ShowType } from "../../../../../shared";
+import { MovieInterface, SellerInterface } from "../../../../../shared";
 import { fetchMovies } from "../../api/fetchMovies";
 import { fetchSellers } from "../../api/fetchSellers";
 import SellerCard from "../../components/SellerCard/SellerCard";
@@ -14,7 +13,7 @@ import  DateCard  from "../../components/DateCard/DateCard";
 import { ToastNotification } from "../../components/Toast/ToastNotification";
 import { RedirectCard } from "../../components/Redirect/RedirectCard";
 import { useLocationStore } from "../../store/location";
-import Button from "../../components/Button/button";
+import Image from "next/image";
 
 
 interface SellerInput {

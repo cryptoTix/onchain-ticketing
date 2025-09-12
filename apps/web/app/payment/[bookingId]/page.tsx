@@ -1,40 +1,17 @@
 "use client"
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import Image from "next/image";
-// import { fetchPaymentRequest, fetchValidationSignature } from "../actions/migration";
-// import { fetchSellerAcceptedAssets } from "../utils/showlist";
-import { Chain, erc20Abi } from "viem";
-import { mainnet } from "viem/chains";
-import { Menu } from "@headlessui/react";
-// import { config } from "../contexts/Web3Provider";
-// import { chainImageMap } from "../constants/constants";
-// import { DarkChevronDownIcon } from "../components/Shared/shared";
-// import { PaymentMetadata, ValidationSignatureResponse } from "../models/paymentRequest";
-// import { Asset } from "../models/seller";
-// import { getTokenImg } from "../utils/helpers";
-// import { useAccount } from "wagmi";
-// import { approve, isApproved, purchase } from "../actions/deposit";
-// import { ToastNotification } from "../components/Toast/ToastNotification";
-import { Dialog } from "@headlessui/react";
 import { PaymentInputProps } from "../../types/props/PaymentInputProps";
 import { BookingData, SeatClass } from "../../../../../shared";
 import { getBookingMetadataById } from "../../api/fetchSellers";
 import { BookingDataLoader, TicketLoader } from "../../components/Loader/Loader";
-import Button from "../../components/Button/button";
-import { useAccount, useWriteContract } from "wagmi";
 import { approve, isApproved, purchase } from "../../actions/deposit";
 import { ToastNotification } from "../../components/Toast/ToastNotification";
-import { paymentMetadata } from "../../actions/migration";
-import { writeContract } from "@wagmi/core";
-import toast from "react-hot-toast";
-import { displayLongDate, displayTime, fetchChainName, getSeatIdsToStr, getSeatsToStr, trimAddress } from "../../utils/helpers";
+import { displayLongDate, displayTime, fetchChainName, getSeatsToStr, trimAddress } from "../../utils/helpers";
 import { InfoButton } from "../../components/Button/infoButton";
 import { TimerCard } from "../../components/Timer/TimerCard";
 import { PAYMENT_DURATION } from "../../utils/consts";
 import PaymentButton from "../../components/Button/paymentButton";
-import { useLocationStore } from "../../store/location";
-import { useQuery } from "@tanstack/react-query";
 
 export default function PaymentPage({
   params
