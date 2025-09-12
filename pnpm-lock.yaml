@@ -49,7 +49,7 @@ importers:
         version: 4.0.9
       '@wagmi/connectors':
         specifier: ^4.1.14
-        version: 4.3.10(@types/react@18.3.24)(@wagmi/core@2.20.3)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.1)(react@19.1.1)(typescript@5.9.2)(viem@2.37.5)
+        version: 4.3.10(@types/react@18.3.24)(@wagmi/core@2.20.3)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.4)(react@19.1.1)(typescript@5.9.2)(viem@2.37.5)
       '@wagmi/core':
         specifier: ^2.6.5
         version: 2.20.3(@types/react@18.3.24)(react@19.1.1)(typescript@5.9.2)(use-sync-external-store@1.4.0)(viem@2.37.5)
@@ -97,7 +97,7 @@ importers:
         version: 5.5.0(react@19.1.1)
       react-router-dom:
         specifier: ^7.8.2
-        version: 7.8.2(react-dom@19.1.1)(react@19.1.1)
+        version: 7.9.0(react-dom@19.1.1)(react@19.1.1)
       semantic-ui-react:
         specifier: ^2.1.5
         version: 2.1.5(react-dom@19.1.1)(react@19.1.1)
@@ -2618,7 +2618,7 @@ packages:
     resolution: {integrity: sha512-YYYHsVYd46XwY2QZzpGeU4PSdRhHdxnzkB8piWGvJW2xbikZ3R+epAYEL4q/K8bh9JPTucsUdwRFnACor1aOYw==}
     engines: {node: ^18.20 || ^20.17 || >=22}
     dependencies:
-      '@metamask/utils': 11.7.0
+      '@metamask/utils': 11.8.0
       fast-safe-stringify: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -2679,7 +2679,7 @@ packages:
       - supports-color
     dev: false
 
-  /@metamask/sdk-install-modal-web@0.20.2(i18next@22.5.1)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.1)(react@19.1.1):
+  /@metamask/sdk-install-modal-web@0.20.2(i18next@22.5.1)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.4)(react@19.1.1):
     resolution: {integrity: sha512-0QiaZhV15AGdN1zU2jfTI32eC3YkwEpzDfR9+oiZ9bd2G72c6lYBhTsmDGUd01aP6A+bqJR5PjI8Wh2AWtoLeA==}
     peerDependencies:
       i18next: 22.5.1
@@ -2699,8 +2699,8 @@ packages:
       qr-code-styling: 1.9.2
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      react-i18next: 13.5.0(i18next@22.5.1)(react-dom@19.1.1)(react-native@0.81.1)(react@19.1.1)
-      react-native: 0.81.1(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
+      react-i18next: 13.5.0(i18next@22.5.1)(react-dom@19.1.1)(react-native@0.81.4)(react@19.1.1)
+      react-native: 0.81.4(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
     dev: false
 
   /@metamask/sdk-install-modal-web@0.32.0:
@@ -2709,7 +2709,7 @@ packages:
       '@paulmillr/qr': 0.2.1
     dev: false
 
-  /@metamask/sdk@0.20.3(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.1)(react@19.1.1):
+  /@metamask/sdk@0.20.3(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.4)(react@19.1.1):
     resolution: {integrity: sha512-HZ9NwA+LxiXzuy0YWbWsuD4xejQtp85bhcCAf8UgpA/0dOyF3RS4dKDdBBXSyRgk3RWPjeJgHxioaH4CmBmiRA==}
     peerDependencies:
       react: ^18.2.0
@@ -2723,7 +2723,7 @@ packages:
       '@metamask/onboarding': 1.0.1
       '@metamask/providers': 15.0.0
       '@metamask/sdk-communication-layer': 0.20.2(cross-fetch@4.1.0)(eciesjs@0.3.21)(eventemitter2@6.4.9)(readable-stream@3.6.2)(socket.io-client@4.8.1)
-      '@metamask/sdk-install-modal-web': 0.20.2(i18next@22.5.1)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.1)(react@19.1.1)
+      '@metamask/sdk-install-modal-web': 0.20.2(i18next@22.5.1)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.4)(react@19.1.1)
       '@types/dom-screen-wake-lock': 1.0.3
       bowser: 2.12.1
       cross-fetch: 4.1.0
@@ -2738,7 +2738,7 @@ packages:
       qrcode-terminal-nooctal: 0.12.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      react-native-webview: 11.26.1(react-native@0.81.1)(react@19.1.1)
+      react-native-webview: 11.26.1(react-native@0.81.4)(react@19.1.1)
       readable-stream: 3.6.2
       rollup-plugin-visualizer: 5.14.0
       socket.io-client: 4.8.1
@@ -2789,8 +2789,8 @@ packages:
     engines: {node: '>=16.0.0'}
     dev: false
 
-  /@metamask/utils@11.7.0:
-    resolution: {integrity: sha512-IamqpZF8Lr4WeXJ84fD+Sy+v1Zo05SYuMPHHBrZWpzVbnHAmXQpL4ckn9s5dfA+zylp3WGypaBPb6SBZdOhuNQ==}
+  /@metamask/utils@11.8.0:
+    resolution: {integrity: sha512-EJqiuvVBAjV1vd1kBhmVmRtGfadrBfY3ImcAMjl+8MSSByTB3VNwvlIBLQdp+TwdAomUdenJCx2BvOSQykm8Hg==}
     engines: {node: ^18.18 || ^20.14 || >=22}
     dependencies:
       '@ethereumjs/tx': 4.2.0
@@ -3080,6 +3080,7 @@ packages:
     engines: {node: ^14.21.3 || >=16}
     dependencies:
       '@noble/hashes': 1.7.2
+    dev: true
 
   /@noble/curves@1.9.1:
     resolution: {integrity: sha512-k11yZxZg+t+gWvBbIswW0yoJlu8cHOC7dhunwOzoWH/mXGBiYyR4YY6hAEK/3EUs4UpB8la1RfdRpeGsFHkWsA==}
@@ -3120,6 +3121,7 @@ packages:
   /@noble/hashes@1.7.2:
     resolution: {integrity: sha512-biZ0NUSxyjLLqo6KxEJ1b+C2NAx0wtDoFvCaXHGgUkeHzf3Xc1xKumFKREuT7f7DARNZ/slvYUwFG6B0f2b6hQ==}
     engines: {node: ^14.21.3 || >=16}
+    dev: true
 
   /@noble/hashes@1.8.0:
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
@@ -3485,13 +3487,13 @@ packages:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
-  /@react-native/assets-registry@0.81.1:
-    resolution: {integrity: sha512-o/AeHeoiPW8x9MzxE1RSnKYc+KZMW9b7uaojobEz0G8fKgGD1R8n5CJSOiQ/0yO2fJdC5wFxMMOgy2IKwRrVgw==}
+  /@react-native/assets-registry@0.81.4:
+    resolution: {integrity: sha512-AMcDadefBIjD10BRqkWw+W/VdvXEomR6aEZ0fhQRAv7igrBzb4PTn4vHKYg+sUK0e3wa74kcMy2DLc/HtnGcMA==}
     engines: {node: '>= 20.19.4'}
     dev: false
 
-  /@react-native/codegen@0.81.1(@babel/core@7.28.4):
-    resolution: {integrity: sha512-8KoUE1j65fF1PPHlAhSeUHmcyqpE+Z7Qv27A89vSZkz3s8eqWSRu2hZtCl0D3nSgS0WW0fyrIsFaRFj7azIiPw==}
+  /@react-native/codegen@0.81.4(@babel/core@7.28.4):
+    resolution: {integrity: sha512-LWTGUTzFu+qOQnvkzBP52B90Ym3stZT8IFCzzUrppz8Iwglg83FCtDZAR4yLHI29VY/x/+pkcWAMCl3739XHdw==}
     engines: {node: '>= 20.19.4'}
     peerDependencies:
       '@babel/core': '*'
@@ -3505,8 +3507,8 @@ packages:
       yargs: 17.7.2
     dev: false
 
-  /@react-native/community-cli-plugin@0.81.1:
-    resolution: {integrity: sha512-FuIpZcjBiiYcVMNx+1JBqTPLs2bUIm6X4F5enYGYcetNE2nfSMUVO8SGUtTkBdbUTfKesXYSYN8wungyro28Ag==}
+  /@react-native/community-cli-plugin@0.81.4:
+    resolution: {integrity: sha512-8mpnvfcLcnVh+t1ok6V9eozWo8Ut+TZhz8ylJ6gF9d6q9EGDQX6s8jenan5Yv/pzN4vQEKI4ib2pTf/FELw+SA==}
     engines: {node: '>= 20.19.4'}
     peerDependencies:
       '@react-native-community/cli': '*'
@@ -3517,7 +3519,7 @@ packages:
       '@react-native/metro-config':
         optional: true
     dependencies:
-      '@react-native/dev-middleware': 0.81.1
+      '@react-native/dev-middleware': 0.81.4
       debug: 4.4.1(supports-color@8.1.1)
       invariant: 2.2.4
       metro: 0.83.1
@@ -3530,17 +3532,17 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@react-native/debugger-frontend@0.81.1:
-    resolution: {integrity: sha512-dwKv1EqKD+vONN4xsfyTXxn291CNl1LeBpaHhNGWASK1GO4qlyExMs4TtTjN57BnYHikR9PzqPWcUcfzpVRaLg==}
+  /@react-native/debugger-frontend@0.81.4:
+    resolution: {integrity: sha512-SU05w1wD0nKdQFcuNC9D6De0ITnINCi8MEnx9RsTD2e4wN83ukoC7FpXaPCYyP6+VjFt5tUKDPgP1O7iaNXCqg==}
     engines: {node: '>= 20.19.4'}
     dev: false
 
-  /@react-native/dev-middleware@0.81.1:
-    resolution: {integrity: sha512-hy3KlxNOfev3O5/IuyZSstixWo7E9FhljxKGHdvVtZVNjQdM+kPMh66mxeJbB2TjdJGAyBT4DjIwBaZnIFOGHQ==}
+  /@react-native/dev-middleware@0.81.4:
+    resolution: {integrity: sha512-hu1Wu5R28FT7nHXs2wWXvQ++7W7zq5GPY83llajgPlYKznyPLAY/7bArc5rAzNB7b0kwnlaoPQKlvD/VP9LZug==}
     engines: {node: '>= 20.19.4'}
     dependencies:
       '@isaacs/ttlcache': 1.4.1
-      '@react-native/debugger-frontend': 0.81.1
+      '@react-native/debugger-frontend': 0.81.4
       chrome-launcher: 0.15.2
       chromium-edge-launcher: 0.2.0
       connect: 3.7.0
@@ -3556,22 +3558,22 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@react-native/gradle-plugin@0.81.1:
-    resolution: {integrity: sha512-RpRxs/LbWVM9Zi5jH1qBLgTX746Ei+Ui4vj3FmUCd9EXUSECM5bJpphcsvqjxM5Vfl/o2wDLSqIoFkVP/6Te7g==}
+  /@react-native/gradle-plugin@0.81.4:
+    resolution: {integrity: sha512-T7fPcQvDDCSusZFVSg6H1oVDKb/NnVYLnsqkcHsAF2C2KGXyo3J7slH/tJAwNfj/7EOA2OgcWxfC1frgn9TQvw==}
     engines: {node: '>= 20.19.4'}
     dev: false
 
-  /@react-native/js-polyfills@0.81.1:
-    resolution: {integrity: sha512-w093OkHFfCnJKnkiFizwwjgrjh5ra53BU0ebPM3uBLkIQ6ZMNSCTZhG8ZHIlAYeIGtEinvmnSUi3JySoxuDCAQ==}
+  /@react-native/js-polyfills@0.81.4:
+    resolution: {integrity: sha512-sr42FaypKXJHMVHhgSbu2f/ZJfrLzgaoQ+HdpRvKEiEh2mhFf6XzZwecyLBvWqf2pMPZa+CpPfNPiejXjKEy8w==}
     engines: {node: '>= 20.19.4'}
     dev: false
 
-  /@react-native/normalize-colors@0.81.1:
-    resolution: {integrity: sha512-TsaeZlE8OYFy3PSWc+1VBmAzI2T3kInzqxmwXoGU4w1d4XFkQFg271Ja9GmDi9cqV3CnBfqoF9VPwRxVlc/l5g==}
+  /@react-native/normalize-colors@0.81.4:
+    resolution: {integrity: sha512-9nRRHO1H+tcFqjb9gAM105Urtgcanbta2tuqCVY0NATHeFPDEAB7gPyiLxCHKMi1NbhP6TH0kxgSWXKZl1cyRg==}
     dev: false
 
-  /@react-native/virtualized-lists@0.81.1(@types/react@18.3.24)(react-native@0.81.1)(react@19.1.1):
-    resolution: {integrity: sha512-yG+zcMtyApW1yRwkNFvlXzEg3RIFdItuwr/zEvPCSdjaL+paX4rounpL0YX5kS9MsDIE5FXfcqINXg7L0xuwPg==}
+  /@react-native/virtualized-lists@0.81.4(@types/react@18.3.24)(react-native@0.81.4)(react@19.1.1):
+    resolution: {integrity: sha512-hBM+rMyL6Wm1Q4f/WpqGsaCojKSNUBqAXLABNGoWm1vabZ7cSnARMxBvA/2vo3hLcoR4v7zDK8tkKm9+O0LjVA==}
     engines: {node: '>= 20.19.4'}
     peerDependencies:
       '@types/react': ^19.1.0
@@ -3585,7 +3587,7 @@ packages:
       invariant: 2.2.4
       nullthrows: 1.1.1
       react: 19.1.1
-      react-native: 0.81.1(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
+      react-native: 0.81.4(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
     dev: false
 
   /@reown/appkit-common@1.7.8(typescript@5.9.2):
@@ -4128,8 +4130,8 @@ packages:
   /@scure/bip32@1.6.2:
     resolution: {integrity: sha512-t96EPDMbtGgtb7onKKqxRLfE5g05k7uHnHRM2xdE6BP/ZmxaLtPek4J4KfVn/90IQNrU1IOAqMgiDtUdtbe3nw==}
     dependencies:
-      '@noble/curves': 1.8.2
-      '@noble/hashes': 1.7.2
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
       '@scure/base': 1.2.6
     dev: false
 
@@ -4164,7 +4166,7 @@ packages:
   /@scure/bip39@1.5.4:
     resolution: {integrity: sha512-TFM4ni0vKvCfBpohoh+/lY05i9gRbSwXWngAsF4CABQxoaOHijxuaZ2R6cStDQ5CHtHO9aGJTr4ksVJASRRyMA==}
     dependencies:
-      '@noble/hashes': 1.7.2
+      '@noble/hashes': 1.7.1
       '@scure/base': 1.2.6
     dev: false
 
@@ -4556,7 +4558,7 @@ packages:
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
     dependencies:
       '@types/connect': 3.4.38
-      '@types/node': 20.19.13
+      '@types/node': 24.3.1
     dev: true
 
   /@types/chai-as-promised@7.1.8:
@@ -4578,7 +4580,7 @@ packages:
   /@types/connect@3.4.38:
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
     dependencies:
-      '@types/node': 20.19.13
+      '@types/node': 24.3.1
     dev: true
 
   /@types/cors@2.8.19:
@@ -4610,7 +4612,7 @@ packages:
   /@types/express-serve-static-core@5.0.7:
     resolution: {integrity: sha512-R+33OsgWw7rOhD1emjU7dzCDHucJrgJXMA5PYCzJxVil0dsyx5iBEPHqpPfiKNJQb7lZ1vxwoLR4Z87bBUpeGQ==}
     dependencies:
-      '@types/node': 20.19.13
+      '@types/node': 24.3.1
       '@types/qs': 6.14.0
       '@types/range-parser': 1.2.7
       '@types/send': 0.17.5
@@ -4773,14 +4775,14 @@ packages:
     resolution: {integrity: sha512-z6F2D3cOStZvuk2SaP6YrwkNO65iTZcwA2ZkSABegdkAh/lf+Aa/YQndZVfmEXT5vgAp6zv06VQ3ejSVjAny4w==}
     dependencies:
       '@types/mime': 1.3.5
-      '@types/node': 20.19.13
+      '@types/node': 24.3.1
     dev: true
 
   /@types/serve-static@1.15.8:
     resolution: {integrity: sha512-roei0UY3LhpOJvjbIP6ZZFngyLKl5dskOtDhxY5THRSpO+ZI+nzJ+m5yUMzGrp89YRa7lvknKkMYjqQFGwA7Sg==}
     dependencies:
       '@types/http-errors': 2.0.5
-      '@types/node': 20.19.13
+      '@types/node': 24.3.1
       '@types/send': 0.17.5
     dev: true
 
@@ -4962,7 +4964,7 @@ packages:
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
     dev: true
 
-  /@wagmi/connectors@4.3.10(@types/react@18.3.24)(@wagmi/core@2.20.3)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.1)(react@19.1.1)(typescript@5.9.2)(viem@2.37.5):
+  /@wagmi/connectors@4.3.10(@types/react@18.3.24)(@wagmi/core@2.20.3)(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.4)(react@19.1.1)(typescript@5.9.2)(viem@2.37.5):
     resolution: {integrity: sha512-IZcsocBfDq6pe8sxkDgP2k9YNqv8udl2eSr2hx2JCESA44ixx5zRjoGNMAkKxlzM6uXjXLJKp/g1KYlpmoHkDg==}
     peerDependencies:
       '@wagmi/core': 2.9.8
@@ -4973,7 +4975,7 @@ packages:
         optional: true
     dependencies:
       '@coinbase/wallet-sdk': 3.9.1
-      '@metamask/sdk': 0.20.3(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.1)(react@19.1.1)
+      '@metamask/sdk': 0.20.3(react-dom@19.1.1)(react-i18next@13.5.0)(react-native@0.81.4)(react@19.1.1)
       '@safe-global/safe-apps-provider': 0.18.1(typescript@5.9.2)
       '@safe-global/safe-apps-sdk': 8.1.0(typescript@5.9.2)
       '@wagmi/core': 2.20.3(@types/react@18.3.24)(react@19.1.1)(typescript@5.9.2)(use-sync-external-store@1.4.0)(viem@2.37.5)
@@ -6654,8 +6656,8 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001741
-      electron-to-chromium: 1.5.217
-      node-releases: 2.0.20
+      electron-to-chromium: 1.5.218
+      node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.25.4)
 
   /bs58@4.0.1:
@@ -7219,7 +7221,7 @@ packages:
     dependencies:
       cipher-base: 1.0.6
       inherits: 2.0.4
-      ripemd160: 2.0.2
+      ripemd160: 2.0.1
       sha.js: 2.4.12
     dev: true
 
@@ -7709,8 +7711,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.5.217:
-    resolution: {integrity: sha512-Pludfu5iBxp9XzNl0qq2G87hdD17ZV7h5T4n6rQXDi3nCyloBV3jreE9+8GC6g4X/5yxqVgXEURpcLtM0WS4jA==}
+  /electron-to-chromium@1.5.218:
+    resolution: {integrity: sha512-uwwdN0TUHs8u6iRgN8vKeWZMRll4gBkz+QMqdS7DDe49uiK68/UX92lFb61oiFPrpYZNeZIqa4bA7O6Aiasnzg==}
 
   /elliptic@6.6.1:
     resolution: {integrity: sha512-RaddvvMatK2LJHqFJ+YA4WysVN5Ita9E35botqIYspQ4TkRAlCicdzKOjlyv/1Za5RyTNn7di//eEV0uTAfe3g==}
@@ -10697,8 +10699,8 @@ packages:
     resolution: {integrity: sha512-jN8dK25fsfnMrVsEhluUTPkBFY+6ybu7jSB1n+ri/vOGjJxU8J9CZhpSGkHXSkFjtUhbmoncG/YG9ta5Ludqog==}
     dev: false
 
-  /node-releases@2.0.20:
-    resolution: {integrity: sha512-7gK6zSXEH6neM212JgfYFXe+GmZQM+fia5SsusuBIUgnPheLFBmIPhtFoAQRj8/7wASYQnbDlHPVwY0BefoFgA==}
+  /node-releases@2.0.21:
+    resolution: {integrity: sha512-5b0pgg78U3hwXkCM8Z9b2FJdPZlr9Psr9V2gQPESdGHqbntyFJKFW4r5TeWGFzafGY3hzs1JC62VEQMbl1JFkw==}
 
   /nofilter@3.1.0:
     resolution: {integrity: sha512-l2NNj07e9afPnhAhvgVrCD/oy2Ai1yfLpuo3EpiO1jFTsB4sFz6oIfAfSZyQzVpkZQ9xS8ZS5g1jCBgq4Hwo0g==}
@@ -10882,11 +10884,11 @@ packages:
         optional: true
     dependencies:
       '@adraffy/ens-normalize': 1.11.0
-      '@noble/curves': 1.9.7
-      '@noble/hashes': 1.8.0
-      '@scure/bip32': 1.7.0
-      '@scure/bip39': 1.6.0
-      abitype: 1.1.0(typescript@5.9.2)(zod@3.22.4)
+      '@noble/curves': 1.8.1
+      '@noble/hashes': 1.7.1
+      '@scure/bip32': 1.6.2
+      '@scure/bip39': 1.5.4
+      abitype: 1.0.8(typescript@5.9.2)
       eventemitter3: 5.0.1
       typescript: 5.9.2
     transitivePeerDependencies:
@@ -11722,7 +11724,7 @@ packages:
       react-dom: 19.1.1(react@19.1.1)
     dev: false
 
-  /react-i18next@13.5.0(i18next@22.5.1)(react-dom@19.1.1)(react-native@0.81.1)(react@19.1.1):
+  /react-i18next@13.5.0(i18next@22.5.1)(react-dom@19.1.1)(react-native@0.81.4)(react@19.1.1):
     resolution: {integrity: sha512-CFJ5NDGJ2MUyBohEHxljOq/39NQ972rh1ajnadG9BjTk+UXbHLq4z5DKEbEQBDoIhUmmbuS/fIMJKo6VOax1HA==}
     peerDependencies:
       i18next: '>= 23.2.3'
@@ -11740,7 +11742,7 @@ packages:
       i18next: 22.5.1
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      react-native: 0.81.1(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
+      react-native: 0.81.4(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
     dev: false
 
   /react-icons@5.5.0(react@19.1.1):
@@ -11763,7 +11765,7 @@ packages:
     resolution: {integrity: sha512-tr41fA15Vn8p4X9ntI+yCyeGSf1TlYaY5vlTZfQmeLBrFo3psOPX6HhTDnFNL9uj3EhP0KAQ80cugCl4b4BERA==}
     dev: false
 
-  /react-native-webview@11.26.1(react-native@0.81.1)(react@19.1.1):
+  /react-native-webview@11.26.1(react-native@0.81.4)(react@19.1.1):
     resolution: {integrity: sha512-hC7BkxOpf+z0UKhxFSFTPAM4shQzYmZHoELa6/8a/MspcjEP7ukYKpuSUTLDywQditT8yI9idfcKvfZDKQExGw==}
     peerDependencies:
       react: '*'
@@ -11772,11 +11774,11 @@ packages:
       escape-string-regexp: 2.0.0
       invariant: 2.2.4
       react: 19.1.1
-      react-native: 0.81.1(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
+      react-native: 0.81.4(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1)
     dev: false
 
-  /react-native@0.81.1(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1):
-    resolution: {integrity: sha512-k2QJzWc/CUOwaakmD1SXa4uJaLcwB2g2V9BauNIjgtXYYAeyFjx9jlNz/+wAEcHLg9bH5mgMdeAwzvXqjjh9Hg==}
+  /react-native@0.81.4(@babel/core@7.28.4)(@types/react@18.3.24)(react@19.1.1):
+    resolution: {integrity: sha512-bt5bz3A/+Cv46KcjV0VQa+fo7MKxs17RCcpzjftINlen4ZDUl0I6Ut+brQ2FToa5oD0IB0xvQHfmsg2EDqsZdQ==}
     engines: {node: '>= 20.19.4'}
     hasBin: true
     peerDependencies:
@@ -11787,13 +11789,13 @@ packages:
         optional: true
     dependencies:
       '@jest/create-cache-key-function': 29.7.0
-      '@react-native/assets-registry': 0.81.1
-      '@react-native/codegen': 0.81.1(@babel/core@7.28.4)
-      '@react-native/community-cli-plugin': 0.81.1
-      '@react-native/gradle-plugin': 0.81.1
-      '@react-native/js-polyfills': 0.81.1
-      '@react-native/normalize-colors': 0.81.1
-      '@react-native/virtualized-lists': 0.81.1(@types/react@18.3.24)(react-native@0.81.1)(react@19.1.1)
+      '@react-native/assets-registry': 0.81.4
+      '@react-native/codegen': 0.81.4(@babel/core@7.28.4)
+      '@react-native/community-cli-plugin': 0.81.4
+      '@react-native/gradle-plugin': 0.81.4
+      '@react-native/js-polyfills': 0.81.4
+      '@react-native/normalize-colors': 0.81.4
+      '@react-native/virtualized-lists': 0.81.4(@types/react@18.3.24)(react-native@0.81.4)(react@19.1.1)
       '@types/react': 18.3.24
       abort-controller: 3.0.0
       anser: 1.4.10
@@ -11850,8 +11852,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-router-dom@7.8.2(react-dom@19.1.1)(react@19.1.1):
-    resolution: {integrity: sha512-Z4VM5mKDipal2jQ385H6UBhiiEDlnJPx6jyWsTYoZQdl5TrjxEV2a9yl3Fi60NBJxYzOTGTTHXPi0pdizvTwow==}
+  /react-router-dom@7.9.0(react-dom@19.1.1)(react@19.1.1):
+    resolution: {integrity: sha512-IEGU2Dzwmh9KVtjiwi0g/JjaStaOjrslI9aU7BhKhEpKYHnfpS7euvNi+b4uWXQaj45/dh0zsqjCmq0x6GYmRA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -11859,11 +11861,11 @@ packages:
     dependencies:
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
-      react-router: 7.8.2(react-dom@19.1.1)(react@19.1.1)
+      react-router: 7.9.0(react-dom@19.1.1)(react@19.1.1)
     dev: false
 
-  /react-router@7.8.2(react-dom@19.1.1)(react@19.1.1):
-    resolution: {integrity: sha512-7M2fR1JbIZ/jFWqelpvSZx+7vd7UlBTfdZqf6OSdF9g6+sfdqJDAWcak6ervbHph200ePlu+7G8LdoiC3ReyAQ==}
+  /react-router@7.9.0(react-dom@19.1.1)(react@19.1.1):
+    resolution: {integrity: sha512-gmmc2UNj8oS8Z2JGpfAmhLv+j5O9Xciv2HAGZN0rV//ycoe1E40xN3ovqLZD7PsMDkoJvsbASE8TjAY+Xm7DKQ==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
