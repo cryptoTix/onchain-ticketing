@@ -1,7 +1,7 @@
 import MovieCard from "../MovieCard/MovieCard";
 import { useRouter } from "next/navigation";
 import { MovieInterface } from "../../../../../shared";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { ToastNotification } from "../Toast/ToastNotification";
 import { fetchMovies } from "../../api/fetchMovies";
 import { RedirectCard } from "../Redirect/RedirectCard";
@@ -10,6 +10,7 @@ import { useLocationStore } from "../../store/location";
 export const MainPage: React.FC = () => {
   const [movies, setMovies] = useState<MovieInterface[]>([]);
   const router = useRouter();
+  const { location : selectedLocation } = useLocationStore()
 
   useEffect(() => {
     async function loadMovies() {
@@ -20,12 +21,14 @@ export const MainPage: React.FC = () => {
   }, []);
 
   const handleMovieClick = (movieId: string) => {
-    router.push(`/sellers/${movieId}`);
+    router.push(`/sellers/${movieId}?city=${selectedLocation}`);
   };
   return (
     <div className= "flex flex-col items-center mt-12 w-full gap-12">
       <ToastNotification/>
-      <RedirectCard />
+      <Suspense>
+        <RedirectCard />
+      </Suspense>
       <div className="text-4xl font-bold">Book Movies With Crypto</div>
       {/* Movie Details Section (Side-by-Side) */}
       <div className="mt-10 mx-auto max-w-6xl p-5 rounded-lg flex items-center space-x-10">

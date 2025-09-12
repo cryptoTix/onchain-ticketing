@@ -1,7 +1,8 @@
 "use client"
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
+import { SeatLayoutLoader } from "../components/Loader/Loader";
 
 import { useAccount } from "wagmi";
 import SeatLayoutViewer from "../components/SeatLayout";
@@ -14,9 +15,8 @@ import { fetchMovies } from "../api/fetchMovies";
 import { MovieInterface } from "../models/movie";
 import toast from "react-hot-toast";
 import { Address, isAddress } from "viem";
-import { useLocationStore } from "../store/location";
 
-export default function Seats() {
+function SeatsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const sellerId = searchParams.get("sellerId");
@@ -31,8 +31,6 @@ export default function Seats() {
   const [ownerAddress, setOwnerAddress] = useState<Address>(null)
 
   const { address, isConnected } = useAccount()
-  // const {setIsModifyDisabled} = useLocationStore()
-  // setIsModifyDisabled(true)
 
   useEffect(() => {
       async function setInitialData() {
@@ -112,6 +110,18 @@ export default function Seats() {
       <SeatLayoutViewer sellerId={sellerId} showId={showId} selectedSeats={selectedSeats} selectedSeatsPrice={totalPrice} onSelectSeat={handleSeatClick} onPayClick={proceedToCurrencySelection}/>
     </div> :
     <CurrencySelectionPage sellerId={sellerId} selectedSeats={selectedSeats} sellerAndshowDetails={showDetails} movieDetails={movieDetails} totalPrice={totalPrice} ticketOwner={ownerAddress} onClickPrevious={handleClickPrevious} onClickPurchase={proceedToPurchase} resetCustomOwnerAddress={resetCustomOwerAddress} onChangeCustomOwnerAddress={onChangeCustomOwerAddress}/> 
+  );
+}
+
+export default function Seats() {
+  // const [showloader, setShowloader] = useState<boolean>(true)
+  // useMemo(() => setTimeout(() => {
+  //   setShowloader(false)
+  // }, 1000), [])
+  return (
+    <Suspense fallback={<SeatLayoutLoader />}> 
+      <SeatsContent />
+    </Suspense>
   );
 }
 

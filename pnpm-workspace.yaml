@@ -2,4 +2,5 @@ packages:
   - "apps/web"
   - "packages/backend"
   - "packages/contracts"
+  - "packages/syncer"
   - "shared"

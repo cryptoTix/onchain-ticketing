@@ -8,7 +8,7 @@ import "solady/src/utils/LibClone.sol";
 import {ERC20Test} from "../test/TestERC20.sol";
 import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 import "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
-import "../src/interface/Constants.sol";
+import "../src/interfaces/Constants.sol";
 
 contract DeployMaster is Script {
     address verifier = 0x51bF0f742fe35da5844CD92956931b4c43a1C433; // Set in .env or as an environment variable
