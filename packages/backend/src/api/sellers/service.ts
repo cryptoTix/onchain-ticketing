@@ -1,5 +1,6 @@
 import { SellerShowIdInterface, SellerCurrencyResponseInterface, BookingValidationData, BookingValidationResponse, PaymentMetadata, PaymentMetadataRequest, PaymentMetadataResponse, getTicketStruct, SeatClass, BookingDataRequest, BookingDataResponse, SeatData, SellerRequestInterface } from "../../../../../shared/index";
 import { SellerInterface } from "../../../../../shared";
+import { getAllSellerShowsForMovie, findSellerShowById } from "../../helpers/sellerShows";
 import { getAssetAddress, getMasterContract, getPriceToCurrencyExponent, getSellerCurrencies } from "../../helpers/cryptoCurrencies";
 import { getOrCreateSeatLayout, updateSeatLayoutFile } from "../../helpers/seatLayout";
 import { LOCK_DURATION_SEC, PRIVATE_KEY } from "../../helpers/consts";
@@ -794,47 +795,38 @@ const sellers : Record<string, SellerInterface[]> = {
 };
 const seatMutex = new Mutex();
 
-export async function getSellers(req : SellerRequestInterface) : Promise<SellerInterface[]> {
-    const selectedDate = new Date()
-    selectedDate.setTime(req.showDate)
-    if (!selectedDate || isNaN(selectedDate.getTime())) {
-        console.log("invalid data sent: ", req.showDate)
-        return[]
+export async function getSellers(req: SellerRequestInterface): Promise<SellerInterface[]> {
+    const dateStr = req.showDate;
+    if (!dateStr) {
+        throw("invalid showDate sent");
     }
-    console.log(selectedDate, req.showDate, selectedDate.getDate())
-    const res : SellerInterface[] = new Array();
-    for (let index = 0; index < sellers[req.movieId].length; index++) {
-        if (!req.location || req.location.localeCompare(sellers[req.movieId][index].location) == 0) {
-            const sellerData : SellerInterface = {
-                id: sellers[req.movieId][index].id,
-                name: sellers[req.movieId][index].name,
-                location: sellers[req.movieId][index].location,
-                utcTimeDiff: sellers[req.movieId][index].utcTimeDiff,
-                shows: {}
-            };
-            console.log("fetched shows", sellers[req.movieId][index].shows)
-            Object.entries(sellers[req.movieId][index].shows).map(([showType,shows]) => {
-                sellerData.shows[showType] =
-                    shows.filter((show) => {
-                        console.log(selectedDate.getDate(), new Date(show.showTime).getDate())
-                        return (
-                        selectedDate.getMonth() == new Date(show.showTime).getMonth() &&
-                        selectedDate.getDate() == new Date(show.showTime).getDate() &&
-                        show.showTime >= selectedDate.getTime()
-                    )})
-                if (sellerData.shows[showType].length == 0) {
-                    delete sellerData.shows[showType]
-                }
-            })
-            if (Object.entries(sellerData.shows).length != 0) {
-                res.push(sellerData)
+    const sellersForMovie = await getAllSellerShowsForMovie(dateStr, req.movieId);
+
+    // Apply additional filters:
+    // 1) If location is provided, match seller location
+    const filtered: SellerInterface[] = [];
+
+    for (const s of sellersForMovie) {
+        if (req.location && req.location.localeCompare(s.location) !== 0) {
+            continue;
+        }
+        const showsByType: typeof s.shows = {} as any;
+        for (const [type, arr] of Object.entries(s.shows)) {
+            if (arr.length > 0) {
+                showsByType[type as keyof typeof s.shows] = arr;
             }
         }
+        if (Object.keys(showsByType).length > 0) {
+            filtered.push({ ...s, shows: showsByType });
+        }
     }
-    return res
+
+    return filtered;
 }
 
 export async function getSellerShowId(sellerId: string, showId : string) : Promise<SellerShowIdInterface | undefined> {
+    return findSellerShowById(sellerId, showId)
+    /*
     let res : (SellerShowIdInterface) | undefined = undefined;
     Object.entries(sellers).map(([_, sellers]) => {
         if (res) {
@@ -859,6 +851,7 @@ export async function getSellerShowId(sellerId: string, showId : string) : Promi
         })
     })
     return res;
+    */
 }
 
 export async function getSellerCyrptoCurrency(sellerId: string) : Promise<SellerCurrencyResponseInterface> {
@@ -1081,19 +1074,19 @@ async function getSelectedSeats(selectedSeatIds: string[], showId : string, sell
     return seats
 }
 
-async function bookingSanityChecks(data : BookingValidationData) : Promise<boolean> {
-    const sellers = await getSellers({movieId: data.movieId, showDate : Date.now()})
-    let isValid = false;
-    sellers.forEach((seller) => {
-        if(seller.id.localeCompare(data.sellerId) == 0) {
-            Object.entries(seller.shows).map(([_, shows]) => {
-                shows.forEach(show => {
-                    if (show.id.localeCompare(data.showId) == 0 && show.showTime >= Date.now()) {
-                        isValid = true;
-                    }
-                })
-            })
-        }
-    })
-    return isValid;
-}
+// async function bookingSanityChecks(data : BookingValidationData) : Promise<boolean> {
+//     const sellers = await getSellers({movieId: data.movieId, showDate : Date.now()})
+//     let isValid = false;
+//     sellers.forEach((seller) => {
+//         if(seller.id.localeCompare(data.sellerId) == 0) {
+//             Object.entries(seller.shows).map(([_, shows]) => {
+//                 shows.forEach(show => {
+//                     if (show.id.localeCompare(data.showId) == 0 && show.showTime >= Date.now()) {
+//                         isValid = true;
+//                     }
+//                 })
+//             })
+//         }
+//     })
+//     return isValid;
+// }

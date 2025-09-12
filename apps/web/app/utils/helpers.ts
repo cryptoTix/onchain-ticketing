@@ -207,6 +207,13 @@ export function getDay(date:Date) : string {
   });
 }
 
+export function formatDate(date: Date): string {
+  const dd = String(date.getDate()).padStart(2, "0");
+  const mm = String(date.getMonth() + 1).padStart(2, "0"); // months are 0-based
+  const yy = String(date.getFullYear()).slice(-2);
+  return `${dd}-${mm}-${yy}`;
+}
+
 export function isSameDate(date1:Date, date2 : Date | number) {
   if (typeof(date2) === "number") {
     return date1.getDate() == new Date(date2).getDate()
