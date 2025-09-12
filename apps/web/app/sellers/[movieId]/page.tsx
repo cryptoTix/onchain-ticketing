@@ -8,7 +8,7 @@ import { fetchMovies } from "../../api/fetchMovies";
 import { fetchSellers } from "../../api/fetchSellers";
 import SellerCard from "../../components/SellerCard/SellerCard";
 import { ShowState } from "../../types/state/ShowState";
-import { displayLongDate, displayTime } from "../../utils/helpers";
+import { displayLongDate, displayTime, formatDate } from "../../utils/helpers";
 import  DateCard  from "../../components/DateCard/DateCard";
 import { ToastNotification } from "../../components/Toast/ToastNotification";
 import { RedirectCard } from "../../components/Redirect/RedirectCard";
@@ -51,7 +51,7 @@ export default function Page({
         return
       }
       setMovieData(movieMetadata[0]);
-      const sellersData = await fetchSellers({movieId, showDate : selectedDate.getTime(), location});
+      const sellersData = await fetchSellers({movieId, showDate : formatDate(selectedDate), location});
       setSellers(sellersData)
       console.log(movieId, movieData, sellers);
     }

@@ -74,7 +74,7 @@ export async function cancelOrderHistory(
 
   orders = orders.map((order) => {
     if (order.orderId.localeCompare(orderId) == 0) {
-      console.log("setting order as cancelld", order)
+      console.log("setting order as cancelled", order)
       modified = true;
       order.isCancelled = true;
       return order;

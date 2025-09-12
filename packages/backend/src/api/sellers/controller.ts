@@ -12,9 +12,10 @@ export async function fetchSellers(
     try {
         const {movieId, location, showDate}  = req.query
         if (movieId != "") {
+            console.log("Got req sellers", movieId, showDate, location)
             const data = await getSellers(req.query);
-            
             console.log("Data for sellers", movieId, showDate, location, data)
+            
             data.length > 0 ? 
             res.json({ success: true, data, statusCode : 200 }):
             res.status(204).json({ success: true, statusCode : 204 });
