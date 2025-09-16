@@ -1,4 +1,5 @@
 import { Header } from "../components/Header/Header";
+import { Footer } from "./Footer/Footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,6 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <main className="flex flex-col items-center m-auto p-5 sm:p-10 min-h-screen max-w-[1300px]">
         <Header />
         {children}
+        <Footer/>
       </main>
     </div>
   );
