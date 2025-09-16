@@ -10,9 +10,9 @@ export const Header: React.FC = () => {
   const router = useRouter();
   const {isConnected} = useAccount()
   return (
-    <div className="w-full flex flex-col gap-4 header-sm:gap-0 header-sm:flex-row justify-between">
+    <div className="w-full flex flex-col gap-4 header-sm:gap-0 header-sm:flex-row hover:brightness-75 justify-between">
       <div className="flex flex-row gap-2">
-        <Image src={logo} width={246} height={146} alt="logo" className="mt-[6px]" onClick={() => router.push("/")}/>
+        <Image src={logo} width={246} height={146} alt="logo" className="mt-[6px] hover:cursor-pointer" onClick={() => router.push("/")}/>
       </div>
       <div className="flex flex-col gap-4 header-sm:flex-row sm:gap-8 items-center">
         <SelectCityCard/>
