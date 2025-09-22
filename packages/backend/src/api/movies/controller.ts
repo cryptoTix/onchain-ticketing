@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { getMovies } from "./service";
-import { ApiResponse, MovieInterface, MovieRequestInterface } from "../../../../../shared";
+import { ApiResponse, MovieInterface, MovieRequestInterface } from "shared";
 
 export async function fetchMovies(
   req: Request<{},{},{},MovieRequestInterface>,

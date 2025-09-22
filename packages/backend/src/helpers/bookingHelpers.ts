@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { PaymentMetadata } from '../../../../shared';
+import { PaymentMetadata } from 'shared';
 
 
 // Path to directory where booking data is stored
@@ -39,7 +39,7 @@ export function getBookingById(bookingId: string): PaymentMetadata | null {
 /**
  * Set booking data by ID (create or update)
  */
-export function setBookingById(bookingId: string, data: PaymentMetadata): void {
+export async function setBookingById(bookingId: string, data: PaymentMetadata): Promise<void> {
   const bookings = readSellerBookings();
   bookings[bookingId] = data;
   writeSellerBookings(bookings);

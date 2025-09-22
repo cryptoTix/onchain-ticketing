@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
-import { MovieInterface, SellerInterface, ShowInterface, ShowType, SellerMetadataInterface, SellerShowIdInterface } from "../../../../shared";
+import { MovieInterface, SellerInterface, ShowInterface, ShowType, SellerMetadataInterface, SellerShowIdInterface } from "shared";
+import { HDNodeWallet } from "ethers";
 
 type SellerFile = {
   id: string;
@@ -10,28 +11,24 @@ type SellerFile = {
   byDate: Record<string, Record<ShowType, ShowInterface[]>>;
 };
 
+let showId = 0;
 export const SELLER_METADATA: SellerMetadataInterface[] = [
-  { id: "0", name: "INOX", location: "BHOPAL", utcTimeDiff: 0 },
-  { id: "1", name: "PVR", location: "DELHI", utcTimeDiff: 0 },
-  { id: "2", name: "INOX", location: "MUMBAI", utcTimeDiff: 0 },
-  { id: "3", name: "PVR", location: "BHOPAL", utcTimeDiff: 0 },
-  { id: "4", name: "CINEPOLIS", location: "DELHI", utcTimeDiff: 0 },
-  { id: "5", name: "CINEPOLIS", location: "MUMBAI", utcTimeDiff: 0 },
-  { id: "6", name: "CINEPOLIS", location: "BHOPAL", utcTimeDiff: 0 },
-  { id: "7", name: "INOX", location: "DELHI", utcTimeDiff: 0 },
-  { id: "8", name: "PVR", location: "MUMBAI", utcTimeDiff: 0 },
+  { id: "0", name: "INOX", location: "BHOPAL", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "1", name: "PVR", location: "DELHI", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "2", name: "INOX", location: "MUMBAI", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "3", name: "PVR", location: "BHOPAL", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "4", name: "CINEPOLIS", location: "DELHI", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "5", name: "CINEPOLIS", location: "MUMBAI", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "6", name: "CINEPOLIS", location: "BHOPAL", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "7", name: "INOX", location: "DELHI", utcTimeDiff: 5.5 * 3600 * 1000 },
+  { id: "8", name: "PVR", location: "MUMBAI", utcTimeDiff: 5.5 * 3600 * 1000 },
 ];
 
 const SELLER_DIR = path.join(process.cwd(), "data", "seller");
 const SHOW_TYPES: ShowType[] = ["2D", "3D", "4DX"];
 
-function dateKeyUTC(dateMs: number): string {
-  const d = new Date(dateMs);
-  // Normalize to YYYY-MM-DD in local time
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
+function dateKeyUTC(dateStr: string, movieId: string): string {
+  return `${dateStr}-${movieId}`;
 }
 
 async function ensureSellerDir() {
@@ -69,21 +66,14 @@ async function persistSellerFile(file: SellerFile) {
   await fs.writeFile(p, JSON.stringify(file, null, 2));
 }
 
-function buildShowId(sellerId: string, s: ShowInterface): string {
-  // Deterministic-ish ID to avoid collisions across dates/types
-  // Format: sellerId-movieId-YYYYMMDD-HHMM-type-screen-seq
-  const d = new Date(s.showTime);
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  const hh = String(d.getHours()).padStart(2, "0");
-  const mm = String(d.getMinutes()).padStart(2, "0");
-  return `${sellerId}-${s.movieId}-${y}${m}${day}-${hh}${mm}-${s.type}-${s.screenId}`;
+function buildShowId(): string {
+  showId++;
+  return showId.toString();
 }
 
 function generateDaySchedule(
   meta: SellerMetadataInterface,
-  dateMs: number,
+  dateStr: string,
   movieId: string
 ): Record<ShowType, ShowInterface[]> {
   const MAX_PER_DAY = 10;
@@ -95,19 +85,17 @@ function generateDaySchedule(
 
   // Helper to create a show
   const makeShow = (movieId: string, type: ShowType, hour: number, minute: number, idx: number): ShowInterface => {
-    const dt = new Date(dateMs);
-    dt.setHours(hour, minute, 0, 0);
     const price = type === "4DX" ? 8.9 : type === "3D" ? 6.4 : 5.4;
     const screenId = String((idx % 5) + 1);
     const s: ShowInterface = {
-      id: "", // fill after building
+      id: buildShowId(), // fill after building
       movieId: movieId,
       type,
       price,
-      showTime: dt.getTime(),
+      showTime: parseDateStrToUTC(dateStr, hour, minute) - meta.utcTimeDiff,
       screenId,
     };
-    s.id = buildShowId(meta.id, s);
+    console.log(s)
     return s;
   };
 
@@ -120,7 +108,6 @@ function generateDaySchedule(
   // Fill remaining slots up to MAX_PER_DAY
   while (created < MAX_PER_DAY) {
     const showTypeIdx = Math.floor((Math.random() * SHOW_TYPES.length) % SHOW_TYPES.length);
-    console.log(showTypeIdx)
     const type = SHOW_TYPES[(showTypeIdx ? showTypeIdx : 0) % SHOW_TYPES.length];
     const minute = minutesChoices[minuteIdx % minutesChoices.length];
     if (!result[type]) result[type] = []
@@ -128,27 +115,24 @@ function generateDaySchedule(
     result[type].push(makeShow(movieId, type, hour, minute, created));
     created++;
     minuteIdx++;
-    if (minuteIdx % minutesChoices.length === 0) {
-      hour += 1;
-      if (hour > endHour) hour = startHour;
-    }
+    hour += 1;
+    if (hour > endHour) hour = startHour;
     typeIdx++;
   }
 
   return result;
 }
 
-function parseDdMmYy(dateStr: string): number {
+function parseDateStrToUTC(dateStr: string, hour : number, minute : number): number {
   const m = /^(\d{2})-(\d{2})-(\d{2})$/.exec(dateStr);
   if (!m) throw new Error(`Invalid date format: ${dateStr}. Expected dd-mm-yy`);
   const dd = Number(m[1]);
   const mm = Number(m[2]);
   const yy = Number(m[3]);
   const fullYear = 2000 + yy; // interpret as 20yy
-  const d = new Date();
-  d.setFullYear(fullYear, mm - 1, dd);
-  d.setHours(0, 0, 0, 0);
-  return d.getTime();
+  const d = Date.UTC(fullYear, mm - 1, dd, hour, minute);
+  console.log("generating utc timestamp for date", dateStr, hour,minute, d)
+  return d;
 }
 
 export async function getOrCreateSellerShowsForDate(
@@ -156,11 +140,10 @@ export async function getOrCreateSellerShowsForDate(
   dateStr: string,
   movieId: string
 ): Promise<SellerInterface> {
-  const dateMs = parseDdMmYy(dateStr);
   const file = await readSellerFileOrInit(meta);
-  const key = dateKeyUTC(dateMs);
+  const key = dateKeyUTC(dateStr, movieId);
   if (!file.byDate[key]) {
-    file.byDate[key] = generateDaySchedule(meta, dateMs, movieId);
+    file.byDate[key] = generateDaySchedule(meta, dateStr, movieId);
     await persistSellerFile(file);
   }
   const shows = file.byDate[key];

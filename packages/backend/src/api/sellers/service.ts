@@ -1,13 +1,12 @@
-import { SellerShowIdInterface, SellerCurrencyResponseInterface, BookingValidationData, BookingValidationResponse, PaymentMetadata, PaymentMetadataRequest, PaymentMetadataResponse, getTicketStruct, SeatClass, BookingDataRequest, BookingDataResponse, SeatData, SellerRequestInterface } from "../../../../../shared/index";
-import { SellerInterface } from "../../../../../shared";
+import { SellerShowIdInterface, SellerCurrencyResponseInterface, BookingValidationData, BookingValidationResponse, PaymentMetadata, PaymentMetadataRequest, PaymentMetadataResponse, getTicketStruct, SeatClass, BookingDataRequest, BookingDataResponse, SeatData, SellerRequestInterface } from "shared";
+import { SellerInterface } from "shared";
 import { getAllSellerShowsForMovie, findSellerShowById } from "../../helpers/sellerShows";
 import { getAssetAddress, getMasterContract, getPriceToCurrencyExponent, getSellerCurrencies } from "../../helpers/cryptoCurrencies";
-import { getOrCreateSeatLayout, updateSeatLayoutFile } from "../../helpers/seatLayout";
+import { getOrCreateSeatLayout, GetSeatLock, lockSeats, unlockSeats, updateSeatLayoutFile } from "../../helpers/seatLayout";
 import { LOCK_DURATION_SEC, PRIVATE_KEY } from "../../helpers/consts";
 import { Hex, hexToBigInt, keccak256 } from "viem";
-import {MasterLib, PurchaseLib, TicketLib} from "../../../../../typechain-types/src/Master"
-import { AbiCoder, ethers } from "ethers";
-import { Master__factory } from "../../../../../typechain-types";
+import { ethers } from "ethers";
+import { Master__factory } from "typechain-types";
 import { privateKeyToAccount } from "viem/accounts";
 import { getBookingById, setBookingById } from "../../helpers/bookingHelpers";
 import crypto from "crypto";
@@ -15,6 +14,9 @@ import { getMovies } from "../movies/service";
 import { fetchSellerShowId } from "./controller";
 import { Mutex } from "mutex-ts";
 import { paymetSyncerCron } from "../../cron/paymentStatusSyncer";
+import { GetCurrentUTCTimestamp } from "../../helpers/utils";
+import assert from "assert";
+import { getRPCProvider } from "../../helpers/chains";
 
 // {
 //   id: "grand-indonesia-cgv",
@@ -806,15 +808,18 @@ export async function getSellers(req: SellerRequestInterface): Promise<SellerInt
     // 1) If location is provided, match seller location
     const filtered: SellerInterface[] = [];
 
+    const nowUTC = GetCurrentUTCTimestamp()
     for (const s of sellersForMovie) {
         if (req.location && req.location.localeCompare(s.location) !== 0) {
             continue;
         }
         const showsByType: typeof s.shows = {} as any;
         for (const [type, arr] of Object.entries(s.shows)) {
-            if (arr.length > 0) {
-                showsByType[type as keyof typeof s.shows] = arr;
+            const validShows = arr.filter((show) => show.showTime >= nowUTC)
+            if (validShows.length > 0) {
+                showsByType[type as keyof typeof s.shows] = validShows;
             }
+            
         }
         if (Object.keys(showsByType).length > 0) {
             filtered.push({ ...s, shows: showsByType });
@@ -826,32 +831,6 @@ export async function getSellers(req: SellerRequestInterface): Promise<SellerInt
 
 export async function getSellerShowId(sellerId: string, showId : string) : Promise<SellerShowIdInterface | undefined> {
     return findSellerShowById(sellerId, showId)
-    /*
-    let res : (SellerShowIdInterface) | undefined = undefined;
-    Object.entries(sellers).map(([_, sellers]) => {
-        if (res) {
-            return
-        }
-        sellers.forEach(seller => {
-            if (seller.id.localeCompare(sellerId) == 0) {
-                Object.entries(seller.shows).map(([_, shows]) => {
-                    shows.forEach(show => {
-                        if(show.id.localeCompare(showId) == 0) {
-                            res = {
-                                id : seller.id,
-                                location : seller.location,
-                                name : seller.name,
-                                utcTimeDiff : seller.utcTimeDiff,
-                                show : show
-                            }
-                        }
-                    })
-                })
-            }
-        })
-    })
-    return res;
-    */
 }
 
 export async function getSellerCyrptoCurrency(sellerId: string) : Promise<SellerCurrencyResponseInterface> {
@@ -868,69 +847,30 @@ export async function validateBookingMetadata(data : BookingValidationData) : Pr
         isValid : true
     }
     // need mutex lock for get to set
-    const release = await seatMutex.obtain();
+    // const release = await seatMutex.obtain();
+    const lock = GetSeatLock(data.sellerId, data.showId)
     try {
-        const seatLayout = await getSeatLayout(data.showId, data.sellerId);
-        let selectedSeatIdx = 0;
-        let found = true;
-        while (found) {
-            found = false;
-            console.log("findig seat", data.selectedSeats[selectedSeatIdx], selectedSeatIdx, data.selectedSeats.length)
-            Object.entries(seatLayout.seatClassMap).map(([_, blockData]) => {
-                if (!res.isValid || selectedSeatIdx == data.selectedSeats.length || found) {
-                    return
-                }
-                for (let i = 0; i < blockData.length; i++) {
-                    const rowData = blockData[i];
-                    for (let j = 0; j < rowData.length; j++) {
-                        if (rowData[j].isSeat) {                        
-                            const seatData = new SeatClass(rowData[j].seatData!);
-                            const selectedSeatId = data.selectedSeats[selectedSeatIdx];
-                            // console.log(seatData)
-                            if (selectedSeatId.localeCompare(seatData.id) == 0) {
-                                console.log("found seatId", selectedSeatId, selectedSeatIdx)
-                                if (seatData.isBooked || seatData.isLocked) {
-                                    console.log("seat already booked", seatData)
-                                    res.isValid = false;
-                                } else {
-                                    console.log("locking seats", seatData)
-                                    // lock the seats
-                                    rowData[j].seatData!.lockedTill = new Date(Date.now() + LOCK_DURATION_SEC * 1000).getTime()
-                                }
-                                found = true;
-                                selectedSeatIdx++;
-                                return;
-                            }
-                        }
-                    }
-                }
-            })
-        }
-        if (selectedSeatIdx != data.selectedSeats.length) {
-            console.log("invalid selected seats")
-            res.isValid = false;
-        }
-        if (res.isValid) {
+        using _ = await lock.lockRW()
+        const isLocked = await lockSeats(data.sellerId, data.showId, data.selectedSeats)
+        if (isLocked) {
             // locks the seat in backend
-            updateSeatLayoutFile(data.sellerId, data.showId, seatLayout);
             const payemtMetadata = await createPaymentMetadataObj(data)
-            if (!payemtMetadata) {
-                release()
-                return res
-            }
+            assert(payemtMetadata, "Unable to sign data")
             res.bookingId = await generateURL();
-            setBookingById(res.bookingId, payemtMetadata)
+            await setBookingById(res.bookingId, payemtMetadata)
             const bookingDataObj = await fetchBookingDataByBookingId({bookingId : res.bookingId})
-            if (bookingDataObj) {
-                paymetSyncerCron.AddPendingOrderData(bookingDataObj)
-            } else {
-
-            }
+            assert(bookingDataObj, "Unable to fetch bookingDataObj")
+            assert(bookingDataObj.show.showTime >= Date.now() / 1000, "Can't book passed show")
+            paymetSyncerCron.AddPendingOrderData(bookingDataObj)
         }
     } catch (err) {
-        console.log("got error",err)
-    } finally {
-        release()
+        console.error("got error",err)
+        {
+            using _ = await lock.lockRW()
+            unlockSeats(data.sellerId, data.showId, data.selectedSeats)
+        }
+        res.isValid = false
+        delete res.bookingId
     }
     return res;
 }
@@ -993,10 +933,7 @@ async function createPaymentMetadataObj(data: BookingValidationData) : Promise<P
         totalAmount += seatPrices[i];
     }
 
-    if (seatPrices.length != data.selectedSeats.length) {
-        console.log("mismathc lengths", seatPrices.length , data.selectedSeats.length)
-        return null
-    }
+    assert(seatPrices.length == data.selectedSeats.length, "Unable to fetch prices for all seats")
     const showTime = await getSellerShowId(data.sellerId, data.showId);
     const asset = await getAssetAddress(data.selectedChain, data.selectedCurrency)
     const masterContract = await getMasterContract(data.selectedChain, data.sellerId)
@@ -1005,10 +942,11 @@ async function createPaymentMetadataObj(data: BookingValidationData) : Promise<P
     nowSeconds/=1000;
     const utcSeconds = nowSeconds;
     if (!showTime || !asset || !masterContract) {
+        console.log("Couldn't fetch", showTime, asset, masterContract)
         return null
     }
     const paymentMetadata: PaymentMetadata = {...data, 
-        showTime : showTime.show.showTime - showTime.utcTimeDiff,
+        showTime : showTime.show.showTime,
         seatPrices : seatPrices,
         totalAmount : totalAmount,
         asset,
@@ -1027,11 +965,13 @@ async function createPaymentMetadataObj(data: BookingValidationData) : Promise<P
 
 async function signMetadata(data: PaymentMetadata) : Promise<[Hex, Hex]> {
     const ticketData = getTicketStruct(data)
-    // Need the url to fetched from config
-    const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+    const rpcUrl = await getRPCProvider(data.selectedChain);
+    console.log("fetched provider for", data.selectedChain, rpcUrl)
+    assert(rpcUrl && rpcUrl.localeCompare("") != 0, "No rpc url's for the chain")
+    
+    const provider = new ethers.JsonRpcProvider(rpcUrl, {chainId : data.selectedChain , name: "sepolia"});
     const signer = privateKeyToAccount(PRIVATE_KEY);
     const masterContract = Master__factory.connect(data.masterContract, provider)
-    console.log(ticketData)
     const signatureHash = await masterContract.getPurchaseDataSignatureHash(ticketData) as Hex;
     console.log(signatureHash)
     const verificationSignature = await signer.sign({hash : signatureHash})

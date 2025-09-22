@@ -1,8 +1,16 @@
 import fs from "fs";
 import path from "path";
-import { OrderMetadata } from "../../../../shared";
+import { OrderMetadata } from "shared";
+import assert from "assert";
+import { MutexRW } from "mutex-ts";
 
 const ORDER_HISTORY_DIR = path.resolve(__dirname, "../../data/orderHistory");
+const PENDING_CANCELS_FILE = path.resolve(
+  __dirname,
+  "../../data/pendingCancels.json",
+);
+
+const ordersLock : Map<string, MutexRW> = new Map();
 
 /**
  * Ensures the directory exists before read/write.
@@ -11,6 +19,29 @@ function ensureOrderHistoryDir() {
   if (!fs.existsSync(ORDER_HISTORY_DIR)) {
     fs.mkdirSync(ORDER_HISTORY_DIR, { recursive: true });
   }
+}
+
+function ensurePendingCancelsDir() {
+  const dir = path.dirname(PENDING_CANCELS_FILE);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
+function appendPendingCancel(order: OrderMetadata) {
+  ensurePendingCancelsDir();
+  let pending: OrderMetadata[] = [];
+  if (fs.existsSync(PENDING_CANCELS_FILE)) {
+    try {
+      const raw = fs.readFileSync(PENDING_CANCELS_FILE, "utf-8");
+      pending = JSON.parse(raw) as OrderMetadata[];
+    } catch (e) {
+      // If parsing fails, start fresh to avoid breaking cancellations persistence
+      pending = [];
+    }
+  }
+  pending.push(order);
+  fs.writeFileSync(PENDING_CANCELS_FILE, JSON.stringify(pending, null, 2), "utf-8");
 }
 
 /**
@@ -71,20 +102,58 @@ export async function cancelOrderHistory(
 
   let orders = readOrderHistory(address);
   let modified = false;
+  let cancelledOrder: OrderMetadata | undefined = undefined;
+
+  orders.map((order) => {
+    if (order.orderId.localeCompare(orderId) == 0) {
+      console.log("setting order as cancelled", order)
+      modified = true;
+      order.isCancelled = true;
+      cancelledOrder = order;
+      return order;
+    }
+    return order;
+  });
+
+  assert(modified, `No orders found for Id ${orderId}`)
+  if (cancelledOrder) {
+    appendPendingCancel(cancelledOrder);
+  }
+
+  return modified;
+}
+
+export async function cancelOrder(
+  address: string,
+  orderId: string,
+): Promise<boolean> {
+  ensureOrderHistoryDir();
+  const filePath = path.join(ORDER_HISTORY_DIR, `${address.toLowerCase()}.json`);
+
+  if (!fs.existsSync(filePath)) {
+    return false;
+  }
+
+  let orders = readOrderHistory(address);
+  let modified = false;
+  let cancelledOrder: OrderMetadata | undefined = undefined;
 
   orders = orders.map((order) => {
     if (order.orderId.localeCompare(orderId) == 0) {
       console.log("setting order as cancelled", order)
       modified = true;
       order.isCancelled = true;
+      cancelledOrder = order;
       return order;
     }
     return order;
   });
 
-  if (modified) {
-    fs.writeFileSync(filePath, JSON.stringify(orders, null, 2), "utf-8");
-  }
+  assert(modified, `No orders found for Id ${orderId}`)
+  fs.writeFileSync(filePath, JSON.stringify(orders, null, 2), "utf-8");
 
   return modified;
+}
+export function GetOrdersMutex(address: string) : MutexRW {
+  return ordersLock.has(address.toLowerCase()) ? ordersLock.get(address.toLowerCase())! : ordersLock.set(address.toLowerCase(), new MutexRW()) && ordersLock.get(address.toLowerCase())!
 }

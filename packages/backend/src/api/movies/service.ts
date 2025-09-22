@@ -1,4 +1,4 @@
-import { MovieInterface, MovieRequestInterface } from "../../../../../shared/index";
+import { MovieInterface, MovieRequestInterface } from "shared";
 
 const showMap: Record<string, MovieInterface> = {
     '0' : {

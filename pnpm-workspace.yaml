@@ -4,3 +4,4 @@ packages:
   - "packages/contracts"
   - "packages/syncer"
   - "shared"
+  - "typechain-types"

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { ApiResponse, CityMetadata } from "../../../../../shared";
+import { ApiResponse, CityMetadata } from "shared";
 import { getCities } from "./service";
 
 export async function fetchCities(

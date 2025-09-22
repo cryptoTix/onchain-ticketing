@@ -1,40 +1,40 @@
 import fs from "fs";
 import path from "path";
-import { SellerCurrencyResponseInterface } from "../../../../shared/index";
+import { SellerCurrencyResponseInterface } from "shared";
 import { Address } from "viem";
 
 const DATA_DIR = path.resolve(__dirname, "../../data/crypto");
 
-const defaultNetworks = [1, 137, 56, 42161, 10, 31337]; // Ethereum, Polygon, BSC, Arbitrum, Optimism
+const defaultNetworks = [31337, 11155111, 421614]; // Ethereum, Polygon, BSC, Arbitrum, Optimism
 const sampleCurrencies: Record<number, string[]> = {
-  1: ["USDC", "USDT"],
-  137: ["USDC", "USDT"],
-  56: ["USDC", "USDT"],
-  42161: ["USDC", "USDT"],
-  10: ["USDC", "USDT"],
   31337: ["USDC", "USDT"],
+  11155111: ["USDC", "USDT"],
+  421614: ["USDC", "USDT"]
+
 };
 
 const assetAddress: Record<number, Record<string, Address>> = {
-  1 : {
-    "USDC" : `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`,
-    "USDT" : `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`
-  },
   31337 : {
     "USDC" : `0x41a78AA83bb0274b2CC60c31534E8500AD571eaA`,
-    "USDT" : `0x41a78AA83bb0274b2CC60c31534E8500AD571eaA`
+    "USDT" : `0xE5d43d6242185254B35E6C42fAa692a7d11Bb6Af`
   },
-  10 : {
-    "USDC" : `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`,
-    "USDT" : `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`
+  421614 : {
+    "USDC" : `0x41a78AA83bb0274b2CC60c31534E8500AD571eaA`,
+    "USDT" : `0xE5d43d6242185254B35E6C42fAa692a7d11Bb6Af`
   },
-  42161 : {
-    "USDC" : `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`,
-    "USDT" : `0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48`
+  11155111: {
+    "USDC" : `0x41a78AA83bb0274b2CC60c31534E8500AD571eaA`,
+    "USDT" : `0xE5d43d6242185254B35E6C42fAa692a7d11Bb6Af`
   },
 }
 
-const MASTER_CONTRACT = `0xDe17fF229E6a9EA25F0C255735258aA07E12739c`
+const MASTER_CONTRACT : Address = `0xDe17fF229E6a9EA25F0C255735258aA07E12739c`
+
+const MASTER_CONTRACT_MAP: Record<number, Address> = {
+  11155111 : MASTER_CONTRACT,
+  421614 : MASTER_CONTRACT,
+  31337: MASTER_CONTRACT
+}
 
 export async function getSellerCurrencies(
   sellerId: string
@@ -70,7 +70,7 @@ export async function getAssetAddress(network: number, asset: string) : Promise<
 }
 
 export async function getMasterContract(network: number, sellerId: string) : Promise<Address | null> {
-  return MASTER_CONTRACT;
+  return MASTER_CONTRACT_MAP[network];
 }
 
 export async function getPriceToCurrencyExponent(price:number, network: number, asset: string) : Promise<number> {

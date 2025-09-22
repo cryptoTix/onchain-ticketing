@@ -1,10 +1,3 @@
-import { Master, Master__factory } from "../../../../typechain-types";
-
-import { ethers } from "ethers";
-import { privateKeyToAccount } from "viem/accounts";
-import { MASTER_ADDR, PRIVATE_KEY } from "./consts";
-import { erc20Abi, Hex } from "viem";
-import { PaymentMetadata } from "../../../../shared";
 
 // export const paymentMetadata : PaymentMetadata = {
 //   requestId: "",

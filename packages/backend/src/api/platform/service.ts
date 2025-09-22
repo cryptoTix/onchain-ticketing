@@ -1,4 +1,4 @@
-import { CityMetadata, MovieInterface } from "../../../../../shared/index";
+import { CityMetadata } from "shared";
 
 export async function getCities() : Promise<CityMetadata[]> {
   console.log("fetching cities")

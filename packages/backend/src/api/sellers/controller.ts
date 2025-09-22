@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { fetchBookingDataByBookingId, getSellerCyrptoCurrency, getSellers, getSellerShowId, validateBookingMetadata } from "./service";
-import { ApiResponse, SellerInterface, SellerRequestInterface, SellerShowIdInterface, SellerShowIdRequestInterface, ShowInterface, SellerCurrencyRequestInterface, SellerCurrencyResponseInterface, BookingValidationRequest, BookingValidationResponse, PaymentMetadataRequest, PaymentMetadataResponse, BookingDataRequest, BookingDataResponse } from "../../../../../shared";
+import { ApiResponse, SellerInterface, SellerRequestInterface, SellerShowIdInterface, SellerShowIdRequestInterface, ShowInterface, SellerCurrencyRequestInterface, SellerCurrencyResponseInterface, BookingValidationRequest, BookingValidationResponse, PaymentMetadataRequest, PaymentMetadataResponse, BookingDataRequest, BookingDataResponse } from "shared";
 import { getSeatLayout } from "./service";
-import { SeatLayout, SeatLayoutRequest } from "../../../../../shared";
+import { SeatLayout, SeatLayoutRequest } from "shared";
 
 export async function fetchSellers(
   req: Request<{},{},{},SellerRequestInterface>,
@@ -109,7 +109,7 @@ export async function validateMetadata(
         console.log("response for:", req.query, data)
         data.isValid ?
             res.json({ success: true, data : data, statusCode : 200 }) :
-            res.status(400).json({ success: true, statusCode : 400 })
+            res.status(400).json({ success: false, statusCode : 400 })
         return
     } catch (error) {
         console.log("got err:", error)

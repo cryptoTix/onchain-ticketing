@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { ApiResponse, OrderHistoryRequestInterface, OrderHistoryResponseInterface } from "../../../../../shared";
+import { ApiResponse, OrderHistoryRequestInterface, OrderHistoryResponseInterface } from "shared";
 import { fetchUserOrders } from "./service";
 
 export async function fetchOrders(

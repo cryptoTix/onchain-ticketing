@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { getSeatLayout } from "./service";
-import { ApiResponse, MovieInterface, MovieRequestInterface, SeatLayout, SeatLayoutRequest } from "../../../../../shared";
+import { ApiResponse, MovieInterface, MovieRequestInterface, SeatLayout, SeatLayoutRequest } from "shared";
 
 export async function fetchSeatLayout(
   req: Request<{},{},{},SeatLayoutRequest>,

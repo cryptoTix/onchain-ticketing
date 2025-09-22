@@ -1,13 +1,15 @@
 import { Mutex } from "mutex-ts";
-import { BookingData } from "../../../../shared";
+import { BookingData } from "shared";
 import { LOCK_DURATION_SEC } from "../helpers/consts";
 import { ethers } from "ethers";
-import { Master__factory } from "../../../../typechain-types";
+import { Master__factory } from "typechain-types";
 import { Address, isAddressEqual } from "viem";
-import { bookSeatIds } from "../helpers/seatLayout";
-import { writeOrderHistory } from "../helpers/ticketHelpers";
+import { bookSeatIds, GetSeatLock } from "../helpers/seatLayout";
+import { GetOrdersMutex, writeOrderHistory } from "../helpers/ticketHelpers";
 import { fetchMovies } from "../api/movies/controller";
 import { getMovies } from "../api/movies/service";
+import assert from "assert";
+import { getRPCProvider } from "../helpers/chains";
 
 class PaymentStatusSyncer {
   private pendingOrders: BookingData[];
@@ -32,25 +34,31 @@ class PaymentStatusSyncer {
           this.pendingOrders.pop()
           i--;
         } else {
-          const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
+          const rpcUrl = await getRPCProvider(order.paymentData.selectedChain)
+          const provider = new ethers.JsonRpcProvider(rpcUrl);
           const master = Master__factory.connect(order.paymentData.masterContract, provider);
           const tokenOwner = await master.ownerOf(order.paymentData.purchaseDataHash) as Address
           if (isAddressEqual(tokenOwner, order.paymentData.ticketOwner)) {
-            if (await bookSeatIds(order.paymentData.sellerId, order.paymentData.showId, order.paymentData.selectedSeats)) {
-              const movieData = await getMovies({movieId : order.paymentData.movieId})
-              if (movieData && movieData.length == 1) {
-                writeOrderHistory(tokenOwner, {
-                  ...order,
-                  orderId : order.paymentData.purchaseDataHash,
-                  movie : movieData[0]
-                })
-                this.pendingOrders[i] = this.pendingOrders[-1]
-                this.pendingOrders.pop()
-                i--;
-              } else {
-                console.log("failed to fetch movie in cron")
-              }
+            {
+              const seatsMutex = GetSeatLock(order.seller.id, order.show.id)
+              using _ = await seatsMutex.lockRW()
+              await bookSeatIds(order.seller.id, order.show.id, order.seats.map((seat) => seat.id))
             }
+            const movieData = await getMovies({movieId : order.paymentData.movieId})
+            assert(movieData && movieData.length == 1, `failed to fetch movie in cron ${order.paymentData.movieId}`)
+            {
+              const mutex = GetOrdersMutex(order.paymentData.ticketOwner)
+              using _ = await mutex.lockRW()
+              writeOrderHistory(tokenOwner, {
+                ...order,
+                orderId : order.paymentData.purchaseDataHash,
+                movie : movieData[0]
+              })
+
+            }
+            this.pendingOrders[i] = this.pendingOrders[-1]
+            this.pendingOrders.pop()
+            i--;
           }
         }
       }

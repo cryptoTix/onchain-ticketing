@@ -5,6 +5,7 @@ export interface ShowState {
     sellerId: string;
     sellerName : string;
     sellerLocation : string;
-    showTime : Date;
+    showTime : number;
     showType : ShowType;
+    sellerUTCTDiff : number;
 }
