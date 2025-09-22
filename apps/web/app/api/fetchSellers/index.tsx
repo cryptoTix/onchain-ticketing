@@ -109,6 +109,7 @@ export async function reserveSeats(req : BookingValidationRequest): Promise<Book
           toast.error(`Failed to lock seats, pls refresh and try again`)
           return null;
       }
+      console.log(res)
       const data: ApiResponse<BookingValidationResponse> = await res.json();
       return data.data;
   

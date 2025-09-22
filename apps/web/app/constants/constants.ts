@@ -41,28 +41,10 @@ import lbtc from "../assets/lbtc.svg";
 import ptweEth from "../assets/pt-weETH.svg";
 import buidl from "../assets/buidl.svg";
 
-export const QUEUING_PERIOD_SECONDS = 60 * 60 * 24 * 9; // 9 days
-
-export const FALLBACK_TRPC_URL = "http://localhost:42069/trpc";
-
-export const KARAK_WETH_ADDRESS = "0x4200000000000000000000000000000000000006";
-
-export const WETH_MAX_MARGIN = BigInt(800000000000000); // 0.0008
-
-export const v1VaultSupervisorAddressMap: { [key: number]: string } = {
-  1: getAddress("0x54e44DbB92dBA848ACe27F44c0CB4268981eF1CC"), // ethereum
-  42161: getAddress("0x399f22ae52a18382a67542b3De9BeD52b7B9A4ad"), // arbitrum
-  5000: getAddress("0x4a2b015CcB8658998692Db9eD4522B8e846962eD"), // mantle
-  56: getAddress("0x4a2b015CcB8658998692Db9eD4522B8e846962eD"), // bsc
-  81457: getAddress("0x58b5dc145ca2BE84fe087614CFe36055be609BB3"), // blast
-  252: getAddress("0xdF922c74CC0dc394022ea002Af5aFaa32348670e"), // fraxtal
-  2410: getAddress("0xB308474350D75447cA8731B7Ce87c9ee9DA03B1C") // karak
-};
-
 export const chainImageMap: { [key: number]: string } = {
   11155111: sepolia,
   31337: anvil,
-  42161: arb,
+  421614: arb,
   252: fraxtal,
   56: bsc,
   5000: mantle,
@@ -107,56 +89,9 @@ export const assetImageMap: { [key: string]: string} = {
   "PT-weETH-26DEC2024": ptweEth,
   "BUIDL": buidl,
 };
-  
-export const operatorImageMap: { [key: string]: string } = {
-  // "11155111.0x54603E6fd3A92E32Bd3c00399D306B82bB3601Ba" : mkr,
-  // "31337.0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266" : etherfi,
-};
-  
-export const dssImageMap: { [key: string]: string } = {
-  // "11155111.0x56075250EB88636bADa3bcFCeb4D05f5aFF6Bed7" : etherfi,
-};
-
 export const BLOCKED_COUNTRIES = [
-  "Russia",
-  "Iran",
-  "North Korea",
-  "Syria",
-  "Afghanistan",
-  "Cuba",
-  "Belarus",
-  "Burundi",
-  "Central African Republic",
-  "Democratic Republic of the Congo",
-  "Iraq",
-  "Libya",
-  "Lebanon",
-  "Somalia",
-  "Venezuela",
-  "Yemen",
-  "Zimbabwe",
-  "Sudan",
-  "South Sudan",
-  "Mali",
-  "Myanmar",
-  "Burma",
-  "Nicaragua",
-  "Ethiopia",
 ];
 
-export const BLOCKED_ADDRESSES = [
-  "0x7F367cC41522cE07553e823bf3be79A889DEbe1B",
-  "0xd882cFc20F52f2599D84b8e8D58C7FB62cfE344b",
-  "0x901bb9583b24D97e995513C6778dc6888AB6870e",
-  "0xA7e5d5A720f06526557c513402f2e6B5fA20b008",
-];
+export const BLOCKED_ADDRESSES = [];
 
-export const MasterContractMap: { [key: number]: Address } = {
-  1: getAddress("0x54e44DbB92dBA848ACe27F44c0CB4268981eF1CC"), // ethereum
-  42161: getAddress("0x399f22ae52a18382a67542b3De9BeD52b7B9A4ad"), // arbitrum
-  5000: getAddress("0x4a2b015CcB8658998692Db9eD4522B8e846962eD"), // mantle
-  56: getAddress("0x4a2b015CcB8658998692Db9eD4522B8e846962eD"), // bsc
-  81457: getAddress("0x58b5dc145ca2BE84fe087614CFe36055be609BB3"), // blast
-  252: getAddress("0xdF922c74CC0dc394022ea002Af5aFaa32348670e"), // fraxtal
-  2410: getAddress("0xB308474350D75447cA8731B7Ce87c9ee9DA03B1C") // karak
-};
+export const MasterContractMap: { [key: number]: Address } = {};

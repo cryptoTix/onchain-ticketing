@@ -1,7 +1,7 @@
 import { Hex, hexToBigInt, keccak256 } from "viem";
 import { PaymentMetadata } from "../types/payment";
 import { AbiCoder, ethers } from "ethers";
-import { TicketLib } from "../../../typechain-types/src/Master";
+import type { TicketLib } from "typechain-types/src/Master";
 
 export function getTicketStruct(data: PaymentMetadata) : TicketLib.StateStruct {
   const seatData : TicketLib.SeatDataStruct[] = []
@@ -12,12 +12,13 @@ export function getTicketStruct(data: PaymentMetadata) : TicketLib.StateStruct {
         price: data.seatPrices[i]
     })
   }
-  const seatIdHex : Hex = ethers.hexlify(ethers.toUtf8Bytes(data.showId)) as Hex;
+  const showIdHex : Hex = ethers.hexlify(ethers.toUtf8Bytes(data.showId)) as Hex;
+  console.log(showIdHex)
   return {
       asset : data.asset,
       showTime : data.showTime,
       owner : data.ticketOwner,
-      showId : ethers.zeroPadBytes(seatIdHex, 12),
+      showId : ethers.zeroPadBytes(showIdHex, 12),
       originTimestamp : data.originTimestampUTC,
       seats : seatData,
       amount : data.totalAmount,

@@ -6,12 +6,8 @@ import OrderHistoryCard from "../components/OrderHistroyCard/OrderHistroy"
 import { OrderMetadata } from "../../../../shared"
 import { fetchOrders } from "../api/fetchOrders"
 import { BookingInfo } from "../components/BookingInfoCard/BookingInfo"
-import { useRouter } from "next/navigation"
-import { ToastNotification } from "../components/Toast/ToastNotification"
-import { useLocationStore } from "../store/location"
 
 export default function OrderHistoryPage() {
-    const router = useRouter();
     const [orders, setOrders] = useState<OrderMetadata[]>([])
     const [selectedOrder, setSelectedOrder] = useState<OrderMetadata>();
     const {isConnected, address} =  useAccount()
@@ -29,7 +25,9 @@ export default function OrderHistoryPage() {
 
     return (
         selectedOrder ? 
-          <BookingInfo orderData={selectedOrder} onSucessCancel={() => {router.refresh()}}/> :
+          <BookingInfo orderData={selectedOrder} onSucessCancel={() => {setTimeout(() => {
+            setSelectedOrder(null)
+          }, 1000)}}/> :
           <div className="max-w-6xl mx-auto px-4 py-8 w-full">
             <h1 className="text-xl font-bold mb-6 text-white">Your Order History</h1>
             {!isConnected ? (

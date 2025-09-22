@@ -114,17 +114,9 @@ function SeatsContent() {
 }
 
 export default function Seats() {
-  // const [showloader, setShowloader] = useState<boolean>(true)
-  // useMemo(() => setTimeout(() => {
-  //   setShowloader(false)
-  // }, 1000), [])
   return (
     <Suspense fallback={<SeatLayoutLoader />}> 
       <SeatsContent />
     </Suspense>
   );
 }
-
-// function getSeatchParams(params:type) {
-  
-// }

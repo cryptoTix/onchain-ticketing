@@ -4,11 +4,8 @@ import React, { useEffect, useState } from "react";
 import { SupportedCurrency } from "../../../../../shared";
 import { CurrencySelectionProps } from "../../types/props/CurrencySelectionProps";
 import { fetchSellerAcceptedCurrencies, reserveSeats } from "../../api/fetchSellers";
-import { Menu } from "@headlessui/react";
-import { DarkChevronDownIcon } from "../Shared/shared";
 import { chainImageMap } from "../../constants/constants";
-import Image from "next/image";
-import { displayLongDate, displayTime, fetchChainName, getSeatIdsToStr, getTokenImg, trimAddress } from "../../utils/helpers";
+import { getSeatIdsToStr, getTokenImg, getUTCTimeToSellerTime, trimAddress } from "../../utils/helpers";
 import { ToastNotification } from "../Toast/ToastNotification";
 import { ConfirmBookingDialog } from "../DialogBox/ConfirmBooking";
 import { useAccount } from "wagmi";
@@ -79,7 +76,7 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
     }
   }
   return (
-      <div className="w-full mt-12">
+      <div className={`w-full mt-12 ${openConfirmBooking&&"opacity-50"}`}>
         <ToastNotification/>
         <ConfirmBookingDialog isOpen={openConfirmBooking} onClose={() => setOpenConfirmBooking(false)} onConfirm={handleConfirmPurchase} seatCount={Object.entries(selectedSeats).length} totalPrice={totalPrice}/>
         <div className="flex items-start justify-between">
@@ -121,7 +118,7 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
             <h2 className="text-white font-semibold text-lg mb-4">BOOKING SUMMARY</h2>
             <p className="text-sm mt-8">{getSeatIdsToStr(selectedSeats) + " (" + (selectedSeats ? Object.entries(selectedSeats).length : 0)  + "Tickets)"}</p>
             <p className="text-sm mt-4">{"Screen: " + sellerAndshowDetails.show.screenId}</p>
-            <p className="text-sm mt-2 mb-2">{movieDetails.name + ": " + sellerAndshowDetails.name + ", " + sellerAndshowDetails.location + " | " + displayLongDate(new Date(sellerAndshowDetails.show.showTime)) + " " + displayTime(new Date(sellerAndshowDetails.show.showTime))}</p>
+            <p className="text-sm mt-2 mb-2">{movieDetails.name + ": " + sellerAndshowDetails.name + ", " + sellerAndshowDetails.location + " | " + getUTCTimeToSellerTime(sellerAndshowDetails.show.showTime, sellerAndshowDetails.utcTimeDiff)}</p>
             <div className="flex">
               <InfoButton message="Can only modify and view ticket"/>
               <p className="text-sm">Ticket Owner:  {ticketOwner ? trimAddress(ticketOwner) : (address ? trimAddress(address) : "None")}</p>

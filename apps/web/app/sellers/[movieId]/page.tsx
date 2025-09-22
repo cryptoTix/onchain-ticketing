@@ -2,13 +2,13 @@
 
 import Button from "../../components/Button/button";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MovieInterface, SellerInterface } from "../../../../../shared";
 import { fetchMovies } from "../../api/fetchMovies";
 import { fetchSellers } from "../../api/fetchSellers";
 import SellerCard from "../../components/SellerCard/SellerCard";
 import { ShowState } from "../../types/state/ShowState";
-import { displayLongDate, displayTime, formatDate } from "../../utils/helpers";
+import { displayLongSellerDate, displayTime, formatDate } from "../../utils/helpers";
 import  DateCard  from "../../components/DateCard/DateCard";
 import { ToastNotification } from "../../components/Toast/ToastNotification";
 import { RedirectCard } from "../../components/Redirect/RedirectCard";
@@ -22,24 +22,16 @@ interface SellerInput {
 
 export default function Page({
   params
-}: {
-  params: SellerInput
+} : {
+  params: Promise<SellerInput>
 }) {
   const NOW = new Date(Date.now());
   const router = useRouter();
-  const [movieId, setMovieId] = useState<string>();
   const [movieData, setMovieData] = useState<MovieInterface>();
   const [sellers, setSellers] = useState<SellerInterface[]>([]);
   const [selectedDate, setSelectedDate] = useState<Date>(NOW);
   const {location} = useLocationStore()
-
-  useEffect(() => {
-    async function loadShows() {
-      const data = params;
-      setMovieId(data.movieId);
-    }
-    loadShows();
-  }, []);
+  const { movieId } = React.use(params)
   const [selectedShow, setSelectedShow] = useState<ShowState| null>(null);
 
   useEffect(() => {
@@ -82,7 +74,7 @@ export default function Page({
       </div>
 
       {/* RIGHT: Movie Metadata */}
-      <div className="w-1/3 flex flex-col items-centre">
+      {movieData && <div className="w-1/3 flex flex-col items-centre">
         <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
         <h1 className={`font-bold mt-5 leading-loose text-left 
           ${movieData?.name.length > 20
@@ -119,10 +111,10 @@ export default function Page({
           <div id="seats-section" className="mt-6 w-full p-4 bg-gray-800 text-white rounded-lg">
             <div className="space-y-2 mt-4">
               <div className="text-2xl font-bold">{selectedShow.sellerName}</div>
-              <p>{displayLongDate(selectedShow.showTime)}</p>
+              <p>{displayLongSellerDate(selectedShow.showTime, selectedShow.sellerUTCTDiff)}</p>
               <div className="flex flex-row justify-between w-full">
                 <div className="text-2xl font-bold">{selectedShow.showType}</div>
-                <div className="text-2xl font-bold">{displayTime(selectedShow.showTime)}</div>
+                <div className="text-2xl font-bold">{displayTime(selectedShow.showTime, selectedShow.sellerUTCTDiff)}</div>
               </div>
               {/* TODO: Handle screens here for multiple shows with same name and time*/}
               {/* <div className="flex justify-center">
@@ -136,7 +128,7 @@ export default function Page({
             </div>
           </div>
         )}
-      </div>
+      </div>}
     </div>
   );
 };

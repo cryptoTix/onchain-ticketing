@@ -1,7 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
-import { SeatLayout, BlockData, SeatData, SeatClass } from "../../../../shared";
-import { MutexRW } from "mutex-ts";
+import { SeatLayout, BlockData, SeatData, SeatClass } from "shared";
+import { Mutex, MutexRW } from "mutex-ts";
+import assert from "assert";
+import { LOCK_DURATION_MILLI_SEC, LOCK_DURATION_SEC } from "./consts";
 
 const LAYOUT_DIR = path.resolve(__dirname, "../../data/layouts");
 
@@ -76,15 +78,8 @@ export async function bookSeatIds(sellerId: string, showId: string, seats: strin
                     if (selectedSeatId.localeCompare(seatData.id) == 0) {
                         found = true;
                         console.log("found seatId", selectedSeatId, selectedSeatIdx)
-                        if (seatData.isBooked) {
-                            console.log("seat already booked", seatData)
-                        } else if (seatData.isLocked) {
-                            console.log("booking seats", seatData)
-                            // lock the seats
-                            rowData[j].seatData!.isBooked = true
-                        } else {
-                          console.log("seats not locked", seatData)
-                        }
+                        assert(!seatData.isBooked, `seat already booked ${seatData}`)
+                        rowData[j].seatData!.isBooked = true
                         selectedSeatIdx++;
                         return;
                     }
@@ -92,10 +87,7 @@ export async function bookSeatIds(sellerId: string, showId: string, seats: strin
             }
         }
       })
-      if (!found) {
-        console.log("couldn't find seatId", seats[selectedSeatIdx])
-        break
-      }
+      assert(found, `couldn't find seatId to cancel ${seats[selectedSeatIdx]}`)
     }
 
     updateSeatLayoutFile(sellerId, showId, seatLayout)
@@ -103,6 +95,159 @@ export async function bookSeatIds(sellerId: string, showId: string, seats: strin
   } catch (error) {
     console.log("got error", error)
     return false
+  }
+}
+
+/**
+ * Lock seatIds for given sellerId, showId
+ */
+
+export async function lockSeats(sellerId: string, showId: string, seats: string[]) : Promise<boolean> {
+  let isValid: boolean = true;
+  try {
+      const seatLayout = await getOrCreateSeatLayout(sellerId, showId);
+      let selectedSeatIdx = 0;
+      let found = true;
+      while (found) {
+          found = false;
+          if (!isValid || selectedSeatIdx == seats.length || found) {
+            break
+          }
+          console.log("finding seat", seats[selectedSeatIdx], selectedSeatIdx, seats.length)
+          Object.entries(seatLayout.seatClassMap).map(([_, blockData]) => {
+              if (!isValid || selectedSeatIdx == seats.length || found) {
+                  return
+              }
+              for (let i = 0; i < blockData.length; i++) {
+                  const rowData = blockData[i];
+                  for (let j = 0; j < rowData.length; j++) {
+                      if (rowData[j].isSeat) {                        
+                          const seatData = new SeatClass(rowData[j].seatData!);
+                          const selectedSeatId = seats[selectedSeatIdx];
+                          if (selectedSeatId.localeCompare(seatData.id) == 0) {
+                              console.log("found seatId", selectedSeatId, selectedSeatIdx)
+                              if (seatData.isBooked || seatData.isLocked) {
+                                  console.log("seat already booked", seatData)
+                                  isValid = false;
+                              } else {
+                                  console.log("locking seats", seatData)
+                                  // lock the seats
+                                  rowData[j].seatData!.lockedTill = Date.now() + LOCK_DURATION_MILLI_SEC
+                              }
+                              found = true;
+                              selectedSeatIdx++;
+                              return;
+                          }
+                      }
+                  }
+              }
+          })
+      }
+      if (selectedSeatIdx != seats.length) {
+          console.log("invalid selected seats")
+          return false;
+      }
+      updateSeatLayoutFile(sellerId, showId, seatLayout);
+  } catch (err) {
+      console.error("got error",err)
+      isValid = false
+  }
+  return isValid
+}
+
+/**
+ * Unlock seatIds for given sellerId, showId
+ */
+
+export async function unlockSeats(sellerId: string, showId: string, seats: string[]) : Promise<boolean> {
+  try {
+      const seatLayout = await getOrCreateSeatLayout(sellerId, showId);
+      let selectedSeatIdx = 0;
+      let found = true;
+      while (found) {
+          found = false;
+          console.log("finding seat", seats[selectedSeatIdx], selectedSeatIdx, seats.length)
+          Object.entries(seatLayout.seatClassMap).map(([_, blockData]) => {
+              if (selectedSeatIdx == seats.length || found) {
+                  return
+              }
+              for (let i = 0; i < blockData.length; i++) {
+                  const rowData = blockData[i];
+                  for (let j = 0; j < rowData.length; j++) {
+                      if (rowData[j].isSeat) {                        
+                        const seatData = new SeatClass(rowData[j].seatData!);
+                        const selectedSeatId = seats[selectedSeatIdx];
+                        if (selectedSeatId.localeCompare(seatData.id) == 0) {
+                              console.log("unlock", selectedSeatId, selectedSeatIdx, seatData)
+                              assert(seatData.isLocked, "Attempting to unlock a locked seat")
+                              assert(!seatData.isBooked, "Attempting to unlock a booked seat")
+                              rowData[j].seatData!.lockedTill = 0
+                              found = true;
+                              selectedSeatIdx++;
+                              return;
+                          }
+                      }
+                  }
+              }
+          })
+      }
+      if (selectedSeatIdx != seats.length) {
+          console.log("Not all seatId present")
+          return false;
+      }
+      updateSeatLayoutFile(sellerId, showId, seatLayout);
+  } catch (err) {
+      console.error("got error",err)
+      return false
+  }
+  return true
+}
+/**
+ * Cancels the seats (marks as not booked) if they are currently booked and locked
+ * @param sellerId - Unique ID of the seller
+ * @param showId - Unique ID of the show
+ * @param seats - seatIds to cancel
+ */
+export async function cancelSeatIds(sellerId: string, showId: string, seats: string[]) : Promise<boolean> {
+  try {
+    const seatLayout = await getOrCreateSeatLayout(sellerId, showId);
+    let selectedSeatIdx = 0;
+    while (selectedSeatIdx < seats.length) {
+      if (selectedSeatIdx == seats.length) {
+        break;
+      }
+      let found = false;
+      Object.entries(seatLayout.seatClassMap).map(([_, blockData]) => {
+        if (selectedSeatIdx == seats.length) {
+          return;
+        }
+        for (let i = 0; i < blockData.length; i++) {
+          const rowData = blockData[i];
+          for (let j = 0; j < rowData.length; j++) {
+            if (rowData[j].isSeat) {
+              const seatData = new SeatClass(rowData[j].seatData!);
+              const selectedSeatId = seats[selectedSeatIdx];
+              if (selectedSeatId.localeCompare(seatData.id) == 0) {
+                found = true;
+                console.log("found seatId for cancel", selectedSeatId, selectedSeatIdx)
+                assert(seatData.isBooked, "seat not booked")
+                rowData[j].seatData!.lockedTill = 0
+                rowData[j].seatData!.isBooked = false
+                selectedSeatIdx++;
+                return;
+              }
+            }
+          }
+        }
+      })
+      assert(found, `couldn't find seatId to cancel ${seats[selectedSeatIdx]}`)
+    }
+
+    updateSeatLayoutFile(sellerId, showId, seatLayout);
+    return selectedSeatIdx == seats.length;
+  } catch (error) {
+    console.log("got error during cancel", error);
+    return false;
   }
 }
 
@@ -172,9 +317,11 @@ export function generateRandomSeatLayout(): SeatLayout {
 function seatLockKey(sellerId : string, showId : string) : string {
   return sellerId + "." + showId;
 }
-function createNewLock(sellerId : string, showId : string) {
+
+export function GetSeatLock(sellerId : string, showId : string) : MutexRW {
   const key = seatLockKey(sellerId, showId);
   if (!seatLayoutLock.has(key)) {
     seatLayoutLock.set(key, new MutexRW())
   }
+  return seatLayoutLock.get(key)!;
 }

@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
+    "predev": "pnpm -w -F shared build && pnpm -w -F typechain-types build && pnpm i",
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "prebuild": "rimraf -G dist",
+    "prebuild": "rimraf -G dist && pnpm -w -F typechain-types build && pnpm -w -F shared build",
     "build": "tsc",
-    "start": "node dist/packages/backend/src/index.js"
+    "prestart": "pnpm -w -F shared build && pnpm -w -F typechain-types build",
+    "start": "pnpm -w -F shared build && pnpm -w -F typechain-types build && node dist/src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,10 +19,12 @@
     "cors": "^2.8.5",
     "decimals": "^1.0.0",
     "dotenv": "^16.5.0",
+    "ethers": "^6.15.0",
     "express": "^5.1.0",
     "mutex-ts": "^1.2.1",
-    "viem": "^2.31.7",
-    "ethers": "^6.15.0"
+    "shared": "workspace:*",
+    "typechain-types": "workspace:*",
+    "viem": "^2.31.7"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

@@ -7,7 +7,7 @@ import { getBookingMetadataById } from "../../api/fetchSellers";
 import { BookingDataLoader, TicketLoader } from "../../components/Loader/Loader";
 import { approve, isApproved, purchase } from "../../actions/deposit";
 import { ToastNotification } from "../../components/Toast/ToastNotification";
-import { displayLongDate, displayTime, fetchChainName, getSeatsToStr, trimAddress } from "../../utils/helpers";
+import { getUTCTimeToSellerTime, displayTime, fetchChainName, getSeatsToStr, trimAddress } from "../../utils/helpers";
 import { InfoButton } from "../../components/Button/infoButton";
 import { TimerCard } from "../../components/Timer/TimerCard";
 import { PAYMENT_DURATION } from "../../utils/consts";
@@ -42,23 +42,32 @@ export default function PaymentPage({
       setLoader(true)
       console.log("got boking id", params.bookingId)
       setBookingId(params.bookingId)
+      const data = await getBookingMetadataById({
+        bookingId : params.bookingId
+      })
       setBookingData(
-        await getBookingMetadataById({
-          bookingId : params.bookingId
-        })
+        data
       )
+      console.log("checking is approved")
+      if(bookingData && await isApproved(bookingData.paymentData)) setIsApproved(true)
+      console.log("done check")
       setLoader(false)
     }
     loadBookingData()
   }, [params])
-  useEffect(() => {
-    async function checkApproval() {
-      if(bookingData) {
-        if(await isApproved(bookingData.paymentData)) setIsApproved(true)
-      }
-    }
-    checkApproval()
-  }, [bookingData])
+
+  // setTimeout(() => {
+  //   let inProgress : boolean = false
+  //   async function checkApproval() {
+  //     inProgress = true
+  //     if(bookingData) {
+  //       if(await isApproved(bookingData.paymentData)) setIsApproved(true)
+  //     }
+  //     inProgress = false
+  //   }
+  //   if (!inProgress) checkApproval()      
+  // }, 2000)
+
   async function onClickApprove() {
     if (!approved) {
       setPendingTx(true)
@@ -95,7 +104,7 @@ export default function PaymentPage({
             </div>
             <p className="text-sm mt-8">{"Tickets: " + getSeatsToStr(bookingData.seats) + " (" + (Object.entries(bookingData.seats).length)  + "Tickets)"}</p>
             <p className="text-sm mt-4">{"Screen: " + bookingData.show.screenId}</p>
-            <p className="text-sm mt-2 mb-2">{bookingData.movieName + ": " + bookingData.seller.name + ", " + bookingData.seller.location + " | " + displayLongDate(new Date(bookingData.show.showTime)) + " " + displayTime(new Date(bookingData.show.showTime))}</p>
+            <p className="text-sm mt-2 mb-2">{bookingData.movieName + ": " + bookingData.seller.name + ", " + bookingData.seller.location + " | " + getUTCTimeToSellerTime(bookingData.show.showTime, bookingData.seller.utcTimeDiff)}</p>
             <div className="flex">
               <InfoButton message="Only this address can view/modify ticket"/>
               <p className="text-sm">Ticket Owner:  {trimAddress(bookingData.paymentData.ticketOwner)}</p>

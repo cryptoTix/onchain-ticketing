@@ -9,6 +9,7 @@ const DateCard: React.FC<DateProps> = ({selectedDate, setSelectedDate}) => {
         {
           week.map(day => (
             <button
+              key={day.toString()}
               onClick={() => {setSelectedDate(day)}}
               className={`${day.getDate() == selectedDate.getDate() ? "bg-blue-500" : "bg-white"} text-white px-2 py-2 sm:px-3 sm:py-3 md:px-4 md:py-4 rounded-md hover:bg-blue-500 transition`}
             >

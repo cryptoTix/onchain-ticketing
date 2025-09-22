@@ -3,7 +3,7 @@ import Image  from "next/image";
 import { OrderMetadata } from "../../../../../shared";
 import { useRouter } from "next/router";
 import { cancelTicket, fetchCancellationAmount } from "../../actions/withdraw";
-import { displayLongDate, displayTime, getSeatsToStr } from "../../utils/helpers";
+import { displayLongSellerDate, fetchChainName, getSeatsToStr, getUTCTimeToSellerTime } from "../../utils/helpers";
 import { Dialog } from "@headlessui/react";
 import { ToastNotification } from "../Toast/ToastNotification";
 
@@ -70,10 +70,11 @@ export interface BookingInfoProps {
 export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCancel}) => {
     const [cancelDialogBox, setCancelDialogBox] = useState(false);
     const [cancellationAmount, setCancellationAmount] = useState<number>(0);
+    const [disableBtn, setDisableBtn] = useState<boolean>(false)
   
     useEffect(() => {
       async function loadCancellationAmount() {
-        const cancellationAmount = await fetchCancellationAmount(orderData.paymentData.purchaseDataHash)
+        const cancellationAmount = await fetchCancellationAmount(orderData.paymentData)
         setCancellationAmount(cancellationAmount);
         console.log("Set cancellation amount", cancellationAmount, orderData.paymentData.purchaseDataHash)
       }
@@ -81,12 +82,13 @@ export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCan
     }, [orderData])
   
     async function handleCancel() {
-      const success = await cancelTicket(orderData.paymentData.purchaseDataHash);
+      setDisableBtn(true)
+      const success = await cancelTicket(orderData.paymentData);
+      setDisableBtn(false)
       if (success) {
         onSucessCancel()
-        // add some pending state here
-        handleDialogBoxClose()
       }
+      handleDialogBoxClose()
     };
   
     function handleDialogBoxClose() {
@@ -95,14 +97,13 @@ export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCan
   
     return (
       <div className="rounded-2xl overflow-hidden shadow-lg bg-[#6C3FC5] w-[30%] items-center">
-        <ToastNotification/>
         <div className="p-4">
           <div className="flex items-center gap-3">
             <Image src={orderData.movie.image} alt={orderData.movie.name} width={60} height={80} className="rounded"/>
             <div>
               <div className="font-bold text-lg">{orderData.movieName}</div>
-              <div className="text-xs">{displayLongDate(new Date(orderData.show.showTime)) + " " + displayTime(new Date(orderData.show.showTime))}</div>
-              <div className="text-xs text-gray-200">{orderData.seller.location}</div>
+              <div className="text-xs">{getUTCTimeToSellerTime(orderData.show.showTime, orderData.seller.utcTimeDiff)}</div>
+              <div className="text-xs text-gray-200">{orderData.seller.name + " | " + orderData.seller.location}</div>
             </div>
           </div>
           <hr className="my-4 border-gray-400" />
@@ -114,6 +115,8 @@ export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCan
               <div>Quantity: <b>{orderData.seats.length}</b></div>
               <div>Seat No- {getSeatsToStr(orderData.seats)}</div>
               <div>BOOKING ID {orderData.paymentData.purchaseDataHash.substring(0,8)}</div>
+              <div>Show Time:  {getUTCTimeToSellerTime(orderData.show.showTime, orderData.seller.utcTimeDiff)}</div>
+              <div>Network:  {fetchChainName(orderData.paymentData.selectedChain.toString())}</div>
             </div>
           </div>
           <div className="text-center mt-3">
@@ -139,7 +142,7 @@ export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCan
                 <Image src={orderData.movie.image} alt={orderData.movie.name} width="50" height="100"/>
                 <div>
                   <div className="font-bold text-2xl">{orderData.movieName}</div>
-                  <div className="text-sm">{displayLongDate(new Date(orderData.show.showTime * 1000)) + " " + displayTime(new Date(orderData.show.showTime * 1000))}</div>
+                  <div className="text-sm">{getUTCTimeToSellerTime(orderData.show.showTime, orderData.seller.utcTimeDiff)}</div>
                   <div className="text-sm"> Booking ID: {orderData.paymentData.purchaseDataHash.substring(0,8)}</div>
                 </div>
               </div>
@@ -147,8 +150,28 @@ export const BookingInfo : React.FC<BookingInfoProps> = ({orderData, onSucessCan
                 {/* TODO: Fetch cancellation amount */}
                 <div className="text-sm">If you proceed, you'll receive a refund of {cancellationAmount.toString()} {orderData.paymentData.selectedCurrency} to your original payment method. The refund process will begin as soon as your cancellation is confirmed. Would you like to continue?</div>
                 <div className="flex align-right justify-end space-x-6 pt-6">
-                  <button onClick={handleDialogBoxClose} className="w-[100px] text-white font-semibold px-4 py-2 rounded hover:bg-white/20 transition border border-[#C3A7FF]">No</button>
-                  <button onClick={handleCancel} className="w-[100px] bg-red-400 text-black font-semibold px-4 py-2 rounded hover:bg-red-300 transition">Yes</button>
+                  <button
+                    onClick={handleDialogBoxClose}
+                    disabled={disableBtn}
+                    className={`w-[100px] text-white font-semibold px-4 py-2 rounded transition border border-[#C3A7FF] ${disableBtn ? "" : "hover:bg-white/20"}`}
+                  >
+                    No
+                  </button>
+                  <button
+                    onClick={handleCancel}
+                    disabled={disableBtn}
+                    aria-busy={disableBtn}
+                    className={`w-[100px] bg-red-400 text-black font-semibold px-4 py-2 rounded transition ${disableBtn ? "" : "hover:bg-red-300"}`}
+                  >
+                    {disableBtn ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <span className="h-4 w-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                        <span>Yes</span>
+                      </span>
+                    ) : (
+                      "Yes"
+                    )}
+                  </button>
                 </div>
                 {/* <div>
                   <div className="font-bold text-2xl">{ticketData.movieTitle}</div>

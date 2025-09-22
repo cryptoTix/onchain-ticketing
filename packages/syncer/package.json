@@ -1,10 +1,12 @@
 {
-  "name": "ponder-examples-reference-erc20",
+  "name": "syncer",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "ponder dev",
-    "start": "ponder start",
+    "predev": "pnpm -w -F backend build",
+    "dev": "pnpm i && ponder dev",
+    "prestart": "pnpm -w -F backend build",
+    "start": "pnpm -w -F backend build && ponder start",
     "db": "ponder db",
     "codegen": "ponder codegen",
     "serve": "ponder serve",
@@ -12,9 +14,10 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "ponder": "latest",
+    "backend": "workspace:*",
     "drizzle-kit": "0.22.8",
     "hono": "^4.5.0",
+    "ponder": "latest",
     "viem": "^2.21.3"
   },
   "devDependencies": {

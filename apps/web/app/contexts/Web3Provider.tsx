@@ -3,7 +3,7 @@
 import React from "react";
 import { WagmiProvider, createConfig } from "wagmi";
 import { defineChain } from "viem";
-import { arbitrum, fraxtal, sepolia, bsc, mantle, mainnet } from "viem/chains";
+import { arbitrum, fraxtal, sepolia, bsc, mantle, mainnet, arbitrumSepolia } from "viem/chains";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 import { Config } from "@wagmi/core";
@@ -38,23 +38,6 @@ export const karak = defineChain({
     },
   },
 });
-
-export const sepoliaTestnet = {
-  ...sepolia,
-  rpcUrls: {
-    ...sepolia.rpcUrls,
-    default: {
-      http: [
-        "https://eth-sepolia.g.alchemy.com/v2/UTT30PES9ztsrkU5f_pNiGaScEmVab7r",
-      ],
-    },
-    public: {
-      http: [
-        "https://eth-sepolia.g.alchemy.com/v2/UTT30PES9ztsrkU5f_pNiGaScEmVab7r",
-      ],
-    },
-  },
-};
 
 const ARB_MAINNET_QUIKNODE_RPC =
   "https://polished-wispy-borough.arbitrum-mainnet.quiknode.pro/df66b735db9f5dfe3060f6987639f58676a9f49d";
@@ -173,14 +156,15 @@ export const config: Config = createConfig(
     chains: [
       arbMainnet,
       fraxtal,
-      // karak,
+      arbitrumSepolia,
+      sepolia,
       bscMainnet,
       mantleMainnet,
       ethMainnet,
       anvil
     ],
     walletConnectProjectId: "3c2a0a26bc7892ad1101134ccfcf4b57",
-    appName: "test",
+    appName: "KryptoTix",
     ssr: true,
   })
 );

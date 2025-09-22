@@ -79,24 +79,6 @@ const ToastWithHoverControl: React.FC<{ toast: Toast }> = ({ toast: t }) => {
             ×
           </button>
         </div>
-
-        {!t.message?.toString().includes("code") && (
-          <>
-            {t.message?.toString().includes("Error") ? (
-              <p className="px-7">Check console for error</p>
-            ) : (
-              <a
-                className="px-7 hover:underline text-sm"
-                href={resolveValue(t.message?.toString().split("$")[1], t)}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View your TX on{" "}
-                {resolveValue(t.message?.toString().split("$")[2], t)}
-              </a>
-            )}
-          </>
-        )}
       </div>
     </Transition>
   );

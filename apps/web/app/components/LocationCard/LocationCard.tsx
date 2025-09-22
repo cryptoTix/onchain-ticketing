@@ -3,13 +3,15 @@ import React, { useEffect, useState, useMemo } from "react";
 import { HiLocationMarker } from "react-icons/hi";
 import { useCities } from "../../hooks/cities";
 import { useLocationStore } from "../../store/location";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export const SelectCityCard: React.FC = () => {
   const [inputText, setInputText] = useState<string>("")
   const {location, setLocation} = useLocationStore()
   const { data : countries} = useCities()
   const pathName = usePathname();
+  const searchParams = useSearchParams();
+  const locationParam = searchParams.get("city");
   const isModifyDisabled = useMemo(() => !(pathName.localeCompare("/") == 0 || pathName.startsWith("/sellers")), [pathName])
   const filteredCountry = useMemo(
     () => {
@@ -19,9 +21,15 @@ export const SelectCityCard: React.FC = () => {
     [countries, inputText]
   );
 
+  // Set location if already passed in url
   useEffect(() => {
-    if (!location && countries && countries.length > 0) setLocation(countries[0].cityName)
-  }, countries)
+    if (locationParam) {
+      setLocation(locationParam)
+    } else {
+      if (!location && countries && countries.length > 0) setLocation(countries[0].cityName)
+    }
+
+  }, [locationParam, countries])
 
   return (
     <Menu as='div' className={"flex flex-col justify-start"}>

@@ -6,6 +6,7 @@ export interface OrderMetadata extends BookingData {
     orderId : string;
     movie : MovieInterface;
     isCancelled? : boolean;
+    awaitingRefund? : boolean;
 };
 
 export interface OrderHistoryRequestInterface {

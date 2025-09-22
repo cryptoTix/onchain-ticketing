@@ -1,18 +1,13 @@
 import numeral from "numeral";
 import Decimal from "decimal.js";
 import { FixedPointNumber } from "./fixedPoint";
-import { Address, createPublicClient, fallback, getAddress, http, isAddress, zeroAddress } from "viem";
-// import { ERC20 } from "@repo/contracts";
+import { Address, createPublicClient, http, isAddress, zeroAddress } from "viem";
 import { Maybe } from "./maybe";
 import { MigrateV1Position, Asset, OperatorVault } from "../types/types";
 import { mainnet } from "viem/chains";
 import { assetImageMap } from "../constants/constants";
 import { VAULTS_TO_HIDE } from "../config";
 import { BlockData, SeatClass, SeatData } from "../../../../shared";
-import { TicketLib } from "../../../../typechain-types/src/Master";
-import { TicketData, ValidationSignatureResponse } from "../models/paymentRequest";
-import { src } from "../../../../typechain-types";
-import { convertOffsetToTimes } from "framer-motion";
 
 export const decimalFormat = (amount: string, twoPlaces?: boolean) => {
   return numeral(Number(amount).toFixed(4)).format(
@@ -177,8 +172,15 @@ export function fetchNext7days() : Date[] {
   return week;
 }
 
-export function displayLongDate(date:Date) : string {
-  return date.toLocaleDateString("en-US", {
+export function GetDateObjForSellerTime(ms : number, sellerTimeDiff : number) {
+  const offsetMS = new Date().getTimezoneOffset() * 60 * 1000;
+  const date = new Date(ms + offsetMS + sellerTimeDiff)
+  console.log(ms, offsetMS, sellerTimeDiff)
+  return date;
+}
+export function displayLongSellerDate(dateMS : number, sellerTimeDiff : number) : string {
+  const dateUTC = GetDateObjForSellerTime(dateMS, sellerTimeDiff)
+  return dateUTC.toLocaleDateString("en-US", {
       weekday: "long",
       day: "numeric",
       month: "long", 
@@ -186,8 +188,9 @@ export function displayLongDate(date:Date) : string {
   });
 }
 
-export function displayTime(date:Date) : string {
-  return date.toLocaleTimeString([],
+export function displayTime(dateMS : number, sellerTimeDiff : number) : string {
+  const dateUTC = GetDateObjForSellerTime(dateMS, sellerTimeDiff)
+  return dateUTC.toLocaleTimeString([],
           { hour: '2-digit',
           minute: '2-digit'
           }
@@ -205,6 +208,31 @@ export function getDay(date:Date) : string {
   return date.toLocaleDateString("en-US", {
     weekday : "short"
   });
+}
+
+export function getLocalTime(sec : number) : string {
+  const date = new Date(sec * 1000)
+  return date.toLocaleDateString("en-Us", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  }) + " | " + date.toLocaleTimeString([], {
+    hour :"2-digit",
+    minute: "2-digit"
+  })
+}
+export function getUTCTimeToSellerTime(ms : number, sellerTimeDiff : number) : string {
+  const date = GetDateObjForSellerTime(ms, sellerTimeDiff)
+  return date.toLocaleDateString("en-Us", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  }) + " | " + date.toLocaleTimeString([], {
+    hour :"2-digit",
+    minute: "2-digit"
+  })
 }
 
 export function formatDate(date: Date): string {
@@ -249,6 +277,7 @@ export function fetchChainName(id : string) : string {
     10: "Optimism",
     43114: "Avalanche C-Chain",
     31337: "ANVIL",
+    421614: "Arbitrum Sepolia"
   };
   return chainNames[parseInt(id)];
 }

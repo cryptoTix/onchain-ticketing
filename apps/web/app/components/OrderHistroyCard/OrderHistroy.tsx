@@ -1,7 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { OrderMetadata } from "../../../../../shared";
-import { displayLongDate, displayTime, getSeatsToStr } from "../../utils/helpers";
+import { getLocalTime, getSeatsToStr, getUTCTimeToSellerTime } from "../../utils/helpers";
 
 type OrderHistoryProps = {
   orderData: OrderMetadata;
@@ -27,7 +26,7 @@ const OrderHistoryCard: React.FC<OrderHistoryProps> = ({ orderData, onSelectBook
         <div className="text-sm text-white/80">
           <div className="mb-2 font-light text-xs">
             <span className="text-white/70">BOOKING DATE & TIME: </span>
-            {displayLongDate(new Date(orderData.paymentData.originTimestampUTC * 1000)) + " " + displayTime(new Date(orderData.paymentData.originTimestampUTC * 1000))}
+            {getLocalTime(orderData.paymentData.originTimestampUTC)}
           </div>
           <div className="text-lg font-semibold">{orderData.movieName}</div>
           <div className="mt-2 space-y-1">
@@ -38,6 +37,10 @@ const OrderHistoryCard: React.FC<OrderHistoryProps> = ({ orderData, onSelectBook
             <div className="flex justify-between">
               <span>Booking ID</span>
               <span className="font-medium">{orderData.orderId.substring(0,8)}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Show Date & Time {`(seller local time)`}:</span>
+              <span className="font-medium">{getUTCTimeToSellerTime(orderData.show.showTime, orderData.seller.utcTimeDiff)}</span>
             </div>
             <div className="flex justify-between">
               <span>Quantity</span>

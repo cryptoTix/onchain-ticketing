@@ -1,21 +1,17 @@
 "use client";
 import { getPublicClient, getWalletClient } from "@wagmi/core";
-import { anvil, config } from "../contexts/Web3Provider";
+import { config } from "../contexts/Web3Provider";
 import { erc20Abi, stringify } from "viem";
 import { Logger } from "../utils/logger";
 import { toast } from "react-hot-toast";
 import { makeTxExplorerLink } from "../utils/txExplorerLink";
 import { Master__factory } from "../../../../typechain-types";
 import { getTicketStruct, PaymentMetadata } from "../../../../shared";
-import { fetchChainName } from "../utils/helpers";
 
 
 function makeReadonly<T>(array: T[]): ReadonlyArray<T> {
   return array
 }
-
-
-
 
 export async function purchase(
   purchaseMetada : PaymentMetadata
@@ -31,32 +27,18 @@ export async function purchase(
     toast.error("Please connect wallet")
     return false;
   }
-
-  if (walletClient) {
-    if (walletClient.chain.id != purchaseMetada.selectedChain) {
-      console.error(walletClient.chain.id, purchaseMetada)
-      walletClient.switchChain(anvil)
-      // toast.error("Wallet chainId diffrent than selected one")
-      return false;
-    }
-  }
-  const masterContractAddr = purchaseMetada.masterContract;
-  const amount = purchaseMetada.totalAmount;
-  const asset = purchaseMetada.asset;
-
+  
   if (!await isApproved(purchaseMetada)) {
     toast.error("Tokens not approved, pls try again")
     return false
   }
   try {
+    if (walletClient.chain.id != purchaseMetada.selectedChain) {
+      walletClient.switchChain({id : purchaseMetada.selectedChain})
+    }
+    const masterContractAddr = purchaseMetada.masterContract;
     const obj = getTicketStruct(purchaseMetada)
     console.log("got to tx", obj)
-    console.log("passing seats",  makeReadonly(obj.seats.map((seat) => {
-      return {
-        seatId : BigInt(seat.seatId),
-        price : BigInt(seat.price)
-      }
-    })))
     const purchaseHash = await publicClient.readContract({
       address : masterContractAddr,
       abi : Master__factory.abi,
@@ -78,10 +60,11 @@ export async function purchase(
     })
     console.log(purchaseHash)
     const nonce = await publicClient.readContract({
-      address : masterContractAddr,
-      abi : Master__factory.abi,
-      functionName : "getNonce",
-      args : [purchaseMetada.ticketOwner]
+      address: masterContractAddr,
+      abi: Master__factory.abi,
+      functionName: "getNonce",
+      args: [purchaseMetada.ticketOwner],
+      authorizationList: undefined
     })
     const txHash = await walletClient.writeContract({
       address : masterContractAddr,
@@ -148,22 +131,20 @@ export async function isApproved(purchaseMetada : PaymentMetadata) : Promise<boo
     return false;
   }
 
-  if (walletClient) {
-    if (walletClient.chain.id != purchaseMetada.selectedChain) {
-      toast.error("Pls select " + fetchChainName((purchaseMetada.selectedChain).toString()));
-      return false;
-    }
-  }
   const masterContractAddr = purchaseMetada.masterContract;
   const amount = purchaseMetada.totalAmount;
   const asset = purchaseMetada.asset;
-
+  
   try {
+    if (walletClient.chain.id != purchaseMetada.selectedChain) {
+      walletClient.switchChain({id : purchaseMetada.selectedChain})
+    }
     const allowance = await publicClient.readContract({
-      address : asset,
-      abi : erc20Abi,
-      functionName : "allowance",
-      args : [walletClient.account.address, masterContractAddr]
+      address: asset,
+      abi: erc20Abi,
+      functionName: "allowance",
+      args: [walletClient.account.address, masterContractAddr],
+      authorizationList: undefined
     })
     console.log(allowance, amount, allowance >= amount)
     return allowance >= amount
@@ -184,12 +165,10 @@ export async function approve(purchaseMetada : PaymentMetadata) : Promise<boolea
     return false
   }
 
-  if (walletClient) {
-    if (walletClient.chain.id != purchaseMetada.selectedChain) {
-      toast.error("Pls select " + fetchChainName((purchaseMetada.selectedChain).toString()));
-      return false;
-    }
+  if (walletClient.chain.id != purchaseMetada.selectedChain) {
+    walletClient.switchChain({id : purchaseMetada.selectedChain})
   }
+
   const masterContractAddr = purchaseMetada.masterContract;
   const amount = purchaseMetada.totalAmount;
   const asset = purchaseMetada.asset;
@@ -219,7 +198,7 @@ export async function approve(purchaseMetada : PaymentMetadata) : Promise<boolea
       return false
     } else {
       toast.success(
-        `Successfully approved token: ${asset}`
+        `Successfully approved token: ${purchaseMetada.selectedCurrency}`
       );
     }
     Logger.info(
@@ -229,7 +208,7 @@ export async function approve(purchaseMetada : PaymentMetadata) : Promise<boolea
     return true
   } catch (error) {
     toast.error(
-      `Failed to approve` + stringify(error)
+      `Failed to approve`
     );
     Logger.error(error)
     return false

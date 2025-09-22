@@ -196,17 +196,17 @@ contract Master is ERC721Upgradeable, EIP712Upgradeable, OwnableUpgradeable, Ree
         returns (uint256)
     {
         MasterLib.CancelPolicyMetadata storage policy = _self().fetchPolicyForShowId(ticketData.showId);
-        if (ticketData.showTime > block.timestamp) {
+        if (ticketData.showTime > block.timestamp && policy.policyMetadata.length != 0) {
+            // No policy set means no cancellation
             uint256 leftTime = ticketData.showTime - block.timestamp;
             uint256 index = 0;
-            while (index < policy.policyMetadata.length && leftTime > policy.policyMetadata[index].durationLeft) {
+            uint256 postCancellationPercentageWad = 0;
+            while (index < policy.policyMetadata.length && leftTime >= policy.policyMetadata[index].durationLeft) {
+                postCancellationPercentageWad = policy.policyMetadata[index].percentageWad;
                 index++;
                 continue;
             }
-            if (index == policy.policyMetadata.length) {
-                index--;
-            }
-            return Math.mulDiv(amount, policy.policyMetadata[index].percentageWad, Constants.HUNDRED_WAD);
+            return Math.mulDiv(amount, postCancellationPercentageWad, Constants.HUNDRED_WAD);
         }
         return 0;
     }

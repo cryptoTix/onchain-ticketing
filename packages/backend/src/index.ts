@@ -3,7 +3,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import api from "./api";
 import { paymetSyncerCron } from "./cron/paymentStatusSyncer";
+import { startPendingCancelOrdersSyncer } from "./cron/pendingCancelOrdersSyncer";
 
+if (!(Symbol as any).dispose) (Symbol as any).dispose = Symbol("Symbol.dispose") as any;
 dotenv.config();
 const app = express();
 const PORT = (process.env.PORT || 4000) as number;
@@ -18,3 +20,4 @@ app.listen(PORT, "0.0.0.0", () => {
 });
 
 paymetSyncerCron.Start();
+startPendingCancelOrdersSyncer()
