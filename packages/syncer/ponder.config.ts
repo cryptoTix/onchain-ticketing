@@ -1,6 +1,6 @@
-import { createConfig } from "ponder";
+import { createConfig, rateLimit } from "ponder";
 import { MasterABI } from "./abis/masterABI";
-import { Master__factory } from "../../typechain-types/index";
+import { http } from "viem";
 
 export default createConfig({
   database: {
@@ -14,7 +14,9 @@ export default createConfig({
     },
     sepolia: {
       id : 11155111,
-      rpc : "https://aged-cool-scion.ethereum-sepolia.quiknode.pro/be58acedb98d22396bfa8a0819a31ee12043746b/"
+      rpc : rateLimit(http("https://aged-cool-scion.ethereum-sepolia.quiknode.pro/be58acedb98d22396bfa8a0819a31ee12043746b/"), {
+        requestsPerSecond : 5
+      })
     }
   },
   contracts: {
