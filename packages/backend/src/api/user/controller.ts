@@ -8,8 +8,8 @@ export async function fetchOrders(
   next: any
 ) {
     try {
-        const { user } = req.query
-        const data = await fetchUserOrders(user);
+        const { user, bookingId } = req.query
+        const data = await fetchUserOrders(user, bookingId);
         console.log("response for:",user,data)
         res.json({ success: true, data, statusCode : 200 });
         return

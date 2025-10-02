@@ -17,22 +17,22 @@ export async function purchase(
   purchaseMetada : PaymentMetadata
 ) : Promise<boolean> {
   console.log("in purchase", purchaseMetada)
-  if (!purchaseMetada) {
-    console.log("got purchase data", purchaseMetada)
-    return false
-  }
-  const walletClient = await getWalletClient(config);
-  const publicClient = getPublicClient(config);
-  if (!walletClient || !publicClient) {
-    toast.error("Please connect wallet")
-    return false;
-  }
-  
-  if (!await isApproved(purchaseMetada)) {
-    toast.error("Tokens not approved, pls try again")
-    return false
-  }
   try {
+    if (!purchaseMetada) {
+      console.log("got purchase data", purchaseMetada)
+      return false
+    }
+    const walletClient = await getWalletClient(config);
+    const publicClient = getPublicClient(config);
+    if (!walletClient || !publicClient) {
+      toast.error("Please connect wallet")
+      return false;
+    }
+    
+    if (!await isApproved(purchaseMetada)) {
+      toast.error("Tokens not approved, pls try again")
+      return false
+    }
     if (walletClient.chain.id != purchaseMetada.selectedChain) {
       walletClient.switchChain({id : purchaseMetada.selectedChain})
     }
@@ -121,21 +121,21 @@ export async function purchase(
 }
 
 export async function isApproved(purchaseMetada : PaymentMetadata) : Promise<boolean> {
-  if (!purchaseMetada) {
-    return false
-  }
-  const walletClient = await getWalletClient(config);
-  const publicClient = getPublicClient(config);
-  if (!walletClient || !publicClient) {
-    toast.error("Please connect wallet")
-    return false;
-  }
-
-  const masterContractAddr = purchaseMetada.masterContract;
-  const amount = purchaseMetada.totalAmount;
-  const asset = purchaseMetada.asset;
   
   try {
+    if (!purchaseMetada) {
+      return false
+    }
+    const walletClient = await getWalletClient(config);
+    const publicClient = getPublicClient(config);
+    if (!walletClient || !publicClient) {
+      toast.error("Please connect wallet")
+      return false;
+    }
+  
+    const masterContractAddr = purchaseMetada.masterContract;
+    const amount = purchaseMetada.totalAmount;
+    const asset = purchaseMetada.asset;
     if (walletClient.chain.id != purchaseMetada.selectedChain) {
       walletClient.switchChain({id : purchaseMetada.selectedChain})
     }
@@ -158,21 +158,21 @@ export async function approve(purchaseMetada : PaymentMetadata) : Promise<boolea
   if (!purchaseMetada) {
     return false
   }
-  const walletClient = await getWalletClient(config);
-  const publicClient = getPublicClient(config);
-  if (!walletClient || !publicClient) {
-    toast.error("Please connect wallet")
-    return false
-  }
-
-  if (walletClient.chain.id != purchaseMetada.selectedChain) {
-    walletClient.switchChain({id : purchaseMetada.selectedChain})
-  }
-
-  const masterContractAddr = purchaseMetada.masterContract;
-  const amount = purchaseMetada.totalAmount;
-  const asset = purchaseMetada.asset;
   try {
+    const walletClient = await getWalletClient(config);
+    const publicClient = getPublicClient(config);
+    if (!walletClient || !publicClient) {
+      toast.error("Please connect wallet")
+      return false
+    }
+  
+    if (walletClient.chain.id != purchaseMetada.selectedChain) {
+      walletClient.switchChain({id : purchaseMetada.selectedChain})
+    }
+  
+    const masterContractAddr = purchaseMetada.masterContract;
+    const amount = purchaseMetada.totalAmount;
+    const asset = purchaseMetada.asset;
     const {request} = await publicClient.simulateContract({
       address : asset,
       abi : erc20Abi,

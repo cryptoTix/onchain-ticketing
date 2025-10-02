@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { PaymentMetadata } from 'shared';
+import { BookingData } from 'shared';
 
 
 // Path to directory where booking data is stored
@@ -10,7 +10,7 @@ function getSellerFilePath(): string {
   return BASE_DIR
 }
 
-function readSellerBookings(): Record<string, PaymentMetadata> {
+function readSellerBookings(): Record<string, BookingData> {
   const filePath = getSellerFilePath();
   if (!fs.existsSync(filePath)) {
     return {};
@@ -19,7 +19,7 @@ function readSellerBookings(): Record<string, PaymentMetadata> {
   return JSON.parse(data);
 }
 
-function writeSellerBookings( bookings: Record<string, PaymentMetadata>): void {
+function writeSellerBookings(bookings: Record<string, BookingData>): void {
   const filePath = getSellerFilePath();
   const dirPath = path.dirname(filePath);
   if (!fs.existsSync(dirPath)) {
@@ -31,7 +31,7 @@ function writeSellerBookings( bookings: Record<string, PaymentMetadata>): void {
 /**
  * Get booking data by ID
  */
-export function getBookingById(bookingId: string): PaymentMetadata | null {
+export function getBookingById(bookingId: string): BookingData | null {
   const bookings = readSellerBookings();
   return bookings[bookingId] || null;
 }
@@ -39,7 +39,7 @@ export function getBookingById(bookingId: string): PaymentMetadata | null {
 /**
  * Set booking data by ID (create or update)
  */
-export async function setBookingById(bookingId: string, data: PaymentMetadata): Promise<void> {
+export async function setBookingById(bookingId: string, data: BookingData): Promise<void> {
   const bookings = readSellerBookings();
   bookings[bookingId] = data;
   writeSellerBookings(bookings);

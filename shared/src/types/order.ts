@@ -4,13 +4,13 @@ import { MovieInterface } from "./movie";
 
 export interface OrderMetadata extends BookingData {
     orderId : string;
-    movie : MovieInterface;
     isCancelled? : boolean;
     awaitingRefund? : boolean;
 };
 
 export interface OrderHistoryRequestInterface {
-  user : Address;
+  user? : Address;
+  bookingId? : string
 }
 
 export interface OrderHistoryResponseInterface {

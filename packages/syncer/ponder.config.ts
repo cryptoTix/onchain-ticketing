@@ -14,8 +14,8 @@ export default createConfig({
     },
     sepolia: {
       id : 11155111,
-      rpc : rateLimit(http("https://aged-cool-scion.ethereum-sepolia.quiknode.pro/be58acedb98d22396bfa8a0819a31ee12043746b/"), {
-        requestsPerSecond : 5
+      rpc : rateLimit(http("https://rpc.ankr.com/eth_sepolia/02df353a2a01d60bd5ca91977b81cd2f5cdac4e7d4cd23009c176f789b9391aa"), {
+        requestsPerSecond : 1
       })
     }
   },
@@ -25,11 +25,11 @@ export default createConfig({
       chain : {
         arbitrumSepolia : {
           address : "0xDe17fF229E6a9EA25F0C255735258aA07E12739c",
-          startBlock : 197069943
+          startBlock : 200522992
         },
         sepolia : {
           address : "0xDe17fF229E6a9EA25F0C255735258aA07E12739c",
-          startBlock : 9258406
+          startBlock : 9329605
         }
       }
     },

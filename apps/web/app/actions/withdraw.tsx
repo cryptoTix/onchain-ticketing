@@ -14,17 +14,17 @@ import { PaymentMetadata } from "../../../../shared";
 export async function cancelTicket(
   ticketData : PaymentMetadata
 ) {
-  const walletClient = await getWalletClient(config);
-  const publicClient = getPublicClient(config);
-
-  if (!walletClient || !publicClient) {
-    toast.error("Please connect wallet")
-    return false;
-  }
-  if (walletClient.chain.id != ticketData.selectedChain) {
-    walletClient.switchChain({id : ticketData.selectedChain})
-  }
   try {
+    const walletClient = await getWalletClient(config);
+    const publicClient = getPublicClient(config);
+  
+    if (!walletClient || !publicClient) {
+      toast.error("Please connect wallet")
+      return false;
+    }
+    if (walletClient.chain.id != ticketData.selectedChain) {
+      walletClient.switchChain({id : ticketData.selectedChain})
+    }
     const txHash = await writeContract(config, {
       address: ticketData.masterContract,
       abi: Master__factory.abi,
@@ -64,16 +64,14 @@ export async function cancelTicket(
   return true
 }
 
-export async function fetchCancellationAmount(ticketData : PaymentMetadata) : Promise<number> {
-  const walletClient = await getWalletClient(config);
-  const publicClient = getPublicClient(config);
-
-  if (!walletClient || !publicClient) {
-    toast.error("pls connect wallet")
-    throw new Error("wallet client or public client is still missing");
-  }
-
+export async function fetchCancellationAmount(ticketData : PaymentMetadata) : Promise<{amount: number, passed : boolean}> {
   try {
+    const walletClient = await getWalletClient(config);
+    const publicClient = getPublicClient(config);
+    if (!walletClient || !publicClient) {
+      toast.error("pls connect wallet")
+      return { amount : 0, passed : false }
+    }
     if (publicClient.chain.id != ticketData.selectedChain) {
       walletClient.switchChain({ id : ticketData.selectedChain})
     }
@@ -89,11 +87,10 @@ export async function fetchCancellationAmount(ticketData : PaymentMetadata) : Pr
       address: asset,
       functionName: "decimals",
       authorizationList: undefined
-    })
-    return new Decimal(refundAmount.toString()).div(new Decimal(10 ** (decimal))).toNumber()
+    });
+    return {amount : new Decimal(refundAmount.toString()).div(new Decimal(10 ** (decimal))).toNumber(), passed : true}
   } catch (error) {
-    toast.error("Unable to fetch cancellation amount, try again");
     Logger.error("Unable to fetch bal with error", error);
-    return 0;
   }
+  return {amount : 0, passed : false};
 }

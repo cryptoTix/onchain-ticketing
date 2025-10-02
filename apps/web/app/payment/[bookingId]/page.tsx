@@ -4,14 +4,17 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { PaymentInputProps } from "../../types/props/PaymentInputProps";
 import { BookingData, SeatClass } from "../../../../../shared";
 import { getBookingMetadataById } from "../../api/fetchSellers";
-import { BookingDataLoader, TicketLoader } from "../../components/Loader/Loader";
+import { BookingDataLoader, TicketFetchingLoader, TicketLoader } from "../../components/Loader/Loader";
 import { approve, isApproved, purchase } from "../../actions/deposit";
 import { ToastNotification } from "../../components/Toast/ToastNotification";
 import { getUTCTimeToSellerTime, displayTime, fetchChainName, getSeatsToStr, trimAddress } from "../../utils/helpers";
 import { InfoButton } from "../../components/Button/infoButton";
 import { TimerCard } from "../../components/Timer/TimerCard";
-import { PAYMENT_DURATION } from "../../utils/consts";
+import { MAIN_LOADER_TIMER, PAYMENT_DURATION, QUERY_INTERVAL } from "../../utils/consts";
 import PaymentButton from "../../components/Button/paymentButton";
+import { AnimatePresence } from "framer-motion";
+import MotionDiv from "../../components/Motion/MotionDiv";
+import { LOADER_MOTION, PAGE_CONTENT_MOTION } from "../../components/Motion/presets";
 
 export default function PaymentPage({
   params
@@ -23,18 +26,11 @@ export default function PaymentPage({
   const [bookingId, setBookingId] = useState<string>()
   const [bookingData, setBookingData] = useState<BookingData>(null)
   const requestId = searchParams.get("requestId")!; // TODO: display some invalid page on invalid request ID
-  // const [paymentMetadata, setPaymentMetadata] = useState<PaymentMetadata>()
-  // const [validationSignatureResponse, setValidationSignatureResponse] = useState<ValidationSignatureResponse>()
-  // const [acceptedAssets, setAcceptedAssets] = useState<Asset[]>([])
-  // const [selectedChain, setSelectedChain] = useState<Chain>(mainnet);
-  // const [selectedAsset, setSelectedAsset] = useState<Asset>();
   const [loader, setLoader] = useState<boolean>(true)
   const [approved, setIsApproved] = useState<boolean>(false);
   const [openDialogBox, setOpenDialogBox] = useState<boolean>(false);
   const [isPendingTx, setPendingTx] = useState<boolean>(false);
-  const [seatStr, setSeatStr] = useState<string>()
-  // const {setIsModifyDisabled} = useLocationStore()
-  // setIsModifyDisabled(true)
+  const [isNavigating, setIsNavigating] = useState<boolean>(false)
 
   // Fetch and load the booking metadata for requestId
   useEffect(() => {
@@ -51,26 +47,33 @@ export default function PaymentPage({
       console.log("checking is approved")
       if(bookingData && await isApproved(bookingData.paymentData)) setIsApproved(true)
       console.log("done check")
-      setLoader(false)
+      setTimeout(() => {
+        setLoader(false)
+      }, MAIN_LOADER_TIMER);
     }
     loadBookingData()
   }, [params])
 
-  // setTimeout(() => {
-  //   let inProgress : boolean = false
-  //   async function checkApproval() {
-  //     inProgress = true
-  //     if(bookingData) {
-  //       if(await isApproved(bookingData.paymentData)) setIsApproved(true)
-  //     }
-  //     inProgress = false
-  //   }
-  //   if (!inProgress) checkApproval()      
-  // }, 2000)
+  useEffect(() => {
+    let onGoing = false;
+    const id = setInterval(() => {
+      if (onGoing) return
+      onGoing = true;
+      async function setApprovalStatus() {
+        if (!bookingData) return
+        if (approved  || await isApproved(bookingData.paymentData)) {
+          setIsApproved(true)
+          clearInterval(id)
+        }
+      }
+      setApprovalStatus()
+    }, QUERY_INTERVAL)
+    
+  }, [bookingData])
 
   async function onClickApprove() {
-    if (!approved) {
-      setPendingTx(true)
+    setPendingTx(true)
+    if (!(await isApproved(bookingData.paymentData))) {
       const isSuccess = await approve(bookingData.paymentData)
       setPendingTx(false)
       if (isSuccess) {
@@ -89,49 +92,63 @@ export default function PaymentPage({
       setPendingTx(false)
       setOpenDialogBox(false)
       if (status) { // on success redirect to ticket page
-        router.push(`/order-history`);
+        setIsNavigating(true)
+        router.push(`/order-history/${bookingData.bookingId}`);
       }
     }
   }
+  if (isNavigating) {
+    return <TicketFetchingLoader/>;
+    
+  }
   return (
-    <div className="">
-      <ToastNotification/>
-      {loader ? <BookingDataLoader/> : ( 
-          <section className="bg-[#0b0033] rounded-xl w-full overflow-auto p-4 mt-4 max-w-md mr-auto">
-            <div className="flex justify-between">
-              <h2 className="text-white font-semibold text-lg mb-4">BOOKING SUMMARY</h2>
-              <TimerCard endTimeUTC={bookingData.paymentData.originTimestampUTC + PAYMENT_DURATION}/>
-            </div>
-            <p className="text-sm mt-8">{"Tickets: " + getSeatsToStr(bookingData.seats) + " (" + (Object.entries(bookingData.seats).length)  + "Tickets)"}</p>
-            <p className="text-sm mt-4">{"Screen: " + bookingData.show.screenId}</p>
-            <p className="text-sm mt-2 mb-2">{bookingData.movieName + ": " + bookingData.seller.name + ", " + bookingData.seller.location + " | " + getUTCTimeToSellerTime(bookingData.show.showTime, bookingData.seller.utcTimeDiff)}</p>
-            <div className="flex">
-              <InfoButton message="Only this address can view/modify ticket"/>
-              <p className="text-sm">Ticket Owner:  {trimAddress(bookingData.paymentData.ticketOwner)}</p>
-            </div>
-            <p className="text-sm mt-4">{"Chain: " + fetchChainName(bookingData.paymentData.selectedChain.toString())}</p>
-            <p className="text-sm mt-4">{"Currency: " + bookingData.paymentData.selectedCurrency + ` (${trimAddress(bookingData.paymentData.asset)})`}</p>
-
-            <div className="border-t border-gray-700 py-4 space-y-2 text-sm">
+      <AnimatePresence mode="wait">
+        {loader ? (
+          <MotionDiv
+            key="payment-loader"
+            preset={LOADER_MOTION}
+          >
+            <BookingDataLoader/>
+          </MotionDiv>
+          ) : (
+          <MotionDiv
+            key="payment-content"
+            preset={PAGE_CONTENT_MOTION}
+          >
+            <div className="bg-[#0b0033] rounded-xl w-full overflow-auto p-4 mt-4 max-w-md mr-auto">
               <div className="flex justify-between">
-                <span>Booking amount</span>
-                <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
+                <h2 className="text-white font-semibold text-lg mb-4">BOOKING SUMMARY</h2>
+                <TimerCard endTimeUTC={bookingData.paymentData.originTimestampUTC + PAYMENT_DURATION}/>
               </div>
-              <div className="flex justify-between font-semibold border-t pt-2">
-                <span>Sub total</span>
-                <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
+              <p className="text-sm mt-8">{"Tickets: " + getSeatsToStr(bookingData.seats) + " (" + (Object.entries(bookingData.seats).length)  + "Tickets)"}</p>
+              <p className="text-sm mt-4">{"Screen: " + bookingData.show.screenId}</p>
+              <p className="text-sm mt-2 mb-2">{bookingData.movie.name + ": " + bookingData.seller.name + ", " + bookingData.seller.location + " | " + getUTCTimeToSellerTime(bookingData.show.showTime, bookingData.seller.utcTimeDiff)}</p>
+              <div className="flex">
+                <InfoButton message="Only this address can view/modify ticket"/>
+                <p className="text-sm">Ticket Owner:  {trimAddress(bookingData.paymentData.ticketOwner)}</p>
               </div>
-            </div>
+              <p className="text-sm mt-4">{"Chain: " + fetchChainName(bookingData.paymentData.selectedChain.toString())}</p>
+              <p className="text-sm mt-4">{"Currency: " + bookingData.paymentData.selectedCurrency + ` (${trimAddress(bookingData.paymentData.asset)})`}</p>
 
-            <div className="text-yellow-500 font-bold mb-2 flex justify-between rounded">
-              <span>Amount Payable</span>
-              <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
+              <div className="border-t border-gray-700 py-4 space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span>Booking amount</span>
+                  <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
+                </div>
+                <div className="flex justify-between font-semibold border-t pt-2">
+                  <span>Sub total</span>
+                  <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
+                </div>
+              </div>
+              <div className="text-yellow-500 font-bold mb-2 flex justify-between rounded">
+                <span>Amount Payable</span>
+                <span>USD {bookingData.paymentData.totalAmount / 1e6}</span>
+              </div>
+              {approved ? <PaymentButton text="Purchase" onClick={onClickPurchase} isDisabled={isPendingTx}/> : <PaymentButton text={`Approve ${bookingData.paymentData.selectedCurrency}`} onClick={onClickApprove} isDisabled={isPendingTx}/>}
             </div>
-            {approved ? <PaymentButton text="Purchase" onClick={onClickPurchase} isDisabled={isPendingTx}/> : <PaymentButton text={`Approve ${bookingData.paymentData.selectedCurrency}`} onClick={onClickApprove} isDisabled={isPendingTx}/>}
-          </section>
-        )
-      }
-  </div>
+          </MotionDiv>
+        )}
+      </AnimatePresence>
   )
   /*
     return (

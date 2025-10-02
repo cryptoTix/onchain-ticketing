@@ -2,6 +2,7 @@
 
 import { Suspense } from "react";
 import { MainPage } from "./components/Pages";
+import { LandingLoader } from "./components/Loader/Loader";
 
 function Page(): JSX.Element {
   return (
@@ -17,7 +18,7 @@ function Page(): JSX.Element {
 
 export default function Main() {
   return (
-    <Suspense fallback={<></>}> 
+    <Suspense fallback={<LandingLoader />}> 
       <Page />
     </Suspense>
   );

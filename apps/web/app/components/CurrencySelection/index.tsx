@@ -23,6 +23,7 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
   const [selectedNetwork, setSelectedNetwork] = useState<string>("");
   const [selectedCurrency, setSelectedCurrency] = useState<string>("");
   const [openConfirmBooking, setOpenConfirmBooking] = useState<boolean>(false)
+  const [lockingSeats, setLockingSeats] = useState<boolean>(false)
   const {isConnected, address} = useAccount()
 
   useEffect(() => {
@@ -61,6 +62,7 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
       setOpenConfirmBooking(false)
       return
     }
+    setLockingSeats(true)
     const bookingId = await reserveSeats({
       movieId : movieDetails.id,
       sellerId,
@@ -74,11 +76,15 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
     if (bookingId) {
       onClickPurchase(bookingId.bookingId)
     }
+    setLockingSeats(false)
+  }
+
+  function onCloseConfirmTicket() {
+    setOpenConfirmBooking(false)
   }
   return (
       <div className={`w-full mt-12 ${openConfirmBooking&&"opacity-50"}`}>
-        <ToastNotification/>
-        <ConfirmBookingDialog isOpen={openConfirmBooking} onClose={() => setOpenConfirmBooking(false)} onConfirm={handleConfirmPurchase} seatCount={Object.entries(selectedSeats).length} totalPrice={totalPrice}/>
+        <ConfirmBookingDialog isOpen={openConfirmBooking} onClose={onCloseConfirmTicket} onConfirm={handleConfirmPurchase} seatCount={Object.entries(selectedSeats).length} totalPrice={totalPrice} lockingSeats={lockingSeats}/>
         <div className="flex items-start justify-between">
           <div className="bg-gradient-to-r from-indigo-300 to-purple-300 rounded-xl w-[65%] space-y-4 p-4 text-black">
             <h2 className="text-lg font-semibold">PAYMENT</h2>
@@ -105,11 +111,11 @@ export const CurrencySelectionPage : React.FC<CurrencySelectionProps> = ({
               </div>
             </div>
             {
-              !isConnected ?
-              <ConnectButton/> :
               <div className="flex w-[55%] justify-start gap-4">
-                <button className="w-[45%] bg-purple-700 text-white py-3 rounded-xl hover:bg-purple-500 transition" onClick={openConfirmBookingDialogBox}>Purchase</button>
-                <button className="w-[45%] border border-white py-3 rounded-xl hover:bg-gray-300 transition" onClick={onClickPrevious}>Go back</button>
+                {!isConnected ?
+                <ConnectButton/> :
+                <button className="w-[45%] bg-purple-700 text-white py-3 rounded-xl hover:bg-purple-500 transition" onClick={openConfirmBookingDialogBox}>Purchase</button>}
+                <button className="w-[45%] border border-black py-3 rounded-xl hover:bg-gray-300 transition" onClick={onClickPrevious}>Go back</button>
               </div>
             }
             <CustomTicketOwner ticketOwner={ticketOwner} resetTicketOwner={resetCustomOwnerAddress} setTicketOwner={onChangeCustomOwnerAddress}/>

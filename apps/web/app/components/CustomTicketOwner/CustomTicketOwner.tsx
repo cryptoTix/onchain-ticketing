@@ -17,7 +17,7 @@ export const CustomTicketOwner: React.FC<CustomTicketOwnerProps> = ({
 }) => {
   const [openCustomOwnerInputBox, setOpenCustomOwnerInputBox] = useState<boolean>(false)
   return (
-    <div className="w-full">
+    <div className="w-full text-purple-text">
     <CustomOwnerAddressDialog isOpen={openCustomOwnerInputBox}
       onClose={() => {
         setOpenCustomOwnerInputBox(false)
@@ -30,15 +30,15 @@ export const CustomTicketOwner: React.FC<CustomTicketOwnerProps> = ({
     />
     {!ticketOwner ?
       <button
-        className="text hover:underline"
+        className="text underline"
         onClick={() => setOpenCustomOwnerInputBox(true)}
         >
         Need custom ticket owner?
       </button> :
       <div className="w-1/2 flex justify-between mt-2 mx-1">
         <div className="justify-start text-xs">
-          <div className="text text-white">Sucessfully set ticket owner as:</div>
-          <div className="text text-white">{trimAddress(ticketOwner)}</div>
+          <div className="text">Sucessfully set ticket owner as:</div>
+          <div className="text">{trimAddress(ticketOwner)}</div>
         </div>
         <button className="rounded hover:bg-purple-500 transition"
           onClick={() => setOpenCustomOwnerInputBox(true)}>
