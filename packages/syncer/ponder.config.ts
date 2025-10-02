@@ -25,11 +25,11 @@ export default createConfig({
       chain : {
         arbitrumSepolia : {
           address : "0xDe17fF229E6a9EA25F0C255735258aA07E12739c",
-          startBlock : 200508498
+          startBlock : 200522992
         },
         sepolia : {
           address : "0xDe17fF229E6a9EA25F0C255735258aA07E12739c",
-          startBlock : 9329295
+          startBlock : 9329605
         }
       }
     },
