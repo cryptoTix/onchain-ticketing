@@ -179,7 +179,7 @@ export async function unlockSeats(sellerId: string, showId: string, seats: strin
                         const selectedSeatId = seats[selectedSeatIdx];
                         if (selectedSeatId.localeCompare(seatData.id) == 0) {
                               console.log("unlock", selectedSeatId, selectedSeatIdx, seatData)
-                              assert(seatData.isLocked, "Attempting to unlock a locked seat")
+                              assert(seatData.isLocked, "Attempting to unlock an unlocked seat")
                               assert(!seatData.isBooked, "Attempting to unlock a booked seat")
                               rowData[j].seatData!.lockedTill = 0
                               found = true;

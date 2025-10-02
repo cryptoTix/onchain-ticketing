@@ -14,6 +14,12 @@ import { ToastNotification } from "../../components/Toast/ToastNotification";
 import { RedirectCard } from "../../components/Redirect/RedirectCard";
 import { useLocationStore } from "../../store/location";
 import Image from "next/image";
+import { SeatLayoutLoader, SellersLoader, SellersPerDateLoader } from "../../components/Loader/Loader";
+import toast from "react-hot-toast";
+import { MAIN_LOADER_TIMER, SUB_PAGE_LOADER_TIMER } from "../../utils/consts";
+import { AnimatePresence } from "framer-motion";
+import MotionDiv from "../../components/Motion/MotionDiv";
+import { LOADER_MOTION, PAGE_CONTENT_MOTION } from "../../components/Motion/presets";
 
 
 interface SellerInput {
@@ -33,23 +39,55 @@ export default function Page({
   const {location} = useLocationStore()
   const { movieId } = React.use(params)
   const [selectedShow, setSelectedShow] = useState<ShowState| null>(null);
+  const [loadingData, setLoadingData] = useState<boolean>(true)
+  const [loadingShows, setLoadingShows] = useState<boolean>(true)
+  const [isNavigating, setIsNavigating] = useState<boolean>(false)
 
   useEffect(() => {
+    setLoadingData(true)
     async function loadEventData() {
-      if (!movieId || movieId == "" || !selectedDate || !location) return;
+      if (!movieId || movieId == "" || !selectedDate || !location) {
+        setLoadingData(false)
+        return;
+      }
       const movieMetadata = await fetchMovies(movieId);
       if (movieMetadata.length != 1) {
-        console.log("unable to fetch movie", movieId)
+        console.log("unable to fetch movie", movieId);
+        toast.error("Something's wrong pls try again")
         return
       }
       setMovieData(movieMetadata[0]);
       const sellersData = await fetchSellers({movieId, showDate : formatDate(selectedDate), location});
       setSellers(sellersData)
+      setTimeout(() => {
+        setLoadingData(false)
+      }, MAIN_LOADER_TIMER);
       console.log(movieId, movieData, sellers);
     }
     loadEventData();
-  }, [movieId, selectedDate, location]);
+  }, [movieId, location]);
 
+  useEffect(() => {
+    setLoadingShows(true)
+    async function loadEventData() {
+      if (!movieId || movieId == "" || !selectedDate || !location) {
+        setLoadingShows(false)
+        return
+      }
+      const sellersData = await fetchSellers({movieId, showDate : formatDate(selectedDate), location});
+      setSellers(sellersData)
+      setTimeout(() => {
+        setLoadingShows(false)
+      }, SUB_PAGE_LOADER_TIMER);
+      console.log(movieId, movieData, sellers);
+    }
+    loadEventData();
+  }, [selectedDate])
+
+  const handleDateSelect = (date : Date) => {
+    setSelectedDate(date);
+    setSelectedShow(null)
+  }
   const handleTimeSelect = (showState: ShowState) => {
     setSelectedShow(showState);
     // setTimeout(() => {
@@ -59,76 +97,96 @@ export default function Page({
     //   }
     // }, 100);
   }
+
+  const handleSelectSeats = () => {
+    setIsNavigating(true)
+    router.push(`/seats?movieId=${movieId}&&sellerId=${selectedShow.sellerId}&&showId=${selectedShow.showId}`);
+  }
+  if (isNavigating) {
+    return <SeatLayoutLoader/>;
+  }
+
   return (
-    <div className="min-h-screen text-white w-full pt-8 flex">
-      <ToastNotification/>
-      <RedirectCard />
-      {/* LEFT: Sellers List */}
-      <div className="w-full space-y-4">
-        <h1 className="text-3xl font-bold">{movieData?.name}</h1>
-        <DateCard selectedDate={selectedDate} setSelectedDate={setSelectedDate}/>
-        <div className="flex flex-col space-y-8">
-          {sellers.length == 0 ? "No shows for this date" : sellers.map((seller, index) => (<SellerCard sellerData={seller} index={index} selectedShowId={selectedShow ? selectedShow.showId : ""} onSelectShowId={handleTimeSelect}/>))}
-        </div>
-        {selectedShow && <Button text="Select Seats" onClick={() =>router.push(`/seats?movieId=${movieId}&&sellerId=${selectedShow.sellerId}&&showId=${selectedShow.showId}`)}/>}
-      </div>
+    <AnimatePresence mode="wait">
+      {loadingData ? (
+          <MotionDiv key="sellers-loader" preset={LOADER_MOTION} className="mt-auto">
+            <SellersLoader/>
+          </MotionDiv>
+        ) : (
+        <MotionDiv key="sellers-content" preset={PAGE_CONTENT_MOTION} className="w-full">
+          <div className="min-h-screen text-white w-full pt-8 flex justify-between">
+            <RedirectCard />
+            {/* LEFT: Sellers List */}
+              {
+                <div className="w-1/2 space-y-4">
+                    <h1 className="text-3xl font-bold">{movieData?.name}</h1>
+                    <DateCard selectedDate={selectedDate} setSelectedDate={handleDateSelect}/>
+                    {loadingShows ? (
+                        <div className="w-full h-3/4">
+                          <SellersPerDateLoader/>
+                        </div>
+                      ) : sellers.length == 0 ? (
+                      <div className="w-full h-3/4 flex items-center justify-center">No shows for this date, Pls select different date</div>) : (
+                      <div className="flex flex-col space-y-8">
+                        {sellers.map((seller, index) => (<SellerCard sellerData={seller} index={index} selectedShowId={selectedShow ? selectedShow.showId : ""} onSelectShowId={handleTimeSelect}/>))}
+                      </div>
+                      )
+                    }
+                    {selectedShow && <Button text="Select Seats" onClick={handleSelectSeats}/>}
+                  </div>
+              }
+            
 
-      {/* RIGHT: Movie Metadata */}
-      {movieData && <div className="w-1/3 flex flex-col items-centre">
-        <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
-        <h1 className={`font-bold mt-5 leading-loose text-left 
-          ${movieData?.name.length > 20
-              ? 'text-xl'
-              : movieData?.name.length > 12
-              ? 'text-2xl'
-              : 'text-3xl'
-          }`}
-          >
-            {movieData?.name}
-        </h1>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-400 w-full">
-          <div className="flex">
-            <span className="font-semibold">Genre</span>
-          </div>
-          <div className="flex">
-            <span className="pl-2">{movieData?.genre}</span>
-          </div>
-          <div className="flex">
-            <span className="font-semibold">Duration</span>
-          </div>
-          <div className="flex">
-            <span className="pl-2">{movieData?.duration}</span>
-          </div>
-          <div className="flex">
-            <span className="font-semibold">Rating</span>
-          </div>
-          <div className="flex">
-            <span className="pl-2">{movieData?.rating}</span>
-          </div>
-        </div>
-
-        {selectedShow && (
-          <div id="seats-section" className="mt-6 w-full p-4 bg-gray-800 text-white rounded-lg">
-            <div className="space-y-2 mt-4">
-              <div className="text-2xl font-bold">{selectedShow.sellerName}</div>
-              <p>{displayLongSellerDate(selectedShow.showTime, selectedShow.sellerUTCTDiff)}</p>
-              <div className="flex flex-row justify-between w-full">
-                <div className="text-2xl font-bold">{selectedShow.showType}</div>
-                <div className="text-2xl font-bold">{displayTime(selectedShow.showTime, selectedShow.sellerUTCTDiff)}</div>
+            {/* RIGHT: Movie Metadata */}
+            {movieData && <div className="w-1/3 flex flex-col items-centre">
+              <Image src={movieData?.image} alt={movieData?.name} width={300} height={400} className="rounded-lg" />
+              <h1 className={`font-bold mt-5 leading-loose text-left 
+                ${movieData?.name.length > 20
+                    ? 'text-xl'
+                    : movieData?.name.length > 12
+                    ? 'text-2xl'
+                    : 'text-3xl'
+                }`}
+                >
+                  {movieData?.name}
+              </h1>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-gray-400 w-full">
+                <div className="flex">
+                  <span className="font-semibold">Genre</span>
+                </div>
+                <div className="flex">
+                  <span className="pl-2">{movieData?.genre}</span>
+                </div>
+                <div className="flex">
+                  <span className="font-semibold">Duration</span>
+                </div>
+                <div className="flex">
+                  <span className="pl-2">{movieData?.duration}</span>
+                </div>
+                <div className="flex">
+                  <span className="font-semibold">Rating</span>
+                </div>
+                <div className="flex">
+                  <span className="pl-2">{movieData?.rating}</span>
+                </div>
               </div>
-              {/* TODO: Handle screens here for multiple shows with same name and time*/}
-              {/* <div className="flex justify-center">
-                <button
-                  className="mt-3 w-full bg-yellow-500 px-6 py-3 rounded-md text-black font-bold"
-                  onClick={() => router.push(`/seats?movieId=${movieId}&&sellerId=${selectedShow.sellerId}&&showId=${selectedShow.showId}`)}
-                  >
-                  Select Seats
-                </button>
-              </div> */}
-            </div>
+
+              {selectedShow && (
+                <div id="seats-section" className="mt-6 w-full p-4 bg-gray-800 text-white rounded-lg">
+                  <div className="space-y-2 mt-4">
+                    <div className="text-2xl font-bold">{selectedShow.sellerName}</div>
+                    <p>{displayLongSellerDate(selectedShow.showTime, selectedShow.sellerUTCTDiff)}</p>
+                    <div className="flex flex-row justify-between w-full">
+                      <div className="text-2xl font-bold">{selectedShow.showType}</div>
+                      <div className="text-2xl font-bold">{displayTime(selectedShow.showTime, selectedShow.sellerUTCTDiff)}</div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>}
           </div>
-        )}
-      </div>}
-    </div>
+        </MotionDiv>
+      )}
+    </AnimatePresence>
   );
 };

@@ -9,6 +9,7 @@ interface ConfirmBookingDialogProps {
   onConfirm: () => void;
   seatCount: number;
   totalPrice: number;
+  lockingSeats: boolean;
 }
 
 export const ConfirmBookingDialog: React.FC<ConfirmBookingDialogProps> = ({
@@ -17,6 +18,7 @@ export const ConfirmBookingDialog: React.FC<ConfirmBookingDialogProps> = ({
   onConfirm,
   seatCount,
   totalPrice,
+  lockingSeats
 }) => {
   return (
     <Transition show={isOpen} as={Fragment}>
@@ -56,16 +58,19 @@ export const ConfirmBookingDialog: React.FC<ConfirmBookingDialogProps> = ({
               <div className="flex justify-start gap-4 mt-6">
                 <button
                   onClick={onConfirm}
-                  className="px-4 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700"
+                  disabled={lockingSeats}
+                  className={`px-4 py-2 bg-primary-purple-background text-white rounded-xl ${!lockingSeats && "hover:brightness-125"} disabled:brightness-125`}
                 >
-                  Confirm & Lock Seats
+                  {lockingSeats ? "Reserving Seats..." : "Confirm & Lock Seats"}
                 </button>
-                <button
-                  onClick={onClose}
-                  className="px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-100"
-                >
-                  Cancel
-                </button>
+                {!lockingSeats &&
+                  <button
+                    onClick={onClose}
+                    className="px-4 py-2 border border-gray-300 rounded-xl hover:brightness-125"
+                  >
+                    Cancel
+                  </button>
+                }
               </div>
             </Dialog.Panel>
           </Transition.Child>

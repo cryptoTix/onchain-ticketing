@@ -199,7 +199,7 @@ export function displayTime(dateMS : number, sellerTimeDiff : number) : string {
 
 export function getDateAndMonth(date:Date) : string {
   return date.toLocaleDateString("en-US", {
-    day: "numeric",
+    day: "2-digit",
     month: "short", // 'Jan', 'Feb', etc.
   });
 }

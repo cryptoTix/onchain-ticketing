@@ -23,14 +23,22 @@ class PaymentStatusSyncer {
    */
   public async Start() {
     console.log("Started cron")
+    let isRunning = false;
     setInterval(async () => {
+    
     const release = await this.ordersMutex.obtain()
+    if (isRunning) {
+      release()
+      return 
+    }
+    isRunning = true
     try {
       for (let i = 0; i < this.pendingOrders.length; i++) {
         const order = this.pendingOrders[i];
-        console.log("validating cron for", order)
-        if (order.paymentData.originTimestampUTC + 2 * LOCK_DURATION_SEC < Date.now() / 1000) {
-          this.pendingOrders[i] = this.pendingOrders[-1]
+        console.log("validating cron for", order, i, this.pendingOrders.length)
+        assert(order && order != undefined, "Order isn't present")
+        if ((order.paymentData.originTimestampUTC + 1.2 * LOCK_DURATION_SEC) * 1000 < Date.now()) {
+          this.pendingOrders[i] = this.pendingOrders[this.pendingOrders.length - 1]
           this.pendingOrders.pop()
           i--;
         } else {
@@ -52,11 +60,9 @@ class PaymentStatusSyncer {
               writeOrderHistory(tokenOwner, {
                 ...order,
                 orderId : order.paymentData.purchaseDataHash,
-                movie : movieData[0]
               })
-
             }
-            this.pendingOrders[i] = this.pendingOrders[-1]
+            this.pendingOrders[i] = this.pendingOrders[this.pendingOrders.length - 1]
             this.pendingOrders.pop()
             i--;
           }
@@ -65,6 +71,7 @@ class PaymentStatusSyncer {
     } catch (error) {
       console.log("Got error", error)
     } finally {
+      isRunning = false
       release()
     }
     }, 5000)

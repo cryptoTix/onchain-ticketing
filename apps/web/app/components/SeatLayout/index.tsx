@@ -25,8 +25,11 @@ export const SeatLayoutViewer: React.FC<SeatLayoutProps> = ({ sellerId, showId, 
     <div className="space-y-10 mt-4 w-full overflow-x-auto">
       <SeatLegends/>
       {Object.entries(seatLayout.seatClassMap).map(([seatClass, rows], idx) => (
-        <div key={seatClass} className="space-y-2">
-          <h2 className="text-sm font-bold">{fetchSeatPriceFromRows(rows) + " USD, " + seatClass}</h2>
+        <div key={seatClass}>
+          <div className="flex justify-center gap-2">
+            <div className="text text-sm font-bold text-right text-yellow-500">{fetchSeatPriceFromRows(rows) + " USD "}</div>
+            <div className="text text-sm text-left">{"(" + seatClass + ")"}</div>
+          </div>
           <div className="space-y-1 border-t border-gray-700">
             {rows.map((row, rowIdx) => (
               <div key={rowIdx} className="w-full flex items-center gap-2 mt-2">
@@ -55,7 +58,7 @@ export const SeatLayoutViewer: React.FC<SeatLayoutProps> = ({ sellerId, showId, 
                       <button
                         key={colIdx}
                         title={`Row ${seat.rowId}, Seat ${seat.seatNum} - USD${seat.price}`}
-                        className={`w-6 h-6 text-xs text-white flex items-center justify-center rounded-md
+                        className={`w-6 h-6 text-xs flex items-center justify-center rounded-md
                           ${selectedSeats[(seat.id)] ? seatLegends["SELECTED"].bgData : seatLegends["AVAILABLE"].bgData + " hover:opacity-75"} cursor-pointer`}
                           onClick={() => {onSelectSeat(seat)}}
                       >

@@ -51,6 +51,7 @@
 These instructions are for any agent (and humans) working in this repo to keep context across sessions.
 
 ### Read First (every session)
+- Perform a quick repo-wide context scan (list workspaces, key scripts, env examples) to gain context on the whole repo at start.
 - Read `AGENTS.md` (this file) to load conventions and workflow.
 - Read `CONTEXT.md` for project overview, decisions, and glossary.
 - Read `PLAN.md` to load the active plan; ensure exactly one item is in progress.

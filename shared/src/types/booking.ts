@@ -1,9 +1,9 @@
-import { ShowInterface } from "./movie";
+import { MovieInterface, ShowInterface } from "./movie";
 import { PaymentMetadata } from "./payment";
 import { SeatData } from "./seatLayout";
 import { SellerMetadataInterface } from "./seller";
 import { Currency, Network } from "./sellerCurrency";
-import { Address, Hex } from "viem";
+import { Address } from "viem";
 
 export interface BookingValidationData  {
   movieId : string;
@@ -16,7 +16,8 @@ export interface BookingValidationData  {
 };
 
 export interface BookingData {
-  movieName : string;
+  bookingId : string; 
+  movie : MovieInterface;
   seller : SellerMetadataInterface;
   seats : SeatData[];
   show : ShowInterface;

@@ -4,7 +4,7 @@ export const MASTER_ADDR = '0xDe17fF229E6a9EA25F0C255735258aA07E12739c' as `0x{s
 export const PAYMENT_DURATION = 15 * 60;
 export const seatLegends: Record<SeatAvailabilityType, { bgData: string}> = {
     "AVAILABLE" : {
-        bgData: "border border-gray-500"
+        bgData: "border border-gray-border text-gray-text"
     },
     "FILLED" : {
         bgData: "bg-purple-700"
@@ -13,3 +13,7 @@ export const seatLegends: Record<SeatAvailabilityType, { bgData: string}> = {
         bgData : "bg-blue-500"
     }
 }
+export const MAIN_LOADER_TIMER = 1000;
+export const SUB_PAGE_LOADER_TIMER = 750;
+export const QUERY_INTERVAL = 500;
+export const TIMEOUT_INTERVAL = 5000;

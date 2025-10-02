@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useMemo, useState } from "react";
-import { SeatLayoutLoader } from "../components/Loader/Loader";
+import { BookingDataLoader, SeatLayoutLoader } from "../components/Loader/Loader";
 
 import { useAccount } from "wagmi";
 import SeatLayoutViewer from "../components/SeatLayout";
@@ -15,6 +15,10 @@ import { fetchMovies } from "../api/fetchMovies";
 import { MovieInterface } from "../models/movie";
 import toast from "react-hot-toast";
 import { Address, isAddress } from "viem";
+import { MAIN_LOADER_TIMER, SUB_PAGE_LOADER_TIMER } from "../utils/consts";
+import { AnimatePresence } from "framer-motion";
+import MotionDiv from "../components/Motion/MotionDiv";
+import { LOADER_MOTION, PAGE_CONTENT_MOTION } from "../components/Motion/presets";
 
 function SeatsContent() {
   const router = useRouter();
@@ -29,10 +33,13 @@ function SeatsContent() {
   const [showDetails, setShowDeatils] = useState<SellerShowIdInterface | null>()
   const [movieDetails, setMovieDeatils] = useState<MovieInterface | null>()
   const [ownerAddress, setOwnerAddress] = useState<Address>(null)
+  const [loadingData, setLoadingData] = useState<boolean>(true)
+  const [isNavigating, setIsNavigating] = useState<boolean>(false)
 
   const { address, isConnected } = useAccount()
 
   useEffect(() => {
+    setLoadingData(true)
       async function setInitialData() {
           const showData = await fetchSellerShowData({
               sellerId : sellerId,
@@ -45,6 +52,9 @@ function SeatsContent() {
           if (movieData) {
               setMovieDeatils(movieData[0])
           }
+          setTimeout(() => {
+            setLoadingData(false)
+          }, MAIN_LOADER_TIMER);
       }
       setInitialData()
   }, [movieId])
@@ -89,6 +99,7 @@ function SeatsContent() {
       return
     }
     if (bookingId && bookingId != "") {
+      setIsNavigating(true)
       router.push(`/payment/${bookingId}`)
     }
   }
@@ -103,13 +114,42 @@ function SeatsContent() {
     }
   }
 
+  if (isNavigating) {
+    return <BookingDataLoader/>;
+    
+  }
   return (
-    currentPage === "SEAT_SELECTION" ? 
-    <div className="min-h-screen w-full text-white flex flex-col items-center">
-      <ShowDetailsViewer sellerAndshowDetails={showDetails} movieDetails={movieDetails}/>
-      <SeatLayoutViewer sellerId={sellerId} showId={showId} selectedSeats={selectedSeats} selectedSeatsPrice={totalPrice} onSelectSeat={handleSeatClick} onPayClick={proceedToCurrencySelection}/>
-    </div> :
-    <CurrencySelectionPage sellerId={sellerId} selectedSeats={selectedSeats} sellerAndshowDetails={showDetails} movieDetails={movieDetails} totalPrice={totalPrice} ticketOwner={ownerAddress} onClickPrevious={handleClickPrevious} onClickPurchase={proceedToPurchase} resetCustomOwnerAddress={resetCustomOwerAddress} onChangeCustomOwnerAddress={onChangeCustomOwerAddress}/> 
+    <AnimatePresence mode="wait">
+      {loadingData ? (
+        <MotionDiv
+          key="seat-loader"
+          preset={LOADER_MOTION}
+        >
+          <SeatLayoutLoader/>
+        </MotionDiv>
+      ) : (
+        currentPage === "SEAT_SELECTION" ? (
+          <MotionDiv
+            key="seat-content"
+            preset={PAGE_CONTENT_MOTION}
+            className="w-full"
+          >
+            <div className="min-h-screen w-full text-white flex flex-col items-center">
+              <ShowDetailsViewer sellerAndshowDetails={showDetails} movieDetails={movieDetails}/>
+              <SeatLayoutViewer sellerId={sellerId} showId={showId} selectedSeats={selectedSeats} selectedSeatsPrice={totalPrice} onSelectSeat={handleSeatClick} onPayClick={proceedToCurrencySelection}/>
+            </div>
+          </MotionDiv>
+          ) : (
+          <MotionDiv
+            key="payment-page-content"
+            preset={PAGE_CONTENT_MOTION}
+            className="w-full"
+          >
+            <CurrencySelectionPage sellerId={sellerId} selectedSeats={selectedSeats} sellerAndshowDetails={showDetails} movieDetails={movieDetails} totalPrice={totalPrice} ticketOwner={ownerAddress} onClickPrevious={handleClickPrevious} onClickPurchase={proceedToPurchase} resetCustomOwnerAddress={resetCustomOwerAddress} onChangeCustomOwnerAddress={onChangeCustomOwerAddress}/>
+          </MotionDiv>
+        )
+      )}
+    </AnimatePresence>
   );
 }
 

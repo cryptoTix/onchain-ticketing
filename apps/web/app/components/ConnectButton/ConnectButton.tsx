@@ -9,7 +9,7 @@ export const ConnectButton: React.FC = () => {
         if (!isConnected) {
           return (
             <button
-              className={`bg-purple-700 text-white px-3 py-3 rounded-xl hover:bg-purple-500 transition`}
+              className={`bg-primary-purple-background text-white px-3 py-3 rounded-xl hover:bg-purple-500 transition`}
               onClick={show}
             >
               Connect Wallet

@@ -1,14 +1,16 @@
 # Plan
 
 ## In Progress
-- (Set exactly one active item here when starting work.)
+- Establish active session plan and priorities.
 
 ## Next
-- (Add 3–7 queued items, each concise.)
+- Confirm immediate goal with user.
+- Start top priority task from user goal.
+- Record decisions in CONTEXT.md.
+- Run `pnpm lint && pnpm format` after changes.
 
 ## Blocked
 - (Item) — (owner) — (unblock condition)
 
 ## Done
 - 2025-09-22: Initialized context and session log scaffolding.
-

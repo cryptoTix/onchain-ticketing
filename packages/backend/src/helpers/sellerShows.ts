@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
+import { MutexRW } from "mutex-ts";
 import path from "path";
-import { MovieInterface, SellerInterface, ShowInterface, ShowType, SellerMetadataInterface, SellerShowIdInterface } from "shared";
-import { HDNodeWallet } from "ethers";
+import { SellerInterface, ShowInterface, ShowType, SellerMetadataInterface, SellerShowIdInterface } from "shared";
 
 type SellerFile = {
   id: string;
@@ -12,6 +12,8 @@ type SellerFile = {
 };
 
 let showId = 0;
+const mutexShowId = new MutexRW();
+
 export const SELLER_METADATA: SellerMetadataInterface[] = [
   { id: "0", name: "INOX", location: "BHOPAL", utcTimeDiff: 5.5 * 3600 * 1000 },
   { id: "1", name: "PVR", location: "DELHI", utcTimeDiff: 5.5 * 3600 * 1000 },
@@ -66,16 +68,19 @@ async function persistSellerFile(file: SellerFile) {
   await fs.writeFile(p, JSON.stringify(file, null, 2));
 }
 
-function buildShowId(): string {
-  showId++;
-  return showId.toString();
+async function buildShowId(): Promise<string> {
+  {
+    using _ = await mutexShowId.lockRW();
+    showId++;
+    return showId.toString();
+  }
 }
 
-function generateDaySchedule(
+async function generateDaySchedule(
   meta: SellerMetadataInterface,
   dateStr: string,
   movieId: string
-): Record<ShowType, ShowInterface[]> {
+): Promise<Record<ShowType, ShowInterface[]>> {
   const MAX_PER_DAY = 10;
   const result: Record<ShowType, ShowInterface[]> = { "2D": [], "3D": [], "4DX": [] };
 
@@ -84,11 +89,11 @@ function generateDaySchedule(
   const minutesChoices = [0, 15, 30, 45];
 
   // Helper to create a show
-  const makeShow = (movieId: string, type: ShowType, hour: number, minute: number, idx: number): ShowInterface => {
+  const makeShow = async(movieId: string, type: ShowType, hour: number, minute: number, idx: number): Promise<ShowInterface> => {
     const price = type === "4DX" ? 8.9 : type === "3D" ? 6.4 : 5.4;
     const screenId = String((idx % 5) + 1);
     const s: ShowInterface = {
-      id: buildShowId(), // fill after building
+      id: await buildShowId(), // fill after building
       movieId: movieId,
       type,
       price,
@@ -112,7 +117,7 @@ function generateDaySchedule(
     const minute = minutesChoices[minuteIdx % minutesChoices.length];
     if (!result[type]) result[type] = []
     console.log(type)
-    result[type].push(makeShow(movieId, type, hour, minute, created));
+    result[type].push((await makeShow(movieId, type, hour, minute, created)));
     created++;
     minuteIdx++;
     hour += 1;
@@ -143,7 +148,7 @@ export async function getOrCreateSellerShowsForDate(
   const file = await readSellerFileOrInit(meta);
   const key = dateKeyUTC(dateStr, movieId);
   if (!file.byDate[key]) {
-    file.byDate[key] = generateDaySchedule(meta, dateStr, movieId);
+    file.byDate[key] = await generateDaySchedule(meta, dateStr, movieId);
     await persistSellerFile(file);
   }
   const shows = file.byDate[key];

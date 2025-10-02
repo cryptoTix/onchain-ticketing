@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
         </a>
 
         <div className="text-sm text-white/80">
-          © {2025} Krypto Tix
+          © {2025} KryptoTix
         </div>
       </div>
     </div>

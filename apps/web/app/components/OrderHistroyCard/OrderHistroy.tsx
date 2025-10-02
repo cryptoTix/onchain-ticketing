@@ -4,7 +4,7 @@ import { getLocalTime, getSeatsToStr, getUTCTimeToSellerTime } from "../../utils
 
 type OrderHistoryProps = {
   orderData: OrderMetadata;
-  onSelectBookingInfo : (order : OrderMetadata) => void;
+  onSelectBookingInfo : (order : OrderMetadata) => Promise<void>;
 };
 
 const OrderHistoryCard: React.FC<OrderHistoryProps> = ({ orderData, onSelectBookingInfo }) => {
@@ -13,7 +13,7 @@ const OrderHistoryCard: React.FC<OrderHistoryProps> = ({ orderData, onSelectBook
       <div className="relative">
       <img
         src={orderData.movie.image}
-        alt={`${orderData.movieName} poster`}
+        alt={`${orderData.movie.name} poster`}
         className={`${orderData.isCancelled ? "opacity-70" : ""} w-[80%] object-cover rounded-lg`}
         />
         {orderData.isCancelled && (
@@ -28,7 +28,7 @@ const OrderHistoryCard: React.FC<OrderHistoryProps> = ({ orderData, onSelectBook
             <span className="text-white/70">BOOKING DATE & TIME: </span>
             {getLocalTime(orderData.paymentData.originTimestampUTC)}
           </div>
-          <div className="text-lg font-semibold">{orderData.movieName}</div>
+          <div className="text-lg font-semibold">{orderData.movie.name}</div>
           <div className="mt-2 space-y-1">
             <div className="flex justify-between">
               <span>Payment Currency</span>
