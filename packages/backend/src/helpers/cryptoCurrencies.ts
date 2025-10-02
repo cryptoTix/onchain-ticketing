@@ -5,7 +5,7 @@ import { Address } from "viem";
 
 const DATA_DIR = path.resolve(__dirname, "../../data/crypto");
 
-const defaultNetworks = [31337, 11155111, 421614]; // Ethereum, Polygon, BSC, Arbitrum, Optimism
+const defaultNetworks = [11155111, 421614]; // Ethereum, Polygon, BSC, Arbitrum, Optimism
 const sampleCurrencies: Record<number, string[]> = {
   31337: ["USDC", "USDT"],
   11155111: ["USDC", "USDT"],
